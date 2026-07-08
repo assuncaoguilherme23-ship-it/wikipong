@@ -1,0 +1,169 @@
+.wrap {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  border-bottom: 1px solid var(--cor-linha);
+}
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+.brand {
+  font-family: var(--fonte-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--cor-tinta);
+  text-decoration: none;
+}
+.brand span {
+  color: var(--cor-acento);
+}
+
+.palco {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(2rem, 8vw, 5rem);
+}
+.cartao {
+  width: 100%;
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.progresso {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.progressoRotulo {
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-acento);
+  white-space: nowrap;
+}
+.barra {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--cor-linha-forte);
+  overflow: hidden;
+}
+.barraFill {
+  height: 100%;
+  background: var(--cor-acento);
+  border-radius: 999px;
+  transition: width 320ms ease;
+}
+
+.pergunta {
+  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.opcoes {
+  display: grid;
+  gap: 0.75rem;
+}
+.opcao {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-align: left;
+  width: 100%;
+  padding: 1rem 1.15rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  font: inherit;
+  color: var(--cor-tinta);
+  cursor: pointer;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+.opcao:hover {
+  border-color: var(--cor-acento);
+  transform: translateY(-1px);
+  box-shadow: var(--sombra-cartao);
+}
+.opcaoTitulo {
+  font-weight: 600;
+}
+.opcaoSub {
+  font-size: 0.88rem;
+  color: var(--cor-tinta-suave);
+}
+
+.voltar {
+  margin-top: 1.75rem;
+  background: none;
+  border: none;
+  color: var(--cor-tinta-suave);
+  font: inherit;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+.voltar:hover {
+  color: var(--cor-acento);
+}
+
+/* Resultado */
+.perfilNome {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 800;
+  margin-block: 0.5rem 1rem;
+}
+.perfilDesc {
+  font-size: 1.15rem;
+  color: var(--cor-tinta-suave);
+  max-width: 44ch;
+}
+.preset {
+  margin-top: 1.75rem;
+  padding: 1rem 1.15rem;
+  border: 1px dashed var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  background: var(--cor-acento-suave);
+}
+.presetRotulo {
+  font-family: var(--fonte-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-acento-escuro);
+}
+.presetURL {
+  display: block;
+  font-family: var(--fonte-mono);
+  font-size: 0.9rem;
+  color: var(--cor-tinta);
+  margin-top: 0.35rem;
+  word-break: break-all;
+}
+.presetNota {
+  font-size: 0.82rem;
+  color: var(--cor-tinta-suave);
+  margin-top: 0.5rem;
+}
+.refazer {
+  display: inline-flex;
+  margin-top: 1.75rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--raio-md);
+  border: 1px solid var(--cor-linha);
+  background: none;
+  font: inherit;
+  color: var(--cor-tinta);
+  cursor: pointer;
+}
+.refazer:hover {
+  border-color: var(--cor-acento);
+}

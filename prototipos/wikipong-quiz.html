@@ -1,0 +1,388 @@
+<!--
+  WikiPong · Quiz de Perfil — protótipo navegável
+  ------------------------------------------------
+  ARQUITETURA (pra você como dev):
+  - É uma MÁQUINA DE ESTADOS simples: objeto SCREENS keyed por id, show(id) troca a tela,
+    pilha `history` pro botão voltar, respostas acumuladas em `A`.
+  - Bifurca na tela 'fork': ramo iniciante (linguagem de sensação) x avançado (jargão ok)
+    x explorar (pula direto). "Pular" disponível sempre — quiz é atalho, não portão.
+  - O motor de recomendação codifica SABEDORIA DE TREINADOR, não só casa palavra-chave:
+    iniciante que quer "atacar" é orientado a controle primeiro (ver steer no resultado).
+  - Mesmo design system da home (tokens Verde-mesa, radar como assinatura).
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WikiPong — Teste de perfil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#FAFAF9; --surface:#FFFFFF; --surface-2:#EDF2E9;
+  --ink:#283027; --ink-soft:#49514A; --muted:#7C857A;
+  --line:#E4EADE; --line-strong:#D3DBCB;
+  --accent:#1FA06A; --accent-deep:#157A4F; --accent-wash:#E6F4EC;
+  --font-display:'Archivo', system-ui, sans-serif;
+  --font-body:'Inter', system-ui, sans-serif;
+  --font-mono:'IBM Plex Mono', ui-monospace, monospace;
+  --radius:13px; --shadow:0 1px 2px rgba(20,30,22,.04), 0 10px 30px -14px rgba(20,30,22,.14);
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-body); font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased}
+button{font-family:inherit; cursor:pointer}
+.mono{font-family:var(--font-mono)}
+
+/* casca: topo fixo + trilho de progresso + palco centrado */
+.topbar{position:sticky; top:0; background:rgba(250,250,249,.82); backdrop-filter:saturate(1.3) blur(12px); border-bottom:1px solid transparent; z-index:10; transition:border-color .25s, box-shadow .25s}
+.topbar.scrolled{border-bottom-color:var(--line); box-shadow:0 10px 30px -22px rgba(20,30,22,.4)}
+.topbar .in{max-width:680px; margin:0 auto; padding:0 22px; height:60px; display:flex; align-items:center; justify-content:space-between}
+.brand{display:flex; align-items:center; gap:9px; font-family:var(--font-display); font-weight:800; font-size:18px; letter-spacing:-.01em}
+.brand .dot{width:10px; height:10px; border-radius:50%; background:var(--accent)}
+.brand b{color:var(--ink)} .brand span{color:var(--accent)}
+.skip{border:0; background:transparent; color:var(--muted); font-size:13.5px; font-weight:500; padding:8px 4px}
+.skip:hover{color:var(--ink)}
+
+.progress-wrap{max-width:680px; margin:0 auto; padding:0 22px}
+.progress{height:3px; background:var(--line); border-radius:3px; margin-top:14px; overflow:hidden}
+.progress i{display:block; height:100%; width:0; background:var(--accent); border-radius:3px; transition:width .35s cubic-bezier(.2,.8,.2,1)}
+.steplabel{font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-top:10px; height:14px}
+
+.stage{max-width:600px; margin:0 auto; padding:30px 22px 80px}
+.back{border:0; background:transparent; color:var(--muted); font-size:13.5px; font-weight:500; padding:6px 0; margin-bottom:14px; display:inline-flex; align-items:center; gap:6px}
+.back:hover{color:var(--ink)} .back[hidden]{display:none}
+
+.eyebrow{font-family:var(--font-mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-deep); font-weight:600}
+h1.q{font-family:var(--font-display); font-weight:800; letter-spacing:-.02em; line-height:1.08; font-size:clamp(1.7rem,4.4vw,2.4rem); margin:12px 0 0}
+.sub{color:var(--ink-soft); font-size:15.5px; margin:12px 0 0; max-width:42ch}
+
+/* cartões de escolha */
+.choices{display:flex; flex-direction:column; gap:11px; margin-top:26px}
+.choice{display:flex; align-items:center; gap:14px; width:100%; text-align:left; background:var(--surface);
+  border:1px solid var(--line-strong); border-radius:var(--radius); padding:16px 18px; transition:.18s cubic-bezier(.2,.8,.2,1);
+  animation:choiceIn .5s cubic-bezier(.2,.8,.2,1) both}
+.choices .choice:nth-child(1){animation-delay:.04s}
+.choices .choice:nth-child(2){animation-delay:.10s}
+.choices .choice:nth-child(3){animation-delay:.16s}
+.choices .choice:nth-child(4){animation-delay:.22s}
+.choices .choice:nth-child(5){animation-delay:.28s}
+@keyframes choiceIn{from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:none}}
+.choice:hover{border-color:var(--accent); transform:translateX(4px); box-shadow:var(--shadow)}
+.choice:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.choice .mark{flex:none; width:11px; height:11px; border-radius:50%; background:var(--line-strong); transition:.16s}
+.choice:hover .mark{background:var(--accent); box-shadow:0 0 0 4px var(--accent-wash)}
+.choice.greenmark .mark{background:var(--accent)}
+.choice .ctxt{flex:1}
+.choice .ctitle{font-weight:600; font-size:15.5px}
+.choice .csub{color:var(--muted); font-size:13px; margin-top:2px}
+.choice .arr{color:var(--muted); font-size:17px; transition:.16s} .choice:hover .arr{color:var(--accent); transform:translateX(3px)}
+
+/* resultados */
+.result-eyebrow{display:inline-flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent-deep); background:var(--accent-wash); padding:6px 11px; border-radius:7px; font-weight:600}
+.reccard{background:var(--surface); border:1px solid var(--line-strong); border-radius:15px; box-shadow:var(--shadow); padding:20px; margin-top:20px}
+.reccard .rank{font-family:var(--font-mono); font-size:12px; color:var(--accent-deep); font-weight:600}
+.reccard h3{font-family:var(--font-display); font-weight:700; font-size:21px; margin:4px 0 0; letter-spacing:-.01em}
+.reccard .brand-line{color:var(--muted); font-size:13px; margin-top:2px}
+.reccard .price{font-family:var(--font-mono); font-weight:600; font-size:18px; margin-top:10px}
+.reccard .why{font-size:14px; color:var(--ink-soft); line-height:1.55; margin-top:12px; padding-top:12px; border-top:1px solid var(--line)}
+.reccard .why b{color:var(--ink)}
+.recflex{display:flex; gap:18px; align-items:center}
+.recflex .radar{flex:none}
+.reasons{list-style:none; padding:0; margin:10px 0 0}
+.reasons li{display:flex; gap:8px; font-size:13.5px; color:var(--ink-soft); padding:3px 0}
+.reasons li::before{content:"✓"; color:var(--accent-deep); font-weight:700}
+
+.steer{display:flex; gap:12px; background:var(--accent-wash); border:1px solid #CBE7D7; border-radius:12px; padding:14px 16px; margin-top:18px}
+.steer .ico{flex:none; font-size:18px}
+.steer .stxt{font-size:13.5px; color:var(--accent-deep); line-height:1.5}
+.steer .stxt b{color:var(--accent-deep)}
+
+.glossary{margin-top:22px}
+.glossary .gh{font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px}
+.gterm{border-left:2px solid var(--accent); padding:2px 0 2px 12px; margin-bottom:12px}
+.gterm b{font-weight:600} .gterm span{color:var(--ink-soft); font-size:13.5px}
+
+.resfoot{margin-top:28px; padding-top:20px; border-top:1px solid var(--line)}
+.modenote{font-size:13.5px; color:var(--muted); line-height:1.5; margin-bottom:16px}
+.modenote b{color:var(--ink)}
+.cta-row{display:flex; gap:10px; flex-wrap:wrap}
+.btn{font-weight:600; font-size:14px; border-radius:10px; padding:12px 18px; border:1px solid transparent; transition:.18s cubic-bezier(.2,.8,.2,1)}
+.btn-primary{background:var(--accent); color:#fff; border-color:var(--accent)}
+.btn-primary:hover{background:var(--accent-deep); transform:translateY(-2px); box-shadow:0 10px 24px -10px rgba(31,160,106,.55)}
+.btn-ghost{background:transparent; border-color:var(--line-strong); color:var(--ink)}
+.btn-ghost:hover{background:var(--surface-2); transform:translateY(-2px)}
+.btn:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+
+/* radar do resultado se desenhando (assinatura) */
+.radar .rv{opacity:0; transform:scale(.3); transform-box:fill-box; transform-origin:center; transition:transform .8s cubic-bezier(.2,.8,.2,1) .15s, opacity .5s .15s}
+.radar .rd{opacity:0; transition:opacity .4s .8s}
+.radar.go .rv{opacity:1; transform:scale(1)}
+.radar.go .rd{opacity:1}
+
+.reveal{animation:rise .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .reveal{animation:none} .progress i{transition:none}
+  .choice{animation:none} .choice:hover,.btn:hover{transform:none}
+  .radar .rv{opacity:1; transform:none} .radar .rd{opacity:1}
+}
+</style>
+
+<header class="topbar">
+  <div class="in">
+    <span class="brand"><span class="dot"></span><b>Wiki</b><span>Pong</span></span>
+    <button class="skip" onclick="show('explore-result')">Pular teste →</button>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress"><i id="bar"></i></div>
+    <div class="steplabel mono" id="steplabel"></div>
+  </div>
+</header>
+
+<main class="stage">
+  <button class="back" id="back" hidden onclick="goBack()">← Voltar</button>
+  <div id="screen"></div>
+</main>
+
+<script>
+/* ===================== DADOS ===================== */
+const AXES=['Velocidade','Spin','Controle','Durabilidade'];
+
+/* materiais (borrachas + lâminas) — base do ranqueamento do avançado */
+const MATERIALS=[
+  {name:'Tenergy 05', brand:'Butterfly', type:'Borracha', price:450, specs:{Velocidade:9.0,Spin:9.3,Controle:7.8,Durabilidade:7.5}},
+  {name:'Hurricane 3 Neo', brand:'DHS', type:'Borracha', price:180, specs:{Velocidade:8.2,Spin:9.6,Controle:8.0,Durabilidade:8.8}},
+  {name:'Dignics 05', brand:'Butterfly', type:'Borracha', price:590, specs:{Velocidade:9.2,Spin:9.4,Controle:7.6,Durabilidade:7.8}},
+  {name:'Evolution MX-P', brand:'Tibhar', type:'Borracha', price:320, specs:{Velocidade:8.8,Spin:8.9,Controle:7.9,Durabilidade:7.7}},
+  {name:'Rozena', brand:'Butterfly', type:'Borracha', price:210, specs:{Velocidade:7.8,Spin:8.0,Controle:8.6,Durabilidade:8.2}},
+  {name:'Viscaria ALC', brand:'Butterfly', type:'Lâmina', price:1650, specs:{Velocidade:8.8,Spin:9.0,Controle:8.5,Durabilidade:8.5}},
+  {name:'Fan Zhendong ALC', brand:'Butterfly', type:'Lâmina', price:1200, specs:{Velocidade:8.6,Spin:8.4,Controle:8.2,Durabilidade:8.5}},
+];
+
+/* raquetes montadas por faixa de orçamento — recomendação do iniciante */
+const MONTADAS={
+  low:  {name:'Stiga Evolution', brand:'Stiga', price:150, specs:{Velocidade:6.5,Spin:6.0,Controle:8.6,Durabilidade:8.0}},
+  mid:  {name:'Donic Carbotec 3000', brand:'Donic', price:280, specs:{Velocidade:7.2,Spin:7.0,Controle:8.2,Durabilidade:8.0}},
+  high: {name:'Butterfly Timo Boll CarbonX', brand:'Butterfly', price:430, specs:{Velocidade:7.8,Spin:7.6,Controle:7.9,Durabilidade:7.8}},
+};
+
+/* ===================== RADAR (assinatura) ===================== */
+function radar(specs,{size=150,color='var(--accent)',fill='rgba(31,160,106,.13)'}={}){
+  const cx=size/2,cy=size/2,R=size*0.36,N=AXES.length;
+  const pt=(i,r)=>{const a=-Math.PI/2+i*2*Math.PI/N;return [cx+r*Math.cos(a),cy+r*Math.sin(a)];};
+  let rings='';[0.33,0.66,1].forEach(t=>{rings+=`<polygon points="${AXES.map((_,i)=>pt(i,R*t).join(',')).join(' ')}" fill="none" stroke="var(--line)" stroke-width="1"/>`;});
+  let spokes=AXES.map((_,i)=>{const[x,y]=pt(i,R);return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="var(--line)" stroke-width="1"/>`}).join('');
+  const vp=AXES.map((ax,i)=>pt(i,R*(specs[ax]/10)));
+  const dots=vp.map(([x,y])=>`<circle class="rd" cx="${x}" cy="${y}" r="2.4" fill="${color}"/>`).join('');
+  return `<svg class="radar" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">${rings}${spokes}
+    <polygon class="rv" points="${vp.map(p=>p.join(',')).join(' ')}" fill="${fill}" stroke="${color}" stroke-width="2" stroke-linejoin="round"/>${dots}</svg>`;
+}
+
+/* ===================== ESTADO + NAVEGAÇÃO ===================== */
+const A={};                 // respostas acumuladas
+let history=[];             // pilha pro "voltar"
+const beginnerSteps=['b1','b2','b3'];
+const expertSteps=['e1','e2','e3','e4','e5'];
+
+function progressFor(id){
+  let i=beginnerSteps.indexOf(id); if(i>=0) return {n:i+1,total:beginnerSteps.length,word:'Pergunta'};
+  i=expertSteps.indexOf(id);       if(i>=0) return {n:i+1,total:expertSteps.length,word:'Pergunta'};
+  return null;
+}
+function show(id,fromBack){
+  if(!fromBack && currentId) history.push(currentId);
+  currentId=id;
+  const p=progressFor(id);
+  document.getElementById('bar').style.width = p? (p.n/p.total*100)+'%' : (id.includes('result')?'100%':'0%');
+  document.getElementById('steplabel').textContent = p? `${p.word} ${p.n} de ${p.total}` : '';
+  document.getElementById('back').hidden = history.length===0;
+  const el=document.getElementById('screen');
+  el.innerHTML=SCREENS[id]();
+  el.classList.remove('reveal'); void el.offsetWidth; el.classList.add('reveal');
+  // dispara o radar do resultado se desenhando
+  requestAnimationFrame(()=>requestAnimationFrame(()=>el.querySelectorAll('.radar').forEach(s=>s.classList.add('go'))));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+let currentId=null;
+function goBack(){ const prev=history.pop(); if(prev) show(prev,true); }
+function answer(key,val,next){ A[key]=val; show(next); }
+
+/* ===================== HELPERS DE RENDER ===================== */
+function choice(title,sub,onclick,green){
+  return `<button class="choice ${green?'greenmark':''}" onclick="${onclick}">
+    <span class="mark"></span>
+    <span class="ctxt"><span class="ctitle">${title}</span>${sub?`<span class="csub">${sub}</span>`:''}</span>
+    <span class="arr">→</span></button>`;
+}
+function question(eyebrow,title,sub,choicesHTML){
+  return `<div class="eyebrow">${eyebrow}</div><h1 class="q">${title}</h1>${sub?`<p class="sub">${sub}</p>`:''}<div class="choices">${choicesHTML}</div>`;
+}
+
+/* ===================== TELAS ===================== */
+const SCREENS={
+
+  fork:()=>question('Teste de perfil · 1 minuto','Vamos achar o material certo pra você',
+    'Responda algumas perguntas e eu recomendo um ponto de partida. Pode pular e explorar quando quiser.',
+    choice('Tô começando agora','Quero entender o básico e uma primeira raquete',"show('b1')",true)
+    + choice('Já jogo','Sei meu estilo e quero melhorar meu material',"show('e1')")
+    + choice('Só quero explorar','Me leva direto pro catálogo',"show('explore-result')")),
+
+  /* ---- ramo iniciante: sensação, zero jargão ---- */
+  b1:()=>question('Começando agora','Você já tem uma raquete?','',
+    choice('Não, seria a primeira',null,"answer('temRaquete','nao','b2')")
+    + choice('Tenho uma de supermercado','Aquelas mais simples, de loja comum',"answer('temRaquete','simples','b2')")
+    + choice('Tenho uma "de marca"','Uma raquete montada de marca conhecida',"answer('temRaquete','marca','b2')")),
+
+  b2:()=>question('Começando agora','Quando você joga, o que te empolga mais?',
+    'Não existe resposta certa — é só pra entender seu gosto.',
+    choice('Bater forte, atacar','Gosto da emoção de mandar a bola com tudo',"answer('gosto','atacar','b3')")
+    + choice('Colocar a bola na mesa com segurança','Prefiro controlar e errar pouco',"answer('gosto','controlar','b3')")
+    + choice('Um pouco de cada','Quero equilíbrio entre as duas coisas',"answer('gosto','equilibrado','b3')")),
+
+  b3:()=>question('Começando agora','Quanto você quer investir agora?',
+    'Dá pra começar muito bem sem gastar muito.',
+    choice('Até R$150','O essencial pra começar com qualidade',"answer('budget','low','b-result')")
+    + choice('R$150 a R$300','Um material que dura conforme você evolui',"answer('budget','mid','b-result')")
+    + choice('R$300 ou mais','Quero já investir num material melhor',"answer('budget','high','b-result')")),
+
+  'b-result':()=>renderBeginnerResult(),
+
+  /* ---- ramo avançado: jargão liberado, mas claro ---- */
+  e1:()=>question('Já jogo','Qual sua empunhadura?','',
+    choice('Clássica (caneta europeia)','A pegada mais comum no Ocidente',"answer('grip','classica','e2')")
+    + choice('Caneteira (penhold)','Segura a raquete como uma caneta',"answer('grip','caneteira','e2')")),
+
+  e2:()=>question('Já jogo','Qual seu estilo de jogo?','',
+    choice('Ataque perto da mesa','Velocidade e pressão constante',"answer('estilo','ataque-perto','e3')")
+    + choice('Ataque a meia-distância','Topspins potentes com mais espaço',"answer('estilo','ataque-meia','e3')")
+    + choice('Bloqueio e controle','Joga na consistência e na colocação',"answer('estilo','bloqueio','e3')")
+    + choice('Defesa','Cortes e jogo passivo longe da mesa',"answer('estilo','defesa','e3')")),
+
+  e3:()=>question('Já jogo','O que você quer ganhar com o material novo?','',
+    choice('Velocidade',null,"answer('objetivo','Velocidade','e4')")
+    + choice('Efeito (spin)',null,"answer('objetivo','Spin','e4')")
+    + choice('Controle',null,"answer('objetivo','Controle','e4')")
+    + choice('Durabilidade',null,"answer('objetivo','Durabilidade','e4')")),
+
+  e4:()=>question('Já jogo','Qual sua faixa de preço por material?',
+    'Por borracha ou lâmina avulsa.',
+    choice('Até R$300',null,"answer('priceMax',300,'e5')")
+    + choice('R$300 a R$600',null,"answer('priceMax',600,'e5')")
+    + choice('Acima de R$600',null,"answer('priceMax',2000,'e5')")),
+
+  e5:()=>question('Já jogo','Tem marca de preferência?',
+    'Isso é opcional — pode deixar em aberto.',
+    choice('Sem preferência','Me mostra o que combinar melhor',"answer('brand',null,'e-result')")
+    + choice('Butterfly',null,"answer('brand','Butterfly','e-result')")
+    + choice('DHS',null,"answer('brand','DHS','e-result')")
+    + choice('Tibhar',null,"answer('brand','Tibhar','e-result')")),
+
+  'e-result':()=>renderExpertResult(),
+  'explore-result':()=>renderExploreResult(),
+};
+
+/* ===================== MOTOR DE RECOMENDAÇÃO ===================== */
+function renderBeginnerResult(){
+  const m=MONTADAS[A.budget||'low'];
+  const steered = A.gosto==='atacar';   // sabedoria de treinador: orientar pro controle primeiro
+  const whyBits = {
+    nao:'É uma raquete montada, pronta pra jogar — você não precisa escolher peças separadas agora.',
+    simples:'Um salto enorme em relação às raquetes de supermercado, sem complicar.',
+    marca:'Um próximo passo coerente, com mais consistência pra treinar o gesto certo.'
+  }[A.temRaquete||'nao'];
+
+  const steer = steered ? `<div class="steer">
+      <span class="ico">🏓</span>
+      <span class="stxt"><b>Você curte atacar — anotei isso.</b> Mas começando, um material que <b>perdoa erros</b> deixa você treinar o gesto certo e evoluir mais rápido; a velocidade vem naturalmente depois. Por isso priorizei <b>controle</b>, não potência pura.</span>
+    </div>` : '';
+
+  return `<div class="result-eyebrow">✓ Seu ponto de partida</div>
+    <h1 class="q" style="margin-top:14px">Recomendado pra você</h1>
+    <p class="sub">Com base no que você respondeu, esse é um ótimo começo.</p>
+
+    <div class="reccard">
+      <div class="recflex">
+        <div class="radar">${radar(m.specs,{size:132})}</div>
+        <div>
+          <div class="rank mono">Raquete montada · pronta pra usar</div>
+          <h3>${m.name}</h3>
+          <div class="brand-line">${m.brand}</div>
+          <div class="price">R$${m.price.toLocaleString('pt-BR')}</div>
+        </div>
+      </div>
+      <div class="why"><b>Por que essa?</b> ${whyBits} O foco aqui é <b>controle</b>: ela deixa você colocar a bola na mesa com confiança enquanto aprende.</div>
+    </div>
+
+    ${steer}
+
+    <div class="glossary">
+      <div class="gh">Palavras que você vai ver por aí</div>
+      <div class="gterm"><b>Lâmina</b> — <span>a "madeira" da raquete; é a base onde as borrachas são coladas.</span></div>
+      <div class="gterm"><b>Borracha</b> — <span>a camada de cima; é ela que dá efeito e velocidade à bola.</span></div>
+      <div class="gterm"><b>Controle</b> — <span>o quanto o material perdoa erros e te deixa pôr a bola onde quer.</span></div>
+    </div>
+
+    ${resultFooter('Simples')}`;
+}
+
+function expertRank(){
+  const w={Velocidade:1,Spin:1,Controle:1,Durabilidade:1};
+  ({'ataque-perto':()=>{w.Velocidade+=1.2;w.Spin+=.8;},
+    'ataque-meia': ()=>{w.Velocidade+=1;w.Spin+=1;},
+    'bloqueio':    ()=>{w.Controle+=1.4;w.Durabilidade+=.6;},
+    'defesa':      ()=>{w.Controle+=1.2;w.Durabilidade+=1;}}[A.estilo]||(()=>{}))();
+  if(A.objetivo) w[A.objetivo]+=1.5;
+  const list=MATERIALS.filter(m=> m.price<=(A.priceMax||2000) && (!A.brand||m.brand===A.brand))
+    .map(m=>({...m,_score:AXES.reduce((s,a)=>s+m.specs[a]*w[a],0)}))
+    .sort((a,b)=>b._score-a._score).slice(0,3);
+  // razões: os 2 eixos de maior peso onde o material vai bem
+  const topAxes=[...AXES].sort((a,b)=>w[b]-w[a]).slice(0,2);
+  list.forEach(m=> m._reasons=topAxes.map(a=>`Forte em ${a.toLowerCase()} (${m.specs[a].toFixed(1)})`)
+    .concat(A.brand?[`Da marca ${A.brand}, que você pediu`]:[]));
+  return list;
+}
+function renderExpertResult(){
+  const ranked=expertRank();
+  const cards=ranked.map((m,i)=>`
+    <div class="reccard">
+      <div class="recflex">
+        <div class="radar">${radar(m.specs,{size:118})}</div>
+        <div style="flex:1">
+          <div class="rank mono">#${i+1} · ${m.type}</div>
+          <h3>${m.name}</h3>
+          <div class="brand-line">${m.brand}</div>
+          <div class="price">R$${m.price.toLocaleString('pt-BR')}</div>
+        </div>
+      </div>
+      <ul class="reasons">${m._reasons.map(r=>`<li>${r}</li>`).join('')}</ul>
+    </div>`).join('');
+  const estiloTxt={'ataque-perto':'ataque perto da mesa','ataque-meia':'ataque a meia-distância','bloqueio':'bloqueio e controle','defesa':'defesa'}[A.estilo]||'seu estilo';
+  return `<div class="result-eyebrow">✓ Perfil montado</div>
+    <h1 class="q" style="margin-top:14px">Materiais que combinam com você</h1>
+    <p class="sub">Ranqueados pro seu perfil de <b>${estiloTxt}</b> com foco em <b>${(A.objetivo||'equilíbrio').toLowerCase()}</b>. A decisão final é sua — aqui vai o porquê de cada um.</p>
+    ${cards}
+    ${resultFooter('Técnico')}`;
+}
+function renderExploreResult(){
+  return `<div class="result-eyebrow">Exploração livre</div>
+    <h1 class="q" style="margin-top:14px">Beleza — o catálogo é todo seu</h1>
+    <p class="sub">Sem teste, sem filtro forçado. Você navega por categoria, busca por nome ou usa os filtros quando quiser afunilar.</p>
+    ${resultFooter('Simples')}`;
+}
+
+function resultFooter(modo){
+  return `<div class="resfoot">
+    <p class="modenote">Perfil salvo — você pode refazer quando quiser. Deixei o site no <b>Modo ${modo}</b> pra você, mas dá pra trocar no topo a qualquer hora.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="wikipong-home-v2.html" style="text-decoration:none">Ver catálogo personalizado</a>
+      <button class="btn btn-ghost" onclick="restart()">Refazer teste</button>
+    </div>
+  </div>`;
+}
+function restart(){ for(const k in A) delete A[k]; history=[]; currentId=null; show('fork'); }
+
+/* ===================== INIT ===================== */
+show('fork');
+const _tb=document.querySelector('.topbar');
+addEventListener('scroll',()=>_tb.classList.toggle('scrolled', scrollY>8), {passive:true});
+</script>

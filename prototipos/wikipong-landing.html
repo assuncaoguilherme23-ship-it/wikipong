@@ -1,0 +1,416 @@
+<!--
+  WikiPong · Landing (versão estilizada)
+  --------------------------------------
+  ASSINATURA: ficha técnica viva no hero — o radar se desenha e as barras preenchem no load.
+  É o elemento mais característico do produto; o resto fica quieto de propósito.
+  Polimento: entrada em cascata, números que contam, header com sombra ao rolar,
+  reveals no scroll, micro-interações. Tudo leve e respeitando prefers-reduced-motion.
+  Mesmo design system Verde-mesa. CTAs ligam landing -> quiz -> catálogo.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WikiPong — Tênis de mesa sem mistério</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#FAFAF9; --surface:#FFFFFF; --surface-2:#EDF2E9;
+  --ink:#283027; --ink-soft:#49514A; --muted:#7C857A;
+  --line:#E4EADE; --line-strong:#D3DBCB;
+  --accent:#1FA06A; --accent-deep:#157A4F; --accent-wash:#E6F4EC;
+  --font-display:'Archivo', system-ui, sans-serif;
+  --font-body:'Inter', system-ui, sans-serif;
+  --font-mono:'IBM Plex Mono', ui-monospace, monospace;
+  --radius:13px; --shadow:0 1px 2px rgba(20,30,22,.04), 0 16px 44px -20px rgba(20,30,22,.18);
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased}
+a{color:inherit; text-decoration:none}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 26px}
+.eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:.15em; text-transform:uppercase; color:var(--accent-deep); font-weight:600}
+.section-tag{font-family:var(--font-mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); display:flex; align-items:center; gap:10px; justify-content:center}
+.section-tag::before,.section-tag::after{content:""; width:24px; height:2px; background:var(--accent); opacity:.5}
+
+/* botões */
+.btn{font-weight:600; font-size:14.5px; border-radius:10px; padding:11px 18px; border:1px solid transparent; transition:.18s cubic-bezier(.2,.8,.2,1); display:inline-block; cursor:pointer}
+.btn .a{display:inline-block; transition:transform .18s}
+.btn-primary{background:var(--accent); color:#fff; border-color:var(--accent)}
+.btn-primary:hover{background:var(--accent-deep); transform:translateY(-2px); box-shadow:0 10px 24px -10px rgba(31,160,106,.55)}
+.btn-primary:hover .a{transform:translateX(3px)}
+.btn-ghost{background:transparent; border-color:var(--line-strong); color:var(--ink)}
+.btn-ghost:hover{background:var(--surface); transform:translateY(-2px); box-shadow:var(--shadow)}
+.btn-lg{padding:14px 24px; font-size:16px; border-radius:11px}
+.btn:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+
+/* topo */
+.topbar{position:sticky; top:0; z-index:20; background:rgba(250,250,249,.8); backdrop-filter:saturate(1.3) blur(12px); border-bottom:1px solid transparent; transition:border-color .25s, box-shadow .25s}
+.topbar.scrolled{border-bottom-color:var(--line); box-shadow:0 10px 30px -22px rgba(20,30,22,.4)}
+.topbar .in{max-width:var(--maxw); margin:0 auto; padding:0 26px; height:64px; display:flex; align-items:center; justify-content:space-between}
+.brand{display:flex; align-items:center; gap:9px; font-family:var(--font-display); font-weight:800; font-size:19px; letter-spacing:-.01em}
+.brand .dot{width:11px; height:11px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-wash)}
+.brand b{color:var(--ink)} .brand span{color:var(--accent)}
+.topnav{display:flex; align-items:center; gap:6px}
+.topnav a{padding:8px 12px; border-radius:8px; font-size:14px; font-weight:500; color:var(--ink-soft); transition:.15s}
+.topnav a:hover{background:var(--surface); color:var(--ink)}
+
+/* hero */
+.hero{position:relative; overflow:hidden; text-align:center; padding:74px 0 30px}
+.hero::before{content:""; position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(58% 46% at 50% -4%, rgba(31,160,106,.10), transparent 72%)}
+.hero::after{content:""; position:absolute; inset:0; pointer-events:none; opacity:.55;
+  background-image:radial-gradient(circle at 1px 1px, rgba(40,48,39,.06) 1px, transparent 0); background-size:24px 24px;
+  -webkit-mask-image:radial-gradient(66% 56% at 50% 26%, #000, transparent 76%);
+  mask-image:radial-gradient(66% 56% at 50% 26%, #000, transparent 76%)}
+.hero-inner{position:relative; z-index:1}
+.hero h1{font-family:var(--font-display); font-weight:800; letter-spacing:-.03em; line-height:1.03;
+  font-size:clamp(2.4rem,6vw,4.3rem); margin:20px auto 0; max-width:16ch}
+.hero h1 em{font-style:normal; color:var(--accent)}
+.hero .lead{font-size:clamp(1.05rem,2vw,1.25rem); color:var(--ink-soft); max-width:54ch; margin:22px auto 0; line-height:1.5}
+.hero .ctas{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:30px}
+.hero .micro{font-family:var(--font-mono); font-size:12px; color:var(--muted); margin-top:14px; letter-spacing:.02em}
+
+/* stats com count-up */
+.stats{display:inline-flex; margin-top:30px; background:var(--surface); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); overflow:hidden}
+.stat{padding:13px 28px; text-align:center}
+.stat:not(:first-child){border-left:1px solid var(--line)}
+.stat .n{font-family:var(--font-mono); font-weight:600; font-size:23px; color:var(--ink)}
+.stat .l{font-size:11px; color:var(--muted); letter-spacing:.03em; margin-top:1px}
+
+/* ficha técnica viva (assinatura) */
+.hero-ds{display:flex; align-items:center; gap:22px; max-width:540px; margin:42px auto 0; text-align:left;
+  background:var(--surface); border:1px solid var(--line-strong); border-radius:18px; box-shadow:var(--shadow); padding:22px 26px}
+.hero-ds .radar{flex:none}
+.hds-body{flex:1; min-width:0}
+.hds-tag{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-deep); background:var(--accent-wash); padding:3px 9px; border-radius:5px; display:inline-block}
+.hds-name{font-family:var(--font-display); font-weight:700; font-size:20px; margin:10px 0 14px; letter-spacing:-.01em; display:flex; justify-content:space-between; align-items:baseline; gap:10px}
+.hds-name span{font-family:var(--font-mono); font-size:14px; color:var(--ink-soft); font-weight:600}
+.dsrow{display:grid; grid-template-columns:78px 28px 1fr; align-items:center; gap:10px; padding:4px 0}
+.dsk{font-size:12px; color:var(--muted)}
+.dsv{font-family:var(--font-mono); font-weight:600; font-size:12.5px; text-align:right}
+.dsbar{height:5px; background:var(--line); border-radius:4px; overflow:hidden}
+.dsbar i{display:block; height:100%; width:0; background:var(--accent); border-radius:4px;
+  transition:width 1.05s cubic-bezier(.2,.8,.2,1) calc(.45s + var(--i,0) * .1s)}
+.hero-ds.go .dsbar i{width:var(--w)}
+.rv{opacity:0; transform:scale(.25); transform-box:fill-box; transform-origin:center;
+  transition:transform .9s cubic-bezier(.2,.8,.2,1) .25s, opacity .6s .25s}
+.rd{opacity:0; transition:opacity .4s .9s}
+.hero-ds.go .rv{opacity:1; transform:scale(1)}
+.hero-ds.go .rd{opacity:1}
+
+.scrollcue{position:relative; z-index:1; margin:42px auto 0; width:26px; height:26px; color:var(--muted); animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+/* faixa da verdade */
+.truthband{padding:8px 0 8px}
+.truth{margin:0 auto; max-width:760px; background:var(--surface); border:1px solid var(--line-strong);
+  border-left:4px solid var(--accent); border-radius:0 14px 14px 0; box-shadow:var(--shadow); padding:24px 30px}
+.truth .k{font-family:var(--font-mono); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent-deep); font-weight:600}
+.truth p{font-size:18px; line-height:1.55; margin:10px 0 0; color:var(--ink)}
+.truth p b{color:var(--accent-deep)}
+
+/* seções */
+.section{padding:74px 0}
+.section.alt{background:var(--surface-2)}
+.section h2{font-family:var(--font-display); font-weight:800; letter-spacing:-.02em; font-size:clamp(1.7rem,3.6vw,2.5rem); text-align:center; margin:14px auto 0; max-width:20ch; line-height:1.1}
+.section .intro{text-align:center; color:var(--ink-soft); max-width:56ch; margin:16px auto 0; font-size:17px}
+
+/* dores */
+.pains{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:44px}
+.pain{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:24px 22px; transition:.22s cubic-bezier(.2,.8,.2,1)}
+.pain:hover{transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--line-strong)}
+.pain .n{font-family:var(--font-mono); font-size:12px; color:var(--accent-deep); font-weight:600}
+.pain h3{font-family:var(--font-display); font-weight:700; font-size:19px; margin:10px 0 8px; letter-spacing:-.01em}
+.pain p{color:var(--ink-soft); font-size:14.5px; margin:0; line-height:1.55}
+
+/* o que é */
+.what{max-width:760px; margin:40px auto 0; text-align:center}
+.what p{font-size:19px; line-height:1.65; color:var(--ink-soft)}
+.what p b{color:var(--ink)}
+.what .signature{font-family:var(--font-display); font-weight:700; color:var(--accent-deep); font-size:22px; display:block; margin-top:6px}
+.trust{display:inline-flex; align-items:center; gap:9px; margin-top:26px; font-family:var(--font-mono); font-size:12.5px; color:var(--muted); background:var(--surface); border:1px solid var(--line-strong); border-radius:30px; padding:8px 16px}
+.trust .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+/* iceberg */
+.grid-feat{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:46px}
+.feat{background:var(--surface); border:1px solid var(--line); border-radius:13px; padding:20px 18px; position:relative; transition:.22s cubic-bezier(.2,.8,.2,1)}
+.feat:hover{transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--line-strong)}
+.feat .ic{width:34px;height:34px;border-radius:9px;background:var(--accent-wash); display:grid; place-items:center; color:var(--accent-deep); transition:.22s}
+.feat:hover .ic{background:var(--accent); color:#fff; transform:rotate(-6deg)}
+.feat h4{font-family:var(--font-display); font-weight:700; font-size:15.5px; margin:12px 0 5px}
+.feat p{font-size:13px; color:var(--muted); margin:0; line-height:1.5}
+.feat .soon{position:absolute; top:14px; right:14px; font-family:var(--font-mono); font-size:9.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent-deep); background:var(--accent-wash); padding:3px 7px; border-radius:5px}
+
+/* faixa final */
+.cta-band{text-align:center}
+.cta-band h2{margin-bottom:0}
+.cta-band .ctas{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:30px}
+
+/* rodapé */
+footer{background:var(--surface-2); border-top:1px solid var(--line); padding:44px 0 30px}
+footer .grid{display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:30px}
+footer h4{font-family:var(--font-mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:0 0 12px}
+footer a{display:block; padding:5px 0; color:var(--ink-soft); font-size:14px; transition:.15s}
+footer a:hover{color:var(--accent-deep)}
+footer .brand{margin-bottom:10px}
+footer .tag{color:var(--muted); font-size:14px; max-width:34ch; margin:0}
+footer .copy{margin-top:34px; padding-top:18px; border-top:1px solid var(--line); font-family:var(--font-mono); font-size:11px; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
+
+/* entrada do hero em cascata */
+.anim{opacity:0; animation:fadeUp .75s cubic-bezier(.2,.8,.2,1) forwards}
+.d0{animation-delay:.05s}.d1{animation-delay:.13s}.d2{animation-delay:.22s}.d3{animation-delay:.31s}.d4{animation-delay:.42s}.d5{animation-delay:.55s}
+@keyframes fadeUp{from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:none}}
+
+/* reveal no scroll (com leve cascata nos grids) */
+.reveal-up{opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1)}
+.reveal-up.in{opacity:1; transform:none}
+.pains .reveal-up:nth-child(3){transition-delay:.08s}
+.pains .reveal-up:nth-child(4){transition-delay:.16s}
+.grid-feat .reveal-up:nth-child(2){transition-delay:.05s}
+.grid-feat .reveal-up:nth-child(3){transition-delay:.1s}
+.grid-feat .reveal-up:nth-child(5){transition-delay:.05s}
+.grid-feat .reveal-up:nth-child(6){transition-delay:.1s}
+.grid-feat .reveal-up:nth-child(8){transition-delay:.05s}
+.grid-feat .reveal-up:nth-child(9){transition-delay:.1s}
+
+@media (max-width:860px){
+  .pains{grid-template-columns:1fr}
+  .grid-feat{grid-template-columns:repeat(2,1fr)}
+  .topnav{display:none}
+  footer .grid{grid-template-columns:1fr 1fr}
+  .hero-ds{flex-direction:column; text-align:center}
+  .hds-name{justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  .anim{opacity:1; animation:none}
+  .reveal-up{opacity:1; transform:none; transition:none}
+  .hero-ds .rv{opacity:1; transform:none} .hero-ds .rd{opacity:1} .hero-ds .dsbar i{transition:none}
+  .scrollcue{animation:none}
+  .btn:hover,.feat:hover,.pain:hover{transform:none}
+}
+</style>
+
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="#"><span class="dot"></span><b>Wiki</b><span>Pong</span></a>
+    <nav class="topnav">
+      <a href="#problema">Por que existe</a>
+      <a href="#recursos">O que tem</a>
+      <a href="wikipong-home-v2.html">Catálogo</a>
+      <a class="btn btn-primary" href="wikipong-quiz.html" style="margin-left:6px">Fazer o teste</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="eyebrow anim d0">Enciclopédia de tênis de mesa · em português</div>
+    <h1 class="anim d1">Tênis de mesa não precisa ser um <em>mistério</em>.</h1>
+    <p class="lead anim d2">Do iniciante perdido ao jogador detalhista: o WikiPong explica cada material — e mostra o certo pro seu jogo — num lugar só, sem você ter que caçar opinião por aí.</p>
+    <div class="ctas anim d3">
+      <a class="btn btn-primary btn-lg" href="wikipong-quiz.html">Fazer o teste de perfil <span class="a">→</span></a>
+      <a class="btn btn-ghost btn-lg" href="wikipong-home-v2.html">Explorar o catálogo</a>
+    </div>
+    <div class="micro anim d3">Leva 1 minuto · sem cadastro</div>
+
+    <div class="stats anim d4">
+      <div class="stat"><div class="n"><span data-target="142">0</span></div><div class="l">materiais</div></div>
+      <div class="stat"><div class="n"><span data-target="9">0</span></div><div class="l">marcas</div></div>
+      <div class="stat"><div class="n"><span data-target="38">0</span></div><div class="l">comparações</div></div>
+    </div>
+
+    <div class="hero-ds anim d4" id="heroDs"></div>
+
+    <svg class="scrollcue anim d5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- A VERDADE QUE NINGUÉM CONTA -->
+<section class="truthband">
+  <div class="wrap">
+    <div class="truth reveal-up">
+      <div class="k">A verdade que ninguém te conta</div>
+      <p>Material de qualidade quase nunca vem na <b>raquete já montada</b>. Os bons se compram <b>separados</b> — a madeira (lâmina) e as duas borrachas. O WikiPong te ensina a montar a sua, do jeito certo pro seu nível.</p>
+    </div>
+  </div>
+</section>
+
+<!-- O PROBLEMA -->
+<section class="section alt" id="problema">
+  <div class="wrap">
+    <div class="section-tag reveal-up">Por que o WikiPong existe</div>
+    <h2 class="reveal-up">Comprar material virou um campo minado</h2>
+    <p class="intro reveal-up">Quem chega no esporte enfrenta a mesma parede: informação solta, contraditória e quase sempre vaga — ainda mais sobre material.</p>
+    <div class="pains">
+      <div class="pain reveal-up">
+        <div class="n">01</div>
+        <h3>Cada um fala uma coisa</h3>
+        <p>Loja, vídeo, colega de clube — todo mundo opina diferente. Sobre material, então, é cada um por si.</p>
+      </div>
+      <div class="pain reveal-up">
+        <div class="n">02</div>
+        <h3>Material errado pro nível</h3>
+        <p>Iniciante não tem controle pra uma raquete profissional e erra muito — mas ninguém avisa isso antes da compra.</p>
+      </div>
+      <div class="pain reveal-up">
+        <div class="n">03</div>
+        <h3>Nem o professor tem certeza</h3>
+        <p>A orientação sobre material é tão imprecisa que até quem ensina, às vezes, indica o caminho errado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE É -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-tag reveal-up">O que é o WikiPong</div>
+    <div class="what">
+      <p class="reveal-up">Um guia que <b>cresce com você</b> — do primeiro contato ao detalhe técnico.
+      <span class="signature reveal-up">Clareza no lugar do achismo, em português.</span></p>
+      <p class="reveal-up" style="margin-top:20px; font-size:16.5px">Tudo num só lugar: o material certo pra cada perfil, explicado numa linguagem que o iniciante entende e que o detalhista respeita. Sem precisar garimpar a internet inteira e juntar opiniões que se contradizem.</p>
+      <div class="trust reveal-up"><span class="dot"></span>Revisado por quem joga e treina</div>
+    </div>
+  </div>
+</section>
+
+<!-- O ICEBERG -->
+<section class="section alt" id="recursos">
+  <div class="wrap">
+    <div class="section-tag reveal-up">O que você encontra</div>
+    <h2 class="reveal-up">E isso é só a ponta do iceberg</h2>
+    <p class="intro reveal-up">Começa pelo material e cresce até virar um centro de referência do tênis de mesa.</p>
+    <div class="grid-feat">
+      <div class="feat reveal-up">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+        <h4>Materiais explicados</h4>
+        <p>Velocidade, spin, controle e dureza — em número e em português claro.</p>
+      </div>
+      <div class="feat reveal-up">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4v16M15 4v16M4 9h16"/></svg></div>
+        <h4>Comparação lado a lado</h4>
+        <p>Dois materiais frente a frente, com o vencedor de cada atributo destacado.</p>
+      </div>
+      <div class="feat reveal-up">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
+        <h4>Teste de perfil</h4>
+        <p>Responde 1 minuto e recebe o material que combina com o seu jogo.</p>
+      </div>
+      <div class="feat reveal-up">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-6 9 6v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <h4>Onde comprar</h4>
+        <span class="soon">Em breve</span>
+        <p>Os melhores lugares pra comprar cada material, com preço.</p>
+      </div>
+      <div class="feat reveal-up">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/></svg></div>
+        <h4>Glossário de termos</h4>
+        <p>Toda palavra técnica explicada ali mesmo, sem precisar sair da página.</p>
+      </div>
+      <div class="feat reveal-up">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 8l6 4-6 4z"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg></div>
+        <h4>Videoaulas com atletas</h4>
+        <span class="soon">Em breve</span>
+        <p>Técnica explicada por especialistas e profissionais do esporte.</p>
+      </div>
+      <div class="feat reveal-up">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg></div>
+        <h4>IA de combinação</h4>
+        <span class="soon">Em breve</span>
+        <p>Sugestões de setup afinadas ao seu perfil, com base no teste.</p>
+      </div>
+      <div class="feat reveal-up">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/></svg></div>
+        <h4>Comunidade</h4>
+        <span class="soon">Em breve</span>
+        <p>Avaliações reais, organizadas por nível de quem joga — não opinião solta.</p>
+      </div>
+      <div class="feat reveal-up">
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h13v14H6a2 2 0 0 1-2-2zM17 9h3v8a2 2 0 0 1-3 0M8 9h5M8 13h5"/></svg></div>
+        <h4>Notícias</h4>
+        <span class="soon">Em breve</span>
+        <p>O tênis de mesa brasileiro com clareza — notícia com fonte, sem sensacionalismo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA FINAL -->
+<section class="section cta-band">
+  <div class="wrap">
+    <h2 class="reveal-up">Vamos achar o material do seu jogo?</h2>
+    <p class="intro reveal-up">Comece pelo teste de 1 minuto — ou explore o catálogo no seu ritmo.</p>
+    <div class="ctas reveal-up">
+      <a class="btn btn-primary btn-lg" href="wikipong-quiz.html">Vamos lá! <span class="a">→</span></a>
+      <a class="btn btn-ghost btn-lg" href="wikipong-home-v2.html">Explorar o catálogo</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <a class="brand" href="#" style="display:inline-flex"><span class="dot"></span><b>Wiki</b><span>Pong</span></a>
+        <p class="tag">A primeira enciclopédia de tênis de mesa em português que cresce com o jogador — do iniciante ao detalhista.</p>
+      </div>
+      <div><h4>Navegar</h4><a href="wikipong-home-v2.html">Catálogo</a><a href="wikipong-quiz.html">Teste de perfil</a><a href="#recursos">Recursos</a></div>
+      <div><h4>O projeto</h4><a href="#problema">Por que existe</a><a href="#">Quem somos</a><a href="#">Contato</a></div>
+    </div>
+    <div class="copy"><span>© 2026 WikiPong</span><span>Feito no Brasil · pra quem leva o jogo a sério</span></div>
+  </div>
+</footer>
+
+<script>
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---- ficha técnica viva (assinatura): radar + barras ---- */
+const AXES=['Velocidade','Spin','Controle','Durabilidade'];
+const featured={name:'Viscaria ALC', brand:'Butterfly', type:'lâmina', price:1650,
+  specs:{Velocidade:8.8, Spin:9.0, Controle:8.5, Durabilidade:8.5}};
+function radar(specs,size=150){
+  const cx=size/2,cy=size/2,R=size*0.36,N=AXES.length;
+  const pt=(i,r)=>{const a=-Math.PI/2+i*2*Math.PI/N;return [cx+r*Math.cos(a),cy+r*Math.sin(a)];};
+  let rings='';[0.33,0.66,1].forEach(t=>{rings+=`<polygon points="${AXES.map((_,i)=>pt(i,R*t).join(',')).join(' ')}" fill="none" stroke="var(--line)" stroke-width="1"/>`;});
+  const spokes=AXES.map((_,i)=>{const[x,y]=pt(i,R);return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="var(--line)" stroke-width="1"/>`}).join('');
+  const vp=AXES.map((ax,i)=>pt(i,R*(specs[ax]/10)));
+  const dots=vp.map(([x,y])=>`<circle class="rd" cx="${x}" cy="${y}" r="2.6" fill="var(--accent)"/>`).join('');
+  return `<svg class="radar" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">${rings}${spokes}
+    <polygon class="rv" points="${vp.map(p=>p.join(',')).join(' ')}" fill="rgba(31,160,106,.14)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>${dots}</svg>`;
+}
+const ds=document.getElementById('heroDs');
+ds.innerHTML=`${radar(featured.specs)}
+  <div class="hds-body">
+    <span class="hds-tag">Como o material aparece</span>
+    <div class="hds-name">${featured.name}<span>R$${featured.price.toLocaleString('pt-BR')}</span></div>
+    ${AXES.map((ax,i)=>`<div class="dsrow"><span class="dsk">${ax}</span><span class="dsv">${featured.specs[ax].toFixed(1)}</span>
+      <span class="dsbar"><i style="--w:${featured.specs[ax]*10}%; --i:${i}"></i></span></div>`).join('')}
+  </div>`;
+/* dispara as animações no próximo frame */
+requestAnimationFrame(()=>requestAnimationFrame(()=>ds.classList.add('go')));
+
+/* ---- números que contam sozinhos ---- */
+function countUp(el){
+  const target=+el.dataset.target;
+  if(reduce){el.textContent=target; return;}
+  const dur=1000, t0=performance.now();
+  (function step(t){const p=Math.min((t-t0)/dur,1);
+    el.textContent=Math.round(target*(1-Math.pow(1-p,3)));
+    if(p<1) requestAnimationFrame(step);})(t0);
+}
+document.querySelectorAll('.stat .n span').forEach(el=>setTimeout(()=>countUp(el),520));
+
+/* ---- header ganha sombra ao rolar ---- */
+const tb=document.querySelector('.topbar');
+addEventListener('scroll',()=>tb.classList.toggle('scrolled', scrollY>8), {passive:true});
+
+/* ---- reveal no scroll ---- */
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.14, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal-up').forEach(el=>io.observe(el));
+</script>

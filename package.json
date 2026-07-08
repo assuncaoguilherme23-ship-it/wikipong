@@ -1,0 +1,27 @@
+{
+  "name": "wikipong",
+  "version": "1.0.0",
+  "description": "Enciclopédia PT-BR de equipamentos de tênis de mesa.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "test": "tsx testes/rodar.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3"
+  }
+}

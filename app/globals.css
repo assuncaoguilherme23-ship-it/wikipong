@@ -1,0 +1,124 @@
+/*
+ * WikiPong · estilos base + tokens da identidade "Verde-mesa"
+ * ------------------------------------------------------------------------------
+ * Tokens reconciliados com os valores EXATOS do Figma (fonte da verdade — D-01),
+ * página "WikiPong v2 · Verde-mesa". Nomes em PT-BR (D — convenção do projeto).
+ *
+ * As famílias tipográficas vêm de next/font (layout.tsx) via variáveis CSS:
+ *   --fonte-display (Archivo) · --fonte-corpo (Inter) · --fonte-mono (JetBrains Mono)
+ * Papel dos dados/números/eyebrows/breadcrumbs = mono (D-04).
+ */
+
+:root {
+  /* ── Cores · valores EXATOS do Figma (D-01) ── */
+  --cor-papel: #fafaf9;
+  --cor-superficie: #ffffff;
+  --cor-superficie-2: #edf2e9;
+  --cor-tinta: #283027;
+  --cor-tinta-suave: #49514a;
+  --cor-mudo: #7c857a;
+  --cor-linha: #e4eade;
+  --cor-linha-forte: #d3dbcb;
+  --cor-acento: #1fa06a;
+  --cor-acento-escuro: #157a4f;
+  --cor-acento-suave: #e6f4ec;
+
+  /* ── Raios (px) — Figma ── */
+  --raio-sm: 9px;
+  --raio-md: 13px;
+  --raio-lg: 18px;
+
+  /* ── Escala de espaçamento (px) — Figma. Referência canônica p/ componentes. ── */
+  --esp-1: 4px;
+  --esp-2: 8px;
+  --esp-3: 12px;
+  --esp-4: 16px;
+  --esp-5: 24px;
+  --esp-6: 32px;
+  --esp-7: 48px;
+  --esp-8: 64px;
+
+  /* ── Tipografia (D-04) — famílias injetadas por next/font ── */
+  --fonte-display: var(--fonte-archivo), system-ui, sans-serif;
+  --fonte-corpo: var(--fonte-inter), system-ui, sans-serif;
+  --fonte-mono: var(--fonte-jetbrains), ui-monospace, monospace;
+
+  /* ── Derivados de layout (não são tokens do Figma) ── */
+  --largura-conteudo: 72rem;
+  --sombra-cartao: 0 1px 2px rgba(40, 48, 39, 0.06), 0 8px 24px rgba(40, 48, 39, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--cor-papel);
+  color: var(--cor-tinta);
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-display);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* Voz dos dados (D-04): números, eyebrows, metadados, breadcrumbs */
+.mono {
+  font-family: var(--fonte-mono);
+  font-feature-settings: "tnum" 1;
+}
+
+.eyebrow {
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-acento);
+}
+
+a {
+  color: var(--cor-acento);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* Foco visível sempre (D-18 / acessibilidade) */
+:focus-visible {
+  outline: 3px solid var(--cor-acento);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--largura-conteudo);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
+}
+
+/* Respeito a prefers-reduced-motion (padrão colhido dos protótipos / D-18) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

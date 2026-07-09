@@ -15,6 +15,7 @@
 import Link from 'next/link';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
+import { Radar } from '@/componentes/Radar';
 import {
   perdao,
   custoMensalPorClasse,
@@ -42,26 +43,10 @@ const AMOSTRAS: Amostra[] = [
 const brl = (v: number) =>
   v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 2 });
 
-// ── Radar decorativo do hero ──────────────────────────────────────────────
-// Geometria de apresentação (por isso vive na UI, não em src/logica). Os VALORES
-// são reais — calculados pela lógica pura em build time, incluindo o Perdão
-// derivado (D-09). Ensaia o padrão draw-in colhido do protótipo (D-15) e o
-// overlay de 2 polígonos que o componente Radar definitivo vai suportar.
-// aria-hidden: a tabela de métricas logo abaixo é a alternativa acessível.
-const RADAR = { tam: 280, raio: 96 };
-const EIXOS_RADAR = ['VEL', 'EFE', 'CTR', 'PER*'];
-
-function coordsRadar(valores: number[], raio: number): Array<[number, number]> {
-  const c = RADAR.tam / 2;
-  return valores.map((v, i) => {
-    const ang = -Math.PI / 2 + (i * 2 * Math.PI) / valores.length;
-    const r = raio * (v / 10);
-    return [c + r * Math.cos(ang), c + r * Math.sin(ang)];
-  });
-}
-
-const paraPontos = (coords: Array<[number, number]>): string =>
-  coords.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(' ');
+// Eixos do radar do hero: os VALORES são reais, calculados pela lógica pura em
+// build time — incluindo o Perdão derivado (D-09, daí o asterisco no rótulo).
+// aria-hidden no componente: a tabela de métricas abaixo é a alternativa acessível.
+const EIXOS_RADAR = ['VEL', 'EFE', 'CTR', 'PER*'] as const;
 
 export default function Home() {
   // Linhas da tabela: cada uma computada pela lógica pura (renderer Técnico + Simples).
@@ -82,15 +67,6 @@ export default function Home() {
 
   // Valores por material: [velocidade, efeito, controle, perdão-derivado]
   const radarDe = (i: number) => [velocidades[i], efeitos[i], controles[i], perdoes[i]];
-  const rotulosRadar = EIXOS_RADAR.map((rotulo, i) => {
-    const ang = -Math.PI / 2 + (i * 2 * Math.PI) / EIXOS_RADAR.length;
-    const c = RADAR.tam / 2;
-    const x = c + (RADAR.raio + 18) * Math.cos(ang);
-    const y = c + (RADAR.raio + 18) * Math.sin(ang);
-    const anchor: 'middle' | 'start' | 'end' =
-      i === 0 || i === 2 ? 'middle' : x > c ? 'start' : 'end';
-    return { rotulo, x, y: y + 3, anchor };
-  });
 
   return (
     <>
@@ -116,62 +92,15 @@ export default function Home() {
               </div>
             </div>
 
-            <aside className={styles.heroRadar} aria-hidden="true">
-              <svg
-                width={RADAR.tam}
-                height={RADAR.tam}
-                viewBox={`0 0 ${RADAR.tam} ${RADAR.tam}`}
-                role="presentation"
-              >
-                {[0.25, 0.5, 0.75, 1].map((t) => (
-                  <polygon
-                    key={t}
-                    points={paraPontos(coordsRadar([10 * t, 10 * t, 10 * t, 10 * t], RADAR.raio))}
-                    className={styles.radarAnel}
-                  />
-                ))}
-                {coordsRadar([10, 10, 10, 10], RADAR.raio).map(([x, y], i) => (
-                  <line
-                    key={i}
-                    x1={RADAR.tam / 2}
-                    y1={RADAR.tam / 2}
-                    x2={x}
-                    y2={y}
-                    className={styles.radarAnel}
-                  />
-                ))}
-                {/* Tenergy 05 (tracejado) e Mark V (sólido) — distinguíveis sem depender de cor */}
-                <polygon
-                  points={paraPontos(coordsRadar(radarDe(0), RADAR.raio))}
-                  className={`${styles.radarPoly} ${styles.radarTracejado}`}
-                />
-                <polygon
-                  points={paraPontos(coordsRadar(radarDe(1), RADAR.raio))}
-                  className={`${styles.radarPoly} ${styles.radarSolido}`}
-                />
-                {coordsRadar(radarDe(1), RADAR.raio).map(([x, y], i) => (
-                  <circle key={i} cx={x} cy={y} r={2.8} className={styles.radarPonto} />
-                ))}
-                {rotulosRadar.map((r) => (
-                  <text
-                    key={r.rotulo}
-                    x={r.x}
-                    y={r.y}
-                    textAnchor={r.anchor}
-                    className={styles.radarRotulo}
-                  >
-                    {r.rotulo}
-                  </text>
-                ))}
-              </svg>
-              <div className={styles.legenda}>
-                <span>
-                  <i className={styles.amostraSolida} /> Mark V
-                </span>
-                <span>
-                  <i className={styles.amostraTracejada} /> Tenergy 05
-                </span>
-              </div>
+            <aside className={styles.heroRadar}>
+              <Radar
+                eixos={EIXOS_RADAR}
+                series={[
+                  { nome: 'Tenergy 05', valores: radarDe(0), variante: 'tracejada' },
+                  { nome: 'Mark V', valores: radarDe(1), variante: 'solida' },
+                ]}
+                animado
+              />
             </aside>
           </div>
         </section>

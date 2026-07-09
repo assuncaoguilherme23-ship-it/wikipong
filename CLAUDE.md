@@ -20,7 +20,12 @@ draw-in, padrões de `prefers-reduced-motion`.
 - ✅ `src/logica/filtros.ts` — motor de filtros facetado (faixas + facetas + sort) com
   parse/serialize de query string compatível com os presetURL do quiz (D-12); importa
   `metricas` p/ o sort por Perdão; testes cobrem os 4 perfis
-- ⏳ componente Radar (portar o canvas/SVG do protótipo; suportar overlay de 2 polígonos)
+- ✅ `componentes/Radar.tsx` — overlay de 2 polígonos (sólido × tracejado), draw-in,
+  aria-hidden (a tabela é a alternativa acessível); usado no hero e no `/comparar`
+
+**Colheita CONCLUÍDA.** Consumo: `/catalogo` usa `filtros.ts` (URL = fonte única, D-12,
+via pushState + useSearchParams); `/comparar?ids=` usa o Radar + `metricas.ts`;
+`dados/materiais.json` é a semente colhida do protótipo (dureza A VALIDAR).
 
 ## Convenções
 - **PT-BR em tudo**: nomes de arquivos, funções, variáveis, comentários, commits.

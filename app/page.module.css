@@ -57,7 +57,7 @@
 .heroTexto > :nth-child(3) { animation-delay: 180ms; }
 .heroTexto > :nth-child(4) { animation-delay: 250ms; }
 
-/* ── Radar decorativo (draw-in colhido do protótipo — D-15) ── */
+/* ── Radar do hero: o desenho vive em componentes/Radar (D-15) ── */
 .heroRadar {
   display: none;
 }
@@ -66,70 +66,6 @@
     display: block;
     animation: subir 600ms cubic-bezier(0.2, 0.7, 0.2, 1) 300ms backwards;
   }
-}
-.radarAnel {
-  fill: none;
-  stroke: var(--cor-linha);
-  stroke-width: 1;
-}
-.radarPoly {
-  transform-box: view-box;
-  transform-origin: center;
-  animation: radarEntrar 700ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
-}
-@keyframes radarEntrar {
-  from {
-    opacity: 0;
-    transform: scale(0.55);
-  }
-}
-.radarTracejado {
-  fill: none;
-  stroke: var(--cor-tinta-suave);
-  stroke-width: 2;
-  stroke-linejoin: round;
-  stroke-dasharray: 5 4;
-  animation-delay: 550ms;
-}
-.radarSolido {
-  fill: color-mix(in srgb, var(--cor-acento) 13%, transparent);
-  stroke: var(--cor-acento);
-  stroke-width: 2;
-  stroke-linejoin: round;
-  animation-delay: 700ms;
-}
-.radarPonto {
-  fill: var(--cor-acento);
-  animation: subir 400ms ease-out 1050ms backwards;
-}
-.radarRotulo {
-  font-family: var(--fonte-mono);
-  font-size: 9px;
-  letter-spacing: 0.06em;
-  fill: var(--cor-mudo);
-}
-.legenda {
-  display: flex;
-  justify-content: center;
-  gap: 1.25rem;
-  font-family: var(--fonte-mono);
-  font-size: 0.72rem;
-  color: var(--cor-tinta-suave);
-}
-.legenda span {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.amostraSolida,
-.amostraTracejada {
-  display: inline-block;
-  width: 18px;
-  border-top: 2px solid var(--cor-acento);
-}
-.amostraTracejada {
-  border-top-style: dashed;
-  border-top-color: var(--cor-tinta-suave);
 }
 .lede {
   font-size: clamp(1.05rem, 2.4vw, 1.3rem);

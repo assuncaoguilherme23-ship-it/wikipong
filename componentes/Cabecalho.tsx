@@ -10,7 +10,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import estilos from './Cabecalho.module.css';
 
-const ITENS = [{ href: '/catalogo/', rotulo: 'Materiais' }] as const;
+const ITENS = [
+  { href: '/catalogo/', rotulo: 'Materiais' },
+  { href: '/comparar/', rotulo: 'Comparar' },
+] as const;
 
 export function Cabecalho() {
   const rota = usePathname();

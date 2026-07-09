@@ -270,21 +270,6 @@
   width: 5.2rem;
   color: var(--cor-tinta-suave);
 }
-.bolinhas {
-  display: inline-flex;
-  gap: 3px;
-}
-.bolinhas i {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-.bolaCheia {
-  background: var(--cor-acento);
-}
-.bolaVazia {
-  background: var(--cor-linha-forte);
-}
 .palavraSimples {
   color: var(--cor-tinta-suave);
   font-size: 0.8rem;

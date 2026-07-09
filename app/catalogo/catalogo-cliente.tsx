@@ -28,8 +28,9 @@ import {
   type FiltroEstado,
   type Ordenacao,
 } from '@/src/logica/filtros';
-import { PALAVRAS, paraBolinhas, paraPalavra, perdao } from '@/src/logica/metricas';
+import { PALAVRAS, paraPalavra, perdao } from '@/src/logica/metricas';
 import { MATERIAIS, type MaterialCatalogo } from '@/componentes/dados-materiais';
+import { Bolinhas } from '@/componentes/Bolinhas';
 import { brl } from '@/componentes/formato';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
@@ -64,17 +65,6 @@ const ROTULOS_ORDENACAO: Record<Ordenacao, string> = {
 };
 
 const mesmaFaixa = (a: Faixa | null, b: Faixa): boolean => a !== null && a.min === b.min && a.max === b.max;
-
-function Bolinhas({ valor }: { valor: number }) {
-  const cheias = paraBolinhas(valor);
-  return (
-    <span className={estilos.bolinhas} aria-hidden="true">
-      {Array.from({ length: 5 }, (_, i) => (
-        <i key={i} className={i < cheias ? estilos.bolaCheia : estilos.bolaVazia} />
-      ))}
-    </span>
-  );
-}
 
 export function CatalogoCliente() {
   const parametros = useSearchParams();

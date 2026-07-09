@@ -1,0 +1,15 @@
+.bolinhas {
+  display: inline-flex;
+  gap: 3px;
+}
+.bolinhas i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.cheia {
+  background: var(--cor-acento);
+}
+.vazia {
+  background: var(--cor-linha-forte);
+}

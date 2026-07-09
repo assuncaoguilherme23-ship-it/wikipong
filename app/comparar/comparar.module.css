@@ -1,0 +1,206 @@
+.pagina {
+  padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 4rem);
+  min-height: 60dvh;
+}
+
+.topo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.titulo {
+  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+  font-weight: 800;
+  margin-top: 0.25rem;
+}
+
+.aviso {
+  background: var(--cor-acento-suave);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  color: var(--cor-tinta);
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* ── Seletor (estado vazio honesto) ── */
+.instrucao {
+  color: var(--cor-tinta-suave);
+  max-width: 52ch;
+}
+.listaEscolha {
+  list-style: none;
+  margin: 1.25rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.6rem;
+}
+.itemEscolha {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  padding: 0.7rem 0.9rem;
+  cursor: pointer;
+  transition: border-color 160ms ease;
+  min-height: 44px;
+}
+.itemEscolha:hover {
+  border-color: var(--cor-acento);
+}
+.itemEscolha input {
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--cor-acento-escuro);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.itemEscolha input:disabled {
+  cursor: not-allowed;
+}
+.itemMarcado {
+  border-color: var(--cor-acento);
+  background: var(--cor-acento-suave);
+}
+.itemEscolha b {
+  display: block;
+  font-size: 0.95rem;
+}
+.metaEscolha {
+  font-size: 0.7rem;
+  color: var(--cor-tinta-suave);
+}
+
+.ctaComparar {
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--cor-acento-escuro);
+  border: none;
+  border-radius: var(--raio-md);
+  padding: 0.7rem 1.15rem;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+.ctaComparar:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--cor-acento-escuro) 88%, #000);
+}
+.ctaComparar:active:not(:disabled) {
+  transform: scale(0.98);
+}
+.ctaComparar:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Comparação ── */
+.palcoComparacao {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 920px) {
+  .palcoComparacao {
+    grid-template-columns: auto 1fr;
+    gap: 3rem;
+  }
+}
+.radarCaixa {
+  justify-self: center;
+}
+
+.tabelaWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--raio-md);
+}
+.tabela {
+  width: 100%;
+  min-width: 24rem;
+  border-collapse: collapse;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  overflow: hidden;
+  box-shadow: var(--sombra-cartao);
+}
+.tabela th,
+.tabela td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--cor-linha);
+  vertical-align: top;
+}
+.tabela tr:last-child td {
+  border-bottom: none;
+}
+.tabela thead th {
+  background: var(--cor-superficie-2);
+  font-family: var(--fonte-display);
+  font-size: 0.95rem;
+}
+.tabela tbody tr {
+  transition: background 140ms ease;
+}
+.tabela tbody tr:hover {
+  background: color-mix(in srgb, var(--cor-acento) 5%, transparent);
+}
+.atributo {
+  color: var(--cor-tinta-suave);
+  font-weight: 500;
+}
+.valor {
+  font-size: 1.05rem;
+  font-weight: 500;
+  font-feature-settings: 'tnum' 1;
+}
+.valorSimples {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+}
+.maximo {
+  color: var(--cor-texto-acento);
+  font-weight: 700;
+}
+.tagMaior {
+  font-family: var(--fonte-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+  margin-left: 0.4rem;
+}
+
+.nota {
+  margin-top: 1.25rem;
+  font-size: 0.82rem;
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}
+
+.trocar {
+  font: inherit;
+  color: var(--cor-tinta-suave);
+  background: none;
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  padding: 0.55rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+.trocar:hover {
+  border-color: var(--cor-acento);
+  color: var(--cor-texto-acento);
+}

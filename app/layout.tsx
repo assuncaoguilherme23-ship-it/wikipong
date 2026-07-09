@@ -8,7 +8,7 @@
  * `metadata` demonstra o ganho de escolher Next (D-17): SEO/OG por rota, gerado
  * no build. `lang="pt-BR"` porque PT-BR é a língua do produto (CLAUDE.md).
  */
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Archivo, Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
@@ -46,6 +46,14 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     siteName: 'WikiPong',
   },
+};
+
+/* Barra do navegador acompanha o tema (tokens --cor-papel de cada modo) */
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#fafaf9' },
+    { media: '(prefers-color-scheme: dark)', color: '#101410' },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

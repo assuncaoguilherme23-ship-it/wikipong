@@ -363,6 +363,17 @@ D-02, D-14 e D-16 permanecem invioláveis; acessibilidade é requisito, não opc
 **Emenda:** refina a D-01 (fonte da verdade visual = identidade e estrutura; execução
 visual pode superá-la).
 
+**Nota de sync — tema escuro, alias e radar do hero (2026-07-09):** três divergências
+aplicadas na passada de design (regra 2 desta decisão):
+1. **Tema escuro** via `prefers-color-scheme` com tokens derivados do verde-mesa
+   (superfícies dessaturadas com tom de verde, não inversão) — o Figma ainda não define
+   tokens escuros; **pendente de olho do fundador e sync ao Figma**.
+2. **Alias semântico `--cor-texto-acento`** (claro→acento-escuro; escuro→acento),
+   concretizando a trilha prevista na nota de contraste abaixo. Componentes usam o alias.
+3. **Radar decorativo no hero** (2 polígonos sobrepostos, dados reais em build time,
+   Perdão incluído com asterisco A VALIDAR; `aria-hidden` — a tabela é a alternativa
+   acessível; sólido × tracejado, distinguível sem cor). Ensaia o componente Radar (D-15).
+
 **Nota de sync — uso do acento (2026-07-09):** o acento claro `--cor-acento` (#1FA06A)
 tem contraste ~3.2:1 sobre o papel — **reprova** WCAG AA em texto pequeno/normal (exige
 4.5:1). Regra adotada: **texto pequeno/corpo e fundos de botão usam `--cor-acento-escuro`**

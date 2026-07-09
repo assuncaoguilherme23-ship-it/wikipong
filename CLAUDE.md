@@ -58,8 +58,10 @@ Regras do jogo:
    fato×opinião (D-14), honestidade de UI (D-16), acessibilidade sempre
    (`prefers-reduced-motion`, contraste, foco visível, navegação por teclado).
 
-**Uso do acento (regra de contraste — ver nota sob D-18):** `--cor-acento` (#1FA06A)
-reprova AA em texto pequeno (~3.2:1). Use `--cor-acento-escuro` (#157A4F, ~5.1:1) em
-**texto pequeno/corpo, links e fundos de botão**; reserve o acento claro para
-**preenchimentos, bordas, anel de foco e o wordmark**. Exceção: **texto grande/display
-(≥ 24px, ou ≥ 18.66px bold) pode usar o acento claro** (AA large = 3:1).
+**Uso do acento (regra de contraste — ver nota sob D-18):** para TEXTO acentuado use o
+alias semântico **`--cor-texto-acento`** (resolve p/ acento-escuro no tema claro e p/ o
+acento no escuro — AA nos dois). Fundos de botão: `--cor-acento-escuro` (branco sobre ele
+passa AA em qualquer tema). Acento claro direto: só **preenchimentos, bordas, anel de
+foco e wordmark**. Exceção: **texto grande/display (≥ 24px, ou ≥ 18.66px bold) pode usar
+o acento claro** (AA large = 3:1). O site tem **tema escuro** (`prefers-color-scheme`)
+com tokens derivados — teste contraste nos DOIS temas ao mexer em cor.

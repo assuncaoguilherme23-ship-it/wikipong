@@ -10,6 +10,8 @@
  */
 
 :root {
+  color-scheme: light dark;
+
   /* ── Cores · valores EXATOS do Figma (D-01) ── */
   --cor-papel: #fafaf9;
   --cor-superficie: #ffffff;
@@ -22,6 +24,10 @@
   --cor-acento: #1fa06a;
   --cor-acento-escuro: #157a4f;
   --cor-acento-suave: #e6f4ec;
+
+  /* Alias semântico (regra do acento — nota sob D-18): texto acentuado precisa de AA.
+     No tema claro é o acento-escuro (5.1:1); no escuro, o próprio acento resolve. */
+  --cor-texto-acento: var(--cor-acento-escuro);
 
   /* ── Raios (px) — Figma ── */
   --raio-sm: 9px;
@@ -48,12 +54,33 @@
   --sombra-cartao: 0 1px 2px rgba(40, 48, 39, 0.06), 0 8px 24px rgba(40, 48, 39, 0.06);
 }
 
+/* ── Tema escuro (divergência registrada sob D-18 — o Figma ainda não define
+      tokens escuros; trilha de sync). Derivado do verde-mesa: superfícies
+      dessaturadas com tom de verde, NUNCA inversão crua. O acento-escuro não
+      muda (é fundo de CTA; branco sobre ele passa AA em qualquer tema). ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-papel: #101410;
+    --cor-superficie: #161c16;
+    --cor-superficie-2: #1d261d;
+    --cor-tinta: #e7ece5;
+    --cor-tinta-suave: #a9b3a6;
+    --cor-linha: #232d23;
+    --cor-linha-forte: #33402f;
+    --cor-acento: #29b077;
+    --cor-acento-suave: #17281e;
+    --cor-texto-acento: var(--cor-acento); /* ~6:1 sobre o papel escuro */
+    --sombra-cartao: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth; /* o override de reduced-motion abaixo devolve 'auto' */
 }
 
 body {
@@ -90,13 +117,37 @@ h3 {
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cor-acento-escuro);
+  color: var(--cor-texto-acento);
 }
 
 a {
-  color: var(--cor-acento-escuro);
+  color: var(--cor-texto-acento);
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
+}
+
+::selection {
+  background: var(--cor-acento-suave);
+  color: var(--cor-tinta);
+}
+
+/* Link "pular para o conteúdo" (a11y): fora da tela até receber foco de teclado */
+.pular-conteudo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform: translateY(-140%);
+  background: var(--cor-acento-escuro);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 var(--raio-sm) 0;
+  transition: transform 160ms ease;
+}
+.pular-conteudo:focus {
+  transform: translateY(0);
 }
 
 /* Foco visível sempre (D-18 / acessibilidade) */

@@ -83,16 +83,18 @@ h3 {
   font-feature-settings: "tnum" 1;
 }
 
+/* Texto pequeno usa o acento ESCURO (AA 5.1:1); o acento claro fica p/ preenchimentos,
+   bordas, anel de foco e o wordmark (logotipo é isento de contraste). */
 .eyebrow {
   font-family: var(--fonte-mono);
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cor-acento);
+  color: var(--cor-acento-escuro);
 }
 
 a {
-  color: var(--cor-acento);
+  color: var(--cor-acento-escuro);
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }

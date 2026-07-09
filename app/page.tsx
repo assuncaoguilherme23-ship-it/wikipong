@@ -98,7 +98,8 @@ export default function Home() {
             </p>
           </div>
 
-          <table className={styles.tabela}>
+          <div className={styles.tabelaWrap}>
+            <table className={styles.tabela}>
             <thead>
               <tr>
                 <th scope="col">Métrica</th>
@@ -137,7 +138,8 @@ export default function Home() {
                 );
               })}
             </tbody>
-          </table>
+            </table>
+          </div>
 
           <p className={styles.nota}>
             <span className={styles.selo}>A validar</span> &nbsp;* Perdão é métrica derivada

@@ -47,7 +47,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--cor-acento);
+  color: var(--cor-acento-escuro);
   white-space: nowrap;
 }
 .barra {
@@ -112,7 +112,7 @@
   padding: 0.25rem 0;
 }
 .voltar:hover {
-  color: var(--cor-acento);
+  color: var(--cor-acento-escuro);
 }
 
 /* Resultado */

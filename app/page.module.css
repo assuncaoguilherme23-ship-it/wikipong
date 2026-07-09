@@ -37,16 +37,16 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--cor-acento);
+  background: var(--cor-acento-escuro); /* branco sobre acento-escuro = 5.35:1 (AA) */
   color: #fff;
   font-weight: 600;
   text-decoration: none;
-  padding: 0.6rem 1.1rem;
+  padding: 0.7rem 1.15rem; /* altura ~44px p/ alvo de toque */
   border-radius: var(--raio-md);
   transition: background 160ms ease, transform 160ms ease;
 }
 .cta:hover {
-  background: var(--cor-acento-escuro);
+  background: color-mix(in srgb, var(--cor-acento-escuro) 88%, #000);
   transform: translateY(-1px);
 }
 
@@ -73,7 +73,7 @@
 .ghost {
   display: inline-flex;
   align-items: center;
-  padding: 0.6rem 1.1rem;
+  padding: 0.7rem 1.15rem; /* paridade de alvo de toque com o CTA (~44px) */
   border: 1px solid var(--cor-linha);
   border-radius: var(--raio-md);
   text-decoration: none;
@@ -100,8 +100,15 @@
   margin: 0;
 }
 
+/* Em ~375px a tabela rola dentro do próprio container, sem scroll horizontal na página. */
+.tabelaWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--raio-md);
+}
 .tabela {
   width: 100%;
+  min-width: 22rem;
   border-collapse: collapse;
   background: var(--cor-superficie);
   border: 1px solid var(--cor-linha-forte);
@@ -132,6 +139,7 @@
   font-family: var(--fonte-mono);
   font-size: 1.05rem;
   font-weight: 500;
+  font-feature-settings: "tnum" 1; /* dígitos tabulares: colunas de dados sem "pulo" */
 }
 .valorSimples {
   display: block;
@@ -140,7 +148,7 @@
   margin-top: 0.15rem;
 }
 .maxfato {
-  color: var(--cor-acento);
+  color: var(--cor-acento-escuro);
   font-weight: 700;
 }
 .maxTag {
@@ -148,7 +156,7 @@
   font-size: 0.65rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--cor-acento);
+  color: var(--cor-acento-escuro);
   margin-left: 0.4rem;
 }
 .nota {

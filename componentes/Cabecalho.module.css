@@ -7,6 +7,25 @@
   z-index: 10;
 }
 
+/* Sombra que surge ao rolar — CSS scroll-driven animation, sem JS. Progressive
+   enhancement: sem suporte a animation-timeline, fica só a borda de sempre.
+   Não é "motion" (estado ligado à posição), mas o override global de
+   reduced-motion zera a duração e o timeline ainda aplica o estado final ao
+   rolar — comportamento aceitável nos dois casos. */
+@supports (animation-timeline: scroll()) {
+  .cabecalho {
+    animation: sombraAoRolar linear both;
+    animation-timeline: scroll();
+    animation-range: 0 120px;
+  }
+  @keyframes sombraAoRolar {
+    to {
+      box-shadow: 0 4px 18px rgba(13, 24, 17, 0.12);
+      border-bottom-color: var(--cor-linha-forte);
+    }
+  }
+}
+
 .linha {
   display: flex;
   align-items: center;

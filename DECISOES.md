@@ -96,6 +96,12 @@ tamanhos minúsculos).
 
 **Implementação:** exportar SVG direto do Figma e embutir no código (não recriar à mão).
 
+**Nota (2026-07-09):** o site usa favicon INTERINO tipográfico (`app/icon.svg`, tile "W"
+geométrico — não é recriação da raquete, que segue proibida de refazer à mão). O export
+oficial via Figma MCP ficou bloqueado por falta do link do arquivo ("WikiPong v2 ·
+Verde-mesa"); com o link em mãos, exportar `Logo / Ícone` + `Logo / Completo` e
+substituir o interino. O wordmark do cabeçalho (Wiki+Pong em Archivo Bold) já segue a D-05.
+
 ---
 
 ## D-06 · Modelo de negócio

@@ -363,4 +363,13 @@ D-02, D-14 e D-16 permanecem invioláveis; acessibilidade é requisito, não opc
 **Emenda:** refina a D-01 (fonte da verdade visual = identidade e estrutura; execução
 visual pode superá-la).
 
+**Nota de sync — uso do acento (2026-07-09):** o acento claro `--cor-acento` (#1FA06A)
+tem contraste ~3.2:1 sobre o papel — **reprova** WCAG AA em texto pequeno/normal (exige
+4.5:1). Regra adotada: **texto pequeno/corpo e fundos de botão usam `--cor-acento-escuro`**
+(#157A4F, ~5.1:1). O acento claro fica para **preenchimentos** (barras, gráficos), **bordas**,
+**anel de foco** (componente UI, exige só 3:1) e o **wordmark** (logotipo é isento). **Nuance:**
+**texto grande/display pode usar o acento claro** — AA para texto grande (≥ 24px, ou ≥ 18.66px
+bold) exige apenas 3:1, que o acento passa. Trilha para eventual token semântico no Figma
+(ex.: `texto-acento` = escuro; `superficie-acento` = claro).
+
 **Status:** ativa.

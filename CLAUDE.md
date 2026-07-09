@@ -55,3 +55,9 @@ Regras do jogo:
 3. As decisões de conteúdo/ética continuam valendo: copy (D-02), separação
    fato×opinião (D-14), honestidade de UI (D-16), acessibilidade sempre
    (`prefers-reduced-motion`, contraste, foco visível, navegação por teclado).
+
+**Uso do acento (regra de contraste — ver nota sob D-18):** `--cor-acento` (#1FA06A)
+reprova AA em texto pequeno (~3.2:1). Use `--cor-acento-escuro` (#157A4F, ~5.1:1) em
+**texto pequeno/corpo, links e fundos de botão**; reserve o acento claro para
+**preenchimentos, bordas, anel de foco e o wordmark**. Exceção: **texto grande/display
+(≥ 24px, ou ≥ 18.66px bold) pode usar o acento claro** (AA large = 3:1).

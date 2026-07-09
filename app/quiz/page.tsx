@@ -117,12 +117,15 @@ export default function QuizPage() {
                 </h1>
                 <p className={styles.perfilDesc}>{perfil.descricao}</p>
 
+                <Link href={perfil.presetURL} className={styles.ctaResultado}>
+                  Ver materiais deste perfil →
+                </Link>
+
                 <div className={styles.preset}>
-                  <span className={styles.presetRotulo}>Preset de filtros (D-12)</span>
+                  <span className={styles.presetRotulo}>Filtros já aplicados na URL (D-12)</span>
                   <code className={styles.presetURL}>{perfil.presetURL}</code>
                   <p className={styles.presetNota}>
-                    O catálogo entra na próxima colheita — quando existir, este perfil abre o
-                    catálogo já filtrado por este preset.
+                    Compartilhável: esse endereço abre o catálogo exatamente com esses filtros.
                   </p>
                 </div>
 

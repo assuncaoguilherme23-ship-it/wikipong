@@ -1,0 +1,66 @@
+.cabecalho {
+  border-bottom: 1px solid var(--cor-linha);
+  background: color-mix(in srgb, var(--cor-papel) 80%, transparent);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.85rem;
+}
+
+.marca {
+  font-family: var(--fonte-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--cor-tinta);
+  text-decoration: none;
+}
+.marca span {
+  color: var(--cor-acento);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 3vw, 1.5rem);
+}
+.nav a:not(.cta) {
+  color: var(--cor-tinta-suave);
+  text-decoration: none;
+  padding: 0.35rem 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.nav a:not(.cta):hover {
+  color: var(--cor-texto-acento);
+}
+.nav a[aria-current='page'] {
+  color: var(--cor-texto-acento);
+  border-bottom-color: var(--cor-acento);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  background: var(--cor-acento-escuro); /* branco sobre acento-escuro = AA nos 2 temas */
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.55rem 1rem;
+  border-radius: var(--raio-md);
+  transition: background 160ms ease, transform 160ms ease;
+}
+.cta:hover {
+  background: color-mix(in srgb, var(--cor-acento-escuro) 88%, #000);
+}
+.cta:active {
+  transform: scale(0.98);
+}

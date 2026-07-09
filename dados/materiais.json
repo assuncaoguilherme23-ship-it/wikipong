@@ -1,0 +1,167 @@
+{
+  "aviso": "A VALIDAR (D-07/D-09): dados-semente colhidos do protótipo wikipong-home-v2.html. 'durezaUnificada' (grau ESN-equivalente, insumo do Perdão) NÃO existia no protótipo — os valores abaixo são proposta v1 pendente de assinatura do especialista. Para itens que não são borracha (lâmina, raquete, bola), usa-se 47 como neutro (maciez 4) até o especialista definir se o Perdão se aplica a eles. 'rating'/'reviews' são semente do protótipo (usados só para ordenar por destaque; não exibidos como avaliações — D-11/D-16).",
+  "materiais": [
+    {
+      "id": "tenergy05",
+      "nome": "Tenergy 05",
+      "marca": "Butterfly",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 450,
+      "specs": { "velocidade": 9.0, "spin": 9.3, "controle": 7.8 },
+      "durabilidade": 7.5,
+      "durezaUnificada": 47,
+      "rating": 4.8,
+      "reviews": 50,
+      "simples": {
+        "tag": "Rápida e com muito efeito",
+        "frase": "A bola sai com força e gira muito. Rende no ataque, mas pede controle de quem já tem técnica."
+      }
+    },
+    {
+      "id": "viscaria",
+      "nome": "Viscaria ALC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1650,
+      "specs": { "velocidade": 8.8, "spin": 9.0, "controle": 8.5 },
+      "durabilidade": 8.5,
+      "durezaUnificada": 47,
+      "rating": 4.9,
+      "reviews": 120,
+      "simples": {
+        "tag": "Rápida e equilibrada",
+        "frase": "Madeira ofensiva clássica, com bom toque. Referência pra quem leva o ataque a sério."
+      }
+    },
+    {
+      "id": "evolution",
+      "nome": "Stiga Evolution",
+      "marca": "Stiga",
+      "tipo": "Raquete",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 150,
+      "specs": { "velocidade": 6.5, "spin": 6.0, "controle": 8.6 },
+      "durabilidade": 8.0,
+      "durezaUnificada": 47,
+      "rating": 4.2,
+      "reviews": 30,
+      "simples": {
+        "tag": "Fácil de controlar",
+        "frase": "Raquete pronta pra usar e que perdoa erros. Ótima pros primeiros meses de jogo."
+      }
+    },
+    {
+      "id": "hurricane",
+      "nome": "Hurricane 3 Neo",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 180,
+      "specs": { "velocidade": 8.2, "spin": 9.6, "controle": 8.0 },
+      "durabilidade": 8.8,
+      "durezaUnificada": 54,
+      "rating": 4.7,
+      "reviews": 85,
+      "simples": {
+        "tag": "Muito efeito (pegajosa)",
+        "frase": "Gira muito a bola, no estilo chinês. Exige técnica, mas recompensa quem a domina."
+      }
+    },
+    {
+      "id": "dignics05",
+      "nome": "Dignics 05",
+      "marca": "Butterfly",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 590,
+      "specs": { "velocidade": 9.2, "spin": 9.4, "controle": 7.6 },
+      "durabilidade": 7.8,
+      "durezaUnificada": 46,
+      "rating": 4.9,
+      "reviews": 62,
+      "simples": {
+        "tag": "Rápida e potente",
+        "frase": "Topo de linha em velocidade e spin. Pra quem já tem o braço formado."
+      }
+    },
+    {
+      "id": "mxp",
+      "nome": "Evolution MX-P",
+      "marca": "Tibhar",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 320,
+      "specs": { "velocidade": 8.8, "spin": 8.9, "controle": 7.9 },
+      "durabilidade": 7.7,
+      "durezaUnificada": 46,
+      "rating": 4.6,
+      "reviews": 112,
+      "simples": {
+        "tag": "Versátil e amigável",
+        "frase": "Boa em quase tudo sem exigir demais. Ideal pra dar o passo do iniciante pro avançado."
+      }
+    },
+    {
+      "id": "rozena",
+      "nome": "Rozena",
+      "marca": "Butterfly",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 210,
+      "specs": { "velocidade": 7.8, "spin": 8.0, "controle": 8.6 },
+      "durabilidade": 8.2,
+      "durezaUnificada": 43,
+      "rating": 4.4,
+      "reviews": 96,
+      "simples": {
+        "tag": "Macia e fácil de jogar",
+        "frase": "Tem efeito bom e é gentil com quem está aprendendo. Uma porta de entrada pras tensionadas."
+      }
+    },
+    {
+      "id": "fzd",
+      "nome": "Fan Zhendong ALC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1200,
+      "specs": { "velocidade": 8.6, "spin": 8.4, "controle": 8.2 },
+      "durabilidade": 8.5,
+      "durezaUnificada": 47,
+      "rating": 4.8,
+      "reviews": 92,
+      "simples": {
+        "tag": "Rápida com controle",
+        "frase": "Madeira com fibra que dá velocidade sem perder a mão. Boa pra ataque preciso."
+      }
+    },
+    {
+      "id": "d40",
+      "nome": "D40+ 3★",
+      "marca": "DHS",
+      "tipo": "Bola",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 25,
+      "specs": { "velocidade": 7.0, "spin": 7.0, "controle": 9.0 },
+      "durabilidade": 7.5,
+      "durezaUnificada": 47,
+      "rating": 4.5,
+      "reviews": 200,
+      "simples": {
+        "tag": "Bola oficial e durável",
+        "frase": "Plástico oficial de 3 estrelas, regular e resistente. Serve pra treino e pra jogo."
+      }
+    }
+  ]
+}

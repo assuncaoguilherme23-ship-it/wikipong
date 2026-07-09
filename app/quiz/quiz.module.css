@@ -140,8 +140,28 @@
   color: var(--cor-tinta-suave);
   max-width: 44ch;
 }
-.preset {
+.ctaResultado {
+  display: inline-flex;
+  align-items: center;
   margin-top: 1.75rem;
+  background: var(--cor-acento-escuro); /* branco sobre acento-escuro = AA nos 2 temas */
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.7rem 1.15rem;
+  border-radius: var(--raio-md);
+  transition: background 160ms ease, transform 160ms ease;
+}
+.ctaResultado:hover {
+  background: color-mix(in srgb, var(--cor-acento-escuro) 88%, #000);
+  transform: translateY(-1px);
+}
+.ctaResultado:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.preset {
+  margin-top: 1.25rem;
   padding: 1rem 1.15rem;
   border: 1px dashed var(--cor-linha-forte);
   border-radius: var(--raio-md);

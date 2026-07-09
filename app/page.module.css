@@ -1,37 +1,4 @@
-.header {
-  border-bottom: 1px solid var(--cor-linha);
-  background: color-mix(in srgb, var(--cor-papel) 80%, transparent);
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(8px);
-  z-index: 10;
-}
-
-.headerRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-block: 1rem;
-}
-
-.brand {
-  font-family: var(--fonte-display);
-  font-weight: 800;
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-  color: var(--cor-tinta);
-  text-decoration: none;
-}
-.brand span {
-  color: var(--cor-acento);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
+/* Cabeçalho e rodapé agora são componentes compartilhados (componentes/). */
 
 .cta {
   display: inline-flex;
@@ -293,9 +260,3 @@
   border-radius: 999px;
 }
 
-.footer {
-  border-top: 1px solid var(--cor-linha);
-  padding-block: 2rem;
-  color: var(--cor-tinta-suave);
-  font-size: 0.85rem;
-}

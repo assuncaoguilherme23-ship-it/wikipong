@@ -13,6 +13,8 @@
  *    custo/mês SEM destaque (maior = pior); asterisco + nota "A VALIDAR".
  */
 import Link from 'next/link';
+import { Cabecalho } from '@/componentes/Cabecalho';
+import { Rodape } from '@/componentes/Rodape';
 import {
   perdao,
   custoMensalPorClasse,
@@ -95,17 +97,7 @@ export default function Home() {
       <a className="pular-conteudo" href="#conteudo">
         Pular para o conteúdo
       </a>
-      <header className={styles.header}>
-        <div className={`container ${styles.headerRow}`}>
-          <Link href="/" className={styles.brand}>
-            Wiki<span>Pong</span>
-          </Link>
-          <nav className={styles.nav} aria-label="Principal">
-            {/* D-16 (lançamento honesto): só o que existe entra na nav. */}
-            <Link href="/quiz/">Fazer o teste</Link>
-          </nav>
-        </div>
-      </header>
+      <Cabecalho />
 
       <main id="conteudo">
         <section className={`container ${styles.hero}`}>
@@ -248,11 +240,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className={styles.footer}>
-        <div className="container">
-          WikiPong — enciclopédia PT-BR de tênis de mesa. Scaffold Next.js (static export · D-17).
-        </div>
-      </footer>
+      <Rodape />
     </>
   );
 }

@@ -1,0 +1,28 @@
+.grupo {
+  display: inline-flex;
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 3px;
+  background: var(--cor-superficie);
+}
+
+.opcao {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-tinta-suave);
+  background: none;
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+}
+.opcao:hover {
+  color: var(--cor-texto-acento);
+}
+.opcao[aria-pressed='true'] {
+  background: var(--cor-acento-escuro);
+  color: #fff;
+}

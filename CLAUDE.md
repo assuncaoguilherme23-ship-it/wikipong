@@ -17,7 +17,9 @@ draw-in, padrões de `prefers-reduced-motion`.
 ## Estado da colheita
 - ✅ `src/logica/quiz.ts` — máquina de estados do quiz (grafo + pilha + progresso por branch)
 - ✅ `src/logica/metricas.ts` — derivadas (Perdão, custo/mês) + tabelas Simples/Técnico
-- ⏳ motor de filtros do catálogo (colher do wikipong-home-v2.html)
+- ✅ `src/logica/filtros.ts` — motor de filtros facetado (faixas + facetas + sort) com
+  parse/serialize de query string compatível com os presetURL do quiz (D-12); importa
+  `metricas` p/ o sort por Perdão; testes cobrem os 4 perfis
 - ⏳ componente Radar (portar o canvas/SVG do protótipo; suportar overlay de 2 polígonos)
 
 ## Convenções

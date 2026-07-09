@@ -10,6 +10,10 @@ import {
 import {
   iniciar, responder, voltar, progresso, resultado, TELAS,
 } from '../src/logica/quiz.js';
+import {
+  filtroVazio, parseQuery, serializeQuery, aplicar, alternarFaceta, comOrdenacao, facetas,
+  Material,
+} from '../src/logica/filtros.js';
 
 let ok = 0; const falhas: string[] = [];
 function afirma(cond: boolean, msg: string) { if (cond) ok++; else falhas.push(msg); }
@@ -82,6 +86,83 @@ for (const [id, tela] of Object.entries(TELAS)) {
     }
   }
 }
+
+// ───────── filtros: URL (D-12), aplicação e imutabilidade ─────────
+const jeq = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
+
+// catálogo-fixture (dureza escolhida p/ tornar o Perdão verificável no sort)
+const mat = (
+  id: string, nivel: string, intencao: string, marca: string, tipo: string,
+  preco: number, velocidade: number, spin: number, controle: number, dureza: number, rating: number,
+): Material => ({
+  id, nome: id, marca, tipo, nivel, intencao, preco,
+  specs: { velocidade, spin, controle }, durabilidade: 8, durezaUnificada: dureza, rating, reviews: 10,
+});
+const CAT: Material[] = [
+  mat('M1', 'Iniciante',     'controlar',   'Stiga',     'Borracha', 200, 5.0, 6.0, 9.0, 45, 4.3),
+  mat('M2', 'Iniciante',     'controlar',   'Stiga',     'Raquete',  150, 4.0, 5.5, 8.5, 50, 4.2),
+  mat('M3', 'Iniciante',     'atacar',      'DHS',       'Borracha', 180, 8.0, 8.0, 8.0, 40, 4.5),
+  mat('M4', 'Avançado',      'atacar',      'Butterfly', 'Borracha', 450, 5.0, 9.0, 9.0, 47, 4.8),
+  mat('M5', 'Iniciante',     'equilibrado', 'Tibhar',    'Borracha', 220, 5.0, 7.0, 7.0, 48, 4.4),
+  mat('M6', 'Intermediário', 'equilibrado', 'Tibhar',    'Borracha', 320, 7.0, 8.0, 8.0, 45, 4.6),
+  mat('M7', 'Intermediário', 'atacar',      'Butterfly', 'Borracha', 300, 6.5, 8.5, 7.5, 42, 4.8),
+];
+const ids = (ms: Material[]) => ms.map(m => m.id);
+
+// os 4 presetURL EXATOS que o quiz gera (src/logica/quiz.ts)
+const P_BASE = '/catalogo?nivel=iniciante&ctrl=8-10&vel=3-6&ordenar=perdao';
+const P_ATAC = '/catalogo?nivel=intermediario&vel=6-8&ctrl=7-10';
+const P_CTRL = '/catalogo?vel=5-7&ctrl=8-10&ordenar=controle';
+const P_EXPL = '/catalogo?modo=simples';
+
+// parse dos 4 perfis
+const eBase = parseQuery(P_BASE);
+afirma(jeq(eBase.niveis, ['iniciante']), 'base: nivel=iniciante');
+afirma(jeq(eBase.velocidade, { min: 3, max: 6 }), 'base: vel 3-6');
+afirma(jeq(eBase.controle, { min: 8, max: 10 }), 'base: ctrl 8-10');
+afirma(eBase.ordenar === 'perdao', 'base: ordenar=perdao');
+
+const eAtac = parseQuery(P_ATAC);
+afirma(jeq(eAtac.niveis, ['intermediario']) && jeq(eAtac.velocidade, { min: 6, max: 8 })
+  && jeq(eAtac.controle, { min: 7, max: 10 }), 'atacante: facetas');
+afirma(eAtac.ordenar === 'relevancia', 'atacante: ordenar default = relevancia');
+
+const eCtrl = parseQuery(P_CTRL);
+afirma(jeq(eCtrl.velocidade, { min: 5, max: 7 }) && jeq(eCtrl.controle, { min: 8, max: 10 })
+  && eCtrl.ordenar === 'controle', 'construtor: facetas + ordenar=controle');
+
+const eExpl = parseQuery(P_EXPL);
+afirma(jeq(eExpl, filtroVazio()), 'explorador: modo=simples → filtro vazio (modo ignorado)');
+
+// round-trip: parse(serialize(e)) === e, nos 4 perfis
+for (const [nome, url] of [['base', P_BASE], ['atac', P_ATAC], ['ctrl', P_CTRL], ['expl', P_EXPL]] as const) {
+  const e = parseQuery(url);
+  afirma(jeq(parseQuery(serializeQuery(e)), e), `round-trip preserva o estado (${nome})`);
+}
+
+// aplicar sobre o catálogo-fixture
+afirma(jeq(ids(aplicar(CAT, eBase)), ['M1', 'M2']), 'base: iniciantes ctrl8-10/vel3-6, ord Perdão desc');
+afirma(jeq(ids(aplicar(CAT, eCtrl)), ['M1', 'M4', 'M6']), 'construtor: vel5-7/ctrl8-10, ord Controle desc + desempate id');
+afirma(jeq(ids(aplicar(CAT, eAtac)), ['M7', 'M6']), 'atacante: intermediários, ord relevância (rating desc)');
+const expl = aplicar(CAT, eExpl);
+afirma(expl.length === CAT.length, 'explorador não filtra nada');
+afirma(expl.every((m, i, a) => i === 0 || a[i - 1].rating >= m.rating), 'explorador ordena por relevância (rating desc)');
+afirma(expl[0].id === 'M4', 'explorador: topo por rating (desempate id)');
+
+// valor único (D-12, ex.: ctrl=7) = piso {7,10}
+afirma(jeq(parseQuery('ctrl=7').controle, { min: 7, max: 10 }), 'ctrl=7 → piso {7,10}');
+
+// facetas derivadas dos dados (D-12)
+afirma(facetas(CAT).tipos.find(t => t.slug === 'borracha')?.contagem === 6, 'facetas: 6 borrachas no fixture');
+
+// imutabilidade
+const catLen = CAT.length, cat0 = CAT[0].id;
+aplicar(CAT, eBase);
+afirma(CAT.length === catLen && CAT[0].id === cat0, 'aplicar não muta o array de entrada');
+const f0 = filtroVazio();
+const f1 = alternarFaceta(f0, 'tipos', 'borracha');
+afirma(f0.tipos.length === 0 && jeq(f1.tipos, ['borracha']), 'alternarFaceta é imutável');
+afirma(f0.ordenar === 'relevancia' && comOrdenacao(f0, 'perdao').ordenar === 'perdao', 'comOrdenacao é imutável');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

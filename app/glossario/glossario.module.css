@@ -1,0 +1,49 @@
+.pagina {
+  padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 4rem);
+  min-height: 60dvh;
+}
+
+.titulo {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 800;
+  margin-top: 0.25rem;
+}
+.lede {
+  color: var(--cor-tinta-suave);
+  max-width: 52ch;
+  margin-top: 0.5rem;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+
+.verbete {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  padding: 1rem 1.15rem;
+  box-shadow: var(--sombra-cartao);
+}
+.verbete dt {
+  font-family: var(--fonte-display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--cor-texto-acento);
+}
+.verbete dd {
+  margin: 0.4rem 0 0;
+  font-size: 0.92rem;
+  color: var(--cor-tinta-suave);
+  line-height: 1.55;
+}
+
+.notaIA {
+  margin-top: 2rem;
+  font-size: 0.82rem;
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}

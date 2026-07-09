@@ -96,11 +96,13 @@ tamanhos minúsculos).
 
 **Implementação:** exportar SVG direto do Figma e embutir no código (não recriar à mão).
 
-**Nota (2026-07-09):** o site usa favicon INTERINO tipográfico (`app/icon.svg`, tile "W"
-geométrico — não é recriação da raquete, que segue proibida de refazer à mão). O export
-oficial via Figma MCP ficou bloqueado por falta do link do arquivo ("WikiPong v2 ·
-Verde-mesa"); com o link em mãos, exportar `Logo / Ícone` + `Logo / Completo` e
-substituir o interino. O wordmark do cabeçalho (Wiki+Pong em Archivo Bold) já segue a D-05.
+**Nota (2026-07-09, atualizada):** logo oficial EXPORTADO do Figma via MCP (componentes
+`Logo / Ícone` 906:9003 e `Logo / Completo` 907:9003) e embutido em `componentes/Logo.tsx`
+— geometria intocada; fills mapeados p/ tokens (`--cor-acento`/`--cor-tinta`/`--cor-papel`),
+concretizando o "vetor puro ligado aos tokens" e funcionando nos 2 temas. Usado no
+cabeçalho e na barra do quiz. O favicon segue o tile "W" tipográfico (`app/icon.svg`):
+o fundador aprovou ao vê-lo na guia; decisão de oficializá-lo como variante compacta
+(a pendência desta D-05) ou substituí-lo fica aberta ao fundador.
 
 ---
 

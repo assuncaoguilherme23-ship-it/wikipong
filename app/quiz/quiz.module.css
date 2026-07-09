@@ -13,15 +13,11 @@
   justify-content: space-between;
   padding-block: 1rem;
 }
+/* A marca é o SVG oficial exportado do Figma (componentes/Logo — D-05). */
 .brand {
-  font-family: var(--fonte-display);
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--cor-tinta);
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-}
-.brand span {
-  color: var(--cor-acento);
 }
 
 .palco {

@@ -14,6 +14,7 @@
  */
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { LogoCompleto } from '@/componentes/Logo';
 import {
   iniciar,
   responder,
@@ -52,8 +53,8 @@ export default function QuizPage() {
       </a>
       <div className={styles.top}>
         <div className={`container ${styles.topRow}`}>
-          <Link href="/" className={styles.brand}>
-            Wiki<span>Pong</span>
+          <Link href="/" className={styles.brand} aria-label="WikiPong — início">
+            <LogoCompleto altura={26} />
           </Link>
           <span className="eyebrow">O teste</span>
         </div>

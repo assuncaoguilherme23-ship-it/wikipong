@@ -8,11 +8,13 @@
  */
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { LogoCompleto } from './Logo';
 import estilos from './Cabecalho.module.css';
 
 const ITENS = [
   { href: '/catalogo/', rotulo: 'Materiais' },
   { href: '/comparar/', rotulo: 'Comparar' },
+  { href: '/glossario/', rotulo: 'Glossário' },
 ] as const;
 
 export function Cabecalho() {
@@ -21,8 +23,8 @@ export function Cabecalho() {
   return (
     <header className={estilos.cabecalho}>
       <div className={`container ${estilos.linha}`}>
-        <Link href="/" className={estilos.marca}>
-          Wiki<span>Pong</span>
+        <Link href="/" className={estilos.marca} aria-label="WikiPong — início">
+          <LogoCompleto altura={30} />
         </Link>
         <nav className={estilos.nav} aria-label="Principal">
           {ITENS.map((item) => (

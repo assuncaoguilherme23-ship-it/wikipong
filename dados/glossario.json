@@ -1,0 +1,15 @@
+{
+  "aviso": "Conteúdo migrado da Page 1 antiga do Figma (frame 'Glossário', node 423:3204) em 2026-07-09, a convite do fundador. É também o PRIMEIRO corpus do assistente IA (D-10: glossário → fichas → comunidade). Revisão do especialista (D-07) bem-vinda antes de expandir.",
+  "verbetes": [
+    { "termo": "Topspin", "definicao": "Efeito para frente que faz a bola mergulhar após o pico, dando arco e segurança ao ataque." },
+    { "termo": "Backspin (chop)", "definicao": "Efeito reverso que faz a bola flutuar baixa; usado na defesa e em saques curtos." },
+    { "termo": "ALC (Arylate-Carbon)", "definicao": "Fibra que combina arylate e carbono, dando velocidade com toque controlado à lâmina." },
+    { "termo": "ZLC (Zylon-Carbon)", "definicao": "Fibra mais rígida que o ALC, voltada a jogadores que buscam potência máxima." },
+    { "termo": "Esponja (sponge)", "definicao": "Camada sob a borracha; sua dureza define velocidade, controle e sensação no impacto." },
+    { "termo": "Tensão (high tension)", "definicao": "Tecnologia que pré-tensiona a borracha, aumentando o efeito de catapulta." },
+    { "termo": "Bloqueio (block)", "definicao": "Devolução passiva próxima à mesa que aproveita a velocidade da bola do adversário." },
+    { "termo": "Flick", "definicao": "Ataque curto de pulso sobre a mesa, usado contra bolas baixas e curtas." },
+    { "termo": "ITTF", "definicao": "Federação Internacional de Tênis de Mesa, responsável pelas regras e homologações." },
+    { "termo": "Bola 40+", "definicao": "Bola de plástico (poli) de 40mm+ adotada pela ITTF em substituição ao celuloide." }
+  ]
+}

@@ -46,35 +46,26 @@
   align-items: center;
   gap: clamp(0.75rem, 3vw, 1.5rem);
 }
-.nav a:not(.cta) {
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px; /* alvo de toque */
   color: var(--cor-tinta-suave);
   text-decoration: none;
   padding: 0.35rem 0.2rem;
   border-bottom: 2px solid transparent;
   transition: color 160ms ease, border-color 160ms ease;
 }
-.nav a:not(.cta):hover {
+.navLink:hover {
   color: var(--cor-texto-acento);
 }
-.nav a[aria-current='page'] {
+.navLink[aria-current='page'] {
   color: var(--cor-texto-acento);
   border-bottom-color: var(--cor-acento);
 }
 
-.cta {
-  display: inline-flex;
-  align-items: center;
-  background: var(--cor-acento-escuro); /* branco sobre acento-escuro = AA nos 2 temas */
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.55rem 1rem;
-  border-radius: var(--raio-md);
-  transition: background 160ms ease, transform 160ms ease;
-}
-.cta:hover {
-  background: color-mix(in srgb, var(--cor-acento-escuro) 88%, #000);
-}
-.cta:active {
-  transform: scale(0.98);
+/* O CTA usa o utilitário global .botao-primario; aqui só a compactação do header. */
+.ctaNav {
+  padding-block: 0.45rem;
+  font-size: 0.95rem;
 }

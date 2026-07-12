@@ -78,27 +78,7 @@
   color: var(--cor-tinta-suave);
 }
 
-.ctaComparar {
-  font: inherit;
-  font-weight: 600;
-  color: #fff;
-  background: var(--cor-acento-escuro);
-  border: none;
-  border-radius: var(--raio-md);
-  padding: 0.7rem 1.15rem;
-  cursor: pointer;
-  transition: background 160ms ease, transform 160ms ease;
-}
-.ctaComparar:hover:not(:disabled) {
-  background: color-mix(in srgb, var(--cor-acento-escuro) 88%, #000);
-}
-.ctaComparar:active:not(:disabled) {
-  transform: scale(0.98);
-}
-.ctaComparar:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
+/* Botões vêm dos utilitários globais (.botao-primario/.botao-secundario). */
 
 /* ── Comparação ── */
 .palcoComparacao {
@@ -190,17 +170,5 @@
 }
 
 .trocar {
-  font: inherit;
-  color: var(--cor-tinta-suave);
-  background: none;
-  border: 1px solid var(--cor-linha);
-  border-radius: var(--raio-md);
-  padding: 0.55rem 1rem;
   margin-top: 1rem;
-  cursor: pointer;
-  transition: border-color 160ms ease, color 160ms ease;
-}
-.trocar:hover {
-  border-color: var(--cor-acento);
-  color: var(--cor-texto-acento);
 }

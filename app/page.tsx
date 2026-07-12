@@ -16,6 +16,7 @@ import Link from 'next/link';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { Radar } from '@/componentes/Radar';
+import { brl } from '@/componentes/formato';
 import {
   perdao,
   custoMensalPorClasse,
@@ -40,8 +41,8 @@ const AMOSTRAS: Amostra[] = [
   { nome: 'Mark V', specs: { velocidade: 7.0, spin: 7.5, controle: 9.0 }, durezaUnificada: 42, precoMedio: 180, classe: 'classica' },
 ];
 
-const brl = (v: number) =>
-  v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 2 });
+/* Custo/mês exibe centavos: brl(v, true) do formatador único (componentes/formato). */
+const brlCentavos = (v: number) => brl(v, true);
 
 // Eixos do radar do hero: os VALORES são reais, calculados pela lógica pura em
 // build time — incluindo o Perdão derivado (D-09, daí o asterisco no rótulo).
@@ -62,7 +63,7 @@ export default function Home() {
     { rotulo: 'Controle', valores: controles, atributo: 'controle' as const, destacar: true, fmt: (v: number) => v.toFixed(1) },
     { rotulo: 'Perdão*', valores: perdoes, atributo: 'perdao' as const, destacar: true, fmt: (v: number) => v.toFixed(1) },
     // D-09: custo NÃO recebe destaque de máximo (maior = pior).
-    { rotulo: 'Custo/mês', valores: custos, atributo: null, destacar: false, fmt: brl },
+    { rotulo: 'Custo/mês', valores: custos, atributo: null, destacar: false, fmt: brlCentavos },
   ];
 
   // Valores por material: [velocidade, efeito, controle, perdão-derivado]
@@ -86,10 +87,10 @@ export default function Home() {
                 pra português claro.
               </p>
               <div className={styles.heroActions}>
-                <Link href="/quiz/" className={styles.cta}>
+                <Link href="/quiz/" className="botao-primario">
                   Fazer o teste →
                 </Link>
-                <a href="#prova" className={styles.ghost}>
+                <a href="#prova" className="botao-secundario">
                   Ver as métricas
                 </a>
               </div>

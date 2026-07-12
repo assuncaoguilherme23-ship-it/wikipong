@@ -31,12 +31,13 @@ export function Cabecalho() {
             <Link
               key={item.href}
               href={item.href}
+              className={estilos.navLink}
               aria-current={rota === item.href || rota === item.href.slice(0, -1) ? 'page' : undefined}
             >
               {item.rotulo}
             </Link>
           ))}
-          <Link href="/quiz/" className={estilos.cta}>
+          <Link href="/quiz/" className={`botao-primario ${estilos.ctaNav}`}>
             Fazer o teste
           </Link>
         </nav>

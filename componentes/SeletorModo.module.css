@@ -26,3 +26,10 @@
   background: var(--cor-acento-escuro);
   color: #fff;
 }
+
+/* Alvo de toque ≥ 44px em telas de toque */
+@media (pointer: coarse) {
+  .opcao {
+    padding: 0.55rem 1rem;
+  }
+}

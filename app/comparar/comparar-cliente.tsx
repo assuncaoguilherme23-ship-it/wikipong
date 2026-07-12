@@ -111,7 +111,7 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
       </ul>
       <button
         type="button"
-        className={estilos.ctaComparar}
+        className="botao-primario"
         disabled={escolhidos.length !== 2}
         onClick={comparar}
       >
@@ -210,7 +210,7 @@ function Comparacao({ par, modo }: { par: [MaterialCatalogo, MaterialCatalogo]; 
         melhor, depende do seu jogo.
       </p>
 
-      <button type="button" className={estilos.trocar} onClick={trocar}>
+      <button type="button" className={`botao-secundario ${estilos.trocar}`} onClick={trocar}>
         ← Escolher outros materiais
       </button>
     </>

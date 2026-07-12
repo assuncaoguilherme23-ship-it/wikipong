@@ -142,24 +142,9 @@
   color: var(--cor-tinta-suave);
   max-width: 44ch;
 }
+/* Botão vem do utilitário global .botao-primario; aqui só o espaçamento local. */
 .ctaResultado {
-  display: inline-flex;
-  align-items: center;
   margin-top: 1.75rem;
-  background: var(--cor-acento-escuro); /* branco sobre acento-escuro = AA nos 2 temas */
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.7rem 1.15rem;
-  border-radius: var(--raio-md);
-  transition: background 160ms ease, transform 160ms ease;
-}
-.ctaResultado:hover {
-  background: color-mix(in srgb, var(--cor-acento-escuro) 88%, #000);
-  transform: translateY(-1px);
-}
-.ctaResultado:active {
-  transform: translateY(0) scale(0.98);
 }
 
 .preset {
@@ -189,20 +174,7 @@
   color: var(--cor-tinta-suave);
   margin-top: 0.5rem;
 }
+/* Botão vem do utilitário global .botao-secundario; aqui só o espaçamento local. */
 .refazer {
-  display: inline-flex;
-  margin-top: 1.75rem;
-  padding: 0.6rem 1.1rem;
-  border-radius: var(--raio-md);
-  border: 1px solid var(--cor-linha);
-  background: none;
-  font: inherit;
-  color: var(--cor-tinta);
-  cursor: pointer;
-}
-.refazer:hover {
-  border-color: var(--cor-acento);
-}
-.refazer:active {
-  transform: scale(0.98);
+  margin-top: 1.25rem;
 }

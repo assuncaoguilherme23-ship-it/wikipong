@@ -116,6 +116,19 @@
   color: #fff;
 }
 
+/* Em telas de toque, os controles densos sobem para ≥ 44px de alvo */
+@media (pointer: coarse) {
+  .opcaoFiltro {
+    padding-block: 0.6rem;
+  }
+  .faixaChip {
+    padding: 0.6rem 1rem;
+  }
+  .chip {
+    padding: 0.55rem 0.9rem;
+  }
+}
+
 /* ── Barra de resultados ── */
 .barraResultados {
   display: flex;

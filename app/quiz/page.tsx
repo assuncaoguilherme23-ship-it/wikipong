@@ -121,7 +121,7 @@ export default function QuizPage() {
                 </h1>
                 <p className={styles.perfilDesc}>{perfil.descricao}</p>
 
-                <Link href={perfil.presetURL} className={styles.ctaResultado}>
+                <Link href={perfil.presetURL} className={`botao-primario ${styles.ctaResultado}`}>
                   Ver materiais deste perfil →
                 </Link>
 
@@ -133,7 +133,11 @@ export default function QuizPage() {
                   </p>
                 </div>
 
-                <button type="button" className={styles.refazer} onClick={() => setEstado(iniciar)}>
+                <button
+                  type="button"
+                  className={`botao-secundario ${styles.refazer}`}
+                  onClick={() => setEstado(iniciar)}
+                >
                   Refazer o teste
                 </button>
               </>

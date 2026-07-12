@@ -147,6 +147,57 @@ h3 {
   margin: 0 auto;
 }
 
+/* ── Botões do sistema (consolidados no polish — antes eram 4 cópias por módulo).
+      Primário: branco sobre acento-escuro (AA nos 2 temas). Alvo ≥ 44px. ── */
+.botao-primario {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  background: var(--cor-acento-escuro);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--raio-md);
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+.botao-primario:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--cor-acento-escuro) 88%, #000);
+}
+.botao-primario:active:not(:disabled) {
+  transform: scale(0.98);
+}
+.botao-primario:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.botao-secundario {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  font: inherit;
+  color: var(--cor-tinta);
+  background: none;
+  border: 1px solid var(--cor-linha);
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--raio-md);
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+.botao-secundario:hover {
+  border-color: var(--cor-acento);
+}
+.botao-secundario:active {
+  transform: scale(0.98);
+}
+
 a {
   color: var(--cor-texto-acento);
   text-decoration-thickness: 1px;

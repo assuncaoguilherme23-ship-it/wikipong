@@ -252,7 +252,7 @@ export function CatalogoCliente() {
                   Nada está escondido: o catálogo tem {MATERIAIS.length} itens e essa combinação
                   de filtros não deixa nenhum passar.
                 </p>
-                <button type="button" className={estilos.faixaChip} onClick={() => navegar(filtroVazio())}>
+                <button type="button" className="botao-secundario" onClick={() => navegar(filtroVazio())}>
                   Limpar os filtros
                 </button>
               </div>

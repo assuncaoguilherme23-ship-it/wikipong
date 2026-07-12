@@ -1,6 +1,75 @@
 .rodape {
-  border-top: 1px solid var(--cor-linha);
-  padding-block: 2rem;
-  color: var(--cor-tinta-suave);
-  font-size: 0.85rem;
+  /* Remapeia os tokens no escopo do rodapé: o logo (que pinta com --cor-tinta/
+     --cor-papel) adapta ao fundo mesa sem fork de componente. */
+  --cor-tinta: var(--cor-sobre-mesa);
+  --cor-papel: var(--cor-mesa);
+
+  background: var(--cor-mesa);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1.2px, transparent 1.3px);
+  background-size: 18px 18px;
+  color: var(--cor-sobre-mesa-suave);
+  margin-top: clamp(3rem, 8vw, 5rem);
+  padding-block: clamp(2.5rem, 6vw, 4rem) 1.5rem;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.marca {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 34ch;
+  text-wrap: pretty;
+}
+
+.colunaTitulo {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-sobre-mesa);
+  margin: 0 0 0.75rem;
+}
+.coluna ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.coluna a {
+  color: var(--cor-sobre-mesa-suave);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+.coluna a:hover {
+  color: var(--cor-sobre-mesa);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.base {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+.base p {
+  margin: 1.25rem 0 0;
+  font-size: 0.8rem;
+}
+.linhaCentral {
+  border: none;
+  height: 0;
+  border-top: 2px dashed var(--cor-mesa-borda);
+  width: min(11rem, 38%);
+  margin: 0 auto;
 }

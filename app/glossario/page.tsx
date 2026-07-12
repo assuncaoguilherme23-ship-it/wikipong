@@ -27,12 +27,13 @@ export default function PaginaGlossario() {
       <Cabecalho />
 
       <main id="conteudo" className={`container ${estilos.pagina}`}>
-        <p className="eyebrow">Aprender · Glossário</p>
+        <p className="trilha">Aprender / Glossário</p>
         <h1 className={estilos.titulo}>Glossário</h1>
         <p className={estilos.lede}>
           Os principais termos técnicos do tênis de mesa, explicados de forma direta.
         </p>
 
+        {/* Lista tipográfica de enciclopédia: fios, não cards */}
         <dl className={estilos.lista}>
           {glossario.verbetes.map((v) => (
             <div key={v.termo} className={estilos.verbete}>

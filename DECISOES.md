@@ -371,6 +371,22 @@ D-02, D-14 e D-16 permanecem invioláveis; acessibilidade é requisito, não opc
 **Emenda:** refina a D-01 (fonte da verdade visual = identidade e estrutura; execução
 visual pode superá-la).
 
+**Nota de sync — passada "bolder" (2026-07-12):** elevação de estilo a pedido do fundador
+("design não genérico, bem estilizado"), aplicada com a skill impeccable. Divergências:
+1. **Tokens "mesa"** (derivados, invariantes entre temas): `--cor-mesa #0F3F2C`,
+   `--cor-mesa-borda`, `--cor-sobre-mesa`, `--cor-sobre-mesa-suave` — a cor da identidade
+   passa a carregar superfícies inteiras (banda de métricas da home e rodapé), com textura
+   sutil de pinos e o divisor-assinatura "linha central da mesa" (tracejado).
+2. **Kicker mono decorativo aposentado** (o eyebrow em toda seção é scaffold genérico);
+   o mono segue como voz de DADOS (progresso, contagem, trilha/breadcrumb — D-04).
+3. **Home**: hero maior (Archivo até ~5rem), lede ampliada (contexto da enciclopédia),
+   seção "Como funciona" (sequência real 1-2-3), copy da seção de métricas reescrita
+   visitor-facing (a anterior citava módulos de código); nota A VALIDAR mantida (D-09/D-16).
+4. **Glossário**: cards em grade → lista tipográfica com fios (cadência de enciclopédia).
+5. **Rodapé "mesa"** com nav real (D-16) e logo adaptado por remapeamento de tokens no escopo.
+Contrastes verificados (sobre-mesa 11.6:1; sobre-mesa-suave 6.7:1). Pendente: refletir
+banda mesa/rodapé/glossário no Figma.
+
 **Nota de sync — tema escuro, alias e radar do hero (2026-07-09):** três divergências
 aplicadas na passada de design (regra 2 desta decisão):
 1. **Tema escuro** via `prefers-color-scheme` com tokens derivados do verde-mesa

@@ -45,12 +45,9 @@ export function ComparadorCliente() {
 
       <main id="conteudo" className={`container ${estilos.pagina}`}>
         <div className={estilos.topo}>
-          <div>
-            <p className="eyebrow">Comparação</p>
-            <h1 className={estilos.titulo}>
-              {prontos ? `${prontos[0].nome} × ${prontos[1].nome}` : 'Comparar materiais'}
-            </h1>
-          </div>
+          <h1 className={estilos.titulo}>
+            {prontos ? `${prontos[0].nome} × ${prontos[1].nome}` : 'Comparar materiais'}
+          </h1>
           {prontos && <SeletorModo modo={modo} aoMudar={mudarModo} />}
         </div>
 

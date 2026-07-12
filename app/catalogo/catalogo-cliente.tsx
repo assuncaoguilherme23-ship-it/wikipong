@@ -132,10 +132,7 @@ export function CatalogoCliente() {
 
       <main id="conteudo" className={`container ${estilos.pagina}`}>
         <div className={estilos.topo}>
-          <div>
-            <p className="eyebrow">Catálogo</p>
-            <h1 className={estilos.titulo}>Materiais</h1>
-          </div>
+          <h1 className={estilos.titulo}>Materiais</h1>
           <SeletorModo modo={modo} aoMudar={mudarModo} />
         </div>
 

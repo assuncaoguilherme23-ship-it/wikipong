@@ -56,7 +56,7 @@ export default function QuizPage() {
           <Link href="/" className={styles.brand} aria-label="WikiPong — início">
             <LogoCompleto altura={26} />
           </Link>
-          <span className="eyebrow">O teste</span>
+          <span className="trilha">o teste</span>
         </div>
       </div>
 
@@ -75,7 +75,10 @@ export default function QuizPage() {
                 aria-valuemax={prog.total}
                 aria-label={prog.rotulo}
               >
-                <div className={styles.barraFill} style={{ width: `${(prog.n / prog.total) * 100}%` }} />
+                <div
+                  className={styles.barraFill}
+                  style={{ transform: `scaleX(${prog.n / prog.total})` }}
+                />
               </div>
             </div>
           )}
@@ -112,7 +115,7 @@ export default function QuizPage() {
 
             {tela.tipo === 'resultado' && perfil && (
               <>
-                <p className="eyebrow">Seu perfil</p>
+                <p className={styles.resultadoLead}>Seu perfil de equipamento:</p>
                 <h1 className={styles.perfilNome} ref={tituloRef} tabIndex={-1}>
                   {perfil.nome}
                 </h1>

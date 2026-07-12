@@ -79,9 +79,12 @@ export default function Home() {
         <section className={`container ${styles.hero}`}>
           <div className={styles.heroGrid}>
             <div className={styles.heroTexto}>
-              <p className="eyebrow">Enciclopédia · tênis de mesa</p>
               <h1>Feito pra explicar, não pra empurrar.</h1>
-              <p className={styles.lede}>Recomendação explicada, nunca imposta.</p>
+              <p className={styles.lede}>
+                Recomendação explicada, nunca imposta. A enciclopédia de equipamentos de tênis
+                de mesa em português: specs comparáveis, métricas de fórmula aberta e tradução
+                pra português claro.
+              </p>
               <div className={styles.heroActions}>
                 <Link href="/quiz/" className={styles.cta}>
                   Fazer o teste →
@@ -105,15 +108,49 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="prova" className={`container ${styles.prova}`}>
+        <hr className="linha-central" aria-hidden="true" />
+
+        {/* Sequência REAL de uso (por isso a numeração) — não é scaffolding decorativo */}
+        <section className={`container ${styles.comoFunciona}`} aria-label="Como funciona">
+          <h2 className={styles.comoTitulo}>Como funciona</h2>
+          <ol className={styles.passos}>
+            <li className={styles.passo}>
+              <span className={`mono ${styles.passoNumero}`} aria-hidden="true">
+                1
+              </span>
+              <h3>Faça o teste</h3>
+              <p>Três perguntas sobre o seu jogo. Sem cadastro, sem enrolação.</p>
+              <Link href="/quiz/">Começar →</Link>
+            </li>
+            <li className={styles.passo}>
+              <span className={`mono ${styles.passoNumero}`} aria-hidden="true">
+                2
+              </span>
+              <h3>Explore o catálogo</h3>
+              <p>Filtros que viajam na URL e um modo Simples que traduz os números.</p>
+              <Link href="/catalogo/">Ver materiais →</Link>
+            </li>
+            <li className={styles.passo}>
+              <span className={`mono ${styles.passoNumero}`} aria-hidden="true">
+                3
+              </span>
+              <h3>Compare de verdade</h3>
+              <p>Dois materiais, radar sobreposto e o fato marcado como fato.</p>
+              <Link href="/comparar/">Comparar →</Link>
+            </li>
+          </ol>
+        </section>
+
+        {/* A banda "mesa": a cor da identidade carregando a superfície da prova */}
+        <section id="prova" className={styles.prova}>
+          <div className={`container ${styles.provaInterna}`}>
           <div className={styles.provaHead}>
-            <p className="eyebrow">Colheita integrada</p>
-            <h2>Os mesmos números do Figma, calculados pela lógica pura</h2>
+            <h2>Números que dá pra comparar de verdade</h2>
             <p>
-              Esta tabela é renderizada no build a partir de{' '}
-              <code className="mono">src/logica/metricas.ts</code> — o módulo colhido dos
-              protótipos, sem uma linha alterada. Cada célula mostra o dado Técnico e, abaixo,
-              a tradução do modo Simples (D-08).
+              Nota de fabricante é escala interna de marketing — o 9.0 de uma marca não é o
+              9.0 da outra. Aqui, cada material mostra o dado técnico e a tradução em
+              português claro, lado a lado, além de métricas de fórmula aberta — como o
+              Perdão — que nenhum catálogo publica.
             </p>
           </div>
 
@@ -166,6 +203,7 @@ export default function Home() {
             <strong>fato, não veredito</strong>: maior ≠ melhor, depende do seu jogo. Custo/mês não
             recebe destaque porque, nele, maior é pior.
           </p>
+          </div>
         </section>
       </main>
 

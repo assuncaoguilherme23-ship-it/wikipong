@@ -4,46 +4,54 @@
 }
 
 .titulo {
-  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-size: clamp(2rem, 5.5vw, 3rem);
   font-weight: 800;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 .lede {
   color: var(--cor-tinta-suave);
   max-width: 52ch;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
+  text-wrap: pretty;
 }
 
+/* Lista tipográfica: verbetes separados por fios, como uma enciclopédia impressa.
+   (Cards idênticos em grade foram aposentados no passo "bolder" — D-18.) */
 .lista {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
-  gap: 1rem;
-  margin: 2rem 0 0;
+  grid-template-columns: 1fr;
+  column-gap: clamp(2.5rem, 6vw, 4.5rem);
+  margin: clamp(1.75rem, 4vw, 2.75rem) 0 0;
+  max-width: 68rem;
+}
+@media (min-width: 800px) {
+  .lista {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .verbete {
-  background: var(--cor-superficie);
-  border: 1px solid var(--cor-linha);
-  border-radius: var(--raio-md);
-  padding: 1rem 1.15rem;
-  box-shadow: var(--sombra-cartao);
+  border-top: 1px solid var(--cor-linha-forte);
+  padding-block: 1.1rem 1.25rem;
 }
 .verbete dt {
   font-family: var(--fonte-display);
   font-weight: 700;
-  font-size: 1.02rem;
-  color: var(--cor-texto-acento);
+  font-size: 1.12rem;
+  color: var(--cor-tinta);
 }
 .verbete dd {
   margin: 0.4rem 0 0;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   color: var(--cor-tinta-suave);
-  line-height: 1.55;
+  line-height: 1.6;
+  max-width: 58ch;
+  text-wrap: pretty;
 }
 
 .notaIA {
-  margin-top: 2rem;
-  font-size: 0.82rem;
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 0.85rem;
   color: var(--cor-tinta-suave);
   max-width: 62ch;
 }

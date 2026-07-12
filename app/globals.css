@@ -52,6 +52,15 @@
   /* ── Derivados de layout (não são tokens do Figma) ── */
   --largura-conteudo: 72rem;
   --sombra-cartao: 0 1px 2px rgba(40, 48, 39, 0.06), 0 8px 24px rgba(40, 48, 39, 0.06);
+
+  /* ── "A mesa" (derivados — divergência registrada sob D-18) ──
+     A identidade se chama Verde-mesa; estes tokens deixam a MESA carregar
+     superfícies inteiras (banda de seção, rodapé). Invariantes entre temas:
+     a mesa é escura por natureza. Contrastes: sobre-mesa 11.6:1 · sobre-mesa-suave 6.7:1. */
+  --cor-mesa: #0f3f2c;
+  --cor-mesa-borda: #1c5e40;
+  --cor-sobre-mesa: #eef6f0;
+  --cor-sobre-mesa-suave: #a7cbb5;
 }
 
 /* ── Tema escuro (divergência registrada sob D-18 — o Figma ainda não define
@@ -99,25 +108,43 @@ h1,
 h2,
 h3 {
   font-family: var(--fonte-display);
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
   margin: 0;
+  text-wrap: balance;
 }
 
-/* Voz dos dados (D-04): números, eyebrows, metadados, breadcrumbs */
+/* Voz dos dados (D-04): números, metadados, trilhas. Regra de USO: o mono marca
+   INFORMAÇÃO (progresso, contagem, breadcrumb) — nunca kicker decorativo de
+   seção; esse padrão foi aposentado no passo "bolder" (D-18). Texto pequeno usa
+   o acento ESCURO via --cor-texto-acento (AA nos 2 temas). */
 .mono {
   font-family: var(--fonte-mono);
   font-feature-settings: "tnum" 1;
 }
 
-/* Texto pequeno usa o acento ESCURO (AA 5.1:1); o acento claro fica p/ preenchimentos,
-   bordas, anel de foco e o wordmark (logotipo é isento de contraste). */
 .eyebrow {
   font-family: var(--fonte-mono);
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
+}
+
+/* Trilha (breadcrumb) — voz de dados funcional, sem caps gritado */
+.trilha {
+  font-family: var(--fonte-mono);
+  font-size: 0.78rem;
+  color: var(--cor-tinta-suave);
+}
+
+/* Divisor-assinatura: a linha central da mesa (parcimônia — 1-2 por página) */
+.linha-central {
+  border: none;
+  height: 0;
+  border-top: 2px dashed var(--cor-linha-forte);
+  width: min(11rem, 38%);
+  margin: 0 auto;
 }
 
 a {

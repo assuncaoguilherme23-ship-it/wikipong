@@ -54,12 +54,12 @@
   .animadoRolagem {
     animation: radarEntrar linear both;
     animation-timeline: --radar-vista;
-    animation-range: entry 15% entry 70%;
+    animation-range: entry 10% entry 85%;
   }
   .pontoRolagem {
     animation: pontoEntrar linear both;
     animation-timeline: --radar-vista;
-    animation-range: entry 50% entry 85%;
+    animation-range: entry 60% entry 95%;
   }
 
   @media (prefers-reduced-motion: reduce) {

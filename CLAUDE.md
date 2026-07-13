@@ -8,6 +8,13 @@ também gere a academia FitPong).
    com qualquer outra fonte (inclusive protótipos), o DECISOES.md vence.
 2. A fonte da verdade **visual** é o Figma, página "WikiPong v2 · Verde-mesa" (D-01).
 
+## Contexto de design (impeccable)
+- **PRODUCT.md** — estratégia: registro `product` (home = exceção brand por tarefa),
+  usuários, personalidade (honesta · didática · técnica), anti-referências, princípios.
+- **DESIGN.md** — sistema visual: estrela-guia "A Mesa Oficial", tokens, regras nomeadas
+  (Regra do Acento, da Mesa, da Voz de Dados, do Plano), do's & don'ts.
+  Sidecar renderizável em `.impeccable/design.json`. Ler ambos antes de desenhar telas.
+
 ## Protótipos HTML (referência de LÓGICA, não de visual)
 Os arquivos `wikipong-*.html` são anteriores à maioria das decisões. Consulte o
 **D-15** antes de usá-los: copy, navegação e fonte mono deles estão SUPERADOS.

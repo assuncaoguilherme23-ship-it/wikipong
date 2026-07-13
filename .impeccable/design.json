@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-13T00:00:00Z",
+  "title": "Design System: WikiPong",
+  "extensions": {
+    "colorMeta": {
+      "acento": {
+        "role": "primary",
+        "displayName": "Verde-mesa (acento)",
+        "canonical": "#1FA06A",
+        "darkValue": "#29B077",
+        "tonalRamp": ["#06281A", "#0B4A2F", "#116B44", "#178E5A", "#1FA06A", "#4FBC8C", "#8AD5B2", "#CDEEDD"]
+      },
+      "acento-escuro": {
+        "role": "primary",
+        "displayName": "Acento-escuro (fundo de botão / texto acentuado no claro)",
+        "canonical": "#157A4F",
+        "darkValue": "#157A4F"
+      },
+      "mesa": {
+        "role": "secondary",
+        "displayName": "A Mesa (superfície-assinatura, invariante entre temas)",
+        "canonical": "#0F3F2C",
+        "darkValue": "#0F3F2C",
+        "tonalRamp": ["#061B12", "#0A2D1F", "#0F3F2C", "#15563C", "#1C6E4D", "#2E8A64", "#5FAE8A", "#A7CBB5"]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#283027",
+        "darkValue": "#E7ECE5",
+        "tonalRamp": ["#12160F", "#283027", "#3A4438", "#49514A", "#6B746A", "#98A096", "#C4CBc2", "#E7ECE5"]
+      },
+      "papel": { "role": "neutral", "displayName": "Papel (súmula)", "canonical": "#FAFAF9", "darkValue": "#101410" },
+      "superficie": { "role": "neutral", "displayName": "Superfície", "canonical": "#FFFFFF", "darkValue": "#161C16" },
+      "superficie-2": { "role": "neutral", "displayName": "Superfície-2", "canonical": "#EDF2E9", "darkValue": "#1D261D" },
+      "tinta-suave": { "role": "neutral", "displayName": "Tinta-suave", "canonical": "#49514A", "darkValue": "#A9B3A6" },
+      "linha": { "role": "neutral", "displayName": "Linha", "canonical": "#E4EADE", "darkValue": "#232D23" },
+      "linha-forte": { "role": "neutral", "displayName": "Linha-forte", "canonical": "#D3DBCB", "darkValue": "#33402F" },
+      "acento-suave": { "role": "primary", "displayName": "Acento-suave", "canonical": "#E6F4EC", "darkValue": "#17281E" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Só o hero da home (Archivo 800)." },
+      "label": { "displayName": "Label mono", "purpose": "Voz de dados: rótulos funcionais em caixa-alta. Nunca kicker decorativo." },
+      "data": { "displayName": "Dados", "purpose": "Valores numéricos tabulares (tnum) em tabelas e cards." }
+    },
+    "shadows": [
+      {
+        "name": "sombra-cartao",
+        "value": "0 1px 2px rgba(40, 48, 39, 0.06), 0 8px 24px rgba(40, 48, 39, 0.06)",
+        "purpose": "Única sombra ambiente: descola cartões do fundo. Nunca estrutura hierarquia (A Regra do Plano)."
+      }
+    ],
+    "motion": [
+      { "name": "ease-suave", "value": "cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "Entradas (hero, telas do quiz, radar draw-in)." },
+      { "name": "dur-estado", "value": "160ms", "purpose": "Hover/press/foco em controles." },
+      { "name": "dur-entrada", "value": "280ms–700ms", "purpose": "Entrada de tela (280) → draw-in do radar (700). Tudo morre sob prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "gloss-2col", "value": "800px" },
+      { "name": "catalogo-sidebar", "value": "900px" },
+      { "name": "hero-radar", "value": "920px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão primário",
+      "kind": "button",
+      "refersTo": "botao-primario",
+      "description": "Ação principal: acento-escuro + branco, tátil e confiante.",
+      "html": "<button class=\"ds-botao-primario\">Fazer o teste →</button>",
+      "css": ".ds-botao-primario { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; background: var(--cor-acento-escuro, #157A4F); color: #fff; font-weight: 600; border: none; padding: 0.6rem 1.15rem; border-radius: 13px; cursor: pointer; transition: background 160ms ease, transform 160ms ease; } .ds-botao-primario:hover { background: #126B45; } .ds-botao-primario:active { transform: scale(0.98); } .ds-botao-primario:focus-visible { outline: 3px solid var(--cor-acento, #1FA06A); outline-offset: 2px; }"
+    },
+    {
+      "name": "Botão secundário",
+      "kind": "button",
+      "refersTo": "botao-secundario",
+      "description": "Ação de apoio: fantasma com borda; hover acende a borda no acento.",
+      "html": "<button class=\"ds-botao-secundario\">Ver as métricas</button>",
+      "css": ".ds-botao-secundario { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; color: var(--cor-tinta, #283027); background: none; border: 1px solid var(--cor-linha, #E4EADE); padding: 0.6rem 1.15rem; border-radius: 13px; cursor: pointer; transition: border-color 160ms ease, transform 160ms ease; } .ds-botao-secundario:hover { border-color: var(--cor-acento, #1FA06A); } .ds-botao-secundario:active { transform: scale(0.98); }"
+    },
+    {
+      "name": "Chip de faixa",
+      "kind": "chip",
+      "refersTo": "chip-faixa",
+      "description": "Filtro de faixa do catálogo; ativa vira acento-escuro (aria-pressed).",
+      "html": "<span><button class=\"ds-chip-faixa\">Moderada</button> <button class=\"ds-chip-faixa\" aria-pressed=\"true\">Rápida</button></span>",
+      "css": ".ds-chip-faixa { font-size: 0.85rem; color: var(--cor-tinta, #283027); background: var(--cor-superficie, #fff); border: 1px solid var(--cor-linha-forte, #D3DBCB); border-radius: 999px; padding: 0.35rem 0.8rem; cursor: pointer; transition: border-color 160ms ease, background 160ms ease, color 160ms ease; } .ds-chip-faixa:hover { border-color: var(--cor-acento, #1FA06A); } .ds-chip-faixa[aria-pressed='true'] { background: var(--cor-acento-escuro, #157A4F); border-color: var(--cor-acento-escuro, #157A4F); color: #fff; }"
+    },
+    {
+      "name": "Seletor Simples/Técnico",
+      "kind": "custom",
+      "refersTo": "chip-faixa-ativa",
+      "description": "Alternador de modo de exibição (D-08), segmentado em pílula.",
+      "html": "<div class=\"ds-seletor\"><button class=\"ds-seletor-opcao\" aria-pressed=\"true\">Simples</button><button class=\"ds-seletor-opcao\">Técnico</button></div>",
+      "css": ".ds-seletor { display: inline-flex; border: 1px solid var(--cor-linha-forte, #D3DBCB); border-radius: 999px; padding: 3px; gap: 3px; background: var(--cor-superficie, #fff); } .ds-seletor-opcao { font-size: 0.85rem; font-weight: 600; color: var(--cor-tinta-suave, #49514A); background: none; border: none; border-radius: 999px; padding: 0.35rem 0.9rem; cursor: pointer; transition: background 160ms ease, color 160ms ease; } .ds-seletor-opcao[aria-pressed='true'] { background: var(--cor-acento-escuro, #157A4F); color: #fff; }"
+    },
+    {
+      "name": "Cartão de material",
+      "kind": "card",
+      "refersTo": "cartao-material",
+      "description": "Card do catálogo: glifo + nome + meta mono + preço com fio.",
+      "html": "<article class=\"ds-cartao\"><h3 class=\"ds-cartao-nome\">Tenergy 05</h3><p class=\"ds-cartao-meta\">Butterfly · Borracha · Avançado</p><p class=\"ds-cartao-preco\">R$ 450</p></article>",
+      "css": ".ds-cartao { display: flex; flex-direction: column; gap: 0.7rem; background: var(--cor-superficie, #fff); border: 1px solid var(--cor-linha, #E4EADE); border-radius: 13px; padding: 1.1rem; box-shadow: 0 1px 2px rgba(40,48,39,0.06), 0 8px 24px rgba(40,48,39,0.06); transition: border-color 160ms ease, transform 160ms ease; max-width: 16rem; } .ds-cartao:hover { border-color: var(--cor-linha-forte, #D3DBCB); transform: translateY(-2px); } .ds-cartao-nome { font-weight: 700; font-size: 1.12rem; margin: 0; color: var(--cor-tinta, #283027); } .ds-cartao-meta { font-family: ui-monospace, monospace; font-size: 0.72rem; color: var(--cor-tinta-suave, #49514A); margin: 0; } .ds-cartao-preco { font-family: ui-monospace, monospace; font-size: 1.1rem; font-weight: 600; margin: 0; padding-top: 0.7rem; border-top: 1px solid var(--cor-linha, #E4EADE); color: var(--cor-tinta, #283027); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Mesa Oficial",
+    "overview": "O site É a mesa de jogo. As superfícies profundas verde-mesa com textura sutil de pinos de borracha, a linha central tracejada como divisor-assinatura e o papel quase-branco funcionando como súmula: cada página é uma partida bem arbitrada, onde os números são fatos e a opinião joga rotulada. O sistema serve dois temas com os mesmos tokens semânticos — e as bandas mesa são invariantes entre temas. Rejeita explicitamente o visual de 'SaaS genérico de IA'.",
+    "keyCharacteristics": [
+      "Verde-mesa carrega superfícies inteiras (banda de métricas, rodapé), não só detalhes",
+      "Mono = voz de DADOS (progresso, contagem, trilha) — nunca ornamento",
+      "Motivos do domínio: linha central, pinos de borracha, radar sólido×tracejado",
+      "Dois temas com AA verificado; alias --cor-texto-acento resolve o acento por tema",
+      "Componentes táteis e confiantes: feedback físico contido, sem teatro"
+    ],
+    "rules": [
+      { "name": "A Regra do Acento", "body": "Texto acentuado usa o alias --cor-texto-acento (claro → acento-escuro; escuro → acento). O acento claro direto é PROIBIDO em texto pequeno; permitido só em preenchimentos, bordas, anel de foco, wordmark e display ≥24px.", "section": "colors" },
+      { "name": "A Regra da Mesa", "body": "A cor da identidade carrega superfícies inteiras, não migalhas. Bandas mesa são invariantes entre temas. A linha central tracejada aparece 1-2 vezes por página — é assinatura, não padrão de fundo.", "section": "colors" },
+      { "name": "A Regra da Voz de Dados", "body": "O mono marca INFORMAÇÃO (progresso, contagem, trilha). Kicker mono decorativo acima de seção foi aposentado — se o rótulo não carrega dado, ele não existe.", "section": "typography" },
+      { "name": "A Regra do Plano", "body": "Sombras não criam hierarquia; tom cria. Se um elemento precisa subir, ele muda de camada tonal (ou vai para a mesa), não de blur. O header sticky é a exceção deliberada: sombra scroll-driven, porque ali a sombra É estado.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar --cor-texto-acento para todo texto acentuado (A Regra do Acento).",
+      "Do testar contraste nos DOIS temas ao mexer em cor (AA é piso).",
+      "Do dar aos controles feedback físico contido com prefers-reduced-motion sempre respeitado.",
+      "Do marcar derivadas com asterisco + A VALIDAR; destaque de 'maior' é fato; custo/preço nunca recebe destaque de máximo (D-09).",
+      "Do usar os utilitários do sistema (.botao-primario, .botao-secundario, .trilha, .linha-central) em vez de recriar por módulo."
+    ],
+    "donts": [
+      "Don't parecer 'SaaS genérico de IA': gradiente decorativo, gradient text, glassmorphism, hero-metric, grid de cards idênticos.",
+      "Don't ressuscitar o kicker mono decorativo acima de seções (aposentado).",
+      "Don't parecer 'loja que empurra' nem 'review site caótico'; nenhuma copy pode prometer 'não vendemos' (D-02/D-06).",
+      "Don't usar side-stripe (border-left colorida >1px) em cards/alertas.",
+      "Don't esconder conteúdo atrás de animação (reveal só melhora o já-visível).",
+      "Don't usar acento claro (#1FA06A) em texto pequeno sobre papel — 3.19:1, reprova.",
+      "Don't deixar link morto ou 'em breve' clicável na nav (D-16)."
+    ]
+  }
+}

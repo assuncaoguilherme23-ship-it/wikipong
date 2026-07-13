@@ -36,7 +36,7 @@ export default function PaginaGlossario() {
         {/* Lista tipográfica de enciclopédia: fios, não cards */}
         <dl className={estilos.lista}>
           {glossario.verbetes.map((v) => (
-            <div key={v.termo} className={estilos.verbete}>
+            <div key={v.termo} className={`${estilos.verbete} revela`}>
               <dt>{v.termo}</dt>
               <dd>{v.definicao}</dd>
             </div>

@@ -174,11 +174,11 @@ export default function Home() {
         {/* ── A verdade (banda mesa) ── */}
         <section className={styles.verdade}>
           <div className={`container ${styles.verdadeInterna}`}>
-            <p className={styles.kickerMesa}>A verdade que ninguém te conta</p>
-            <h2>
+            <p className={`${styles.kickerMesa} revela`}>A verdade que ninguém te conta</p>
+            <h2 className="revela">
               Raquete de verdade <span className={styles.destaque}>não vem pronta</span> da loja.
             </h2>
-            <p className={styles.verdadeTexto}>
+            <p className={`${styles.verdadeTexto} revela`}>
               Quem joga sério monta a sua: uma lâmina + duas borrachas, escolhidas pro seu
               estilo. É essa combinação que muda o jogo — e é ela que o WikiPong te ensina a
               escolher.
@@ -188,23 +188,23 @@ export default function Home() {
 
         {/* ── As três dores (sequência numerada do Figma) ── */}
         <section className={`container ${styles.dores}`}>
-          <h2 className={styles.tituloSecao}>Por que escolher material é tão difícil?</h2>
+          <h2 className={`${styles.tituloSecao} revela`}>Por que escolher material é tão difícil?</h2>
           <ol className={styles.doresLista}>
-            <li className={styles.dor}>
+            <li className={`${styles.dor} revela`}>
               <span className={`mono ${styles.dorNumero}`} aria-hidden="true">
                 01
               </span>
               <h3>Informação espalhada</h3>
               <p>Spec em site gringo, opinião em fórum, review em inglês. Nada explicado em um lugar só.</p>
             </li>
-            <li className={styles.dor}>
+            <li className={`${styles.dor} revela`}>
               <span className={`mono ${styles.dorNumero}`} aria-hidden="true">
                 02
               </span>
               <h3>Jargão que exclui</h3>
               <p>Tensor, tacky, carbono externo… tudo assume que você já sabe o que ninguém te ensinou.</p>
             </li>
-            <li className={styles.dor}>
+            <li className={`${styles.dor} revela`}>
               <span className={`mono ${styles.dorNumero}`} aria-hidden="true">
                 03
               </span>
@@ -217,7 +217,7 @@ export default function Home() {
         {/* ── Manifesto (D-02) + radar "impressão digital" ── */}
         <section className={styles.manifesto}>
           <div className={`container ${styles.manifestoGrade}`}>
-            <div>
+            <div className="revela">
               <p className="eyebrow">O que é o WikiPong</p>
               <h2>Feito pra explicar, não pra empurrar.</h2>
               <p className={styles.manifestoTexto}>
@@ -237,7 +237,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <figure className={styles.impressaoDigital}>
+            <figure className={`${styles.impressaoDigital} revela-escala`}>
               <Radar
                 eixos={EIXOS_RADAR}
                 series={[
@@ -245,6 +245,7 @@ export default function Home() {
                   { nome: 'Mark V', valores: radarDe(1), variante: 'solida' },
                 ]}
                 animado
+                revelacao="rolagem"
               />
               <figcaption className={`mono ${styles.impressaoLegenda}`}>
                 a impressão digital de cada material
@@ -255,11 +256,11 @@ export default function Home() {
 
         {/* ── O que você encontra aqui (EM BREVE mora aqui, e só aqui — D-16) ── */}
         <section className={`container ${styles.features}`}>
-          <h2 className={styles.tituloSecao}>O que você encontra aqui</h2>
-          <p className={styles.featuresSub}>— e o que vem por aí</p>
+          <h2 className={`${styles.tituloSecao} revela`}>O que você encontra aqui</h2>
+          <p className={`${styles.featuresSub} revela`}>— e o que vem por aí</p>
           <div className={styles.featuresGrade}>
             {FEATURES_ATIVAS.map((f) => (
-              <Link key={f.titulo} href={f.href} className={styles.feature}>
+              <Link key={f.titulo} href={f.href} className={`${styles.feature} revela`}>
                 <h3>{f.titulo}</h3>
                 <p>{f.texto}</p>
                 <span className={styles.featureSeta} aria-hidden="true">
@@ -268,14 +269,14 @@ export default function Home() {
               </Link>
             ))}
             {FEATURES_EM_BREVE.map((f) => (
-              <div key={f.titulo} className={styles.featureFutura}>
+              <div key={f.titulo} className={`${styles.featureFutura} revela`}>
                 <h3>
                   {f.titulo} <span className={`mono ${styles.emBreve}`}>em breve</span>
                 </h3>
                 <p>{f.texto}</p>
               </div>
             ))}
-            <div className={`${styles.featureFutura} ${styles.featureIA}`}>
+            <div className={`${styles.featureFutura} ${styles.featureIA} revela`}>
               <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
                 <rect width="34" height="34" rx="10" fill="var(--cor-acento-escuro)" />
                 <path
@@ -302,7 +303,7 @@ export default function Home() {
         {/* ── Prova ao vivo (adição nossa além do Figma — D-18) ── */}
         <section id="prova" className={styles.prova}>
           <div className={`container ${styles.provaInterna}`}>
-          <div className={styles.provaHead}>
+          <div className={`${styles.provaHead} revela`}>
             <h2>Números que dá pra comparar de verdade</h2>
             <p>
               Nota de fabricante é escala interna de marketing — o 9.0 de uma marca não é o
@@ -312,7 +313,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.tabelaWrap}>
+          <div className={`${styles.tabelaWrap} revela`}>
             <table className={styles.tabela}>
             <thead>
               <tr>
@@ -366,7 +367,7 @@ export default function Home() {
 
         {/* ── CTA final (cartão mesa) ── */}
         <section className={`container ${styles.ctaFinal}`}>
-          <div className={styles.ctaCartao}>
+          <div className={`${styles.ctaCartao} revela-escala`}>
             <h2>
               Pronto pra parar de escolher <span className={styles.destaque}>no chute</span>?
             </h2>

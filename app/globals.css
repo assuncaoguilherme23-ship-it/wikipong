@@ -147,6 +147,56 @@ h3 {
   margin: 0 auto;
 }
 
+/* ── Revelação ao rolar (scrubbed: o progresso é o próprio scroll — arrastou,
+      aparece; voltou, reverte). CSS scroll-driven puro, sem JS: navegador sem
+      suporte pula o bloco inteiro e vê tudo estático — o conteúdo nunca fica
+      refém da animação. Reduced-motion desliga explicitamente (timelines de
+      scroll ignoram o override global de duração). ── */
+@supports (animation-timeline: view()) {
+  .revela {
+    animation: revelarSubir linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 55%;
+  }
+  .revela-escala {
+    animation: revelarEscala linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+  .linha-central {
+    transform-origin: center;
+    animation: desenharLinha linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 85%;
+  }
+
+  @keyframes revelarSubir {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+  @keyframes revelarEscala {
+    from {
+      opacity: 0;
+      transform: scale(0.94);
+    }
+  }
+  @keyframes desenharLinha {
+    from {
+      transform: scaleX(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .revela,
+    .revela-escala,
+    .linha-central {
+      animation: none;
+    }
+  }
+}
+
 /* ── Botões do sistema (consolidados no polish — antes eram 4 cópias por módulo).
       Primário: branco sobre acento-escuro (AA nos 2 temas). Alvo ≥ 44px. ── */
 .botao-primario {

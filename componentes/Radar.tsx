@@ -27,6 +27,9 @@ interface PropsRadar {
   tamanho?: number;
   animado?: boolean;
   legenda?: boolean;
+  /** 'carga' = draw-in no load (padrão); 'rolagem' = scrubbed pelo scroll
+      (CSS scroll-driven; sem suporte, mostra estático — nunca some conteúdo). */
+  revelacao?: 'carga' | 'rolagem';
 }
 
 function coords(valores: readonly number[], centro: number, raio: number): Array<[number, number]> {
@@ -40,7 +43,15 @@ function coords(valores: readonly number[], centro: number, raio: number): Array
 const pontos = (cs: Array<[number, number]>): string =>
   cs.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(' ');
 
-export function Radar({ eixos, series, tamanho = 280, animado = false, legenda = true }: PropsRadar) {
+export function Radar({
+  eixos,
+  series,
+  tamanho = 280,
+  animado = false,
+  legenda = true,
+  revelacao = 'carga',
+}: PropsRadar) {
+  const porRolagem = animado && revelacao === 'rolagem';
   const centro = tamanho / 2;
   const raio = tamanho * 0.34;
   const cheio = eixos.map(() => 10);
@@ -55,7 +66,7 @@ export function Radar({ eixos, series, tamanho = 280, animado = false, legenda =
   });
 
   return (
-    <div aria-hidden="true">
+    <div aria-hidden="true" className={porRolagem ? estilos.cronologiaRolagem : undefined}>
       <svg width={tamanho} height={tamanho} viewBox={`0 0 ${tamanho} ${tamanho}`} role="presentation">
         {[0.25, 0.5, 0.75, 1].map((t) => (
           <polygon
@@ -75,9 +86,9 @@ export function Radar({ eixos, series, tamanho = 280, animado = false, legenda =
             className={[
               estilos.poligono,
               s.variante === 'solida' ? estilos.solida : estilos.tracejada,
-              animado ? estilos.animado : '',
+              animado ? (porRolagem ? estilos.animadoRolagem : estilos.animado) : '',
             ].join(' ')}
-            style={animado ? { animationDelay: `${550 + i * 150}ms` } : undefined}
+            style={animado && !porRolagem ? { animationDelay: `${550 + i * 150}ms` } : undefined}
           />
         ))}
         {series
@@ -89,7 +100,9 @@ export function Radar({ eixos, series, tamanho = 280, animado = false, legenda =
                 cx={x}
                 cy={y}
                 r={2.8}
-                className={`${estilos.ponto} ${animado ? estilos.pontoAnimado : ''}`}
+                className={`${estilos.ponto} ${
+                  animado ? (porRolagem ? estilos.pontoRolagem : estilos.pontoAnimado) : ''
+                }`}
               />
             )),
           )}

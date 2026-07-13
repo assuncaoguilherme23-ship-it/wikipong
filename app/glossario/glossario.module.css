@@ -42,7 +42,7 @@
 }
 .verbete dd {
   margin: 0.4rem 0 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem; /* degrau small do ramp */
   color: var(--cor-tinta-suave);
   line-height: 1.6;
   max-width: 58ch;
@@ -51,7 +51,7 @@
 
 .notaIA {
   margin-top: clamp(1.5rem, 4vw, 2.5rem);
-  font-size: 0.85rem;
+  font-size: 0.8rem; /* degrau caption do ramp */
   color: var(--cor-tinta-suave);
   max-width: 62ch;
 }

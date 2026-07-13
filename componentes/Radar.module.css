@@ -44,6 +44,32 @@
   }
 }
 
+/* Revelação por ROLAGEM (scrubbed): a timeline nomeada vive no wrapper e os
+   polígonos a referenciam — mais confiável que view() em filho de SVG. Sem
+   suporte, o bloco inteiro é pulado e o radar aparece estático. */
+@supports (animation-timeline: view()) {
+  .cronologiaRolagem {
+    view-timeline-name: --radar-vista;
+  }
+  .animadoRolagem {
+    animation: radarEntrar linear both;
+    animation-timeline: --radar-vista;
+    animation-range: entry 15% entry 70%;
+  }
+  .pontoRolagem {
+    animation: pontoEntrar linear both;
+    animation-timeline: --radar-vista;
+    animation-range: entry 50% entry 85%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animadoRolagem,
+    .pontoRolagem {
+      animation: none;
+    }
+  }
+}
+
 .rotulo {
   font-family: var(--fonte-mono);
   font-size: 9px;

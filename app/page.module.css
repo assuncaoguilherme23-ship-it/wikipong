@@ -1,10 +1,15 @@
 /* Landing (Tela · Landing do Figma v2) — botões e trilhas vêm dos utilitários
    globais; tamanhos tipográficos seguem o ramp do DESIGN.md. */
 
-/* ── Hero centrado ── */
+/* ── Hero centrado (brilho radial sutil no topo — 8% do acento, ok nos 2 temas) ── */
 .hero {
   padding-block: clamp(3rem, 8vw, 5.5rem) clamp(2.5rem, 6vw, 4rem);
   text-align: center;
+  background: radial-gradient(
+    56rem 22rem at 50% -6rem,
+    color-mix(in srgb, var(--cor-acento) 8%, transparent),
+    transparent 70%
+  );
 }
 .heroTexto {
   display: flex;

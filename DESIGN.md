@@ -39,6 +39,21 @@ typography:
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
+  small:
+    fontFamily: "Inter, system-ui, sans-serif"
+    fontSize: "0.9rem"
+    fontWeight: 400
+    lineHeight: 1.55
+  caption:
+    fontFamily: "Inter, system-ui, sans-serif"
+    fontSize: "0.8rem"
+    fontWeight: 400
+    lineHeight: 1.5
+  stat:
+    fontFamily: "JetBrains Mono, ui-monospace, monospace"
+    fontSize: "1.5rem"
+    fontWeight: 500
+    fontFeature: "'tnum' 1"
   label:
     fontFamily: "JetBrains Mono, ui-monospace, monospace"
     fontSize: "0.72rem"
@@ -53,6 +68,7 @@ rounded:
   sm: "9px"
   md: "13px"
   lg: "18px"
+  pill: "999px"
 spacing:
   esp-1: "4px"
   esp-2: "8px"
@@ -168,6 +184,9 @@ trilhas. Contraste por eixo (peso + gênero), nunca duas sans parecidas competin
 - **Headline** (800, clamp(1.6rem→2.4rem)): títulos de página e de seção.
 - **Title** (700, 1.12rem): nomes de material em cards, termos do glossário.
 - **Body** (400, 1rem, 1.6): prosa; máx. 52–68ch (`text-wrap: pretty` em ledes).
+- **Small** (400, 0.9rem): descrições densas em cards e listas.
+- **Caption** (400, 0.8rem): notas de rodapé, trilhas, microcopy.
+- **Stat** (mono 500, 1.5rem, tnum): números de destaque (faixa de estatísticas).
 - **Label** (500, 0.72rem, +0.14em, CAIXA-ALTA): rótulos mono funcionais.
 - **Data** (500, 1.05rem, tnum): valores numéricos em tabelas e cards.
 

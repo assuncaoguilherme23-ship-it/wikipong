@@ -1,29 +1,74 @@
-/* Cabeçalho e rodapé são componentes compartilhados; botões vêm dos utilitários
-   globais .botao-primario/.botao-secundario (consolidados no polish). */
+/* Landing (Tela · Landing do Figma v2) — botões e trilhas vêm dos utilitários
+   globais; tamanhos tipográficos seguem o ramp do DESIGN.md. */
 
+/* ── Hero centrado ── */
 .hero {
-  padding-block: clamp(3rem, 9vw, 6rem) clamp(2rem, 6vw, 4rem);
+  padding-block: clamp(3rem, 8vw, 5.5rem) clamp(2.5rem, 6vw, 4rem);
+  text-align: center;
 }
-.heroGrid {
-  display: grid;
-  grid-template-columns: 1fr;
+.heroTexto {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.1rem;
 }
-@media (min-width: 920px) {
-  .heroGrid {
-    grid-template-columns: 1fr auto;
-    gap: 3.5rem;
-  }
-}
-.hero h1 {
-  font-size: clamp(2.4rem, 6.5vw, 5rem);
+.heroTitulo {
+  font-size: clamp(2.3rem, 6vw, 4.4rem);
   font-weight: 800;
-  max-width: 15ch;
-  margin-block: 0 1.25rem;
+  max-width: 18ch;
+}
+.destaque {
+  color: var(--cor-acento); /* só em display/headline ≥24px — AA large (Regra do Acento) */
+}
+.lede {
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--cor-tinta-suave);
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+.acoesHero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.micro {
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+  letter-spacing: 0.04em;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 9rem;
+  padding: 0.85rem 1.25rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-sm);
+}
+.stat dd {
+  margin: 0;
+  font-size: 1.5rem; /* degrau stat */
+  font-weight: 500;
+  font-feature-settings: 'tnum' 1;
+  color: var(--cor-tinta);
+}
+.stat dt {
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
 }
 
-/* Entrada em cascata (ease-out; morre sob prefers-reduced-motion via override global) */
+/* Entrada em cascata do hero (morre sob prefers-reduced-motion via override global) */
 @keyframes subir {
   from {
     opacity: 0;
@@ -37,86 +82,246 @@
 .heroTexto > :nth-child(2) { animation-delay: 110ms; }
 .heroTexto > :nth-child(3) { animation-delay: 180ms; }
 .heroTexto > :nth-child(4) { animation-delay: 250ms; }
+.heroTexto > :nth-child(5) { animation-delay: 320ms; }
+.heroTexto > :nth-child(6) { animation-delay: 390ms; }
 
-/* ── Radar do hero: o desenho vive em componentes/Radar (D-15) ── */
-.heroRadar {
-  display: none;
+/* ── A verdade (banda mesa) ── */
+.verdade {
+  background: var(--cor-mesa);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 1.3px);
+  background-size: 18px 18px;
+  padding-block: clamp(3rem, 7vw, 4.5rem);
+  text-align: center;
 }
-@media (min-width: 920px) {
-  .heroRadar {
-    display: block;
-    animation: subir 600ms cubic-bezier(0.2, 0.7, 0.2, 1) 300ms backwards;
-  }
+.verdadeInterna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
 }
-.lede {
-  font-size: clamp(1rem, 2.2vw, 1.15rem);
-  line-height: 1.65;
-  color: var(--cor-tinta-suave);
-  max-width: 52ch;
+.kickerMesa {
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-sobre-mesa-suave); /* 6.7:1 — AA em texto pequeno sobre a mesa */
+  margin: 0;
+}
+.verdade h2 {
+  font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+  color: var(--cor-sobre-mesa);
+  max-width: 24ch;
+}
+.verdadeTexto {
+  color: var(--cor-sobre-mesa-suave);
+  line-height: 1.7; /* compensação de texto claro sobre escuro */
+  letter-spacing: 0.01em;
+  max-width: 58ch;
+  margin: 0;
   text-wrap: pretty;
 }
-.heroActions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 2rem;
+
+/* ── Dores (tríade numerada do Figma) ── */
+.tituloSecao {
+  font-size: clamp(1.5rem, 3.8vw, 2rem);
+  text-align: center;
 }
-/* ── Como funciona: sequência real 1→2→3 (numeração legítima) ── */
-.comoFunciona {
+.dores {
   padding-block: clamp(2.5rem, 7vw, 4.5rem);
 }
-.comoTitulo {
-  font-size: clamp(1.4rem, 3.5vw, 1.9rem);
-  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
-}
-.passos {
+.doresLista {
   list-style: none;
-  margin: 0;
+  margin: clamp(1.5rem, 4vw, 2.5rem) 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: clamp(1.5rem, 4vw, 3rem);
+  gap: 1rem;
 }
-.passo {
+.dor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  padding: 1.25rem;
+  box-shadow: var(--sombra-cartao);
+}
+.dorNumero {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--cor-texto-acento);
+  background: var(--cor-acento-suave);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+}
+.dor h3 {
+  font-size: 1.12rem;
+}
+.dor p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+}
+
+/* ── Manifesto (D-02) + impressão digital ── */
+.manifesto {
+  background: var(--cor-superficie-2);
+  padding-block: clamp(3rem, 7vw, 4.5rem);
+}
+.manifestoGrade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+@media (min-width: 920px) {
+  .manifestoGrade {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+.manifesto h2 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  margin-block: 0.5rem 0.9rem;
+}
+.manifestoTexto {
+  color: var(--cor-tinta-suave);
+  max-width: 56ch;
+  margin: 0 0 1.25rem;
+  text-wrap: pretty;
+}
+.compromissos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.compromissos li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+}
+.impressaoDigital {
+  justify-self: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-lg);
+  padding: 1.5rem;
+  box-shadow: var(--sombra-cartao);
+}
+.impressaoLegenda {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+}
+
+/* ── Features (os EM BREVE moram aqui — D-16) ── */
+.features {
+  padding-block: clamp(2.5rem, 7vw, 4.5rem);
+}
+.featuresSub {
+  text-align: center;
+  color: var(--cor-tinta-suave);
+  margin: 0.4rem 0 0;
+}
+.featuresGrade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+.feature,
+.featureFutura {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  border-top: 1px solid var(--cor-linha-forte);
-  padding-top: 1rem;
+  border-radius: var(--raio-md);
+  padding: 1.1rem 1.25rem;
 }
-.passoNumero {
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--cor-texto-acento);
-  line-height: 1;
-}
-.passo h3 {
-  font-size: 1.15rem;
-}
-.passo p {
-  margin: 0;
-  color: var(--cor-tinta-suave);
-  font-size: 0.95rem;
-  max-width: 34ch;
-}
-.passo a {
-  margin-top: 0.35rem;
-  font-weight: 600;
+.feature {
+  position: relative;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  color: inherit;
   text-decoration: none;
+  box-shadow: var(--sombra-cartao);
+  transition: border-color 160ms ease, transform 160ms ease;
 }
-.passo a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.feature:hover {
+  border-color: var(--cor-acento);
+  transform: translateY(-2px);
+}
+.feature:active {
+  transform: translateY(0) scale(0.99);
+}
+.feature h3,
+.featureFutura h3 {
+  font-size: 1.12rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.feature p,
+.featureFutura p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+}
+.featureSeta {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+  color: var(--cor-texto-acento);
+  font-weight: 600;
+  transition: transform 160ms ease;
+}
+.feature:hover .featureSeta {
+  transform: translateX(3px);
+}
+.featureFutura {
+  border: 1px dashed var(--cor-linha-forte);
+  background: transparent;
+}
+.emBreve {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+  background: var(--cor-superficie-2);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+.featureIA {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  background: var(--cor-acento-suave);
+  border: 1px solid var(--cor-linha-forte);
+}
+.featureIA svg {
+  flex-shrink: 0;
 }
 
-/* ── A banda MESA: a cor da identidade carrega a superfície (D-18, registrado) ── */
+/* ── Prova ao vivo (banda mesa) ── */
 .prova {
   background: var(--cor-mesa);
-  /* textura de pinos de borracha, sutil */
   background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 1.3px);
   background-size: 18px 18px;
   padding-block: clamp(3rem, 8vw, 5.5rem);
-  scroll-margin-top: 5rem; /* âncora #prova não some sob o header sticky */
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  scroll-margin-top: 5rem;
 }
 .provaInterna {
   display: flex;
@@ -134,10 +339,11 @@
 .provaHead p {
   color: var(--cor-sobre-mesa-suave);
   margin: 0;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
   text-wrap: pretty;
 }
 
-/* Em ~375px a tabela rola dentro do próprio container, sem scroll horizontal na página. */
 .tabelaWrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -163,17 +369,16 @@
 .tabela tr:last-child td {
   border-bottom: none;
 }
-/* Realce de linha no hover (padrão data-dense; tinta verde sutil, funciona nos 2 temas) */
+.tabela thead th {
+  background: var(--cor-superficie-2);
+  font-family: var(--fonte-display);
+  font-size: 1rem;
+}
 .tabela tbody tr {
   transition: background 140ms ease;
 }
 .tabela tbody tr:hover {
   background: color-mix(in srgb, var(--cor-acento) 5%, transparent);
-}
-.tabela thead th {
-  background: var(--cor-superficie-2);
-  font-family: var(--fonte-display);
-  font-size: 1rem;
 }
 .atributo {
   color: var(--cor-tinta-suave);
@@ -183,11 +388,11 @@
   font-family: var(--fonte-mono);
   font-size: 1.05rem;
   font-weight: 500;
-  font-feature-settings: "tnum" 1; /* dígitos tabulares: colunas de dados sem "pulo" */
+  font-feature-settings: 'tnum' 1;
 }
 .valorSimples {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--cor-tinta-suave);
   margin-top: 0.15rem;
 }
@@ -197,7 +402,7 @@
 }
 .maxTag {
   font-family: var(--fonte-mono);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
@@ -205,9 +410,10 @@
 }
 .nota {
   margin-top: 1.25rem;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--cor-sobre-mesa-suave); /* 6.7:1 sobre a mesa */
   max-width: 68ch;
+  line-height: 1.7;
 }
 .nota strong {
   color: var(--cor-sobre-mesa);
@@ -215,7 +421,7 @@
 .selo {
   display: inline-block;
   font-family: var(--fonte-mono);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
@@ -225,3 +431,39 @@
   border-radius: 999px;
 }
 
+/* ── CTA final (cartão mesa) ── */
+.ctaFinal {
+  padding-block: clamp(2.5rem, 7vw, 4.5rem) 0;
+}
+.ctaCartao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: center;
+  background: var(--cor-mesa);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 1.3px);
+  background-size: 18px 18px;
+  border-radius: var(--raio-lg);
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+}
+.ctaCartao h2 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  color: var(--cor-sobre-mesa);
+  max-width: 22ch;
+}
+.ctaCartao p {
+  color: var(--cor-sobre-mesa-suave);
+  margin: 0;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+.ctaBotao {
+  margin-top: 0.35rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22); /* separa o botão da mesa */
+}
+.microMesa {
+  font-size: 0.8rem;
+  color: var(--cor-sobre-mesa-suave);
+  letter-spacing: 0.04em;
+}

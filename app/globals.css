@@ -134,7 +134,7 @@ h3 {
 /* Trilha (breadcrumb) — voz de dados funcional, sem caps gritado */
 .trilha {
   font-family: var(--fonte-mono);
-  font-size: 0.78rem;
+  font-size: 0.8rem; /* degrau caption do ramp */
   color: var(--cor-tinta-suave);
 }
 

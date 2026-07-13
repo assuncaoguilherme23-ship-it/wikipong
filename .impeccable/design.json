@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-13T00:00:00Z",
+  "generatedAt": "2026-07-13T02:45:00Z",
   "title": "Design System: WikiPong",
   "extensions": {
     "colorMeta": {
@@ -41,6 +41,9 @@
     },
     "typographyMeta": {
       "display": { "displayName": "Display", "purpose": "Só o hero da home (Archivo 800)." },
+      "small": { "displayName": "Small", "purpose": "Descrições densas em cards e listas (0.9rem)." },
+      "caption": { "displayName": "Caption", "purpose": "Notas de rodapé, trilhas, microcopy (0.8rem)." },
+      "stat": { "displayName": "Stat", "purpose": "Números de destaque na faixa de estatísticas (mono 1.5rem, tnum)." },
       "label": { "displayName": "Label mono", "purpose": "Voz de dados: rótulos funcionais em caixa-alta. Nunca kicker decorativo." },
       "data": { "displayName": "Dados", "purpose": "Valores numéricos tabulares (tnum) em tabelas e cards." }
     },

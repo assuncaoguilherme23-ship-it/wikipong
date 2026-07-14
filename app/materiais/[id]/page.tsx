@@ -29,6 +29,7 @@ import { Bolinhas } from '@/componentes/Bolinhas';
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
 import { brl } from '@/componentes/formato';
 import { perdao, paraPalavra } from '@/src/logica/metricas';
+import { vereditosDoMaterial, ROTULO_INTENCAO } from '@/src/logica/recomendacao';
 import estilos from './detalhe.module.css';
 
 export const dynamicParams = false;
@@ -55,6 +56,9 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
   if (!m) notFound();
 
   const perdaoValor = perdao(m.specs, m.durezaUnificada);
+
+  // Dado sincero: os presets do quiz rodados contra ESTE material (recomendacao.ts)
+  const vereditos = vereditosDoMaterial(m);
 
   // Ficha técnica (fato): número + tradução lado a lado (D-08, mesmo dado canônico)
   const ficha = [
@@ -171,6 +175,57 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
               {paraPalavra('controle', m.specs.controle)}
             </li>
           </ul>
+        </section>
+
+        {/* ── 2b. Pra quem é — DADO SINCERO: os mesmos presets que o quiz gera,
+               rodados contra este material pelo motor de filtros (recomendacao.ts).
+               Combina E não-combina aparecem, com o critério aberto (D-02/D-16). ── */}
+        <section className={estilos.praQuemE} aria-labelledby="titulo-pra-quem">
+          <h2 id="titulo-pra-quem">Pra quem é</h2>
+          <dl className={estilos.fichaJogo}>
+            <div>
+              <dt className={`mono ${estilos.fichaJogoRotulo}`}>Estilo de jogo</dt>
+              <dd>{ROTULO_INTENCAO[m.intencao] ?? m.intencao}</dd>
+            </div>
+            <div>
+              <dt className={`mono ${estilos.fichaJogoRotulo}`}>Nível recomendado</dt>
+              <dd>{m.nivel}</dd>
+            </div>
+          </dl>
+
+          <h3 className={estilos.vereditosTitulo}>Combina com o seu perfil do teste?</h3>
+          <ul className={estilos.vereditos}>
+            {vereditos.map((v) => (
+              <li
+                key={v.perfil.id}
+                className={`${estilos.veredito} ${v.combina ? estilos.combina : ''}`}
+              >
+                <p className={estilos.vereditoTopo}>
+                  <span aria-hidden="true">{v.combina ? '✓' : '✗'}</span>
+                  <b>{v.perfil.nome}</b>
+                  <span className={estilos.vereditoRotulo}>
+                    {v.combina ? 'combina' : 'não combina'}
+                  </span>
+                </p>
+                <ul className={`mono ${estilos.criterios}`}>
+                  {v.criterios.map((c) => (
+                    <li key={c.rotulo} className={c.atende ? estilos.criterioOk : estilos.criterioFalha}>
+                      {c.atende ? '✓' : '✗'} {c.rotulo}: {c.detalhe}
+                    </li>
+                  ))}
+                </ul>
+                {v.combina && (
+                  <Link href={v.perfil.presetURL} className={estilos.vereditoLink}>
+                    Ver todos os materiais deste perfil →
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+          <p className={estilos.vereditoNota}>
+            Calculado pelos mesmos filtros que o teste de perfil gera — critério aberto, não
+            opinião. Não sabe seu perfil? <Link href="/quiz/">Faça o teste</Link> (leva 1 minuto).
+          </p>
         </section>
 
         {/* ── (Onde comprar — D-13/D-14 — entra aqui quando a entidade ofertas existir) ── */}

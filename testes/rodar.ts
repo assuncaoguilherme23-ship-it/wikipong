@@ -11,6 +11,9 @@ import {
   iniciar, responder, voltar, progresso, resultado, TELAS,
 } from '../src/logica/quiz.js';
 import {
+  combinaComPerfil, vereditosDoMaterial, PERFIS_COM_CRITERIO, ROTULO_INTENCAO,
+} from '../src/logica/recomendacao.js';
+import {
   filtroVazio, parseQuery, serializeQuery, aplicar, alternarFaceta, comOrdenacao, facetas,
   Material,
 } from '../src/logica/filtros.js';
@@ -163,6 +166,31 @@ const f0 = filtroVazio();
 const f1 = alternarFaceta(f0, 'tipos', 'borracha');
 afirma(f0.tipos.length === 0 && jeq(f1.tipos, ['borracha']), 'alternarFaceta é imutável');
 afirma(f0.ordenar === 'relevancia' && comOrdenacao(f0, 'perdao').ordenar === 'perdao', 'comOrdenacao é imutável');
+
+// ───────── recomendação: veredito material ↔ perfil (dado sincero) ─────────
+afirma(PERFIS_COM_CRITERIO.length === 3, 'só os 3 perfis que filtram entram (explorador fora)');
+afirma(!PERFIS_COM_CRITERIO.some(p => p.id === 'explorador'), 'explorador excluído (combinaria com tudo)');
+
+// COERÊNCIA: o veredito tem que bater com o motor de filtros em TODOS os pares
+for (const m of CAT) {
+  for (const p of PERFIS_COM_CRITERIO) {
+    const v = combinaComPerfil(m, p);
+    const peloMotor = aplicar([m], parseQuery(p.presetURL)).length === 1;
+    afirma(v.combina === peloMotor, `veredito de ${m.id}×${p.id} diverge do motor`);
+  }
+}
+
+const baseSolida = PERFIS_COM_CRITERIO.find(p => p.id === 'base-solida')!;
+const vM4 = combinaComPerfil(CAT[3], baseSolida); // M4: Avançado, vel 5.0, ctrl 9.0
+afirma(!vM4.combina, 'M4 não combina com base-solida');
+afirma(vM4.criterios[0].rotulo === 'Nível' && !vM4.criterios[0].atende, 'M4: nível reprova');
+afirma(vM4.criterios[1].atende && vM4.criterios[2].atende, 'M4: vel 5.0 e ctrl 9.0 passam');
+
+const atacante = PERFIS_COM_CRITERIO.find(p => p.id === 'atacante-em-formacao')!;
+afirma(combinaComPerfil(CAT[5], atacante).combina, 'M6 combina com atacante-em-formacao');
+
+afirma(vereditosDoMaterial(CAT[0]).length === 3, 'vereditosDoMaterial cobre os 3 perfis');
+afirma(ROTULO_INTENCAO.atacar === 'Ataque', 'rótulo de intenção traduzido');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

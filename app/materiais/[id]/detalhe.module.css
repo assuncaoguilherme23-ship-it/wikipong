@@ -160,6 +160,113 @@
   font-weight: 500;
 }
 
+/* ── 2b. Pra quem é (dado sincero: presets do quiz × este material) ── */
+.praQuemE {
+  margin-top: clamp(2rem, 5vw, 3rem);
+}
+.praQuemE h2 {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  margin-bottom: 1rem;
+}
+.fichaJogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+}
+.fichaJogo > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 11rem;
+  padding: 0.75rem 1.1rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-sm);
+}
+.fichaJogoRotulo {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+}
+.fichaJogo dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.vereditosTitulo {
+  font-size: 1.12rem;
+  margin-bottom: 0.75rem;
+}
+.vereditos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.veredito {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  padding: 1rem 1.15rem;
+  background: var(--cor-superficie);
+}
+/* Combina: além do ✓ e do texto (nunca só cor), a borda acende no acento */
+.veredito.combina {
+  border-color: var(--cor-acento);
+  background: var(--cor-acento-suave);
+}
+.vereditoTopo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+.vereditoTopo > span:first-child {
+  font-weight: 700;
+  color: var(--cor-texto-acento);
+}
+.vereditoRotulo {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+}
+.criterios {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+}
+.criterioOk {
+  color: var(--cor-texto-acento);
+}
+.criterioFalha {
+  color: var(--cor-tinta-suave);
+}
+.vereditoLink {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.vereditoLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.vereditoNota {
+  margin: 1rem 0 0;
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}
+
 /* ── 3. Comunidade (opinião, rotulada, por último — D-14) ── */
 .comunidade {
   margin-top: clamp(2rem, 5vw, 3rem);

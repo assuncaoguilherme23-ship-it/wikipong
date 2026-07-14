@@ -1,10 +1,20 @@
 /* Landing (Tela · Landing do Figma v2) — botões e trilhas vêm dos utilitários
    globais; tamanhos tipográficos seguem o ramp do DESIGN.md. */
 
-/* ── Hero centrado (brilho radial + pinos esvanecendo no topo — ok nos 2 temas) ── */
+/* ── Hero centrado. Fundo (brilho + pinos) vive num ::before mascarado — máscara
+      em elemento mascara o CONTEÚDO junto, então ela nunca toca a seção em si. ── */
 .hero {
+  position: relative;
+  isolation: isolate;
   padding-block: clamp(3rem, 8vw, 5.5rem) clamp(2.5rem, 6vw, 4rem);
   text-align: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background:
     radial-gradient(
       56rem 22rem at 50% -6rem,
@@ -15,7 +25,7 @@
   background-size:
     auto,
     18px 18px;
-  /* os pinos só existem perto do topo: máscara esvanece até 24rem */
+  /* o fundo só existe perto do topo: esvanece até 24rem (alfa da máscara) */
   -webkit-mask-image: linear-gradient(to bottom, #000, #000 6rem, transparent 24rem);
   mask-image: linear-gradient(to bottom, #000, #000 6rem, transparent 24rem);
 }

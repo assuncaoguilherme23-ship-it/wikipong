@@ -220,6 +220,8 @@ h3 {
 }
 .botao-primario:hover:not(:disabled) {
   background: color-mix(in srgb, var(--cor-acento-escuro) 88%, #000);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--cor-acento) 30%, transparent);
 }
 .botao-primario:active:not(:disabled) {
   transform: scale(0.98);

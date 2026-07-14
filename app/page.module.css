@@ -1,15 +1,23 @@
 /* Landing (Tela · Landing do Figma v2) — botões e trilhas vêm dos utilitários
    globais; tamanhos tipográficos seguem o ramp do DESIGN.md. */
 
-/* ── Hero centrado (brilho radial sutil no topo — 8% do acento, ok nos 2 temas) ── */
+/* ── Hero centrado (brilho radial + pinos esvanecendo no topo — ok nos 2 temas) ── */
 .hero {
   padding-block: clamp(3rem, 8vw, 5.5rem) clamp(2.5rem, 6vw, 4rem);
   text-align: center;
-  background: radial-gradient(
-    56rem 22rem at 50% -6rem,
-    color-mix(in srgb, var(--cor-acento) 8%, transparent),
-    transparent 70%
-  );
+  background:
+    radial-gradient(
+      56rem 22rem at 50% -6rem,
+      color-mix(in srgb, var(--cor-acento) 12%, transparent),
+      transparent 70%
+    ),
+    radial-gradient(color-mix(in srgb, var(--cor-acento) 10%, transparent) 1.2px, transparent 1.3px);
+  background-size:
+    auto,
+    18px 18px;
+  /* os pinos só existem perto do topo: máscara esvanece até 24rem */
+  -webkit-mask-image: linear-gradient(to bottom, #000, #000 6rem, transparent 24rem);
+  mask-image: linear-gradient(to bottom, #000, #000 6rem, transparent 24rem);
 }
 .heroTexto {
   display: flex;
@@ -73,30 +81,98 @@
   color: var(--cor-tinta-suave);
 }
 
-/* Entrada em cascata do hero (morre sob prefers-reduced-motion via override global) */
+/* Entrada em cascata do hero: sobe de mais longe e resolve do desfoque
+   (elementos pequenos — custo de blur limitado; morre sob reduced-motion
+   via override global, por ser animação de tempo). */
 @keyframes subir {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(28px);
+    filter: blur(10px);
   }
 }
 .heroTexto > * {
-  animation: subir 520ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  animation: subir 720ms cubic-bezier(0.16, 1, 0.3, 1) backwards; /* ease-out-expo */
 }
 .heroTexto > :nth-child(1) { animation-delay: 40ms; }
-.heroTexto > :nth-child(2) { animation-delay: 110ms; }
-.heroTexto > :nth-child(3) { animation-delay: 180ms; }
-.heroTexto > :nth-child(4) { animation-delay: 250ms; }
-.heroTexto > :nth-child(5) { animation-delay: 320ms; }
-.heroTexto > :nth-child(6) { animation-delay: 390ms; }
+.heroTexto > :nth-child(2) { animation-delay: 130ms; }
+.heroTexto > :nth-child(3) { animation-delay: 220ms; }
+.heroTexto > :nth-child(4) { animation-delay: 310ms; }
+.heroTexto > :nth-child(5) { animation-delay: 400ms; }
+.heroTexto > :nth-child(6) { animation-delay: 490ms; }
 
-/* ── A verdade (banda mesa) ── */
+/* Sublinhado-assinatura nas palavras de destaque: a linha central da mesa sob a
+   palavra. Estático por padrão; no hero, desenha da esquerda no load. */
+.heroTitulo .destaque,
+.ctaCartao .destaque,
+.verdade .destaque {
+  position: relative;
+  white-space: nowrap;
+}
+.heroTitulo .destaque::after,
+.ctaCartao .destaque::after,
+.verdade .destaque::after {
+  content: '';
+  position: absolute;
+  left: 0.02em;
+  right: 0.02em;
+  bottom: 0.02em;
+  border-top: 0.09em dashed var(--cor-acento);
+  opacity: 0.5;
+}
+.heroTitulo .destaque::after {
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: desenharSublinhado 640ms cubic-bezier(0.16, 1, 0.3, 1) 760ms forwards;
+}
+@keyframes desenharSublinhado {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ── A verdade (banda mesa) — pinos em ::before para o parallax composited ── */
 .verdade {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: var(--cor-mesa);
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 1.3px);
-  background-size: 18px 18px;
   padding-block: clamp(3rem, 7vw, 4.5rem);
   text-align: center;
+}
+.verdade::before,
+.prova::before {
+  content: '';
+  position: absolute;
+  inset: -36px 0;
+  z-index: -1;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 1.3px);
+  background-size: 18px 18px;
+  pointer-events: none;
+}
+/* Parallax scrubbed: a textura deriva ±26px enquanto a banda cruza a viewport.
+   Só transform (composited); sem suporte, textura parada; reduced-motion desliga. */
+@supports (animation-timeline: view()) {
+  .verdade::before,
+  .prova::before {
+    animation: derivaPinos linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
+  }
+  @keyframes derivaPinos {
+    from {
+      transform: translateY(-26px);
+    }
+    to {
+      transform: translateY(26px);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .verdade::before,
+    .prova::before {
+      animation: none;
+    }
+  }
 }
 .verdadeInterna {
   display: flex;
@@ -151,6 +227,11 @@
   border-radius: var(--raio-md);
   padding: 1.25rem;
   box-shadow: var(--sombra-cartao);
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+.dor:hover {
+  transform: translateY(-3px);
+  border-color: var(--cor-linha-forte);
 }
 .dorNumero {
   align-self: flex-start;
@@ -260,11 +341,14 @@
   color: inherit;
   text-decoration: none;
   box-shadow: var(--sombra-cartao);
-  transition: border-color 160ms ease, transform 160ms ease;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 .feature:hover {
   border-color: var(--cor-acento);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 32px color-mix(in srgb, var(--cor-tinta) 10%, transparent),
+    var(--sombra-cartao);
 }
 .feature:active {
   transform: translateY(0) scale(0.99);
@@ -321,9 +405,10 @@
 
 /* ── Prova ao vivo (banda mesa) ── */
 .prova {
-  background: var(--cor-mesa);
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 1.3px);
-  background-size: 18px 18px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--cor-mesa); /* pinos no ::before (parallax, junto com .verdade) */
   padding-block: clamp(3rem, 8vw, 5.5rem);
   margin-top: clamp(2.5rem, 6vw, 4rem);
   scroll-margin-top: 5rem;

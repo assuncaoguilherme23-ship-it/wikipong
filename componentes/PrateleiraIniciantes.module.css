@@ -1,0 +1,159 @@
+.secao {
+  padding-block: clamp(2.5rem, 7vw, 4.5rem);
+}
+
+.topo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
+}
+.titulo {
+  font-size: clamp(1.5rem, 3.8vw, 2rem);
+}
+.sub {
+  margin: 0.4rem 0 0;
+  color: var(--cor-tinta-suave);
+  max-width: 48ch;
+  text-wrap: pretty;
+}
+
+/* Setas: conveniência de mouse (teclado usa o Tab pelos cards) */
+.setas {
+  display: none;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+@media (min-width: 720px) {
+  .setas {
+    display: flex;
+  }
+}
+.seta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--cor-tinta);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 160ms ease, color 160ms ease, opacity 160ms ease;
+}
+.seta:hover:not(:disabled) {
+  border-color: var(--cor-acento);
+  color: var(--cor-texto-acento);
+}
+.seta:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Trilho horizontal com scroll-snap */
+.trilho {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0 1.25rem; /* espaço p/ sombra do card + scrollbar */
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 0.1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cor-linha-forte) transparent;
+}
+.trilho::-webkit-scrollbar {
+  height: 8px;
+}
+.trilho::-webkit-scrollbar-thumb {
+  background: var(--cor-linha-forte);
+  border-radius: 999px;
+}
+.trilho::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.item {
+  flex: 0 0 auto;
+  width: clamp(14rem, 60vw, 16rem);
+  scroll-snap-align: start;
+}
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  padding: 1.15rem;
+  box-shadow: var(--sombra-cartao);
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+.cartao:hover {
+  border-color: var(--cor-acento);
+  transform: translateY(-2px);
+}
+.cartao:active {
+  transform: translateY(0) scale(0.99);
+}
+.glifoCaixa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--raio-sm);
+  background: var(--cor-superficie-2);
+}
+.nome {
+  font-family: var(--fonte-display);
+  font-weight: 700;
+  font-size: 1.12rem;
+}
+.meta {
+  font-size: 0.72rem;
+  color: var(--cor-tinta-suave);
+}
+.tag {
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+  flex: 1; /* empurra o preço pra base, alinhando os cards */
+}
+.preco {
+  font-size: 1.12rem;
+  font-weight: 600;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Último item: atalho pro catálogo filtrado */
+.verTodos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 100%;
+  min-height: 12rem;
+  padding: 1.15rem;
+  color: var(--cor-texto-acento);
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  background: var(--cor-acento-suave);
+  border: 1px dashed var(--cor-acento);
+  border-radius: var(--raio-md);
+  transition: background 160ms ease;
+}
+.verTodos span {
+  font-size: 1.5rem; /* degrau stat do ramp */
+}
+.verTodos:hover {
+  background: color-mix(in srgb, var(--cor-acento) 16%, transparent);
+}

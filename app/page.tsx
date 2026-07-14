@@ -16,6 +16,7 @@ import Link from 'next/link';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { Radar } from '@/componentes/Radar';
+import { PrateleiraIniciantes } from '@/componentes/PrateleiraIniciantes';
 import { MATERIAIS } from '@/componentes/dados-materiais';
 import { brl } from '@/componentes/formato';
 import {
@@ -253,6 +254,9 @@ export default function Home() {
             </figure>
           </div>
         </section>
+
+        {/* ── Materiais para começar (prateleira horizontal dos iniciantes) ── */}
+        <PrateleiraIniciantes />
 
         {/* ── O que você encontra aqui (EM BREVE mora aqui, e só aqui — D-16) ── */}
         <section className={`container ${styles.features}`}>

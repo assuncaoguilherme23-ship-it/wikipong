@@ -32,8 +32,15 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 });
 
+/* Base absoluta para OG/canônicas: a Vercel injeta VERCEL_PROJECT_PRODUCTION_URL
+   no build (reflete o domínio de produção, inclusive um custom domain quando
+   houver); local cai no dev server. Sem domínio chutado. */
+const urlSite = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : 'http://localhost:3000';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://wikipong.com.br'),
+  metadataBase: new URL(urlSite),
   title: {
     default: 'WikiPong · Enciclopédia de tênis de mesa',
     template: '%s · WikiPong',

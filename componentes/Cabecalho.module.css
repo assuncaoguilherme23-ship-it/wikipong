@@ -1,3 +1,5 @@
+/* Escala de z-index (semântica): header 10 · mega 20 · backdrop 30 · drawer 40 */
+
 .cabecalho {
   border-bottom: 1px solid var(--cor-linha);
   background: color-mix(in srgb, var(--cor-papel) 80%, transparent);
@@ -7,11 +9,7 @@
   z-index: 10;
 }
 
-/* Sombra que surge ao rolar — CSS scroll-driven animation, sem JS. Progressive
-   enhancement: sem suporte a animation-timeline, fica só a borda de sempre.
-   Não é "motion" (estado ligado à posição), mas o override global de
-   reduced-motion zera a duração e o timeline ainda aplica o estado final ao
-   rolar — comportamento aceitável nos dois casos. */
+/* Sombra que surge ao rolar — CSS scroll-driven, sem JS (progressive enhancement). */
 @supports (animation-timeline: scroll()) {
   .cabecalho {
     animation: sombraAoRolar linear both;
@@ -34,23 +32,33 @@
   padding-block: 0.85rem;
 }
 
-/* A marca agora é o SVG oficial exportado do Figma (componentes/Logo — D-05). */
 .marca {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
 }
 
+/* ── Desktop ── */
 .nav {
-  display: flex;
-  align-items: center;
-  gap: clamp(0.75rem, 3vw, 1.5rem);
+  display: none;
+}
+@media (min-width: 900px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+  }
 }
 .navLink {
   display: inline-flex;
   align-items: center;
+  gap: 0.35rem;
   min-height: 44px; /* alvo de toque */
   color: var(--cor-tinta-suave);
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
   text-decoration: none;
   padding: 0.35rem 0.2rem;
   border-bottom: 2px solid transparent;
@@ -59,13 +67,161 @@
 .navLink:hover {
   color: var(--cor-texto-acento);
 }
-.navLink[aria-current='page'] {
+.navLink[aria-current='page'],
+.megaBotao[aria-expanded='true'] {
   color: var(--cor-texto-acento);
   border-bottom-color: var(--cor-acento);
 }
+.seta {
+  transition: transform 200ms ease;
+}
+.megaBotao[aria-expanded='true'] .seta {
+  transform: rotate(180deg);
+}
 
-/* O CTA usa o utilitário global .botao-primario; aqui só a compactação do header. */
+/* Mega-menu (D-03): painel sob o header */
+.megaEscopo {
+  position: relative;
+}
+.mega {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-cartao), 0 18px 40px rgba(13, 24, 17, 0.14);
+  padding: 1.25rem 1.5rem;
+  min-width: 26rem;
+  animation: megaEntrar 200ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+@keyframes megaEntrar {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px);
+  }
+}
+.megaColuna {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 10rem;
+}
+.megaColuna a {
+  color: var(--cor-tinta);
+  text-decoration: none;
+  padding: 0.3rem 0.2rem;
+  border-radius: var(--raio-sm);
+  transition: color 160ms ease;
+}
+.megaColuna a:hover {
+  color: var(--cor-texto-acento);
+}
+.megaTitulo {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+  margin: 0 0 0.35rem;
+}
+.megaContagem {
+  font-size: 0.8rem;
+  color: var(--cor-mudo);
+  margin-left: 0.3rem;
+}
+
 .ctaNav {
   padding-block: 0.45rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+}
+
+/* ── Mobile: hambúrguer + drawer verde-mesa ── */
+.hamburguer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  color: var(--cor-tinta);
+  background: none;
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-sm);
+  cursor: pointer;
+}
+@media (min-width: 900px) {
+  .hamburguer {
+    display: none;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: color-mix(in srgb, var(--cor-tinta) 45%, transparent);
+  border: none;
+  cursor: pointer;
+  animation: aparecerBackdrop 200ms ease-out backwards;
+}
+@keyframes aparecerBackdrop {
+  from {
+    opacity: 0;
+  }
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  width: min(20rem, 86vw);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: clamp(1.5rem, 5vw, 2rem);
+  overflow-y: auto;
+  background: var(--cor-mesa);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 1.3px);
+  background-size: 18px 18px;
+  color: var(--cor-sobre-mesa);
+  animation: deslizarDrawer 240ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+@keyframes deslizarDrawer {
+  from {
+    transform: translateX(100%);
+  }
+}
+.drawer a:not(.drawerCta) {
+  color: var(--cor-sobre-mesa);
+  text-decoration: none;
+  padding: 0.6rem 0.4rem; /* linhas ≥44px de alvo */
+  border-radius: var(--raio-sm);
+  transition: color 160ms ease;
+}
+.drawer a:not(.drawerCta):hover {
+  color: var(--cor-acento);
+}
+.drawerTitulo {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-sobre-mesa-suave);
+  margin: 1rem 0 0.25rem;
+  padding-top: 1rem;
+  border-top: 2px dashed var(--cor-mesa-borda); /* a linha central divide os grupos */
+}
+.drawerTitulo:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.drawerCta {
+  margin-top: 1.25rem;
+  justify-content: center;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22);
 }

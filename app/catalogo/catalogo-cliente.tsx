@@ -13,6 +13,7 @@
  * D-16: empty state diz a verdade e oferece saída; nada de sugestão fabricada.
  */
 import { useEffect, useMemo, useRef, useState } from 'react';
+import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import {
   aplicar,
@@ -286,7 +287,8 @@ function CartaoMaterial({ material: m, modo }: { material: MaterialCatalogo; mod
   ] as const;
 
   return (
-    <li className={estilos.cartao}>
+    <li>
+    <Link href={`/materiais/${m.id}/`} className={estilos.cartao}>
       <div className={estilos.cartaoTopo}>
         <Glifo tipo={m.tipo} tamanho={56} />
         <div>
@@ -327,6 +329,7 @@ function CartaoMaterial({ material: m, modo }: { material: MaterialCatalogo; mod
       )}
 
       <p className={`mono ${estilos.preco}`}>{brl(m.preco)}</p>
+    </Link>
     </li>
   );
 }

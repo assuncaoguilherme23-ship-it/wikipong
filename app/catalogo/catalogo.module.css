@@ -87,7 +87,7 @@
 }
 .contagemFaceta {
   margin-left: auto;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--cor-mudo);
 }
 
@@ -98,7 +98,7 @@
 }
 .faixaChip {
   font: inherit;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--cor-tinta);
   background: var(--cor-superficie);
   border: 1px solid var(--cor-linha-forte);
@@ -174,7 +174,7 @@
 }
 .chip {
   font: inherit;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--cor-texto-acento);
   background: var(--cor-acento-suave);
   border: 1px solid var(--cor-linha-forte);
@@ -192,7 +192,7 @@
 }
 .limparTudo {
   font: inherit;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--cor-tinta-suave);
   background: none;
   border: none;
@@ -214,10 +214,14 @@
   grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
   gap: 1rem;
 }
+/* O cartão inteiro é o link para a ficha do material (/materiais/[id]) */
 .cartao {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
   background: var(--cor-superficie);
   border: 1px solid var(--cor-linha);
   border-radius: var(--raio-md);
@@ -226,8 +230,11 @@
   transition: border-color 160ms ease, transform 160ms ease;
 }
 .cartao:hover {
-  border-color: var(--cor-linha-forte);
+  border-color: var(--cor-acento);
   transform: translateY(-2px);
+}
+.cartao:active {
+  transform: translateY(0) scale(0.99);
 }
 .cartaoTopo {
   display: flex;
@@ -253,7 +260,7 @@
 }
 .specsTecnico dt {
   font-family: var(--fonte-mono);
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-mudo);
@@ -276,7 +283,7 @@
   align-items: center;
   gap: 0.5rem;
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 .rotuloSimples {
   width: 5.2rem;
@@ -288,7 +295,7 @@
 }
 .praQuemE {
   margin: 0.35rem 0 0;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--cor-tinta-suave);
 }
 .praQuemE b {
@@ -298,7 +305,7 @@
   align-self: flex-start;
   margin: 0.15rem 0 0;
   font-family: var(--fonte-mono);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
@@ -311,7 +318,7 @@
   margin: auto 0 0;
   padding-top: 0.75rem;
   border-top: 1px solid var(--cor-linha);
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   font-weight: 600;
   font-feature-settings: 'tnum' 1;
 }
@@ -330,7 +337,7 @@
 }
 .vazioTitulo {
   font-family: var(--fonte-display);
-  font-size: 1.2rem;
+  font-size: 1.12rem;
   font-weight: 700;
   color: var(--cor-tinta);
   margin: 0;

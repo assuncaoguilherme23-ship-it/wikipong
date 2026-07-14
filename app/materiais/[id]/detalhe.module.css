@@ -1,0 +1,179 @@
+.pagina {
+  padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 4rem);
+  min-height: 60dvh;
+}
+
+/* ── Cabeçalho do material ── */
+.topo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  margin-top: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--cor-linha-forte);
+}
+.nome {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 800;
+}
+.meta {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+}
+.preco {
+  margin-left: auto;
+  font-size: 1.5rem; /* degrau stat */
+  font-weight: 500;
+  font-feature-settings: 'tnum' 1;
+  color: var(--cor-tinta);
+  text-align: right;
+}
+.precoNota {
+  display: block;
+  font-family: var(--fonte-corpo);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--cor-tinta-suave);
+}
+
+/* ── 1. Ficha técnica (fato) ── */
+.ficha {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+  padding-block: clamp(2rem, 5vw, 3rem);
+}
+@media (min-width: 920px) {
+  .ficha {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+.fichaTexto h2 {
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  margin-bottom: 1rem;
+}
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tabela th,
+.tabela td {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--cor-linha);
+  vertical-align: baseline;
+}
+.tabela th {
+  color: var(--cor-tinta-suave);
+  font-weight: 500;
+  width: 11rem;
+}
+.valor {
+  font-size: 1.05rem; /* degrau data */
+  font-weight: 500;
+  font-feature-settings: 'tnum' 1;
+}
+.derivada {
+  color: var(--cor-texto-acento);
+  font-weight: 700;
+}
+.palavra {
+  margin-left: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+}
+.nota {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}
+.selo {
+  display: inline-block;
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+  background: var(--cor-acento-suave);
+  border: 1px solid var(--cor-linha-forte);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.radarCaixa {
+  justify-self: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-lg);
+  padding: 1.5rem;
+  box-shadow: var(--sombra-cartao);
+}
+.radarLegenda {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+}
+
+/* ── 2. Em português claro (tradução) ── */
+.portuguesClaro {
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-lg);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+.portuguesClaro h2 {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  margin-bottom: 0.75rem;
+}
+.tag {
+  margin: 0 0 1.1rem;
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+.resumoSimples {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.resumoSimples li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+}
+.resumoSimples li span {
+  width: 6rem;
+  color: var(--cor-tinta);
+  font-weight: 500;
+}
+
+/* ── 3. Comunidade (opinião, rotulada, por último — D-14) ── */
+.comunidade {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  padding-top: clamp(1.5rem, 4vw, 2rem);
+  border-top: 1px solid var(--cor-linha-forte);
+}
+.comunidade h2 {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  margin-bottom: 0.6rem;
+}
+.comunidadeVazia {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+  text-wrap: pretty;
+}

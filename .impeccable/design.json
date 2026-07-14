@@ -137,7 +137,8 @@
       "Don't usar side-stripe (border-left colorida >1px) em cards/alertas.",
       "Don't esconder conteúdo atrás de animação (reveal só melhora o já-visível).",
       "Don't usar acento claro (#1FA06A) em texto pequeno sobre papel — 3.19:1, reprova.",
-      "Don't deixar link morto ou 'em breve' clicável na nav (D-16)."
+      "Don't deixar link morto ou 'em breve' clicável na nav (D-16).",
+      "Don't sublinhar texto com o tracejado da linha central — convenção de abbr/tooltip, promete definição que não existe (decisão do fundador, 2026-07-14)."
     ]
   }
 }

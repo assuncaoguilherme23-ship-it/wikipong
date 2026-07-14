@@ -273,3 +273,6 @@ alternativa acessível. Eixos em mono 9px. Usado no hero (SSG) e no /comparar.
 - **Don't** usar acento claro (#1FA06A) em texto pequeno sobre papel — 3.19:1, reprova.
 - **Don't** deixar link morto ou "em breve" clicável na nav (D-16): o que não existe
   não entra.
+- **Don't** sublinhar TEXTO com o tracejado da linha central: tracejado sob palavra é
+  a convenção visual de abbr/tooltip e promete uma definição que não existe (decisão
+  do fundador, 2026-07-14). A linha central vive em divisores e no rodapé.

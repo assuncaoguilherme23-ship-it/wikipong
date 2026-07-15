@@ -128,11 +128,11 @@ export function Cabecalho() {
             )}
           </div>
           <Link
-            href="/glossario/"
+            href="/aprender/"
             className={estilos.navLink}
-            aria-current={ativo('/glossario/') ? 'page' : undefined}
+            aria-current={rota.startsWith('/aprender') ? 'page' : undefined}
           >
-            Glossário
+            Aprender
           </Link>
           <Link href="/quiz/" className={`botao-primario ${estilos.ctaNav}`}>
             Fazer o teste
@@ -183,6 +183,7 @@ export function Cabecalho() {
             ))}
             <Link href="/comparar/">Comparar lado a lado</Link>
             <p className={`mono ${estilos.drawerTitulo}`}>Aprender</p>
+            <Link href="/aprender/">Guias</Link>
             <Link href="/glossario/">Glossário</Link>
             <Link href="/quiz/" className={`botao-primario ${estilos.drawerCta}`}>
               Fazer o teste →

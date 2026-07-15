@@ -1,0 +1,160 @@
+.pagina {
+  padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 4rem);
+  min-height: 60dvh;
+}
+
+.titulo {
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-weight: 800;
+  margin-top: 0.5rem;
+}
+.lede {
+  color: var(--cor-tinta-suave);
+  max-width: 56ch;
+  margin-top: 0.6rem;
+  text-wrap: pretty;
+}
+
+/* ── Hub: lista de guias ── */
+.lista {
+  list-style: none;
+  margin: clamp(1.75rem, 4vw, 2.75rem) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+}
+.cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  padding: 1.25rem;
+  box-shadow: var(--sombra-cartao);
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+.cartao:hover {
+  border-color: var(--cor-acento);
+  transform: translateY(-2px);
+}
+.cartao:active {
+  transform: translateY(0) scale(0.99);
+}
+.cartaoTitulo {
+  font-family: var(--fonte-display);
+  font-weight: 700;
+  font-size: 1.12rem;
+}
+.cartaoResumo {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+  flex: 1;
+}
+.minutos {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-mudo);
+}
+
+/* Card do glossário (destaque, fecha a lista) */
+.cartaoGlossario {
+  background: var(--cor-acento-suave);
+  border-color: var(--cor-linha-forte);
+}
+
+/* ── Artigo (guia individual) ── */
+.artigo {
+  max-width: 44rem;
+}
+.artigoTitulo {
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+  font-weight: 800;
+  margin-block: 0.5rem 0.75rem;
+}
+.artigoMeta {
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+  margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+/* Prosa: medida confortável (65–75ch) e ritmo vertical */
+.prosa {
+  font-size: 1.02rem;
+}
+.prosa p {
+  margin: 0 0 1.1rem;
+  line-height: 1.75;
+  max-width: 68ch;
+  text-wrap: pretty;
+}
+.prosa h2 {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  margin: 2rem 0 0.6rem;
+}
+.prosa em {
+  color: var(--cor-tinta);
+  font-style: italic;
+}
+/* Linha de "próximo passo": links de ação separados por fio */
+.prosa :global(.prox) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--cor-linha-forte);
+  font-weight: 600;
+}
+.prosa :global(.nota-guia) {
+  font-size: 0.88rem;
+  color: var(--cor-tinta-suave);
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-sm);
+  padding: 0.9rem 1.1rem;
+  max-width: none;
+}
+
+/* Rodapé do artigo: continuar aprendendo */
+.continuar {
+  margin-top: clamp(2.5rem, 6vw, 3.5rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--cor-linha-forte);
+}
+.continuarTitulo {
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+  margin-bottom: 0.75rem;
+}
+.continuarLista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.continuarLista a {
+  display: inline-block;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--cor-tinta);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+.continuarLista a:hover {
+  border-color: var(--cor-acento);
+  color: var(--cor-texto-acento);
+}

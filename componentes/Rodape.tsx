@@ -19,6 +19,7 @@ const COLUNAS = [
   {
     titulo: 'Aprender',
     itens: [
+      { href: '/aprender/', rotulo: 'Guias' },
       { href: '/glossario/', rotulo: 'Glossário' },
       { href: '/quiz/', rotulo: 'Fazer o teste' },
     ],

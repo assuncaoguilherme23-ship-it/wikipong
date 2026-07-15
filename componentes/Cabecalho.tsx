@@ -86,7 +86,8 @@ export function Cabecalho() {
   const ativo = (href: string) => rota === href || rota === href.replace(/\/$/, '');
 
   return (
-    <header className={estilos.cabecalho}>
+    <>
+      <header className={estilos.cabecalho}>
       <div className={`container ${estilos.linha}`}>
         <Link href="/" className={estilos.marca} aria-label="WikiPong — início">
           <LogoCompleto altura={30} />
@@ -150,7 +151,12 @@ export function Cabecalho() {
           <IconeMenu aberto={drawerAberto} />
         </button>
       </div>
+      </header>
 
+      {/* Drawer + backdrop FORA do <header>: o backdrop-filter do header vira
+          bloco de contenção de descendentes position:fixed, o que espremia o
+          drawer na barra do topo. Como irmãos do header, o bloco de contenção
+          volta a ser a viewport (e o drawer sai do stacking context z-10). */}
       {drawerAberto && (
         <>
           <button
@@ -184,6 +190,6 @@ export function Cabecalho() {
           </div>
         </>
       )}
-    </header>
+    </>
   );
 }

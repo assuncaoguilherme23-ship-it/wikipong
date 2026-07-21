@@ -1,0 +1,75 @@
+{
+  "aviso": "O QUE O FABRICANTE PUBLICA — fato de fonte externa, separado da derivação do WikiPong (D-09/D-14). Cada entrada carrega a fonte, a data da consulta e o nível de confiança. Regra de integridade (D-16): número que não pôde ser confirmado NÃO é preenchido — fica 'pendente' com o link da fonte oficial, nunca um valor inventado. Os índices de velocidade/efeito são a ESCALA INTERNA de cada marca (a Butterfly, por exemplo, revisou a dela em fev/2023) e NÃO são comparáveis entre marcas — é justamente por isso que o WikiPong mantém a estimativa unificada 0–10 à parte, carimbada A VALIDAR.",
+  "confiancas": {
+    "oficial": "Confirmado na página oficial do fabricante.",
+    "revendedor": "Confirmado em revendedor oficial (o fabricante não publica).",
+    "pendente": "Ainda não confirmado numa fonte confiável — fontes públicas divergem entre si."
+  },
+  "fabricantes": {
+    "tenergy05": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/05800.html",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Dureza da esponja", "valor": "36°" },
+        { "rotulo": "Superfície", "valor": "Lisa, alta tensão (Spring Sponge)" }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          { "rotulo": "Velocidade", "valor": 83 },
+          { "rotulo": "Efeito", "valor": 76 },
+          { "rotulo": "Arco", "valor": 79 }
+        ]
+      }
+    },
+    "rozena": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/06020.html",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Dureza da esponja", "valor": "35°" },
+        { "rotulo": "Superfície", "valor": "Lisa, alta tensão (Spring Sponge)" }
+      ],
+      "nota": "Os índices de velocidade/efeito desta ficha não foram embutidos: a leitura automática da página devolveu um valor inconsistente. Consulte a fonte oficial para os números vigentes."
+    },
+    "dignics05": {
+      "confianca": "oficial",
+      "fonte": "https://en.butterfly.tt/dignics-05.html",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Dureza da esponja", "valor": "40°" },
+        { "rotulo": "Superfície", "valor": "Lisa, alta tensão (Spring Sponge X)" }
+      ]
+    },
+    "evolution": {
+      "confianca": "oficial",
+      "fonte": "https://www.stigaus.com/products/stiga-evolution-table-tennis-racket",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Montagem", "valor": "Raquete pré-montada" },
+        { "rotulo": "Lâmina", "valor": "6 lâminas de madeira" },
+        { "rotulo": "Esponja", "valor": "2 mm" },
+        { "rotulo": "Homologação", "valor": "Borracha aprovada pela ITTF" }
+      ],
+      "nota": "A STIGA posiciona este modelo como nível performance/intermediário — e não iniciante, como constava no dado-semente do WikiPong."
+    },
+    "viscaria": { "confianca": "pendente", "fonte": "https://www.butterfly-global.com/", "consultadoEm": "2026-07-21" },
+    "fzd": { "confianca": "pendente", "fonte": "https://www.butterfly-global.com/", "consultadoEm": "2026-07-21" },
+    "hurricane": { "confianca": "pendente", "fonte": "https://www.dhs-sports.com/", "consultadoEm": "2026-07-21" },
+    "mxp": { "confianca": "pendente", "fonte": "https://www.tibhar.com/", "consultadoEm": "2026-07-21" },
+    "tibhar-aurus-soft": { "confianca": "pendente", "fonte": "https://www.tibhar.com/", "consultadoEm": "2026-07-21" },
+    "xiom-vega-intro": {
+      "confianca": "pendente",
+      "fonte": "https://www.xiom.com/",
+      "consultadoEm": "2026-07-21",
+      "nota": "Fontes públicas divergem na dureza da esponja (47,5° · 45° · 5,8° em três fontes distintas), então nenhum valor foi embutido."
+    },
+    "markv": { "confianca": "pendente", "fonte": "https://www.yasakatabletennis.com/", "consultadoEm": "2026-07-21" },
+    "stiga-allround": { "confianca": "pendente", "fonte": "https://www.stigasports.com/", "consultadoEm": "2026-07-21" },
+    "donic-appelgren": { "confianca": "pendente", "fonte": "https://www.donic.com/", "consultadoEm": "2026-07-21" },
+    "palio-expert": { "confianca": "pendente", "fonte": "https://www.paliotabletennis.com/", "consultadoEm": "2026-07-21" },
+    "palio-ak47": { "confianca": "pendente", "fonte": "https://www.paliotabletennis.com/", "consultadoEm": "2026-07-21" },
+    "d40": { "confianca": "pendente", "fonte": "https://www.dhs-sports.com/", "consultadoEm": "2026-07-21" }
+  }
+}

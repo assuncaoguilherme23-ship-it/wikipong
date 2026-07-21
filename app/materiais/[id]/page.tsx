@@ -30,6 +30,11 @@ import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
 import { brl } from '@/componentes/formato';
 import { perdao, paraPalavra } from '@/src/logica/metricas';
 import { vereditosDoMaterial, ROTULO_INTENCAO } from '@/src/logica/recomendacao';
+import {
+  fabricantePorId,
+  ROTULO_CONFIANCA,
+  dominioDaFonte,
+} from '@/componentes/dados-fabricante';
 import estilos from './detalhe.module.css';
 
 export const dynamicParams = false;
@@ -59,6 +64,9 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
 
   // Dado sincero: os presets do quiz rodados contra ESTE material (recomendacao.ts)
   const vereditos = vereditosDoMaterial(m);
+
+  // Fato de fonte externa (dados/fabricantes.json) — separado da nossa derivação
+  const fab = fabricantePorId(m.id);
 
   // Ficha técnica (fato): número + tradução lado a lado (D-08, mesmo dado canônico)
   const ficha = [
@@ -98,7 +106,12 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
         {/* ── 1. Ficha técnica (FATO — D-14) ── */}
         <section className={estilos.ficha} aria-labelledby="titulo-ficha">
           <div className={estilos.fichaTexto}>
-            <h2 id="titulo-ficha">Ficha técnica</h2>
+            <h2 id="titulo-ficha">Ficha unificada do WikiPong</h2>
+            <p className={estilos.subtituloFicha}>
+              Escala 0–10 <strong>nossa</strong>, para permitir comparar marcas diferentes — os
+              números abaixo são <strong>estimativa</strong>, não o dado oficial do fabricante
+              (que está logo abaixo, com a fonte).
+            </p>
             <table className={estilos.tabela}>
               <tbody>
                 {ficha.map((linha) => (
@@ -129,8 +142,10 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
               </tbody>
             </table>
             <p className={estilos.nota}>
-              <span className={estilos.selo}>A validar</span> &nbsp;* Dureza unificada e Perdão são
-              propostas v1 com fórmula aberta, pendentes de validação do especialista (D-07/D-09).
+              <span className={estilos.selo}>A validar</span> &nbsp;* Toda esta tabela é{' '}
+              <strong>estimativa do WikiPong</strong> numa base comum, com fórmula aberta e
+              pendente de validação do especialista (D-07/D-09). O dado oficial de cada
+              fabricante, com fonte, está na seção abaixo.
             </p>
           </div>
 
@@ -155,6 +170,68 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             </Link>
           </figure>
         </section>
+
+        {/* ── 1b. O que o FABRICANTE publica (fato de fonte externa, D-14) ──
+               Valor não confirmado nunca é inventado: mostra "pendente" + a fonte. */}
+        {fab && (
+          <section className={estilos.fabricante} aria-labelledby="titulo-fabricante">
+            <div className={estilos.fabricanteTopo}>
+              <h2 id="titulo-fabricante">O que a {m.marca} publica</h2>
+              <span
+                className={`mono ${estilos.selo} ${
+                  fab.confianca === 'pendente' ? estilos.seloPendente : ''
+                }`}
+              >
+                {ROTULO_CONFIANCA[fab.confianca]}
+              </span>
+            </div>
+
+            {fab.ficha && fab.ficha.length > 0 ? (
+              <dl className={estilos.fabricanteFicha}>
+                {fab.ficha.map((linha) => (
+                  <div key={linha.rotulo}>
+                    <dt>{linha.rotulo}</dt>
+                    <dd>{linha.valor}</dd>
+                  </div>
+                ))}
+              </dl>
+            ) : (
+              <p className={estilos.fabricantePendente}>
+                Ainda não confirmamos as specs oficiais deste material numa fonte confiável — e
+                preferimos deixar em branco a publicar número que não podemos garantir. Consulte
+                a fonte do fabricante abaixo.
+              </p>
+            )}
+
+            {fab.indices && (
+              <div className={estilos.indices}>
+                <p className={`mono ${estilos.indicesEscala}`}>{fab.indices.escala}</p>
+                <ul className={estilos.indicesLista}>
+                  {fab.indices.valores.map((v) => (
+                    <li key={v.rotulo}>
+                      <span className={`mono ${estilos.indiceValor}`}>{v.valor}</span>
+                      <span className={estilos.indiceRotulo}>{v.rotulo}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className={estilos.indicesAviso}>
+                  Escala interna da marca — <strong>não comparável</strong> com a de outro
+                  fabricante. É por isso que a ficha unificada acima existe.
+                </p>
+              </div>
+            )}
+
+            {fab.nota && <p className={estilos.fabricanteNota}>{fab.nota}</p>}
+
+            <p className={estilos.fonte}>
+              Fonte:{' '}
+              <a href={fab.fonte} target="_blank" rel="noopener noreferrer">
+                {dominioDaFonte(fab.fonte)} ↗
+              </a>{' '}
+              <span className={estilos.consultadoEm}>· consultado em {fab.consultadoEm}</span>
+            </p>
+          </section>
+        )}
 
         {/* ── 2. Em português claro (TRADUÇÃO — D-14/D-08) ── */}
         <section className={estilos.portuguesClaro} aria-labelledby="titulo-claro">

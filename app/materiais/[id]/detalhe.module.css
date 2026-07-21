@@ -160,6 +160,128 @@
   font-weight: 500;
 }
 
+/* ── 1b. O que o fabricante publica (fato de fonte externa) ── */
+.subtituloFicha {
+  margin: -0.5rem 0 1rem;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+.fabricante {
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-lg);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+.fabricanteTopo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.fabricanteTopo h2 {
+  font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+}
+.seloPendente {
+  color: var(--cor-tinta-suave);
+  background: var(--cor-superficie-2);
+  border-color: var(--cor-linha-forte);
+}
+.fabricanteFicha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+.fabricanteFicha > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.75rem 1rem;
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-sm);
+}
+.fabricanteFicha dt {
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+}
+.fabricanteFicha dd {
+  margin: 0;
+  font-weight: 600;
+}
+.fabricantePendente {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+/* Índices do fabricante (escala interna — não comparável) */
+.indices {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--cor-linha-forte);
+}
+.indicesEscala {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--cor-tinta-suave);
+  margin: 0 0 0.75rem;
+}
+.indicesLista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.indicesLista li {
+  display: flex;
+  flex-direction: column;
+}
+.indiceValor {
+  font-size: 1.5rem; /* degrau stat */
+  font-weight: 500;
+  font-feature-settings: 'tnum' 1;
+  color: var(--cor-tinta);
+}
+.indiceRotulo {
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+}
+.indicesAviso {
+  margin: 0.9rem 0 0;
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}
+.fabricanteNota {
+  margin: 1rem 0 0;
+  font-size: 0.88rem;
+  color: var(--cor-tinta-suave);
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-sm);
+  padding: 0.8rem 1rem;
+  max-width: 68ch;
+  text-wrap: pretty;
+}
+.fonte {
+  margin: 1.25rem 0 0;
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+}
+.consultadoEm {
+  color: var(--cor-mudo);
+}
+
 /* ── 2b. Pra quem é (dado sincero: presets do quiz × este material) ── */
 .praQuemE {
   margin-top: clamp(2rem, 5vw, 3rem);

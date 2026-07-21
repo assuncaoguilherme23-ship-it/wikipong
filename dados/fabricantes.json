@@ -52,7 +52,7 @@
         { "rotulo": "Esponja", "valor": "2 mm" },
         { "rotulo": "Homologação", "valor": "Borracha aprovada pela ITTF" }
       ],
-      "nota": "A STIGA posiciona este modelo como nível performance/intermediário — e não iniciante, como constava no dado-semente do WikiPong."
+      "nota": "A STIGA posiciona este modelo como nível performance, indicado para jogadores intermediários. O WikiPong classificava como iniciante no dado-semente; corrigido em 21/07/2026 para seguir o fabricante."
     },
     "viscaria": { "confianca": "pendente", "fonte": "https://www.butterfly-global.com/", "consultadoEm": "2026-07-21" },
     "fzd": { "confianca": "pendente", "fonte": "https://www.butterfly-global.com/", "consultadoEm": "2026-07-21" },

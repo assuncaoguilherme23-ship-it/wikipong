@@ -42,7 +42,7 @@
       "nome": "Stiga Evolution",
       "marca": "Stiga",
       "tipo": "Raquete",
-      "nivel": "Iniciante",
+      "nivel": "Intermediário",
       "intencao": "controlar",
       "preco": 150,
       "specs": { "velocidade": 6.5, "spin": 6.0, "controle": 8.6 },
@@ -51,8 +51,8 @@
       "rating": 4.2,
       "reviews": 30,
       "simples": {
-        "tag": "Fácil de controlar",
-        "frase": "Raquete pronta pra usar e que perdoa erros. Ótima pros primeiros meses de jogo."
+        "tag": "Pronta, com pegada de torneio",
+        "frase": "Raquete pré-montada de nível performance, com borracha homologada. Pra quem já passou dos primeiros meses e quer consistência sem montar a própria."
       }
     },
     {

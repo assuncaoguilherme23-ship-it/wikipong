@@ -1,0 +1,49 @@
+{
+  "aviso": "Montagens curadas: 1 lâmina + 2 borrachas. Os itens são REFERÊNCIAS por id aos materiais do catálogo — nenhuma spec é duplicada aqui, então corrigir a ficha de um material corrige todos os conjuntos que o usam. O preço total é derivado (soma real dos três). NÃO existe nota de desempenho combinada: a lâmina e as duas borrachas interagem, e cada lado faz um trabalho diferente — qualquer fórmula de 'velocidade do conjunto' seria invenção, e este site não publica número que não pode defender (D-16). O campo 'porque' é recomendação editorial explicada (D-02), não medição.",
+  "conjuntos": [
+    {
+      "id": "primeiros-meses",
+      "nome": "Primeiros meses",
+      "resumo": "A montagem mais barata que ainda ensina o toque certo.",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "lamina": "stiga-allround",
+      "borrachaFH": "palio-ak47",
+      "borrachaBH": "palio-ak47",
+      "porque": "Uma madeira allround lenta com duas borrachas iguais e de dureza intermediária. Os dois lados respondendo igual é uma vantagem no começo: você aprende o gesto sem ter que reaprender do outro lado. É a montagem para descobrir se o esporte vai virar hábito, sem gastar o preço de uma borracha de linha."
+    },
+    {
+      "id": "base-solida",
+      "nome": "Base sólida",
+      "resumo": "O clássico que atravessa anos sem ficar pequeno.",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "lamina": "stiga-allround",
+      "borrachaFH": "markv",
+      "borrachaBH": "markv",
+      "porque": "A lâmina de 1967 com a borracha de 1969 — e as duas continuam em catálogo porque continuam fazendo sentido. Controle alto dos dois lados, efeito consistente e uma tolerância que deixa a técnica crescer. É a montagem que você não precisa trocar quando evoluir do básico: ela acompanha."
+    },
+    {
+      "id": "dando-o-passo",
+      "nome": "Dando o passo",
+      "resumo": "Quando o controle já veio e falta começar a girar a bola.",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "lamina": "donic-appelgren",
+      "borrachaFH": "tibhar-aurus-soft",
+      "borrachaBH": "xiom-vega-intro",
+      "porque": "Primeira montagem com lados diferentes, que é como quase todo jogador acaba jogando. O forehand ganha uma tensionada macia com mais efeito, para começar a atacar; o backhand fica com algo mais contido, porque é o lado que precisa segurar a troca. A lâmina é um pouco mais rápida que a Allround Classic, mas ainda classe ALL."
+    },
+    {
+      "id": "ataque-em-formacao",
+      "nome": "Ataque em formação",
+      "resumo": "Para quem já ataca com consistência e quer potência sem perder a mão.",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "lamina": "donic-appelgren",
+      "borrachaFH": "mxp",
+      "borrachaBH": "tibhar-aurus-soft",
+      "porque": "O forehand recebe uma esponja bem mais dura (perto de 47°), que só compensa quando o golpe já tem aceleração — é exatamente o momento de subir. O backhand segue macio para não perder o bloqueio e a troca curta. A lâmina continua allwood de propósito: dá pra ganhar bastante velocidade pela borracha antes de precisar de fibra."
+    }
+  ]
+}

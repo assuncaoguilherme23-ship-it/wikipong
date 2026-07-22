@@ -13,6 +13,7 @@ const COLUNAS = [
     titulo: 'Materiais',
     itens: [
       { href: '/catalogo/', rotulo: 'Catálogo' },
+      { href: '/conjuntos/', rotulo: 'Conjuntos' },
       { href: '/comparar/', rotulo: 'Comparar' },
     ],
   },

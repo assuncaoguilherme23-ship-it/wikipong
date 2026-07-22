@@ -385,6 +385,7 @@ export const GUIAS: Guia[] = [
           iniciante&rdquo;.
         </p>
         <p className="prox">
+          <Link href="/conjuntos/">Ver montagens prontas, com o porquê de cada uma →</Link>
           <Link href="/catalogo/?nivel=iniciante">Ver materiais para começar →</Link>
         </p>
       </>

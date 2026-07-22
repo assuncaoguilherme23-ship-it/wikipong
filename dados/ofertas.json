@@ -41,6 +41,30 @@
       "url": "https://www.operatt.com.br/borrachas-20034172",
       "atualizadoEm": "2026-07-22",
       "nota": "Preço lido na listagem de borrachas da loja. É a mais barata da linha Vega — as demais (Asia, X, Pro, Europe) saem por R$ 280 ou mais."
+    },
+    {
+      "materialId": "mxp",
+      "loja": "Tibhar Brasil",
+      "preco": 399,
+      "url": "https://www.tibhar.com.br/produtos/borracha-tibhar-mx-p-21mm-preta-tenis-de-mesa/",
+      "atualizadoEm": "2026-07-22",
+      "nota": "Loja oficial da marca. Preço de catálogo R$ 399,00 (a loja anuncia promo por R$ 359,00 e R$ 351,82 no Pix). Mesmo valor para as versões 2.1 mm preta/vermelha e a MX-P 50°."
+    },
+    {
+      "materialId": "hurricane",
+      "loja": "Tênis de Mesa Store",
+      "preco": 329,
+      "url": "https://www.tenisdemesastore.com.br/borracha-dhs-hurricane-3-neo",
+      "atualizadoEm": "2026-07-22",
+      "nota": "Preço atual R$ 329,00 (de R$ 359,00; R$ 315,84 no Pix). ATENÇÃO: é a versão Neo. A Hurricane 3 comum (sem a esponja Neo) é outra borracha, mais barata — na OperaTT sai por R$ 220,00."
+    },
+    {
+      "materialId": "markv",
+      "loja": "Tênis de Mesa Store",
+      "preco": 329,
+      "url": "https://www.tenisdemesastore.com.br/borracha-yasaka-mark-v",
+      "atualizadoEm": "2026-07-22",
+      "nota": "Preço atual R$ 329,00 (de R$ 359,00; R$ 315,84 no Pix). Conferido também na listagem da marca Yasaka da loja, onde cada produto tem preço próprio."
     }
   ]
 }

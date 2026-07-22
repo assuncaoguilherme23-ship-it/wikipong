@@ -1,0 +1,104 @@
+.caixa {
+  margin: 1.75rem 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+}
+
+.extremos {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+  margin: 0 0 1rem;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  counter-reset: none;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+  align-items: center;
+}
+@media (min-width: 640px) {
+  .item {
+    grid-template-columns: 11rem 1fr 9.5rem;
+    gap: 0.75rem;
+  }
+}
+
+.nome {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.nome a {
+  text-decoration: none;
+}
+.nome a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.avisoEscala {
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem; /* degrau label do ramp */
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--cor-mudo);
+}
+
+/* Barra: decorativa (o valor está sempre em texto ao lado) */
+.trilho {
+  position: relative;
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--cor-acento-suave),
+    color-mix(in srgb, var(--cor-acento) 45%, transparent),
+    var(--cor-mesa)
+  );
+  opacity: 0.35;
+}
+.marca {
+  position: absolute;
+  top: -3px;
+  height: 16px;
+  min-width: 10px;
+  border-radius: 999px;
+  background: var(--cor-acento-escuro);
+  box-shadow: 0 0 0 2px var(--cor-superficie);
+}
+
+.graus {
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+  font-feature-settings: 'tnum' 1;
+}
+@media (min-width: 640px) {
+  .graus {
+    text-align: right;
+  }
+}
+
+.rodape {
+  margin: 1.1rem 0 0;
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}

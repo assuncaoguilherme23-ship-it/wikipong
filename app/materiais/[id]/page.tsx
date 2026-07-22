@@ -187,14 +187,23 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             </div>
 
             {fab.ficha && fab.ficha.length > 0 ? (
-              <dl className={estilos.fabricanteFicha}>
-                {fab.ficha.map((linha) => (
-                  <div key={linha.rotulo}>
-                    <dt>{linha.rotulo}</dt>
-                    <dd>{linha.valor}</dd>
-                  </div>
-                ))}
-              </dl>
+              <>
+                <dl className={estilos.fabricanteFicha}>
+                  {fab.ficha.map((linha) => (
+                    <div key={linha.rotulo}>
+                      <dt>{linha.rotulo}</dt>
+                      <dd>{linha.valor}</dd>
+                    </div>
+                  ))}
+                </dl>
+                {fab.ficha.some((l) => l.rotulo.toLowerCase().includes('dureza')) && (
+                  <p className={estilos.linkDureza}>
+                    <Link href="/aprender/dureza-da-esponja/">
+                      O que a dureza muda no seu jogo? →
+                    </Link>
+                  </p>
+                )}
+              </>
             ) : (
               <p className={estilos.fabricantePendente}>
                 Ainda não confirmamos as specs oficiais deste material numa fonte confiável — e

@@ -215,6 +215,18 @@
   margin: 0;
   font-weight: 600;
 }
+.linkDureza {
+  margin: 0.9rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.linkDureza a {
+  text-decoration: none;
+}
+.linkDureza a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .fabricantePendente {
   margin: 0;
   font-size: 0.9rem;

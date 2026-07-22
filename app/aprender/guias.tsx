@@ -11,6 +11,7 @@
  */
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { EscalaDureza } from '@/componentes/EscalaDureza';
 
 export interface Guia {
   slug: string;
@@ -46,7 +47,10 @@ export const GUIAS: Guia[] = [
           dura, mais rápida e mais exigente com a técnica; quanto mais macia, mais controle e
           mais tolerância ao erro. Muitas borrachas modernas usam{' '}
           <Link href="/glossario/">tensão</Link> para ganhar efeito — ótimas, desde que a esponja
-          não seja dura demais para o seu momento.
+          não seja dura demais para o seu momento.{' '}
+          <Link href="/aprender/dureza-da-esponja/">
+            Veja a régua de dureza, com material de verdade, e a pegadinha das escalas →
+          </Link>
         </p>
         <h2>Comece pelo controle</h2>
         <p>
@@ -59,6 +63,110 @@ export const GUIAS: Guia[] = [
         <p className="prox">
           <Link href="/catalogo/?nivel=iniciante&amp;tipo=borracha">Ver borrachas de iniciante →</Link>
           <Link href="/quiz/">Não sabe seu perfil? Faça o teste →</Link>
+        </p>
+      </>
+    ),
+  },
+  {
+    slug: 'dureza-da-esponja',
+    titulo: 'Dureza da esponja: o que muda no seu jogo',
+    resumo: 'Da mais macia à mais dura — o que cada extremo entrega, o que cobra, e a pegadinha das escalas.',
+    minutos: 6,
+    corpo: (
+      <>
+        <p>
+          Sob a superfície de qualquer borracha lisa existe uma camada de{' '}
+          <Link href="/glossario/">esponja</Link>. A dureza dela — medida em graus — é
+          provavelmente a spec que <strong>mais muda a sensação</strong> do seu jogo. Também é a
+          que mais confunde, porque o número sozinho não diz nada se você não souber a escala.
+        </p>
+
+        <h2>O que a dureza faz, fisicamente</h2>
+        <p>
+          Quando a bola bate, a esponja <strong>afunda e devolve energia</strong>, como uma cama
+          elástica. Quanto ela afunda, e com que rapidez devolve, é o que muda tudo:
+        </p>
+        <p>
+          <strong>Esponja macia</strong> afunda mais e por mais tempo. A bola “entra” na borracha
+          e permanece em contato por uma fração maior de segundo — é o que os manuais chamam de{' '}
+          <em>dwell time</em>. Mais tempo de contato significa mais chance de a superfície agarrar
+          a bola e girá-la, mesmo em toques leves, e mais margem para corrigir um ângulo errado.
+          Por isso ela perdoa. O preço: numa batida forte, parte da energia se perde deformando a
+          esponja em vez de voltar para a bola — o teto de velocidade é mais baixo, e em aceleração
+          máxima a bola pode “afundar demais” e sair sem direção.
+        </p>
+        <p>
+          <strong>Esponja dura</strong> deforma pouco e devolve a energia de forma mais direta e
+          rápida. Isso dá velocidade e trajetória mais reta quando você bate forte. O preço é
+          exigente: ela precisa de aceleração para “abrir”. Se o seu golpe não tem velocidade
+          suficiente, a esponja simplesmente não trabalha — e você fica com uma borracha que gira
+          menos e perdoa menos que uma macia. Dureza não é upgrade automático: é uma troca.
+        </p>
+
+        <h2>A régua, com material de verdade</h2>
+        <p>
+          Onde os materiais do catálogo caem, segundo o que cada fabricante publica (a fonte está
+          na ficha de cada um):
+        </p>
+
+        <EscalaDureza
+          itens={[
+            { nome: 'Rozena', id: 'rozena', min: 35, max: 35, rotulo: '35°' },
+            { nome: 'Tenergy 05', id: 'tenergy05', min: 36, max: 36, rotulo: '36°' },
+            { nome: 'Dignics 05', id: 'dignics05', min: 40, max: 40, rotulo: '40°' },
+            { nome: 'Aurus Soft', id: 'tibhar-aurus-soft', min: 42.5, max: 42.5, rotulo: '42,5°' },
+            { nome: 'AK47 Yellow', id: 'palio-ak47', min: 42, max: 44, rotulo: '42° a 44°' },
+            { nome: 'Mark V', id: 'markv', min: 40, max: 45, rotulo: '40° a 45°' },
+            { nome: 'Evolution MX-P', id: 'mxp', min: 46.7, max: 47.7, rotulo: '46,7° a 47,7°' },
+            {
+              nome: 'Hurricane 3 Neo',
+              id: 'hurricane',
+              min: 49,
+              max: 53,
+              rotulo: '≈ 51° ESN',
+              escalaOutra: 'original: 39° na escala DHS',
+            },
+          ]}
+        />
+
+        <h2>A pegadinha: grau não é universal</h2>
+        <p>
+          Repare na Hurricane acima. Ela é vendida como <strong>39°</strong> — e está posicionada
+          perto do extremo duro. Não é erro: a escala chinesa (DHS) e a escala europeia (ESN, usada
+          por Tibhar, Xiom, Donic e companhia) <strong>medem de formas diferentes</strong>. Uma
+          Hurricane de 39° DHS equivale a mais ou menos <strong>51° ESN</strong> — ou seja, é bem
+          mais dura que uma europeia de 39°. A escala japonesa da Butterfly é uma terceira régua.
+        </p>
+        <p>
+          Conclusão prática: <strong>nunca compare graus sem antes conferir a escala</strong>. Foi
+          para resolver exatamente esse problema que a ficha unificada do WikiPong existe — e é a
+          tabela de conversão entre escalas que ainda aguarda validação de especialista.
+        </p>
+
+        <h2>O que escolher agora</h2>
+        <p>
+          <strong>Está começando:</strong> fique na faixa macia (por volta de 35° a 42° na escala
+          europeia). Você vai errar menos, sentir mais a bola e aprender o toque — que é o que
+          importa nos primeiros meses.
+        </p>
+        <p>
+          <strong>Já ataca com consistência:</strong> subir para 45°–50° faz sentido, porque agora
+          você tem a aceleração que ativa a esponja. Suba um lado de cada vez (normalmente o
+          forehand primeiro) para sentir a diferença isolada.
+        </p>
+        <p>
+          <strong>Borracha chinesa dura e pegajosa:</strong> exige técnica formada e golpe rápido.
+          Muitos jogadores só a usam com <em>booster</em>, e sem isso ela pode ficar lenta demais.
+          Não é um bom primeiro passo.
+        </p>
+        <p className="nota-guia">
+          Um detalhe honesto: dureza da esponja é só um dos fatores. Superfície (pegajosa ou de
+          atrito), tensão, espessura e a lâmina embaixo mudam o resultado tanto quanto. Nenhum
+          número isolado decide se um material combina com você.
+        </p>
+        <p className="prox">
+          <Link href="/aprender/como-escolher-borracha/">Guia: como escolher sua borracha →</Link>
+          <Link href="/catalogo/?nivel=iniciante">Ver materiais para começar →</Link>
         </p>
       </>
     ),

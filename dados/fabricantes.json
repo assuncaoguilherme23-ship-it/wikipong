@@ -54,10 +54,50 @@
       ],
       "nota": "A STIGA posiciona este modelo como nível performance, indicado para jogadores intermediários. O WikiPong classificava como iniciante no dado-semente; corrigido em 21/07/2026 para seguir o fabricante."
     },
-    "viscaria": { "confianca": "pendente", "fonte": "https://www.butterfly-global.com/", "consultadoEm": "2026-07-21" },
+    "viscaria": {
+      "confianca": "revendedor",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/30041.html",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Construção", "valor": "5 lâminas de madeira + 2 de Arylate-Carbon (ALC)" },
+        { "rotulo": "Madeiras", "valor": "Koto (externa) · Ayous (média) · Kiri (miolo)" },
+        { "rotulo": "Classe", "valor": "OFF (ofensiva)" },
+        { "rotulo": "Espessura", "valor": "5,8 mm" },
+        { "rotulo": "Cabeça", "valor": "157 × 150 mm" },
+        { "rotulo": "Peso", "valor": "≈ 87 g" }
+      ],
+      "indices": {
+        "escala": "Índices Butterfly para lâminas (Reação e Vibração) — escala interna da marca",
+        "valores": [
+          { "rotulo": "Reação", "valor": 11.8 },
+          { "rotulo": "Vibração", "valor": 10.3 }
+        ]
+      },
+      "nota": "Construção e medidas conferem entre a página do fabricante e vários revendedores oficiais."
+    },
     "fzd": { "confianca": "pendente", "fonte": "https://www.butterfly-global.com/", "consultadoEm": "2026-07-21" },
-    "hurricane": { "confianca": "pendente", "fonte": "https://www.dhs-sports.com/", "consultadoEm": "2026-07-21" },
-    "mxp": { "confianca": "pendente", "fonte": "https://www.tibhar.com/", "consultadoEm": "2026-07-21" },
+    "hurricane": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/product-reviews.asp?pid=dhs-h3-neo-40",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Dureza da esponja", "valor": "37° a 41° (escala DHS) — vendida em várias durezas" },
+        { "rotulo": "Superfície", "valor": "Lisa pegajosa (tacky), esponja densa" },
+        { "rotulo": "Espessura", "valor": "2,15 mm / 2,20 mm" }
+      ],
+      "nota": "Nem 'graus' significam a mesma coisa entre marcas: a versão 39° na escala DHS equivale a cerca de 51° na escala ESN das marcas europeias. É o exemplo mais claro de por que a ficha unificada do WikiPong existe."
+    },
+    "mxp": {
+      "confianca": "revendedor",
+      "fonte": "https://blog.tabletennis11.com/tibhar-evolution-series-table-tennis-rubbers-review",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Dureza da esponja", "valor": "46,7° a 47,7° (escala ESN)" },
+        { "rotulo": "Superfície", "valor": "Lisa tensionada (esponja Red Power)" },
+        { "rotulo": "Peso da folha", "valor": "≈ 72 g inteira · ≈ 49 g já cortada" }
+      ],
+      "nota": "As fontes convergem numa faixa de dureza, não num valor único — por isso registramos a faixa. Os índices de velocidade/efeito aparecem em escalas diferentes conforme a fonte e não foram embutidos."
+    },
     "tibhar-aurus-soft": { "confianca": "pendente", "fonte": "https://www.tibhar.com/", "consultadoEm": "2026-07-21" },
     "xiom-vega-intro": {
       "confianca": "pendente",
@@ -65,7 +105,18 @@
       "consultadoEm": "2026-07-21",
       "nota": "Fontes públicas divergem na dureza da esponja (47,5° · 45° · 5,8° em três fontes distintas), então nenhum valor foi embutido."
     },
-    "markv": { "confianca": "pendente", "fonte": "https://www.yasakatabletennis.com/", "consultadoEm": "2026-07-21" },
+    "markv": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/product-reviews.asp?pid=y-markv",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Dureza da esponja", "valor": "40° a 45° (≈ 42,5°)" },
+        { "rotulo": "Superfície", "valor": "Lisa, borracha natural — clássica, não tensionada" },
+        { "rotulo": "Espessuras", "valor": "1,0 · 1,5 · 1,8 · 2,0 · 2,5 mm" },
+        { "rotulo": "No mercado desde", "valor": "1969" }
+      ],
+      "nota": "As fontes divergem no valor exato da dureza (40° a 45°), então registramos a faixa. Os índices de velocidade/efeito aparecem em pelo menos três escalas distintas conforme a fonte e não foram embutidos."
+    },
     "stiga-allround": { "confianca": "pendente", "fonte": "https://www.stigasports.com/", "consultadoEm": "2026-07-21" },
     "donic-appelgren": { "confianca": "pendente", "fonte": "https://www.donic.com/", "consultadoEm": "2026-07-21" },
     "palio-expert": { "confianca": "pendente", "fonte": "https://www.paliotabletennis.com/", "consultadoEm": "2026-07-21" },

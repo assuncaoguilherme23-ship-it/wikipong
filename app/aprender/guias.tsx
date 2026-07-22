@@ -12,6 +12,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { EscalaDureza } from '@/componentes/EscalaDureza';
+import { ComparativoLaminas } from '@/componentes/ComparativoLaminas';
 
 export interface Guia {
   slug: string;
@@ -174,38 +175,132 @@ export const GUIAS: Guia[] = [
   {
     slug: 'madeira-vs-carbono',
     titulo: 'Lâminas: madeira vs carbono',
-    resumo: 'Por que a madeira pura ensina melhor, e quando a fibra passa a valer a pena.',
-    minutos: 4,
+    resumo: 'O que a fibra faz de verdade, como ler a classe (ALL/OFF) e quando ela passa a valer a pena.',
+    minutos: 6,
     corpo: (
       <>
         <p>
           A lâmina é a base de madeira onde as borrachas são coladas. Ela define a velocidade de
-          partida e o toque. A dúvida mais comum do iniciante: madeira pura ou com fibra de
-          carbono?
+          partida e o <em>toque</em> — a informação que volta pra sua mão quando a bola bate. A
+          dúvida mais comum de quem está começando: madeira pura ou com fibra de carbono?
         </p>
+
+        <h2>Como uma lâmina funciona</h2>
+        <p>
+          Uma lâmina é um sanduíche de lâminas finas de madeira coladas com as fibras cruzadas. No
+          impacto, esse sanduíche <strong>flexiona e volta</strong>. Quanto mais ele flexiona, mais
+          tempo a bola fica em contato e mais informação você sente — e mais devagar ela sai.
+          Quanto mais rígido, mais rápido devolve a energia — e menos você sente.
+        </p>
+
         <h2>Madeira pura: o toque que ensina</h2>
         <p>
-          Uma lâmina só de madeira (<em>allwood</em>) é mais lenta e mais flexível. Isso dá mais
-          sensação da bola e muito mais controle — você sente o que está fazendo e a bola perdoa
-          o erro. É onde a grande maioria deve começar, com uma madeira do tipo{' '}
-          <em>allround</em>. Exemplos na base:{' '}
-          <Link href="/materiais/stiga-allround/">Stiga Allround Classic</Link> e{' '}
-          <Link href="/materiais/donic-appelgren/">Donic Appelgren Allplay</Link>.
+          Uma lâmina só de madeira (<em>allwood</em>) flexiona mais. Isso dá sensação e controle:
+          você percebe o que está fazendo, e o erro de ângulo não vira bola fora imediatamente. É
+          onde a grande maioria deve começar. As madeiras têm papéis: um miolo leve e macio
+          (abachi, kiri) segura o peso e amortece; camadas externas mais duras (limba, koto) dão a
+          resposta.
         </p>
-        <h2>Fibra (ALC, ZLC): velocidade que cobra técnica</h2>
+
+        <h2>O que a fibra faz de verdade</h2>
         <p>
           Camadas de <Link href="/glossario/">arylate-carbono (ALC)</Link> ou{' '}
-          <Link href="/glossario/">zylon-carbono (ZLC)</Link> deixam a lâmina mais rápida e mais
-          rígida — e menos tolerante. É excelente para quem já ataca com consistência; cedo
-          demais, só atrapalha, porque a bola vai embora antes da hora.
+          <Link href="/glossario/">zylon-carbono (ZLC)</Link> entram entre as madeiras, e cada
+          material contribui com uma coisa diferente:
         </p>
+        <p>
+          <strong>O carbono</strong> é rígido: espalha o impacto por uma área maior (o famoso
+          “ponto doce” mais largo) e devolve energia com pouca perda — daí a velocidade. <strong>
+          O arylate</strong> entra justamente para compensar: é uma fibra que absorve vibração,
+          domando a dureza seca do carbono puro. Por isso o ALC é a combinação mais popular do
+          circuito: rápido, mas ainda com algum toque. O ZLC troca parte desse amortecimento por
+          mais rigidez ainda — mais potência, menos perdão.
+        </p>
+        <p>
+          O custo é real: quanto mais rígida a lâmina, <strong>menos ela avisa</strong> o que está
+          acontecendo e menos tempo você tem pra corrigir. Cedo demais, a fibra não te deixa mais
+          rápido — te deixa mais impreciso.
+        </p>
+
+        <h2>Lendo a classe: ALL, OFF e companhia</h2>
+        <p>
+          Quase toda marca classifica a lâmina numa régua de intenção, e essa é{' '}
+          <strong>a única coisa que dá pra comparar entre marcas com segurança</strong>:
+        </p>
+        <p>
+          <strong>DEF</strong> (defensiva) → <strong>ALL</strong> (allround, equilibrada) →{' '}
+          <strong>ALL+</strong> → <strong>OFF−</strong> → <strong>OFF</strong> (ofensiva) →{' '}
+          <strong>OFF+</strong>. Quem está começando quer <strong>ALL</strong>. Quem já ataca com
+          consistência caminha para OFF− e OFF.
+        </p>
+
+        <h2>Quatro lâminas reais, lado a lado</h2>
+        <p>
+          Compare pelo que é comparável — composição, classe e espessura. A espessura é um sinal
+          honesto: mais milímetros e mais fibra, mais velocidade.
+        </p>
+
+        <ComparativoLaminas
+          laminas={[
+            {
+              nome: 'Stiga Allround Classic',
+              id: 'stiga-allround',
+              composicao: '5 madeiras (all-wood)',
+              classe: 'ALL (allround)',
+              espessura: '5,1 mm',
+              indiceProprio: 'Velocidade 73 · Controle 77 (escala Stiga, 0–100)',
+            },
+            {
+              nome: 'Donic Appelgren Allplay',
+              id: 'donic-appelgren',
+              composicao: '5 madeiras (abachi no miolo, limba nas externas)',
+              classe: 'ALL (allround)',
+              espessura: '5,5 mm',
+              indiceProprio: 'Velocidade 73 · Controle 82 (escala Donic, 0–100)',
+            },
+            {
+              nome: 'Butterfly Viscaria',
+              id: 'viscaria',
+              composicao: '5 madeiras + 2 de Arylate-Carbon',
+              classe: 'OFF (ofensiva)',
+              espessura: '5,8 mm',
+              indiceProprio: 'Reação 11.8 · Vibração 10.3 (índices Butterfly para lâminas)',
+            },
+            {
+              nome: 'Butterfly Fan Zhendong ALC',
+              id: 'fzd',
+              composicao: '5 madeiras + 2 de Arylate-Carbon',
+              classe: 'OFF (ofensiva)',
+              espessura: '5,8 mm',
+              indiceProprio: 'Reação 11.8 · Vibração 10.3 (índices Butterfly para lâminas)',
+            },
+          ]}
+        />
+
+        <p>
+          Duas leituras saltam da tabela. Primeira: as duas allwood são mais finas (5,1 e 5,5 mm)
+          que as duas com fibra (5,8 mm) — a espessura acompanha a intenção. Segunda: a Viscaria e
+          a Fan Zhendong ALC têm <strong>exatamente a mesma ficha</strong>. Não é coincidência: a
+          FZD usa a estrutura consagrada da Viscaria; o que muda é o acabamento e o nome no cabo.
+        </p>
+
         <h2>O que pesa pra você agora</h2>
         <p>
-          Se você está começando, uma madeira allwood allround é a escolha quase sempre certa. A
-          fibra espera você pedir por ela — e você vai saber quando for a hora.
+          Se você está começando, uma allwood classe ALL é a escolha quase sempre certa — e não é
+          uma lâmina “de iniciante” que você joga fora depois: a Stiga Allround Classic está no
+          mercado desde 1967 justamente porque continua fazendo sentido. A fibra espera você pedir
+          por ela, e você vai saber quando for a hora: quando sentir que a lâmina está segurando o
+          seu ataque, e não o contrário.
+        </p>
+        <p className="nota-guia">
+          Uma advertência de leitura: a lâmina responde por parte da velocidade, mas a borracha e
+          a dureza da esponja mudam o resultado tanto quanto. Trocar de lâmina para “ficar mais
+          rápido” sem entender a borracha costuma frustrar.
         </p>
         <p className="prox">
-          <Link href="/catalogo/?nivel=iniciante&amp;tipo=lamina">Ver lâminas de iniciante →</Link>
+          <Link href="/aprender/dureza-da-esponja/">Guia: dureza da esponja →</Link>
+          <Link href="/aprender/montando-raquete/">Guia: montando sua raquete →</Link>
+          <Link href="/catalogo/?tipo=lamina">Ver todas as lâminas do catálogo →</Link>
         </p>
       </>
     ),

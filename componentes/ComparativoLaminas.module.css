@@ -1,0 +1,95 @@
+.caixa {
+  margin: 1.75rem 0;
+}
+
+/* Tabela larga rola dentro do próprio container, sem scroll horizontal na página */
+.rolagem {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--raio-md);
+}
+
+.tabela {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+.tabela th,
+.tabela td {
+  padding: 0.75rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--cor-linha);
+  vertical-align: top;
+}
+.tabela tbody tr:last-child th,
+.tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+.tabela thead th {
+  background: var(--cor-superficie-2);
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+  font-weight: 500;
+}
+.tabela tbody th {
+  font-weight: 700;
+  color: var(--cor-tinta);
+}
+.tabela tbody th a {
+  text-decoration: none;
+}
+.tabela tbody th a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.tabela tbody tr {
+  transition: background 140ms ease;
+}
+.tabela tbody tr:hover {
+  background: color-mix(in srgb, var(--cor-acento) 5%, transparent);
+}
+.tabela td {
+  color: var(--cor-tinta-suave);
+}
+
+/* Índices de cada marca — fora da tabela, de propósito */
+.indices {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-md);
+}
+.indicesTitulo {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+  margin: 0 0 0.6rem;
+}
+.indicesLista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+}
+.indicesLista strong {
+  color: var(--cor-tinta);
+}
+.indicesAviso {
+  margin: 0.9rem 0 0;
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+  max-width: 64ch;
+}

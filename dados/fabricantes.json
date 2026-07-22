@@ -75,7 +75,27 @@
       },
       "nota": "Construção e medidas conferem entre a página do fabricante e vários revendedores oficiais."
     },
-    "fzd": { "confianca": "pendente", "fonte": "https://www.butterfly-global.com/", "consultadoEm": "2026-07-21" },
+    "fzd": {
+      "confianca": "revendedor",
+      "fonte": "https://shop.butterflyonline.com/Fan-Zhendong-ALC-1260",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Construção", "valor": "5 lâminas de madeira + 2 de Arylate-Carbon (ALC)" },
+        { "rotulo": "Classe", "valor": "OFF (ofensiva)" },
+        { "rotulo": "Espessura", "valor": "5,8 mm" },
+        { "rotulo": "Cabeça", "valor": "157 × 150 mm" },
+        { "rotulo": "Peso", "valor": "≈ 87 g" },
+        { "rotulo": "Cabo", "valor": "FL (100×25 mm) ou ST (100×23 mm)" }
+      ],
+      "indices": {
+        "escala": "Índices Butterfly para lâminas (Reação e Vibração) — escala interna da marca",
+        "valores": [
+          { "rotulo": "Reação", "valor": 11.8 },
+          { "rotulo": "Vibração", "valor": 10.3 }
+        ]
+      },
+      "nota": "Compartilha a estrutura de lâminas da Viscaria — as fontes registram isso explicitamente. Refere-se ao modelo ALC; a versão Super ALC é outra lâmina, com specs diferentes."
+    },
     "hurricane": {
       "confianca": "revendedor",
       "fonte": "https://www.megaspin.net/store/product-reviews.asp?pid=dhs-h3-neo-40",
@@ -98,7 +118,23 @@
       ],
       "nota": "As fontes convergem numa faixa de dureza, não num valor único — por isso registramos a faixa. Os índices de velocidade/efeito aparecem em escalas diferentes conforme a fonte e não foram embutidos."
     },
-    "tibhar-aurus-soft": { "confianca": "pendente", "fonte": "https://www.tibhar.com/", "consultadoEm": "2026-07-21" },
+    "tibhar-aurus-soft": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/aurus-soft/",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Dureza da esponja", "valor": "42,5°" },
+        { "rotulo": "Superfície", "valor": "Lisa tensionada — versão macia da linha Aurus" }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar (escala interna da marca; ~100 é a referência da linha)",
+        "valores": [
+          { "rotulo": "Tempo (velocidade)", "valor": 104 },
+          { "rotulo": "Efeito", "valor": 112 },
+          { "rotulo": "Controle", "valor": 95 }
+        ]
+      }
+    },
     "xiom-vega-intro": {
       "confianca": "pendente",
       "fonte": "https://www.xiom.com/",
@@ -117,10 +153,68 @@
       ],
       "nota": "As fontes divergem no valor exato da dureza (40° a 45°), então registramos a faixa. Os índices de velocidade/efeito aparecem em pelo menos três escalas distintas conforme a fonte e não foram embutidos."
     },
-    "stiga-allround": { "confianca": "pendente", "fonte": "https://www.stigasports.com/", "consultadoEm": "2026-07-21" },
-    "donic-appelgren": { "confianca": "pendente", "fonte": "https://www.donic.com/", "consultadoEm": "2026-07-21" },
+    "stiga-allround": {
+      "confianca": "oficial",
+      "fonte": "https://www.stigasports.com/en/product/allround-classic",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Construção", "valor": "5 lâminas de madeira (all-wood)" },
+        { "rotulo": "Classe", "valor": "ALL (allround)" },
+        { "rotulo": "Espessura", "valor": "5,1 mm" },
+        { "rotulo": "Peso", "valor": "≈ 85 g" },
+        { "rotulo": "No mercado desde", "valor": "1967" }
+      ],
+      "indices": {
+        "escala": "Índice Stiga (escala interna da marca, 0–100)",
+        "valores": [
+          { "rotulo": "Velocidade", "valor": 73 },
+          { "rotulo": "Controle", "valor": 77 }
+        ]
+      }
+    },
+    "donic-appelgren": {
+      "confianca": "oficial",
+      "fonte": "https://www.donic.com/en/DONIC-APPELGREN-ALLPLAY/100201010",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Construção", "valor": "5 lâminas de madeira (all-wood)" },
+        { "rotulo": "Madeiras", "valor": "Abachi (miolo) · Limba (intermediárias e externas)" },
+        { "rotulo": "Classe", "valor": "ALL (allround)" },
+        { "rotulo": "Espessura", "valor": "5,5 mm" },
+        { "rotulo": "Cabo", "valor": "FL (côncavo) · AN (anatômico) · ST (reto)" }
+      ],
+      "indices": {
+        "escala": "Índice Donic (escala interna da marca, 0–100)",
+        "valores": [
+          { "rotulo": "Velocidade", "valor": 73 },
+          { "rotulo": "Controle", "valor": 82 }
+        ]
+      }
+    },
     "palio-expert": { "confianca": "pendente", "fonte": "https://www.paliotabletennis.com/", "consultadoEm": "2026-07-21" },
-    "palio-ak47": { "confianca": "pendente", "fonte": "https://www.paliotabletennis.com/", "consultadoEm": "2026-07-21" },
-    "d40": { "confianca": "pendente", "fonte": "https://www.dhs-sports.com/", "consultadoEm": "2026-07-21" }
+    "palio-ak47": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliogummi/palio-ak47-yellow",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Dureza da esponja", "valor": "42° a 44°" },
+        { "rotulo": "Superfície", "valor": "Lisa de atrito (não pegajosa)" },
+        { "rotulo": "Espessura", "valor": "2,2 mm" }
+      ],
+      "nota": "Atenção: na linha AK47, a Yellow é a dureza INTERMEDIÁRIA — a mais macia é a Blue (38° a 40°) e a Red é a mais dura. O texto do WikiPong descrevia a Yellow como 'a mais macia da lista', o que está incorreto."
+    },
+    "d40": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tabletennis11.com/other_eng/dhs-dual-3-40-10-balls-seam",
+      "consultadoEm": "2026-07-21",
+      "ficha": [
+        { "rotulo": "Material", "valor": "Plástico ABS (poli) 40+" },
+        { "rotulo": "Diâmetro", "valor": "40,0 a 40,55 mm" },
+        { "rotulo": "Peso", "valor": "2,67 a 2,77 g" },
+        { "rotulo": "Construção", "valor": "Com costura (seamed)" },
+        { "rotulo": "Homologação", "valor": "3 estrelas · aprovada pela ITTF" }
+      ],
+      "nota": "Bola não tem índice de velocidade, efeito ou controle: o que se mede é conformidade (redondeza, quique, excentricidade, dureza e cor) ao padrão ITTF. Os valores 0–10 da ficha unificada não têm significado para este item."
+    }
   }
 }

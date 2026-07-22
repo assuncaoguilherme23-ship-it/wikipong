@@ -65,6 +65,22 @@
       "url": "https://www.tenisdemesastore.com.br/borracha-yasaka-mark-v",
       "atualizadoEm": "2026-07-22",
       "nota": "Preço atual R$ 329,00 (de R$ 359,00; R$ 315,84 no Pix). Conferido também na listagem da marca Yasaka da loja, onde cada produto tem preço próprio."
+    },
+    {
+      "materialId": "fzd",
+      "loja": "JJ Yamada",
+      "preco": 1489,
+      "url": "https://loja.jjyamada.com.br/raquetes",
+      "atualizadoEm": "2026-07-22",
+      "nota": "Preço lido na listagem de lâminas da loja (distribuidora Butterfly). A versão ZLC (mais rápida) e a Super ALC são outras lâminas, mais caras (R$ 1.761 e R$ 2.010)."
+    },
+    {
+      "materialId": "palio-ak47",
+      "loja": "Mimilon",
+      "preco": 155,
+      "url": "https://mimilon.com.br/produto/palio-ak47-borracha-tnis-de-mesa-ataque-rpidoloop816428",
+      "atualizadoEm": "2026-07-22",
+      "nota": "Preço atual R$ 154,85 (de R$ 226,73, ~32% de promoção). A variante Yellow (dureza média) é opção de cor na mesma página; Blue (mais macia) e Red (mais dura) saem pelo mesmo valor."
     }
   ]
 }

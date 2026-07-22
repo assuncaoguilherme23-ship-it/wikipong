@@ -359,6 +359,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                     >
                       Ver na loja ↗
                     </a>
+                    {o.nota && <span className={estilos.ofertaNota}>{o.nota}</span>}
                   </li>
                 ))}
               </ol>

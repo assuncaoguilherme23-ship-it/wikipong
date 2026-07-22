@@ -461,6 +461,13 @@
 .ofertaBotao {
   justify-self: end;
 }
+.ofertaNota {
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+  line-height: 1.6;
+  max-width: 66ch;
+}
 .ofertasNota,
 .semOferta {
   margin: 1.1rem 0 0;

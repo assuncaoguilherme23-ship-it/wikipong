@@ -23,6 +23,8 @@ export interface Oferta {
   atualizadoEm: string;
   /** Loja com acordo comercial: exige tag PARCEIRO visível. */
   parceiro?: boolean;
+  /** Ressalva da checagem (variante, origem do preço, pegadinha de modelo). */
+  nota?: string;
 }
 
 /** Loja do diretório: onde PROCURAR. Não afirma estoque nem preço do item. */

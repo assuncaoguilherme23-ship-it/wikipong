@@ -1,0 +1,5 @@
+{
+  "aviso": "OFERTAS REAIS — entidade própria (D-13). Cada oferta é um preço observado numa loja, com data. Regras invioláveis: (1) nunca inventar loja, preço ou link; (2) 'atualizadoEm' é a data REAL da checagem — nunca fingir frescor (D-16); (3) a ordem exibida é por PREÇO, nunca por quem é parceiro — dinheiro pode decidir quem entra na lista, jamais a posição; (4) parceiro:true exige a tag PARCEIRO visível na interface. O preço médio do material é DERIVADO da média destas ofertas — nunca digitado à mão.",
+  "historico": "Este arquivo é versionado em git: cada atualização de preço fica registrada no histórico do repositório, com data e autor. É assim que o snapshot de preços desde o dia 1 acontece sem banco de dados — o git É a série temporal.",
+  "ofertas": []
+}

@@ -259,6 +259,25 @@ verdade** (um objeto de estado; sidebar, chips, contagem e grid são views deriv
 
 **Status:** ativa.
 
+**Nota de implementação (2026-07-22) — colisão com a D-17 (export estático):** esta decisão
+especifica `/ir/:oferta_id` passando **pelo próprio servidor** (loga → 302). Sob export
+estático **não existe servidor**, então foi implementada a versão possível:
+
+1. **`/ir?o=<id>` é uma página estática única** que lê a oferta da query string e encaminha.
+   (Uma rota `/ir/[id]` pré-gerada foi tentada e descartada: exigiria rebuild a cada oferta nova
+   e nem compila com zero ofertas.) Preserva o essencial: o link é do nosso domínio (a loja de
+   destino muda sem reescrever fichas; links de afiliado ficam num lugar só), a visita à rota
+   **é** o evento de clique (contável por analytics client-side), e o destino fica **visível**
+   antes de sair — ninguém é redirecionado às cegas (D-16). O encaminhamento automático respeita
+   `prefers-reduced-motion` (quem pediu menos movimento clica no botão).
+   **O que se perde:** log próprio no servidor. Volta se/quando houver runtime.
+2. **Snapshot de preços sem banco:** `dados/ofertas.json` é versionado em git — cada atualização
+   de preço vira um registro datado no histórico do repositório. **O git é a série temporal.**
+3. **Preço médio é derivado** em código (`precoMedio`), e a ordem das ofertas é forçada por preço
+   na própria função que as devolve — as duas regras não dependem de disciplina humana.
+4. Enquanto não houver oferta real, o preço-semente do material aparece rotulado como
+   **estimativa**, nunca como preço apurado.
+
 ---
 
 ## D-14 · Separação editorial (fato × opinião)

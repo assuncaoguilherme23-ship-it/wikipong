@@ -401,7 +401,83 @@
   max-width: 62ch;
 }
 
-/* ── 3. Comunidade (opinião, rotulada, por último — D-14) ── */
+/* ── 3. Onde comprar (ação — D-13/D-14) ── */
+.ondeComprar {
+  margin-top: clamp(2rem, 5vw, 3rem);
+}
+.ondeComprar h2 {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  margin-bottom: 0.9rem;
+}
+.ofertas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.oferta {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.4rem 1rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  padding: 0.9rem 1.1rem;
+}
+@media (min-width: 640px) {
+  .oferta {
+    grid-template-columns: 1fr auto auto auto;
+    gap: 1.25rem;
+  }
+}
+.ofertaLoja {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+.tagParceiro {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+  background: var(--cor-acento-suave);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+.ofertaPreco {
+  font-size: 1.12rem;
+  font-weight: 600;
+  font-feature-settings: 'tnum' 1;
+}
+.ofertaData {
+  font-size: 0.72rem;
+  color: var(--cor-mudo);
+}
+.ofertaBotao {
+  justify-self: end;
+}
+.ofertasNota,
+.semOferta {
+  margin: 1.1rem 0 0;
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+  max-width: 68ch;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.semOferta {
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-md);
+  padding: 1rem 1.15rem;
+  font-size: 0.9rem;
+}
+
+/* ── 4. Comunidade (opinião, rotulada, por último — D-14) ── */
 .comunidade {
   margin-top: clamp(2rem, 5vw, 3rem);
   padding-top: clamp(1.5rem, 4vw, 2rem);

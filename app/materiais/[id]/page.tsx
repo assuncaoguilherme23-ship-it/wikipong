@@ -35,6 +35,12 @@ import {
   ROTULO_CONFIANCA,
   dominioDaFonte,
 } from '@/componentes/dados-fabricante';
+import {
+  ofertasDoMaterial,
+  precoMedio,
+  idDaOferta,
+  dataLegivel,
+} from '@/componentes/dados-ofertas';
 import estilos from './detalhe.module.css';
 
 export const dynamicParams = false;
@@ -68,6 +74,11 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
   // Fato de fonte externa (dados/fabricantes.json) — separado da nossa derivação
   const fab = fabricantePorId(m.id);
 
+  // Ofertas reais (D-13). Preço médio é DERIVADO delas; sem oferta, o valor da
+  // semente é exibido como estimativa — nunca como preço apurado (D-16).
+  const ofertas = ofertasDoMaterial(m.id);
+  const medio = precoMedio(m.id);
+
   // Ficha técnica (fato): número + tradução lado a lado (D-08, mesmo dado canônico)
   const ficha = [
     { rotulo: 'Velocidade', valor: m.specs.velocidade, palavra: paraPalavra('velocidade', m.specs.velocidade) },
@@ -98,8 +109,12 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             </p>
           </div>
           <p className={`mono ${estilos.preco}`}>
-            {brl(m.preco)}
-            <span className={estilos.precoNota}>preço médio</span>
+            {brl(medio ?? m.preco)}
+            <span className={estilos.precoNota}>
+              {medio !== null
+                ? `preço médio · ${ofertas.length} ${ofertas.length === 1 ? 'oferta' : 'ofertas'}`
+                : 'estimativa — sem oferta verificada'}
+            </span>
           </p>
         </header>
 
@@ -314,7 +329,51 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
           </p>
         </section>
 
-        {/* ── (Onde comprar — D-13/D-14 — entra aqui quando a entidade ofertas existir) ── */}
+        {/* ── 3. Onde comprar (AÇÃO — D-14) — ordenado por PREÇO, nunca por parceiro ── */}
+        <section className={estilos.ondeComprar} aria-labelledby="titulo-comprar">
+          <h2 id="titulo-comprar">Onde comprar</h2>
+
+          {ofertas.length > 0 ? (
+            <>
+              <ol className={estilos.ofertas}>
+                {ofertas.map((o) => (
+                  <li key={idDaOferta(o)} className={estilos.oferta}>
+                    <span className={estilos.ofertaLoja}>
+                      {o.loja}
+                      {o.parceiro && <span className={`mono ${estilos.tagParceiro}`}>Parceiro</span>}
+                    </span>
+                    <span className={`mono ${estilos.ofertaPreco}`}>{brl(o.preco)}</span>
+                    <span className={`mono ${estilos.ofertaData}`}>
+                      checado em {dataLegivel(o.atualizadoEm)}
+                    </span>
+                    <a
+                      href={`/ir/?o=${idDaOferta(o)}`}
+                      className={`botao-secundario ${estilos.ofertaBotao}`}
+                      rel="nofollow sponsored"
+                    >
+                      Ver na loja ↗
+                    </a>
+                  </li>
+                ))}
+              </ol>
+              <p className={estilos.ofertasNota}>
+                Ordenado <strong>pelo preço</strong>, sempre — nunca por quem é parceiro. As lojas
+                marcadas como <em>Parceiro</em> nos pagam comissão se você comprar, e isso{' '}
+                <strong>não muda a ordem desta lista</strong> nem o que escrevemos na ficha
+                técnica, que é independente. As datas são reais: se um preço está velho, ele
+                aparece velho.
+              </p>
+            </>
+          ) : (
+            <p className={estilos.semOferta}>
+              Ainda não temos nenhuma oferta verificada deste material. Quando tivermos, cada
+              preço aparecerá aqui com a loja e a <strong>data real</strong> da checagem — e a
+              lista será ordenada pelo preço, não por quem paga. Até lá, o valor no topo desta
+              página é uma <strong>estimativa</strong>, não um preço apurado.
+            </p>
+          )}
+        </section>
+
 
         {/* ── 3. Comunidade (OPINIÃO, rotulada, por último — D-14) ── */}
         <section className={estilos.comunidade} aria-labelledby="titulo-comunidade">

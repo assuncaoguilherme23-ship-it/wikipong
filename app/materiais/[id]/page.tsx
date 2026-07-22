@@ -40,6 +40,8 @@ import {
   precoMedio,
   idDaOferta,
   dataLegivel,
+  LOJAS,
+  urlDeBusca,
 } from '@/componentes/dados-ofertas';
 import estilos from './detalhe.module.css';
 
@@ -342,9 +344,13 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                       {o.loja}
                       {o.parceiro && <span className={`mono ${estilos.tagParceiro}`}>Parceiro</span>}
                     </span>
-                    <span className={`mono ${estilos.ofertaPreco}`}>{brl(o.preco)}</span>
+                    <span className={`mono ${estilos.ofertaPreco}`}>
+                      {o.preco !== undefined ? brl(o.preco) : '—'}
+                    </span>
                     <span className={`mono ${estilos.ofertaData}`}>
-                      checado em {dataLegivel(o.atualizadoEm)}
+                      {o.preco !== undefined
+                        ? `checado em ${dataLegivel(o.atualizadoEm)}`
+                        : 'preço na loja'}
                     </span>
                     <a
                       href={`/ir/?o=${idDaOferta(o)}`}
@@ -366,12 +372,38 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             </>
           ) : (
             <p className={estilos.semOferta}>
-              Ainda não temos nenhuma oferta verificada deste material. Quando tivermos, cada
-              preço aparecerá aqui com a loja e a <strong>data real</strong> da checagem — e a
-              lista será ordenada pelo preço, não por quem paga. Até lá, o valor no topo desta
-              página é uma <strong>estimativa</strong>, não um preço apurado.
+              Ainda não conferimos preço deste material em nenhuma loja. Quando conferirmos, cada
+              preço aparecerá aqui com a loja e a <strong>data real</strong> da checagem, ordenado
+              pelo preço — não por quem paga. Até lá, o valor no topo desta página é uma{' '}
+              <strong>estimativa</strong>, não um preço apurado.
             </p>
           )}
+
+          {/* Diretório: onde PROCURAR. Não afirma estoque nem preço deste item. */}
+          <div className={estilos.lojas}>
+            <p className={`mono ${estilos.lojasTitulo}`}>Lojas de tênis de mesa no Brasil</p>
+            <ul className={estilos.lojasLista}>
+              {LOJAS.map((loja) => (
+                <li key={loja.id}>
+                  <a
+                    href={urlDeBusca(loja, `${m.marca} ${m.nome}`)}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className={estilos.loja}
+                  >
+                    <span className={estilos.lojaNome}>{loja.nome} ↗</span>
+                    {loja.nota && <span className={estilos.lojaNota}>{loja.nota}</span>}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className={estilos.lojasAviso}>
+              Este é um <strong>diretório de onde procurar</strong>, não uma lista de ofertas
+              conferidas: não verificamos se estas lojas têm este material em estoque nem por
+              quanto. Nenhuma delas nos paga — quando alguma for parceira, isso estará escrito
+              aqui, com a tag <em>Parceiro</em>.
+            </p>
+          </div>
         </section>
 
 

@@ -1,0 +1,36 @@
+{
+  "aviso": "DIRETÓRIO de lojas brasileiras de tênis de mesa — endereços verificados em 21/07/2026. ATENÇÃO ao que isto NÃO é: não verificamos estoque nem preço destas lojas para cada material específico. É a lista de onde procurar, não uma oferta conferida. Oferta com preço e data vive em ofertas.json e aparece separada, acima desta lista. Nenhuma destas lojas é parceira comercial hoje — quando alguma for, ganhará a tag PARCEIRO e a divulgação exigida (D-06/D-13).",
+  "lojas": [
+    {
+      "id": "drivett",
+      "nome": "DriveTT",
+      "url": "https://www.drivett.com.br/",
+      "nota": "Loja especializada em materiais e acessórios de tênis de mesa."
+    },
+    {
+      "id": "operatt",
+      "nome": "OperaTT",
+      "url": "https://www.operatt.com.br/",
+      "nota": "Especializada em materiais de tênis de mesa."
+    },
+    {
+      "id": "haraltt",
+      "nome": "HaralTT",
+      "url": "https://haraltt.com.br/",
+      "nota": "Especialista em raquetes; estoque próprio, envia para todo o Brasil."
+    },
+    {
+      "id": "jjyamada",
+      "nome": "JJ Yamada",
+      "url": "https://loja.jjyamada.com.br/",
+      "nota": "Distribuidora e representante oficial Butterfly no Brasil."
+    },
+    {
+      "id": "mercadolivre",
+      "nome": "Mercado Livre",
+      "url": "https://www.mercadolivre.com.br/",
+      "buscaTemplate": "https://lista.mercadolivre.com.br/{q}",
+      "nota": "Marketplace: cada vendedor tem preço e procedência próprios — confira a reputação."
+    }
+  ]
+}

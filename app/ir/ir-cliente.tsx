@@ -54,8 +54,16 @@ export function IrCliente() {
       <h1 className={estilos.titulo}>{oferta.loja}</h1>
       {material && (
         <p className={estilos.material}>
-          {material.nome} — {material.marca} · <span className="mono">{brl(oferta.preco)}</span>{' '}
-          <span className={estilos.checado}>(checado em {dataLegivel(oferta.atualizadoEm)})</span>
+          {material.nome} — {material.marca}
+          {oferta.preco !== undefined && (
+            <>
+              {' · '}
+              <span className="mono">{brl(oferta.preco)}</span>{' '}
+              <span className={estilos.checado}>
+                (checado em {dataLegivel(oferta.atualizadoEm)})
+              </span>
+            </>
+          )}
         </p>
       )}
 

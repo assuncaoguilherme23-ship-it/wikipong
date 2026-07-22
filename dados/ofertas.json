@@ -81,6 +81,30 @@
       "url": "https://mimilon.com.br/produto/palio-ak47-borracha-tnis-de-mesa-ataque-rpidoloop816428",
       "atualizadoEm": "2026-07-22",
       "nota": "Preço atual R$ 154,85 (de R$ 226,73, ~32% de promoção). A variante Yellow (dureza média) é opção de cor na mesma página; Blue (mais macia) e Red (mais dura) saem pelo mesmo valor."
+    },
+    {
+      "materialId": "d40",
+      "loja": "OperaTT",
+      "preco": 85,
+      "url": "https://www.operatt.com.br/bola-de-plastico-dhs-d40-3-estrelas-caixa-com-10-unidades",
+      "atualizadoEm": "2026-07-22",
+      "nota": "UNIDADE DE VENDA: caixa com 10 bolas (R$ 85,00; R$ 82,45 no Pix) — equivale a ~R$ 8,50 por bola. Bola não se vende de uma em uma na prática; o valor aqui é o da caixa, não de uma unidade."
+    },
+    {
+      "materialId": "donic-appelgren",
+      "loja": "AmericaTT",
+      "preco": 250,
+      "url": "https://americatt.net/donic-appelgren-allplay/",
+      "atualizadoEm": "2026-07-22",
+      "nota": "Preço atual R$ 249,57 (de R$ 293,63). É a versão clássica Allplay (madeira pura, 5 lâminas) — não a Senso V1, que é outra lâmina."
+    },
+    {
+      "materialId": "stiga-allround",
+      "loja": "AmericaTT",
+      "preco": 338,
+      "url": "https://americatt.net/stiga-allround-classic/",
+      "atualizadoEm": "2026-07-22",
+      "nota": "Preço atual R$ 338,05 (de R$ 397,74). É a lâmina avulsa (madeira pura, 5 camadas) — o tipo de cabo (FL/AN/ST) se escolhe na loja. Não confundir com as versões 'Classineta' (já montadas), que são outros produtos, mais caros."
     }
   ]
 }

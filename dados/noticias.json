@@ -1,0 +1,50 @@
+{
+  "aviso": "NOTÍCIAS — digest curado (D-19, feature 3). Cada item é um resumo CURTO na voz da WikiPong + atribuição à fonte + link pro original + data REAL da publicação (D-14/D-16). NÃO republicamos o artigo nem a imagem de terceiros: resumimos, creditamos e linkamos. Só entra notícia verificável (evento real, link real, data real). Fontes que não conseguimos ler automaticamente (Instagram etc.) entram por curadoria do fundador, no mesmo padrão. Notícia envelhece: a data é sempre visível e a lista é ordenada da mais nova pra mais antiga.",
+  "noticias": [
+    {
+      "id": "allan-sarmento-vira-e-vai-a-chave-principal",
+      "titulo": "Allan Sarmento vira o jogo e vai à chave principal",
+      "resumo": "De virada sobre o colombiano Naranjo, Allan Sarmento garantiu vaga na chave principal do WTT Star Contender de São José dos Campos (SP).",
+      "fonte": "CBTM",
+      "url": "https://www.cbtm.org.br/noticia/detalhe/103165/allan-sarmento-vira-contra-naranjo-e-se-classifica-para-a-chave-principal-do-wtt-star-contender-sao-jose-dos-campos",
+      "publicadoEm": "2026-07-22",
+      "tag": "Seleção"
+    },
+    {
+      "id": "luiza-fontanive-e-bianca-borges-avancam",
+      "titulo": "Luiza Fontanive e Bianca Borges avançam no Star Contender",
+      "resumo": "As brasileiras seguem vivas nas disputas individuais e de duplas do WTT Star Contender de São José dos Campos.",
+      "fonte": "CBTM",
+      "url": "https://www.cbtm.org.br/noticia/detalhe/103163/luiza-fontanive-e-bianca-borges-avancam-nas-disputas-individuais-e-de-duplas-do-wtt-star-contender",
+      "publicadoEm": "2026-07-22",
+      "tag": "Seleção"
+    },
+    {
+      "id": "brasil-oito-vitorias-primeiro-dia-star-contender",
+      "titulo": "Brasil abre o Star Contender com oito vitórias",
+      "resumo": "Jogando em casa, os brasileiros somaram oito vitórias no primeiro dia da fase classificatória do WTT Star Contender de São José dos Campos 2026.",
+      "fonte": "CBTM",
+      "url": "https://www.cbtm.org.br/noticia/detalhe/103162/brasil-emplaca-oito-vitorias-no-primeiro-dia-da-fase-classificatoria-do-wtt-star-contender-sao-jose-dos-campos-2026",
+      "publicadoEm": "2026-07-21",
+      "tag": "Seleção"
+    },
+    {
+      "id": "thais-severo-marliane-santos-semi-para-elite",
+      "titulo": "Thais Severo e Marliane Santos na semifinal do Para Elite",
+      "resumo": "No ITTF World Para Elite, a dupla brasileira Thais Severo e Marliane Santos garantiu vaga na semifinal.",
+      "fonte": "CBTM",
+      "url": "https://www.cbtm.org.br/noticia/detalhe/103161/thais-severo-e-marliane-santos-avancam-a-semifinal-do-ittf-world-para-elite",
+      "publicadoEm": "2026-07-21",
+      "tag": "Paralímpico"
+    },
+    {
+      "id": "wtt-star-contender-sao-jose-dos-campos-2026-comeca",
+      "titulo": "O circuito mundial desembarca no Brasil: começa o Star Contender",
+      "resumo": "O WTT Star Contender de São José dos Campos (SP) — etapa do circuito mundial em solo brasileiro — começou nesta semana, reunindo parte da elite do tênis de mesa.",
+      "fonte": "CBTM",
+      "url": "https://www.cbtm.org.br/noticia/detalhe/103156/wtt-star-contender-sao-jose-dos-campos-2026-comeca-nesta-terca-feira-21",
+      "publicadoEm": "2026-07-20",
+      "tag": "Torneio"
+    }
+  ]
+}

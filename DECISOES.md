@@ -454,11 +454,16 @@ D-16 — nunca fingir engajamento nem avaliação). Três features, sequenciadas
    (ficha + cards do catálogo) exige nota ≥ 9,0 **e** ≥ 50 avaliações; material com amostra
    fina (< 5) fica sem sinal (n=1 não é "a comunidade"). 11 dos 15 cobertos; bola e raquetes
    pré-montadas não têm página no Revspin. TTD bloqueia fetch — cresce com prints do fundador.
-3. **Notícias / editorial** — pendente. Engenharia simples; gargalo é editorial (conteúdo
-   do fundador).
+3. **Notícias / editorial** — ✅ no ar. `dados/noticias.json` + ponte + `/noticias` (SSG).
+   Modelo **digest curado**: resumo curto na voz da WikiPong + crédito à fonte + link pro
+   original + data — NÃO republica artigo/imagem de terceiros (respeita direito autoral).
+   Semente real da **CBTM** (fetchável); Instagram e afins entram por curadoria do fundador
+   (não são fetcháveis). A lista leva pra fonte; sem página de detalhe interna por ora.
 
 **Relação com decisões:** NÃO antecipa o D-11 (avaliações interativas seguem adiadas até
 o backend); alimenta o corpus do D-10 (IA) como opinião rotulada; herda a ordem editorial
 do D-14 na ficha; respeita D-16 (só o que existe aparece na nav).
 
-**Status:** parcialmente ativa (features 1 e 2 no ar; 3 — notícias — pendente).
+**Status:** ativa — as três features no ar (profissionais, sinal da comunidade, notícias).
+Crescem por curadoria (prints do fundador p/ o que não é fetchável). Próximo salto de
+comunidade seria o D-11 (avaliações interativas), que exige backend (D-17).

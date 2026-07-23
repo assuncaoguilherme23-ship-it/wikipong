@@ -43,6 +43,7 @@ import {
   LOJAS,
   urlDeBusca,
 } from '@/componentes/dados-ofertas';
+import { profissionaisQueUsam } from '@/componentes/dados-profissionais';
 import estilos from './detalhe.module.css';
 
 export const dynamicParams = false;
@@ -80,6 +81,9 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
   // semente é exibido como estimativa — nunca como preço apurado (D-16).
   const ofertas = ofertasDoMaterial(m.id);
   const medio = precoMedio(m.id);
+
+  // Uso reverso (D-18/TTD): quais profissionais usam este material — link p/ /profissionais
+  const usos = profissionaisQueUsam(m.id);
 
   // Ficha técnica (fato): número + tradução lado a lado (D-08, mesmo dado canônico)
   const ficha = [
@@ -330,6 +334,31 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             opinião. Não sabe seu perfil? <Link href="/quiz/">Faça o teste</Link> (leva 1 minuto).
           </p>
         </section>
+
+        {/* ── 2c. Quem usa nos profissionais (FATO com fonte — link p/ /profissionais) ──
+               Só aparece quando algum pro do nosso dado usa este material (D-16). */}
+        {usos.length > 0 && (
+          <section className={estilos.quemUsa} aria-labelledby="titulo-quem-usa">
+            <h2 id="titulo-quem-usa">Quem usa nos profissionais</h2>
+            <ul className={estilos.quemUsaLista}>
+              {usos.map((u) => (
+                <li key={u.profissional.id}>
+                  <Link href={`/profissionais/#${u.profissional.id}`} className={estilos.quemUsaItem}>
+                    <span className={estilos.quemUsaBandeira} aria-hidden="true">
+                      {u.profissional.bandeira}
+                    </span>
+                    <span className={estilos.quemUsaNome}>{u.profissional.nome}</span>
+                    <span className={`mono ${estilos.quemUsaPapel}`}>{u.papeis.join(' + ')}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p className={estilos.quemUsaNota}>
+              Lembrando: o profissional usa a versão feita sob medida, não a de loja.{' '}
+              <Link href="/profissionais/">Ver todos os setups →</Link>
+            </p>
+          </section>
+        )}
 
         {/* ── 3. Onde comprar (AÇÃO — D-14) — ordenado por PREÇO, nunca por parceiro ── */}
         <section className={estilos.ondeComprar} aria-labelledby="titulo-comprar">

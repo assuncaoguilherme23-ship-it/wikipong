@@ -1,0 +1,215 @@
+.pagina {
+  padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 4rem);
+  min-height: 60dvh;
+}
+
+.titulo {
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-weight: 800;
+  margin-top: 0.5rem;
+}
+.lede {
+  color: var(--cor-tinta-suave);
+  max-width: 64ch;
+  margin-top: 0.6rem;
+  text-wrap: pretty;
+}
+
+.lista {
+  list-style: none;
+  margin: clamp(1.75rem, 4vw, 2.75rem) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-lg);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  box-shadow: var(--sombra-cartao);
+  /* âncora do link reverso "#jogador" não some sob o header fixo */
+  scroll-margin-top: 5rem;
+}
+
+/* Identidade: bandeira + nome + destaque */
+.identidade {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.bandeira {
+  font-size: clamp(2.2rem, 6vw, 2.8rem);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.identidadeTexto {
+  min-width: 0;
+}
+.nome {
+  font-size: clamp(1.3rem, 3vw, 1.65rem);
+  line-height: 1.15;
+}
+.destaque {
+  margin: 0.3rem 0 0;
+  color: var(--cor-tinta-suave);
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+
+/* Etiquetas: país · mão · estilo */
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 1rem 0 0;
+}
+.etiqueta {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+  background: var(--cor-acento-suave);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+}
+.etiquetaEstilo {
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+}
+
+/* As três peças do setup */
+.pecas {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.6rem;
+}
+.peca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  background: var(--cor-superficie-2);
+  border: 1px solid transparent;
+  border-radius: var(--raio-md);
+  padding: 0.75rem 0.9rem;
+}
+/* Só a peça linkável ganha affordância de clique */
+.pecaLink {
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+.pecaLink:hover {
+  border-color: var(--cor-acento);
+  transform: translateY(-2px);
+}
+.pecaLink:active {
+  transform: translateY(0) scale(0.99);
+}
+.pecaGlifo {
+  flex-shrink: 0;
+  display: inline-flex;
+}
+.pecaTexto {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.pecaPapel {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+}
+.pecaNome {
+  font-weight: 600;
+  text-wrap: pretty;
+}
+.pecaFicha {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--cor-texto-acento);
+  margin-top: 0.15rem;
+}
+
+/* Nota editorial por jogador */
+.nota {
+  margin: 1.1rem 0 0;
+  color: var(--cor-tinta-suave);
+  line-height: 1.7;
+  max-width: 72ch;
+  text-wrap: pretty;
+}
+
+/* Fonte + data da checagem (Voz de Dados) */
+.fonte {
+  margin: 0.9rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--cor-linha);
+  font-size: 0.8rem;
+  color: var(--cor-tinta-suave);
+}
+.fonte a {
+  color: var(--cor-texto-acento);
+  text-decoration: none;
+}
+.fonte a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Nota de honestidade no rodapé */
+.rodapeNota {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-lg);
+}
+.rodapeNotaTitulo {
+  font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+  margin-bottom: 0.75rem;
+}
+.rodapeNota > p {
+  margin: 0 0 0.9rem;
+  color: var(--cor-tinta-suave);
+  line-height: 1.7;
+  max-width: 72ch;
+  text-wrap: pretty;
+}
+.verdades {
+  margin: 0 0 0.5rem;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.verdades li {
+  color: var(--cor-tinta-suave);
+  line-height: 1.7;
+  max-width: 72ch;
+  text-wrap: pretty;
+}
+.verdades strong {
+  color: var(--cor-tinta);
+}
+.rodapeLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.25rem 0 0 !important;
+  font-weight: 600;
+}
+.rodapeLinks a {
+  text-decoration: none;
+}
+.rodapeLinks a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

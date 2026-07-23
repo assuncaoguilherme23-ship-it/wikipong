@@ -1,0 +1,80 @@
+{
+  "aviso": "O QUE OS PROFISSIONAIS USAM — dado curado, com FONTE e DATA em cada jogador (D-14/D-16). Três verdades incômodas ficam ditas em vez de escondidas: (1) setup de profissional MUDA — troca de patrocínio, ajuste de temporada; por isso cada ficha tem a data da checagem; (2) quase todo pro usa versão 'National/Personal' feita sob medida, que NÃO é a de prateleira — quando linkamos para uma ficha nossa, é o equivalente COMERCIAL mais próximo, não a peça exata dele; (3) copiar o equipamento de um pro raramente melhora o jogo de quem está começando — a técnica vem primeiro. Nunca inventamos um setup nem linkamos a uma ficha que não seja honestamente equivalente.",
+  "profissionais": [
+    {
+      "id": "hugo-calderano",
+      "nome": "Hugo Calderano",
+      "pais": "Brasil",
+      "bandeira": "🇧🇷",
+      "mao": "Destro",
+      "estilo": "Ataque potente dos dois lados, com muita mobilidade",
+      "destaque": "O maior nome da história do tênis de mesa brasileiro e um dos melhores do mundo.",
+      "lamina": { "nome": "JOOLA Hugo Calderano ARY-C" },
+      "forehand": { "nome": "JOOLA Trinity Charged (assinatura Hugo Calderano)" },
+      "backhand": { "nome": "JOOLA Trinity Dynamic (assinatura Hugo Calderano)" },
+      "fonte": "https://tabletennis-reference.com/player/detail/134",
+      "consultadoEm": "2026-07-23",
+      "nota": "Trocou a XIOM pela JOOLA em 2026 e hoje joga a linha de assinatura dele — por isso nenhuma peça aparece (ainda) no nosso catálogo. Antes da JOOLA, jogou anos com equipamento XIOM."
+    },
+    {
+      "id": "bruna-takahashi",
+      "nome": "Bruna Takahashi",
+      "pais": "Brasil",
+      "bandeira": "🇧🇷",
+      "mao": "Destra",
+      "estilo": "Ofensiva, forte no contra-ataque",
+      "destaque": "A principal mesatenista brasileira, entre as melhores do mundo no feminino.",
+      "lamina": { "nome": "Andro Synteliac VCI" },
+      "forehand": { "nome": "Andro NUZN 55" },
+      "backhand": { "nome": "Andro NUZN 55" },
+      "fonte": "https://pingsunday.com/bruna-takahashi-equipment/",
+      "consultadoEm": "2026-07-23",
+      "nota": "Passou a jogar com a alemã Andro em 2025 (antes usava Victas). Setup recente — os modelos exatos das borrachas valem reconferir na fonte."
+    },
+    {
+      "id": "ma-long",
+      "nome": "Ma Long",
+      "pais": "China",
+      "bandeira": "🇨🇳",
+      "mao": "Destro",
+      "estilo": "Ofensivo completo — considerado o jogo mais equilibrado da história",
+      "destaque": "Bicampeão olímpico de simples e o jogador mais vitorioso de todos os tempos.",
+      "lamina": { "nome": "DHS W968 (no varejo, a cousin é a Hurricane Long 5)" },
+      "forehand": { "nome": "DHS Hurricane 3 (versão National, esponja azul)", "materialId": "hurricane" },
+      "backhand": { "nome": "DHS Hurricane 3 (esponja laranja, mais macia)" },
+      "fonte": "https://pingsunday.com/ma-long-equipment/",
+      "consultadoEm": "2026-07-23",
+      "nota": "Lâmina W968 é personalizada e não é vendida ao público na forma idêntica. A Hurricane 3 dele é a National, feita sob medida — a nossa ficha é da Hurricane 3 Neo, a prima de varejo mais próxima."
+    },
+    {
+      "id": "fan-zhendong",
+      "nome": "Fan Zhendong",
+      "pais": "China",
+      "bandeira": "🇨🇳",
+      "mao": "Destro",
+      "estilo": "Força e velocidade explosivas dos dois lados",
+      "destaque": "Campeão olímpico e ex-número 1 do mundo.",
+      "lamina": { "nome": "Butterfly Fan Zhendong ALC", "materialId": "fzd" },
+      "forehand": { "nome": "DHS Hurricane 3 (versão National)", "materialId": "hurricane" },
+      "backhand": { "nome": "Butterfly Dignics 09C" },
+      "fonte": "https://pingsunday.com/fan-zhendong-equipment/",
+      "consultadoEm": "2026-07-23",
+      "nota": "A lâmina de assinatura dele é justamente uma das nossas fichas. Em 2025–2026 foi visto alternando os lados das borrachas conforme a mesa e a bola do torneio — setup em ajuste."
+    },
+    {
+      "id": "tomokazu-harimoto",
+      "nome": "Tomokazu Harimoto",
+      "pais": "Japão",
+      "bandeira": "🇯🇵",
+      "mao": "Destro",
+      "estilo": "Ataque colado à mesa, muito rápido",
+      "destaque": "Estrela japonesa, entre os melhores do mundo desde a adolescência.",
+      "lamina": { "nome": "Butterfly Harimoto Innerforce ALC" },
+      "forehand": { "nome": "Butterfly Dignics 05", "materialId": "dignics05" },
+      "backhand": { "nome": "Butterfly Tenergy 05", "materialId": "tenergy05" },
+      "fonte": "https://pingsunday.com/tomokazu-harimoto-equipment/",
+      "consultadoEm": "2026-07-23",
+      "nota": "Duas das borrachas dele estão no nosso catálogo. Fontes recentes indicam que ele pode ter passado a usar Dignics 05 também no backhand — vale reconferir na fonte."
+    }
+  ]
+}

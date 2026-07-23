@@ -5,7 +5,9 @@
  *   · Materiais ▾ (mega-menu): Todos · por tipo (presets de filtro D-12) · Comparar
  *     (Comparar mora DENTRO de Materiais — D-03).
  *   · Glossário: link direto (vira grupo "Aprender ▾" quando houver ≥2 filhos).
- *   · Comunidade/Notícias/busca: ocultos até existirem (D-16 — sem link morto).
+ *   · Profissionais: 1º filho da futura Comunidade (D-03) — link direto por ora;
+ *     vira "Comunidade ▾" quando avaliações/notícias existirem. Notícias/busca
+ *     seguem ocultas até existirem (D-16 — sem link morto).
  *   · Mobile: hambúrguer → drawer verde-mesa com a MESMA arquitetura.
  * O quiz mantém a barra própria minimalista (fluxo de conversão).
  *
@@ -135,6 +137,13 @@ export function Cabecalho() {
           >
             Aprender
           </Link>
+          <Link
+            href="/profissionais/"
+            className={estilos.navLink}
+            aria-current={rota.startsWith('/profissionais') ? 'page' : undefined}
+          >
+            Profissionais
+          </Link>
           <Link href="/quiz/" className={`botao-primario ${estilos.ctaNav}`}>
             Fazer o teste
           </Link>
@@ -187,6 +196,8 @@ export function Cabecalho() {
             <p className={`mono ${estilos.drawerTitulo}`}>Aprender</p>
             <Link href="/aprender/">Guias</Link>
             <Link href="/glossario/">Glossário</Link>
+            <p className={`mono ${estilos.drawerTitulo}`}>Comunidade</p>
+            <Link href="/profissionais/">O que os profissionais usam</Link>
             <Link href="/quiz/" className={`botao-primario ${estilos.drawerCta}`}>
               Fazer o teste →
             </Link>

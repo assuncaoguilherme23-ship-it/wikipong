@@ -427,3 +427,33 @@ bold) exige apenas 3:1, que o acento passa. Trilha para eventual token semântic
 (ex.: `texto-acento` = escuro; `superficie-acento` = claro).
 
 **Status:** ativa.
+
+---
+
+## D-19 · Camada de comunidade (curada, estática)
+
+**Benchmark:** TableTennisDaily (tabletennisdaily.com) — referência global de comunidade
+de TT, escolhida pelo fundador como norte de comunidade e como **fonte de consulta**
+(materiais mais usados/comentados, discussões, notícias). Salvo na memória do projeto.
+
+**Decisão:** trazer o VALOR de comunidade do TTD sem copiar o mecanismo. Fórum ao vivo
+(contas, posts, tempo real) muda a stack (D-17) e não entra agora. No lugar, uma camada
+**curada, com fonte e data**, que cabe no export estático e não fere a honestidade (D-14/
+D-16 — nunca fingir engajamento nem avaliação). Três features, sequenciadas:
+1. **O que os profissionais usam** — ✅ no ar. `dados/profissionais.json` + ponte tipada +
+   `/profissionais` (1º filho da futura **Comunidade** na nav, D-03). Cada peça do setup
+   linka pra ficha quando há equivalente comercial honesto; link reverso "Quem usa nos
+   profissionais" na ficha do material. Guarda-corpos ditos na própria página: setup de
+   pro **muda** (fonte + data em cada), versão **National ≠ varejo** (o link é o equivalente
+   comercial, não a peça exata), e **copiar não vira técnica**. Semente: Calderano + Takahashi
+   (BR) + Ma Long, Fan Zhendong, Harimoto; cresce com prints do fundador (fluxo dos preços).
+2. **Sinal da comunidade nos materiais** — pendente. Nota/destaques por material, com FONTE
+   (Revspin/Reddit/prints — o TTD bloqueia fetch automático). Vira semente do D-11.
+3. **Notícias / editorial** — pendente. Engenharia simples; gargalo é editorial (conteúdo
+   do fundador).
+
+**Relação com decisões:** NÃO antecipa o D-11 (avaliações interativas seguem adiadas até
+o backend); alimenta o corpus do D-10 (IA) como opinião rotulada; herda a ordem editorial
+do D-14 na ficha; respeita D-16 (só o que existe aparece na nav).
+
+**Status:** parcialmente ativa (feature 1 no ar; 2 e 3 pendentes).

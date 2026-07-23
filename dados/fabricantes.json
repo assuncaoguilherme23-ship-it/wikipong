@@ -118,23 +118,6 @@
       ],
       "nota": "As fontes convergem numa faixa de dureza, não num valor único — por isso registramos a faixa. Os índices de velocidade/efeito aparecem em escalas diferentes conforme a fonte e não foram embutidos."
     },
-    "tibhar-aurus-soft": {
-      "confianca": "oficial",
-      "fonte": "https://tibhar.info/en/shop/aurus-soft/",
-      "consultadoEm": "2026-07-21",
-      "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "42,5°" },
-        { "rotulo": "Superfície", "valor": "Lisa tensionada — versão macia da linha Aurus" }
-      ],
-      "indices": {
-        "escala": "Índice Tibhar (escala interna da marca; ~100 é a referência da linha)",
-        "valores": [
-          { "rotulo": "Tempo (velocidade)", "valor": 104 },
-          { "rotulo": "Efeito", "valor": 112 },
-          { "rotulo": "Controle", "valor": 95 }
-        ]
-      }
-    },
     "xiom-vega-intro": {
       "confianca": "pendente",
       "fonte": "https://www.xiom.com/",

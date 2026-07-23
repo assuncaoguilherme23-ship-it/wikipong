@@ -115,7 +115,6 @@ export const GUIAS: Guia[] = [
             { nome: 'Rozena', id: 'rozena', min: 35, max: 35, rotulo: '35°' },
             { nome: 'Tenergy 05', id: 'tenergy05', min: 36, max: 36, rotulo: '36°' },
             { nome: 'Dignics 05', id: 'dignics05', min: 40, max: 40, rotulo: '40°' },
-            { nome: 'Aurus Soft', id: 'tibhar-aurus-soft', min: 42.5, max: 42.5, rotulo: '42,5°' },
             { nome: 'AK47 Yellow', id: 'palio-ak47', min: 42, max: 44, rotulo: '42° a 44°' },
             { nome: 'Mark V', id: 'markv', min: 40, max: 45, rotulo: '40° a 45°' },
             { nome: 'Evolution MX-P', id: 'mxp', min: 46.7, max: 47.7, rotulo: '46,7° a 47,7°' },

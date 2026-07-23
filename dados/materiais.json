@@ -270,24 +270,6 @@
         "tag": "Um passo além da base",
         "frase": "Madeira allround com um tiquinho a mais de velocidade — pra quem pegou o controle e quer começar a atacar."
       }
-    },
-    {
-      "id": "tibhar-aurus-soft",
-      "nome": "Tibhar Aurus Soft",
-      "marca": "Tibhar",
-      "tipo": "Borracha",
-      "nivel": "Iniciante",
-      "intencao": "controlar",
-      "preco": 210,
-      "specs": { "velocidade": 6.0, "spin": 8.0, "controle": 8.7 },
-      "durabilidade": 7.5,
-      "durezaUnificada": 42,
-      "rating": 4.5,
-      "reviews": 76,
-      "simples": {
-        "tag": "Efeito com maciez",
-        "frase": "Mais efeito que as básicas, mas ainda macia e tolerante. Boa pra quem quer começar a girar a bola."
-      }
     }
   ]
 }

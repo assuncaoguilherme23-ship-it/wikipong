@@ -447,8 +447,13 @@ D-16 — nunca fingir engajamento nem avaliação). Três features, sequenciadas
    pro **muda** (fonte + data em cada), versão **National ≠ varejo** (o link é o equivalente
    comercial, não a peça exata), e **copiar não vira técnica**. Semente: Calderano + Takahashi
    (BR) + Ma Long, Fan Zhendong, Harimoto; cresce com prints do fundador (fluxo dos preços).
-2. **Sinal da comunidade nos materiais** — pendente. Nota/destaques por material, com FONTE
-   (Revspin/Reddit/prints — o TTD bloqueia fetch automático). Vira semente do D-11.
+2. **Sinal da comunidade nos materiais** — ✅ no ar. `dados/comunidade.json` + ponte tipada:
+   nota AGREGADA do **Revspin** por material (nota, escala, nº de avaliações, fonte, data).
+   Preenche a seção **Comunidade** da ficha (antes vazia), rotulada como opinião de comunidade
+   EXTERNA — não avaliação da WikiPong (D-11 segue distinto). Selo **"Favorito da comunidade"**
+   (ficha + cards do catálogo) exige nota ≥ 9,0 **e** ≥ 50 avaliações; material com amostra
+   fina (< 5) fica sem sinal (n=1 não é "a comunidade"). 11 dos 15 cobertos; bola e raquetes
+   pré-montadas não têm página no Revspin. TTD bloqueia fetch — cresce com prints do fundador.
 3. **Notícias / editorial** — pendente. Engenharia simples; gargalo é editorial (conteúdo
    do fundador).
 
@@ -456,4 +461,4 @@ D-16 — nunca fingir engajamento nem avaliação). Três features, sequenciadas
 o backend); alimenta o corpus do D-10 (IA) como opinião rotulada; herda a ordem editorial
 do D-14 na ficha; respeita D-16 (só o que existe aparece na nav).
 
-**Status:** parcialmente ativa (feature 1 no ar; 2 e 3 pendentes).
+**Status:** parcialmente ativa (features 1 e 2 no ar; 3 — notícias — pendente).

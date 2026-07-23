@@ -612,3 +612,57 @@
   color: var(--cor-texto-acento);
   font-weight: 600;
 }
+
+/* ── Sinal da comunidade externa (Revspin) na seção Comunidade (D-19 f2) ── */
+.seloFavorito {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+  background: var(--cor-acento-suave);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  margin: 0 0 0.9rem;
+}
+.notaComunidade {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.9rem;
+}
+.notaValor {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin: 0;
+}
+.notaGrande {
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  font-weight: 700;
+  font-feature-settings: 'tnum' 1;
+  color: var(--cor-tinta);
+  line-height: 1;
+}
+.notaEscala {
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+}
+.notaMeta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+}
+.comunidadeFonte {
+  margin: 0.7rem 0 0;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+}
+.comunidadeFonte a {
+  color: var(--cor-texto-acento);
+  text-decoration: none;
+}
+.comunidadeFonte a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

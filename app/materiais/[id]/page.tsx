@@ -44,6 +44,7 @@ import {
   urlDeBusca,
 } from '@/componentes/dados-ofertas';
 import { profissionaisQueUsam } from '@/componentes/dados-profissionais';
+import { sinalDaComunidade, ehFavoritoDaComunidade } from '@/componentes/dados-comunidade';
 import estilos from './detalhe.module.css';
 
 export const dynamicParams = false;
@@ -84,6 +85,9 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
 
   // Uso reverso (D-18/TTD): quais profissionais usam este material — link p/ /profissionais
   const usos = profissionaisQueUsam(m.id);
+
+  // Sinal da comunidade externa (Revspin) — opinião rotulada, seção Comunidade (D-19 f2)
+  const sinal = sinalDaComunidade(m.id);
 
   // Ficha técnica (fato): número + tradução lado a lado (D-08, mesmo dado canônico)
   const ficha = [
@@ -437,14 +441,50 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
         </section>
 
 
-        {/* ── 3. Comunidade (OPINIÃO, rotulada, por último — D-14) ── */}
+        {/* ── 3. Comunidade (OPINIÃO, rotulada, por último — D-14) ──
+               Sinal AGREGADO de comunidade externa (Revspin), sempre atribuído.
+               Não é avaliação da WikiPong — as nossas, estruturadas, vêm no D-11. */}
         <section className={estilos.comunidade} aria-labelledby="titulo-comunidade">
-          <h2 id="titulo-comunidade">Avaliações da comunidade</h2>
-          <p className={estilos.comunidadeVazia}>
-            Ainda não há avaliações deste material. Quando abrirem, serão estruturadas — nível do
-            jogador, tempo de uso e nota — e ficarão sempre nesta seção,{' '}
-            <em>separada da ficha técnica, que é independente</em>.
-          </p>
+          <h2 id="titulo-comunidade">O que a comunidade acha</h2>
+
+          {sinal ? (
+            <>
+              {ehFavoritoDaComunidade(m.id) && (
+                <p className={`mono ${estilos.seloFavorito}`}>★ Favorito da comunidade</p>
+              )}
+              <div className={estilos.notaComunidade}>
+                <p className={estilos.notaValor}>
+                  <span className={`mono ${estilos.notaGrande}`}>
+                    {sinal.nota.toFixed(1).replace('.', ',')}
+                  </span>
+                  <span className={estilos.notaEscala}>/ {sinal.escala}</span>
+                </p>
+                <p className={estilos.notaMeta}>
+                  nota agregada de <strong>{sinal.avaliacoes.toLocaleString('pt-BR')}</strong>{' '}
+                  avaliações no {sinal.fonte}
+                </p>
+              </div>
+              <p className={estilos.comunidadeFonte}>
+                Fonte:{' '}
+                <a href={sinal.url} target="_blank" rel="nofollow noopener noreferrer">
+                  {dominioDaFonte(sinal.url)} ↗
+                </a>{' '}
+                · consultado em {dataLegivel(sinal.consultadoEm)}
+              </p>
+              <p className={estilos.comunidadeVazia}>
+                Isto é a opinião <strong>agregada de uma comunidade externa</strong> — não uma
+                avaliação da WikiPong. As nossas, estruturadas (nível do jogador, tempo de uso) e
+                moderadas, entram depois e ficam <em>separadas da ficha técnica, que é
+                independente</em>.
+              </p>
+            </>
+          ) : (
+            <p className={estilos.comunidadeVazia}>
+              Ainda não reunimos avaliações da comunidade para este material. Quando as nossas
+              abrirem, serão estruturadas — nível do jogador, tempo de uso e nota — e ficarão sempre
+              nesta seção, <em>separada da ficha técnica, que é independente</em>.
+            </p>
+          )}
         </section>
       </main>
 

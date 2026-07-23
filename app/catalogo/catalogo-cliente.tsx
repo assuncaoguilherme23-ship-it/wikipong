@@ -31,6 +31,7 @@ import {
 } from '@/src/logica/filtros';
 import { PALAVRAS, paraPalavra, perdao } from '@/src/logica/metricas';
 import { MATERIAIS, type MaterialCatalogo } from '@/componentes/dados-materiais';
+import { ehFavoritoDaComunidade } from '@/componentes/dados-comunidade';
 import { Bolinhas } from '@/componentes/Bolinhas';
 import { brl } from '@/componentes/formato';
 import { Cabecalho } from '@/componentes/Cabecalho';
@@ -298,6 +299,10 @@ function CartaoMaterial({ material: m, modo }: { material: MaterialCatalogo; mod
           </p>
         </div>
       </div>
+
+      {ehFavoritoDaComunidade(m.id) && (
+        <p className={`mono ${estilos.seloFavorito}`}>★ Favorito da comunidade</p>
+      )}
 
       {modo === 'tecnico' ? (
         <dl className={estilos.specsTecnico}>

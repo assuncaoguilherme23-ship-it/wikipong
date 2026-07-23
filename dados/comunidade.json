@@ -1,0 +1,16 @@
+{
+  "aviso": "SINAL DA COMUNIDADE — nota agregada de uma comunidade EXTERNA (Revspin), com a contagem de avaliações, a fonte e a data (D-14/D-16). NÃO é avaliação da WikiPong: as nossas serão estruturadas (nível do jogador, tempo de uso) e moderadas, e entram com o D-11. A régua é honesta: só entra material com amostra suficiente (≥ 5 avaliações) — nota de 1 pessoa não é 'a comunidade', por isso alguns materiais ficam sem sinal. O selo 'Favorito da comunidade' exige nota alta E volume (≥ 9,0 com ≥ 50 avaliações), para um pico de poucos votos não virar 'favorito'.",
+  "sinais": {
+    "tenergy05": { "fonte": "Revspin", "url": "https://revspin.net/rubber/butterfly-tenergy-05.html", "nota": 9.3, "escala": 10, "avaliacoes": 379, "consultadoEm": "2026-07-23" },
+    "dignics05": { "fonte": "Revspin", "url": "https://revspin.net/rubber/butterfly-dignics-05.html", "nota": 9.3, "escala": 10, "avaliacoes": 80, "consultadoEm": "2026-07-23" },
+    "viscaria": { "fonte": "Revspin", "url": "https://revspin.net/blade/butterfly-viscaria.html", "nota": 9.4, "escala": 10, "avaliacoes": 178, "consultadoEm": "2026-07-23" },
+    "hurricane": { "fonte": "Revspin", "url": "https://revspin.net/rubber/dhs-neo-hurricane-3.html", "nota": 9.0, "escala": 10, "avaliacoes": 319, "consultadoEm": "2026-07-23" },
+    "markv": { "fonte": "Revspin", "url": "https://revspin.net/rubber/yasaka-mark-v.html", "nota": 8.7, "escala": 10, "avaliacoes": 212, "consultadoEm": "2026-07-23" },
+    "fzd": { "fonte": "Revspin", "url": "https://revspin.net/blade/butterfly-fan-zhendong-alc.html", "nota": 9.2, "escala": 10, "avaliacoes": 23, "consultadoEm": "2026-07-23" },
+    "mxp": { "fonte": "Revspin", "url": "https://revspin.net/rubber/tibhar-evolution-mx-p.html", "nota": 9.4, "escala": 10, "avaliacoes": 137, "consultadoEm": "2026-07-23" },
+    "rozena": { "fonte": "Revspin", "url": "https://revspin.net/rubber/butterfly-rozena.html", "nota": 8.8, "escala": 10, "avaliacoes": 90, "consultadoEm": "2026-07-23" },
+    "xiom-vega-intro": { "fonte": "Revspin", "url": "https://revspin.net/rubber/xiom-vega-intro.html", "nota": 8.3, "escala": 10, "avaliacoes": 14, "consultadoEm": "2026-07-23" },
+    "stiga-allround": { "fonte": "Revspin", "url": "https://revspin.net/blade/stiga-allround-classic.html", "nota": 8.5, "escala": 10, "avaliacoes": 66, "consultadoEm": "2026-07-23" },
+    "donic-appelgren": { "fonte": "Revspin", "url": "https://revspin.net/blade/donic-appelgren-allplay.html", "nota": 8.7, "escala": 10, "avaliacoes": 51, "consultadoEm": "2026-07-23" }
+  }
+}

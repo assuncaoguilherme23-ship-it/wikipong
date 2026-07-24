@@ -666,3 +666,17 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* ── Mídia do hero: foto oficial do produto + crédito (fallback = Glifo) ── */
+.topoMidia {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+.imagemCredito {
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  color: var(--cor-tinta-suave);
+}

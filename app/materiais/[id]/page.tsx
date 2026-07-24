@@ -24,7 +24,7 @@ import { notFound } from 'next/navigation';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { Radar } from '@/componentes/Radar';
-import { Glifo } from '@/componentes/Glifo';
+import { FotoProduto } from '@/componentes/FotoProduto';
 import { Bolinhas } from '@/componentes/Bolinhas';
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
 import { brl } from '@/componentes/formato';
@@ -45,6 +45,7 @@ import {
 } from '@/componentes/dados-ofertas';
 import { profissionaisQueUsam } from '@/componentes/dados-profissionais';
 import { sinalDaComunidade, ehFavoritoDaComunidade } from '@/componentes/dados-comunidade';
+import { imagemDoMaterial } from '@/componentes/dados-imagens';
 import estilos from './detalhe.module.css';
 
 export const dynamicParams = false;
@@ -89,6 +90,9 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
   // Sinal da comunidade externa (Revspin) — opinião rotulada, seção Comunidade (D-19 f2)
   const sinal = sinalDaComunidade(m.id);
 
+  // Imagem oficial do produto (com crédito) — hero da ficha; sem ela, o Glifo
+  const imagem = imagemDoMaterial(m.id);
+
   // Ficha técnica (fato): número + tradução lado a lado (D-08, mesmo dado canônico)
   const ficha = [
     { rotulo: 'Velocidade', valor: m.specs.velocidade, palavra: paraPalavra('velocidade', m.specs.velocidade) },
@@ -111,7 +115,10 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
 
         {/* ── Cabeçalho do material ── */}
         <header className={estilos.topo}>
-          <Glifo tipo={m.tipo} tamanho={72} />
+          <span className={estilos.topoMidia}>
+            <FotoProduto id={m.id} nome={m.nome} tipo={m.tipo} tamanho={88} />
+            {imagem && <span className={estilos.imagemCredito}>imagem: {imagem.fonte}</span>}
+          </span>
           <div>
             <h1 className={estilos.nome}>{m.nome}</h1>
             <p className={`mono ${estilos.meta}`}>

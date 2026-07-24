@@ -1,0 +1,18 @@
+.tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 4px;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}

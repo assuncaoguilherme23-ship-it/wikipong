@@ -36,7 +36,7 @@ import { Bolinhas } from '@/componentes/Bolinhas';
 import { brl } from '@/componentes/formato';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
-import { Glifo } from '@/componentes/Glifo';
+import { FotoProduto } from '@/componentes/FotoProduto';
 import { SeletorModo } from '@/componentes/SeletorModo';
 import { usarModo } from '@/componentes/usarModo';
 import estilos from './catalogo.module.css';
@@ -291,7 +291,7 @@ function CartaoMaterial({ material: m, modo }: { material: MaterialCatalogo; mod
     <li>
     <Link href={`/materiais/${m.id}/`} className={estilos.cartao}>
       <div className={estilos.cartaoTopo}>
-        <Glifo tipo={m.tipo} tamanho={56} />
+        <FotoProduto id={m.id} nome={m.nome} tipo={m.tipo} tamanho={56} />
         <div>
           <h3 className={estilos.cartaoNome}>{m.nome}</h3>
           <p className={`mono ${estilos.cartaoMeta}`}>

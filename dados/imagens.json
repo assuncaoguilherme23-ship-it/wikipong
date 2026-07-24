@@ -1,0 +1,11 @@
+{
+  "aviso": "IMAGENS DE PRODUTO — cada imagem é a OFICIAL do fabricante, trazida com CRÉDITO e a URL de origem (D-16). Não geramos foto de produto (seria falsificar um objeto real) nem usamos imagem sem origem clara. Onde não há imagem aprovada, a ficha e o card usam o Glifo tipográfico como fallback. Os arquivos ficam em public/produtos/.",
+  "imagens": {
+    "tenergy05": {
+      "arquivo": "tenergy05.jpg",
+      "fonte": "Butterfly",
+      "fonteUrl": "https://www.butterfly-global.com/en/products/detail/05800.html",
+      "consultadoEm": "2026-07-23"
+    }
+  }
+}

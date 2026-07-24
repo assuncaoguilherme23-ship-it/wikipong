@@ -48,6 +48,30 @@
       "fonte": "Donic",
       "fonteUrl": "https://www.donic.com/en/DONIC-APPELGREN-ALLPLAY/100201010",
       "consultadoEm": "2026-07-23"
+    },
+    "hurricane": {
+      "arquivo": "hurricane.jpg",
+      "fonte": "Tênis de Mesa Store",
+      "fonteUrl": "https://www.tenisdemesastore.com.br/borracha-dhs-hurricane-3-neo",
+      "consultadoEm": "2026-07-23"
+    },
+    "markv": {
+      "arquivo": "markv.jpg",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/yasaka-mark-v/",
+      "consultadoEm": "2026-07-23"
+    },
+    "stiga-allround": {
+      "arquivo": "stiga-allround.jpg",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/stiga-allround-classic/",
+      "consultadoEm": "2026-07-23"
+    },
+    "d40": {
+      "arquivo": "d40.png",
+      "fonte": "OperaTT",
+      "fonteUrl": "https://www.operatt.com.br/bola-de-plastico-dhs-d40-3-estrelas-caixa-com-10-unidades",
+      "consultadoEm": "2026-07-23"
     }
   }
 }

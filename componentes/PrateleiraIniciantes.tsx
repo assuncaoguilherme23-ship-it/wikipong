@@ -12,7 +12,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { MATERIAIS } from './dados-materiais';
-import { Glifo } from './Glifo';
+import { FotoProduto } from './FotoProduto';
 import { brl } from './formato';
 import estilos from './PrateleiraIniciantes.module.css';
 
@@ -94,7 +94,7 @@ export function PrateleiraIniciantes() {
           <li key={m.id} className={estilos.item}>
             <Link href={`/materiais/${m.id}/`} className={estilos.cartao}>
               <span className={estilos.glifoCaixa}>
-                <Glifo tipo={m.tipo} tamanho={52} />
+                <FotoProduto id={m.id} nome={m.nome} tipo={m.tipo} tamanho={64} />
               </span>
               <span className={estilos.nome}>{m.nome}</span>
               <span className={`mono ${estilos.meta}`}>

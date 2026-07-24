@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { Glifo } from '@/componentes/Glifo';
+import { FotoProduto } from '@/componentes/FotoProduto';
 import { PROFISSIONAIS, type Papel } from '@/componentes/dados-profissionais';
 import estilos from './profissionais.module.css';
 
@@ -85,7 +86,16 @@ export default function PaginaProfissionais() {
                   const conteudo = (
                     <>
                       <span className={estilos.pecaGlifo}>
-                        <Glifo tipo={GLIFO_POR_PAPEL[peca.papel]} tamanho={38} />
+                        {peca.material ? (
+                          <FotoProduto
+                            id={peca.material.id}
+                            nome={peca.material.nome}
+                            tipo={peca.material.tipo}
+                            tamanho={38}
+                          />
+                        ) : (
+                          <Glifo tipo={GLIFO_POR_PAPEL[peca.papel]} tamanho={38} />
+                        )}
                       </span>
                       <span className={estilos.pecaTexto}>
                         <span className={`mono ${estilos.pecaPapel}`}>{peca.papel}</span>

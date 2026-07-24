@@ -10,7 +10,7 @@
 import Link from 'next/link';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
-import { Glifo } from '@/componentes/Glifo';
+import { FotoProduto } from '@/componentes/FotoProduto';
 import { CONJUNTOS } from '@/componentes/dados-conjuntos';
 import { brl } from '@/componentes/formato';
 import estilos from './conjuntos.module.css';
@@ -58,7 +58,7 @@ export default function PaginaConjuntos() {
                   <li key={p.papel}>
                     <Link href={`/materiais/${p.material.id}/`} className={estilos.peca}>
                       <span className={estilos.pecaGlifo}>
-                        <Glifo tipo={p.material.tipo} tamanho={40} />
+                        <FotoProduto id={p.material.id} nome={p.material.nome} tipo={p.material.tipo} tamanho={40} />
                       </span>
                       <span className={estilos.pecaTexto}>
                         <span className={`mono ${estilos.pecaPapel}`}>{p.papel}</span>

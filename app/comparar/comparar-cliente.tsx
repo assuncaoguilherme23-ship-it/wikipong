@@ -19,7 +19,7 @@ import { brl } from '@/componentes/formato';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { Radar } from '@/componentes/Radar';
-import { Glifo } from '@/componentes/Glifo';
+import { FotoProduto } from '@/componentes/FotoProduto';
 import { Bolinhas } from '@/componentes/Bolinhas';
 import { SeletorModo } from '@/componentes/SeletorModo';
 import { usarModo } from '@/componentes/usarModo';
@@ -97,7 +97,7 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
                   disabled={bloqueado}
                   onChange={() => alternar(m.id)}
                 />
-                <Glifo tipo={m.tipo} tamanho={40} />
+                <FotoProduto id={m.id} nome={m.nome} tipo={m.tipo} tamanho={40} />
                 <span>
                   <b>{m.nome}</b>
                   <span className={`mono ${estilos.metaEscolha}`}>

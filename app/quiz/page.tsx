@@ -8,9 +8,10 @@
  * devolve um EstadoQuiz novo via `responder`/`voltar`. A UI é só renderização,
  * como a doc do módulo previu.
  *
- * D-12: a tela de resultado expõe o `presetURL` do perfil (o preset de filtros do
- * catálogo). O catálogo ainda não existe (próxima colheita), então — D-16
- * (lançamento honesto) — mostramos o preset sem fingir um link vivo para /catalogo.
+ * D-12: a tela de resultado leva ao catálogo com os filtros já na URL. O preset é o
+ * `presetFinal(estado)` — o preset-base do perfil REFINADO pelas respostas do
+ * caminho (orçamento vira filtro de preço, estilo vira faixa, etc.), para que cada
+ * resposta conte de verdade. Compartilhável e reproduzível.
  */
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
@@ -21,6 +22,7 @@ import {
   voltar,
   progresso,
   resultado,
+  presetFinal,
   TELAS,
   type EstadoQuiz,
 } from '@/src/logica/quiz';
@@ -45,6 +47,8 @@ export default function QuizPage() {
   const tela = TELAS[estado.atual];
   const prog = progresso(estado);
   const perfil = resultado(estado);
+  // Preset refinado pelas respostas do caminho (não só o base do perfil)
+  const preset = presetFinal(estado);
 
   return (
     <div className={styles.wrap}>
@@ -121,15 +125,21 @@ export default function QuizPage() {
                 </h1>
                 <p className={styles.perfilDesc}>{perfil.descricao}</p>
 
-                <Link href={perfil.presetURL} className={`botao-primario ${styles.ctaResultado}`}>
+                <Link
+                  href={preset ?? perfil.presetURL}
+                  className={`botao-primario ${styles.ctaResultado}`}
+                >
                   Ver materiais deste perfil →
                 </Link>
 
                 <div className={styles.preset}>
-                  <span className={styles.presetRotulo}>Filtros já aplicados na URL (D-12)</span>
-                  <code className={styles.presetURL}>{perfil.presetURL}</code>
+                  <span className={styles.presetRotulo}>
+                    Filtros montados a partir das suas respostas
+                  </span>
+                  <code className={styles.presetURL}>{preset ?? perfil.presetURL}</code>
                   <p className={styles.presetNota}>
-                    Compartilhável: esse endereço abre o catálogo exatamente com esses filtros.
+                    Cada resposta virou um filtro real: o endereço acima abre o catálogo
+                    exatamente assim — e é compartilhável.
                   </p>
                 </div>
 

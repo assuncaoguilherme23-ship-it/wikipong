@@ -8,7 +8,7 @@ import {
   paraBolinhas, paraPalavra, indicesDoMaximo, Specs,
 } from '../src/logica/metricas.js';
 import {
-  iniciar, responder, voltar, progresso, resultado, TELAS,
+  iniciar, responder, voltar, progresso, resultado, presetFinal, TELAS,
 } from '../src/logica/quiz.js';
 import {
   combinaComPerfil, vereditosDoMaterial, PERFIS_COM_CRITERIO, ROTULO_INTENCAO,
@@ -166,6 +166,70 @@ const f0 = filtroVazio();
 const f1 = alternarFaceta(f0, 'tipos', 'borracha');
 afirma(f0.tipos.length === 0 && jeq(f1.tipos, ['borracha']), 'alternarFaceta é imutável');
 afirma(f0.ordenar === 'relevancia' && comOrdenacao(f0, 'perdao').ordenar === 'perdao', 'comOrdenacao é imutável');
+
+// ───────── quiz enriquecido: cada resposta vira filtro REAL (D-18/D-12) ─────────
+// Antes, orçamento/objetivo/estilo eram coletados mas NÃO mudavam nada. Agora refinam
+// o preset final por cima do preset-base do perfil (que segue intacto).
+
+// iniciante: "já competir" + até R$ 200
+const pIni = responder(responder(responder(iniciar(), 'comecando'), 'jogar-ja'), 'ate-200');
+const uIni = parseQuery(presetFinal(pIni) ?? '');
+afirma(uIni.preco?.max === 200, 'orçamento vira filtro de preço real');
+afirma(jeq(uIni.velocidade, { min: 6, max: 8 }), '"competir" sobrescreve a faixa de velocidade do perfil');
+afirma(jeq(uIni.niveis, ['iniciante']), 'preset refinado preserva o nível do perfil');
+
+// "sem teto" NÃO inventa faixa de preço; "aprender" aperta o controle
+const pApr = responder(responder(responder(iniciar(), 'comecando'), 'aprender'), 'sem-teto');
+const uApr = parseQuery(presetFinal(pApr) ?? '');
+afirma(uApr.preco === null, 'sem-teto não cria filtro de preço (D-16)');
+afirma(jeq(uApr.controle, { min: 9, max: 10 }), '"aprender o básico" aperta o controle');
+
+// "raquete pronta" vira filtro de tipo
+const pPro = responder(responder(responder(iniciar(), 'comecando'), 'pronta'), 'ate-400');
+afirma(jeq(parseQuery(presetFinal(pPro) ?? '').tipos, ['raquete']), 'raquete pronta filtra tipo=raquete');
+
+// "voltei depois de parado" abre o intermediário
+const pVol = responder(responder(responder(iniciar(), 'voltando'), 'aprender'), 'sem-teto');
+afirma(parseQuery(presetFinal(pVol) ?? '').niveis.includes('intermediario'), '"voltei" abre o intermediário');
+
+// evolução: nível, estilo e prioridade contam
+const pEvo = responder(responder(responder(iniciar(), 'serio'), 'ataque'), 'potencia');
+const uEvo = parseQuery(presetFinal(pEvo) ?? '');
+afirma(uEvo.niveis.includes('avancado'), '"treino sério" abre materiais avançados');
+afirma(uEvo.velocidade?.min === 7, 'estilo de ataque puxa a velocidade');
+afirma(uEvo.ordenar === 'spin', 'prioridade potência ordena por efeito');
+
+const pCus = responder(responder(responder(iniciar(), 'casual'), 'allround'), 'custo');
+const uCus = parseQuery(presetFinal(pCus) ?? '');
+afirma(jeq(uCus.intencoes, ['equilibrado']), 'all-round filtra intenção equilibrada');
+afirma(uCus.ordenar === 'preco-asc', 'custo-benefício ordena por preço');
+
+// explorador não recebe fragmento; presetFinal só existe em resultado
+afirma(presetFinal(ex) === P_EXPL, 'explorador mantém o preset base limpo');
+afirma(presetFinal(iniciar()) === null, 'presetFinal é null fora de tela de resultado');
+
+// o preset refinado continua VÁLIDO no motor e NUNCA cai em catálogo vazio (D-16)
+for (const [nome, est] of [
+  ['iniciante/competir', pIni], ['iniciante/aprender', pApr], ['iniciante/pronta', pPro],
+  ['voltando', pVol], ['evolução/ataque', pEvo], ['evolução/custo', pCus],
+] as const) {
+  const e = parseQuery(presetFinal(est) ?? '');
+  afirma(jeq(parseQuery(serializeQuery(e)), e), `preset refinado faz round-trip (${nome})`);
+  afirma(aplicar(CAT, e).length > 0, `caminho ${nome} não pode cair em catálogo vazio`);
+}
+
+// nenhum filtro fingido: toda chave usada tem que existir no motor (D-16)
+const CHAVES_MOTOR = ['nivel', 'marca', 'tipo', 'intencao', 'vel', 'spin', 'ctrl', 'preco', 'ordenar'];
+for (const [id, tela] of Object.entries(TELAS)) {
+  if (tela.tipo !== 'pergunta') continue;
+  for (const op of tela.opcoes) {
+    if (!op.filtro) continue;
+    for (const par of op.filtro.split('&')) {
+      const chave = par.split('=')[0];
+      afirma(CHAVES_MOTOR.includes(chave), `filtro fingido em ${id}/${op.id}: chave '${chave}'`);
+    }
+  }
+}
 
 // ───────── recomendação: veredito material ↔ perfil (dado sincero) ─────────
 afirma(PERFIS_COM_CRITERIO.length === 3, 'só os 3 perfis que filtram entram (explorador fora)');

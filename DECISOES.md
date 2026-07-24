@@ -426,6 +426,24 @@ tem contraste ~3.2:1 sobre o papel — **reprova** WCAG AA em texto pequeno/norm
 bold) exige apenas 3:1, que o acento passa. Trilha para eventual token semântico no Figma
 (ex.: `texto-acento` = escuro; `superficie-acento` = claro).
 
+**Nota de sync — quiz enriquecido (2026-07-23):** a pedido do fundador ("mais opções"),
+cada pergunta ganhou **uma opção a mais** e cada opção pode carregar um **`filtro`** —
+fragmento de filtro REAL que entra no preset final. **Por quê:** o quiz coletava
+orçamento, objetivo e estilo mas eles **não mudavam nada** (só o Q1 e a prioridade
+ramificavam); a resposta parecia contar e não contava — dissonância com o D-16.
+1. Nova função `presetFinal(estado)`: preset = `presetURL` do perfil **+** fragmentos
+   das respostas do caminho, sobrescrevendo por chave (resposta mais tarde vence).
+2. Opções novas: *"Voltei depois de um tempo parado"* (Q1), *"Uma raquete pronta, sem
+   montar nada"* (objetivo), *"Sem teto por enquanto"* (orçamento), *"All-round: um
+   pouco de tudo"* (estilo), *"Que dure e valha o preço"* (prioridade).
+3. Orçamento passou de R$ 300/600 → **R$ 200/400** (faixas reais do catálogo) e virou
+   filtro `preco`. "Sem teto" **não** cria filtro — não se inventa faixa.
+4. Os **4 perfis e seus `presetURL` base seguem intactos**: a recomendação "Pra quem é"
+   das fichas (D-14) e os testes de preset dependem deles.
+5. Testes: **+45 asserções** (98 → 143), com duas garantias novas — nenhum caminho cai
+   em **catálogo vazio** (D-16) e nenhuma opção usa chave que o motor não entenda.
+**Pendente:** refletir as opções novas nas telas de quiz do Figma.
+
 **Status:** ativa.
 
 ---

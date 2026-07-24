@@ -26,6 +26,7 @@ import {
   TELAS,
   type EstadoQuiz,
 } from '@/src/logica/quiz';
+import { etiquetasDoPreset } from '@/src/logica/descrever-filtro';
 import styles from './quiz.module.css';
 
 export default function QuizPage() {
@@ -49,6 +50,8 @@ export default function QuizPage() {
   const perfil = resultado(estado);
   // Preset refinado pelas respostas do caminho (não só o base do perfil)
   const preset = presetFinal(estado);
+  // Leitura humana do preset: etiquetas em português, não a query string crua
+  const etiquetas = etiquetasDoPreset(preset ?? perfil?.presetURL ?? '');
 
   return (
     <div className={styles.wrap}>
@@ -133,14 +136,30 @@ export default function QuizPage() {
                 </Link>
 
                 <div className={styles.preset}>
-                  <span className={styles.presetRotulo}>
-                    Filtros montados a partir das suas respostas
-                  </span>
-                  <code className={styles.presetURL}>{preset ?? perfil.presetURL}</code>
-                  <p className={styles.presetNota}>
-                    Cada resposta virou um filtro real: o endereço acima abre o catálogo
-                    exatamente assim — e é compartilhável.
-                  </p>
+                  {etiquetas.length > 0 ? (
+                    <>
+                      <span className={styles.presetRotulo}>
+                        O que suas respostas filtraram
+                      </span>
+                      <ul className={styles.etiquetas}>
+                        {etiquetas.map((e) => (
+                          <li key={e.rotulo} className={styles.etiqueta}>
+                            <span className={styles.etiquetaRotulo}>{e.rotulo}</span>
+                            <span className={styles.etiquetaValor}>{e.valor}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className={styles.presetNota}>
+                        Cada resposta virou um filtro de verdade — o botão acima abre o
+                        catálogo já assim.
+                      </p>
+                    </>
+                  ) : (
+                    <p className={styles.presetNota}>
+                      Sem filtro nenhum: o botão acima abre o <strong>catálogo inteiro</strong>,
+                      com o modo Simples ligado pra tudo fazer sentido.
+                    </p>
+                  )}
                 </div>
 
                 <button

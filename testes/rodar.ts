@@ -17,6 +17,7 @@ import {
   filtroVazio, parseQuery, serializeQuery, aplicar, alternarFaceta, comOrdenacao, facetas,
   Material,
 } from '../src/logica/filtros.js';
+import { etiquetasDoPreset } from '../src/logica/descrever-filtro.js';
 
 let ok = 0; const falhas: string[] = [];
 function afirma(cond: boolean, msg: string) { if (cond) ok++; else falhas.push(msg); }
@@ -230,6 +231,24 @@ for (const [id, tela] of Object.entries(TELAS)) {
     }
   }
 }
+
+// ───────── leitura humana do preset (nada de query string na cara do usuário) ─────────
+const valorDe = (url: string, rotulo: string) =>
+  etiquetasDoPreset(url).find((e) => e.rotulo === rotulo)?.valor;
+
+const uCusStr = presetFinal(pCus) ?? '';
+afirma(valorDe(uCusStr, 'Estilo') === 'Equilibrado', 'intenção vira "Estilo: Equilibrado"');
+afirma(valorDe(uCusStr, 'Ordem') === 'Menor preço', 'ordenar=preco-asc → "Menor preço"');
+afirma(valorDe(uCusStr, 'Controle') === '8 ou mais', 'faixa no teto lê "8 ou mais"');
+afirma(valorDe(uCusStr, 'Velocidade') === '5 a 7', 'faixa fechada lê "5 a 7"');
+afirma(valorDe(uCusStr, 'Nível') === undefined, 'não inventa etiqueta de filtro ausente');
+
+afirma(valorDe(presetFinal(pEvo) ?? '', 'Nível') === 'Intermediário · Avançado',
+  'níveis traduzidos com acento e unidos');
+afirma(valorDe(presetFinal(pIni) ?? '', 'Preço') === 'até R$ 200', 'preço-teto lê "até R$ 200"');
+afirma(valorDe(presetFinal(pPro) ?? '', 'Tipo') === 'Raquete', 'tipo traduzido');
+afirma(etiquetasDoPreset(P_EXPL).length === 0,
+  'explorador não gera etiqueta (a UI diz "catálogo inteiro" em vez de caixa vazia)');
 
 // ───────── recomendação: veredito material ↔ perfil (dado sincero) ─────────
 afirma(PERFIS_COM_CRITERIO.length === 3, 'só os 3 perfis que filtram entram (explorador fora)');

@@ -13,7 +13,7 @@
  * caminho (orçamento vira filtro de preço, estilo vira faixa, etc.), para que cada
  * resposta conte de verdade. Compartilhável e reproduzível.
  */
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { LogoCompleto } from '@/componentes/Logo';
 import {
@@ -138,17 +138,15 @@ export default function QuizPage() {
                 <div className={styles.preset}>
                   {etiquetas.length > 0 ? (
                     <>
-                      <span className={styles.presetRotulo}>
-                        O que suas respostas filtraram
-                      </span>
-                      <ul className={styles.etiquetas}>
+                      <h2 className={styles.presetTitulo}>O que suas respostas filtraram</h2>
+                      <dl className={styles.etiquetas}>
                         {etiquetas.map((e) => (
-                          <li key={e.rotulo} className={styles.etiqueta}>
-                            <span className={styles.etiquetaRotulo}>{e.rotulo}</span>
-                            <span className={styles.etiquetaValor}>{e.valor}</span>
-                          </li>
+                          <Fragment key={e.rotulo}>
+                            <dt className={styles.etiquetaRotulo}>{e.rotulo}</dt>
+                            <dd className={styles.etiquetaValor}>{e.valor}</dd>
+                          </Fragment>
                         ))}
-                      </ul>
+                      </dl>
                       <p className={styles.presetNota}>
                         Cada resposta virou um filtro de verdade — o botão acima abre o
                         catálogo já assim.

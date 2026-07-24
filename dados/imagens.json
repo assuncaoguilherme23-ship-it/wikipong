@@ -72,6 +72,24 @@
       "fonte": "OperaTT",
       "fonteUrl": "https://www.operatt.com.br/bola-de-plastico-dhs-d40-3-estrelas-caixa-com-10-unidades",
       "consultadoEm": "2026-07-23"
+    },
+    "evolution": {
+      "arquivo": "evolution.jpg",
+      "fonte": "STIGA",
+      "fonteUrl": "https://www.stigaus.com/products/stiga-evolution-table-tennis-racket",
+      "consultadoEm": "2026-07-23"
+    },
+    "palio-expert": {
+      "arquivo": "palio-expert.png",
+      "fonte": "Palio",
+      "fonteUrl": "https://palioett.com/product/palio-expert-3-bat-case-expert-table-tennis/",
+      "consultadoEm": "2026-07-23"
+    },
+    "palio-ak47": {
+      "arquivo": "palio-ak47.jpg",
+      "fonte": "Table Tennis Hub",
+      "fonteUrl": "https://www.tabletennishub.net/products/palio-ak47-yellow",
+      "consultadoEm": "2026-07-23"
     }
   }
 }

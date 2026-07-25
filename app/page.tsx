@@ -17,6 +17,7 @@ import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { Radar } from '@/componentes/Radar';
 import { PrateleiraIniciantes } from '@/componentes/PrateleiraIniciantes';
+import { CarrosselHero } from '@/componentes/CarrosselHero';
 import { MATERIAIS } from '@/componentes/dados-materiais';
 import { brl } from '@/componentes/formato';
 import {
@@ -49,44 +50,57 @@ const brlCentavos = (v: number) => brl(v, true);
 // Eixos do radar "impressão digital": valores reais, Perdão derivado incluído (D-09).
 const EIXOS_RADAR = ['VEL', 'EFE', 'CTR', 'PER*'] as const;
 
+/* Os dois primeiros são as ações que importam — a grade dá peso maior a eles.
+   Só entra o que EXISTE (D-16): Profissionais e Notícias saíram do "em breve"
+   quando a camada de comunidade (D-19) foi ao ar. */
 const FEATURES_ATIVAS = [
   {
     titulo: 'Catálogo completo',
-    texto: 'Borrachas, lâminas, raquetes e bolas com ficha padronizada — crescendo a cada colheita.',
+    texto:
+      'Borrachas, lâminas, raquetes e bolas com ficha padronizada — cada uma no modo Simples ou Técnico, do jeito que você entende.',
     href: '/catalogo/',
+    destaque: true,
   },
   {
     titulo: 'Teste de perfil',
     texto: '1 minuto pra descobrir seu estilo e sair com sugestões concretas.',
     href: '/quiz/',
+    destaque: true,
   },
   {
-    titulo: 'Comparação lado a lado',
-    texto: 'Dois materiais na mesma tela, spec por spec, com o maior marcado como fato.',
+    titulo: 'Comparar lado a lado',
+    texto: 'Dois materiais na mesma tela, spec por spec, com o radar de características.',
     href: '/comparar/',
+    destaque: false,
   },
   {
-    titulo: 'Radar de características',
-    texto: 'Velocidade, spin e controle visualizados num relance.',
-    href: '/comparar/',
+    titulo: 'Conjuntos montados',
+    texto: 'Lâmina + duas borrachas que fazem sentido juntas, com o porquê de cada escolha.',
+    href: '/conjuntos/',
+    destaque: false,
   },
   {
-    titulo: 'Modo Simples ↔ Técnico',
-    texto: 'A mesma página fala com o iniciante e com o detalhista.',
-    href: '/catalogo/?modo=simples',
+    titulo: 'O que os profissionais usam',
+    texto: 'O setup de Calderano, Ma Long e outros — com fonte, data e link pra ficha.',
+    href: '/profissionais/',
+    destaque: false,
   },
   {
-    titulo: 'Glossário',
-    texto: 'Cada termo do esporte explicado em português claro.',
-    href: '/glossario/',
+    titulo: 'Guias e glossário',
+    texto: 'Do que a dureza muda no seu jogo até cada termo do esporte em português claro.',
+    href: '/aprender/',
+    destaque: false,
+  },
+  {
+    titulo: 'Notícias',
+    texto: 'O tênis de mesa do Brasil acompanhado de perto, sempre com a fonte.',
+    href: '/noticias/',
+    destaque: false,
   },
 ] as const;
 
-const FEATURES_EM_BREVE = [
-  { titulo: 'Videoaulas', texto: 'Técnica e fundamentos com quem vive o esporte.' },
-  { titulo: 'Comunidade', texto: 'Espaço pra trocar experiência com outros jogadores.' },
-  { titulo: 'Notícias', texto: 'O tênis de mesa do Brasil acompanhado de perto.' },
-] as const;
+/* Vaporware não ocupa card: vira uma linha de texto, sem peso visual (D-16). */
+const EM_BREVE = ['Videoaulas', 'Avaliações da comunidade', 'Assistente IA'] as const;
 
 function Verificado() {
   return (
@@ -170,16 +184,18 @@ export default function Home() {
               </div>
             </dl>
           </div>
+
+          {/* Prova visual: a enciclopédia MOSTRA material, não só fala dele. */}
+          <CarrosselHero />
         </section>
 
         {/* ── A verdade (banda mesa) ── */}
         <section className={styles.verdade}>
           <div className={`container ${styles.verdadeInterna}`}>
-            <p className={`${styles.kickerMesa} revela`}>A verdade que ninguém te conta</p>
-            <h2 className="revela">
+            <h2>
               Raquete de verdade <span className={styles.destaque}>não vem pronta</span> da loja.
             </h2>
-            <p className={`${styles.verdadeTexto} revela`}>
+            <p className={styles.verdadeTexto}>
               Quem joga sério monta a sua: uma lâmina + duas borrachas, escolhidas pro seu
               estilo. É essa combinação que muda o jogo — e é ela que o WikiPong te ensina a
               escolher.
@@ -189,7 +205,7 @@ export default function Home() {
 
         {/* ── As três dores (sequência numerada do Figma) ── */}
         <section className={`container ${styles.dores}`}>
-          <h2 className={`${styles.tituloSecao} revela`}>Por que escolher material é tão difícil?</h2>
+          <h2 className={styles.tituloSecao}>Por que escolher material é tão difícil?</h2>
           <ol className={styles.doresLista}>
             <li className={`${styles.dor} revela`}>
               <span className={`mono ${styles.dorNumero}`} aria-hidden="true">
@@ -218,8 +234,7 @@ export default function Home() {
         {/* ── Manifesto (D-02) + radar "impressão digital" ── */}
         <section className={styles.manifesto}>
           <div className={`container ${styles.manifestoGrade}`}>
-            <div className="revela">
-              <p className="eyebrow">O que é o WikiPong</p>
+            <div>
               <h2>Feito pra explicar, não pra empurrar.</h2>
               <p className={styles.manifestoTexto}>
                 O WikiPong existe pra te explicar — cada material ganha uma ficha neutra e
@@ -258,13 +273,17 @@ export default function Home() {
         {/* ── Materiais para começar (prateleira horizontal dos iniciantes) ── */}
         <PrateleiraIniciantes />
 
-        {/* ── O que você encontra aqui (EM BREVE mora aqui, e só aqui — D-16) ── */}
+        {/* ── O que você encontra aqui. Só o que EXISTE ganha card; o que vem por
+               aí é uma linha de texto, sem peso visual de vaporware (D-16). ── */}
         <section className={`container ${styles.features}`}>
-          <h2 className={`${styles.tituloSecao} revela`}>O que você encontra aqui</h2>
-          <p className={`${styles.featuresSub} revela`}>— e o que vem por aí</p>
+          <h2 className={styles.tituloSecao}>O que você encontra aqui</h2>
           <div className={styles.featuresGrade}>
             {FEATURES_ATIVAS.map((f) => (
-              <Link key={f.titulo} href={f.href} className={`${styles.feature} revela`}>
+              <Link
+                key={f.titulo}
+                href={f.href}
+                className={`${styles.feature} ${f.destaque ? styles.featureDestaque : ''}`}
+              >
                 <h3>{f.titulo}</h3>
                 <p>{f.texto}</p>
                 <span className={styles.featureSeta} aria-hidden="true">
@@ -272,34 +291,11 @@ export default function Home() {
                 </span>
               </Link>
             ))}
-            {FEATURES_EM_BREVE.map((f) => (
-              <div key={f.titulo} className={`${styles.featureFutura} revela`}>
-                <h3>
-                  {f.titulo} <span className={`mono ${styles.emBreve}`}>em breve</span>
-                </h3>
-                <p>{f.texto}</p>
-              </div>
-            ))}
-            <div className={`${styles.featureFutura} ${styles.featureIA} revela`}>
-              <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
-                <rect width="34" height="34" rx="10" fill="var(--cor-acento-escuro)" />
-                <path
-                  d="M9 12.5h16v9a2 2 0 0 1-2 2H14l-4 3v-3a2 2 0 0 1-1-1.8v-7.2a2 2 0 0 1 0-2z"
-                  fill="#fff"
-                  opacity="0.9"
-                />
-              </svg>
-              <div>
-                <h3>
-                  Assistente IA <span className={`mono ${styles.emBreve}`}>em breve</span>
-                </h3>
-                <p>
-                  Tire dúvidas sobre qualquer material, comparação ou termo — com respostas
-                  baseadas no conteúdo do site, não em achismo.
-                </p>
-              </div>
-            </div>
           </div>
+          <p className={styles.emBreveLinha}>
+            <span className={`mono ${styles.emBreveRotulo}`}>em breve</span>
+            {EM_BREVE.join(' · ')}
+          </p>
         </section>
 
         <hr className="linha-central" aria-hidden="true" />
@@ -307,7 +303,7 @@ export default function Home() {
         {/* ── Prova ao vivo (adição nossa além do Figma — D-18) ── */}
         <section id="prova" className={styles.prova}>
           <div className={`container ${styles.provaInterna}`}>
-          <div className={`${styles.provaHead} revela`}>
+          <div className={styles.provaHead}>
             <h2>Números que dá pra comparar de verdade</h2>
             <p>
               Nota de fabricante é escala interna de marketing — o 9.0 de uma marca não é o

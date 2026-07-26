@@ -126,6 +126,8 @@ export function Cabecalho() {
                   <Link href="/conjuntos/">Conjuntos montados</Link>
                   <Link href="/comparar/">Comparar lado a lado</Link>
                   <Link href="/quiz/">Teste de perfil</Link>
+                  <Link href="/escalas/">Tradutor de durezas</Link>
+                  <Link href="/marcas/">Marcas</Link>
                 </div>
               </div>
             )}

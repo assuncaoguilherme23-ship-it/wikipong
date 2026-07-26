@@ -720,3 +720,14 @@
 .traducaoTexto strong {
   color: var(--cor-tinta);
 }
+
+/* Marca no cabeçalho da ficha vira link pra página da marca */
+.metaMarca {
+  color: var(--cor-texto-acento);
+  text-decoration: none;
+  font-weight: 600;
+}
+.metaMarca:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

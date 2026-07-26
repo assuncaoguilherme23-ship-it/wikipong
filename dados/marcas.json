@@ -1,0 +1,45 @@
+{
+  "aviso": "MARCAS — a página de cada marca é majoritariamente DERIVADA dos dados que o site já tem (materiais do catálogo, faixa de preço real, escala de dureza declarada nas fichas, quais profissionais usam). O texto abaixo é EDITORIAL curto e restrito a fatos amplamente documentados (país de origem, linha pela qual a marca é conhecida). Não inventamos história de marca, faturamento nem superlativo de marketing (D-02/D-16). `site` é o endereço oficial que consultamos ao colher specs e imagens.",
+  "marcas": {
+    "Butterfly": {
+      "pais": "Japão",
+      "descricao": "A marca japonesa mais conhecida do esporte. As linhas Tenergy e Dignics são a referência de borracha tensionada fora da China, e as lâminas ALC (com fibra arylate-carbon) equipam boa parte do circuito profissional.",
+      "site": "https://www.butterfly-global.com/"
+    },
+    "Stiga": {
+      "pais": "Suécia",
+      "descricao": "Fabrica lâminas em Eskilstuna, na Suécia, desde 1944 — a Allround Classic é de 1967 e segue em linha. Marca associada ao jogo europeu clássico, de madeira pura e controle.",
+      "site": "https://www.stigasports.com/"
+    },
+    "DHS": {
+      "pais": "China",
+      "descricao": "Marca chinesa por trás da Hurricane, a borracha pegajosa que define o estilo chinês de ataque. Mede dureza na régua própria (DHS), que não se compara diretamente com a europeia.",
+      "site": "https://www.dhs-sports.com/"
+    },
+    "Tibhar": {
+      "pais": "Alemanha",
+      "descricao": "Marca alemã cuja linha Evolution popularizou as borrachas de esponja ESN entre jogadores de nível intermediário em diante.",
+      "site": "https://www.tibhar.com.br/"
+    },
+    "Xiom": {
+      "pais": "Coreia do Sul",
+      "descricao": "Marca coreana conhecida pelas linhas Vega e Omega, com borrachas produzidas na Alemanha (esponja ESN). A Vega Intro é uma das portas de entrada mais citadas para tensionadas.",
+      "site": "https://xiom.global/"
+    },
+    "Yasaka": {
+      "pais": "Japão",
+      "descricao": "A Mark V, lançada em 1969, é provavelmente a borracha mais vendida da história do esporte — e continua sendo recomendada para quem está formando técnica.",
+      "site": "https://yasakatabletennis.com/"
+    },
+    "Donic": {
+      "pais": "Alemanha",
+      "descricao": "Marca alemã com forte tradição em lâminas allround. A Appelgren Allplay leva o nome do sueco Mikael Appelgren, campeão europeu.",
+      "site": "https://www.donic.com/"
+    },
+    "Palio": {
+      "pais": "China",
+      "descricao": "Marca chinesa focada em custo-benefício. É a escolha frequente de primeira raquete e de primeira borracha por preço acessível.",
+      "site": "https://palioett.com/"
+    }
+  }
+}

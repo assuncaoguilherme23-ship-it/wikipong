@@ -53,6 +53,7 @@ import {
   faixaLegivel,
   sensacao,
 } from '@/src/logica/escalas';
+import { slug } from '@/src/logica/filtros';
 import estilos from './detalhe.module.css';
 
 export const dynamicParams = false;
@@ -140,7 +141,10 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
           <div>
             <h1 className={estilos.nome}>{m.nome}</h1>
             <p className={`mono ${estilos.meta}`}>
-              {m.marca} · {m.tipo} · nível {m.nivel}
+              <Link href={`/marcas/${slug(m.marca)}/`} className={estilos.metaMarca}>
+                {m.marca}
+              </Link>{' '}
+              · {m.tipo} · nível {m.nivel}
             </p>
           </div>
           <p className={`mono ${estilos.preco}`}>

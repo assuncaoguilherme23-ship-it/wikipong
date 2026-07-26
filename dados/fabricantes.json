@@ -11,7 +11,7 @@
       "fonte": "https://www.butterfly-global.com/en/products/detail/05800.html",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "36°" },
+        { "rotulo": "Dureza da esponja", "valor": "36° (escala Butterfly)" },
         { "rotulo": "Superfície", "valor": "Lisa, alta tensão (Spring Sponge)" }
       ],
       "indices": {
@@ -28,7 +28,7 @@
       "fonte": "https://www.butterfly-global.com/en/products/detail/06020.html",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "35°" },
+        { "rotulo": "Dureza da esponja", "valor": "35° (escala Butterfly)" },
         { "rotulo": "Superfície", "valor": "Lisa, alta tensão (Spring Sponge)" }
       ],
       "nota": "Os índices de velocidade/efeito desta ficha não foram embutidos: a leitura automática da página devolveu um valor inconsistente. Consulte a fonte oficial para os números vigentes."
@@ -38,7 +38,7 @@
       "fonte": "https://en.butterfly.tt/dignics-05.html",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "40°" },
+        { "rotulo": "Dureza da esponja", "valor": "40° (escala Butterfly)" },
         { "rotulo": "Superfície", "valor": "Lisa, alta tensão (Spring Sponge X)" }
       ]
     },

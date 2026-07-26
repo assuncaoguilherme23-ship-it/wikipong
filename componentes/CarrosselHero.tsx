@@ -18,7 +18,7 @@
  * todos pelas setas. `prefers-reduced-motion` desliga o giro automático (o
  * usuário ainda controla), e o override global mata a duração da transição.
  */
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
 import Link from 'next/link';
 import { materialPorId } from './dados-materiais';
 import { imagemDoMaterial, caminhoImagem } from './dados-imagens';
@@ -34,14 +34,24 @@ const ITENS = VITRINE.flatMap((id) => {
   return material && imagem ? [{ material, src: caminhoImagem(imagem) }] : [];
 });
 
-const INTERVALO_MS = 3600;
+/* Fluxo quase contínuo: a transição ocupa quase todo o intervalo, então o anel
+   está praticamente sempre em movimento — sobra só um respiro de ~300ms em que a
+   peça assenta de frente. Clique de seta usa duração curta: transição longa em
+   ação manual lê como travamento. */
+const INTERVALO_MS = 2400;
+const DUR_AUTO = 2100;
+const DUR_MANUAL = 600;
 
 export function CarrosselHero() {
   const total = ITENS.length;
   const [indice, setIndice] = useState(0);
+  /** A legenda segue quem JÁ chegou à frente (atualiza no fim da transição),
+   *  não quem está a caminho — senão o nome troca com a peça ainda saindo. */
+  const [indiceLegenda, setIndiceLegenda] = useState(0);
   const [pausado, setPausado] = useState(false);
+  const [manual, setManual] = useState(false);
   const [reduzir, setReduzir] = useState(false);
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const timerManual = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -52,14 +62,24 @@ export function CarrosselHero() {
   }, []);
 
   // Giro automático: só quando ninguém está interagindo e quem pediu menos
-  // movimento não é ignorado.
+  // movimento não é ignorado. Depende de `indice` de propósito — assim o relógio
+  // reinicia a cada avanço (inclusive manual) e a seta nunca é atropelada.
   useEffect(() => {
     if (pausado || reduzir || total < 2) return;
-    const t = setInterval(() => setIndice((i) => i + 1), INTERVALO_MS);
-    return () => clearInterval(t);
-  }, [pausado, reduzir, total]);
+    const t = setTimeout(() => setIndice((i) => i + 1), INTERVALO_MS);
+    return () => clearTimeout(t);
+  }, [pausado, reduzir, total, indice]);
 
-  const girar = useCallback((delta: number) => setIndice((i) => i + delta), []);
+  useEffect(() => () => {
+    if (timerManual.current) clearTimeout(timerManual.current);
+  }, []);
+
+  const girar = useCallback((delta: number) => {
+    setManual(true);
+    setIndice((i) => i + delta);
+    if (timerManual.current) clearTimeout(timerManual.current);
+    timerManual.current = setTimeout(() => setManual(false), DUR_MANUAL);
+  }, []);
 
   if (total === 0) return null;
 
@@ -69,21 +89,34 @@ export function CarrosselHero() {
     const bruto = Math.abs(((i - indice) % total + total) % total);
     return Math.min(bruto, total - bruto);
   };
-  const frente = ITENS[((indice % total) + total) % total];
+  const frente = ITENS[((indiceLegenda % total) + total) % total];
 
   return (
-    <div className={estilos.bloco}>
-      <div
-        className={estilos.palco}
-        ref={containerRef}
-        onMouseEnter={() => setPausado(true)}
-        onMouseLeave={() => setPausado(false)}
-        onFocusCapture={() => setPausado(true)}
-        onBlurCapture={() => setPausado(false)}
-      >
+    /* A pausa mora no BLOCO inteiro (não só no palco): assim passar o mouse pras
+       setas já segura o giro, e o clique não é atropelado pelo avanço automático. */
+    <div
+      className={estilos.bloco}
+      onMouseEnter={() => setPausado(true)}
+      onMouseLeave={() => setPausado(false)}
+      onFocusCapture={() => setPausado(true)}
+      onBlurCapture={() => setPausado(false)}
+    >
+      <div className={estilos.palco}>
         <div
           className={estilos.anel}
-          style={{ transform: `translateZ(calc(var(--raio) * -1)) rotateY(${-indice * passo}deg)` }}
+          onTransitionEnd={() => setIndiceLegenda(indice)}
+          style={
+            {
+              transform: `translateZ(calc(var(--raio) * -1)) rotateY(${-indice * passo}deg)`,
+              // Duração e curva viajam como custom properties: o giro do anel e o
+              // brilho dos itens andam no MESMO ritmo (senão a peça acende antes
+              // de chegar à frente).
+              '--dur': `${manual ? DUR_MANUAL : DUR_AUTO}ms`,
+              '--curva': manual
+                ? 'cubic-bezier(0.22, 1, 0.36, 1)' /* saída rápida: resposta ao clique */
+                : 'cubic-bezier(0.45, 0, 0.55, 1)' /* senoidal suave: fluxo sem tranco */,
+            } as CSSProperties
+          }
         >
           {ITENS.map((item, i) => {
             const d = distancia(i);

@@ -170,6 +170,38 @@ export function serializeQuery(estado: FiltroEstado): string {
   return p.toString();
 }
 
+// ───────────────────── Busca textual ─────────────────────
+
+/**
+ * Normaliza para busca: minúsculas e SEM acento — quem digita no celular escreve
+ * "lamina", não "lâmina", e o catálogo tem que achar do mesmo jeito.
+ */
+export function normalizar(texto: string): string {
+  return texto
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .trim();
+}
+
+/**
+ * Busca por nome, marca, tipo e nível. Vive AQUI (módulo puro) e não na tela,
+ * como o resto da lógica do projeto.
+ *
+ * Decisões: termos separados por espaço combinam em E ("butterfly borracha" tem
+ * de casar os dois), e não há `FiltroEstado` novo — busca é ortogonal às facetas,
+ * então compõe com `aplicar` em vez de virar mais um campo do estado.
+ * Termo vazio devolve tudo (nunca esconde catálogo por engano).
+ */
+export function buscar<T extends Material>(materiais: readonly T[], termo: string): T[] {
+  const termos = normalizar(termo).split(/\s+/).filter(Boolean);
+  if (termos.length === 0) return [...materiais];
+  return materiais.filter((m) => {
+    const alvo = normalizar(`${m.nome} ${m.marca} ${m.tipo} ${m.nivel}`);
+    return termos.every((t) => alvo.includes(t));
+  });
+}
+
 // ───────────────────── Aplicação (filtra + ordena) ─────────────────────
 
 const dentro = (v: number, f: Faixa | null): boolean => f === null || (v >= f.min && v <= f.max);

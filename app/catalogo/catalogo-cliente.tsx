@@ -18,6 +18,7 @@ import { useSearchParams } from 'next/navigation';
 import {
   aplicar,
   alternarFaceta,
+  buscar,
   comFaixa,
   comOrdenacao,
   facetas,
@@ -74,16 +75,56 @@ export function CatalogoCliente() {
   const [modo, mudarModo] = usarModo(parametros.get('modo'));
   const [filtrosAbertos, setFiltrosAbertos] = useState(false);
 
-  const resultados = useMemo(() => aplicar(MATERIAIS, estado), [estado]);
+  /* Busca e seleção-de-comparação são estado de INTERAÇÃO, não de navegação: moram
+     em React (resposta imediata a cada tecla/clique) e são ESPELHADOS na URL via
+     replaceState — assim continuam compartilháveis e sobrevivem ao refresh (D-12)
+     sem encher o histórico de uma entrada por letra digitada. Filtro segue o
+     contrário: URL é a fonte, pushState, back-button navega entre filtros. */
+  const [termo, setTermo] = useState(() => parametros.get('q') ?? '');
+  const [paraComparar, setParaComparar] = useState<string[]>(() =>
+    (parametros.get('comparar') ?? '').split(',').filter(Boolean).slice(0, 2),
+  );
+
+  // Busca primeiro (reduz o conjunto), facetas e ordenação por cima.
+  const resultados = useMemo(() => aplicar(buscar(MATERIAIS, termo), estado), [estado, termo]);
   const grupos = useMemo(() => facetas(MATERIAIS), []);
 
-  // D-12: pushState (entra no histórico) preservando o modo de exibição da URL.
-  function navegar(novo: FiltroEstado) {
+  /** Monta a URL preservando o que não pertence ao motor de filtros. */
+  function montarURL(novo: FiltroEstado, q: string, comparar: string[]) {
     const p = new URLSearchParams(serializeQuery(novo));
     const modoURL = parametros.get('modo');
     if (modoURL) p.set('modo', modoURL);
+    if (q.trim()) p.set('q', q.trim());
+    if (comparar.length) p.set('comparar', comparar.join(','));
     const qs = p.toString();
-    window.history.pushState(null, '', qs ? `?${qs}` : window.location.pathname);
+    return qs ? `?${qs}` : window.location.pathname;
+  }
+
+  // D-12: pushState (entra no histórico) preservando modo, busca e seleção.
+  function navegar(novo: FiltroEstado) {
+    window.history.pushState(null, '', montarURL(novo, termo, paraComparar));
+  }
+
+  function mudarBusca(valor: string) {
+    setTermo(valor);
+    window.history.replaceState(null, '', montarURL(estado, valor, paraComparar));
+  }
+
+  /** Comparação é de DOIS (é o que /comparar aceita) — o terceiro clique não
+   *  some com a seleção em silêncio: os checkboxes livres ficam desabilitados. */
+  function alternarComparacao(id: string) {
+    const novo = paraComparar.includes(id)
+      ? paraComparar.filter((s) => s !== id)
+      : paraComparar.length < 2
+        ? [...paraComparar, id]
+        : paraComparar;
+    setParaComparar(novo);
+    window.history.replaceState(null, '', montarURL(estado, termo, novo));
+  }
+
+  function limparComparacao() {
+    setParaComparar([]);
+    window.history.replaceState(null, '', montarURL(estado, termo, []));
   }
 
   // Contagem anunciada a leitores de tela quando o filtro muda.
@@ -136,6 +177,32 @@ export function CatalogoCliente() {
         <div className={estilos.topo}>
           <h1 className={estilos.titulo}>Materiais</h1>
           <SeletorModo modo={modo} aoMudar={mudarModo} />
+        </div>
+
+        {/* Busca: o caminho de quem JÁ sabe o nome do produto e não quer filtrar. */}
+        <div className={estilos.busca}>
+          <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true" className={estilos.buscaIcone}>
+            <circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" strokeWidth="2" />
+            <path d="M13.5 13.5 17 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+          <input
+            type="search"
+            className={estilos.buscaCampo}
+            value={termo}
+            onChange={(e) => mudarBusca(e.target.value)}
+            placeholder="Buscar por nome, marca ou tipo…"
+            aria-label="Buscar material por nome, marca ou tipo"
+          />
+          {termo && (
+            <button
+              type="button"
+              className={estilos.buscaLimpar}
+              onClick={() => mudarBusca('')}
+              aria-label="Limpar busca"
+            >
+              ×
+            </button>
+          )}
         </div>
 
         <div className={estilos.corpo}>
@@ -247,21 +314,42 @@ export function CatalogoCliente() {
             )}
 
             {resultados.length === 0 ? (
-              /* Empty state honesto (D-16): diz o que houve e oferece a saída real. */
+              /* Empty state honesto (D-16): diz o que houve e oferece a saída real —
+                 e distingue "sua busca não achou" de "seus filtros não deixam passar". */
               <div className={estilos.vazio}>
-                <p className={estilos.vazioTitulo}>Nenhum material passa por esses filtros.</p>
-                <p>
-                  Nada está escondido: o catálogo tem {MATERIAIS.length} itens e essa combinação
-                  de filtros não deixa nenhum passar.
+                <p className={estilos.vazioTitulo}>
+                  {termo
+                    ? `Nada encontrado para “${termo}”.`
+                    : 'Nenhum material passa por esses filtros.'}
                 </p>
-                <button type="button" className="botao-secundario" onClick={() => navegar(filtroVazio())}>
-                  Limpar os filtros
-                </button>
+                <p>
+                  Nada está escondido: o catálogo tem {MATERIAIS.length} itens
+                  {termo
+                    ? ' e nenhum deles casa com esse termo. Vale tentar só a marca (ex.: Butterfly) ou o tipo (ex.: borracha).'
+                    : ' e essa combinação de filtros não deixa nenhum passar.'}
+                </p>
+                {termo && (
+                  <button type="button" className="botao-secundario" onClick={() => mudarBusca('')}>
+                    Limpar a busca
+                  </button>
+                )}
+                {temFiltro && (
+                  <button type="button" className="botao-secundario" onClick={() => navegar(filtroVazio())}>
+                    Limpar os filtros
+                  </button>
+                )}
               </div>
             ) : (
               <ul className={estilos.grade}>
                 {resultados.map((m) => (
-                  <CartaoMaterial key={m.id} material={m as MaterialCatalogo} modo={modo} />
+                  <CartaoMaterial
+                    key={m.id}
+                    material={m as MaterialCatalogo}
+                    modo={modo}
+                    selecionado={paraComparar.includes(m.id)}
+                    bloqueado={!paraComparar.includes(m.id) && paraComparar.length >= 2}
+                    aoAlternar={() => alternarComparacao(m.id)}
+                  />
                 ))}
               </ul>
             )}
@@ -274,12 +362,51 @@ export function CatalogoCliente() {
         </div>
       </main>
 
+      {/* Barra de comparação: aparece só com seleção, e diz o que falta pra
+          funcionar em vez de oferecer um botão morto (D-16). */}
+      {paraComparar.length > 0 && (
+        <div className={estilos.barraComparar} role="region" aria-label="Comparação">
+          <p className={estilos.barraTexto}>
+            <b className="mono">{paraComparar.length}</b> de 2 selecionados
+            {paraComparar.length === 1 && (
+              <span className={estilos.barraDica}> — escolha mais um pra comparar</span>
+            )}
+          </p>
+          <div className={estilos.barraAcoes}>
+            <button type="button" className="botao-secundario" onClick={limparComparacao}>
+              Limpar
+            </button>
+            {paraComparar.length === 2 ? (
+              <Link href={`/comparar/?ids=${paraComparar.join(',')}`} className="botao-primario">
+                Comparar →
+              </Link>
+            ) : (
+              <button type="button" className="botao-primario" disabled>
+                Comparar →
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
       <Rodape />
     </>
   );
 }
 
-function CartaoMaterial({ material: m, modo }: { material: MaterialCatalogo; modo: 'simples' | 'tecnico' }) {
+function CartaoMaterial({
+  material: m,
+  modo,
+  selecionado,
+  bloqueado,
+  aoAlternar,
+}: {
+  material: MaterialCatalogo;
+  modo: 'simples' | 'tecnico';
+  selecionado: boolean;
+  bloqueado: boolean;
+  aoAlternar: () => void;
+}) {
   const perdaoValor = perdao(m.specs, m.durezaUnificada);
   const linhas = [
     ['Velocidade', 'velocidade', m.specs.velocidade],
@@ -288,7 +415,21 @@ function CartaoMaterial({ material: m, modo }: { material: MaterialCatalogo; mod
   ] as const;
 
   return (
-    <li>
+    <li className={`${estilos.itemGrade} ${selecionado ? estilos.itemSelecionado : ''}`}>
+    {/* Fora do <Link> de propósito: checkbox dentro de link disputa o clique. */}
+    <label
+      className={`${estilos.marcarComparar} ${bloqueado ? estilos.marcarBloqueado : ''}`}
+      title={bloqueado ? 'A comparação é de dois materiais' : 'Selecionar para comparar'}
+    >
+      <input
+        type="checkbox"
+        checked={selecionado}
+        disabled={bloqueado}
+        onChange={aoAlternar}
+        aria-label={`Comparar ${m.nome}`}
+      />
+      <span aria-hidden="true">Comparar</span>
+    </label>
     <Link href={`/materiais/${m.id}/`} className={estilos.cartao}>
       <div className={estilos.cartaoTopo}>
         <FotoProduto id={m.id} nome={m.nome} tipo={m.tipo} tamanho={56} />

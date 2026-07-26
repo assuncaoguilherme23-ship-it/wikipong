@@ -15,6 +15,7 @@ import {
 } from '../src/logica/recomendacao.js';
 import {
   filtroVazio, parseQuery, serializeQuery, aplicar, alternarFaceta, comOrdenacao, facetas,
+  buscar, normalizar,
   Material,
 } from '../src/logica/filtros.js';
 import { etiquetasDoPreset } from '../src/logica/descrever-filtro.js';
@@ -167,6 +168,21 @@ const f0 = filtroVazio();
 const f1 = alternarFaceta(f0, 'tipos', 'borracha');
 afirma(f0.tipos.length === 0 && jeq(f1.tipos, ['borracha']), 'alternarFaceta é imutável');
 afirma(f0.ordenar === 'relevancia' && comOrdenacao(f0, 'perdao').ordenar === 'perdao', 'comOrdenacao é imutável');
+
+// ───────── busca textual: compõe com o motor, não é campo do estado ─────────
+afirma(normalizar('Lâmina') === 'lamina', 'normalizar tira acento e caixa');
+afirma(jeq(ids(buscar(CAT, 'butterfly')), ['M4', 'M7']), 'busca acha por marca');
+afirma(jeq(ids(buscar(CAT, 'stiga raquete')), ['M2']), 'termos separados combinam em E');
+afirma(jeq(ids(buscar(CAT, 'intermediario')), ['M6', 'M7']), 'busca sem acento acha dado acentuado');
+afirma(buscar(CAT, '   ').length === CAT.length, 'termo vazio devolve o catálogo inteiro');
+afirma(buscar(CAT, 'zzz').length === 0, 'termo sem correspondência devolve vazio');
+afirma(
+  jeq(ids(aplicar(buscar(CAT, 'butterfly'), parseQuery('nivel=intermediario'))), ['M7']),
+  'busca compõe com aplicar (faceta por cima do resultado)',
+);
+const antesBusca = CAT.length;
+buscar(CAT, 'stiga');
+afirma(CAT.length === antesBusca, 'buscar não muta o array de entrada');
 
 // ───────── quiz enriquecido: cada resposta vira filtro REAL (D-18/D-12) ─────────
 // Antes, orçamento/objetivo/estilo eram coletados mas NÃO mudavam nada. Agora refinam

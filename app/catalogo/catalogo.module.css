@@ -16,6 +16,63 @@
   font-weight: 800;
 }
 
+/* ── Busca: o caminho de quem já sabe o nome do produto ── */
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  padding: 0 0.9rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  transition: border-color 160ms ease;
+}
+.busca:focus-within {
+  border-color: var(--cor-acento);
+}
+.buscaIcone {
+  flex-shrink: 0;
+  color: var(--cor-mudo);
+}
+.buscaCampo {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  font: inherit;
+  color: var(--cor-tinta);
+  background: none;
+  border: none;
+  padding: 0;
+}
+.buscaCampo:focus {
+  outline: none; /* o anel vai no invólucro (:focus-within), não no campo */
+}
+.buscaCampo::placeholder {
+  color: var(--cor-tinta-suave); /* AA: o token 'mudo' reprova em texto pequeno */
+}
+/* Some o X nativo do type=search: já temos um botão rotulado e acessível. */
+.buscaCampo::-webkit-search-cancel-button {
+  appearance: none;
+}
+.buscaLimpar {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  font: inherit;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--cor-tinta-suave);
+  background: none;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.buscaLimpar:hover {
+  color: var(--cor-tinta);
+  background: var(--cor-superficie-2);
+}
+
 .corpo {
   display: grid;
   grid-template-columns: 1fr;
@@ -214,6 +271,60 @@
   grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
   gap: 1rem;
 }
+
+/* O item ancora o checkbox de comparação, que fica FORA do link do cartão. */
+.itemGrade {
+  position: relative;
+}
+.marcarComparar {
+  position: absolute;
+  z-index: 1;
+  top: 0.6rem;
+  right: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 32px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.72rem;
+  color: var(--cor-tinta-suave);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: 999px;
+  cursor: pointer;
+  /* Discreto até o cartão ser tocado/focado — não compete com o conteúdo. */
+  opacity: 0;
+  transition: opacity 160ms ease, border-color 160ms ease;
+}
+.marcarComparar input {
+  margin: 0;
+  cursor: inherit;
+}
+.itemGrade:hover .marcarComparar,
+.itemGrade:focus-within .marcarComparar,
+.itemSelecionado .marcarComparar {
+  opacity: 1;
+}
+/* Sem hover (toque) a caixa é sempre visível: senão fica inalcançável no celular. */
+@media (hover: none) {
+  .marcarComparar {
+    opacity: 1;
+  }
+}
+.itemSelecionado .marcarComparar {
+  color: var(--cor-texto-acento);
+  border-color: var(--cor-acento);
+  background: var(--cor-acento-suave);
+}
+.marcarBloqueado {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.itemSelecionado .cartao {
+  border-color: var(--cor-acento);
+  box-shadow: 0 0 0 1px var(--cor-acento), var(--sombra-cartao);
+}
+
 /* O cartão inteiro é o link para a ficha do material (/materiais/[id]) */
 .cartao {
   display: flex;
@@ -362,4 +473,52 @@
   margin-top: 1.5rem;
   font-size: 0.8rem;
   color: var(--cor-tinta-suave);
+}
+
+/* ── Barra de comparação (fixa no rodapé enquanto houver seleção) ──
+      Fica na zona do polegar no celular, que é onde a ação acontece. */
+.barraComparar {
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  bottom: clamp(0.75rem, 3vw, 1.5rem);
+  transform: translateX(-50%);
+  width: min(42rem, calc(100% - 1.5rem));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  padding: 0.75rem 0.9rem 0.75rem 1.25rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-lg);
+  box-shadow: 0 8px 30px rgba(40, 48, 39, 0.18);
+}
+.barraTexto {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--cor-tinta);
+}
+.barraDica {
+  color: var(--cor-tinta-suave);
+}
+.barraAcoes {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+/* Entrada curta: a barra é feedback de estado, não coreografia. */
+@media (prefers-reduced-motion: no-preference) {
+  .barraComparar {
+    animation: subirBarra 200ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @keyframes subirBarra {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(12px);
+    }
+  }
 }

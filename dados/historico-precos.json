@@ -1,0 +1,182 @@
+{
+  "aviso": "HISTÓRICO DE PREÇOS — gerado por scripts/historico-precos.mjs a partir do histórico do git de dados/ofertas.json. Não editar à mão: é derivado. Cada ponto é uma checagem em que o preço MUDOU (o primeiro sempre entra); repetir o mesmo valor não vira ponto novo, para não simular acompanhamento que não houve (D-16).",
+  "geradoEm": "2026-07-26",
+  "materiais": {
+    "tenergy05": [
+      {
+        "loja": "JJ Yamada",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 537
+          }
+        ]
+      }
+    ],
+    "viscaria": [
+      {
+        "loja": "JJ Yamada",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 1655
+          }
+        ]
+      }
+    ],
+    "rozena": [
+      {
+        "loja": "JJ Yamada",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 390
+          }
+        ]
+      }
+    ],
+    "dignics05": [
+      {
+        "loja": "JJ Yamada",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 645
+          }
+        ]
+      }
+    ],
+    "xiom-vega-intro": [
+      {
+        "loja": "OperaTT",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 220
+          }
+        ]
+      }
+    ],
+    "mxp": [
+      {
+        "loja": "Tibhar Brasil",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 399
+          }
+        ]
+      }
+    ],
+    "hurricane": [
+      {
+        "loja": "Tênis de Mesa Store",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 329
+          }
+        ]
+      }
+    ],
+    "markv": [
+      {
+        "loja": "Tênis de Mesa Store",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 329
+          }
+        ]
+      }
+    ],
+    "fzd": [
+      {
+        "loja": "JJ Yamada",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 1489
+          }
+        ]
+      }
+    ],
+    "palio-ak47": [
+      {
+        "loja": "Mimilon",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 155
+          }
+        ]
+      }
+    ],
+    "d40": [
+      {
+        "loja": "OperaTT",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 85
+          }
+        ]
+      }
+    ],
+    "donic-appelgren": [
+      {
+        "loja": "AmericaTT",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 250
+          }
+        ]
+      }
+    ],
+    "stiga-allround": [
+      {
+        "loja": "AmericaTT",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 338
+          }
+        ]
+      }
+    ],
+    "evolution": [
+      {
+        "loja": "Amazon",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 443
+          }
+        ]
+      }
+    ],
+    "palio-expert": [
+      {
+        "loja": "Amazon",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 295
+          }
+        ]
+      }
+    ],
+    "tibhar-aurus-soft": [
+      {
+        "loja": "AliExpress (importado)",
+        "pontos": [
+          {
+            "data": "2026-07-22",
+            "preco": 169
+          }
+        ]
+      }
+    ]
+  }
+}

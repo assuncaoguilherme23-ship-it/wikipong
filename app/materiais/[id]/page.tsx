@@ -54,6 +54,7 @@ import {
   sensacao,
 } from '@/src/logica/escalas';
 import { slug } from '@/src/logica/filtros';
+import { variacao, dataCurta } from '@/componentes/dados-historico';
 import estilos from './detalhe.module.css';
 
 export const dynamicParams = false;
@@ -440,6 +441,28 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                         ? `checado em ${dataLegivel(o.atualizadoEm)}`
                         : 'preço na loja'}
                     </span>
+                    {/* Histórico do git (D-13): uma checagem NÃO é acompanhamento,
+                        e a copy distingue os dois casos em vez de insinuar série. */}
+                    {(() => {
+                      const v = variacao(m.id, o.loja);
+                      if (!v) return null;
+                      if (v.observacoes === 1)
+                        return (
+                          <span className={estilos.historicoUnico}>
+                            primeira checagem — ainda sem variação registrada
+                          </span>
+                        );
+                      const subiu = v.delta > 0;
+                      return (
+                        <span className={estilos.historico}>
+                          <span className={subiu ? estilos.historicoAlta : estilos.historicoBaixa}>
+                            {subiu ? '▲' : '▼'} {Math.abs(v.percentual)}%
+                          </span>{' '}
+                          desde {dataCurta(v.primeiro.data)} (era {brl(v.primeiro.preco)}) ·{' '}
+                          {v.observacoes} checagens
+                        </span>
+                      );
+                    })()}
                     <a
                       href={`/ir/?o=${idDaOferta(o)}`}
                       className={`botao-secundario ${estilos.ofertaBotao}`}

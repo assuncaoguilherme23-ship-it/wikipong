@@ -731,3 +731,25 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* ── Histórico de preço (série vinda do git — D-13) ── */
+.historicoUnico,
+.historico {
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  color: var(--cor-mudo);
+}
+.historico {
+  color: var(--cor-tinta-suave);
+}
+.historicoAlta,
+.historicoBaixa {
+  font-family: var(--fonte-mono);
+  font-weight: 600;
+}
+.historicoAlta {
+  color: var(--cor-tinta);
+}
+.historicoBaixa {
+  color: var(--cor-texto-acento);
+}

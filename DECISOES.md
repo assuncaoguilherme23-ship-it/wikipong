@@ -485,3 +485,37 @@ do D-14 na ficha; respeita D-16 (só o que existe aparece na nav).
 **Status:** ativa — as três features no ar (profissionais, sinal da comunidade, notícias).
 Crescem por curadoria (prints do fundador p/ o que não é fetchável). Próximo salto de
 comunidade seria o D-11 (avaliações interativas), que exige backend (D-17).
+
+---
+
+## D-20 · Ferramentas derivadas (a base vira produto)
+
+**Decisão:** o site acumulou dado suficiente (fichas de fabricante com escala, preços
+com data, setups de profissionais, imagens) para que ele deixe de ser só consultável e
+vire **ferramenta**. Cinco entregas, todas com a mesma regra: **derivar do que já existe**
+em vez de pedir dado novo, e **recusar o número que não dá pra defender** (D-16).
+
+1. **`/escalas` — tradutor de durezas.** `src/logica/escalas.ts` tira a conversão entre
+   réguas (DHS/ESN/Butterfly) de dentro de um guia e a torna dado reutilizável. Devolve
+   **faixa**, não número: a conversão é regra comunitária com incerteza real. A tabela de
+   exemplos é derivada do catálogo — só entra material cuja ficha declara grau E escala.
+2. **Tradução inline na ficha.** Onde o fabricante declara régua não-ESN, a ficha traduz
+   ali mesmo. É o argumento do site aplicado ao material que a pessoa está olhando.
+3. **`/marcas` e `/marcas/[marca]`.** Distribuição (busca por marca é real) sem página
+   vazia: materiais, faixa de preço, régua de dureza e quais pros usam — tudo calculado.
+   O editorial é curto e restrito a fato amplamente documentado; cada página declara que
+   o WikiPong não é ligado a marca nenhuma.
+4. **`/montar` — configurador.** `src/logica/montagem.ts` soma o preço real e emite
+   observações derivadas com critério visível (nível desencontrado, lados assimétricos,
+   diferença de dureza, perdão baixo dos dois lados). **Não publica nota do conjunto** —
+   mesma recusa de `/conjuntos`, e a recusa é uma seção da tela, não um rodapé.
+5. **Histórico de preço.** `scripts/historico-precos.mjs` destila a série do próprio git
+   (D-13: o git É a série temporal) para `dados/historico-precos.json`. Só vira ponto a
+   checagem em que o preço MUDOU. Hoje há 16 pontos e **zero variação** — então a ficha
+   diz *"primeira checagem — ainda sem variação registrada"* em vez de desenhar um
+   gráfico de um ponto. O mecanismo acumula valor a partir de agora.
+
+**Porquê:** consulta se resolve com uma busca; ferramenta cria hábito. E cada uma destas
+nasce do diferencial que o projeto já pagou para ter — dado com procedência.
+
+**Status:** ativa.

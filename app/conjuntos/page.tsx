@@ -96,6 +96,7 @@ export default function PaginaConjuntos() {
             que é opinião editorial, e está rotulada como tal.
           </p>
           <p className={estilos.notaLinks}>
+            <Link href="/montar/">Montar a minha do zero →</Link>
             <Link href="/aprender/montando-raquete/">Guia: montando sua raquete →</Link>
             <Link href="/quiz/">Descobrir meu perfil →</Link>
           </p>

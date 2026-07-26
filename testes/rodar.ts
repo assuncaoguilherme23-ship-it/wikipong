@@ -23,6 +23,7 @@ import {
   DESLOCAMENTO_ATE_ESN, INCERTEZA,
 } from '../src/logica/escalas.js';
 import { etiquetasDoPreset } from '../src/logica/descrever-filtro.js';
+import { precoTotal, observacoes, completa, pecasDe } from '../src/logica/montagem.js';
 
 let ok = 0; const falhas: string[] = [];
 function afirma(cond: boolean, msg: string) { if (cond) ok++; else falhas.push(msg); }
@@ -314,6 +315,31 @@ afirma(primeiroGrau('46,7° a 47,7° (escala ESN)') === 46.7, 'lê grau com vír
 afirma(primeiroGrau('sem número') === null, 'ficha sem grau devolve null');
 afirma(escalaDoTexto('37° a 41° (escala DHS)') === 'dhs', 'reconhece a escala DHS na ficha');
 afirma(escalaDoTexto('40° a 45° (≈ 42,5°)') === null, 'ficha que não diz a escala devolve null');
+
+
+// ───────── montagem: soma real e observações derivadas (sem nota combinada) ─────────
+const pecaM = (id: string, nivel: string, intencao: string, preco: number,
+  vel: number, spin: number, ctrl: number, dureza: number) => ({
+  id, nome: id, marca: 'X', tipo: 'Borracha', nivel, intencao, preco,
+  specs: { velocidade: vel, spin, controle: ctrl }, durezaUnificada: dureza,
+});
+const laminaIni = { ...pecaM('L1', 'Iniciante', 'controlar', 300, 5, 6, 9, 47), tipo: 'Lâmina' };
+const borrAvanc = pecaM('B1', 'Avançado', 'atacar', 450, 9, 9.3, 7, 47);
+const borrIni = pecaM('B2', 'Iniciante', 'controlar', 200, 5, 6, 9, 41);
+
+afirma(precoTotal({}) === 0, 'montagem vazia soma zero');
+afirma(precoTotal({ lamina: laminaIni }) === 300, 'montagem parcial soma o que tem');
+afirma(precoTotal({ lamina: laminaIni, fh: borrAvanc, bh: borrIni }) === 950, 'soma real das 3 peças');
+afirma(!completa({ lamina: laminaIni }) && completa({ lamina: laminaIni, fh: borrAvanc, bh: borrIni }), 'completa exige as 3');
+afirma(pecasDe({ lamina: laminaIni, bh: borrIni }).length === 2, 'pecasDe lista só o escolhido');
+
+const obsNivel = observacoes({ lamina: laminaIni, fh: borrAvanc, bh: borrIni });
+afirma(obsNivel.some(o => o.titulo === 'Níveis muito diferentes'), 'detecta Iniciante × Avançado');
+afirma(obsNivel.some(o => o.titulo === 'Um lado bem mais duro que o outro'), 'detecta 6°+ de diferença entre lados');
+afirma(obsNivel.some(o => o.tipo === 'atencao'), 'observação de nível é atenção, não info');
+const obsIguais = observacoes({ lamina: laminaIni, fh: borrIni, bh: borrIni });
+afirma(!obsIguais.some(o => o.titulo === 'Níveis muito diferentes'), 'mesmo nível não gera alerta');
+afirma(observacoes({}).length === 0, 'montagem vazia não gera observação');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

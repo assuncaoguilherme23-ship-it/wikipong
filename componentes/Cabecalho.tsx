@@ -123,6 +123,7 @@ export function Cabecalho() {
                 </div>
                 <div className={estilos.megaColuna}>
                   <p className={`mono ${estilos.megaTitulo}`}>Ferramentas</p>
+                  <Link href="/montar/">Montar minha raquete</Link>
                   <Link href="/conjuntos/">Conjuntos montados</Link>
                   <Link href="/comparar/">Comparar lado a lado</Link>
                   <Link href="/quiz/">Teste de perfil</Link>

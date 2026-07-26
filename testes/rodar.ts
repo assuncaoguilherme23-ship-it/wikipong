@@ -18,6 +18,10 @@ import {
   buscar, normalizar,
   Material,
 } from '../src/logica/filtros.js';
+import {
+  paraESN, converter, faixaLegivel, sensacao, primeiroGrau, escalaDoTexto,
+  DESLOCAMENTO_ATE_ESN, INCERTEZA,
+} from '../src/logica/escalas.js';
 import { etiquetasDoPreset } from '../src/logica/descrever-filtro.js';
 
 let ok = 0; const falhas: string[] = [];
@@ -290,6 +294,26 @@ afirma(combinaComPerfil(CAT[5], atacante).combina, 'M6 combina com atacante-em-f
 
 afirma(vereditosDoMaterial(CAT[0]).length === 3, 'vereditosDoMaterial cobre os 3 perfis');
 afirma(ROTULO_INTENCAO.atacar === 'Ataque', 'rótulo de intenção traduzido');
+
+
+// ───────── escalas de dureza: a tradução entre réguas (A VALIDAR — D-09) ─────────
+afirma(DESLOCAMENTO_ATE_ESN.esn === 0, 'ESN é a régua de referência (deslocamento 0)');
+// O caso que dá nome ao problema: 39° DHS é MUITO mais duro que 39° ESN.
+const hDhs = paraESN(39, 'dhs');
+afirma(hDhs.min === 49 && hDhs.max === 53, '39° DHS ≈ 49–53° ESN');
+afirma(faixaLegivel(hDhs) === '49 a 53°', 'faixa legível sem casas decimais');
+afirma(paraESN(47, 'esn').min === 47 - INCERTEZA, 'ESN→ESN só aplica a incerteza');
+const idaDhs = converter(39, 'dhs', 'esn');
+const centroIda = (idaDhs.min + idaDhs.max) / 2;
+afirma(centroIda === 51, 'centro da conversão DHS→ESN é 51');
+const voltaDhs = converter(centroIda, 'esn', 'dhs');
+afirma((voltaDhs.min + voltaDhs.max) / 2 === 39, 'ida e volta entre escalas fecha no valor original');
+afirma(sensacao(38).rotulo === 'Muito macia' && sensacao(51).rotulo === 'Dura', 'sensação por faixa ESN');
+afirma(sensacao(57).rotulo === 'Muito dura', 'topo da escala');
+afirma(primeiroGrau('46,7° a 47,7° (escala ESN)') === 46.7, 'lê grau com vírgula decimal');
+afirma(primeiroGrau('sem número') === null, 'ficha sem grau devolve null');
+afirma(escalaDoTexto('37° a 41° (escala DHS)') === 'dhs', 'reconhece a escala DHS na ficha');
+afirma(escalaDoTexto('40° a 45° (≈ 42,5°)') === null, 'ficha que não diz a escala devolve null');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

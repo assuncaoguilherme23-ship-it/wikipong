@@ -680,3 +680,43 @@
   font-size: 0.72rem;
   color: var(--cor-tinta-suave);
 }
+
+/* ── Tradução de régua de dureza (o argumento do site, aplicado a este material) ── */
+.traducao {
+  margin-top: 1.1rem;
+  padding: 1rem 1.15rem;
+  background: var(--cor-acento-suave);
+  border-radius: var(--raio-md);
+}
+.traducaoLinha {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+}
+.traducaoDe {
+  font-size: 1.12rem;
+  color: var(--cor-tinta-suave);
+}
+.traducaoSeta {
+  color: var(--cor-texto-acento);
+  font-weight: 700;
+}
+.traducaoPara {
+  font-size: 1.5rem; /* degrau stat — é a resposta */
+  font-weight: 600;
+  color: var(--cor-tinta);
+  font-feature-settings: 'tnum' 1;
+}
+.traducaoTexto {
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--cor-tinta-suave);
+  max-width: 68ch;
+  text-wrap: pretty;
+}
+.traducaoTexto strong {
+  color: var(--cor-tinta);
+}

@@ -1,0 +1,204 @@
+.bloco {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-lg);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  box-shadow: var(--sombra-cartao);
+}
+
+/* ── Entrada ── */
+.entrada {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .entrada {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 1.75rem;
+  }
+}
+
+.rotuloCampo {
+  display: block;
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+.campoValor {
+  min-width: 0;
+}
+.valorLinha {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.valorGrande {
+  font-size: 1.5rem; /* degrau stat */
+  font-weight: 600;
+  color: var(--cor-tinta);
+  min-width: 3.5ch;
+  font-feature-settings: 'tnum' 1;
+}
+.controle {
+  flex: 1;
+  min-width: 0;
+  accent-color: var(--cor-acento-escuro);
+  cursor: pointer;
+  height: 44px; /* alvo de toque */
+}
+
+.grupoEscala {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.opcoesEscala {
+  display: flex;
+  gap: 3px;
+  padding: 3px;
+  background: var(--cor-superficie-2);
+  border-radius: 999px;
+}
+.opcaoEscala {
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-tinta-suave);
+  background: none;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  min-height: 40px;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+}
+.opcaoEscala[aria-pressed='true'] {
+  background: var(--cor-superficie);
+  color: var(--cor-tinta);
+  box-shadow: var(--sombra-cartao);
+}
+
+/* ── Saída ── */
+.saida {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--cor-linha);
+}
+.saidaTitulo {
+  margin: 0 0 0.9rem;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+}
+
+.equivalencias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+}
+.equivalencia {
+  background: var(--cor-acento-suave);
+  border-radius: var(--raio-md);
+  padding: 0.9rem 1.1rem;
+}
+.equivNome {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+}
+.equivValor {
+  margin: 0.2rem 0 0;
+  font-size: 1.5rem; /* degrau stat — é o número que a pessoa veio buscar */
+  font-weight: 600;
+  color: var(--cor-tinta);
+  font-feature-settings: 'tnum' 1;
+}
+
+/* ── Régua: onde a dureza cai na experiência ── */
+.regua {
+  margin-top: 1.5rem;
+}
+.reguaBarra {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 2.25rem;
+  border-radius: var(--raio-sm);
+  overflow: hidden;
+}
+.zona {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--cor-tinta-suave);
+  background: var(--cor-superficie-2);
+  border-right: 1px solid var(--cor-papel);
+}
+.zona:last-child {
+  border-right: none;
+}
+/* A metade dura carrega o verde da mesa: a régua ganha direção sem virar semáforo. */
+.zona[data-forte='sim'] {
+  background: color-mix(in srgb, var(--cor-acento) 16%, var(--cor-superficie-2));
+}
+.marcador {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 3px;
+  border-radius: 999px; /* traço fino: pílula em vez de degrau novo na escala */
+  background: var(--cor-tinta);
+  transform: translateX(-50%);
+  transition: left 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .marcador {
+    transition: none;
+  }
+}
+.sensacao {
+  margin: 0.9rem 0 0;
+  color: var(--cor-tinta-suave);
+  line-height: 1.7;
+  max-width: 68ch;
+  text-wrap: pretty;
+}
+.sensacao strong {
+  color: var(--cor-tinta);
+}
+
+/* ── Carimbo A VALIDAR: visível junto do resultado, não escondido ── */
+.selo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--cor-linha);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--cor-tinta-suave);
+  max-width: 72ch;
+}
+.seloTag {
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+  background: var(--cor-acento-suave);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+}

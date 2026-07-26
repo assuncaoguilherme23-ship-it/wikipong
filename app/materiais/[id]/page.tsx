@@ -46,6 +46,13 @@ import {
 import { profissionaisQueUsam } from '@/componentes/dados-profissionais';
 import { sinalDaComunidade, ehFavoritoDaComunidade } from '@/componentes/dados-comunidade';
 import { imagemDoMaterial } from '@/componentes/dados-imagens';
+import {
+  escalaDoTexto,
+  primeiroGrau,
+  paraESN,
+  faixaLegivel,
+  sensacao,
+} from '@/src/logica/escalas';
 import estilos from './detalhe.module.css';
 
 export const dynamicParams = false;
@@ -92,6 +99,17 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
 
   // Imagem oficial do produto (com crédito) — hero da ficha; sem ela, o Glifo
   const imagem = imagemDoMaterial(m.id);
+
+  /* Tradução de dureza (D-09): só existe quando a ficha do FABRICANTE declara o
+     grau E a régua, e a régua não é a de referência. Sem os dois, não traduzimos
+     — seria chute com cara de conversão. */
+  const linhaDureza = fab?.ficha?.find((l) => /dureza/i.test(l.rotulo));
+  const grauFab = linhaDureza ? primeiroGrau(linhaDureza.valor) : null;
+  const escalaFab = linhaDureza ? escalaDoTexto(linhaDureza.valor) : null;
+  const traducao =
+    grauFab !== null && escalaFab !== null && escalaFab !== 'esn'
+      ? { faixa: paraESN(grauFab, escalaFab), grau: grauFab, escala: escalaFab }
+      : null;
 
   // Ficha técnica (fato): número + tradução lado a lado (D-08, mesmo dado canônico)
   const ficha = [
@@ -228,6 +246,32 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                     </div>
                   ))}
                 </dl>
+                {/* Tradução da régua: o argumento do site aplicado a ESTE material.
+                    "39° DHS" não diz nada a quem só conhece a escala europeia. */}
+                {traducao && (
+                  <div className={estilos.traducao}>
+                    <p className={estilos.traducaoLinha}>
+                      <span className={`mono ${estilos.traducaoDe}`}>
+                        {traducao.grau}° {traducao.escala.toUpperCase()}
+                      </span>
+                      <span className={estilos.traducaoSeta} aria-hidden="true">
+                        →
+                      </span>
+                      <span className={`mono ${estilos.traducaoPara}`}>
+                        {faixaLegivel(traducao.faixa)} ESN
+                      </span>
+                    </p>
+                    <p className={estilos.traducaoTexto}>
+                      Escalas diferentes medem diferente:{' '}
+                      <strong>
+                        {traducao.grau}° na régua {traducao.escala.toUpperCase()} é{' '}
+                        {sensacao((traducao.faixa.min + traducao.faixa.max) / 2).rotulo.toLowerCase()}
+                      </strong>
+                      , não o que esse número sugere para quem conhece a escala europeia.{' '}
+                      <Link href="/escalas/">Traduzir outra dureza →</Link>
+                    </p>
+                  </div>
+                )}
                 {fab.ficha.some((l) => l.rotulo.toLowerCase().includes('dureza')) && (
                   <p className={estilos.linkDureza}>
                     <Link href="/aprender/dureza-da-esponja/">

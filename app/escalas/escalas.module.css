@@ -1,0 +1,137 @@
+.pagina {
+  padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 6vw, 4rem);
+  min-height: 60dvh;
+}
+
+.titulo {
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-weight: 800;
+  margin-top: 0.5rem;
+}
+.lede {
+  color: var(--cor-tinta-suave);
+  max-width: 64ch;
+  margin: 0.6rem 0 clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.lede strong {
+  color: var(--cor-tinta);
+}
+
+.secao {
+  margin-top: clamp(2.25rem, 5vw, 3.25rem);
+}
+.tituloSecao {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+}
+.subtitulo {
+  margin: 0.5rem 0 1.1rem;
+  color: var(--cor-tinta-suave);
+  max-width: 68ch;
+  text-wrap: pretty;
+}
+
+/* ── As três réguas: lista tipográfica com fios (cadência de enciclopédia) ── */
+.reguas {
+  margin: 1.25rem 0 0;
+}
+.reguaItem {
+  padding: 1rem 0;
+  border-top: 1px solid var(--cor-linha);
+}
+.reguaItem:last-child {
+  border-bottom: 1px solid var(--cor-linha);
+}
+.reguaNome {
+  font-family: var(--fonte-display);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--cor-tinta);
+}
+.reguaTexto {
+  margin: 0.3rem 0 0;
+  color: var(--cor-tinta-suave);
+  line-height: 1.7;
+  max-width: 68ch;
+}
+.reguaExemplos {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--cor-mudo);
+}
+
+/* ── Tabela de exemplos reais ── */
+.tabelaWrap {
+  overflow-x: auto;
+}
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 30rem;
+}
+.tabela th,
+.tabela td {
+  text-align: left;
+  padding: 0.85rem 0.9rem;
+  border-bottom: 1px solid var(--cor-linha);
+  vertical-align: baseline;
+}
+.tabela thead th {
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+  font-weight: 400;
+  border-bottom-color: var(--cor-linha-forte);
+}
+.celulaNome {
+  font-weight: 600;
+}
+.celulaNome a {
+  color: var(--cor-tinta);
+  text-decoration: none;
+}
+.celulaNome a:hover {
+  color: var(--cor-texto-acento);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.celulaMarca {
+  display: block;
+  font-family: var(--fonte-corpo);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--cor-tinta-suave);
+}
+.celulaEscala {
+  font-size: 0.72rem;
+  color: var(--cor-mudo);
+}
+.celulaESN {
+  color: var(--cor-texto-acento);
+  font-weight: 600;
+}
+
+.nota {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--cor-tinta-suave);
+  line-height: 1.7;
+  max-width: 72ch;
+  text-wrap: pretty;
+}
+
+.saibaMais {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+}
+.saibaMais a {
+  text-decoration: none;
+}
+.saibaMais a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

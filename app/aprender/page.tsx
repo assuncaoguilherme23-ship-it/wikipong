@@ -36,6 +36,15 @@ export default function PaginaAprender() {
             </li>
           ))}
           <li>
+            <Link href="/escalas/" className={`${estilos.cartao} ${estilos.cartaoGlossario}`}>
+              <span className={estilos.cartaoTitulo}>Tradutor de durezas</span>
+              <p className={estilos.cartaoResumo}>
+                39° na régua chinesa não é 39° na europeia. Converta entre DHS, ESN e Butterfly.
+              </p>
+              <span className={`mono ${estilos.minutos}`}>Ferramenta</span>
+            </Link>
+          </li>
+          <li>
             <Link href="/glossario/" className={`${estilos.cartao} ${estilos.cartaoGlossario}`}>
               <span className={estilos.cartaoTitulo}>Glossário</span>
               <p className={estilos.cartaoResumo}>

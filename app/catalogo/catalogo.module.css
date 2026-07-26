@@ -60,7 +60,7 @@
   width: 32px;
   height: 32px;
   font: inherit;
-  font-size: 1.2rem;
+  font-size: 1.12rem; /* degrau title do ramp */
   line-height: 1;
   color: var(--cor-tinta-suave);
   background: none;

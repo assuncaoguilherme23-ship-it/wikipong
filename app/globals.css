@@ -18,7 +18,11 @@
   --cor-superficie-2: #edf2e9;
   --cor-tinta: #283027;
   --cor-tinta-suave: #49514a;
-  --cor-mudo: #7c857a;
+  /* 4.70:1 sobre o papel. O valor anterior (#7C857A) dava 3.66:1 e reprovava AA
+     em texto pequeno — e TODO uso de `mudo` no site é texto pequeno (contagem de
+     faceta, data de checagem, rótulo de eixo). Segue mais claro que
+     `tinta-suave` (7.85:1), então a hierarquia de silêncio se mantém. */
+  --cor-mudo: #6b7369;
   --cor-linha: #e4eade;
   --cor-linha-forte: #d3dbcb;
   --cor-acento: #1fa06a;
@@ -74,6 +78,9 @@
     --cor-superficie-2: #1d261d;
     --cor-tinta: #e7ece5;
     --cor-tinta-suave: #a9b3a6;
+    /* No escuro o `mudo` tem de CLAREAR, não escurecer: 5.2:1 sobre a superfície
+       escura. Sem esta linha ele herdaria o valor claro e cairia para 3.8:1. */
+    --cor-mudo: #868f84;
     --cor-linha: #232d23;
     --cor-linha-forte: #33402f;
     --cor-acento: #29b077;

@@ -589,7 +589,7 @@
   transform: translateY(-2px);
 }
 .quemUsaBandeira {
-  font-size: 1.25rem;
+  font-size: 1.12rem; /* degrau title do ramp */
   line-height: 1;
 }
 .quemUsaNome {

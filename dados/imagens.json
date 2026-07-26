@@ -2,31 +2,31 @@
   "aviso": "IMAGENS DE PRODUTO — cada imagem é a OFICIAL do fabricante, trazida com CRÉDITO e a URL de origem (D-16). Não geramos foto de produto (seria falsificar um objeto real) nem usamos imagem sem origem clara. Onde não há imagem aprovada, a ficha e o card usam o Glifo tipográfico como fallback. Os arquivos ficam em public/produtos/.",
   "imagens": {
     "tenergy05": {
-      "arquivo": "tenergy05.jpg",
+      "arquivo": "tenergy05.webp",
       "fonte": "Butterfly",
       "fonteUrl": "https://www.butterfly-global.com/en/products/detail/05800.html",
       "consultadoEm": "2026-07-23"
     },
     "viscaria": {
-      "arquivo": "viscaria.jpg",
+      "arquivo": "viscaria.webp",
       "fonte": "Butterfly",
       "fonteUrl": "https://www.butterfly-global.com/en/products/detail/30041.html",
       "consultadoEm": "2026-07-23"
     },
     "dignics05": {
-      "arquivo": "dignics05.jpg",
+      "arquivo": "dignics05.webp",
       "fonte": "Butterfly",
       "fonteUrl": "https://www.butterfly-global.com/en/products/detail/06040.html",
       "consultadoEm": "2026-07-23"
     },
     "rozena": {
-      "arquivo": "rozena.jpg",
+      "arquivo": "rozena.webp",
       "fonte": "Butterfly",
       "fonteUrl": "https://www.butterfly-global.com/en/products/detail/06020.html",
       "consultadoEm": "2026-07-23"
     },
     "fzd": {
-      "arquivo": "fzd.jpg",
+      "arquivo": "fzd.webp",
       "fonte": "Butterfly",
       "fonteUrl": "https://www.butterfly-global.com/en/products/detail/37221.html",
       "consultadoEm": "2026-07-23"
@@ -38,55 +38,55 @@
       "consultadoEm": "2026-07-23"
     },
     "xiom-vega-intro": {
-      "arquivo": "xiom-vega-intro.jpg",
+      "arquivo": "xiom-vega-intro.webp",
       "fonte": "Xiom",
       "fonteUrl": "https://xiom.global/product/vega-intro/489/",
       "consultadoEm": "2026-07-23"
     },
     "donic-appelgren": {
-      "arquivo": "donic-appelgren.jpg",
+      "arquivo": "donic-appelgren.webp",
       "fonte": "Donic",
       "fonteUrl": "https://www.donic.com/en/DONIC-APPELGREN-ALLPLAY/100201010",
       "consultadoEm": "2026-07-23"
     },
     "hurricane": {
-      "arquivo": "hurricane.jpg",
+      "arquivo": "hurricane.webp",
       "fonte": "Tênis de Mesa Store",
       "fonteUrl": "https://www.tenisdemesastore.com.br/borracha-dhs-hurricane-3-neo",
       "consultadoEm": "2026-07-23"
     },
     "markv": {
-      "arquivo": "markv.jpg",
+      "arquivo": "markv.webp",
       "fonte": "AmericaTT",
       "fonteUrl": "https://americatt.net/yasaka-mark-v/",
       "consultadoEm": "2026-07-23"
     },
     "stiga-allround": {
-      "arquivo": "stiga-allround.jpg",
+      "arquivo": "stiga-allround.webp",
       "fonte": "AmericaTT",
       "fonteUrl": "https://americatt.net/stiga-allround-classic/",
       "consultadoEm": "2026-07-23"
     },
     "d40": {
-      "arquivo": "d40.png",
+      "arquivo": "d40.webp",
       "fonte": "OperaTT",
       "fonteUrl": "https://www.operatt.com.br/bola-de-plastico-dhs-d40-3-estrelas-caixa-com-10-unidades",
       "consultadoEm": "2026-07-23"
     },
     "evolution": {
-      "arquivo": "evolution.jpg",
+      "arquivo": "evolution.webp",
       "fonte": "STIGA",
       "fonteUrl": "https://www.stigaus.com/products/stiga-evolution-table-tennis-racket",
       "consultadoEm": "2026-07-23"
     },
     "palio-expert": {
-      "arquivo": "palio-expert.png",
+      "arquivo": "palio-expert.webp",
       "fonte": "Palio",
       "fonteUrl": "https://palioett.com/product/palio-expert-3-bat-case-expert-table-tennis/",
       "consultadoEm": "2026-07-23"
     },
     "palio-ak47": {
-      "arquivo": "palio-ak47.jpg",
+      "arquivo": "palio-ak47.webp",
       "fonte": "Table Tennis Hub",
       "fonteUrl": "https://www.tabletennishub.net/products/palio-ak47-yellow",
       "consultadoEm": "2026-07-23"

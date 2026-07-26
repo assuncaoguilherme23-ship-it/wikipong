@@ -71,7 +71,7 @@
 }
 .itemEscolha b {
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 .metaEscolha {
   font-size: 0.7rem;
@@ -125,7 +125,7 @@
 .tabela thead th {
   background: var(--cor-superficie-2);
   font-family: var(--fonte-display);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 .tabela tbody tr {
   transition: background 140ms ease;
@@ -155,7 +155,7 @@
 }
 .tagMaior {
   font-family: var(--fonte-mono);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);

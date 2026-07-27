@@ -85,7 +85,18 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
      mostrar zeros ou números inventados (D-16). O resto da página (foto, preço,
      onde comprar, comunidade) continua igual. */
   const comSpecs = temDesempenho(m);
-  const perdaoValor = comSpecs ? perdao(m.specs, m.durezaUnificada) : null;
+  /* Perdão deriva da maciez da esponja — lâmina é de madeira e não tem. Sem
+     dureza, não há Perdão, e a linha e o eixo do radar somem (D-16). */
+  const perdaoValor =
+    comSpecs && m.durezaUnificada !== undefined ? perdao(m.specs, m.durezaUnificada) : null;
+  /* Eixos do radar seguem o que EXISTE: sem Perdão (lâmina), 3 eixos em vez de 4.
+     Só é calculado quando há specs — a bola não chega aqui. */
+  const eixosFicha = perdaoValor !== null ? EIXOS : (['VEL', 'EFE', 'CTR'] as const);
+  const valoresFicha = !comSpecs
+    ? []
+    : perdaoValor !== null
+      ? [m.specs.velocidade, m.specs.spin ?? 0, m.specs.controle, perdaoValor]
+      : [m.specs.velocidade, m.specs.spin ?? 0, m.specs.controle];
 
   // Dado sincero: os presets do quiz rodados contra ESTE material (recomendacao.ts)
   const vereditos = vereditosDoMaterial(m);
@@ -126,7 +137,10 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
           ? [{ rotulo: 'Spin (efeito)', valor: m.specs.spin, palavra: paraPalavra('spin', m.specs.spin) }]
           : []),
         { rotulo: 'Controle', valor: m.specs.controle, palavra: paraPalavra('controle', m.specs.controle) },
-        { rotulo: 'Durabilidade', valor: m.durabilidade, palavra: null },
+        // Durabilidade só entra quando há fonte: lâmina não tem número publicado.
+        ...(m.durabilidade !== undefined
+          ? [{ rotulo: 'Durabilidade', valor: m.durabilidade, palavra: null }]
+          : []),
       ]
     : [];
 
@@ -201,6 +215,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                     </td>
                   </tr>
                 ))}
+                {m.durezaUnificada !== undefined && (
                 <tr>
                   <th scope="row">Dureza unificada*</th>
                   <td>
@@ -214,15 +229,18 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                     </span>
                   </td>
                 </tr>
-                <tr>
-                  <th scope="row">Perdão*</th>
-                  <td>
-                    <span className={`mono ${estilos.valor} ${estilos.derivada}`}>
-                      {perdaoValor!.toFixed(1)}
-                    </span>
-                    <span className={estilos.palavra}>{paraPalavra('perdao', perdaoValor!)}</span>
-                  </td>
-                </tr>
+                )}
+                {perdaoValor !== null && (
+                  <tr>
+                    <th scope="row">Perdão*</th>
+                    <td>
+                      <span className={`mono ${estilos.valor} ${estilos.derivada}`}>
+                        {perdaoValor.toFixed(1)}
+                      </span>
+                      <span className={estilos.palavra}>{paraPalavra('perdao', perdaoValor)}</span>
+                    </td>
+                  </tr>
+                )}
               </tbody>
             </table>
             <p className={estilos.nota}>
@@ -235,11 +253,11 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
 
           <figure className={estilos.radarCaixa}>
             <Radar
-              eixos={EIXOS}
+              eixos={eixosFicha}
               series={[
                 {
                   nome: m.nome,
-                  valores: [m.specs.velocidade, m.specs.spin ?? 0, m.specs.controle, perdaoValor!],
+                  valores: valoresFicha,
                   variante: 'solida',
                 },
               ]}

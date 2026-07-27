@@ -35,8 +35,6 @@
         "velocidade": 8.8,
         "controle": 8.5
       },
-      "durabilidade": 8.5,
-      "durezaUnificada": 47,
       "rating": 4.9,
       "reviews": 120,
       "simples": {
@@ -166,8 +164,6 @@
         "velocidade": 8.6,
         "controle": 8.2
       },
-      "durabilidade": 8.5,
-      "durezaUnificada": 47,
       "rating": 4.8,
       "reviews": 92,
       "simples": {
@@ -224,8 +220,6 @@
         "velocidade": 5.5,
         "controle": 9.0
       },
-      "durabilidade": 8.5,
-      "durezaUnificada": 47,
       "rating": 4.7,
       "reviews": 140,
       "simples": {
@@ -311,8 +305,6 @@
         "velocidade": 6.0,
         "controle": 8.8
       },
-      "durabilidade": 8.5,
-      "durezaUnificada": 47,
       "rating": 4.6,
       "reviews": 88,
       "simples": {
@@ -516,6 +508,266 @@
       "simples": {
         "tag": "A mais rápida da linha Dignics",
         "frase": "Feita pra velocidade: bola sai rasante e forte. Pra quem ataca em cima da mesa e finaliza cedo."
+      }
+    },
+    {
+      "id": "viscaria-super-alc",
+      "nome": "Viscaria Super ALC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1951,
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 21,
+      "simples": {
+        "tag": "A Viscaria com mais potência",
+        "frase": "Mesma família da Viscaria, com fibra Super ALC: sai mais forte sem perder o toque que fez o nome da original."
+      }
+    },
+    {
+      "id": "timo-boll-alc",
+      "nome": "Timo Boll ALC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1489,
+      "specs": {
+        "velocidade": 9.0,
+        "controle": 8.7
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 158,
+      "simples": {
+        "tag": "A ofensiva mais consagrada",
+        "frase": "Uma das lâminas mais usadas do mundo: velocidade alta com controle que ainda perdoa. A referência da categoria."
+      }
+    },
+    {
+      "id": "timo-boll-spirit",
+      "nome": "Timo Boll Spirit",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1158,
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 8.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 123,
+      "simples": {
+        "tag": "Carbono e arilato equilibrados",
+        "frase": "7 lâminas com carbono (velocidade) e arilato (elasticidade). Ataque forte sem o toque duro do carbono puro."
+      }
+    },
+    {
+      "id": "timo-boll-caf",
+      "nome": "Timo Boll CAF",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 804,
+      "specs": {
+        "velocidade": 8.4,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.2,
+      "reviews": 18,
+      "simples": {
+        "tag": "Fibra com toque de madeira",
+        "frase": "Fibra CA numa construção flexível: segura a bola por mais tempo. Boa pra quem vem da madeira pura e quer o passo seguinte."
+      }
+    },
+    {
+      "id": "fzd-super-alc",
+      "nome": "Fan Zhendong Super ALC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2010,
+      "specs": {
+        "velocidade": 9.6,
+        "controle": 8.1
+      },
+      "origemSpecs": "comunidade",
+      "rating": 3.9,
+      "reviews": 19,
+      "simples": {
+        "tag": "A mais rápida da linha FZD",
+        "frase": "Super ALC leva a lâmina do Fan Zhendong ao extremo da velocidade. Cobra técnica: é das menos tolerantes da família."
+      }
+    },
+    {
+      "id": "harimoto-innerforce-zlc",
+      "nome": "Harimoto Innerforce ZLC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1784,
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 9.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.75,
+      "reviews": 19,
+      "simples": {
+        "tag": "Fibra por dentro, toque macio",
+        "frase": "ZLC posicionada perto do núcleo: mantém a leveza da fibra com sensação macia. Controle altíssimo pro nível de velocidade."
+      }
+    },
+    {
+      "id": "harimoto-innerforce-alc",
+      "nome": "Harimoto Innerforce ALC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1489,
+      "specs": {
+        "velocidade": 8.3,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 33,
+      "simples": {
+        "tag": "Ataque dos dois lados",
+        "frase": "Velocidade moderada com controle alto — feita pra sustentar ataque de forehand e backhand com a mesma segurança."
+      }
+    },
+    {
+      "id": "mizutani-super-zlc",
+      "nome": "Mizutani Jun Super ZLC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2760,
+      "specs": {
+        "velocidade": 9.5,
+        "controle": 9.0
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.75,
+      "reviews": 40,
+      "simples": {
+        "tag": "Topo de linha em velocidade",
+        "frase": "Super ZLC com área de acerto generosa: potência de elite que ainda devolve sensação. Pede braço formado."
+      }
+    },
+    {
+      "id": "sk7-classic",
+      "nome": "SK7 Classic",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 733,
+      "specs": {
+        "velocidade": 8.7,
+        "controle": 8.8
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 10,
+      "simples": {
+        "tag": "Madeira pura de 7 lâminas",
+        "frase": "Sem fibra: 7 camadas de madeira. Velocidade de composto com o toque direto que só a madeira pura dá."
+      }
+    },
+    {
+      "id": "korbel",
+      "nome": "Petr Korbel",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 815,
+      "specs": {
+        "velocidade": 8.3,
+        "controle": 8.8
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 120,
+      "simples": {
+        "tag": "A allround clássica",
+        "frase": "5 lâminas de madeira, um dos maiores clássicos da Butterfly. Controle e sensação pra quem está construindo o jogo."
+      }
+    },
+    {
+      "id": "primorac",
+      "nome": "Primorac",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 697,
+      "specs": {
+        "velocidade": 7.6,
+        "controle": 8.8
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.3,
+      "reviews": 89,
+      "simples": {
+        "tag": "Ofensiva que perdoa",
+        "frase": "Madeira pura mais lenta da lista: prioriza controle e toque. Boa base pra técnica antes de subir de velocidade."
+      }
+    },
+    {
+      "id": "innerforce-layer-zlc",
+      "nome": "Innerforce Layer ZLC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1679,
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 59,
+      "simples": {
+        "tag": "Fibra interna, muita versatilidade",
+        "frase": "ZLC junto ao núcleo: leve e rápida, mas com flexão. Rende de perto e de longe da mesa."
+      }
+    },
+    {
+      "id": "diode-v",
+      "nome": "Diode V",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 756,
+      "specs": {
+        "velocidade": 7.2,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 12,
+      "simples": {
+        "tag": "Defensiva que ataca",
+        "frase": "5 lâminas de madeira pensadas pra defesa com saída de ataque. Controle altíssimo pra quem constrói o ponto."
       }
     }
   ]

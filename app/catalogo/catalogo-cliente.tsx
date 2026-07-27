@@ -430,7 +430,8 @@ function CartaoMaterial({
      Sem ele, o cartão mostra o que É verdade — foto, marca, preço e a frase em
      português claro — em vez de inventar números pra preencher a coluna (D-16). */
   const comSpecs = temDesempenho(m);
-  const perdaoValor = comSpecs ? perdao(m.specs, m.durezaUnificada) : null;
+  const perdaoValor =
+    comSpecs && m.durezaUnificada !== undefined ? perdao(m.specs, m.durezaUnificada) : null;
   const linhas = comSpecs
     ? ([
         ['Velocidade', 'velocidade', m.specs.velocidade],
@@ -486,10 +487,12 @@ function CartaoMaterial({
               <dd className="mono">{valor.toFixed(1)}</dd>
             </div>
           ))}
-          <div>
-            <dt>Perdão*</dt>
-            <dd className="mono">{perdaoValor!.toFixed(1)}</dd>
-          </div>
+          {perdaoValor !== null && (
+            <div>
+              <dt>Perdão*</dt>
+              <dd className="mono">{perdaoValor.toFixed(1)}</dd>
+            </div>
+          )}
         </dl>
       ) : (
         <div className={estilos.specsSimples}>
@@ -503,7 +506,9 @@ function CartaoMaterial({
           <p className={estilos.praQuemE}>
             <b>{m.simples.tag}.</b> {m.simples.frase}
           </p>
-          <p className={estilos.seloPerdao}>{paraPalavra('perdao', perdaoValor!)}*</p>
+          {perdaoValor !== null && (
+            <p className={estilos.seloPerdao}>{paraPalavra('perdao', perdaoValor)}*</p>
+          )}
         </div>
       )}
 

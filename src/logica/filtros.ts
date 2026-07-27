@@ -181,14 +181,18 @@ export function serializeQuery(estado: FiltroEstado): string {
  * Material COM perfil de desempenho. A UI usa isto para decidir se mostra ficha
  * de specs, radar, Perdão e comparação — em vez de espalhar `if (m.specs)`.
  */
-export type MaterialComDesempenho = Material & {
-  specs: Specs;
-  durabilidade: number;
-  durezaUnificada: number;
-};
+export type MaterialComDesempenho = Material & { specs: Specs };
 
+/**
+ * Tem perfil de desempenho = tem `specs`. Só isso.
+ *
+ * `durabilidade` e `durezaUnificada` NÃO entram no critério: lâmina é de madeira
+ * e não tem dureza de esponja — o "47 neutro" que as lâminas carregavam era
+ * placeholder, e o Perdão (que deriva da maciez da esponja) não se aplica a elas.
+ * Quem depende desses campos checa cada um por conta, e some quando não há.
+ */
 export const temDesempenho = (m: Material): m is MaterialComDesempenho =>
-  m.specs !== undefined && m.durabilidade !== undefined && m.durezaUnificada !== undefined;
+  m.specs !== undefined;
 
 // ───────────────────── Busca textual ─────────────────────
 

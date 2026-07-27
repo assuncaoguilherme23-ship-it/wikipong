@@ -719,6 +719,162 @@
           }
         ]
       }
+    },
+    "viscaria-super-alc": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/37191.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "timo-boll-alc": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/35861.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "timo-boll-spirit": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/30811.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "timo-boll-caf": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/36951.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "fzd-super-alc": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/37241.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "harimoto-innerforce-zlc": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/37031.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "harimoto-innerforce-alc": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/36991.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "mizutani-super-zlc": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/36601.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "sk7-classic": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/36881.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "korbel": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/30271.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "primorac": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/30551.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "innerforce-layer-zlc": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/36681.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
+    },
+    "diode-v": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/36961.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo (FL/CS/ST/AN) se escolhe na loja"
+        }
+      ],
+      "nota": "A Butterfly publica índices de Velocidade e Controle para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira."
     }
   }
 }

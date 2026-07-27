@@ -38,11 +38,23 @@ export interface Opcao {
    * Resposta MAIS TARDE no caminho sobrescreve a mesma chave.
    */
   filtro?: string;
+  /**
+   * OPCIONAL: faixa de tempo de referência, para a pessoa saber onde se encaixa.
+   * Existe porque "começando agora" e "jogo casualmente" se sobrepunham e não
+   * havia como decidir entre as duas.
+   *
+   * É REFERÊNCIA, não régua (A VALIDAR — D-07): tempo sozinho não define nível.
+   * Quem treina 3× por semana há 8 meses passa quem bate bola aos domingos há
+   * 3 anos. Por isso as faixas são largas e a tela diz que frequência pesa mais.
+   */
+  tempo?: string;
 }
 
 export interface TelaPergunta {
   tipo: 'pergunta';
   pergunta: string;
+  /** OPCIONAL: ressalva curta sob a pergunta, quando a escolha precisa de contexto. */
+  nota?: string;
   /** rótulo e total do progresso deste branch (ex.: passo 2 de 3) */
   passo: { n: number; total: number };
   opcoes: Opcao[];
@@ -76,22 +88,37 @@ export const TELAS: Record<string, Tela> = {
   inicio: {
     tipo: 'pergunta',
     pergunta: 'Há quanto tempo você joga?',
+    nota: 'As faixas são só uma referência pra você se localizar — o que pesa mais é a frequência. Quem treina 3× por semana há 8 meses costuma estar à frente de quem bate bola aos domingos há 3 anos. Na dúvida entre duas, escolha a de baixo.',
     passo: { n: 1, total: 3 },
     opcoes: [
-      { id: 'comecando', titulo: 'Estou começando agora', sub: 'ou vou começar', proximo: 'ini-objetivo' },
+      {
+        id: 'comecando',
+        titulo: 'Estou começando agora',
+        sub: 'ou ainda vou começar',
+        tempo: 'nunca joguei · até 1 mês',
+        proximo: 'ini-objetivo',
+      },
       {
         id: 'voltando',
         titulo: 'Voltei depois de um tempo parado',
         sub: 'já sei o básico',
+        tempo: 'joguei antes · retomando agora',
         proximo: 'ini-objetivo',
         // Já tem base: abre o intermediário e tolera um pouco mais de velocidade
         filtro: 'nivel=iniciante,intermediario&vel=3-8',
       },
-      { id: 'casual', titulo: 'Jogo casualmente há um tempo', sub: 'quero evoluir', proximo: 'evo-estilo' },
+      {
+        id: 'casual',
+        titulo: 'Jogo casualmente há um tempo',
+        sub: 'quero evoluir',
+        tempo: '1 mês a 2 anos · sem treino regular',
+        proximo: 'evo-estilo',
+      },
       {
         id: 'serio',
         titulo: 'Treino sério há anos',
         sub: 'sei o que procuro',
+        tempo: '2 anos ou mais · treinando toda semana',
         proximo: 'evo-estilo',
         filtro: 'nivel=intermediario,avancado',
       },

@@ -365,6 +365,22 @@ afirma(MATERIAIS.every(m => m.origemDureza === 'fabricante' ? m.durezaFabricante
   'origemDureza e durezaFabricante andam juntos');
 afirma(MATERIAIS.every(m => Number.isInteger(m.durezaUnificada)), 'régua unificada trabalha em graus inteiros');
 
+
+// ───────── Q1: faixa de tempo como referência (não régua — A VALIDAR) ─────────
+// Existe porque 'começando agora' e 'jogo casualmente' se sobrepunham e não havia
+// como decidir entre as duas. Guarda-corpo: opção que leva a um branch de nível
+// PRECISA de faixa; só 'explorar' (que pula pro resultado) pode ficar sem.
+const telaInicio = TELAS['inicio'];
+if (telaInicio.tipo === 'pergunta') {
+  afirma(Boolean(telaInicio.nota), 'Q1 traz a ressalva de que frequência pesa mais que tempo');
+  for (const op of telaInicio.opcoes) {
+    const precisa = op.proximo !== 'resultado-explorador';
+    afirma(precisa === Boolean(op.tempo), `opção '${op.id}': faixa de tempo só onde o nível importa`);
+  }
+} else {
+  afirma(false, 'tela inicio deveria ser uma pergunta');
+}
+
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

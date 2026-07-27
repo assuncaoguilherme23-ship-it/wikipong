@@ -97,6 +97,7 @@ export default function QuizPage() {
                 <h1 className={styles.pergunta} ref={tituloRef} tabIndex={-1}>
                   {tela.pergunta}
                 </h1>
+                {tela.nota && <p className={styles.notaPergunta}>{tela.nota}</p>}
 
                 <div className={styles.opcoes}>
                   {tela.opcoes.map((op) => (
@@ -108,6 +109,11 @@ export default function QuizPage() {
                     >
                       <span className={styles.opcaoTitulo}>{op.titulo}</span>
                       {op.sub && <span className={styles.opcaoSub}>{op.sub}</span>}
+                      {/* Faixa de tempo em mono: é referência de DADO, não copy
+                          (Regra da Voz de Dados — D-04). */}
+                      {op.tempo && (
+                        <span className={`mono ${styles.opcaoTempo}`}>{op.tempo}</span>
+                      )}
                     </button>
                   ))}
                 </div>

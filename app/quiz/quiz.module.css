@@ -78,6 +78,18 @@
   font-weight: 800;
   margin-bottom: 1.5rem;
 }
+/* Quando a pergunta traz ressalva, ela encosta na nota e o respiro fica embaixo. */
+.pergunta:has(+ .notaPergunta) {
+  margin-bottom: 0.6rem;
+}
+.notaPergunta {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+  text-wrap: pretty;
+}
 
 .opcoes {
   display: grid;
@@ -112,6 +124,14 @@
 .opcaoSub {
   font-size: 0.88rem;
   color: var(--cor-tinta-suave);
+}
+/* Faixa de tempo: terceiro degrau da hierarquia (titulo > sub > tempo).
+   Mono porque e referencia de DADO, nao copy (D-04). */
+.opcaoTempo {
+  margin-top: 0.3rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--cor-mudo);
 }
 
 .voltar {

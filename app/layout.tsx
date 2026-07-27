@@ -10,6 +10,7 @@
  */
 import type { Metadata, Viewport } from 'next';
 import { Archivo, Inter, JetBrains_Mono } from 'next/font/google';
+import { URL_SITE } from '@/componentes/site';
 import './globals.css';
 
 const archivo = Archivo({
@@ -32,12 +33,10 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 });
 
-/* Base absoluta para OG/canônicas: a Vercel injeta VERCEL_PROJECT_PRODUCTION_URL
-   no build (reflete o domínio de produção, inclusive um custom domain quando
-   houver); local cai no dev server. Sem domínio chutado. */
-const urlSite = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : 'http://localhost:3000';
+/* Base absoluta para OG/canônicas — mesma constante que o sitemap e o robots
+   usam (componentes/site.ts). Uma definição só: trocar de domínio não pode
+   deixar metade do site apontando pro endereço velho. */
+const urlSite = URL_SITE;
 
 export const metadata: Metadata = {
   metadataBase: new URL(urlSite),

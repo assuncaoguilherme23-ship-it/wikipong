@@ -25,6 +25,7 @@ import {
 import { etiquetasDoPreset } from '../src/logica/descrever-filtro.js';
 import { precoTotal, observacoes, completa, pecasDe } from '../src/logica/montagem.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
+import { fabricantePorId } from '../componentes/dados-fabricante.js';
 
 let ok = 0; const falhas: string[] = [];
 function afirma(cond: boolean, msg: string) { if (cond) ok++; else falhas.push(msg); }
@@ -389,7 +390,18 @@ if (telaInicio.tipo === 'pergunta') {
 const bola = materialPorId('d40')!;
 afirma(!temDesempenho(bola), 'bola não tem perfil de desempenho');
 afirma(bola.specs === undefined, 'bola não carrega specs');
-afirma(MATERIAIS.filter(temDesempenho).length === MATERIAIS.length - 1, 'só a bola ficou sem perfil');
+// Material SEM specs é legítimo (bola; lâmina sem amostra na comunidade), mas
+// não pode virar ficha vazia: quem não tem specs PRECISA ter ficha de fabricante
+// com conteúdo, senão a página não diz nada ao visitante.
+const semSpecs = MATERIAIS.filter((m) => !temDesempenho(m));
+afirma(semSpecs.length > 0, 'existe material sem perfil de desempenho');
+afirma(
+  semSpecs.every((m) => {
+    const f = fabricantePorId(m.id);
+    return Boolean(f && ((f.ficha && f.ficha.length > 0) || f.indices));
+  }),
+  'todo material sem specs tem ficha de fabricante com conteúdo',
+);
 
 // Fixture com um item sem perfil, pra exercitar o motor.
 const semPerfil: Material = {

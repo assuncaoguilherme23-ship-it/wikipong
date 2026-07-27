@@ -769,6 +769,241 @@
         "tag": "Defensiva que ataca",
         "frase": "5 lâminas de madeira pensadas pra defesa com saída de ataque. Controle altíssimo pra quem constrói o ponto."
       }
+    },
+    {
+      "id": "harimoto-innerforce-super-alc",
+      "nome": "Harimoto Innerforce Super ALC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1844,
+      "specs": {
+        "velocidade": 9.2,
+        "controle": 9.7
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.85,
+      "reviews": 11,
+      "simples": {
+        "tag": "Super ALC por dentro",
+        "frase": "Fibra Super ALC junto ao núcleo e cabeça maior: contra-ataque estável colado à mesa, com controle raro para o nível de potência."
+      }
+    },
+    {
+      "id": "harimoto-innerforce-super-zlc",
+      "nome": "Harimoto Innerforce Super ZLC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 2760,
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 9.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.8,
+      "reviews": 42,
+      "simples": {
+        "tag": "Potência com toque curto",
+        "frase": "Super ZLC interna: ataque pesado sem perder o jogo curto. Uma das lâminas de maior controle da linha de topo."
+      }
+    },
+    {
+      "id": "revoldia-cnf",
+      "nome": "Revoldia CNF",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 3015,
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 43,
+      "simples": {
+        "tag": "Nanofibra: carbono no ataque, madeira no toque",
+        "frase": "A CNF se comporta como carbono na batida forte e como madeira no toque leve. Das mais versáteis — e das mais caras."
+      }
+    },
+    {
+      "id": "primorac-carbon",
+      "nome": "Primorac Carbon",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1087,
+      "specs": {
+        "velocidade": 9.3,
+        "controle": 7.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 72,
+      "simples": {
+        "tag": "Carbono clássico, rápida e direta",
+        "frase": "TAMCA 5000: velocidade alta com controle mais exigente. Feita para bloquear e finalizar, cobra posicionamento."
+      }
+    },
+    {
+      "id": "franziska-innerforce-zlc",
+      "nome": "Franziska Innerforce ZLC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1761,
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 9.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.8,
+      "reviews": 35,
+      "simples": {
+        "tag": "Giro alto com estabilidade",
+        "frase": "ZLC interna e flexível: segura muito a bola no topspin. Rende melhor com borrachas mais duras."
+      }
+    },
+    {
+      "id": "sk-carbon",
+      "nome": "SK Carbon",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 839,
+      "specs": {
+        "velocidade": 9.0,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 14,
+      "simples": {
+        "tag": "Carbono com controle perto da mesa",
+        "frase": "Fibra TAMCA com pegada precisa no jogo curto. Perde um pouco de força na distância, ganha em previsibilidade."
+      }
+    },
+    {
+      "id": "korbel-sk7",
+      "nome": "Korbel SK7",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 815,
+      "specs": {
+        "velocidade": 8.4,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 30,
+      "simples": {
+        "tag": "7 madeiras com toque macio",
+        "frase": "A Korbel em versão de 7 lâminas: mais veloz que a original, mantendo a sensação controlada que fez o nome."
+      }
+    },
+    {
+      "id": "falcima",
+      "nome": "Falcima",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 733,
+      "specs": {
+        "velocidade": 8.3,
+        "controle": 9.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.75,
+      "reviews": 13,
+      "simples": {
+        "tag": "Rápida e muito controlável",
+        "frase": "Entrega velocidade sem cobrar técnica. Boa ponte para quem sai da lâmina de iniciante."
+      }
+    },
+    {
+      "id": "diode-pro",
+      "nome": "Diode Pro",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 721,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Defensiva de madeira pura",
+        "frase": "Pensada para defesa com saída de ataque: lâmina fina, madeira pura, muita sensação de bola."
+      }
+    },
+    {
+      "id": "fzd-zlc",
+      "nome": "Fan Zhendong ZLC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1761,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "ZLC na linha do Fan Zhendong",
+        "frase": "Equilíbrio entre salto e flexão: potência com estabilidade, no ritmo rápido que dá nome à linha."
+      }
+    },
+    {
+      "id": "fzd-cnf",
+      "nome": "Fan Zhendong CNF",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2956,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Velocidade com vibração baixa",
+        "frase": "A nanofibra entrega velocidade alta com sensação de bola presa por mais tempo. Topo da linha do Fan Zhendong."
+      }
+    },
+    {
+      "id": "ovtcharov-innerforce-alc",
+      "nome": "Ovtcharov Innerforce ALC",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1489,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "ALC interna, cabeça maior",
+        "frase": "A versão do Ovtcharov para a Innerforce Layer ALC: mais espessa e com cabeça maior, para ataque de meia distância."
+      }
+    },
+    {
+      "id": "xstar-v",
+      "nome": "Xstar V",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 461,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Madeira natural para aprender",
+        "frase": "Velocidade moderada e bola que fica mais tempo na lâmina: feita para quem está formando os fundamentos."
+      }
     }
   ]
 }

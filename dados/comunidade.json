@@ -272,6 +272,70 @@
       "escala": 10,
       "avaliacoes": 12,
       "consultadoEm": "2026-07-27"
+    },
+    "harimoto-innerforce-super-alc": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/butterfly-harimoto-innerforce-super-alc.html",
+      "nota": 9.7,
+      "escala": 10,
+      "avaliacoes": 11,
+      "consultadoEm": "2026-07-27"
+    },
+    "harimoto-innerforce-super-zlc": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/butterfly-harimoto-innerforce-super-zlc.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 42,
+      "consultadoEm": "2026-07-27"
+    },
+    "revoldia-cnf": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/butterfly-revoldia-cnf.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 43,
+      "consultadoEm": "2026-07-27"
+    },
+    "primorac-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/butterfly-primorac-carbon-tamca-5000.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 72,
+      "consultadoEm": "2026-07-27"
+    },
+    "franziska-innerforce-zlc": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/butterfly-franziska-innerforce-zlc.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 35,
+      "consultadoEm": "2026-07-27"
+    },
+    "sk-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/butterfly-sk-carbon.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 14,
+      "consultadoEm": "2026-07-27"
+    },
+    "korbel-sk7": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/butterfly-korbel-sk7.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 30,
+      "consultadoEm": "2026-07-27"
+    },
+    "falcima": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/butterfly-falcima.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 13,
+      "consultadoEm": "2026-07-27"
     }
   }
 }

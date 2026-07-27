@@ -9,7 +9,11 @@
       "nivel": "Avançado",
       "intencao": "atacar",
       "preco": 450,
-      "specs": { "velocidade": 9.0, "spin": 9.3, "controle": 7.8 },
+      "specs": {
+        "velocidade": 9.0,
+        "spin": 9.3,
+        "controle": 7.8
+      },
       "durabilidade": 7.5,
       "durezaUnificada": 47,
       "rating": 4.8,
@@ -27,7 +31,11 @@
       "nivel": "Avançado",
       "intencao": "atacar",
       "preco": 1650,
-      "specs": { "velocidade": 8.8, "spin": 9.0, "controle": 8.5 },
+      "specs": {
+        "velocidade": 8.8,
+        "spin": 9.0,
+        "controle": 8.5
+      },
       "durabilidade": 8.5,
       "durezaUnificada": 47,
       "rating": 4.9,
@@ -45,7 +53,11 @@
       "nivel": "Intermediário",
       "intencao": "controlar",
       "preco": 150,
-      "specs": { "velocidade": 6.5, "spin": 6.0, "controle": 8.6 },
+      "specs": {
+        "velocidade": 6.5,
+        "spin": 6.0,
+        "controle": 8.6
+      },
       "durabilidade": 8.0,
       "durezaUnificada": 47,
       "rating": 4.2,
@@ -63,7 +75,11 @@
       "nivel": "Avançado",
       "intencao": "atacar",
       "preco": 180,
-      "specs": { "velocidade": 8.2, "spin": 9.6, "controle": 8.0 },
+      "specs": {
+        "velocidade": 8.2,
+        "spin": 9.6,
+        "controle": 8.0
+      },
       "durabilidade": 8.8,
       "durezaUnificada": 54,
       "rating": 4.7,
@@ -81,7 +97,11 @@
       "nivel": "Avançado",
       "intencao": "atacar",
       "preco": 590,
-      "specs": { "velocidade": 9.2, "spin": 9.4, "controle": 7.6 },
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.4,
+        "controle": 7.6
+      },
       "durabilidade": 7.8,
       "durezaUnificada": 46,
       "rating": 4.9,
@@ -99,7 +119,11 @@
       "nivel": "Intermediário",
       "intencao": "equilibrado",
       "preco": 320,
-      "specs": { "velocidade": 8.8, "spin": 8.9, "controle": 7.9 },
+      "specs": {
+        "velocidade": 8.8,
+        "spin": 8.9,
+        "controle": 7.9
+      },
       "durabilidade": 7.7,
       "durezaUnificada": 46,
       "rating": 4.6,
@@ -117,7 +141,11 @@
       "nivel": "Iniciante",
       "intencao": "controlar",
       "preco": 210,
-      "specs": { "velocidade": 7.8, "spin": 8.0, "controle": 8.6 },
+      "specs": {
+        "velocidade": 7.8,
+        "spin": 8.0,
+        "controle": 8.6
+      },
       "durabilidade": 8.2,
       "durezaUnificada": 43,
       "rating": 4.4,
@@ -135,7 +163,11 @@
       "nivel": "Avançado",
       "intencao": "atacar",
       "preco": 1200,
-      "specs": { "velocidade": 8.6, "spin": 8.4, "controle": 8.2 },
+      "specs": {
+        "velocidade": 8.6,
+        "spin": 8.4,
+        "controle": 8.2
+      },
       "durabilidade": 8.5,
       "durezaUnificada": 47,
       "rating": 4.8,
@@ -153,9 +185,6 @@
       "nivel": "Intermediário",
       "intencao": "equilibrado",
       "preco": 25,
-      "specs": { "velocidade": 7.0, "spin": 7.0, "controle": 9.0 },
-      "durabilidade": 7.5,
-      "durezaUnificada": 47,
       "rating": 4.5,
       "reviews": 200,
       "simples": {
@@ -171,7 +200,11 @@
       "nivel": "Iniciante",
       "intencao": "controlar",
       "preco": 120,
-      "specs": { "velocidade": 5.0, "spin": 6.5, "controle": 9.2 },
+      "specs": {
+        "velocidade": 5.0,
+        "spin": 6.5,
+        "controle": 9.2
+      },
       "durabilidade": 8.0,
       "durezaUnificada": 47,
       "rating": 4.6,
@@ -189,7 +222,11 @@
       "nivel": "Iniciante",
       "intencao": "controlar",
       "preco": 300,
-      "specs": { "velocidade": 5.5, "spin": 6.5, "controle": 9.0 },
+      "specs": {
+        "velocidade": 5.5,
+        "spin": 6.5,
+        "controle": 9.0
+      },
       "durabilidade": 8.5,
       "durezaUnificada": 47,
       "rating": 4.7,
@@ -207,7 +244,11 @@
       "nivel": "Iniciante",
       "intencao": "controlar",
       "preco": 150,
-      "specs": { "velocidade": 5.5, "spin": 7.5, "controle": 9.0 },
+      "specs": {
+        "velocidade": 5.5,
+        "spin": 7.5,
+        "controle": 9.0
+      },
       "durabilidade": 8.0,
       "durezaUnificada": 45,
       "rating": 4.5,
@@ -225,7 +266,11 @@
       "nivel": "Iniciante",
       "intencao": "equilibrado",
       "preco": 180,
-      "specs": { "velocidade": 6.0, "spin": 7.5, "controle": 9.0 },
+      "specs": {
+        "velocidade": 6.0,
+        "spin": 7.5,
+        "controle": 9.0
+      },
       "durabilidade": 9.0,
       "durezaUnificada": 42,
       "rating": 4.8,
@@ -243,7 +288,11 @@
       "nivel": "Iniciante",
       "intencao": "controlar",
       "preco": 90,
-      "specs": { "velocidade": 5.0, "spin": 7.0, "controle": 9.3 },
+      "specs": {
+        "velocidade": 5.0,
+        "spin": 7.0,
+        "controle": 9.3
+      },
       "durabilidade": 7.5,
       "durezaUnificada": 40,
       "rating": 4.4,
@@ -261,7 +310,11 @@
       "nivel": "Iniciante",
       "intencao": "equilibrado",
       "preco": 260,
-      "specs": { "velocidade": 6.0, "spin": 6.5, "controle": 8.8 },
+      "specs": {
+        "velocidade": 6.0,
+        "spin": 6.5,
+        "controle": 8.8
+      },
       "durabilidade": 8.5,
       "durezaUnificada": 47,
       "rating": 4.6,

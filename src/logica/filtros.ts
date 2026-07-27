@@ -27,9 +27,16 @@ export interface Material {
   nivel: string; // canônico: 'Iniciante', 'Intermediário', 'Avançado'
   intencao: string; // 'atacar' | 'controlar' | 'equilibrado' (plain.intent do protótipo)
   preco: number;
-  specs: Specs; // { velocidade, spin, controle } — mesmo tipo canônico de metricas
-  durabilidade: number; // 0–10 (4º eixo do radar)
-  durezaUnificada: number; // grau ESN-equivalente; insumo do Perdão (D-09)
+  /**
+   * PERFIL DE DESEMPENHO — opcional de propósito. Nem todo material tem um:
+   * uma bola não tem "controle 9.0", e inventar o número só para preencher a
+   * coluna seria exatamente a precisão fingida que o produto combate (D-16).
+   * Sem specs, o material continua no catálogo (tem preço, marca, foto) mas
+   * não entra em filtro de spec, ordenação por spec, radar nem Perdão.
+   */
+  specs?: Specs;
+  durabilidade?: number; // 0–10 (4º eixo do radar)
+  durezaUnificada?: number; // grau ESN-equivalente; insumo do Perdão (D-09)
   rating: number;
   reviews: number;
 }
@@ -170,6 +177,19 @@ export function serializeQuery(estado: FiltroEstado): string {
   return p.toString();
 }
 
+/**
+ * Material COM perfil de desempenho. A UI usa isto para decidir se mostra ficha
+ * de specs, radar, Perdão e comparação — em vez de espalhar `if (m.specs)`.
+ */
+export type MaterialComDesempenho = Material & {
+  specs: Specs;
+  durabilidade: number;
+  durezaUnificada: number;
+};
+
+export const temDesempenho = (m: Material): m is MaterialComDesempenho =>
+  m.specs !== undefined && m.durabilidade !== undefined && m.durezaUnificada !== undefined;
+
 // ───────────────────── Busca textual ─────────────────────
 
 /**
@@ -204,30 +224,51 @@ export function buscar<T extends Material>(materiais: readonly T[], termo: strin
 
 // ───────────────────── Aplicação (filtra + ordena) ─────────────────────
 
-const dentro = (v: number, f: Faixa | null): boolean => f === null || (v >= f.min && v <= f.max);
+/** Faixa nula = filtro desligado (passa todo mundo). Faixa ativa com valor
+ *  ausente = NÃO passa: material sem perfil de desempenho não pode alegar estar
+ *  dentro de uma faixa de velocidade. */
+const dentro = (v: number | undefined, f: Faixa | null): boolean =>
+  f === null || (v !== undefined && v >= f.min && v <= f.max);
 
 const contemSlug = (slugs: readonly string[], valor: string): boolean =>
   slugs.length === 0 || slugs.includes(slug(valor));
 
-const perdaoDe = (m: Material): number => perdao(m.specs, m.durezaUnificada);
+/** Perdão exige perfil completo; sem ele não há o que derivar. */
+const perdaoDe = (m: Material): number | null =>
+  m.specs && m.durezaUnificada !== undefined ? perdao(m.specs, m.durezaUnificada) : null;
 
 function comparador(ordenar: Ordenacao): (a: Material, b: Material) => number {
-  const base: (a: Material, b: Material) => number =
-    ordenar === 'velocidade'
-      ? (a, b) => b.specs.velocidade - a.specs.velocidade
-      : ordenar === 'spin'
-        ? (a, b) => b.specs.spin - a.specs.spin
-        : ordenar === 'controle'
-          ? (a, b) => b.specs.controle - a.specs.controle
-          : ordenar === 'perdao'
-            ? (a, b) => perdaoDe(b) - perdaoDe(a)
-            : ordenar === 'preco-asc'
-              ? (a, b) => a.preco - b.preco
-              : ordenar === 'preco-desc'
-                ? (a, b) => b.preco - a.preco
-                : (a, b) => b.rating - a.rating; // relevancia (default)
-  // Desempate estável por id → ordenação determinística (bom p/ testes e p/ URLs).
-  return (a, b) => base(a, b) || a.id.localeCompare(b.id);
+  /** Valor que ordena. null = material sem esse dado (ex.: bola não tem spec). */
+  const chave = (m: Material): number | null => {
+    switch (ordenar) {
+      case 'velocidade':
+        return m.specs?.velocidade ?? null;
+      case 'spin':
+        return m.specs?.spin ?? null;
+      case 'controle':
+        return m.specs?.controle ?? null;
+      case 'perdao':
+        return perdaoDe(m);
+      case 'preco-asc':
+      case 'preco-desc':
+        return m.preco;
+      default:
+        return m.rating; // relevancia
+    }
+  };
+  const crescente = ordenar === 'preco-asc';
+
+  return (a, b) => {
+    const va = chave(a);
+    const vb = chave(b);
+    // Sem o dado, o material afunda — nunca lidera uma ordenação da qual não participa.
+    if (va === null && vb === null) return a.id.localeCompare(b.id);
+    if (va === null) return 1;
+    if (vb === null) return -1;
+    const base = crescente ? va - vb : vb - va;
+    // Desempate estável por id → ordenação determinística (bom p/ testes e p/ URLs).
+    return base || a.id.localeCompare(b.id);
+  };
 }
 
 /** Filtra pelas facetas/faixas e ordena. PURO: não muta o array de entrada. */
@@ -238,9 +279,9 @@ export function aplicar(materiais: readonly Material[], estado: FiltroEstado): M
       contemSlug(estado.marcas, m.marca) &&
       contemSlug(estado.niveis, m.nivel) &&
       contemSlug(estado.intencoes, m.intencao) &&
-      dentro(m.specs.velocidade, estado.velocidade) &&
-      dentro(m.specs.spin, estado.spin) &&
-      dentro(m.specs.controle, estado.controle) &&
+      dentro(m.specs?.velocidade, estado.velocidade) &&
+      dentro(m.specs?.spin, estado.spin) &&
+      dentro(m.specs?.controle, estado.controle) &&
       dentro(m.preco, estado.preco),
   );
   return filtrados.sort(comparador(estado.ordenar));

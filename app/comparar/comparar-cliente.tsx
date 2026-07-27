@@ -14,6 +14,18 @@
 import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { indicesDoMaximo, paraPalavra, perdao } from '@/src/logica/metricas';
+import { temDesempenho } from '@/src/logica/filtros';
+import type { Specs } from '@/src/logica/metricas';
+
+/** Material do catálogo QUE PODE ser comparado: tem perfil de desempenho.
+ *  Guarda de tipo própria (em vez de usar `temDesempenho` cru) para não perder
+ *  os campos do MaterialCatalogo, como `simples`. */
+type MaterialComparavel = MaterialCatalogo & {
+  specs: Specs;
+  durabilidade: number;
+  durezaUnificada: number;
+};
+const ehComparavel = (m: MaterialCatalogo): m is MaterialComparavel => temDesempenho(m);
 import { MATERIAIS, materialPorId, type MaterialCatalogo } from '@/componentes/dados-materiais';
 import { brl } from '@/componentes/formato';
 import { Cabecalho } from '@/componentes/Cabecalho';
@@ -34,7 +46,20 @@ export function ComparadorCliente() {
   const idsURL = (parametros.get('ids') ?? '').split(',').filter(Boolean);
   const encontrados = idsURL.map(materialPorId).filter((m): m is MaterialCatalogo => m !== undefined);
   const desconhecidos = idsURL.filter((id) => !materialPorId(id));
-  const prontos = encontrados.length === 2 ? (encontrados as [MaterialCatalogo, MaterialCatalogo]) : null;
+
+  /* Comparar só faz sentido entre PARES DO MESMO TIPO: borracha com borracha,
+     lâmina com lâmina. Confrontar a velocidade de uma borracha com a de uma
+     lâmina é somar coisas que medem realidades diferentes — o número sairia,
+     mas não significaria nada. E só entra quem tem perfil de desempenho: uma
+     bola não tem "controle 9.0" pra comparar. */
+  const tiposDiferentes =
+    encontrados.length === 2 && encontrados[0].tipo !== encontrados[1].tipo;
+  const semPerfil = encontrados.filter((m) => !ehComparavel(m));
+  const comPerfil = encontrados.filter(ehComparavel);
+  const prontos =
+    comPerfil.length === 2 && !tiposDiferentes
+      ? ([comPerfil[0], comPerfil[1]] as [MaterialComparavel, MaterialComparavel])
+      : null;
 
   return (
     <>
@@ -57,6 +82,25 @@ export function ComparadorCliente() {
           </p>
         )}
 
+        {tiposDiferentes && (
+          <p className={estilos.aviso} role="alert">
+            <strong>
+              {encontrados[0].nome} é {encontrados[0].tipo.toLowerCase()} e {encontrados[1].nome} é{' '}
+              {encontrados[1].tipo.toLowerCase()}
+            </strong>{' '}
+            — só comparamos materiais do mesmo tipo. Velocidade de borracha e velocidade de lâmina
+            são medidas de coisas diferentes: o número sairia, mas não diria nada.
+          </p>
+        )}
+
+        {semPerfil.length > 0 && (
+          <p className={estilos.aviso} role="alert">
+            <strong>{semPerfil.map((m) => m.nome).join(' e ')}</strong> não{' '}
+            {semPerfil.length > 1 ? 'têm' : 'tem'} ficha de desempenho — não há velocidade, efeito
+            nem controle pra confrontar.
+          </p>
+        )}
+
         {prontos ? <Comparacao par={prontos} modo={modo} /> : <Seletor preSelecionados={encontrados} />}
       </main>
 
@@ -74,6 +118,12 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
       atual.includes(id) ? atual.filter((e) => e !== id) : atual.length < 2 ? [...atual, id] : atual,
     );
 
+  /* Lista só o que é comparável, e — assim que o primeiro é escolhido — trava no
+     tipo dele. O usuário nunca monta um par inválido pra descobrir depois. */
+  const comparaveis = MATERIAIS.filter(ehComparavel);
+  const tipoTravado =
+    escolhidos.length > 0 ? materialPorId(escolhidos[0])?.tipo ?? null : null;
+
   const comparar = () => {
     window.history.pushState(null, '', `?ids=${escolhidos.join(',')}`);
   };
@@ -81,13 +131,15 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
   return (
     <section aria-label="Escolher materiais">
       <p className={estilos.instrucao}>
-        Escolha <b>dois</b> materiais do catálogo — a comparação abre com radar sobreposto e
-        tabela de métricas ({escolhidos.length}/2 selecionados).
+        Escolha <b>dois materiais do mesmo tipo</b> — a comparação abre com radar sobreposto
+        e tabela de métricas ({escolhidos.length}/2 selecionados).
+        {tipoTravado && <> Mostrando só {tipoTravado.toLowerCase()}s.</>}
       </p>
       <ul className={estilos.listaEscolha}>
-        {MATERIAIS.map((m) => {
+        {comparaveis.map((m) => {
           const marcado = escolhidos.includes(m.id);
-          const bloqueado = !marcado && escolhidos.length >= 2;
+          const bloqueado =
+            !marcado && (escolhidos.length >= 2 || (tipoTravado !== null && m.tipo !== tipoTravado));
           return (
             <li key={m.id}>
               <label className={`${estilos.itemEscolha} ${marcado ? estilos.itemMarcado : ''}`}>
@@ -121,7 +173,7 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
   );
 }
 
-function Comparacao({ par, modo }: { par: [MaterialCatalogo, MaterialCatalogo]; modo: 'simples' | 'tecnico' }) {
+function Comparacao({ par, modo }: { par: [MaterialComparavel, MaterialComparavel]; modo: 'simples' | 'tecnico' }) {
   const [a, b] = par;
   const perdoes = [perdao(a.specs, a.durezaUnificada), perdao(b.specs, b.durezaUnificada)];
 

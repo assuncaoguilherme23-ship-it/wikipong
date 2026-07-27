@@ -47,7 +47,10 @@ export const PERFIS_COM_CRITERIO: readonly Perfil[] = Object.values(TELAS)
   .map((t) => t.perfil)
   .filter((p) => temCriterios(parseQuery(p.presetURL)));
 
-const dentro = (f: Faixa, v: number): boolean => v >= f.min && v <= f.max;
+/** Valor ausente NUNCA atende a uma faixa: material sem perfil de desempenho
+ *  não pode alegar estar dentro de um critério de spec. */
+const dentro = (f: Faixa, v: number | undefined): boolean =>
+  v !== undefined && v >= f.min && v <= f.max;
 
 const detalheFaixa = (v: number, f: Faixa): string =>
   `${v.toFixed(1)} — faixa pedida: ${f.min}–${f.max}`;
@@ -65,25 +68,32 @@ export function combinaComPerfil(material: Material, perfil: Perfil): Veredito {
       detalhe: atende ? material.nivel : `${material.nivel} — pedido: ${estado.niveis.join(' ou ')}`,
     });
   }
+  /* Material sem perfil de desempenho (ex.: bola) não pode alegar atender a um
+     critério de spec — e o veredito diz POR QUE, em vez de reprovar em silêncio. */
+  const SEM_PERFIL = 'não tem ficha de desempenho';
   if (estado.velocidade) {
     criterios.push({
       rotulo: 'Velocidade',
-      atende: dentro(estado.velocidade, material.specs.velocidade),
-      detalhe: detalheFaixa(material.specs.velocidade, estado.velocidade),
+      atende: dentro(estado.velocidade, material.specs?.velocidade),
+      detalhe: material.specs
+        ? detalheFaixa(material.specs.velocidade, estado.velocidade)
+        : SEM_PERFIL,
     });
   }
   if (estado.spin) {
     criterios.push({
       rotulo: 'Efeito',
-      atende: dentro(estado.spin, material.specs.spin),
-      detalhe: detalheFaixa(material.specs.spin, estado.spin),
+      atende: dentro(estado.spin, material.specs?.spin),
+      detalhe: material.specs ? detalheFaixa(material.specs.spin, estado.spin) : SEM_PERFIL,
     });
   }
   if (estado.controle) {
     criterios.push({
       rotulo: 'Controle',
-      atende: dentro(estado.controle, material.specs.controle),
-      detalhe: detalheFaixa(material.specs.controle, estado.controle),
+      atende: dentro(estado.controle, material.specs?.controle),
+      detalhe: material.specs
+        ? detalheFaixa(material.specs.controle, estado.controle)
+        : SEM_PERFIL,
     });
   }
   if (estado.preco) {

@@ -53,7 +53,7 @@ import {
   faixaLegivel,
   sensacao,
 } from '@/src/logica/escalas';
-import { slug } from '@/src/logica/filtros';
+import { slug, temDesempenho } from '@/src/logica/filtros';
 import { variacao, dataCurta } from '@/componentes/dados-historico';
 import estilos from './detalhe.module.css';
 
@@ -80,7 +80,12 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
   const m = materialPorId(id);
   if (!m) notFound();
 
-  const perdaoValor = perdao(m.specs, m.durezaUnificada);
+  /* Perfil de desempenho é opcional: uma bola não tem velocidade/efeito/controle.
+     Sem ele, a ficha pula a tabela de specs, o radar e o Perdão — em vez de
+     mostrar zeros ou números inventados (D-16). O resto da página (foto, preço,
+     onde comprar, comunidade) continua igual. */
+  const comSpecs = temDesempenho(m);
+  const perdaoValor = comSpecs ? perdao(m.specs, m.durezaUnificada) : null;
 
   // Dado sincero: os presets do quiz rodados contra ESTE material (recomendacao.ts)
   const vereditos = vereditosDoMaterial(m);
@@ -114,12 +119,14 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
       : null;
 
   // Ficha técnica (fato): número + tradução lado a lado (D-08, mesmo dado canônico)
-  const ficha = [
-    { rotulo: 'Velocidade', valor: m.specs.velocidade, palavra: paraPalavra('velocidade', m.specs.velocidade) },
-    { rotulo: 'Spin (efeito)', valor: m.specs.spin, palavra: paraPalavra('spin', m.specs.spin) },
-    { rotulo: 'Controle', valor: m.specs.controle, palavra: paraPalavra('controle', m.specs.controle) },
-    { rotulo: 'Durabilidade', valor: m.durabilidade, palavra: null },
-  ];
+  const ficha = comSpecs
+    ? [
+        { rotulo: 'Velocidade', valor: m.specs.velocidade, palavra: paraPalavra('velocidade', m.specs.velocidade) },
+        { rotulo: 'Spin (efeito)', valor: m.specs.spin, palavra: paraPalavra('spin', m.specs.spin) },
+        { rotulo: 'Controle', valor: m.specs.controle, palavra: paraPalavra('controle', m.specs.controle) },
+        { rotulo: 'Durabilidade', valor: m.durabilidade, palavra: null },
+      ]
+    : [];
 
   return (
     <>
@@ -159,6 +166,9 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
         </header>
 
         {/* ── 1. Ficha técnica (FATO — D-14) ── */}
+        {/* Sem perfil de desempenho (ex.: bola), a seção inteira some — tabela de
+            zeros e radar vazio seriam pior que ausência (D-16). */}
+        {comSpecs && (
         <section className={estilos.ficha} aria-labelledby="titulo-ficha">
           <div className={estilos.fichaTexto}>
             <h2 id="titulo-ficha">Ficha unificada do WikiPong</h2>
@@ -195,9 +205,9 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                   <th scope="row">Perdão*</th>
                   <td>
                     <span className={`mono ${estilos.valor} ${estilos.derivada}`}>
-                      {perdaoValor.toFixed(1)}
+                      {perdaoValor!.toFixed(1)}
                     </span>
-                    <span className={estilos.palavra}>{paraPalavra('perdao', perdaoValor)}</span>
+                    <span className={estilos.palavra}>{paraPalavra('perdao', perdaoValor!)}</span>
                   </td>
                 </tr>
               </tbody>
@@ -216,7 +226,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
               series={[
                 {
                   nome: m.nome,
-                  valores: [m.specs.velocidade, m.specs.spin, m.specs.controle, perdaoValor],
+                  valores: [m.specs.velocidade, m.specs.spin, m.specs.controle, perdaoValor!],
                   variante: 'solida',
                 },
               ]}
@@ -231,6 +241,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             </Link>
           </figure>
         </section>
+        )}
 
         {/* ── 1b. O que o FABRICANTE publica (fato de fonte externa, D-14) ──
                Valor não confirmado nunca é inventado: mostra "pendente" + a fonte. */}
@@ -335,19 +346,22 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
           <p className={estilos.tag}>
             <b>{m.simples.tag}.</b> {m.simples.frase}
           </p>
-          <ul className={estilos.resumoSimples}>
-            <li>
-              <span>Velocidade</span> <Bolinhas valor={m.specs.velocidade} />{' '}
-              {paraPalavra('velocidade', m.specs.velocidade)}
-            </li>
-            <li>
-              <span>Efeito</span> <Bolinhas valor={m.specs.spin} /> {paraPalavra('spin', m.specs.spin)}
-            </li>
-            <li>
-              <span>Controle</span> <Bolinhas valor={m.specs.controle} />{' '}
-              {paraPalavra('controle', m.specs.controle)}
-            </li>
-          </ul>
+          {comSpecs && (
+            <ul className={estilos.resumoSimples}>
+              <li>
+                <span>Velocidade</span> <Bolinhas valor={m.specs.velocidade} />{' '}
+                {paraPalavra('velocidade', m.specs.velocidade)}
+              </li>
+              <li>
+                <span>Efeito</span> <Bolinhas valor={m.specs.spin} />{' '}
+                {paraPalavra('spin', m.specs.spin)}
+              </li>
+              <li>
+                <span>Controle</span> <Bolinhas valor={m.specs.controle} />{' '}
+                {paraPalavra('controle', m.specs.controle)}
+              </li>
+            </ul>
+          )}
         </section>
 
         {/* ── 2b. Pra quem é — DADO SINCERO: os mesmos presets que o quiz gera,

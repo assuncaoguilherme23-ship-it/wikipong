@@ -26,6 +26,7 @@ import {
   parseQuery,
   serializeQuery,
   slug,
+  temDesempenho,
   type Faixa,
   type FiltroEstado,
   type Ordenacao,
@@ -108,6 +109,23 @@ export function CatalogoCliente() {
   function mudarBusca(valor: string) {
     setTermo(valor);
     window.history.replaceState(null, '', montarURL(estado, valor, paraComparar));
+  }
+
+  /* Comparar só vale entre o MESMO TIPO (borracha com borracha, lâmina com
+     lâmina) e entre materiais que tenham perfil de desempenho. A regra é
+     aplicada aqui, na origem, e não só em /comparar — descobrir o erro depois de
+     escolher seria pior. `tipoTravado` é o tipo do primeiro selecionado. */
+  const tipoTravado =
+    paraComparar.length > 0 ? MATERIAIS.find((m) => m.id === paraComparar[0])?.tipo ?? null : null;
+
+  /** Pode entrar na comparação? Diz também POR QUE não, para a UI explicar. */
+  function bloqueioDeComparacao(m: MaterialCatalogo): string | null {
+    if (paraComparar.includes(m.id)) return null;
+    if (!temDesempenho(m)) return 'Sem ficha de desempenho para comparar';
+    if (paraComparar.length >= 2) return 'A comparação é de dois materiais';
+    if (tipoTravado !== null && m.tipo !== tipoTravado)
+      return `Só comparamos ${tipoTravado.toLowerCase()} com ${tipoTravado.toLowerCase()}`;
+    return null;
   }
 
   /** Comparação é de DOIS (é o que /comparar aceita) — o terceiro clique não
@@ -347,7 +365,7 @@ export function CatalogoCliente() {
                     material={m as MaterialCatalogo}
                     modo={modo}
                     selecionado={paraComparar.includes(m.id)}
-                    bloqueado={!paraComparar.includes(m.id) && paraComparar.length >= 2}
+                    motivoBloqueio={bloqueioDeComparacao(m as MaterialCatalogo)}
                     aoAlternar={() => alternarComparacao(m.id)}
                   />
                 ))}
@@ -398,33 +416,40 @@ function CartaoMaterial({
   material: m,
   modo,
   selecionado,
-  bloqueado,
+  motivoBloqueio,
   aoAlternar,
 }: {
   material: MaterialCatalogo;
   modo: 'simples' | 'tecnico';
   selecionado: boolean;
-  bloqueado: boolean;
+  /** null = pode selecionar. String = o porquê, mostrado no title do controle. */
+  motivoBloqueio: string | null;
   aoAlternar: () => void;
 }) {
-  const perdaoValor = perdao(m.specs, m.durezaUnificada);
-  const linhas = [
-    ['Velocidade', 'velocidade', m.specs.velocidade],
-    ['Efeito', 'spin', m.specs.spin],
-    ['Controle', 'controle', m.specs.controle],
-  ] as const;
+  /* Nem todo material tem perfil de desempenho (uma bola não tem "controle 9.0").
+     Sem ele, o cartão mostra o que É verdade — foto, marca, preço e a frase em
+     português claro — em vez de inventar números pra preencher a coluna (D-16). */
+  const comSpecs = temDesempenho(m);
+  const perdaoValor = comSpecs ? perdao(m.specs, m.durezaUnificada) : null;
+  const linhas = comSpecs
+    ? ([
+        ['Velocidade', 'velocidade', m.specs.velocidade],
+        ['Efeito', 'spin', m.specs.spin],
+        ['Controle', 'controle', m.specs.controle],
+      ] as const)
+    : ([] as const);
 
   return (
     <li className={`${estilos.itemGrade} ${selecionado ? estilos.itemSelecionado : ''}`}>
     {/* Fora do <Link> de propósito: checkbox dentro de link disputa o clique. */}
     <label
-      className={`${estilos.marcarComparar} ${bloqueado ? estilos.marcarBloqueado : ''}`}
-      title={bloqueado ? 'A comparação é de dois materiais' : 'Selecionar para comparar'}
+      className={`${estilos.marcarComparar} ${motivoBloqueio ? estilos.marcarBloqueado : ''}`}
+      title={motivoBloqueio ?? 'Selecionar para comparar'}
     >
       <input
         type="checkbox"
         checked={selecionado}
-        disabled={bloqueado}
+        disabled={Boolean(motivoBloqueio)}
         onChange={aoAlternar}
         aria-label={`Comparar ${m.nome}`}
       />
@@ -445,7 +470,12 @@ function CartaoMaterial({
         <p className={`mono ${estilos.seloFavorito}`}>★ Favorito da comunidade</p>
       )}
 
-      {modo === 'tecnico' ? (
+      {!comSpecs ? (
+        /* Sem perfil: só a tradução honesta, sem tabela vazia nem zeros. */
+        <p className={estilos.praQuemE}>
+          <b>{m.simples.tag}.</b> {m.simples.frase}
+        </p>
+      ) : modo === 'tecnico' ? (
         <dl className={estilos.specsTecnico}>
           {linhas.map(([rotulo, , valor]) => (
             <div key={rotulo}>
@@ -455,7 +485,7 @@ function CartaoMaterial({
           ))}
           <div>
             <dt>Perdão*</dt>
-            <dd className="mono">{perdaoValor.toFixed(1)}</dd>
+            <dd className="mono">{perdaoValor!.toFixed(1)}</dd>
           </div>
         </dl>
       ) : (
@@ -470,7 +500,7 @@ function CartaoMaterial({
           <p className={estilos.praQuemE}>
             <b>{m.simples.tag}.</b> {m.simples.frase}
           </p>
-          <p className={estilos.seloPerdao}>{paraPalavra('perdao', perdaoValor)}*</p>
+          <p className={estilos.seloPerdao}>{paraPalavra('perdao', perdaoValor!)}*</p>
         </div>
       )}
 

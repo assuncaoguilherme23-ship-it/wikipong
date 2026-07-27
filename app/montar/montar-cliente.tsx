@@ -20,7 +20,8 @@ import { useSearchParams } from 'next/navigation';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { FotoProduto } from '@/componentes/FotoProduto';
-import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
+import { MATERIAIS, materialPorId, type MaterialCatalogo } from '@/componentes/dados-materiais';
+import { temDesempenho } from '@/src/logica/filtros';
 import { brl } from '@/componentes/formato';
 import { perdao, paraPalavra } from '@/src/logica/metricas';
 import {
@@ -29,12 +30,20 @@ import {
   completa,
   ROTULO_PAPEL,
   type Montagem,
+  type PecaMontagem,
   type PapelPeca,
 } from '@/src/logica/montagem';
 import estilos from './montar.module.css';
 
-const LAMINAS = MATERIAIS.filter((m) => m.tipo === 'Lâmina');
-const BORRACHAS = MATERIAIS.filter((m) => m.tipo === 'Borracha');
+/* Só entra na montagem quem tem perfil de desempenho — o configurador mostra
+   specs lado a lado, e peça sem spec não teria o que mostrar. Na prática isso já
+   exclui a bola, que não é peça de raquete de todo jeito. */
+const ehPeca = (m: MaterialCatalogo): m is MaterialCatalogo & PecaMontagem => temDesempenho(m);
+const pecaValida = (m: MaterialCatalogo | undefined): PecaMontagem | undefined =>
+  m && ehPeca(m) ? m : undefined;
+
+const LAMINAS = MATERIAIS.filter(ehPeca).filter((m) => m.tipo === 'Lâmina');
+const BORRACHAS = MATERIAIS.filter(ehPeca).filter((m) => m.tipo === 'Borracha');
 
 const CAMPOS: { papel: PapelPeca; chave: string; opcoes: typeof MATERIAIS }[] = [
   { papel: 'lamina', chave: 'lamina', opcoes: LAMINAS },
@@ -47,9 +56,9 @@ export function MontarCliente() {
 
   const montagem: Montagem = useMemo(
     () => ({
-      lamina: materialPorId(parametros.get('lamina') ?? ''),
-      fh: materialPorId(parametros.get('fh') ?? ''),
-      bh: materialPorId(parametros.get('bh') ?? ''),
+      lamina: pecaValida(materialPorId(parametros.get('lamina') ?? '')),
+      fh: pecaValida(materialPorId(parametros.get('fh') ?? '')),
+      bh: pecaValida(materialPorId(parametros.get('bh') ?? '')),
     }),
     [parametros],
   );

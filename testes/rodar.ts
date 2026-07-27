@@ -15,7 +15,7 @@ import {
 } from '../src/logica/recomendacao.js';
 import {
   filtroVazio, parseQuery, serializeQuery, aplicar, alternarFaceta, comOrdenacao, facetas,
-  buscar, normalizar,
+  buscar, normalizar, temDesempenho,
   Material,
 } from '../src/logica/filtros.js';
 import {
@@ -363,7 +363,8 @@ const mkV = materialPorId('markv')!;
 afirma(mkV.origemDureza === 'semente', 'Mark V fica na semente (ficha não nomeia a régua)');
 afirma(MATERIAIS.every(m => m.origemDureza === 'fabricante' ? m.durezaFabricante !== undefined : m.durezaFabricante === undefined),
   'origemDureza e durezaFabricante andam juntos');
-afirma(MATERIAIS.every(m => Number.isInteger(m.durezaUnificada)), 'régua unificada trabalha em graus inteiros');
+afirma(MATERIAIS.every(m => m.durezaUnificada === undefined || Number.isInteger(m.durezaUnificada)),
+  'quando existe, a dureza unificada é grau inteiro');
 
 
 // ───────── Q1: faixa de tempo como referência (não régua — A VALIDAR) ─────────
@@ -380,6 +381,39 @@ if (telaInicio.tipo === 'pergunta') {
 } else {
   afirma(false, 'tela inicio deveria ser uma pergunta');
 }
+
+
+// ───────── perfil de desempenho OPCIONAL: nem todo material tem um ─────────
+// Uma bola não tem 'controle 9.0'. Inventar o número pra preencher a coluna
+// seria a precisão fingida que o produto combate (D-16).
+const bola = materialPorId('d40')!;
+afirma(!temDesempenho(bola), 'bola não tem perfil de desempenho');
+afirma(bola.specs === undefined, 'bola não carrega specs');
+afirma(MATERIAIS.filter(temDesempenho).length === MATERIAIS.length - 1, 'só a bola ficou sem perfil');
+
+// Fixture com um item sem perfil, pra exercitar o motor.
+const semPerfil: Material = {
+  id: 'X1', nome: 'X1', marca: 'DHS', tipo: 'Bola', nivel: 'Intermediário',
+  intencao: 'equilibrado', preco: 25, rating: 5.0, reviews: 10,
+};
+const CAT2: Material[] = [...CAT, semPerfil];
+
+// Filtro de spec ATIVO exclui quem não tem o dado — não pode alegar estar na faixa.
+afirma(!ids(aplicar(CAT2, parseQuery('vel=0-10'))).includes('X1'), 'sem specs não passa por filtro de velocidade');
+afirma(ids(aplicar(CAT2, parseQuery(''))).includes('X1'), 'sem filtro de spec, continua no catálogo');
+afirma(ids(aplicar(CAT2, parseQuery('preco=100'))).includes('X1'), 'filtro de preço ainda alcança quem não tem spec');
+
+// Ordenação por spec: quem não tem o dado afunda, nunca lidera.
+afirma(ids(aplicar(CAT2, parseQuery('ordenar=velocidade'))).at(-1) === 'X1', 'sem specs afunda ao ordenar por velocidade');
+afirma(ids(aplicar(CAT2, parseQuery('ordenar=perdao'))).at(-1) === 'X1', 'sem specs afunda ao ordenar por Perdão');
+// Mas em ordenação que não depende de spec, participa normalmente.
+afirma(ids(aplicar(CAT2, parseQuery('ordenar=preco-asc')))[0] === 'X1', 'no menor preço, lidera (R$ 25)');
+
+// Veredito diz POR QUE reprova, em vez de reprovar em silêncio.
+const vSemPerfil = combinaComPerfil(semPerfil, baseSolida);
+afirma(!vSemPerfil.combina, 'sem perfil não combina com perfil que pede spec');
+afirma(vSemPerfil.criterios.some(c => c.detalhe === 'não tem ficha de desempenho'),
+  'o critério explica a ausência em vez de mostrar número falso');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

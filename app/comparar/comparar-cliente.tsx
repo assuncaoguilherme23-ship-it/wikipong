@@ -175,6 +175,14 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
 
 function Comparacao({ par, modo }: { par: [MaterialComparavel, MaterialComparavel]; modo: 'simples' | 'tecnico' }) {
   const [a, b] = par;
+  /* Sem efeito nos dois lados (caso das lâminas), o radar perde o eixo EFE em
+     vez de desenhar um vértice em zero — que leria como "efeito nenhum". */
+  const comEfeito = a.specs.spin !== undefined && b.specs.spin !== undefined;
+  const eixosRadar = comEfeito ? EIXOS : (['VEL', 'CTR', 'DUR'] as const);
+  const valoresRadar = (m: MaterialComparavel) =>
+    comEfeito
+      ? [m.specs.velocidade, m.specs.spin!, m.specs.controle, m.durabilidade]
+      : [m.specs.velocidade, m.specs.controle, m.durabilidade];
   const perdoes = [perdao(a.specs, a.durezaUnificada), perdao(b.specs, b.durezaUnificada)];
 
   const linhas: {
@@ -185,7 +193,11 @@ function Comparacao({ par, modo }: { par: [MaterialComparavel, MaterialComparave
     formato: (v: number) => string;
   }[] = [
     { rotulo: 'Velocidade', valores: [a.specs.velocidade, b.specs.velocidade], atributo: 'velocidade', destacar: true, formato: (v) => v.toFixed(1) },
-    { rotulo: modo === 'simples' ? 'Efeito' : 'Spin', valores: [a.specs.spin, b.specs.spin], atributo: 'spin', destacar: true, formato: (v) => v.toFixed(1) },
+    /* Lâmina não tem efeito publicado por fonte nenhuma (é propriedade da
+       borracha) — a linha some em vez de confrontar dois zeros. */
+    ...(a.specs.spin !== undefined && b.specs.spin !== undefined
+      ? [{ rotulo: modo === 'simples' ? 'Efeito' : 'Spin', valores: [a.specs.spin, b.specs.spin] as [number, number], atributo: 'spin' as const, destacar: true, formato: (v: number) => v.toFixed(1) }]
+      : []),
     { rotulo: 'Controle', valores: [a.specs.controle, b.specs.controle], atributo: 'controle', destacar: true, formato: (v) => v.toFixed(1) },
     { rotulo: 'Durabilidade', valores: [a.durabilidade, b.durabilidade], atributo: null, destacar: true, formato: (v) => v.toFixed(1) },
     { rotulo: 'Perdão*', valores: [perdoes[0], perdoes[1]] as [number, number], atributo: 'perdao', destacar: true, formato: (v) => v.toFixed(1) },
@@ -202,8 +214,8 @@ function Comparacao({ par, modo }: { par: [MaterialComparavel, MaterialComparave
           <Radar
             eixos={EIXOS}
             series={[
-              { nome: a.nome, valores: [a.specs.velocidade, a.specs.spin, a.specs.controle, a.durabilidade], variante: 'tracejada' },
-              { nome: b.nome, valores: [b.specs.velocidade, b.specs.spin, b.specs.controle, b.durabilidade], variante: 'solida' },
+              { nome: a.nome, valores: valoresRadar(a), variante: 'tracejada' },
+              { nome: b.nome, valores: valoresRadar(b), variante: 'solida' },
             ]}
             animado
           />

@@ -434,7 +434,10 @@ function CartaoMaterial({
   const linhas = comSpecs
     ? ([
         ['Velocidade', 'velocidade', m.specs.velocidade],
-        ['Efeito', 'spin', m.specs.spin],
+        // Lâmina não tem efeito: a linha some em vez de mostrar zero.
+        ...(m.specs.spin !== undefined
+          ? ([['Efeito', 'spin', m.specs.spin]] as const)
+          : []),
         ['Controle', 'controle', m.specs.controle],
       ] as const)
     : ([] as const);

@@ -16,7 +16,13 @@
 export interface Specs {
   /** 0–10, escala do fabricante (não comparável entre marcas — por isso as derivadas) */
   velocidade: number;
-  spin: number;
+  /**
+   * OPCIONAL: efeito é propriedade da BORRACHA, não da lâmina. Nem o Revspin
+   * nem a própria Butterfly publicam 'spin' de lâmina — e não é lacuna das
+   * fontes, é a realidade física: a lâmina contribui indiretamente. Lâmina
+   * entra sem este campo em vez de carregar número inventado (D-16).
+   */
+  spin?: number;
   controle: number;
 }
 

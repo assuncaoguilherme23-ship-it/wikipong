@@ -33,7 +33,6 @@
       "preco": 1650,
       "specs": {
         "velocidade": 8.8,
-        "spin": 9.0,
         "controle": 8.5
       },
       "durabilidade": 8.5,
@@ -165,7 +164,6 @@
       "preco": 1200,
       "specs": {
         "velocidade": 8.6,
-        "spin": 8.4,
         "controle": 8.2
       },
       "durabilidade": 8.5,
@@ -224,7 +222,6 @@
       "preco": 300,
       "specs": {
         "velocidade": 5.5,
-        "spin": 6.5,
         "controle": 9.0
       },
       "durabilidade": 8.5,
@@ -312,7 +309,6 @@
       "preco": 260,
       "specs": {
         "velocidade": 6.0,
-        "spin": 6.5,
         "controle": 8.8
       },
       "durabilidade": 8.5,

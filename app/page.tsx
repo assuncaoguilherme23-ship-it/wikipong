@@ -126,7 +126,8 @@ export default function Home() {
 
   // Prova ao vivo: linhas computadas pela lógica pura (renderer Técnico + Simples).
   const velocidades = AMOSTRAS.map((a) => a.specs.velocidade);
-  const efeitos = AMOSTRAS.map((a) => a.specs.spin);
+  // AMOSTRAS sao borrachas declaradas aqui mesmo, com spin literal — sempre existe.
+  const efeitos = AMOSTRAS.map((a) => a.specs.spin!);
   const controles = AMOSTRAS.map((a) => a.specs.controle);
   const perdoes = AMOSTRAS.map((a) => perdao(a.specs, a.durezaUnificada));
   const custos = AMOSTRAS.map((a) => custoMensalPorClasse(a.precoMedio, a.classe));

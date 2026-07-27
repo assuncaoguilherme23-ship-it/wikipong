@@ -71,6 +71,9 @@ export function combinaComPerfil(material: Material, perfil: Perfil): Veredito {
   /* Material sem perfil de desempenho (ex.: bola) não pode alegar atender a um
      critério de spec — e o veredito diz POR QUE, em vez de reprovar em silêncio. */
   const SEM_PERFIL = 'não tem ficha de desempenho';
+  /* Lâmina não tem efeito publicado por fonte nenhuma — o veredito diz isso
+     em vez de reprovar como se o número existisse e fosse baixo. */
+  const SEM_EFEITO = 'efeito é da borracha, não da lâmina';
   if (estado.velocidade) {
     criterios.push({
       rotulo: 'Velocidade',
@@ -84,7 +87,10 @@ export function combinaComPerfil(material: Material, perfil: Perfil): Veredito {
     criterios.push({
       rotulo: 'Efeito',
       atende: dentro(estado.spin, material.specs?.spin),
-      detalhe: material.specs ? detalheFaixa(material.specs.spin, estado.spin) : SEM_PERFIL,
+      detalhe:
+        material.specs?.spin !== undefined
+          ? detalheFaixa(material.specs.spin, estado.spin)
+          : SEM_EFEITO,
     });
   }
   if (estado.controle) {

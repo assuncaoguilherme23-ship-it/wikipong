@@ -415,6 +415,30 @@ afirma(!vSemPerfil.combina, 'sem perfil não combina com perfil que pede spec');
 afirma(vSemPerfil.criterios.some(c => c.detalhe === 'não tem ficha de desempenho'),
   'o critério explica a ausência em vez de mostrar número falso');
 
+
+// ───────── efeito é da BORRACHA, não da lâmina ─────────
+// Nem o Revspin nem a Butterfly publicam 'spin' de lâmina — não é lacuna das
+// fontes, é a realidade física. Lâmina entra sem o campo em vez de inventar.
+afirma(MATERIAIS.filter(m => m.tipo === 'Lâmina').every(m => m.specs?.spin === undefined),
+  'nenhuma lâmina carrega efeito inventado');
+afirma(MATERIAIS.filter(m => m.tipo === 'Borracha').every(m => m.specs?.spin !== undefined),
+  'toda borracha tem efeito');
+
+// Lâmina não passa por filtro de efeito, mas passa nos outros.
+const laminaSemSpin: Material = {
+  id: 'L9', nome: 'L9', marca: 'Butterfly', tipo: 'Lâmina', nivel: 'Avançado',
+  intencao: 'atacar', preco: 1500, rating: 4.9, reviews: 20,
+  specs: { velocidade: 8.8, controle: 8.5 }, durabilidade: 8.5, durezaUnificada: 47,
+};
+const CAT3: Material[] = [...CAT, laminaSemSpin];
+afirma(!ids(aplicar(CAT3, parseQuery('spin=0-10'))).includes('L9'), 'lâmina não passa por filtro de efeito');
+afirma(ids(aplicar(CAT3, parseQuery('vel=8-10'))).includes('L9'), 'mas passa por filtro de velocidade');
+// E o veredito explica a ausência em vez de reprovar como se fosse zero.
+const perfilComSpin = { id: 'x', nome: 'x', descricao: 'x', presetURL: '/catalogo?spin=8-10' };
+const vLam = combinaComPerfil(laminaSemSpin, perfilComSpin);
+afirma(vLam.criterios.some(c => c.detalhe === 'efeito é da borracha, não da lâmina'),
+  'veredito explica por que a lâmina não tem efeito');
+
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

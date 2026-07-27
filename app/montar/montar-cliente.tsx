@@ -178,7 +178,8 @@ export function MontarCliente() {
                             {p.nome}
                           </th>
                           <td className="mono">{p.specs.velocidade.toFixed(1)}</td>
-                          <td className="mono">{p.specs.spin.toFixed(1)}</td>
+                          {/* Lamina nao tem efeito: travessao em vez de numero inventado. */}
+                          <td className="mono">{p.specs.spin !== undefined ? p.specs.spin.toFixed(1) : "—"}</td>
                           <td className="mono">{p.specs.controle.toFixed(1)}</td>
                           <td className="mono">{perdao(p.specs, p.durezaUnificada).toFixed(1)}</td>
                         </tr>

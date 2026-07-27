@@ -122,7 +122,9 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
   const ficha = comSpecs
     ? [
         { rotulo: 'Velocidade', valor: m.specs.velocidade, palavra: paraPalavra('velocidade', m.specs.velocidade) },
-        { rotulo: 'Spin (efeito)', valor: m.specs.spin, palavra: paraPalavra('spin', m.specs.spin) },
+        ...(m.specs.spin !== undefined
+          ? [{ rotulo: 'Spin (efeito)', valor: m.specs.spin, palavra: paraPalavra('spin', m.specs.spin) }]
+          : []),
         { rotulo: 'Controle', valor: m.specs.controle, palavra: paraPalavra('controle', m.specs.controle) },
         { rotulo: 'Durabilidade', valor: m.durabilidade, palavra: null },
       ]
@@ -237,7 +239,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
               series={[
                 {
                   nome: m.nome,
-                  valores: [m.specs.velocidade, m.specs.spin, m.specs.controle, perdaoValor!],
+                  valores: [m.specs.velocidade, m.specs.spin ?? 0, m.specs.controle, perdaoValor!],
                   variante: 'solida',
                 },
               ]}
@@ -363,10 +365,12 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                 <span>Velocidade</span> <Bolinhas valor={m.specs.velocidade} />{' '}
                 {paraPalavra('velocidade', m.specs.velocidade)}
               </li>
-              <li>
-                <span>Efeito</span> <Bolinhas valor={m.specs.spin} />{' '}
-                {paraPalavra('spin', m.specs.spin)}
-              </li>
+              {m.specs.spin !== undefined && (
+                <li>
+                  <span>Efeito</span> <Bolinhas valor={m.specs.spin} />{' '}
+                  {paraPalavra('spin', m.specs.spin)}
+                </li>
+              )}
               <li>
                 <span>Controle</span> <Bolinhas valor={m.specs.controle} />{' '}
                 {paraPalavra('controle', m.specs.controle)}

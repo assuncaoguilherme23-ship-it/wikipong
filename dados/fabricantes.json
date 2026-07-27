@@ -11,15 +11,30 @@
       "fonte": "https://www.butterfly-global.com/en/products/detail/05800.html",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "36° (escala Butterfly)" },
-        { "rotulo": "Superfície", "valor": "Lisa, alta tensão (Spring Sponge)" }
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "36° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, alta tensão (Spring Sponge)"
+        }
       ],
       "indices": {
         "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
         "valores": [
-          { "rotulo": "Velocidade", "valor": 83 },
-          { "rotulo": "Efeito", "valor": 76 },
-          { "rotulo": "Arco", "valor": 79 }
+          {
+            "rotulo": "Velocidade",
+            "valor": 83
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 76
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 79
+          }
         ]
       }
     },
@@ -28,8 +43,14 @@
       "fonte": "https://www.butterfly-global.com/en/products/detail/06020.html",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "35° (escala Butterfly)" },
-        { "rotulo": "Superfície", "valor": "Lisa, alta tensão (Spring Sponge)" }
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "35° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, alta tensão (Spring Sponge)"
+        }
       ],
       "nota": "Os índices de velocidade/efeito desta ficha não foram embutidos: a leitura automática da página devolveu um valor inconsistente. Consulte a fonte oficial para os números vigentes."
     },
@@ -38,8 +59,14 @@
       "fonte": "https://en.butterfly.tt/dignics-05.html",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "40° (escala Butterfly)" },
-        { "rotulo": "Superfície", "valor": "Lisa, alta tensão (Spring Sponge X)" }
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "40° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, alta tensão (Spring Sponge X)"
+        }
       ]
     },
     "evolution": {
@@ -47,10 +74,22 @@
       "fonte": "https://www.stigaus.com/products/stiga-evolution-table-tennis-racket",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Montagem", "valor": "Raquete pré-montada" },
-        { "rotulo": "Lâmina", "valor": "6 lâminas de madeira" },
-        { "rotulo": "Esponja", "valor": "2 mm" },
-        { "rotulo": "Homologação", "valor": "Borracha aprovada pela ITTF" }
+        {
+          "rotulo": "Montagem",
+          "valor": "Raquete pré-montada"
+        },
+        {
+          "rotulo": "Lâmina",
+          "valor": "6 lâminas de madeira"
+        },
+        {
+          "rotulo": "Esponja",
+          "valor": "2 mm"
+        },
+        {
+          "rotulo": "Homologação",
+          "valor": "Borracha aprovada pela ITTF"
+        }
       ],
       "nota": "A STIGA posiciona este modelo como nível performance, indicado para jogadores intermediários. O WikiPong classificava como iniciante no dado-semente; corrigido em 21/07/2026 para seguir o fabricante."
     },
@@ -59,18 +98,42 @@
       "fonte": "https://www.butterfly-global.com/en/products/detail/30041.html",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Construção", "valor": "5 lâminas de madeira + 2 de Arylate-Carbon (ALC)" },
-        { "rotulo": "Madeiras", "valor": "Koto (externa) · Ayous (média) · Kiri (miolo)" },
-        { "rotulo": "Classe", "valor": "OFF (ofensiva)" },
-        { "rotulo": "Espessura", "valor": "5,8 mm" },
-        { "rotulo": "Cabeça", "valor": "157 × 150 mm" },
-        { "rotulo": "Peso", "valor": "≈ 87 g" }
+        {
+          "rotulo": "Construção",
+          "valor": "5 lâminas de madeira + 2 de Arylate-Carbon (ALC)"
+        },
+        {
+          "rotulo": "Madeiras",
+          "valor": "Koto (externa) · Ayous (média) · Kiri (miolo)"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "OFF (ofensiva)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,8 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "157 × 150 mm"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": "≈ 87 g"
+        }
       ],
       "indices": {
         "escala": "Índices Butterfly para lâminas (Reação e Vibração) — escala interna da marca",
         "valores": [
-          { "rotulo": "Reação", "valor": 11.8 },
-          { "rotulo": "Vibração", "valor": 10.3 }
+          {
+            "rotulo": "Reação",
+            "valor": 11.8
+          },
+          {
+            "rotulo": "Vibração",
+            "valor": 10.3
+          }
         ]
       },
       "nota": "Construção e medidas conferem entre a página do fabricante e vários revendedores oficiais."
@@ -80,18 +143,42 @@
       "fonte": "https://shop.butterflyonline.com/Fan-Zhendong-ALC-1260",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Construção", "valor": "5 lâminas de madeira + 2 de Arylate-Carbon (ALC)" },
-        { "rotulo": "Classe", "valor": "OFF (ofensiva)" },
-        { "rotulo": "Espessura", "valor": "5,8 mm" },
-        { "rotulo": "Cabeça", "valor": "157 × 150 mm" },
-        { "rotulo": "Peso", "valor": "≈ 87 g" },
-        { "rotulo": "Cabo", "valor": "FL (100×25 mm) ou ST (100×23 mm)" }
+        {
+          "rotulo": "Construção",
+          "valor": "5 lâminas de madeira + 2 de Arylate-Carbon (ALC)"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "OFF (ofensiva)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,8 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "157 × 150 mm"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": "≈ 87 g"
+        },
+        {
+          "rotulo": "Cabo",
+          "valor": "FL (100×25 mm) ou ST (100×23 mm)"
+        }
       ],
       "indices": {
         "escala": "Índices Butterfly para lâminas (Reação e Vibração) — escala interna da marca",
         "valores": [
-          { "rotulo": "Reação", "valor": 11.8 },
-          { "rotulo": "Vibração", "valor": 10.3 }
+          {
+            "rotulo": "Reação",
+            "valor": 11.8
+          },
+          {
+            "rotulo": "Vibração",
+            "valor": 10.3
+          }
         ]
       },
       "nota": "Compartilha a estrutura de lâminas da Viscaria — as fontes registram isso explicitamente. Refere-se ao modelo ALC; a versão Super ALC é outra lâmina, com specs diferentes."
@@ -101,9 +188,18 @@
       "fonte": "https://www.megaspin.net/store/product-reviews.asp?pid=dhs-h3-neo-40",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "37° a 41° (escala DHS) — vendida em várias durezas" },
-        { "rotulo": "Superfície", "valor": "Lisa pegajosa (tacky), esponja densa" },
-        { "rotulo": "Espessura", "valor": "2,15 mm / 2,20 mm" }
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "37° a 41° (escala DHS) — vendida em várias durezas"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa pegajosa (tacky), esponja densa"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "2,15 mm / 2,20 mm"
+        }
       ],
       "nota": "Nem 'graus' significam a mesma coisa entre marcas: a versão 39° na escala DHS equivale a cerca de 51° na escala ESN das marcas europeias. É o exemplo mais claro de por que a ficha unificada do WikiPong existe."
     },
@@ -112,27 +208,62 @@
       "fonte": "https://blog.tabletennis11.com/tibhar-evolution-series-table-tennis-rubbers-review",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "46,7° a 47,7° (escala ESN)" },
-        { "rotulo": "Superfície", "valor": "Lisa tensionada (esponja Red Power)" },
-        { "rotulo": "Peso da folha", "valor": "≈ 72 g inteira · ≈ 49 g já cortada" }
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "46,7° a 47,7° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (esponja Red Power)"
+        },
+        {
+          "rotulo": "Peso da folha",
+          "valor": "≈ 72 g inteira · ≈ 49 g já cortada"
+        }
       ],
       "nota": "As fontes convergem numa faixa de dureza, não num valor único — por isso registramos a faixa. Os índices de velocidade/efeito aparecem em escalas diferentes conforme a fonte e não foram embutidos."
     },
     "xiom-vega-intro": {
-      "confianca": "pendente",
-      "fonte": "https://www.xiom.com/",
-      "consultadoEm": "2026-07-21",
-      "nota": "Fontes públicas divergem na dureza da esponja (47,5° · 45° · 5,8° em três fontes distintas), então nenhum valor foi embutido."
+      "confianca": "oficial",
+      "fonte": "https://xiom.shop/products/vega-intro",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (tecnologia PHYSI-ELASTO, esponja Carbo)"
+        },
+        {
+          "rotulo": "Posição na linha",
+          "valor": "Entrada da série Vega — a mais acessível"
+        }
+      ],
+      "nota": "A loja oficial da Xiom publica 47,5°, e é esse o valor que registramos. AS FONTES DIVERGEM: revendedores listam 45° e um teste prático estimou 42,5° a 45°. Como a divergência é real e não resolvida, ela fica dita aqui em vez de escondida — a régua definitiva depende de validação do especialista (D-07/D-09)."
     },
     "markv": {
       "confianca": "revendedor",
       "fonte": "https://www.megaspin.net/store/product-reviews.asp?pid=y-markv",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "40° a 45° (≈ 42,5°)" },
-        { "rotulo": "Superfície", "valor": "Lisa, borracha natural — clássica, não tensionada" },
-        { "rotulo": "Espessuras", "valor": "1,0 · 1,5 · 1,8 · 2,0 · 2,5 mm" },
-        { "rotulo": "No mercado desde", "valor": "1969" }
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "40° a 45° (≈ 42,5°)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, borracha natural — clássica, não tensionada"
+        },
+        {
+          "rotulo": "Espessuras",
+          "valor": "1,0 · 1,5 · 1,8 · 2,0 · 2,5 mm"
+        },
+        {
+          "rotulo": "No mercado desde",
+          "valor": "1969"
+        }
       ],
       "nota": "As fontes divergem no valor exato da dureza (40° a 45°), então registramos a faixa. Os índices de velocidade/efeito aparecem em pelo menos três escalas distintas conforme a fonte e não foram embutidos."
     },
@@ -141,17 +272,38 @@
       "fonte": "https://www.stigasports.com/en/product/allround-classic",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Construção", "valor": "5 lâminas de madeira (all-wood)" },
-        { "rotulo": "Classe", "valor": "ALL (allround)" },
-        { "rotulo": "Espessura", "valor": "5,1 mm" },
-        { "rotulo": "Peso", "valor": "≈ 85 g" },
-        { "rotulo": "No mercado desde", "valor": "1967" }
+        {
+          "rotulo": "Construção",
+          "valor": "5 lâminas de madeira (all-wood)"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "ALL (allround)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,1 mm"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": "≈ 85 g"
+        },
+        {
+          "rotulo": "No mercado desde",
+          "valor": "1967"
+        }
       ],
       "indices": {
         "escala": "Índice Stiga (escala interna da marca, 0–100)",
         "valores": [
-          { "rotulo": "Velocidade", "valor": 73 },
-          { "rotulo": "Controle", "valor": 77 }
+          {
+            "rotulo": "Velocidade",
+            "valor": 73
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 77
+          }
         ]
       }
     },
@@ -160,29 +312,95 @@
       "fonte": "https://www.donic.com/en/DONIC-APPELGREN-ALLPLAY/100201010",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Construção", "valor": "5 lâminas de madeira (all-wood)" },
-        { "rotulo": "Madeiras", "valor": "Abachi (miolo) · Limba (intermediárias e externas)" },
-        { "rotulo": "Classe", "valor": "ALL (allround)" },
-        { "rotulo": "Espessura", "valor": "5,5 mm" },
-        { "rotulo": "Cabo", "valor": "FL (côncavo) · AN (anatômico) · ST (reto)" }
+        {
+          "rotulo": "Construção",
+          "valor": "5 lâminas de madeira (all-wood)"
+        },
+        {
+          "rotulo": "Madeiras",
+          "valor": "Abachi (miolo) · Limba (intermediárias e externas)"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "ALL (allround)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,5 mm"
+        },
+        {
+          "rotulo": "Cabo",
+          "valor": "FL (côncavo) · AN (anatômico) · ST (reto)"
+        }
       ],
       "indices": {
         "escala": "Índice Donic (escala interna da marca, 0–100)",
         "valores": [
-          { "rotulo": "Velocidade", "valor": 73 },
-          { "rotulo": "Controle", "valor": 82 }
+          {
+            "rotulo": "Velocidade",
+            "valor": 73
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 82
+          }
         ]
       }
     },
-    "palio-expert": { "confianca": "pendente", "fonte": "https://www.paliotabletennis.com/", "consultadoEm": "2026-07-21" },
+    "palio-expert": {
+      "confianca": "oficial",
+      "fonte": "https://palioett.com/product/palio-expert-3-bat-case-expert-table-tennis/",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Borrachas",
+          "valor": "Palio CJ8000 nos dois lados — homologadas pela ITTF"
+        },
+        {
+          "rotulo": "Lâmina",
+          "valor": "Madeira pura, cabo flared (anatômico)"
+        },
+        {
+          "rotulo": "Acompanha",
+          "valor": "Estojo Expert Table Tennis"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Expert Table Tennis (0–10) — escala do fabricante da raquete, não comparável com outras marcas",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 6
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 9
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 10
+          }
+        ]
+      },
+      "nota": "Raquete pré-montada: os números são da montagem inteira (lâmina + as duas CJ8000), não de uma peça isolada. O fabricante não publica a dureza da esponja com a régua nomeada, então não há conversão para a escala unificada."
+    },
     "palio-ak47": {
       "confianca": "revendedor",
       "fonte": "https://chtt.se/en/varumarken/palio/paliogummi/palio-ak47-yellow",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Dureza da esponja", "valor": "42° a 44°" },
-        { "rotulo": "Superfície", "valor": "Lisa de atrito (não pegajosa)" },
-        { "rotulo": "Espessura", "valor": "2,2 mm" }
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "42° a 44°"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa de atrito (não pegajosa)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "2,2 mm"
+        }
       ],
       "nota": "Atenção: na linha AK47, a Yellow é a dureza INTERMEDIÁRIA — a mais macia é a Blue (38° a 40°) e a Red é a mais dura. O texto do WikiPong descrevia a Yellow como 'a mais macia da lista', o que está incorreto."
     },
@@ -191,11 +409,26 @@
       "fonte": "https://www.tabletennis11.com/other_eng/dhs-dual-3-40-10-balls-seam",
       "consultadoEm": "2026-07-21",
       "ficha": [
-        { "rotulo": "Material", "valor": "Plástico ABS (poli) 40+" },
-        { "rotulo": "Diâmetro", "valor": "40,0 a 40,55 mm" },
-        { "rotulo": "Peso", "valor": "2,67 a 2,77 g" },
-        { "rotulo": "Construção", "valor": "Com costura (seamed)" },
-        { "rotulo": "Homologação", "valor": "3 estrelas · aprovada pela ITTF" }
+        {
+          "rotulo": "Material",
+          "valor": "Plástico ABS (poli) 40+"
+        },
+        {
+          "rotulo": "Diâmetro",
+          "valor": "40,0 a 40,55 mm"
+        },
+        {
+          "rotulo": "Peso",
+          "valor": "2,67 a 2,77 g"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Com costura (seamed)"
+        },
+        {
+          "rotulo": "Homologação",
+          "valor": "3 estrelas · aprovada pela ITTF"
+        }
       ],
       "nota": "Bola não tem índice de velocidade, efeito ou controle: o que se mede é conformidade (redondeza, quique, excentricidade, dureza e cor) ao padrão ITTF. Os valores 0–10 da ficha unificada não têm significado para este item."
     }

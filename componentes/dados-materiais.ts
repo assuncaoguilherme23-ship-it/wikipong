@@ -23,6 +23,14 @@ import { escalaDoTexto, grauRepresentativo, paraESN } from '@/src/logica/escalas
 
 export type OrigemDureza = 'fabricante' | 'semente';
 
+/**
+ * De onde vêm velocidade/efeito/controle:
+ *  · 'comunidade' — médias do Revspin, na mesma escala 0–10, com amostra e URL
+ *  · 'semente'    — proposta do protótipo, sem fonte rastreável (A VALIDAR)
+ * As duas não valem o mesmo, e a ficha diz qual é qual (D-16).
+ */
+export type OrigemSpecs = 'comunidade' | 'semente';
+
 export interface MaterialCatalogo extends Material {
   simples: { tag: string; frase: string };
   /** De onde veio a `durezaUnificada`: convertida da ficha do fabricante, ou
@@ -30,6 +38,8 @@ export interface MaterialCatalogo extends Material {
   origemDureza: OrigemDureza;
   /** O que o fabricante publica, quando publica — para a UI mostrar a origem. */
   durezaFabricante?: { grau: number; escala: string };
+  /** Ausente = 'semente' (os materiais antigos, anteriores a esta distinção). */
+  origemSpecs?: OrigemSpecs;
 }
 
 /** Converte a ficha do fabricante em grau ESN-equivalente. null quando não dá. */
@@ -49,10 +59,15 @@ function durezaDaFicha(id: string): { unificada: number; grau: number; escala: s
 }
 
 function resolver(m: (typeof dados.materiais)[number]): MaterialCatalogo {
+  /* O JSON infere `origemSpecs` como string; aqui ela volta ao tipo estreito.
+     Ausente = 'semente' (os materiais anteriores a esta distinção). */
+  const origemSpecs = ((m as { origemSpecs?: string }).origemSpecs ?? 'semente') as OrigemSpecs;
+  const base = { ...m, origemSpecs };
+
   const doFabricante = durezaDaFicha(m.id);
-  if (!doFabricante) return { ...m, origemDureza: 'semente' };
+  if (!doFabricante) return { ...base, origemDureza: 'semente' };
   return {
-    ...m,
+    ...base,
     durezaUnificada: doFabricante.unificada,
     origemDureza: 'fabricante',
     durezaFabricante: { grau: doFabricante.grau, escala: doFabricante.escala },

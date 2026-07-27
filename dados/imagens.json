@@ -90,6 +90,60 @@
       "fonte": "Table Tennis Hub",
       "fonteUrl": "https://www.tabletennishub.net/products/palio-ak47-yellow",
       "consultadoEm": "2026-07-23"
+    },
+    "tenergy05-hard": {
+      "arquivo": "tenergy05-hard.webp",
+      "fonte": "Butterfly",
+      "fonteUrl": "https://www.butterfly-global.com/en/products/detail/06030.html",
+      "consultadoEm": "2026-07-27"
+    },
+    "tenergy05-fx": {
+      "arquivo": "tenergy05-fx.webp",
+      "fonte": "Butterfly",
+      "fonteUrl": "https://www.butterfly-global.com/en/products/detail/05900.html",
+      "consultadoEm": "2026-07-27"
+    },
+    "tenergy64": {
+      "arquivo": "tenergy64.webp",
+      "fonte": "Butterfly",
+      "fonteUrl": "https://www.butterfly-global.com/en/products/detail/05820.html",
+      "consultadoEm": "2026-07-27"
+    },
+    "tenergy64-fx": {
+      "arquivo": "tenergy64-fx.webp",
+      "fonte": "Butterfly",
+      "fonteUrl": "https://www.butterfly-global.com/en/products/detail/05920.html",
+      "consultadoEm": "2026-07-27"
+    },
+    "tenergy80": {
+      "arquivo": "tenergy80.webp",
+      "fonte": "Butterfly",
+      "fonteUrl": "https://www.butterfly-global.com/en/products/detail/05930.html",
+      "consultadoEm": "2026-07-27"
+    },
+    "tenergy19": {
+      "arquivo": "tenergy19.webp",
+      "fonte": "Butterfly",
+      "fonteUrl": "https://www.butterfly-global.com/en/products/detail/06090.html",
+      "consultadoEm": "2026-07-27"
+    },
+    "dignics09c": {
+      "arquivo": "dignics09c.webp",
+      "fonte": "Butterfly",
+      "fonteUrl": "https://www.butterfly-global.com/en/products/detail/06070.html",
+      "consultadoEm": "2026-07-27"
+    },
+    "dignics80": {
+      "arquivo": "dignics80.webp",
+      "fonte": "Butterfly",
+      "fonteUrl": "https://www.butterfly-global.com/en/products/detail/06050.html",
+      "consultadoEm": "2026-07-27"
+    },
+    "dignics64": {
+      "arquivo": "dignics64.webp",
+      "fonte": "Butterfly",
+      "fonteUrl": "https://www.butterfly-global.com/en/products/detail/06060.html",
+      "consultadoEm": "2026-07-27"
     }
   }
 }

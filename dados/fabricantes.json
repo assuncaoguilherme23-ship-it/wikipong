@@ -431,6 +431,294 @@
         }
       ],
       "nota": "Bola não tem índice de velocidade, efeito ou controle: o que se mede é conformidade (redondeza, quique, excentricidade, dureza e cor) ao padrão ITTF. Os valores 0–10 da ficha unificada não têm significado para este item."
+    },
+    "tenergy05-hard": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/06030.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "43° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Spring Sponge)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 82
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 96
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 92
+          }
+        ]
+      }
+    },
+    "tenergy05-fx": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/05900.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "32° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Spring Sponge)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 81
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 64
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 65
+          }
+        ]
+      }
+    },
+    "tenergy64": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/05820.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "36° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Spring Sponge)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 87
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 70
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 75
+          }
+        ]
+      }
+    },
+    "tenergy64-fx": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/05920.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "32° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Spring Sponge)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 85
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 58
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 61
+          }
+        ]
+      }
+    },
+    "tenergy80": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/05930.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "36° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Spring Sponge)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 85
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 73
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 77
+          }
+        ]
+      }
+    },
+    "tenergy19": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/06090.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "36° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Spring Sponge)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 84
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 75
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 78
+          }
+        ]
+      }
+    },
+    "dignics09c": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/06070.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "44° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Spring Sponge)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 79
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 96
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 96
+          }
+        ]
+      }
+    },
+    "dignics80": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/06050.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "40° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Spring Sponge)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 88
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 82
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 86
+          }
+        ]
+      }
+    },
+    "dignics64": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/06060.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "40° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Spring Sponge)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 90
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 79
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 84
+          }
+        ]
+      }
     }
   }
 }

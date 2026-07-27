@@ -96,6 +96,78 @@
       "escala": 10,
       "avaliacoes": 30,
       "consultadoEm": "2026-07-27"
+    },
+    "tenergy05-hard": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-tenergy-05-hard.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 33,
+      "consultadoEm": "2026-07-27"
+    },
+    "tenergy05-fx": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-tenergy-05-fx.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 166,
+      "consultadoEm": "2026-07-27"
+    },
+    "tenergy64": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-tenergy-64.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 173,
+      "consultadoEm": "2026-07-27"
+    },
+    "tenergy64-fx": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-tenergy-64-fx.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 44,
+      "consultadoEm": "2026-07-27"
+    },
+    "tenergy80": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-tenergy-80.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 120,
+      "consultadoEm": "2026-07-27"
+    },
+    "tenergy19": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-tenergy-19.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 37,
+      "consultadoEm": "2026-07-27"
+    },
+    "dignics09c": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-dignics-09c.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 92,
+      "consultadoEm": "2026-07-27"
+    },
+    "dignics80": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-dignics-80.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 30,
+      "consultadoEm": "2026-07-27"
+    },
+    "dignics64": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-dignics-64.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 18,
+      "consultadoEm": "2026-07-27"
     }
   }
 }

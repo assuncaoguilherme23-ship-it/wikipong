@@ -172,11 +172,22 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
         <section className={estilos.ficha} aria-labelledby="titulo-ficha">
           <div className={estilos.fichaTexto}>
             <h2 id="titulo-ficha">Ficha unificada do WikiPong</h2>
-            <p className={estilos.subtituloFicha}>
-              Escala 0–10 <strong>nossa</strong>, para permitir comparar marcas diferentes — os
-              números abaixo são <strong>estimativa</strong>, não o dado oficial do fabricante
-              (que está logo abaixo, com a fonte).
-            </p>
+            {/* A procedência muda o que a frase pode prometer: número vindo de
+                centenas de avaliações não é a mesma coisa que estimativa nossa. */}
+            {m.origemSpecs === 'comunidade' && sinal ? (
+              <p className={estilos.subtituloFicha}>
+                Escala 0–10 <strong>nossa</strong>, para permitir comparar marcas diferentes. Estes
+                números são a <strong>média de {sinal.avaliacoes} avaliações</strong> da comunidade
+                do {sinal.fonte} — não uma estimativa nossa, e não o índice de marketing do
+                fabricante (que está logo abaixo, com a fonte).
+              </p>
+            ) : (
+              <p className={estilos.subtituloFicha}>
+                Escala 0–10 <strong>nossa</strong>, para permitir comparar marcas diferentes — os
+                números abaixo são <strong>estimativa</strong>, não o dado oficial do fabricante
+                (que está logo abaixo, com a fonte).
+              </p>
+            )}
             <table className={estilos.tabela}>
               <tbody>
                 {ficha.map((linha) => (

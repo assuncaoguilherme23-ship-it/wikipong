@@ -129,6 +129,23 @@ export function primeiroGrau(texto: string): number | null {
   return Number.isFinite(n) ? n : null;
 }
 
+/**
+ * Grau REPRESENTATIVO de uma ficha. Fabricante costuma publicar faixa ("37° a
+ * 41°") porque vende a mesma borracha em várias durezas; o ponto médio é o que
+ * representa a linha sem privilegiar um extremo.
+ *
+ * Ignora número entre parênteses (ex.: o "≈ 42,5°" que já é um resumo nosso),
+ * para não contar a mesma informação duas vezes.
+ */
+export function grauRepresentativo(texto: string): number | null {
+  const semParenteses = texto.replace(/\([^)]*\)/g, ' ');
+  const graus = [...semParenteses.matchAll(/(\d+(?:[.,]\d+)?)\s*°/g)]
+    .map((m) => Number(m[1].replace(',', '.')))
+    .filter((n) => Number.isFinite(n));
+  if (graus.length === 0) return null;
+  return (Math.min(...graus) + Math.max(...graus)) / 2;
+}
+
 /** Reconhece a escala citada num texto de ficha. Null quando a ficha não diz. */
 export function escalaDoTexto(texto: string): Escala | null {
   const t = texto.toLowerCase();

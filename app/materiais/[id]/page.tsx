@@ -182,7 +182,13 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                   <th scope="row">Dureza unificada*</th>
                   <td>
                     <span className={`mono ${estilos.valor}`}>{m.durezaUnificada}°</span>
-                    <span className={estilos.palavra}>escala unificada entre marcas</span>
+                    {/* Procedência à vista: convertida da ficha do fabricante ou
+                        estimativa nossa. As duas coisas não valem o mesmo (D-16). */}
+                    <span className={estilos.palavra}>
+                      {m.origemDureza === 'fabricante' && m.durezaFabricante
+                        ? `convertida de ${m.durezaFabricante.grau}° ${m.durezaFabricante.escala.toUpperCase()}`
+                        : 'estimativa — o fabricante não publica a régua'}
+                    </span>
                   </td>
                 </tr>
                 <tr>

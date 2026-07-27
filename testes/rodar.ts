@@ -20,10 +20,11 @@ import {
 } from '../src/logica/filtros.js';
 import {
   paraESN, converter, faixaLegivel, sensacao, primeiroGrau, escalaDoTexto,
-  DESLOCAMENTO_ATE_ESN, INCERTEZA,
+  DESLOCAMENTO_ATE_ESN, INCERTEZA, grauRepresentativo,
 } from '../src/logica/escalas.js';
 import { etiquetasDoPreset } from '../src/logica/descrever-filtro.js';
 import { precoTotal, observacoes, completa, pecasDe } from '../src/logica/montagem.js';
+import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 
 let ok = 0; const falhas: string[] = [];
 function afirma(cond: boolean, msg: string) { if (cond) ok++; else falhas.push(msg); }
@@ -340,6 +341,29 @@ afirma(obsNivel.some(o => o.tipo === 'atencao'), 'observação de nível é aten
 const obsIguais = observacoes({ lamina: laminaIni, fh: borrIni, bh: borrIni });
 afirma(!obsIguais.some(o => o.titulo === 'Níveis muito diferentes'), 'mesmo nível não gera alerta');
 afirma(observacoes({}).length === 0, 'montagem vazia não gera observação');
+
+
+// ───────── dureza unificada DERIVADA da ficha do fabricante (fonte única) ─────────
+// Fabricante costuma publicar FAIXA (vende a mesma borracha em várias durezas):
+// o ponto médio representa a linha sem privilegiar um extremo.
+afirma(grauRepresentativo('37° a 41° (escala DHS)') === 39, 'faixa vira ponto médio');
+afirma(grauRepresentativo('36° (escala Butterfly)') === 36, 'grau único é ele mesmo');
+afirma(grauRepresentativo('40° a 45° (≈ 42,5°)') === 42.5, 'ignora o resumo entre parênteses');
+afirma(grauRepresentativo('sem grau') === null, 'texto sem grau devolve null');
+
+// O bug que a derivação conserta: a semente invertia a ordem do PRÓPRIO fabricante.
+// Butterfly publica Tenergy 36° e Dignics 40° — Dignics é mais dura, e agora é.
+const tEN = materialPorId('tenergy05')!;
+const dIG = materialPorId('dignics05')!;
+afirma(dIG.durezaUnificada > tEN.durezaUnificada, 'Dignics (40° BF) é mais dura que Tenergy (36° BF)');
+afirma(tEN.origemDureza === 'fabricante' && dIG.origemDureza === 'fabricante', 'ambas derivadas da ficha');
+
+// Onde o fabricante não declara grau+régua, a semente segue valendo — e diz isso.
+const mkV = materialPorId('markv')!;
+afirma(mkV.origemDureza === 'semente', 'Mark V fica na semente (ficha não nomeia a régua)');
+afirma(MATERIAIS.every(m => m.origemDureza === 'fabricante' ? m.durezaFabricante !== undefined : m.durezaFabricante === undefined),
+  'origemDureza e durezaFabricante andam juntos');
+afirma(MATERIAIS.every(m => Number.isInteger(m.durezaUnificada)), 'régua unificada trabalha em graus inteiros');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

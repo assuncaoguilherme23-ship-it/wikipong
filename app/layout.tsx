@@ -52,6 +52,15 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     siteName: 'WikiPong',
   },
+  /* Verificação de propriedade no Google Search Console. Fica aqui, e não num
+     arquivo solto na raiz, porque `trailingSlash: true` transforma toda rota em
+     pasta — um .html avulso na raiz é redirecionado e não é entregue. A meta tag
+     não depende de roteamento, e ainda fica versionada com o resto dos metadados.
+     NÃO REMOVER: o Google revalida periodicamente e tirar isto derruba a
+     propriedade, junto com o acesso à Mudança de Endereço do .com.br. */
+  verification: {
+    google: 'FPdDpAKURzn7U2nZ2vTuj_xcbw9Y1n1-kd_L_ThMV7E',
+  },
 };
 
 /* Barra do navegador acompanha o tema (tokens --cor-papel de cada modo) */

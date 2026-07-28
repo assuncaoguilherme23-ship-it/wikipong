@@ -1116,6 +1116,180 @@
         ]
       },
       "nota": "A Butterfly publica índices próprios para lâminas, mas NÃO publica efeito — efeito é propriedade da borracha. Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala unificada — por isso a ficha traz só o índice oficial da marca."
+    },
+    "glayzer": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/06100.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "38° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Spring Sponge X)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 81
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 73
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 82
+          }
+        ]
+      }
+    },
+    "glayzer-09c": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/06110.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "42° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada de alto atrito (High Tension + Spring Sponge X)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 75
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 87
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 95
+          }
+        ]
+      }
+    },
+    "bryce-highspeed": {
+      "confianca": "oficial",
+      "fonte": "https://shop.butterflyonline.com/bryce-high-speed",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "35° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension + Micro Layer)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 92
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 54
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 46
+          }
+        ]
+      },
+      "nota": "A página desta borracha saiu do catálogo global da Butterfly (o link antigo devolve 404), mas ela segue em linha e à venda no Brasil. Os números acima foram conferidos em DUAS lojas oficiais da própria Butterfly (Estados Unidos e Austrália), que publicam os mesmos valores."
+    },
+    "roundell": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/05860.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "35° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (High Tension), capa macia"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 77
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 43
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 58
+          }
+        ]
+      },
+      "nota": "A própria Butterfly avisa que esta borracha tem superfície delicada e se danifica com facilidade: use protetor depois de cada treino."
+    },
+    "sriver-l": {
+      "confianca": "revendedor",
+      "fonte": "https://loja.jjyamada.com.br/borracha-para-tenis-de-mesa-modelo-sriver-l-max",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa (pinos para dentro)"
+        }
+      ],
+      "nota": "A Butterfly não lista mais a Sriver L no catálogo global nem nas lojas oficiais — só a Sriver e a Sriver EL. Ela segue à venda no Brasil pela representante oficial da marca. A página da distribuidora repete a ficha da Sriver comum (Velocidade 38 · Efeito 23 · Arco 23 · dureza 38°), e NÃO registramos esses números como sendo da L: a L usa esponja diferente da original. Sem dureza confirmada, esta borracha entra sem a régua unificada — e por isso sem o Perdão."
+    },
+    "flextra": {
+      "confianca": "oficial",
+      "fonte": "https://www.butterfly-global.com/en/products/detail/05210.html",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "32° (escala Butterfly)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa (pinos para dentro)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Butterfly (revisado em fev/2023) — escala interna da marca",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 29
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 10
+          },
+          {
+            "rotulo": "Arco",
+            "valor": 15
+          }
+        ]
+      }
     }
   }
 }

@@ -1004,6 +1004,138 @@
         "tag": "Madeira natural para aprender",
         "frase": "Velocidade moderada e bola que fica mais tempo na lâmina: feita para quem está formando os fundamentos."
       }
+    },
+    {
+      "id": "glayzer",
+      "nome": "Glayzer",
+      "marca": "Butterfly",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 425,
+      "specs": {
+        "velocidade": 8.6,
+        "spin": 8.8,
+        "controle": 9.1
+      },
+      "durabilidade": 7.5,
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 15,
+      "simples": {
+        "tag": "Tensora de entrada da linha nova",
+        "frase": "Spring Sponge X a 38°: potência de tensor moderno com controle mais generoso que a linha Tenergy. Boa porta de entrada para quem quer subir de patamar."
+      }
+    },
+    {
+      "id": "glayzer-09c",
+      "nome": "Glayzer 09C",
+      "marca": "Butterfly",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 425,
+      "specs": {
+        "velocidade": 8.2,
+        "spin": 9.1,
+        "controle": 9.2
+      },
+      "durabilidade": 7.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 33,
+      "simples": {
+        "tag": "Aderente, com esponja moderna",
+        "frase": "Superfície de alto atrito sobre esponja a 42°: muito giro no topspin e no jogo curto, sem cobrar a técnica que a linha Dignics exige."
+      }
+    },
+    {
+      "id": "bryce-highspeed",
+      "nome": "Bryce Highspeed",
+      "marca": "Butterfly",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 354,
+      "specs": {
+        "velocidade": 9.6,
+        "spin": 8.8,
+        "controle": 8.7
+      },
+      "durabilidade": 8.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 34,
+      "simples": {
+        "tag": "A mais rápida da Butterfly",
+        "frase": "Velocidade 92 no índice da marca, trajetória baixa e tempo de contato curto. Devolve muito e perdoa pouco: cobra deslocamento e timing."
+      }
+    },
+    {
+      "id": "roundell",
+      "nome": "Roundell",
+      "marca": "Butterfly",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 283,
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 8.6,
+        "controle": 8.7
+      },
+      "durabilidade": 6.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.3,
+      "reviews": 28,
+      "simples": {
+        "tag": "Velocidade com toque macio",
+        "frase": "Capa mais macia sobre esponja tensionada: saída rápida e giro lateral acentuado. Em compensação, é a que mais pede cuidado com a superfície."
+      }
+    },
+    {
+      "id": "sriver-l",
+      "nome": "Sriver L",
+      "marca": "Butterfly",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 260,
+      "specs": {
+        "velocidade": 8.2,
+        "spin": 8.1,
+        "controle": 8.9
+      },
+      "durabilidade": 7.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.3,
+      "reviews": 24,
+      "simples": {
+        "tag": "A clássica, em versão mais firme",
+        "frase": "A Sriver é de 1967 e formou gerações. A versão L troca a esponja da original por uma mais firme: mais giro, mantendo a sensação previsível que fez o nome."
+      }
+    },
+    {
+      "id": "flextra",
+      "nome": "Flextra",
+      "marca": "Butterfly",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 177,
+      "specs": {
+        "velocidade": 7.0,
+        "spin": 7.4,
+        "controle": 8.7
+      },
+      "durabilidade": 6.7,
+      "origemSpecs": "comunidade",
+      "rating": 3.9,
+      "reviews": 58,
+      "simples": {
+        "tag": "Para os primeiros meses",
+        "frase": "Lenta e muito controlável, feita para aprender o gesto antes de buscar velocidade. É a mais barata da marca — e não acompanha quem já joga sério."
+      }
     }
   ]
 }

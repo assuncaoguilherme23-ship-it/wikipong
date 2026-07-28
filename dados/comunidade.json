@@ -336,6 +336,54 @@
       "escala": 10,
       "avaliacoes": 13,
       "consultadoEm": "2026-07-27"
+    },
+    "glayzer": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-glayzer.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 15,
+      "consultadoEm": "2026-07-27"
+    },
+    "glayzer-09c": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-glayzer-09c.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 33,
+      "consultadoEm": "2026-07-27"
+    },
+    "bryce-highspeed": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-bryce-high-speed.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 34,
+      "consultadoEm": "2026-07-27"
+    },
+    "roundell": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-roundell.html",
+      "nota": 8.6,
+      "escala": 10,
+      "avaliacoes": 28,
+      "consultadoEm": "2026-07-27"
+    },
+    "sriver-l": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-sriver-l.html",
+      "nota": 8.6,
+      "escala": 10,
+      "avaliacoes": 24,
+      "consultadoEm": "2026-07-27"
+    },
+    "flextra": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-flextra.html",
+      "nota": 7.8,
+      "escala": 10,
+      "avaliacoes": 58,
+      "consultadoEm": "2026-07-27"
     }
   }
 }

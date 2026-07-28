@@ -26,6 +26,8 @@ import { etiquetasDoPreset } from '../src/logica/descrever-filtro.js';
 import { precoTotal, observacoes, completa, pecasDe } from '../src/logica/montagem.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
+import { imagemDoMaterial } from '../componentes/dados-imagens.js';
+import { existsSync } from 'node:fs';
 
 let ok = 0; const falhas: string[] = [];
 function afirma(cond: boolean, msg: string) { if (cond) ok++; else falhas.push(msg); }
@@ -401,6 +403,40 @@ afirma(
     return Boolean(f && ((f.ficha && f.ficha.length > 0) || f.indices));
   }),
   'todo material sem specs tem ficha de fabricante com conteúdo',
+);
+
+// Caso do meio: TEM specs (a comunidade mediu) mas NÃO tem dureza. A Sriver L
+// saiu do catálogo da Butterfly e fonte nenhuma publica a esponja dela — a
+// distribuidora só repete a ficha da Sriver comum, que é outra borracha. Sem
+// dureza não há Perdão; velocidade/efeito/controle continuam valendo.
+// Lâmina é de madeira: não ter dureza de esponja é o esperado. BORRACHA sem
+// dureza é a exceção, e exceção precisa se explicar na própria ficha.
+const semDureza = MATERIAIS.filter(
+  (m) => m.tipo === 'Borracha' && temDesempenho(m) && m.durezaUnificada === undefined,
+);
+afirma(semDureza.length > 0, 'existe borracha com specs e sem dureza unificada');
+afirma(
+  semDureza.every((m) => Boolean(fabricantePorId(m.id)?.nota)),
+  'borracha sem dureza diz na ficha por que a régua não se aplica',
+);
+afirma(
+  semDureza.every((m) => m.origemDureza === 'semente' && m.durezaFabricante === undefined),
+  'sem dureza confirmada, nada é carimbado como vindo do fabricante',
+);
+
+// Foto de produto é regra do projeto, não enfeite: TODO material tem imagem
+// creditada, e o arquivo precisa existir de verdade em public/produtos/ —
+// senão o site publica um Glifo de fallback sem ninguém perceber.
+afirma(
+  MATERIAIS.every((m) => imagemDoMaterial(m.id) !== undefined),
+  'todo material tem imagem oficial registrada',
+);
+afirma(
+  MATERIAIS.every((m) => {
+    const img = imagemDoMaterial(m.id)!;
+    return Boolean(img.fonte && img.fonteUrl) && existsSync(`public/produtos/${img.arquivo}`);
+  }),
+  'toda imagem tem crédito, origem e arquivo no disco',
 );
 
 // Fixture com um item sem perfil, pra exercitar o motor.

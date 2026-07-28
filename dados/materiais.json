@@ -1313,6 +1313,169 @@
         "tag": "A mais dura da família",
         "frase": "Esponja 50°, a mais dura das Vega: potência e velocidade extras para quem já está acostumado com a dureza das borrachas asiáticas."
       }
+    },
+    {
+      "id": "xiom-omega-7-pro",
+      "nome": "Xiom Omega 7 Pro",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 360,
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.1,
+        "controle": 8.7
+      },
+      "durabilidade": 6.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 29,
+      "simples": {
+        "tag": "A geração que firmou a linha Omega",
+        "frase": "Elasto Futura com Cycloid: agarra a bola de plástico e devolve giro pesado. Das mais equilibradas do topo da Xiom — o ponto fraco é durar."
+      }
+    },
+    {
+      "id": "xiom-omega-8-pro",
+      "nome": "Xiom Omega 8 Pro",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 385,
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 9.0,
+        "controle": 9.0
+      },
+      "durabilidade": 7.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.35,
+      "reviews": 5,
+      "simples": {
+        "tag": "Catapulta com peso reduzido",
+        "frase": "A Xiom tirou peso da estrutura da Jekyll & Hyde: mesma explosão, conjunto mais leve. Rende no jogo colado à mesa, onde peso extra atrapalha o toque."
+      }
+    },
+    {
+      "id": "xiom-omega-8-china",
+      "nome": "Xiom Omega 8 China",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 385,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Aderente sobre esponja 52,5°",
+        "frase": "Superfície pegajosa sobre esponja dura: o giro do estilo chinês na plataforma Omega 8. Feita para o forehand de quem já tem o gesto formado."
+      }
+    },
+    {
+      "id": "xiom-jh-c525",
+      "nome": "Xiom Jekyll & Hyde C52.5",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 470,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A versão de revés — edição Hugo Calderano",
+        "frase": "A mais macia das C: aderente chinesa com esponja 52,5°. É a versão pensada para o revés, onde a dura demais rouba controle. Sai em edição assinada pelo Hugo Calderano."
+      }
+    },
+    {
+      "id": "xiom-jh-c550",
+      "nome": "Xiom Jekyll & Hyde C55.0",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 470,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 9.7,
+        "controle": 9.2
+      },
+      "durabilidade": 6.5,
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 14,
+      "simples": {
+        "tag": "Dupla tensão, sem booster",
+        "frase": "A primeira de dupla tensão com X-Factor: já vem tensionada de fábrica, sem precisar de booster. Efeito altíssimo (9,7 na comunidade) — mas cobra gesto completo e uso das pernas."
+      }
+    },
+    {
+      "id": "xiom-jh-c575",
+      "nome": "Xiom Jekyll & Hyde C57.5",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 470,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A do forehand do Hugo Calderano",
+        "frase": "A mais dura e mais rápida da série, com 57,5°: é a borracha com que o Hugo Calderano venceu a Copa do Mundo. Não perdoa técnica incompleta."
+      }
+    },
+    {
+      "id": "xiom-jh-v475",
+      "nome": "Xiom Jekyll & Hyde V47.5",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 370,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 8.8,
+        "controle": 9.0
+      },
+      "durabilidade": 6.5,
+      "origemSpecs": "comunidade",
+      "rating": 4.35,
+      "reviews": 10,
+      "simples": {
+        "tag": "Giro por arraste",
+        "frase": "A mais macia da família, a 47,5°: construída em torno do \"spin dragging\", o giro que nasce de arrastar a bola. Rápida — e a que menos dura da linha."
+      }
+    },
+    {
+      "id": "xiom-jh-x50",
+      "nome": "Xiom Jekyll & Hyde X50",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 370,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Catapulta agressiva",
+        "frase": "Transfere energia vertical e horizontal ao mesmo tempo: topspin agressivo sobre esponja 50°. Exige técnica física bem resolvida para render."
+      }
+    },
+    {
+      "id": "xiom-jh-h525",
+      "nome": "Xiom Jekyll & Hyde H52.5",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 370,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Híbrida para jogador de elite",
+        "frase": "Reproduz o comportamento da borracha chinesa segurando a bola na esponja carbo, a 52,5°. Trajetória vantajosa no topspin de quem já joga alto."
+      }
     }
   ]
 }

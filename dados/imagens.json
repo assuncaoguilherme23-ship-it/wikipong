@@ -390,6 +390,60 @@
       "fonte": "OperaTT",
       "fonteUrl": "https://www.operatt.com.br/borracha-xiom-vega-asia-hybrid",
       "consultadoEm": "2026-07-27"
+    },
+    "xiom-omega-7-pro": {
+      "arquivo": "xiom-omega-7-pro.webp",
+      "fonte": "Xiom",
+      "fonteUrl": "https://xiom.shop/products/omega-vii-pro",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-omega-8-pro": {
+      "arquivo": "xiom-omega-8-pro.webp",
+      "fonte": "Xiom",
+      "fonteUrl": "https://xiom.shop/products/omega-viii-pro",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-omega-8-china": {
+      "arquivo": "xiom-omega-8-china.webp",
+      "fonte": "OperaTT",
+      "fonteUrl": "https://www.operatt.com.br/borracha-xiom-omega-8-china",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-jh-c525": {
+      "arquivo": "xiom-jh-c525.webp",
+      "fonte": "Xiom",
+      "fonteUrl": "https://xiom.shop/products/jekyll-hyde-c52-5-hugo",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-jh-c550": {
+      "arquivo": "xiom-jh-c550.webp",
+      "fonte": "Xiom",
+      "fonteUrl": "https://xiom.shop/products/jekyll-hyde-c55-0",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-jh-c575": {
+      "arquivo": "xiom-jh-c575.webp",
+      "fonte": "TableTennisStore.eu",
+      "fonteUrl": "https://en.tabletennisstore.eu/products/xiom-jekyll-hyde-c57-5",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-jh-v475": {
+      "arquivo": "xiom-jh-v475.webp",
+      "fonte": "OperaTT",
+      "fonteUrl": "https://www.operatt.com.br/borracha-xiom-jekyll-hyde-v475",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-jh-x50": {
+      "arquivo": "xiom-jh-x50.webp",
+      "fonte": "OperaTT",
+      "fonteUrl": "https://www.operatt.com.br/borracha-xiom-jekyll-hyde-x-500",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-jh-h525": {
+      "arquivo": "xiom-jh-h525.webp",
+      "fonte": "OperaTT",
+      "fonteUrl": "https://www.operatt.com.br/borracha-xiom-jekyll-hyde-h525-2023-09-04-16-44-33",
+      "consultadoEm": "2026-07-27"
     }
   }
 }

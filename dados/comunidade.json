@@ -432,6 +432,38 @@
       "escala": 10,
       "avaliacoes": 7,
       "consultadoEm": "2026-07-27"
+    },
+    "xiom-omega-7-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-vii-pro.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 29,
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-omega-8-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-8-pro.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-jh-c550": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-jekyll-hyde-c550.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 14,
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-jh-v475": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-jekyll-hyde-v475.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 10,
+      "consultadoEm": "2026-07-27"
     }
   }
 }

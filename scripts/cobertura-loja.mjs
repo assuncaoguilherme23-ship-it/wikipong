@@ -82,7 +82,7 @@ async function paginas(fonte, marca) {
          multimarca o produto sempre traz a marca no título; em distribuidora de
          marca única, não traz — lá quem filtra é o slug. */
       if (fonte.marcaNoTitulo && !new RegExp(`\\b${marca}\\b`, 'i').test(nome)) continue;
-      if (!achados.has(m[1])) achados.set(m[1], { nome, tipo });
+      if (!achados.has(m[1])) achados.set(m[1], { nome, tipo, url: new URL(m[0].match(/href="([^"]+)"/)[1], fonte.url(1)).href });
     }
     /* Página que não trouxe nada novo = fim da listagem. Sem isso o laço leria
        a última página repetidamente e daria falsa sensação de completude. */
@@ -114,12 +114,35 @@ const decodeHtml = (s) =>
  * já catalogada quando ela é outro produto.
  */
 const chave = (s) =>
-  normalizar(s)
+  /* ".0" decimal é ruído de grafia, não modelo: a loja escreve "X 50.0" e o
+     catálogo "X50" — mesma borracha. Some ANTES de normalizar, porque
+     normalizar() troca o ponto por espaço e o zero viraria dígito solto. */
+  normalizar(s.replace(/(\d)[.,]0(?!\d)/g, '$1'))
     .replace(/^.*?\b(xiom|butterfly)\b\s*/i, '')
     .replace(/\s*-?\s*(hugo edition|edicao hugo|lancamento|novo|nova)\s*$/i, '')
     .replace(/\s+/g, '');
 
 const casa = (nomeLoja, nomeCatalogo) => chave(nomeLoja) === chave(nomeCatalogo);
+
+/**
+ * A página do produto publica preço, ou só um "avise-me"?
+ *
+ * Cuidado com o rodapé: essas páginas listam "produtos relacionados" COM preço
+ * logo abaixo de um produto esgotado SEM preço. Procurar "R$" na página inteira
+ * devolve o preço do vizinho — foi assim que o Tenergy 80 FX (esgotado) apareceu
+ * custando R$ 537, que é o preço do Tenergy 05. Por isso corta antes.
+ */
+async function temPreco(url) {
+  try {
+    const res = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 WikiPong' } });
+    if (!res.ok) return false;
+    const html = await res.text();
+    const principal = html.split(/relacionad|similar|voc[eê] tamb[eé]m|quem viu|quem comprou/i)[0];
+    return /R\$\s*[\d.]+,\d{2}/.test(principal);
+  } catch {
+    return false;
+  }
+}
 
 async function conferir(marca) {
   const fonte = FONTES[marca];
@@ -143,8 +166,17 @@ async function conferir(marca) {
   );
 
   const faltando = daLoja.filter((p) => !catalogo.some((m) => casa(p.nome, m.nome)));
-  const lacuna = faltando.filter((p) => !ADIADOS.test(p.nome));
+  const candidatos = faltando.filter((p) => !ADIADOS.test(p.nome));
   const adiados = faltando.filter((p) => ADIADOS.test(p.nome));
+
+  /* Estar LISTADO não é estar à venda. Estas lojas mantêm a página no ar depois
+     de acabar o estoque, sem preço e com "avise-me". Sem preço praticado no
+     Brasil não há oferta (D-13) e o material não entra — foi o que aconteceu com
+     a Sriver e a Sriver EL. Sem esta segunda passada o relatório acusa lacuna
+     que não existe, e a saída fácil para "fechar" viraria inventar preço. */
+  const lacuna = [];
+  const semPreco = [];
+  for (const p of candidatos) ((await temPreco(p.url)) ? lacuna : semPreco).push(p);
 
   const conta = (lista, t) => lista.filter((x) => x.tipo === t).length;
   console.log(`\n═══ ${marca.toUpperCase()} · ${fonte.loja}`);
@@ -156,10 +188,14 @@ async function conferir(marca) {
   );
 
   if (lacuna.length === 0) {
-    console.log(`  ✔ sem lacuna — tudo que a loja vende está catalogado`);
+    console.log(`  ✔ sem lacuna — tudo que a loja VENDE está catalogado`);
   } else {
-    console.log(`\n  ✘ LACUNA REAL: ${lacuna.length}`);
+    console.log(`\n  ✘ LACUNA REAL (à venda, com preço): ${lacuna.length}`);
     for (const p of lacuna) console.log(`      [${p.tipo.padEnd(8)}] ${p.nome}`);
+  }
+  if (semPreco.length > 0) {
+    console.log(`\n  · listados SEM preço (esgotados) — fora do catálogo por D-13: ${semPreco.length}`);
+    for (const p of semPreco) console.log(`      [${p.tipo.padEnd(8)}] ${p.nome}`);
   }
   if (adiados.length > 0) {
     console.log(`\n  · adiados de propósito (pinos/anti-spin): ${adiados.length}`);

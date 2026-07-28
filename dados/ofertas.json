@@ -484,10 +484,10 @@
     },
     {
       "materialId": "xiom-vega-japan",
-      "loja": "Tênis de Mesa Store",
-      "preco": 365,
-      "url": "https://www.tenisdemesastore.com.br/marca/xiom.html",
-      "atualizadoEm": "2026-07-27",
+      "loja": "OperaTT",
+      "preco": 280,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
       "nota": "Preço lido na listagem da marca Xiom na loja."
     },
     {
@@ -640,6 +640,94 @@
       "preco": 720,
       "url": "https://www.operatt.com.br/marca/xiom.html",
       "atualizadoEm": "2026-07-27",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-omega-7-euro",
+      "loja": "OperaTT",
+      "preco": 360,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-omega-7-asia",
+      "loja": "OperaTT",
+      "preco": 360,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-omega-7-tour",
+      "loja": "OperaTT",
+      "preco": 360,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-omega-7-hyper",
+      "loja": "OperaTT",
+      "preco": 360,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-omega-7-china-guang",
+      "loja": "OperaTT",
+      "preco": 360,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-jh-v525",
+      "loja": "OperaTT",
+      "preco": 370,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-omega-7-china-ying",
+      "loja": "OperaTT",
+      "preco": 360,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-omega-8-euro",
+      "loja": "OperaTT",
+      "preco": 385,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-omega-8-hybrid",
+      "loja": "OperaTT",
+      "preco": 385,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-jh-x475",
+      "loja": "OperaTT",
+      "preco": 370,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-jh-z525",
+      "loja": "OperaTT",
+      "preco": 410,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-28",
       "nota": "Preço lido na listagem da marca Xiom na loja."
     }
   ]

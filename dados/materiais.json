@@ -1232,7 +1232,7 @@
       "tipo": "Borracha",
       "nivel": "Intermediário",
       "intencao": "atacar",
-      "preco": 365,
+      "preco": 280,
       "specs": {
         "velocidade": 9.0,
         "spin": 8.9,
@@ -1565,6 +1565,213 @@
       "simples": {
         "tag": "Caneta japonesa de lâmina única",
         "frase": "Uma única camada de Kiso Hinoki premium com 10,5 mm de espessura: a construção tradicional do caneteiro japonês. Cabeça estreita e alongada, bem diferente da lâmina clássica."
+      }
+    },
+    {
+      "id": "xiom-omega-7-euro",
+      "nome": "Xiom Omega 7 Euro",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 360,
+      "specs": {
+        "velocidade": 9.0,
+        "spin": 8.9,
+        "controle": 9.1
+      },
+      "durabilidade": 7.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 25,
+      "simples": {
+        "tag": "A mais macia da linha Omega 7",
+        "frase": "Esponja 42,5° e peso baixo: entrega giro e potência sem a exigência física das irmãs mais duras. A porta de entrada da linha de topo da Xiom."
+      }
+    },
+    {
+      "id": "xiom-omega-7-asia",
+      "nome": "Xiom Omega 7 Asia",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 360,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 9.3,
+        "controle": 8.5
+      },
+      "durabilidade": 8.2,
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 18,
+      "simples": {
+        "tag": "Híbrida entre o japonês e o chinês",
+        "frase": "Levemente aderente sobre esponja 52,5°: junta o giro do estilo chinês com a saída rápida do japonês. Bloqueio firme e topspin pesado — e das que mais duram na linha."
+      }
+    },
+    {
+      "id": "xiom-omega-7-tour",
+      "nome": "Xiom Omega 7 Tour",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 360,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.3,
+        "controle": 8.2
+      },
+      "durabilidade": 8.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 20,
+      "simples": {
+        "tag": "A de competição da linha",
+        "frase": "Esponja 55°, dura: velocidade e efeito no teto da linha Omega 7, com controle mais exigente. A comunidade é direta — não é para quem está começando."
+      }
+    },
+    {
+      "id": "xiom-omega-7-hyper",
+      "nome": "Xiom Omega 7 Hyper",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 360,
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.4,
+        "controle": 8.5
+      },
+      "durabilidade": 6.2,
+      "origemSpecs": "comunidade",
+      "rating": 4.1,
+      "reviews": 6,
+      "simples": {
+        "tag": "Muito giro, resposta não-linear",
+        "frase": "O maior efeito da linha (9,4 na comunidade), mas com comportamento não-linear: responde muito diferente no toque leve e no golpe forte. É também a de menor durabilidade — 6,2."
+      }
+    },
+    {
+      "id": "xiom-omega-7-china-guang",
+      "nome": "Xiom Omega 7 China Guang",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 360,
+      "specs": {
+        "velocidade": 8.8,
+        "spin": 9.2,
+        "controle": 9.1
+      },
+      "durabilidade": 7.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 10,
+      "simples": {
+        "tag": "Aderente chinesa com catapulta",
+        "frase": "Média aderência sobre esponja 55°: tem o efeito da chinesa tradicional mas com catapulta, o que a torna ponte entre o material europeu e o chinês nacional."
+      }
+    },
+    {
+      "id": "xiom-jh-v525",
+      "nome": "Xiom Jekyll & Hyde V52.5",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 370,
+      "specs": {
+        "velocidade": 9.5,
+        "spin": 9.2,
+        "controle": 8.3
+      },
+      "durabilidade": 8.0,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 6,
+      "simples": {
+        "tag": "A mais rápida da família V",
+        "frase": "A V com esponja 52,5°: velocidade 9,5 na comunidade, a maior de toda a linha Jekyll & Hyde. Em troca, é sensível ao efeito que vem do outro lado."
+      }
+    },
+    {
+      "id": "xiom-omega-7-china-ying",
+      "nome": "Xiom Omega 7 China Ying",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 360,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A esponja mais dura do catálogo",
+        "frase": "Esponja 60°, a mais dura de todo o WikiPong: aderência chinesa levada ao extremo. Exige força e gesto completo para a bola sair — não perdoa toque incompleto."
+      }
+    },
+    {
+      "id": "xiom-omega-8-euro",
+      "nome": "Xiom Omega 8 Euro",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 385,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A macia da geração 8",
+        "frase": "Esponja 45° na plataforma mais nova da Xiom: a catapulta da Omega 8 com a exigência física reduzida. Feita para quem quer a geração nova sem esponja dura."
+      }
+    },
+    {
+      "id": "xiom-omega-8-hybrid",
+      "nome": "Xiom Omega 8 Hybrid",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 385,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Híbrida na plataforma nova",
+        "frase": "Capa levemente aderente sobre a esponja NIF da geração 8, a 52,5°: giro de estilo chinês com o peso reduzido que caracteriza a linha."
+      }
+    },
+    {
+      "id": "xiom-jh-x475",
+      "nome": "Xiom Jekyll & Hyde X47.5",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 370,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A X mais macia",
+        "frase": "Mesma catapulta agressiva da X50, com esponja 47,5°: um pouco mais fácil de acionar, mantendo a transferência de energia que dá nome à série X."
+      }
+    },
+    {
+      "id": "xiom-jh-z525",
+      "nome": "Xiom Jekyll & Hyde Z52.5",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 410,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da família",
+        "frase": "A série Z, a R$ 410 — o topo de preço da Jekyll & Hyde. Esponja 52,5°, entre a V e a C, na proposta de tensão dupla da linha."
       }
     }
   ]

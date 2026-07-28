@@ -464,6 +464,54 @@
       "escala": 10,
       "avaliacoes": 10,
       "consultadoEm": "2026-07-27"
+    },
+    "xiom-omega-7-euro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-vii-euro.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 25,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-omega-7-asia": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-vii-asia.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 18,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-omega-7-tour": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-vii-tour.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 20,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-omega-7-hyper": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-vii-hyper.html",
+      "nota": 8.2,
+      "escala": 10,
+      "avaliacoes": 6,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-omega-7-china-guang": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-vii-guang-china.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 10,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-jh-v525": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-jekyll-hyde-v525.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 6,
+      "consultadoEm": "2026-07-28"
     }
   }
 }

@@ -1734,6 +1734,182 @@
         }
       ],
       "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Nenhuma destas lâminas tem amostra suficiente na comunidade (Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5), então elas entram sem a escala de desempenho: com a construção medida, o preço real e a foto. A Xiom não lista esta lâmina no catálogo global; ela é vendida aqui pela revendedora oficial da marca no Brasil."
+    },
+    "xiom-omega-7-euro": {
+      "confianca": "oficial",
+      "fonte": "https://xiom.shop/products/omega-vii-euro",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "42,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Elasto Futura + Cycloid)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-omega-7-asia": {
+      "confianca": "oficial",
+      "fonte": "https://xiom.shop/products/omega-vii-asia",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "52,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa levemente aderente (Elasto Futura + Cycloid)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-omega-7-tour": {
+      "confianca": "oficial",
+      "fonte": "https://xiom.shop/products/omega-vii-tour",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "55,0° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Elasto Futura + Cycloid)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-omega-7-hyper": {
+      "confianca": "oficial",
+      "fonte": "https://xiom.shop/products/omega-vii-hyper",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "55,0° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Elasto Futura + Cycloid)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-omega-7-china-guang": {
+      "confianca": "oficial",
+      "fonte": "https://xiom.shop/products/omega-vii-china-guang",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "55,0° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente (capa chinesa + esponja dura)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-jh-v525": {
+      "confianca": "oficial",
+      "fonte": "https://xiom.shop/products/jekyll-hyde-v52-5",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "52,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Spin Dragging + Cycloid)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum. O grau vem do PRÓPRIO NOME do modelo — a Xiom batiza a série pela dureza — e está estampado no selo da embalagem, visível na foto."
+    },
+    "xiom-omega-7-china-ying": {
+      "confianca": "oficial",
+      "fonte": "https://xiom.shop/products/omega-vii-china-ying",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "60,0° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente (capa chinesa + esponja 60°)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "xiom-omega-8-euro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-xiom-omega-8-euro",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "45,0° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (esponja NIF, estrutura desenvolvida com IA)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum. A Xiom não imprime a dureza desta borracha em página própria. O grau abaixo vem da revendedora oficial no Brasil, e por isso a confiança desta ficha é revendedor. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "xiom-omega-8-hybrid": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-xiom-omega-8-hybrid",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "52,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa levemente aderente (híbrida, esponja NIF)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum. A Xiom não imprime a dureza desta borracha em página própria. O grau abaixo vem da revendedora oficial no Brasil, e por isso a confiança desta ficha é revendedor. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "xiom-jh-x475": {
+      "confianca": "oficial",
+      "fonte": "https://xiom.shop/products/jekyll-hyde-v47-6",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (X-Factor + Cycloid)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum. O grau vem do PRÓPRIO NOME do modelo — a Xiom batiza a série pela dureza — e está estampado no selo da embalagem, visível na foto. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "xiom-jh-z525": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-xiom-jekyll-hyde-z-525",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "52,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (X-Factor + Cycloid)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum. O grau vem do PRÓPRIO NOME do modelo — a Xiom batiza a série pela dureza — e está estampado no selo da embalagem, visível na foto. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
     }
   }
 }

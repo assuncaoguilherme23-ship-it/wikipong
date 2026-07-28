@@ -1578,6 +1578,162 @@
         }
       ],
       "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum. O grau desta borracha vem do PRÓPRIO NOME do modelo: a Xiom batiza a série pela dureza, convenção que ela confirma nas fichas oficiais da C52.5, C55.0 e C57.5. O selo da embalagem na foto mostra o mesmo número. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com o que existe de fato: ficha, preço real e foto oficial."
+    },
+    "xiom-hugo-tmxi-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-hugo-calderano-tmxi-pro",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de TRIMETRIX (TMX) internas"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "6,0 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 152 mm"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Nenhuma destas lâminas tem amostra suficiente na comunidade (Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5), então elas entram sem a escala de desempenho: com a construção medida, o preço real e a foto. A Xiom mantém página própria desta lâmina, mas quem publica os números de construção é a revendedora oficial no Brasil — a página da marca traz só texto de apresentação."
+    },
+    "xiom-hugo-alxi-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-hugo-calerano-alxi-pro",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de Axylium-Carbon internas"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "6,0 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "160 × 152 mm"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Nenhuma destas lâminas tem amostra suficiente na comunidade (Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5), então elas entram sem a escala de desempenho: com a construção medida, o preço real e a foto. A Xiom não lista esta lâmina no catálogo global; ela é vendida aqui pela revendedora oficial da marca no Brasil."
+    },
+    "xiom-hugo-alx-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-hugo-calderano-alx-pro",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de Axylium-Carbon externas"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,8 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "160 × 152 mm"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Nenhuma destas lâminas tem amostra suficiente na comunidade (Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5), então elas entram sem a escala de desempenho: com a construção medida, o preço real e a foto. A Xiom mantém página própria desta lâmina, mas quem publica os números de construção é a revendedora oficial no Brasil — a página da marca traz só texto de apresentação."
+    },
+    "xiom-novus-extreme-s": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-novus-extreme-s",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira pura (sem fibra)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "7,1 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "157 × 150 mm"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "OFF+ (ofensiva) — impressa na própria lâmina"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Nenhuma destas lâminas tem amostra suficiente na comunidade (Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5), então elas entram sem a escala de desempenho: com a construção medida, o preço real e a foto. A Xiom mantém página própria desta lâmina, mas quem publica os números de construção é a revendedora oficial no Brasil — a página da marca traz só texto de apresentação."
+    },
+    "xiom-novus-offensive-s": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-novus-offensive-s",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira pura (sem fibra)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "6,1 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 151 mm"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "OFF (ofensiva) — impressa na própria lâmina"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Nenhuma destas lâminas tem amostra suficiente na comunidade (Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5), então elas entram sem a escala de desempenho: com a construção medida, o preço real e a foto. A Xiom mantém página própria desta lâmina, mas quem publica os números de construção é a revendedora oficial no Brasil — a página da marca traz só texto de apresentação."
+    },
+    "xiom-power-hinoki-seung": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-caneta-xiom-power-hinoki-seung",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta japonesa (JPEN) — cabo integrado"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "1 camada de Kiso Hinoki (madeira maciça)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "10,5 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "162 × 134 mm"
+        },
+        {
+          "rotulo": "Origem",
+          "valor": "Fabricada no Japão — \"HINOKI SPECIAL / MADE IN JAPAN\" gravado na lâmina"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Nenhuma destas lâminas tem amostra suficiente na comunidade (Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5), então elas entram sem a escala de desempenho: com a construção medida, o preço real e a foto. A Xiom não lista esta lâmina no catálogo global; ela é vendida aqui pela revendedora oficial da marca no Brasil."
     }
   }
 }

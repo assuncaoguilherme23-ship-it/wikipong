@@ -1476,6 +1476,96 @@
         "tag": "Híbrida para jogador de elite",
         "frase": "Reproduz o comportamento da borracha chinesa segurando a bola na esponja carbo, a 52,5°. Trajetória vantajosa no topspin de quem já joga alto."
       }
+    },
+    {
+      "id": "xiom-hugo-tmxi-pro",
+      "nome": "Xiom Hugo Calderano TMXi Pro",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 774,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Assinatura do Hugo, fibra por dentro",
+        "frase": "A fibra TRIMETRIX fica perto do núcleo: impulsão nos ataques de média e longa distância com a vibração mais contida. É a assinatura do campeão da Copa do Mundo de 2025."
+      }
+    },
+    {
+      "id": "xiom-hugo-alxi-pro",
+      "nome": "Xiom Hugo Calderano ALXi Pro",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 774,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Axylium por dentro",
+        "frase": "Mantém a aderência e a velocidade da linha ALX, mas com as fibras de Axylium-Carbon internas: a bola fica mais tempo na madeira antes de sair."
+      }
+    },
+    {
+      "id": "xiom-hugo-alx-pro",
+      "nome": "Xiom Hugo Calderano ALX Pro",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 690,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Axylium por fora",
+        "frase": "Fibra Axylium-Carbon na camada externa: sensação mais nítida no toque e velocidade alta no ataque. A mais direta das três assinadas pelo Hugo."
+      }
+    },
+    {
+      "id": "xiom-novus-extreme-s",
+      "nome": "Xiom Novus Extreme S",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 370,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "7 madeiras, sem fibra nenhuma",
+        "frase": "Madeira pura em 7 camadas, classe OFF+: velocidade de lâmina com fibra, mantendo a sensação de bola que só madeira dá. Para quem não abre mão do toque."
+      }
+    },
+    {
+      "id": "xiom-novus-offensive-s",
+      "nome": "Xiom Novus Offensive S",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 350,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "5 madeiras, muito controle",
+        "frase": "Construção clássica de 5 camadas, classe OFF: controle em todas as situações de jogo, com sensibilidade alta no toque curto."
+      }
+    },
+    {
+      "id": "xiom-power-hinoki-seung",
+      "nome": "Xiom Power Hinoki Seung",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 720,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Caneta japonesa de lâmina única",
+        "frase": "Uma única camada de Kiso Hinoki premium com 10,5 mm de espessura: a construção tradicional do caneteiro japonês. Cabeça estreita e alongada, bem diferente da lâmina clássica."
+      }
     }
   ]
 }

@@ -1136,6 +1136,183 @@
         "tag": "Para os primeiros meses",
         "frase": "Lenta e muito controlável, feita para aprender o gesto antes de buscar velocidade. É a mais barata da marca — e não acompanha quem já joga sério."
       }
+    },
+    {
+      "id": "xiom-vega-pro",
+      "nome": "Xiom Vega Pro",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 280,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 9.2,
+        "controle": 8.7
+      },
+      "durabilidade": 7.5,
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 168,
+      "simples": {
+        "tag": "A tensora mais vendida da história",
+        "frase": "Lançada em 2009 e ainda a referência de custo-benefício da categoria: fica lenta e controlável no toque leve e explode quando você acelera."
+      }
+    },
+    {
+      "id": "xiom-vega-europe",
+      "nome": "Xiom Vega Europe",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 280,
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 8.9,
+        "controle": 9.1
+      },
+      "durabilidade": 6.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 207,
+      "simples": {
+        "tag": "A mais macia da linha",
+        "frase": "Esponja 42,5°, a mais macia das Vega: sobra controle no bloqueio e no revés colado à mesa. Em troca, é a de menor durabilidade da linha — a capa marca fácil."
+      }
+    },
+    {
+      "id": "xiom-vega-asia",
+      "nome": "Xiom Vega Asia",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 280,
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 8.4,
+        "controle": 8.5
+      },
+      "durabilidade": 7.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 53,
+      "simples": {
+        "tag": "Esponja da Pro, capa da Europe",
+        "frase": "A Xiom juntou a esponja 47,5° da Pro com a capa macia da Europe. Sai rápida e reta: rende no drive e no contra-ataque, e cobra técnica no giro puro."
+      }
+    },
+    {
+      "id": "xiom-vega-x",
+      "nome": "Xiom Vega X",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 280,
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 9.1,
+        "controle": 8.9
+      },
+      "durabilidade": 7.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 30,
+      "simples": {
+        "tag": "Os 10 anos da linha Vega",
+        "frase": "Refeita para a bola de plástico: capa mais rápida e trajetória mais baixa que a Pro. No Brasil aparece também como \"Vega X Ten\" — é a mesma borracha, o nome está na própria embalagem."
+      }
+    },
+    {
+      "id": "xiom-vega-japan",
+      "nome": "Xiom Vega Japan",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 365,
+      "specs": {
+        "velocidade": 9.0,
+        "spin": 8.9,
+        "controle": 8.8
+      },
+      "durabilidade": 7.2,
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 44,
+      "simples": {
+        "tag": "Tensionamento interno, sem booster",
+        "frase": "A tecnologia IMB deixa a borracha viva de fábrica, sem precisar de booster. Esponja 45°, rápida e de arco alto — boa para quem constrói o ponto girando."
+      }
+    },
+    {
+      "id": "xiom-vega-korea",
+      "nome": "Xiom Vega Korea",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 280,
+      "specs": {
+        "velocidade": 8.5,
+        "spin": 8.6,
+        "controle": 8.8
+      },
+      "durabilidade": 7.6,
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 7,
+      "simples": {
+        "tag": "Densa, para o jogo colado à mesa",
+        "frase": "Sai só na espessura máxima e pesa mais que as irmãs — esponja densa a 45°. Muito giro já na saída, feita para o revés perto da mesa."
+      }
+    },
+    {
+      "id": "xiom-vega-pro-hybrid",
+      "nome": "Xiom Vega Pro Hybrid",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 300,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Aderente chinesa com esponja alemã",
+        "frase": "Capa levemente pegajosa no estilo chinês sobre esponja carbo 47,5°: giro pesado contra backspin, sem a rigidez que as chinesas tradicionais cobram."
+      }
+    },
+    {
+      "id": "xiom-vega-europe-hybrid",
+      "nome": "Xiom Vega Europe Hybrid",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 300,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A híbrida mais macia",
+        "frase": "Esponja 45° com a capa aderente da família China Hybrid: pensada para quem quer o giro do estilo chinês sem abrir mão do controle."
+      }
+    },
+    {
+      "id": "xiom-vega-asia-hybrid",
+      "nome": "Xiom Vega Asia Hybrid",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 300,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais dura da família",
+        "frase": "Esponja 50°, a mais dura das Vega: potência e velocidade extras para quem já está acostumado com a dureza das borrachas asiáticas."
+      }
     }
   ]
 }

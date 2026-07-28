@@ -482,8 +482,15 @@ afirma(vSemPerfil.criterios.some(c => c.detalhe === 'não tem ficha de desempenh
 // fontes, é a realidade física. Lâmina entra sem o campo em vez de inventar.
 afirma(MATERIAIS.filter(m => m.tipo === 'Lâmina').every(m => m.specs?.spin === undefined),
   'nenhuma lâmina carrega efeito inventado');
-afirma(MATERIAIS.filter(m => m.tipo === 'Borracha').every(m => m.specs?.spin !== undefined),
-  'toda borracha tem efeito');
+// A recíproca: borracha COM perfil de desempenho nunca pode vir sem efeito — ali
+// o número existe e some por descuido. (Borracha sem perfil algum é outro caso,
+// legítimo e já coberto acima: falta amostra na comunidade, e a ficha diz isso.)
+afirma(
+  MATERIAIS.filter((m) => m.tipo === 'Borracha' && temDesempenho(m)).every(
+    (m) => m.specs.spin !== undefined,
+  ),
+  'borracha com perfil sempre traz o efeito',
+);
 
 // Lâmina não passa por filtro de efeito, mas passa nos outros.
 const laminaSemSpin: Material = {

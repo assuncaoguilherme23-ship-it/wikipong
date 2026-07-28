@@ -1290,6 +1290,150 @@
           }
         ]
       }
+    },
+    "xiom-vega-pro": {
+      "confianca": "oficial",
+      "fonte": "https://www.xiom.eu/vega-pro",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Hyper Elasto + esponja Carbo preta)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom também NÃO publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-vega-europe": {
+      "confianca": "oficial",
+      "fonte": "https://www.xiom.eu/vega-euro",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "42,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Hyper Elasto + esponja Carbo preta)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom também NÃO publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-vega-asia": {
+      "confianca": "oficial",
+      "fonte": "https://www.xiom.eu/vega-asia",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Hyper Elasto + esponja Carbo preta)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom também NÃO publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-vega-x": {
+      "confianca": "oficial",
+      "fonte": "https://www.xiom.eu/vega-x",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Elasto Futura + Cycloid + esponja Carbo)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom também NÃO publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-vega-japan": {
+      "confianca": "oficial",
+      "fonte": "https://www.xiom.eu/vega-japan",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "45° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (IMB — tensionamento mecânico interno)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom também NÃO publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-vega-korea": {
+      "confianca": "oficial",
+      "fonte": "https://www.xiom.eu/vega-korea",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "45° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Hyper Elasto MB + esponja densa)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom também NÃO publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum."
+    },
+    "xiom-vega-pro-hybrid": {
+      "confianca": "oficial",
+      "fonte": "https://www.xiom.eu/vega-pro-hybrid",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa levemente aderente (China Hybrid — capa H-Touch + esponja Carbo)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom também NÃO publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com o que existe de fato: ficha do fabricante, preço real e foto oficial."
+    },
+    "xiom-vega-europe-hybrid": {
+      "confianca": "oficial",
+      "fonte": "https://www.xiom.eu/vega-euro-hybrid",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "45° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa levemente aderente (China Hybrid — capa H-Touch)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom também NÃO publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com o que existe de fato: ficha do fabricante, preço real e foto oficial."
+    },
+    "xiom-vega-asia-hybrid": {
+      "confianca": "oficial",
+      "fonte": "https://www.xiom.eu/vega-asia-hybrid",
+      "consultadoEm": "2026-07-27",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa levemente aderente (China Hybrid — capa H-Touch + esponja 50°)"
+        }
+      ],
+      "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom também NÃO publica índices próprios de velocidade/efeito/controle — por isso esta ficha não traz nenhum. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com o que existe de fato: ficha do fabricante, preço real e foto oficial."
     }
   }
 }

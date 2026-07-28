@@ -336,6 +336,60 @@
       "fonte": "Butterfly",
       "fonteUrl": "https://www.butterfly-global.com/en/products/detail/05210.html",
       "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-pro": {
+      "arquivo": "xiom-vega-pro.webp",
+      "fonte": "Xiom",
+      "fonteUrl": "https://xiom.shop/products/vegea-pro",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-europe": {
+      "arquivo": "xiom-vega-europe.webp",
+      "fonte": "OperaTT",
+      "fonteUrl": "https://www.operatt.com.br/borracha-xiom-vega-euro",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-asia": {
+      "arquivo": "xiom-vega-asia.webp",
+      "fonte": "Xiom",
+      "fonteUrl": "https://xiom.shop/products/vega-asia",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-x": {
+      "arquivo": "xiom-vega-x.webp",
+      "fonte": "Xiom",
+      "fonteUrl": "https://xiom.shop/products/vega-x",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-japan": {
+      "arquivo": "xiom-vega-japan.webp",
+      "fonte": "Xiom",
+      "fonteUrl": "https://xiom.shop/products/vega-japan",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-korea": {
+      "arquivo": "xiom-vega-korea.webp",
+      "fonte": "OperaTT",
+      "fonteUrl": "https://www.operatt.com.br/borracha-xiom-vega-korea",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-pro-hybrid": {
+      "arquivo": "xiom-vega-pro-hybrid.webp",
+      "fonte": "OperaTT",
+      "fonteUrl": "https://www.operatt.com.br/borracha-xiom-vega-pro-hybrid-2024-04-09-09-00-44",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-europe-hybrid": {
+      "arquivo": "xiom-vega-europe-hybrid.webp",
+      "fonte": "OperaTT",
+      "fonteUrl": "https://www.operatt.com.br/borracha-xiom-vega-europe-hybrid",
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-asia-hybrid": {
+      "arquivo": "xiom-vega-asia-hybrid.webp",
+      "fonte": "OperaTT",
+      "fonteUrl": "https://www.operatt.com.br/borracha-xiom-vega-asia-hybrid",
+      "consultadoEm": "2026-07-27"
     }
   }
 }

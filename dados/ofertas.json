@@ -449,6 +449,78 @@
       "url": "https://loja.jjyamada.com.br/categoria/23241058.html",
       "atualizadoEm": "2026-07-27",
       "nota": "Preço lido na listagem de borrachas da distribuidora Butterfly no Brasil."
+    },
+    {
+      "materialId": "xiom-vega-pro",
+      "loja": "OperaTT",
+      "preco": 280,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-27",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-vega-europe",
+      "loja": "OperaTT",
+      "preco": 280,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-27",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-vega-asia",
+      "loja": "OperaTT",
+      "preco": 280,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-27",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-vega-x",
+      "loja": "OperaTT",
+      "preco": 280,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-27",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-vega-japan",
+      "loja": "Tênis de Mesa Store",
+      "preco": 365,
+      "url": "https://www.tenisdemesastore.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-27",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-vega-korea",
+      "loja": "OperaTT",
+      "preco": 280,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-27",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-vega-pro-hybrid",
+      "loja": "OperaTT",
+      "preco": 300,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-27",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-vega-europe-hybrid",
+      "loja": "OperaTT",
+      "preco": 300,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-27",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "xiom-vega-asia-hybrid",
+      "loja": "OperaTT",
+      "preco": 300,
+      "url": "https://www.operatt.com.br/marca/xiom.html",
+      "atualizadoEm": "2026-07-27",
+      "nota": "Preço lido na listagem da marca Xiom na loja."
     }
   ]
 }

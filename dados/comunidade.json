@@ -384,6 +384,54 @@
       "escala": 10,
       "avaliacoes": 58,
       "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-vega-pro.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 168,
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-europe": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-vega-europe.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 207,
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-asia": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-vega-asia.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 53,
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-x": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-vega-x.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 30,
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-japan": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-vega-japan.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 44,
+      "consultadoEm": "2026-07-27"
+    },
+    "xiom-vega-korea": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-vega-korea.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 7,
+      "consultadoEm": "2026-07-27"
     }
   }
 }

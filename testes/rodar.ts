@@ -27,6 +27,7 @@ import { precoTotal, observacoes, completa, pecasDe } from '../src/logica/montag
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
+import { precoMedio } from '../componentes/dados-ofertas.js';
 import { existsSync } from 'node:fs';
 
 let ok = 0; const falhas: string[] = [];
@@ -437,6 +438,18 @@ afirma(
     return Boolean(img.fonte && img.fonteUrl) && existsSync(`public/produtos/${img.arquivo}`);
   }),
   'toda imagem tem crédito, origem e arquivo no disco',
+);
+
+// Preço publicado é preço REAL. O cartão do catálogo, a página da marca e o
+// filtro de preço leem material.preco direto — se ele for a estimativa da
+// semente, o site anuncia um preço que a loja não pratica. Foi o que acontecia:
+// a Stiga Evolution figurava por R$ 150 custando R$ 443.
+afirma(
+  MATERIAIS.every((m) => {
+    const real = precoMedio(m.id);
+    return real === null || m.preco === Math.round(real);
+  }),
+  'preço da ficha bate com a oferta verificada',
 );
 
 // Fixture com um item sem perfil, pra exercitar o motor.

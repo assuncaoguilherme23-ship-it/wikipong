@@ -1,5 +1,5 @@
 {
-  "aviso": "A VALIDAR (D-07/D-09): dados-semente colhidos do protótipo wikipong-home-v2.html. 'durezaUnificada' (grau ESN-equivalente, insumo do Perdão) NÃO existia no protótipo. ATENÇÃO: o valor abaixo é hoje apenas FALLBACK — onde a ficha do fabricante declara grau E régua (dados/fabricantes.json), a ponte componentes/dados-materiais.ts SOBRESCREVE este campo com a conversão para ESN-equivalente, e a UI mostra a procedência. Isso resolveu uma contradição real da semente, que dizia que a Dignics 05 (40° na régua Butterfly) era mais macia que a Tenergy 05 (36° na mesma régua). Editar aqui só muda os materiais cujo fabricante NÃO publica a régua — para os demais, corrija a ficha do fabricante ou a tabela de conversão (src/logica/escalas.ts). Para itens que não são borracha (lâmina, raquete, bola), usa-se 47 como neutro (maciez 4) até o especialista definir se o Perdão se aplica a eles. 'rating'/'reviews' são semente do protótipo (usados só para ordenar por destaque; não exibidos como avaliações — D-11/D-16). Materiais de iniciante adicionados em 2026-07-14 para cobrir o perfil 'Base sólida primeiro' — nomes reais de produtos de controle/allround, specs propostas (idem A VALIDAR).",
+  "aviso": "A VALIDAR (D-07/D-09): dados-semente colhidos do protótipo wikipong-home-v2.html. 'durezaUnificada' (grau ESN-equivalente, insumo do Perdão) NÃO existia no protótipo. ATENÇÃO: o valor abaixo é hoje apenas FALLBACK — onde a ficha do fabricante declara grau E régua (dados/fabricantes.json), a ponte componentes/dados-materiais.ts SOBRESCREVE este campo com a conversão para ESN-equivalente, e a UI mostra a procedência. Isso resolveu uma contradição real da semente, que dizia que a Dignics 05 (40° na régua Butterfly) era mais macia que a Tenergy 05 (36° na mesma régua). Editar aqui só muda os materiais cujo fabricante NÃO publica a régua — para os demais, corrija a ficha do fabricante ou a tabela de conversão (src/logica/escalas.ts). Para itens que não são borracha (lâmina, raquete, bola), usa-se 47 como neutro (maciez 4) até o especialista definir se o Perdão se aplica a eles. 'preco' NÃO é mais semente: onde existe oferta verificada em dados/ofertas.json, este campo carrega o preço REAL pesquisado na loja (o catálogo, o filtro de preço e a página da marca publicam esse número). A semente do protótipo estava barata demais — a Stiga Evolution figurava por R$ 150 custando R$ 443. 'rating'/'reviews' são semente do protótipo (usados só para ordenar por destaque; não exibidos como avaliações — D-11/D-16). Materiais de iniciante adicionados em 2026-07-14 para cobrir o perfil 'Base sólida primeiro' — nomes reais de produtos de controle/allround, specs propostas (idem A VALIDAR).",
   "materiais": [
     {
       "id": "tenergy05",
@@ -8,7 +8,7 @@
       "tipo": "Borracha",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 450,
+      "preco": 537,
       "specs": {
         "velocidade": 9.0,
         "spin": 9.3,
@@ -30,7 +30,7 @@
       "tipo": "Lâmina",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 1650,
+      "preco": 1655,
       "specs": {
         "velocidade": 8.8,
         "controle": 8.5
@@ -49,7 +49,7 @@
       "tipo": "Raquete",
       "nivel": "Intermediário",
       "intencao": "controlar",
-      "preco": 150,
+      "preco": 443,
       "specs": {
         "velocidade": 6.5,
         "spin": 6.0,
@@ -71,7 +71,7 @@
       "tipo": "Borracha",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 180,
+      "preco": 329,
       "specs": {
         "velocidade": 8.2,
         "spin": 9.6,
@@ -93,7 +93,7 @@
       "tipo": "Borracha",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 590,
+      "preco": 645,
       "specs": {
         "velocidade": 9.2,
         "spin": 9.4,
@@ -115,7 +115,7 @@
       "tipo": "Borracha",
       "nivel": "Intermediário",
       "intencao": "equilibrado",
-      "preco": 320,
+      "preco": 399,
       "specs": {
         "velocidade": 8.8,
         "spin": 8.9,
@@ -137,7 +137,7 @@
       "tipo": "Borracha",
       "nivel": "Iniciante",
       "intencao": "controlar",
-      "preco": 210,
+      "preco": 390,
       "specs": {
         "velocidade": 7.8,
         "spin": 8.0,
@@ -159,7 +159,7 @@
       "tipo": "Lâmina",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 1200,
+      "preco": 1489,
       "specs": {
         "velocidade": 8.6,
         "controle": 8.2
@@ -178,7 +178,7 @@
       "tipo": "Bola",
       "nivel": "Intermediário",
       "intencao": "equilibrado",
-      "preco": 25,
+      "preco": 85,
       "rating": 4.5,
       "reviews": 200,
       "simples": {
@@ -193,7 +193,7 @@
       "tipo": "Raquete",
       "nivel": "Iniciante",
       "intencao": "controlar",
-      "preco": 120,
+      "preco": 295,
       "specs": {
         "velocidade": 5.0,
         "spin": 6.5,
@@ -215,7 +215,7 @@
       "tipo": "Lâmina",
       "nivel": "Iniciante",
       "intencao": "controlar",
-      "preco": 300,
+      "preco": 338,
       "specs": {
         "velocidade": 5.5,
         "controle": 9.0
@@ -234,7 +234,7 @@
       "tipo": "Borracha",
       "nivel": "Iniciante",
       "intencao": "controlar",
-      "preco": 150,
+      "preco": 220,
       "specs": {
         "velocidade": 5.5,
         "spin": 7.5,
@@ -256,7 +256,7 @@
       "tipo": "Borracha",
       "nivel": "Iniciante",
       "intencao": "equilibrado",
-      "preco": 180,
+      "preco": 329,
       "specs": {
         "velocidade": 6.0,
         "spin": 7.5,
@@ -278,7 +278,7 @@
       "tipo": "Borracha",
       "nivel": "Iniciante",
       "intencao": "controlar",
-      "preco": 90,
+      "preco": 155,
       "specs": {
         "velocidade": 5.0,
         "spin": 7.0,
@@ -300,7 +300,7 @@
       "tipo": "Lâmina",
       "nivel": "Iniciante",
       "intencao": "equilibrado",
-      "preco": 260,
+      "preco": 250,
       "specs": {
         "velocidade": 6.0,
         "controle": 8.8

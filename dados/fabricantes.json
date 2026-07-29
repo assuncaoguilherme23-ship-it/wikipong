@@ -2566,6 +2566,154 @@
         }
       ],
       "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial."
+    },
+    "tibhar-evolution-el-p": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/evolution-el-p/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "42,4–44,4° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (PRO-TENSION)"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF+"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 120
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 120
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 85
+          }
+        ]
+      },
+      "nota": "A Tibhar publica a dureza como FAIXA, não como número único: é a variação de fábrica da mesma borracha. Registramos o ponto médio da faixa, e a faixa publicada está aí em cima. A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão."
+    },
+    "tibhar-evolution-fx-p": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/evolution-fx-p/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "39,1–41,1° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (PRO-TENSION)"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 115
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 120
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 90
+          }
+        ]
+      },
+      "nota": "A Tibhar publica a dureza como FAIXA, não como número único: é a variação de fábrica da mesma borracha. Registramos o ponto médio da faixa, e a faixa publicada está aí em cima. A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão."
+    },
+    "tibhar-evolution-mx-d": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/evolution-mx-d/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50,3–52,3° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (PRO-TENSION + RED ENERGY SPONGE)"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF+"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 130
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 122
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 75
+          }
+        ]
+      },
+      "nota": "A Tibhar publica a dureza como FAIXA, não como número único: é a variação de fábrica da mesma borracha. Registramos o ponto médio da faixa, e a faixa publicada está aí em cima. A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão."
+    },
+    "tibhar-evolution-mx-p-50": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/evolution-mx-p50/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (PRO-TENSION + RED POWER SPONGE)"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF+"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 128
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 121
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 80
+          }
+        ]
+      },
+      "nota": "A Tibhar publica a dureza como FAIXA, não como número único: é a variação de fábrica da mesma borracha. Registramos o ponto médio da faixa, e a faixa publicada está aí em cima. A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão."
     }
   }
 }

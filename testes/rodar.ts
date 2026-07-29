@@ -365,6 +365,16 @@ afirma(tEN.origemDureza === 'fabricante' && dIG.origemDureza === 'fabricante', '
 // Onde o fabricante não declara grau+régua, a semente segue valendo — e diz isso.
 const mkV = materialPorId('markv')!;
 afirma(mkV.origemDureza === 'semente', 'Mark V fica na semente (ficha não nomeia a régua)');
+
+// Faixa de dureza tem DUAS grafias no mercado, e as duas precisam dar o meio.
+// A Butterfly repete o símbolo ('37° a 41°'); a Tibhar escreve '42,4 – 44,4°',
+// com o grau só no fim. A segunda grafia lia apenas o limite superior, o que
+// deixava a marca inteira ~1° mais dura do que ela é.
+afirma(grauRepresentativo('37° a 41°') === 39, 'faixa com símbolo nos dois lados dá o meio');
+afirma(grauRepresentativo('42,4 – 44,4° (escala ESN)') === 43.4, 'faixa com símbolo só no fim dá o meio');
+afirma(grauRepresentativo('39,1-41,1°') === 40.1, 'faixa com hífen simples também');
+afirma(grauRepresentativo('50° (escala ESN)') === 50, 'grau único continua sendo ele mesmo');
+afirma(grauRepresentativo('2,1 - 2,2 mm · 50°') === 50, 'espessura antes do grau não vira faixa');
 afirma(MATERIAIS.every(m => m.origemDureza === 'fabricante' ? m.durezaFabricante !== undefined : m.durezaFabricante === undefined),
   'origemDureza e durezaFabricante andam juntos');
 afirma(MATERIAIS.every(m => m.durezaUnificada === undefined || Number.isInteger(m.durezaUnificada)),

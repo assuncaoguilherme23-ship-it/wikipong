@@ -45,9 +45,9 @@
     {
       "materialId": "mxp",
       "loja": "Tibhar Brasil",
-      "preco": 399,
+      "preco": 359,
       "url": "https://www.tibhar.com.br/produtos/borracha-tibhar-mx-p-21mm-preta-tenis-de-mesa/",
-      "atualizadoEm": "2026-07-22",
+      "atualizadoEm": "2026-07-29",
       "nota": "Loja oficial da marca. Preço de catálogo R$ 399,00 (a loja anuncia promo por R$ 359,00 e R$ 351,82 no Pix). Mesmo valor para as versões 2.1 mm preta/vermelha e a MX-P 50°."
     },
     {
@@ -977,6 +977,38 @@
       "url": "https://www.operatt.com.br/marca/xiom.html",
       "atualizadoEm": "2026-07-28",
       "nota": "Preço lido na listagem da marca Xiom na loja."
+    },
+    {
+      "materialId": "tibhar-evolution-el-p",
+      "loja": "Tibhar Brasil",
+      "preco": 359,
+      "url": "https://www.tibhar.com.br/produtos/borracha-tibhar-evolution-el-p-21mm-preta-para-tenis-de-mesa/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço lido na loja oficial da Tibhar no Brasil."
+    },
+    {
+      "materialId": "tibhar-evolution-fx-p",
+      "loja": "Tibhar Brasil",
+      "preco": 359,
+      "url": "https://www.tibhar.com.br/produtos/borracha-tibhar-evolution-fx-p-21mm-preta-para-tenis-de-mesa/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço lido na loja oficial da Tibhar no Brasil."
+    },
+    {
+      "materialId": "tibhar-evolution-mx-d",
+      "loja": "Tibhar Brasil",
+      "preco": 359,
+      "url": "https://www.tibhar.com.br/produtos/borracha-tibhar-evolution-mx-d-21mm-vermelha/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço lido na loja oficial da Tibhar no Brasil."
+    },
+    {
+      "materialId": "tibhar-evolution-mx-p-50",
+      "loja": "Tibhar Brasil",
+      "preco": 369,
+      "url": "https://www.tibhar.com.br/produtos/borracha-tibhar-mx-p-50-21mm-vermelha-tenis-de-mesa/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço lido na loja oficial da Tibhar no Brasil."
     }
   ]
 }

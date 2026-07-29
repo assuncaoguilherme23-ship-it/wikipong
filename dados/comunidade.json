@@ -568,6 +568,38 @@
       "escala": 10,
       "avaliacoes": 13,
       "consultadoEm": "2026-07-28"
+    },
+    "tibhar-evolution-el-p": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/tibhar-evolution-el-p.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 72,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-evolution-fx-p": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/tibhar-evolution-fx-p.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 52,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-evolution-mx-d": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/tibhar-evolution-mx-d.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 28,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-evolution-mx-p-50": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/tibhar-evolution-mx-p-50.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 31,
+      "consultadoEm": "2026-07-29"
     }
   }
 }

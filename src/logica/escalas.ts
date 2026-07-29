@@ -139,8 +139,15 @@ export function primeiroGrau(texto: string): number | null {
  */
 export function grauRepresentativo(texto: string): number | null {
   const semParenteses = texto.replace(/\([^)]*\)/g, ' ');
-  const graus = [...semParenteses.matchAll(/(\d+(?:[.,]\d+)?)\s*°/g)]
-    .map((m) => Number(m[1].replace(',', '.')))
+  /* Duas grafias de faixa convivem. A Butterfly repete o símbolo ("37° a 41°");
+     a Tibhar publica "42,4 – 44,4°", com o grau só no fim. Exigir ° em cada
+     número lia apenas o limite SUPERIOR da faixa da Tibhar e deixava toda a
+     marca ~1° mais dura do que ela é. O primeiro número do par é opcional. */
+  const PAR = /(?:(\d+(?:[.,]\d+)?)\s*°?\s*(?:–|—|-|a|to|até)\s*)?(\d+(?:[.,]\d+)?)\s*°/g;
+  const graus = [...semParenteses.matchAll(PAR)]
+    .flatMap((m) => [m[1], m[2]])
+    .filter((s): s is string => s !== undefined)
+    .map((s) => Number(s.replace(',', '.')))
     .filter((n) => Number.isFinite(n));
   if (graus.length === 0) return null;
   return (Math.min(...graus) + Math.max(...graus)) / 2;

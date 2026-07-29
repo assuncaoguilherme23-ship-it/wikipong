@@ -115,7 +115,7 @@
       "tipo": "Borracha",
       "nivel": "Intermediário",
       "intencao": "equilibrado",
-      "preco": 399,
+      "preco": 359,
       "specs": {
         "velocidade": 8.8,
         "spin": 8.9,
@@ -2286,6 +2286,94 @@
       "simples": {
         "tag": "Caneta japonesa acessível",
         "frase": "Lâmina única de 10,0 mm a R$ 320: a caneta japonesa sem o preço do Kiso Hinoki selecionado. Boa porta de entrada para o estilo."
+      }
+    },
+    {
+      "id": "tibhar-evolution-el-p",
+      "nome": "Evolution EL-P",
+      "marca": "Tibhar",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 359,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 9.2,
+        "controle": 9.0
+      },
+      "durabilidade": 8.1,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 72,
+      "simples": {
+        "tag": "A mais elástica da linha Evolution",
+        "frase": "Esponja média, entre a dura MX-P e a macia FX-P: é a que mais estica no contato, o que devolve giro sem cobrar a força das irmãs duras. A mais avaliada da Tibhar, com 72 votos."
+      }
+    },
+    {
+      "id": "tibhar-evolution-fx-p",
+      "nome": "Evolution FX-P",
+      "marca": "Tibhar",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 359,
+      "specs": {
+        "velocidade": 8.6,
+        "spin": 9.1,
+        "controle": 8.9
+      },
+      "durabilidade": 7.1,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 52,
+      "simples": {
+        "tag": "A mais macia da linha",
+        "frase": "Esponja em torno de 40°, a mais flexível da Evolution: feita para atacar perto da mesa com margem de erro. Perdoa muito — mas é a de menor durabilidade da família."
+      }
+    },
+    {
+      "id": "tibhar-evolution-mx-d",
+      "nome": "Evolution MX-D",
+      "marca": "Tibhar",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 359,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.1,
+        "controle": 8.6
+      },
+      "durabilidade": 7.1,
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 28,
+      "simples": {
+        "tag": "A mais rápida da Tibhar",
+        "frase": "Velocidade 130 no índice da marca, o teto da linha. A esponja RED ENERGY passa de 50° mas dá sensação mais macia do que o número sugere. Feita para contra-ataque — e cobra técnica formada."
+      }
+    },
+    {
+      "id": "tibhar-evolution-mx-p-50",
+      "nome": "Evolution MX-P 50°",
+      "marca": "Tibhar",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 369,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.4,
+        "controle": 9.0
+      },
+      "durabilidade": 8.4,
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 31,
+      "simples": {
+        "tag": "A MX-P com esponja dura",
+        "frase": "Mesma capa da MX-P original (47,5°), com esponja de 50° por baixo. A própria Tibhar diz que a dureza extra foi pensada para a bola de plástico: sai mais reta e para a frente."
       }
     }
   ]

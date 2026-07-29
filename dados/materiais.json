@@ -1773,6 +1773,235 @@
         "tag": "A mais cara da família",
         "frase": "A série Z, a R$ 410 — o topo de preço da Jekyll & Hyde. Esponja 52,5°, entre a V e a C, na proposta de tensão dupla da linha."
       }
+    },
+    {
+      "id": "xiom-omega-4-asia",
+      "nome": "Xiom Omega 4 Asia",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 300,
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.0,
+        "controle": 8.8
+      },
+      "durabilidade": 7.9,
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 48,
+      "simples": {
+        "tag": "Da geração que consagrou a Omega",
+        "frase": "A Xiom a descreve para quem já tem velocidade de braço formada: esponja 47,5° que cobra técnica e devolve giro pesado. Nota 9,4 na comunidade, com 48 avaliações."
+      }
+    },
+    {
+      "id": "xiom-omega-4-euro",
+      "nome": "Xiom Omega 4 Euro",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 300,
+      "specs": {
+        "velocidade": 9.0,
+        "spin": 9.3,
+        "controle": 8.9
+      },
+      "durabilidade": 7.6,
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 43,
+      "simples": {
+        "tag": "Controlada, com giro alto",
+        "frase": "A mais macia da geração 4, a 42,5°: efeito 9,3 na comunidade e muito controle no saque e no topspin. Mais lenta que os tensores de topo — e é isso que a torna acessível."
+      }
+    },
+    {
+      "id": "xiom-omega-4-pro",
+      "nome": "Xiom Omega 4 Pro",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 300,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.2,
+        "controle": 8.8
+      },
+      "durabilidade": 8.5,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 83,
+      "simples": {
+        "tag": "A mais avaliada da Xiom",
+        "frase": "Capa firme sobre esponja 47,5°: rápida e capaz de giro pesado quando exigida. Com 83 avaliações é a Xiom de maior amostra no catálogo — e a de melhor durabilidade da geração."
+      }
+    },
+    {
+      "id": "xiom-omega-5-pro",
+      "nome": "Xiom Omega 5 Pro",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 300,
+      "specs": {
+        "velocidade": 9.0,
+        "spin": 9.1,
+        "controle": 9.1
+      },
+      "durabilidade": 8.0,
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 32,
+      "simples": {
+        "tag": "Muitas marchas",
+        "frase": "Lenta no toque leve e rápida quando você acelera: a comunidade destaca a variedade de marchas. Efeito e controle empatados em 9,1 — das mais equilibradas da marca."
+      }
+    },
+    {
+      "id": "xiom-sigma-2-euro",
+      "nome": "Xiom Sigma 2 Euro",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 300,
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.4,
+        "controle": 9.1
+      },
+      "durabilidade": 7.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 37,
+      "simples": {
+        "tag": "Efeito 9,4, consistência 9,8",
+        "frase": "Uma das mais bem avaliadas da Xiom: giro altíssimo com controle preservado, e consistência quase perfeita entre folhas. A durabilidade é o ponto fraco."
+      }
+    },
+    {
+      "id": "xiom-sigma-2-pro",
+      "nome": "Xiom Sigma 2 Pro",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 320,
+      "specs": {
+        "velocidade": 9.4,
+        "spin": 9.3,
+        "controle": 8.7
+      },
+      "durabilidade": 8.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 28,
+      "simples": {
+        "tag": "A versão dura da Sigma 2",
+        "frase": "Velocidade 9,4 sobre esponja 47,5°: mais agressiva que a Euro e com durabilidade melhor. Em troca, cobra mais no controle."
+      }
+    },
+    {
+      "id": "xiom-vega-tour",
+      "nome": "Xiom Vega Tour",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 280,
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 8.9,
+        "controle": 8.8
+      },
+      "durabilidade": 6.4,
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 13,
+      "simples": {
+        "tag": "Tecnologia da Omega no preço da Vega",
+        "frase": "A única Vega com Elasto Futura e Cycloid, que vêm da linha Omega VII. Esponja grossa com capa fina — a comunidade elogia o saque. A durabilidade é a menor da linha: 6,4."
+      }
+    },
+    {
+      "id": "xiom-omega-5-asia-df",
+      "nome": "Xiom Omega 5 Asia Dyn F",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 300,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais dura da geração 5",
+        "frase": "Esponja 50° na revisão Dynamic Friction: a versão asiática da linha, feita para quem bate forte e perto da mesa."
+      }
+    },
+    {
+      "id": "xiom-omega-5-euro-df",
+      "nome": "Xiom Omega 5 Euro Dyn F",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 300,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A macia da geração 5",
+        "frase": "Esponja 45° com a capa Dynamic Friction: a leitura europeia da linha Omega 5, com mais margem de controle que a asiática."
+      }
+    },
+    {
+      "id": "xiom-omega-5-tour-df",
+      "nome": "Xiom Omega 5 Tour Dyn F",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 300,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A de competição da geração 5",
+        "frase": "Esponja 47,5° na revisão Dynamic Friction: a versão de torneio da linha Omega 5, entre a Euro e a Asia em dureza."
+      }
+    },
+    {
+      "id": "xiom-sigma-3",
+      "nome": "Xiom Sigma 3",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 300,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A geração seguinte da Sigma",
+        "frase": "Esponja 47,5° na terceira geração da linha Sigma. Ainda sem amostra de comunidade que sustente números de desempenho — entra pela ficha."
+      }
+    },
+    {
+      "id": "xiom-vega-china-plus",
+      "nome": "Xiom Vega China +",
+      "marca": "Xiom",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 280,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A aderente mais dura da linha Vega",
+        "frase": "Esponja 57,5° com capa pegajosa — o carimbo da folha traz \"C57\". É a Vega feita para quem joga com material chinês, no preço de entrada da linha."
+      }
     }
   ]
 }

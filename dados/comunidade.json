@@ -512,6 +512,62 @@
       "escala": 10,
       "avaliacoes": 6,
       "consultadoEm": "2026-07-28"
+    },
+    "xiom-omega-4-asia": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-iv-asia.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 48,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-omega-4-euro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-iv-europe.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 43,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-omega-4-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-iv-pro.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 83,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-omega-5-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-omega-v-pro.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 32,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-sigma-2-euro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-sigma-europe-ii.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 37,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-sigma-2-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-sigma-pro-ii.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 28,
+      "consultadoEm": "2026-07-28"
+    },
+    "xiom-vega-tour": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/xiom-vega-tour.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 13,
+      "consultadoEm": "2026-07-28"
     }
   }
 }

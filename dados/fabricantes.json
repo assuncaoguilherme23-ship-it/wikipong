@@ -2714,6 +2714,425 @@
         ]
       },
       "nota": "A Tibhar publica a dureza como FAIXA, não como número único: é a variação de fábrica da mesma borracha. Registramos o ponto médio da faixa, e a faixa publicada está aí em cima. A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão."
+    },
+    "tibhar-hybrid-k3": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/hybrid-k3/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "53° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida (capa chinesa + esponja alemã)"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF+"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 118
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 130
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 100
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão."
+    },
+    "tibhar-hybrid-mk": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/hybrid-mk/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "48° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa levemente aderente híbrida"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 125
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 125
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 110
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão."
+    },
+    "tibhar-hybrid-mk-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/borracha-tibhar-mk-pro-hybrid-para-tenis-de-mesa/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida, esponja dura"
+        }
+      ],
+      "nota": " A Tibhar não lista mais esta borracha no catálogo internacional, e nenhuma fonte publica a dureza dela. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã parecida."
+    },
+    "tibhar-quantum-x-pro": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/quantum-x-pro/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 125
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 120
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 80
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão. Sai em seis cores (preta, vermelha, azul, rosa, roxa e verde) — é a mesma borracha; a versão azul costuma sair mais barata na loja."
+    },
+    "tibhar-nimbus-sound": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/nimbus-sound/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "32,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF-"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 97
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 100
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 100
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão."
+    },
+    "tibhar-hybrid-k3-pro": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/hybrid-k3-pro/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "55° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida, esponja 55°"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF+"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 125
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 130
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 90
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "tibhar-hybrid-k3-fx": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/hybrid-k3-fx/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "48° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida, esponja macia"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 115
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 130
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 105
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "tibhar-hybrid-mk-fx": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/hybrid-mk-fx/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "45° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa levemente aderente híbrida, esponja macia"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "OFF-"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 105
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 125
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 120
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "tibhar-super-defense-40-soft": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/super-defense-40-soft/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "35° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa para defesa"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "DEF"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 60
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 105
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 102
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão. ATENÇÃO à variante: existe uma Super Defense 40 comum (45°, classe DEF+) e esta, a SOFT (35°, classe DEF). São borrachas diferentes. A comunidade tem amostra da versão COMUM, não desta — e por isso não usamos aquela nota aqui. A embalagem confirma \"SOFT\" na foto. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "tibhar-game": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/game/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "32,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "ALL"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 100
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 100
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 70
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "tibhar-norm": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/norm/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "30–40° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "ALL-"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 55
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 65
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 90
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão. A Tibhar publica a dureza como faixa; registramos o ponto médio, e a faixa está aí em cima. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "tibhar-learn-spin": {
+      "confianca": "oficial",
+      "fonte": "https://tibhar.info/en/shop/learn-spin/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "30° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        },
+        {
+          "rotulo": "Estratégia",
+          "valor": "ALL-"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Tibhar — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 50
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 60
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 100
+          }
+        ]
+      },
+      "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
     }
   }
 }

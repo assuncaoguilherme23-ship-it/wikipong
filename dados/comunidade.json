@@ -600,6 +600,46 @@
       "escala": 10,
       "avaliacoes": 31,
       "consultadoEm": "2026-07-29"
+    },
+    "tibhar-hybrid-k3": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/tibhar-hybrid-k3.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 36,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-hybrid-mk": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/tibhar-hybrid-mk.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 31,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-hybrid-mk-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/tibhar-hybrid-mk-pro.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 6,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-quantum-x-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/tibhar-quantum-x-pro.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 10,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-nimbus-sound": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/tibhar-nimbus-sound.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 20,
+      "consultadoEm": "2026-07-29"
     }
   }
 }

@@ -2002,6 +2002,96 @@
         "tag": "A aderente mais dura da linha Vega",
         "frase": "Esponja 57,5° com capa pegajosa — o carimbo da folha traz \"C57\". É a Vega feita para quem joga com material chinês, no preço de entrada da linha."
       }
+    },
+    {
+      "id": "xiom-novus-stradivarius",
+      "nome": "Xiom Novus Stradivarius",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 550,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Aramida: carbono que absorve vibração",
+        "frase": "A fibra de aramida mistura rigidez com absorção de vibração — dá a velocidade do carbono sem a dureza seca dele. Uma das mais vendidas da linha Novus."
+      }
+    },
+    {
+      "id": "xiom-novus-allround-s",
+      "nome": "Xiom Novus Allround S",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 350,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A neoclássica europeia",
+        "frase": "Madeira pura em 5 camadas, no molde europeu clássico: mais lenta que as lâminas de carbono, e é justamente essa lentidão que devolve controle e tempo para o gesto."
+      }
+    },
+    {
+      "id": "xiom-novus-ignito",
+      "nome": "Xiom Novus Ignito",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 580,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A equilibrada do trio Hinoki",
+        "frase": "Kiso Hinoki por fora e Energy Carbon por dentro, na versão mais fina do trio: mesma potência da família com mais controle. O nome significa chama — a azul, que queima mais quente."
+      }
+    },
+    {
+      "id": "xiom-novus-strato",
+      "nome": "Xiom Novus Strato",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 550,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Velocidade de carbono, sensação de Hinoki",
+        "frase": "A do meio do trio Hinoki: 7,1 mm que juntam a potência do carbono clássico da Xiom com o toque macio do Kiso Hinoki nas externas."
+      }
+    },
+    {
+      "id": "xiom-novus-axelo",
+      "nome": "Xiom Novus Axelo",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 550,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais veloz da família",
+        "frase": "A mais grossa do trio Hinoki, com 7,6 mm e classe OFF++: a lâmina mais rápida da linha Novus. Devolve muito, e cobra posicionamento na mesma medida."
+      }
+    },
+    {
+      "id": "xiom-novus-aigis",
+      "nome": "Xiom Novus Aigis",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 390,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Defensiva com saída de contra-ataque",
+        "frase": "Cabeça grande (166 × 156 mm) e apenas 4,9 mm de espessura: feita para cortar longe da mesa. A Xiom trocou o salgueiro habitual por Limba para dar velocidade de classe ALL+ no contra-ataque."
+      }
     }
   ]
 }

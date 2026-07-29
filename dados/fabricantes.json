@@ -2102,6 +2102,174 @@
         }
       ],
       "nota": "A Xiom publica o grau da esponja sem nomear a régua. Registramos como escala ESN porque a borracha é fabricada na Alemanha (a própria folha traz \"MADE IN GERMANY\") e o grau alemão é o padrão ESN. A Xiom não publica índices próprios de velocidade/efeito/controle. A Xiom não publica a dureza desta borracha em página própria; o grau vem da revendedora oficial no Brasil, e por isso a confiança desta ficha é revendedor. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "xiom-novus-stradivarius": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-novus-stradivarius",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de Aramid Carbon"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,7 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "157 × 149 mm"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "OFF+ (ofensiva) — impressa na própria lâmina"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (o Revspin registra de 0 a 1 avaliação para as Novus, abaixo do nosso piso de 5), então ela entra sem escala de desempenho: com a construção medida, a classe, o preço real e a foto oficial. A classe e a construção acima não vieram de catálogo: a linha Novus IMPRIME a própria tabela de especificação na madeira, e dá para lê-las na foto do produto."
+    },
+    "xiom-novus-allround-s": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-novus-allround-s",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira pura (sem fibra)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,5 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 151 mm"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "ALL+ (allround) — impressa na própria lâmina"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (o Revspin registra de 0 a 1 avaliação para as Novus, abaixo do nosso piso de 5), então ela entra sem escala de desempenho: com a construção medida, a classe, o preço real e a foto oficial. A classe e a construção acima não vieram de catálogo: a linha Novus IMPRIME a própria tabela de especificação na madeira, e dá para lê-las na foto do produto. A OperaTT vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "xiom-novus-ignito": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-xiom---novus-ignito",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "3 madeiras + 2 de Energy Carbon, externas em Kiso Hinoki"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "6,2 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 150 mm"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "OFF (ofensiva) — impressa na própria lâmina"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (o Revspin registra de 0 a 1 avaliação para as Novus, abaixo do nosso piso de 5), então ela entra sem escala de desempenho: com a construção medida, a classe, o preço real e a foto oficial. A classe e a construção acima não vieram de catálogo: a linha Novus IMPRIME a própria tabela de especificação na madeira, e dá para lê-las na foto do produto. A OperaTT vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "xiom-novus-strato": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-novus-strato-",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "3 madeiras + 2 de Energy Carbon, externas em Kiso Hinoki"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "7,1 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 150 mm"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "OFF+ (ofensiva) — impressa na própria lâmina"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (o Revspin registra de 0 a 1 avaliação para as Novus, abaixo do nosso piso de 5), então ela entra sem escala de desempenho: com a construção medida, a classe, o preço real e a foto oficial. A classe e a construção acima não vieram de catálogo: a linha Novus IMPRIME a própria tabela de especificação na madeira, e dá para lê-las na foto do produto. A OperaTT vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "xiom-novus-axelo": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-novus-axelo",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "3 madeiras + 2 de Energy Carbon, externas em Kiso Hinoki"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "7,6 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 150 mm"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "OFF++ (muito ofensiva) — impressa na própria lâmina"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (o Revspin registra de 0 a 1 avaliação para as Novus, abaixo do nosso piso de 5), então ela entra sem escala de desempenho: com a construção medida, a classe, o preço real e a foto oficial. A classe e a construção acima não vieram de catálogo: a linha Novus IMPRIME a própria tabela de especificação na madeira, e dá para lê-las na foto do produto. A OperaTT vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "xiom-novus-aigis": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-novus-aigis",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira pura (Limba no lugar do salgueiro usual)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "4,9 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "166 × 156 mm"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "DEF (defensiva) — impressa na própria lâmina"
+        }
+      ],
+      "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (o Revspin registra de 0 a 1 avaliação para as Novus, abaixo do nosso piso de 5), então ela entra sem escala de desempenho: com a construção medida, a classe, o preço real e a foto oficial. A classe e a construção acima não vieram de catálogo: a linha Novus IMPRIME a própria tabela de especificação na madeira, e dá para lê-las na foto do produto. A OperaTT vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
     }
   }
 }

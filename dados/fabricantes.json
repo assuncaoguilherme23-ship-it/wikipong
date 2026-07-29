@@ -2270,6 +2270,302 @@
         }
       ],
       "nota": "A Xiom NÃO publica efeito de lâmina — efeito é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (o Revspin registra de 0 a 1 avaliação para as Novus, abaixo do nosso piso de 5), então ela entra sem escala de desempenho: com a construção medida, a classe, o preço real e a foto oficial. A classe e a construção acima não vieram de catálogo: a linha Novus IMPRIME a própria tabela de especificação na madeira, e dá para lê-las na foto do produto. A OperaTT vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "xiom-hayabusa-arx": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-xiom---hayabusa-arx",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de Arylate Carbon"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,7 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 150 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial. A linha imprime na própria madeira um gráfico de posicionamento com os eixos CATAPULT, BALLHOLD, VIBRATION, SPEED, SPIN e CONTROL. NÃO convertemos esses eixos em números: são setas numa régua sem escala nomeada, leitura qualitativa da própria marca. Vale registrar que ali existe um eixo SPIN — a maioria das fabricantes não publica efeito de lâmina, porque efeito é propriedade da borracha; a Xiom publica, à sua maneira, nesta linha."
+    },
+    "xiom-hayabusa-hx-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-xiom---hayabusa-hx-pro",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "3 madeiras + 2 de fibra (construção Hinoki)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "6,5 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 150 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial. A linha imprime na própria madeira um gráfico de posicionamento com os eixos CATAPULT, BALLHOLD, VIBRATION, SPEED, SPIN e CONTROL. NÃO convertemos esses eixos em números: são setas numa régua sem escala nomeada, leitura qualitativa da própria marca. Vale registrar que ali existe um eixo SPIN — a maioria das fabricantes não publica efeito de lâmina, porque efeito é propriedade da borracha; a Xiom publica, à sua maneira, nesta linha."
+    },
+    "xiom-hayabusa-off-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-xiom---hayabusa-off-pro",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira pura (sem fibra)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "6,0 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 150 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial. A linha imprime na própria madeira um gráfico de posicionamento com os eixos CATAPULT, BALLHOLD, VIBRATION, SPEED, SPIN e CONTROL. NÃO convertemos esses eixos em números: são setas numa régua sem escala nomeada, leitura qualitativa da própria marca. Vale registrar que ali existe um eixo SPIN — a maioria das fabricantes não publica efeito de lâmina, porque efeito é propriedade da borracha; a Xiom publica, à sua maneira, nesta linha."
+    },
+    "xiom-hayabusa-zlx": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-xiom---hayabusa-zlx",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de ZL Carbon"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,7 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 150 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial. A linha imprime na própria madeira um gráfico de posicionamento com os eixos CATAPULT, BALLHOLD, VIBRATION, SPEED, SPIN e CONTROL. NÃO convertemos esses eixos em números: são setas numa régua sem escala nomeada, leitura qualitativa da própria marca. Vale registrar que ali existe um eixo SPIN — a maioria das fabricantes não publica efeito de lâmina, porque efeito é propriedade da borracha; a Xiom publica, à sua maneira, nesta linha. A OperaTT vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "xiom-lss-alx-lite": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/raquete-clssica-para-tnis-de-mesa-xiom-lss-alx-lite",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Arylate Carbon em posição EXTERNA (logo abaixo das lâminas externas)"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial."
+    },
+    "xiom-lss-alxi-lite": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/raquete-clssica-para-tnis-de-mesa-xiom-lss-alxi-lite",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Axylium Carbon em posição INTERNA (inner)"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial."
+    },
+    "xiom-katana-gold": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-caneta-xiom-katana-gold",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta japonesa (JPEN) — cabo integrado em cortiça"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "1 camada de Kiso Hinoki (madeira maciça)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "10,5 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "162 × 135 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial. Fabricada no Japão, com o carimbo \"MADE IN JAPAN\" gravado na lâmina."
+    },
+    "xiom-katana-platinum": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-caneta-xiom-katana-platinum",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta japonesa (JPEN) — cabo integrado em cortiça"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "1 camada de Kiso Hinoki (madeira maciça, seleção superior)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "10,5 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "162 × 135 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial. Fabricada no Japão, com o carimbo \"MADE IN JAPAN\" gravado na lâmina."
+    },
+    "xiom-paltida": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-paltida",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira pura (sem fibra)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "6,3 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 151 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial."
+    },
+    "xiom-cho-daeseong-tmx-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-xiom-cho-daeseong-tmx-pro",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de TRIMETRIX (TMX)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,7 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "160 × 152 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial."
+    },
+    "xiom-feel-zx3": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classineta-xiom-feel-zx3",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,7 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 152 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial. A lâmina traz gravado que foi desenvolvida e fabricada no Japão pelo mestre de compensado de Hinoki Masatoshi Morishita, e imprime na madeira o próprio gráfico de posicionamento. A OperaTT vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "xiom-hibi-o-tour": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-caneta-xiom-hibi-o-tour",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta japonesa (JPEN) — cabo integrado"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "1 camada de Kiso Hinoki (madeira maciça)"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "10,5 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "162 × 134 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial."
+    },
+    "xiom-pro-speed-m-power": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-caneta-xiom-m-power",
+      "consultadoEm": "2026-07-28",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta japonesa (JPEN) — cabo integrado"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "1 camada de madeira maciça"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "10,0 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "162 × 134 mm"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção medida, o preço real e a foto oficial."
     }
   }
 }

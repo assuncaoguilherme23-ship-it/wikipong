@@ -2092,6 +2092,201 @@
         "tag": "Defensiva com saída de contra-ataque",
         "frase": "Cabeça grande (166 × 156 mm) e apenas 4,9 mm de espessura: feita para cortar longe da mesa. A Xiom trocou o salgueiro habitual por Limba para dar velocidade de classe ALL+ no contra-ataque."
       }
+    },
+    {
+      "id": "xiom-hayabusa-arx",
+      "nome": "Xiom Hayabusa ARX",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 600,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Arylate carbono na linha Hayabusa",
+        "frase": "A ARX da família Hayabusa: fibra de arilato-carbono em 5+2, a construção mais difundida do tênis de mesa moderno. Equilíbrio entre salto e sensação de bola."
+      }
+    },
+    {
+      "id": "xiom-hayabusa-hx-pro",
+      "nome": "Xiom Hayabusa HX Pro",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 650,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Três madeiras, mais grossa",
+        "frase": "Construção 3+2 com 6,5 mm: menos camadas de madeira e mais espessura, o que gera salto alto com a bola saindo cedo da lâmina."
+      }
+    },
+    {
+      "id": "xiom-hayabusa-off-pro",
+      "nome": "Xiom Hayabusa OFF Pro",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 450,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A de madeira pura da família",
+        "frase": "A única Hayabusa sem fibra: 5 camadas de madeira a 6,0 mm. Mais lenta que as irmãs, e é justamente por isso que devolve mais sensação no toque curto."
+      }
+    },
+    {
+      "id": "xiom-hayabusa-zlx",
+      "nome": "Xiom Hayabusa ZLX",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 680,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "ZL Carbon, o topo da família",
+        "frase": "A mais cara da linha Hayabusa: fibra ZL-Carbon, mais leve que o arilato, para velocidade alta sem peso extra na cabeça."
+      }
+    },
+    {
+      "id": "xiom-lss-alx-lite",
+      "nome": "Xiom LSS ALX Lite",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1150,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Assinatura do Lee Sang-su, carbono externo",
+        "frase": "Série do coreano Lee Sang-su. Com o carbono na camada externa, o toque fica nítido e a transferência de energia é imediata — feita para pressionar com ataque rápido."
+      }
+    },
+    {
+      "id": "xiom-lss-alxi-lite",
+      "nome": "Xiom LSS ALXi Lite",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1290,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mesma assinatura, carbono por dentro",
+        "frase": "A versão interna da LSS: o Axylium Carbon fica mais fundo, então a bola afunda mais na madeira antes de sair. Toque de madeira com saída agressiva."
+      }
+    },
+    {
+      "id": "xiom-katana-gold",
+      "nome": "Xiom Katana Gold",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1150,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Caneta japonesa de lâmina única",
+        "frase": "Kiso Hinoki maciço com 10,5 mm e cabo de cortiça: a construção tradicional do caneteiro japonês, feita no Japão."
+      }
+    },
+    {
+      "id": "xiom-katana-platinum",
+      "nome": "Xiom Katana Platinum",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1370,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "O topo da linha Katana",
+        "frase": "Mesma construção da Gold, em seleção de madeira superior — e a lâmina mais cara do catálogo. A diferença entre as duas está no Hinoki escolhido, não na estrutura."
+      }
+    },
+    {
+      "id": "xiom-paltida",
+      "nome": "Xiom Paltida",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 330,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais barata da Xiom",
+        "frase": "Cinco camadas de madeira a R$ 330: a porta de entrada da marca. Sem fibra, com velocidade moderada — o tipo de lâmina em que se aprende o gesto antes de buscar potência."
+      }
+    },
+    {
+      "id": "xiom-cho-daeseong-tmx-pro",
+      "nome": "Xiom Cho Daeseong TMX Pro",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 980,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A TRIMETRIX do Cho Daeseong",
+        "frase": "Assinatura do coreano Cho Daeseong, com a mesma fibra TRIMETRIX da linha do Hugo Calderano — aqui em cabeça um pouco maior, de 160 × 152 mm."
+      }
+    },
+    {
+      "id": "xiom-feel-zx3",
+      "nome": "Xiom Feel ZX3",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 950,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete camadas, feita à mão no Japão",
+        "frase": "Construção de 7 camadas com apenas 5,7 mm — fina para o número de lâminas, o que devolve controle. Assinada por um mestre de compensado de Hinoki."
+      }
+    },
+    {
+      "id": "xiom-hibi-o-tour",
+      "nome": "Xiom Hibi O Tour",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1300,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Caneta de competição",
+        "frase": "A versão Tour da linha Hibi O: Kiso Hinoki maciço de 10,5 mm, na configuração de torneio da caneta japonesa."
+      }
+    },
+    {
+      "id": "xiom-pro-speed-m-power",
+      "nome": "Xiom Pro Speed M Power",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 320,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Caneta japonesa acessível",
+        "frase": "Lâmina única de 10,0 mm a R$ 320: a caneta japonesa sem o preço do Kiso Hinoki selecionado. Boa porta de entrada para o estilo."
+      }
     }
   ]
 }

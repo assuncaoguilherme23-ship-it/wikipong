@@ -32,6 +32,19 @@ const FONTES = {
       return null;
     },
   },
+  tibhar: {
+    loja: 'Tibhar Brasil',
+    /* Loja oficial da marca no Brasil. Enumerada pelo sitemap — ver porSitemap(). */
+    sitemap: 'https://www.tibhar.com.br/sitemap.xml',
+    url: () => 'https://www.tibhar.com.br/borrachas/lisas/',
+    tipo: (slug) => {
+      /* A própria loja separa lisas de pinos; o slug carrega a distinção. */
+      if (/grass|pino-longo|pinos-longos|pino-curto|pinos-curtos|anti/.test(slug)) return null;
+      if (slug.startsWith('borracha-')) return 'Borracha';
+      if (/^(madeira|raquete)-/.test(slug) && !/montada|kit/.test(slug)) return 'Lâmina';
+      return null;
+    },
+  },
   butterfly: {
     loja: 'JJ Yamada',
     url: (p) => `https://loja.jjyamada.com.br/categoria/23241058.html?pagina=${p}`,
@@ -61,7 +74,40 @@ const normalizar = (s) =>
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 
+/**
+ * Enumera produtos pelo sitemap.xml em vez da listagem de categoria.
+ *
+ * A loja da Tibhar é Nuvemshop: a página de categoria monta a lista por JS e o
+ * HTML servido traz só os 12 primeiros, sem link de "próxima". Ler aquilo daria
+ * 12 produtos e a impressão de catálogo completo — o mesmo engano de sempre, com
+ * outra roupa. O sitemap lista todas as URLs de produto, que é o que interessa.
+ */
+async function porSitemap(fonte) {
+  const res = await fetch(fonte.sitemap, { headers: { 'user-agent': 'Mozilla/5.0 WikiPong' } });
+  if (!res.ok) return [];
+  const xml = await res.text();
+  const achados = new Map();
+  for (const m of xml.matchAll(/<loc>([^<]*\/produtos\/[^<]*)<\/loc>/g)) {
+    const url = m[1].trim();
+    /* O sitemap lista cada produto DUAS vezes: a URL canônica e uma variante de
+       idioma (/pt/produtos/...). A variante devolve a página sem o bloco de
+       preço, e como as duas compartilham o slug, a segunda sobrescrevia a
+       primeira e a loja inteira aparecia esgotada. Fica só a canônica. */
+    if (/\/(pt|es|en)\/produtos\//.test(url)) continue;
+    const slug = url.replace(/\/$/, '').split('/produtos/')[1];
+    /* O sitemap traz também a URL da própria seção /produtos/, sem slug. */
+    if (!slug) continue;
+    const tipo = fonte.tipo(slug);
+    if (!tipo) continue;
+    /* O sitemap não traz título — o nome sai do próprio slug, que nesta loja é
+       descritivo ("borracha-tibhar-evolution-mx-p-21mm-preta-..."). */
+    achados.set(slug, { nome: slug.replace(/-/g, ' '), tipo, url });
+  }
+  return [...achados.values()];
+}
+
 async function paginas(fonte, marca) {
+  if (fonte.sitemap) return porSitemap(fonte);
   const achados = new Map();
   let anterior = -1;
   for (let p = 1; p <= MAX_PAGINAS; p++) {
@@ -116,9 +162,18 @@ const decodeHtml = (s) =>
 const chave = (s) =>
   /* ".0" decimal é ruído de grafia, não modelo: a loja escreve "X 50.0" e o
      catálogo "X50" — mesma borracha. Some ANTES de normalizar, porque
-     normalizar() troca o ponto por espaço e o zero viraria dígito solto. */
-  normalizar(s.replace(/(\d)[.,]0(?!\d)/g, '$1'))
-    .replace(/^.*?\b(xiom|butterfly)\b\s*/i, '')
+     normalizar() troca o ponto por espaço e o zero viraria dígito solto.
+     O "+" vira a palavra "plus" pelo motivo oposto: normalizar() descartaria o
+     sinal e "Vega China" e "Vega China +" — que são DUAS borrachas — colidiriam
+     na mesma chave, e a segunda esconderia a primeira do relatório. */
+  normalizar(s.replace(/(\d)[.,]0(?!\d)/g, '$1').replace(/\+/g, ' plus '))
+    .replace(/^.*?\b(xiom|butterfly|tibhar)\b\s*/i, '')
+    /* Cor e espessura são opções de compra, não materiais diferentes: a Tibhar
+       publica uma página por cor ("... 2.1mm preta" e "... 2.1mm vermelha") da
+       mesma borracha. Sem tirar isso, cada borracha contaria em dobro. */
+    .replace(/\b(preta|preto|vermelha|vermelho|rosa)\b/g, ' ')
+    .replace(/\b\d+[.,]?\d*\s*mm\b/g, ' ')
+    .replace(/\b(para )?tenis de mesa\b/g, ' ')
     .replace(/\s*-?\s*(hugo edition|edicao hugo|lancamento|novo|nova)\s*$/i, '')
     .replace(/\s+/g, '');
 
@@ -133,15 +188,25 @@ const casa = (nomeLoja, nomeCatalogo) => chave(nomeLoja) === chave(nomeCatalogo)
  * custando R$ 537, que é o preço do Tenergy 05. Por isso corta antes.
  */
 async function temPreco(url) {
-  try {
-    const res = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 WikiPong' } });
-    if (!res.ok) return false;
-    const html = await res.text();
-    const principal = html.split(/relacionad|similar|voc[eê] tamb[eé]m|quem viu|quem comprou/i)[0];
-    return /R\$\s*[\d.]+,\d{2}/.test(principal);
-  } catch {
-    return false;
+  /* Três respostas, não duas. Um catch que devolvesse "false" transformaria
+     "não consegui ler" em "não tem preço" — e foi o que aconteceu: 57 produtos
+     da Tibhar caíram de uma vez porque as conexões seguidas ao mesmo host
+     falharam, e o relatório deu a loja inteira como esgotada. Erro de leitura
+     precisa aparecer como erro. */
+  for (let tentativa = 1; tentativa <= 3; tentativa++) {
+    try {
+      const res = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 WikiPong' } });
+      if (res.status === 404) return 'nao';
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const html = await res.text();
+      const principal = html.split(/relacionad|similar|voc[eê] tamb[eé]m|quem viu|quem comprou/i)[0];
+      return /R\$\s*[\d.]+,\d{2}/.test(principal) ? 'sim' : 'nao';
+    } catch {
+      /* Espera crescente antes de tentar de novo; a loja pode estar limitando. */
+      await new Promise((r) => setTimeout(r, 400 * tentativa));
+    }
   }
+  return 'erro';
 }
 
 async function conferir(marca) {
@@ -176,7 +241,9 @@ async function conferir(marca) {
      que não existe, e a saída fácil para "fechar" viraria inventar preço. */
   const lacuna = [];
   const semPreco = [];
-  for (const p of candidatos) ((await temPreco(p.url)) ? lacuna : semPreco).push(p);
+  const ilegiveis = [];
+  const caixa = { sim: lacuna, nao: semPreco, erro: ilegiveis };
+  for (const p of candidatos) caixa[await temPreco(p.url)].push(p);
 
   const conta = (lista, t) => lista.filter((x) => x.tipo === t).length;
   console.log(`\n═══ ${marca.toUpperCase()} · ${fonte.loja}`);
@@ -200,7 +267,12 @@ async function conferir(marca) {
   if (adiados.length > 0) {
     console.log(`\n  · adiados de propósito (pinos/anti-spin): ${adiados.length}`);
   }
-  return lacuna.length;
+  if (ilegiveis.length > 0) {
+    console.log(`\n  ✘ NÃO CONSEGUI LER ${ilegiveis.length} páginas (3 tentativas cada).`);
+    console.log(`     Estes NÃO são "sem preço" — são desconhecidos. Rode de novo.`);
+    for (const p of ilegiveis) console.log(`      [${p.tipo.padEnd(8)}] ${p.nome}`);
+  }
+  return lacuna.length + ilegiveis.length;
 }
 
 const alvo = process.argv[2] ? [process.argv[2].toLowerCase()] : Object.keys(FONTES);

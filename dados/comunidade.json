@@ -728,6 +728,38 @@
       "escala": 10,
       "avaliacoes": 32,
       "consultadoEm": "2026-07-29"
+    },
+    "dhs-hurricane-3": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/dhs-hurricane-3.html",
+      "nota": 8.5,
+      "escala": 10,
+      "avaliacoes": 143,
+      "consultadoEm": "2026-07-29"
+    },
+    "dhs-hurricane-8": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/dhs-hurricane-8.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 70,
+      "consultadoEm": "2026-07-29"
+    },
+    "dhs-hurricane-8-80": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/dhs-hurricane-8-80.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 18,
+      "consultadoEm": "2026-07-29"
+    },
+    "dhs-g555": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/dhs-g555.html",
+      "nota": 8.6,
+      "escala": 10,
+      "avaliacoes": 24,
+      "consultadoEm": "2026-07-29"
     }
   }
 }

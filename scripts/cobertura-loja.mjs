@@ -235,7 +235,13 @@ const chave = (s) =>
      sinal e "Vega China" e "Vega China +" — que são DUAS borrachas — colidiriam
      na mesma chave, e a segunda esconderia a primeira do relatório. */
   normalizar(s.replace(/(\d)[.,]0(?!\d)/g, '$1').replace(/\+/g, ' plus '))
+    /* Corta o palavrório da loja ATÉ a marca ("Borracha Para Raquete de Tênis
+       de Mesa XIOM - ...") e, só depois, remove eventuais repetições da marca:
+       a OperaTT escreve "... DHS - DHS G555", com ela duas vezes. Trocar o
+       primeiro corte pelo global deixava "borracha para" sobrando no nome e
+       derrubava as cinco marcas de uma vez. */
     .replace(/^.*?\b(xiom|butterfly|tibhar|yasaka|dhs)\b\s*/i, '')
+    .replace(/\b(xiom|butterfly|tibhar|yasaka|dhs)\b/gi, ' ')
     /* Cor e espessura são opções de compra, não materiais diferentes: a Tibhar
        publica uma página por cor ("... 2.1mm preta" e "... 2.1mm vermelha") da
        mesma borracha. Sem tirar isso, cada borracha contaria em dobro. */
@@ -259,7 +265,7 @@ const chave = (s) =>
        faz parte do nome do produto — esse fica. E "copia <token>" é cadastro
        duplicado da loja. */
     .replace(/\bcopia\s+\S+/g, ' ')
-    .replace(/\b(carbono|estoque|cabo|fl|com|e|do|da|profissional|ittf)\b/g, ' ')
+    .replace(/\b(carbono|estoque|cabo|fl|com|e|do|da|profissional|ittf|pegajosa|pegajoso|tenis|mesa|para)\b/g, ' ')
     /* Dígito solto vem de "5 + 2 carbono" e da contagem de folhas. */
     .replace(/\b\d\b/g, ' ')
     .replace(/\b(para )?tenis de mesa\b/g, ' ')
@@ -268,7 +274,14 @@ const chave = (s) =>
     /* Sufixo aleatório de slug do Nuvemshop, quando dois produtos disputariam a
        mesma URL: "...-super-defense-40-soft-z2fpn". Letra+dígito misturados e no
        fim — não é modelo, é desempate de endereço. */
-    .replace(/\s+(?=[a-z0-9]{4,6}$)(?=[a-z0-9]*\d)(?=[a-z0-9]*[a-z])[a-z0-9]+$/, '')
+    /* O `(?![a-z]+\d+$)` é o que separa lixo de modelo: sufixo do Nuvemshop tem
+       letra e dígito INTERCALADOS ("z2fpn", "i9t7a"), enquanto código de produto
+       é letra seguida de número ("g555"). Sem essa guarda a regra comia o nome
+       da própria borracha e a G555 nunca casava. */
+    .replace(
+      /\s+(?=[a-z0-9]{4,6}$)(?=[a-z0-9]*\d)(?=[a-z0-9]*[a-z])(?![a-z]+\d+$)[a-z0-9]+$/,
+      '',
+    )
     .replace(/\s+/g, ' ')
     .trim();
 

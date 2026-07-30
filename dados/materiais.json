@@ -3103,6 +3103,124 @@
         "tag": "A sucessora da linha do Ma Lin",
         "frase": "Cinco camadas com \"MADE IN SWEDEN\" gravado na madeira. A loja ainda a identifica como \"Nova Ma Lin\", nome da linha anterior."
       }
+    },
+    {
+      "id": "dhs-hurricane-3",
+      "nome": "Hurricane 3",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 289,
+      "specs": {
+        "velocidade": 8.1,
+        "spin": 8.9,
+        "controle": 8.6
+      },
+      "durabilidade": 7.6,
+      "origemSpecs": "comunidade",
+      "rating": 4.25,
+      "reviews": 143,
+      "simples": {
+        "tag": "A pegajosa chinesa clássica",
+        "frase": "143 avaliações — uma das maiores amostras do catálogo. Aderente e dura: um avaliador resume que só entrega a marcha alta com giro de corpo inteiro. Não é borracha de meia-braçada."
+      }
+    },
+    {
+      "id": "dhs-hurricane-8",
+      "nome": "Hurricane 8",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 349,
+      "specs": {
+        "velocidade": 8.5,
+        "spin": 9.3,
+        "controle": 9.0
+      },
+      "durabilidade": 7.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 70,
+      "simples": {
+        "tag": "A chinesa com controle europeu",
+        "frase": "Efeito 9,3 e controle 9,0: a DHS mais equilibrada do catálogo. A comunidade diz que rende no topspin e perde no smash — é borracha de girar, não de bater reto."
+      }
+    },
+    {
+      "id": "dhs-hurricane-8-80",
+      "nome": "Hurricane 8-80",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 339,
+      "specs": {
+        "velocidade": 8.1,
+        "spin": 9.2,
+        "controle": 9.1
+      },
+      "durabilidade": 8.1,
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 18,
+      "simples": {
+        "tag": "Ponte entre a europeia e a chinesa",
+        "frase": "Superfície muito aderente com esponja elástica: a comunidade a coloca entre a borracha europeia e a chinesa tradicional. Atenção ao peso — há relatos de variação grande entre lotes comerciais."
+      }
+    },
+    {
+      "id": "dhs-g555",
+      "nome": "G555",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 190,
+      "specs": {
+        "velocidade": 7.4,
+        "spin": 8.9,
+        "controle": 8.5
+      },
+      "durabilidade": 7.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.3,
+      "reviews": 24,
+      "simples": {
+        "tag": "Aderência alta por R$ 190",
+        "frase": "Velocidade 7,4 e efeito 8,9: a mais lenta e a mais barata das DHS aqui. Brilha no jogo curto e na devolução de saque, e some na troca de meia distância."
+      }
+    },
+    {
+      "id": "dhs-power-pg7",
+      "nome": "Power PG7",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 419,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras chinesas",
+        "frase": "Lâmina de 7 camadas na linha Power da DHS, pensada para o estilo chinês de ataque com borracha aderente."
+      }
+    },
+    {
+      "id": "dhs-power-pg8",
+      "nome": "Power PG8",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 409,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A irmã da PG7",
+        "frase": "A outra lâmina da linha Power. Como a PG7, ainda sem amostra de comunidade que sustente números de desempenho."
+      }
     }
   ]
 }

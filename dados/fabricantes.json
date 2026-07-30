@@ -3695,6 +3695,86 @@
         }
       ],
       "nota": " A loja vende em formato clássico e classineta — é a mesma madeira; o formato se escolhe na compra. Esta lâmina não tem amostra suficiente na comunidade para entrar na escala de desempenho. Efeito não entra: é propriedade da borracha, não da madeira."
+    },
+    "dhs-hurricane-3": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-dhs-hurricane-3",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente (pegajosa), esponja dura"
+        }
+      ],
+      "nota": "A DHS não publica o grau desta borracha em página acessível, e a loja não o declara. Ela entra SEM a régua unificada — e por isso sem o Perdão. A comunidade estima a dureza, mas estimativa de jogador não é medida de fábrica, e a régua do site é a segunda coisa."
+    },
+    "dhs-hurricane-8": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-dhs-hurricane-8",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja de alta elasticidade"
+        }
+      ],
+      "nota": "A DHS não publica o grau desta borracha em página acessível, e a loja não o declara. Ela entra SEM a régua unificada — e por isso sem o Perdão. A comunidade estima a dureza, mas estimativa de jogador não é medida de fábrica, e a régua do site é a segunda coisa."
+    },
+    "dhs-hurricane-8-80": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-dhs-hurricane-8-80-profissional-pegajosa-tenis-mesa",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa muito aderente + esponja elástica"
+        }
+      ],
+      "nota": "A DHS não publica o grau desta borracha em página acessível, e a loja não o declara. Ela entra SEM a régua unificada — e por isso sem o Perdão. A comunidade estima a dureza, mas estimativa de jogador não é medida de fábrica, e a régua do site é a segunda coisa."
+    },
+    "dhs-g555": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-dhs-dhs-g555",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa extremamente aderente"
+        }
+      ],
+      "nota": "A DHS não publica o grau desta borracha em página acessível, e a loja não o declara. Ela entra SEM a régua unificada — e por isso sem o Perdão. A comunidade estima a dureza, mas estimativa de jogador não é medida de fábrica, e a régua do site é a segunda coisa."
+    },
+    "dhs-power-pg7": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classica-dhs-power-pg7",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Esta lâmina não tem amostra suficiente na comunidade para entrar na escala de desempenho."
+    },
+    "dhs-power-pg8": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classica-dhs-power-pg8",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Esta lâmina não tem amostra suficiente na comunidade para entrar na escala de desempenho."
     }
   }
 }

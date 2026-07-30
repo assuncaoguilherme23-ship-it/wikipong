@@ -5344,6 +5344,256 @@
         "tag": "A versão macia da Slice",
         "frase": "A leitura mais macia da Slice 40, com nota 9,0 contra 6,3 da CD. Com três avaliações cada, essa diferença ainda não está sustentada por amostra — vale como indício, não como veredito."
       }
+    },
+    {
+      "id": "donic-waldner-senso-carbon",
+      "nome": "Waldner Senso Carbon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 507,
+      "specs": {
+        "velocidade": 8.3,
+        "controle": 8.8
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 87,
+      "simples": {
+        "tag": "A lâmina mais avaliada do catálogo",
+        "frase": "87 avaliações — nenhuma lâmina do WikiPong tem amostra maior. Controle 8,8 acima da velocidade 8,3: a comunidade a descreve como boa nas marchas baixa e média, e mais lenta que carbonos rígidas. É lâmina de quem gira."
+      }
+    },
+    {
+      "id": "donic-waldner-ultra-senso-carbon",
+      "nome": "Waldner Ultra Senso Carbon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 507,
+      "specs": {
+        "velocidade": 8.4,
+        "controle": 8.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 42,
+      "simples": {
+        "tag": "Velocidade e controle quase empatados",
+        "frase": "8,4 e 8,6 com 42 avaliações. A comunidade usa a expressão \"velocidade igual a controle\" e a chama de versátil e fácil de jogar — feita para quem constrói o ponto no topspin."
+      }
+    },
+    {
+      "id": "donic-waldner-legend-carbon",
+      "nome": "Waldner Legend Carbon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 530,
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 23,
+      "simples": {
+        "tag": "Rápida, leve e com ponto doce grande",
+        "frase": "Velocidade 9,1 com controle 8,9 — os dois eixos altos. A comunidade destaca o peso baixo e o ponto doce amplo, para dominar colado à mesa."
+      }
+    },
+    {
+      "id": "donic-waldner-dotec-carbon",
+      "nome": "Waldner Dotec Carbon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 676,
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.75,
+      "reviews": 21,
+      "simples": {
+        "tag": "A comunidade discorda da fabricante — para melhor",
+        "frase": "A Donic publica controle 7,0. A comunidade dá 9,4, com 21 avaliações. Um avaliador fala na maior razão controle/velocidade que já experimentou numa lâmina. Quando a divergência é a favor do jogador, ela também precisa ser dita."
+      }
+    },
+    {
+      "id": "donic-waldner-allplay",
+      "nome": "Waldner Allplay",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 250,
+      "specs": {
+        "velocidade": 7.3,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.25,
+      "reviews": 21,
+      "simples": {
+        "tag": "Controle acima de tudo, por R$ 250",
+        "frase": "A Donic publica 68 de velocidade contra 80 de controle. A comunidade confirma: 7,3 e 8,9. Lâmina de jogo colado à mesa e giro, não de potência."
+      }
+    },
+    {
+      "id": "donic-waldner-dicon",
+      "nome": "Waldner Dicon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 315,
+      "specs": {
+        "velocidade": 7.8,
+        "controle": 9.0
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 13,
+      "simples": {
+        "tag": "Controle 9,0 por R$ 315",
+        "frase": "Um avaliador resume: dá para carregar muito giro com muita sensação. Velocidade moderada, precisão alta — perfil de ataque controlado."
+      }
+    },
+    {
+      "id": "donic-waldner-senso-v1",
+      "nome": "Waldner Senso V1",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 517,
+      "specs": {
+        "velocidade": 7.4,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.0,
+      "reviews": 13,
+      "simples": {
+        "tag": "Boa para aprender, lenta para brigar",
+        "frase": "A comunidade a chama de ótima lâmina de iniciante, com muito controle no toque e no bloqueio. E avisa: falta velocidade na troca agressiva — compense com borracha mais rápida."
+      }
+    },
+    {
+      "id": "donic-waldner-senso-v2",
+      "nome": "Waldner Senso V2",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 315,
+      "specs": {
+        "velocidade": 7.3,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.1,
+      "reviews": 5,
+      "simples": {
+        "tag": "Entre ALL+ e OFF-",
+        "frase": "A própria comunidade a posiciona entre as classes ALL+ e OFF-: controle excelente para uma lâmina ofensiva, com velocidade moderada. Para quem prioriza precisão no topspin."
+      }
+    },
+    {
+      "id": "donic-waldner-black-devil",
+      "nome": "Waldner Black Devil",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 623,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono sobre balsa",
+        "frase": "O Revspin tem 46 avaliações para uma \"Waldner Black Devil Carbon Balsa\" — nome próximo, não idêntico ao que a loja vende. Não atribuímos aquela nota."
+      }
+    },
+    {
+      "id": "donic-waldner-dotec-ar",
+      "nome": "Waldner Dotec AR",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 565,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Dotec de perfil allround",
+        "frase": "O Revspin registra uma \"Waldner Dotec Allround\" com 6 avaliações. A sigla AR sugere que seja a mesma, mas sugerir não é confirmar — a nota ficou de fora."
+      }
+    },
+    {
+      "id": "donic-waldner-off-jo-shape",
+      "nome": "Waldner OFF JO Shape",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 338,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A OFF em cabeça JO Shape",
+        "frase": "Sem amostra própria na comunidade para esta configuração."
+      }
+    },
+    {
+      "id": "donic-waldner-senso-carbon-jo-shape",
+      "nome": "Waldner Senso Carbon JO Shape",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 524,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Senso Carbon em JO Shape",
+        "frase": "Quatro avaliações na comunidade, abaixo do nosso piso — apesar da nota alta (9,6) que essas quatro dão."
+      }
+    },
+    {
+      "id": "donic-waldner-ultra-senso-carbon-jo-shape",
+      "nome": "Waldner Ultra Senso Carbon JO Shape",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 524,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Ultra Senso em JO Shape",
+        "frase": "Duas avaliações, com nota 9,8. Amostra pequena demais para virar número no site — a ficha registra que a nota existe e que não a usamos."
+      }
+    },
+    {
+      "id": "donic-waldner-youngstar-conc-fl",
+      "nome": "Waldner Youngstar",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 226,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais barata da família",
+        "frase": "R$ 226 — a lâmina Waldner mais acessível, pensada para o jogador jovem. Sem nenhuma avaliação registrada na comunidade."
+      }
     }
   ]
 }

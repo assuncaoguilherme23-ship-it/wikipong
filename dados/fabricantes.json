@@ -5407,6 +5407,230 @@
         }
       ],
       "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: eu suspeitava que a Slice 40 fosse de pinos, pelo nome e pela descrição voltada ao defensor. Não é. O Revspin a lista no índice de LISAS (/rubber/) e não no de pinos (/pips/) — é borracha lisa aderente, feita para defesa. Três avaliações na comunidade, abaixo do nosso piso de cinco."
+    },
+    "donic-waldner-senso-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-senso-carbon/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono, sistema Senso no cabo"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-waldner-ultra-senso-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-ultra-senso-carbon/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono, sistema Senso"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-waldner-legend-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-legend-carbon/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-waldner-dotec-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-dotec-carbon/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Carbono sobre núcleo de balsa de 4 mm"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-waldner-allplay": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-allplay/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-waldner-dicon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-dicon/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-waldner-senso-v1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-senso-v1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com sistema Senso no cabo"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-waldner-senso-v2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-senso-v2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com sistema Senso no cabo"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-waldner-black-devil": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-black-devil/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Carbono com núcleo de balsa"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. ATENÇÃO ao nome: o Revspin tem amostra para um modelo de nome PARECIDO, mas não idêntico ao que a loja vende. Nome parecido não é o mesmo produto, então a nota não foi atribuída. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "donic-waldner-dotec-ar": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-dotec-ar/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, sistema Dotec"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. ATENÇÃO ao nome: o Revspin tem amostra para um modelo de nome PARECIDO, mas não idêntico ao que a loja vende. Nome parecido não é o mesmo produto, então a nota não foi atribuída. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "donic-waldner-off-jo-shape": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-off-jo-shape/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, cabeça JO Shape"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. \"JO Shape\" é o formato de cabeça assinado pelo Jan-Ove Waldner — geometria diferente da versão redonda da mesma lâmina, e produto distinto, com preço próprio. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "donic-waldner-senso-carbon-jo-shape": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-senso-carbon-jo-shape/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono, sistema Senso, cabeça JO Shape"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. \"JO Shape\" é o formato de cabeça assinado pelo Jan-Ove Waldner — geometria diferente da versão redonda da mesma lâmina, e produto distinto, com preço próprio. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "donic-waldner-ultra-senso-carbon-jo-shape": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-ultra-senso-carbon-jo-shape/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono, sistema Senso, cabeça JO Shape"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. \"JO Shape\" é o formato de cabeça assinado pelo Jan-Ove Waldner — geometria diferente da versão redonda da mesma lâmina, e produto distinto, com preço próprio. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "donic-waldner-youngstar-conc-fl": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-waldner-youngstar-conc-fl/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, cabo côncavo"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
     }
   }
 }

@@ -1280,6 +1280,70 @@
       "escala": 10,
       "avaliacoes": 19,
       "consultadoEm": "2026-07-30"
+    },
+    "donic-waldner-senso-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-waldner-senso-carbon.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 87,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-waldner-ultra-senso-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-waldner-ultra-senso-carbon.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 42,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-waldner-legend-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-waldner-legend-carbon.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 23,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-waldner-dotec-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-waldner-dotec-carbon.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 21,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-waldner-allplay": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-waldner-allplay.html",
+      "nota": 8.5,
+      "escala": 10,
+      "avaliacoes": 21,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-waldner-dicon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-waldner-dicon.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 13,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-waldner-senso-v1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-waldner-senso-v1.html",
+      "nota": 8.0,
+      "escala": 10,
+      "avaliacoes": 13,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-waldner-senso-v2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-waldner-senso-v2.html",
+      "nota": 8.2,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

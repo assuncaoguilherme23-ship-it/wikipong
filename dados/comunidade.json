@@ -984,6 +984,118 @@
       "escala": 10,
       "avaliacoes": 9,
       "consultadoEm": "2026-07-30"
+    },
+    "donic-bluefire-m1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluefire-m1.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 89,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluefire-m1-turbo": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluefire-m1-turbo.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 32,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluefire-m2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluefire-m2.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 67,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluefire-m3": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluefire-m3.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 51,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluestorm-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluestorm-pro.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 8,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluestorm-pro-am": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluestorm-pro-am.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 15,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluestorm-z1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluestorm-z1.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 28,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluestorm-z1-turbo": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluestorm-z1-turbo.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 37,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluestorm-z2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluestorm-z2.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 31,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluestorm-z3": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluestorm-z3.html",
+      "nota": 8.2,
+      "escala": 10,
+      "avaliacoes": 17,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluestorm-big-slam": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluestorm-big-slam.html",
+      "nota": 8.1,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluestar-a1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluestar-a1.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 22,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluestar-a2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluestar-a2.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluestar-a3": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluestar-a3.html",
+      "nota": 9.7,
+      "escala": 10,
+      "avaliacoes": 6,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

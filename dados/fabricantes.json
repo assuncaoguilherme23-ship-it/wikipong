@@ -4875,6 +4875,202 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. É um produto distinto, com preço próprio — nesta loja a versão hexagonal costuma custar menos que a redonda da mesma família. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
+    },
+    "donic-bluefire-m1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluefire-m1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-bluefire-m1-turbo": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-donic-bluefire-m1-turbo/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "donic-bluefire-m2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluefire-m2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-bluefire-m3": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluefire-m3/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-bluestorm-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-donic-bluestorm-pro/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "donic-bluestorm-pro-am": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluestorm-pro-am/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-bluestorm-z1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluestorm-z1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-bluestorm-z1-turbo": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-donic-bluestorm-z1-turbo/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, capa fina"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "donic-bluestorm-z2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluestorm-z2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-bluestorm-z3": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-donic-bluestorm-z3/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "42,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja média"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "donic-bluestorm-big-slam": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluestorm-big-slam/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "42,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, capa fina"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "donic-bluestar-a1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-donic-bluestar-a1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (esponja OPTE)"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-bluestar-a2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-donic-bluestar-a2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (esponja OPTE)"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "donic-bluestar-a3": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-donic-bluestar-a3/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (esponja OPTE)"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
     }
   }
 }

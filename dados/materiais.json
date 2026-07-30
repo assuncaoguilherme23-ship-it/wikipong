@@ -4455,6 +4455,314 @@
         "tag": "A Wavy em hexagonal",
         "frase": "Mesmo preço da Wavy redonda (R$ 822). O Revspin tem uma \"Wavy Ultra Fiber Cybershape\" com uma avaliação, que é outra especificação de fibra."
       }
+    },
+    {
+      "id": "donic-bluefire-m1",
+      "nome": "Bluefire M1",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 343,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.2,
+        "controle": 8.4
+      },
+      "durabilidade": 7.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 89,
+      "simples": {
+        "tag": "A borracha mais avaliada da Donic",
+        "frase": "89 avaliações — a maior amostra da marca no catálogo. A comunidade avisa: exige técnica boa e aceleração de braço para acionar. Não é borracha de quem bate devagar."
+      }
+    },
+    {
+      "id": "donic-bluefire-m1-turbo",
+      "nome": "Bluefire M1 Turbo",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 365,
+      "specs": {
+        "velocidade": 9.5,
+        "spin": 9.4,
+        "controle": 8.5
+      },
+      "durabilidade": 7.4,
+      "origemSpecs": "comunidade",
+      "rating": 4.75,
+      "reviews": 32,
+      "simples": {
+        "tag": "Velocidade 9,5 e efeito 9,4",
+        "frase": "Os dois eixos ofensivos no teto da marca. Um avaliador resume sem rodeio: velocidade e efeito excelentes, e às vezes difícil de controlar de tão rápida. O rendimento muda muito conforme a lâmina."
+      }
+    },
+    {
+      "id": "donic-bluefire-m2",
+      "nome": "Bluefire M2",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 343,
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 9.0,
+        "controle": 8.5
+      },
+      "durabilidade": 6.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 67,
+      "simples": {
+        "tag": "A equilibrada da linha M",
+        "frase": "Boa em giro e velocidade, com 67 avaliações. O alerta recorrente é a capa vermelha, que segundo relatos degrada com o uso — sobretudo em quem transpira muito ou usa booster."
+      }
+    },
+    {
+      "id": "donic-bluefire-m3",
+      "nome": "Bluefire M3",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 343,
+      "specs": {
+        "velocidade": 8.4,
+        "spin": 9.1,
+        "controle": 8.9
+      },
+      "durabilidade": 7.9,
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 51,
+      "simples": {
+        "tag": "Feita para girar, não para bater",
+        "frase": "A Donic publica efeito 107 contra velocidade 90 nesta borracha. A comunidade confirma: chamam de \"loop monster\", e avisam que na batida reta a bola sai da mesa. Ela pede giro."
+      }
+    },
+    {
+      "id": "donic-bluestorm-pro",
+      "nome": "Bluestorm Pro",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 439,
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.6,
+        "controle": 8.5
+      },
+      "durabilidade": 8.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.8,
+      "reviews": 8,
+      "simples": {
+        "tag": "Efeito 9,6, mas vem com óleo de fábrica",
+        "frase": "O maior efeito das Donic aqui. Atenção ao que a comunidade relata: ela vem fortemente tratada com óleo de fábrica e precisa de nova aplicação a cada 2 ou 3 meses para manter o rendimento. É custo e trabalho recorrentes."
+      }
+    },
+    {
+      "id": "donic-bluestorm-pro-am",
+      "nome": "Bluestorm Pro AM",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 439,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 9.5,
+        "controle": 9.2
+      },
+      "durabilidade": 7.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.75,
+      "reviews": 15,
+      "simples": {
+        "tag": "Os três eixos acima de 9",
+        "frase": "Velocidade 9,1, efeito 9,5 e controle 9,2 — a única borracha do catálogo com os três acima de 9. Um avaliador fala em equilíbrio quase perfeito. O preço acompanha."
+      }
+    },
+    {
+      "id": "donic-bluestorm-z1",
+      "nome": "Bluestorm Z1",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 365,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.3,
+        "controle": 8.8
+      },
+      "durabilidade": 6.4,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 28,
+      "simples": {
+        "tag": "Velocidade e efeito empatados em 9,3",
+        "frase": "A comunidade a descreve como devastadoramente rápida, mantendo controle bom para o nível de velocidade. Sobre durabilidade os relatos divergem: um viu desgaste em poucas horas, outro usou por anos sem queda."
+      }
+    },
+    {
+      "id": "donic-bluestorm-z1-turbo",
+      "nome": "Bluestorm Z1 Turbo",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 365,
+      "specs": {
+        "velocidade": 9.4,
+        "spin": 9.0,
+        "controle": 8.2
+      },
+      "durabilidade": 7.9,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 37,
+      "simples": {
+        "tag": "A mais dura e rápida da série",
+        "frase": "A própria Donic a posiciona como a mais dura e rápida da linha Bluestorm: esponja 50° com capa fina. Muda de caráter conforme a lâmina — de borracha de ataque rápido a máquina de topspin."
+      }
+    },
+    {
+      "id": "donic-bluestorm-z2",
+      "nome": "Bluestorm Z2",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 365,
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.0,
+        "controle": 8.8
+      },
+      "durabilidade": 5.5,
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 31,
+      "simples": {
+        "tag": "Catapulta forte no começo",
+        "frase": "A comunidade relata catapulta extrema logo depois de colada, que se estabiliza com o uso. Durabilidade 5,5 — das mais baixas do catálogo."
+      }
+    },
+    {
+      "id": "donic-bluestorm-z3",
+      "nome": "Bluestorm Z3",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 365,
+      "specs": {
+        "velocidade": 8.5,
+        "spin": 8.5,
+        "controle": 8.6
+      },
+      "durabilidade": 5.2,
+      "origemSpecs": "comunidade",
+      "rating": 4.1,
+      "reviews": 17,
+      "simples": {
+        "tag": "A acessível da série Z",
+        "frase": "Os três eixos empatados perto de 8,5: a comunidade a considera equilibrada e até recomendável para quem está começando, pela velocidade administrável. A durabilidade 5,2 é o preço."
+      }
+    },
+    {
+      "id": "donic-bluestorm-big-slam",
+      "nome": "Bluestorm Big Slam",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 365,
+      "specs": {
+        "velocidade": 8.2,
+        "spin": 7.9,
+        "controle": 8.0
+      },
+      "durabilidade": 5.6,
+      "origemSpecs": "comunidade",
+      "rating": 4.05,
+      "reviews": 5,
+      "simples": {
+        "tag": "A mais macia da linha",
+        "frase": "A Donic a descreve como a Bluestorm mais macia, com capa mais fina e apenas 39 g em 1,9 mm. A comunidade diverge no efeito: uns elogiam no topspin, outros acham difícil girar no saque."
+      }
+    },
+    {
+      "id": "donic-bluestar-a1",
+      "nome": "BlueStar A1",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 341,
+      "specs": {
+        "velocidade": 9.4,
+        "spin": 9.4,
+        "controle": 8.8
+      },
+      "durabilidade": 7.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 22,
+      "simples": {
+        "tag": "Velocidade e efeito 9,4",
+        "frase": "Um avaliador resume: muito rápida, com ótima velocidade e efeito — e não é para iniciante nem para quem bate com preguiça. Relatos falam em perda de giro depois de 4 meses."
+      }
+    },
+    {
+      "id": "donic-bluestar-a2",
+      "nome": "BlueStar A2",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 341,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.5,
+        "controle": 9.3
+      },
+      "durabilidade": 6.0,
+      "origemSpecs": "comunidade",
+      "rating": 4.8,
+      "reviews": 5,
+      "simples": {
+        "tag": "Giro grande com braço curto",
+        "frase": "A frase que melhor a descreve veio da comunidade: rotação enorme com movimento curto de braço, o que a torna forte no jogo colado à mesa. A capa perde a aderência relativamente rápido."
+      }
+    },
+    {
+      "id": "donic-bluestar-a3",
+      "nome": "BlueStar A3",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "controlar",
+      "preco": 400,
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 9.6,
+        "controle": 9.7
+      },
+      "durabilidade": 7.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.85,
+      "reviews": 6,
+      "simples": {
+        "tag": "Controle 9,7 — o maior do catálogo",
+        "frase": "Controle 9,7 e efeito 9,6, com velocidade menor que as irmãs. Um avaliador a chama de lenta para a dureza que tem, e elogia justamente giro e controle. É a borracha de quem constrói o ponto."
+      }
     }
   ]
 }

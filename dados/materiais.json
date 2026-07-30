@@ -5769,6 +5769,136 @@
         "tag": "A de entrada da família",
         "frase": "R$ 226, pensada para o jogador jovem. Sem nenhuma avaliação registrada na comunidade."
       }
+    },
+    {
+      "id": "donic-original-carbospeed",
+      "nome": "Original Carbospeed",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 530,
+      "specs": {
+        "velocidade": 9.6,
+        "controle": 8.4
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 47,
+      "simples": {
+        "tag": "Velocidade 9,6 — a maior do catálogo",
+        "frase": "Nenhuma lâmina do WikiPong tem velocidade maior. Um avaliador resume a surpresa: não sabia que dava para fazer uma lâmina tão rápida com esse tanto de controle. São 47 avaliações sustentando."
+      }
+    },
+    {
+      "id": "donic-original-true-carbon",
+      "nome": "Original True Carbon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 763,
+      "specs": {
+        "velocidade": 9.2,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 20,
+      "simples": {
+        "tag": "A Donic publica velocidade 99",
+        "frase": "Velocidade 99 e controle 72 na régua da marca. A comunidade dá 9,2 e 8,9 — mais equilibrada do que a marca vende. A mais cara da família."
+      }
+    },
+    {
+      "id": "donic-original-senso-v2",
+      "nome": "Original Senso V2",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "controlar",
+      "preco": 371,
+      "specs": {
+        "velocidade": 8.7,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 10,
+      "simples": {
+        "tag": "Controle 9,4 por R$ 371",
+        "frase": "Camadas médias-duras escolhidas para controle. A própria Donic a posiciona para quem valoriza controle mas ainda quer potência no ataque — e a comunidade confirma com 9,4."
+      }
+    },
+    {
+      "id": "donic-original-senso-carbon",
+      "nome": "Original Senso Carbon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 530,
+      "specs": {
+        "velocidade": 8.9,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 14,
+      "simples": {
+        "tag": "Tempo de contato longo",
+        "frase": "A comunidade destaca o tempo que a bola fica na madeira e o controle. Um avaliador a descreve como reunindo tudo: topspin de força, topspin de giro e jogo curto."
+      }
+    },
+    {
+      "id": "donic-original-senso-v1",
+      "nome": "Original Senso V1",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 373,
+      "specs": {
+        "velocidade": 9.0,
+        "controle": 8.0
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 17,
+      "simples": {
+        "tag": "Divide a comunidade",
+        "frase": "Um avaliador fala em sensação fantástica e potência inacreditável; outro diz que ela não é rápida e precisa de borracha média-dura para render. Concordam num ponto: não é lâmina de iniciante, e o topspin com borracha dura é difícil."
+      }
+    },
+    {
+      "id": "donic-original-dotec-off",
+      "nome": "Original Dotec OFF",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 530,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Dotec ofensiva",
+        "frase": "Quatro avaliações na comunidade, com nota 9,7 — abaixo do nosso piso de cinco por uma avaliação."
+      }
+    },
+    {
+      "id": "donic-original-dotec-all",
+      "nome": "Original Dotec ALL+",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 530,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Dotec allround",
+        "frase": "Quatro avaliações na comunidade. O Revspin ainda registra uma \"Dotec ALL\" separada da \"ALL+\", com uma avaliação — são configurações diferentes, e nenhuma das duas tem amostra."
+      }
     }
   ]
 }

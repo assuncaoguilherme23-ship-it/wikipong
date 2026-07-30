@@ -1384,6 +1384,46 @@
       "escala": 10,
       "avaliacoes": 12,
       "consultadoEm": "2026-07-30"
+    },
+    "donic-original-carbospeed": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-ovtcharov-carbospeed.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 47,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-original-true-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-ovtcharov-true-carbon.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 20,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-original-senso-v2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-ovtcharov-senso-v2.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 10,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-original-senso-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-ovtcharov-original-senso-carbon.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 14,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-original-senso-v1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-ovtcharov-senso-v1.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 17,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

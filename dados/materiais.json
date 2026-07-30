@@ -6224,6 +6224,196 @@
         "tag": "Precisão acima de potência",
         "frase": "A leitura Dotec da linha Appelgren: velocidade razoável com controle bom, para quem prioriza colocar a bola."
       }
+    },
+    {
+      "id": "donic-wc89-waldner-off",
+      "nome": "World Champion 89 Waldner OFF",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 763,
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.75,
+      "reviews": 58,
+      "simples": {
+        "tag": "Controle 9,3 numa lâmina rápida",
+        "frase": "58 avaliações. Um avaliador resume: é rápida, mas com sensação e facilidade de controle. Abeto italiano e Kiri — construção que a comunidade credita pelo toque refinado."
+      }
+    },
+    {
+      "id": "donic-wc89-persson-off",
+      "nome": "World Champion 89 Persson OFF+",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 763,
+      "specs": {
+        "velocidade": 9.4,
+        "controle": 8.7
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 12,
+      "simples": {
+        "tag": "A mais rápida do trio",
+        "frase": "Velocidade 9,4, classe OFF/OFF+ e cerca de 85 g. Um avaliador a descreve como uma fração de cabelo mais rápida que as irmãs da série."
+      }
+    },
+    {
+      "id": "donic-wc89-appelgren-all",
+      "nome": "World Champion 89 Appelgren ALL+",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 763,
+      "specs": {
+        "velocidade": 8.3,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 26,
+      "simples": {
+        "tag": "A allround do trio",
+        "frase": "A Donic publica 8,0 de velocidade e 9,0 de controle; a comunidade dá 8,3 e 9,1 — concordância rara. Leve, com o que os avaliadores chamam de melhor sensação da série."
+      }
+    },
+    {
+      "id": "donic-skachkov-carbon",
+      "nome": "Skachkov Carbon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 489,
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.8,
+      "reviews": 7,
+      "simples": {
+        "tag": "A Donic diz 7,0 de controle, a comunidade diz 9,4",
+        "frase": "A maior divergência de controle entre marca e jogadores em todo o catálogo — 2,4 pontos. Assinatura do ucraniano Kirill Skachkov. É o quarto caso da Donic em que a marca subestima o próprio controle."
+      }
+    },
+    {
+      "id": "donic-new-impuls-7-0",
+      "nome": "New Impuls 7.0",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 758,
+      "specs": {
+        "velocidade": 8.4,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade",
+      "rating": 5.0,
+      "reviews": 5,
+      "simples": {
+        "tag": "Nota 10 na comunidade",
+        "frase": "Nota máxima entre as cinco pessoas que avaliaram — amostra pequena, mas dentro do nosso piso. Madeira pura com controle 9,4, e a comunidade a coloca como bem mais rápida que as versões 6.5 da linha."
+      }
+    },
+    {
+      "id": "donic-skachkov-carbospeed",
+      "nome": "Skachkov Carbospeed",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 611,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A rápida da linha Skachkov",
+        "frase": "Não consta do Revspin — entra com construção, preço real e foto."
+      }
+    },
+    {
+      "id": "donic-skachkov-inner-carbon",
+      "nome": "Skachkov Inner Carbon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 646,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono por dentro",
+        "frase": "A fibra fica junto ao núcleo: a bola afunda mais na madeira antes de sair. Sem amostra própria na comunidade."
+      }
+    },
+    {
+      "id": "donic-zhang-jike-original-carbon",
+      "nome": "Zhang Jike Original Carbon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 928,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Assinatura do Zhang Jike",
+        "frase": "Três avaliações na comunidade, com nota 9,5 — abaixo do nosso piso de cinco."
+      }
+    },
+    {
+      "id": "donic-zhang-jike-new-era",
+      "nome": "Zhang Jike New Era",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 964,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da Donic aqui",
+        "frase": "R$ 964 — a lâmina Donic mais cara do catálogo. Uma única avaliação registrada na comunidade."
+      }
+    },
+    {
+      "id": "donic-new-impuls-6-5",
+      "nome": "New Impuls 6.5",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 758,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais fina da linha Impuls",
+        "frase": "Quatro avaliações, com nota 9,3 — a uma do nosso piso."
+      }
+    },
+    {
+      "id": "donic-new-impuls-7-5",
+      "nome": "New Impuls 7.5",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 758,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais grossa da linha",
+        "frase": "Duas avaliações apenas. Entra com ficha, preço real e foto."
+      }
     }
   ]
 }

@@ -1544,6 +1544,46 @@
       "escala": 10,
       "avaliacoes": 8,
       "consultadoEm": "2026-07-30"
+    },
+    "donic-wc89-waldner-off": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-waldner-off-world-champion-89.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 58,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-wc89-persson-off": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-persson-world-champion-89.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 12,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-wc89-appelgren-all": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-appelgren-world-champion-89.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 26,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-skachkov-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-skachkov-carbon.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 7,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-new-impuls-7-0": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-new-impuls-70.html",
+      "nota": 10.0,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

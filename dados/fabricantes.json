@@ -4475,6 +4475,150 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "stiga-rosewood-nct-v": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-rosewood-nct-v/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas com jacarandá, tratamento NCT"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabo, clássico e classineta."
+    },
+    "stiga-rosewood-nct-vii": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-rosewood-nct-vii/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas com jacarandá, tratamento NCT"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabo, clássico e classineta."
+    },
+    "stiga-ebenholz-nct-v": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-ebenholz-nct-v/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas com ébano, tratamento NCT"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabo, clássico e classineta."
+    },
+    "stiga-ebenholz-nct-vii": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-ebenholz-nct-vii/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas com ébano, tratamento NCT"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabo, clássico e classineta."
+    },
+    "stiga-rosewood-xo": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-rosewood-xo/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Jacarandá, construção XO"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabo, clássico e classineta."
+    },
+    "stiga-nostalgic-vii": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-nostalgic-vii/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "stiga-infinity-vps-v": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-infinity-vps-v/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira, tratamento VPS"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. ATENÇÃO ao nome: o Revspin tem amostra para um modelo de nome PARECIDO, mas não idêntico ao que a loja vende. Nome parecido não é o mesmo produto, então a nota não foi atribuída. A loja vende esta lâmina em dois formatos de cabo, clássico e classineta. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
+    },
+    "stiga-energy-wood": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-energy-wood/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, linha Energy"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. ATENÇÃO ao nome: o Revspin tem amostra para um modelo de nome PARECIDO, mas não idêntico ao que a loja vende. Nome parecido não é o mesmo produto, então a nota não foi atribuída. A loja vende esta lâmina em dois formatos de cabo, clássico e classineta. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
+    },
+    "stiga-energy-wood-v2-wrb": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-energy-wood-v2-wrb/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas, linha Energy com sistema WRB"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. ATENÇÃO ao nome: o Revspin tem amostra para um modelo de nome PARECIDO, mas não idêntico ao que a loja vende. Nome parecido não é o mesmo produto, então a nota não foi atribuída. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
     }
   }
 }

@@ -912,6 +912,54 @@
       "escala": 10,
       "avaliacoes": 24,
       "consultadoEm": "2026-07-30"
+    },
+    "stiga-rosewood-nct-v": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-rosewood-nct-v.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 50,
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-rosewood-nct-vii": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-rosewood-nct-vii.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 38,
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-ebenholz-nct-v": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-ebenholz-nct-v.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 34,
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-ebenholz-nct-vii": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-ebenholz-nct-vii.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 29,
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-rosewood-xo": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-rosewood-xo.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 27,
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-nostalgic-vii": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-nostalgic-vii.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 6,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

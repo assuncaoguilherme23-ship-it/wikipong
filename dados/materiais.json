@@ -4035,6 +4035,171 @@
         "tag": "Sete madeiras sem fibra",
         "frase": "Construção de 7 camadas de madeira pura por R$ 682. Uma única avaliação registrada na comunidade."
       }
+    },
+    {
+      "id": "stiga-rosewood-nct-v",
+      "nome": "Rosewood NCT V",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1158,
+      "specs": {
+        "velocidade": 8.9,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 50,
+      "simples": {
+        "tag": "Velocidade e controle empatados",
+        "frase": "50 avaliações, com velocidade e controle ambos em 8,9. Um avaliador resume: rápida, mas com sensação orgânica. A própria Stiga publica 86 de velocidade contra 69 de controle — a comunidade discorda e acha a lâmina mais equilibrada que a marca diz."
+      }
+    },
+    {
+      "id": "stiga-rosewood-nct-vii",
+      "nome": "Rosewood NCT VII",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1274,
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 8.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.75,
+      "reviews": 38,
+      "simples": {
+        "tag": "A mais bem avaliada das madeiras",
+        "frase": "Nota 9,5 na comunidade — a maior entre as lâminas de madeira do catálogo. Um avaliador a descreve como OFF/OFF+ equilibrada, onde dá para colocar a bola com precisão sem perder ritmo."
+      }
+    },
+    {
+      "id": "stiga-ebenholz-nct-v",
+      "nome": "Ebenholz NCT V",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1158,
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 9.0
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 34,
+      "simples": {
+        "tag": "Não parece madeira pura",
+        "frase": "Velocidade 9,1 e controle 9,0 sem nenhuma fibra. O elogio recorrente na comunidade é que ela não tem cara de lâmina de madeira quando o assunto é velocidade."
+      }
+    },
+    {
+      "id": "stiga-ebenholz-nct-vii",
+      "nome": "Ebenholz NCT VII",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1274,
+      "specs": {
+        "velocidade": 9.4,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 29,
+      "simples": {
+        "tag": "A madeira mais rápida do catálogo",
+        "frase": "Velocidade 9,4 sem fibra — a maior entre as lâminas de madeira pura aqui. A Stiga a descreve como de rigidez e velocidade extremas, para acelerar sem cola."
+      }
+    },
+    {
+      "id": "stiga-rosewood-xo",
+      "nome": "Rosewood XO",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1325,
+      "specs": {
+        "velocidade": 9.2,
+        "controle": 8.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 27,
+      "simples": {
+        "tag": "Divide a comunidade no controle",
+        "frase": "Velocidade 9,2. No controle os relatos se contradizem abertamente: um diz ter potência E controle, outro diz que ela não tem controle nenhum. Com 27 avaliações, a divergência é real — provavelmente depende da borracha montada."
+      }
+    },
+    {
+      "id": "stiga-nostalgic-vii",
+      "nome": "Nostalgic VII",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 763,
+      "specs": {
+        "velocidade": 9.0,
+        "controle": 8.8
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 6,
+      "simples": {
+        "tag": "Saída rápida, pouca flexão",
+        "frase": "A comunidade destaca a devolução rápida já no bloqueio passivo. Em troca, avisa que o topspin exige timing mais preciso, porque a lâmina flexiona pouco e segura a bola por menos tempo."
+      }
+    },
+    {
+      "id": "stiga-infinity-vps-v",
+      "nome": "Infinity VPS V",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 600,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Infinity de entrada",
+        "frase": "O Revspin tem 87 avaliações para uma \"Infinity VPS V Diamond Touch\" — a maior amostra de lâmina que encontrei —, mas essa é outra especificação. A loja vende a VPS V simples, e por isso a nota não foi atribuída."
+      }
+    },
+    {
+      "id": "stiga-energy-wood",
+      "nome": "Energy Wood",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 355,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais barata das lâminas Stiga",
+        "frase": "R$ 355 — a lâmina Stiga mais acessível do catálogo. O Revspin tem 17 avaliações para uma \"Energy WRB\", que é outra configuração da linha."
+      }
+    },
+    {
+      "id": "stiga-energy-wood-v2-wrb",
+      "nome": "Energy Wood V2 WRB",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 588,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Energy com peso no cabo",
+        "frase": "Cinco camadas com o sistema WRB. O Revspin registra uma \"Energy WRB V2\" com 6 avaliações; o nome não bate exatamente com o da loja, então a nota ficou de fora."
+      }
     }
   ]
 }

@@ -117,8 +117,14 @@ const FONTES = {
       if (slug.startsWith('madeira-')) return 'Lâmina';
       /* "raquete-stiga-*" é raquete montada, com borracha colada. */
       if (slug.startsWith('raquete-')) return null;
+      /* "helix" entrou depois: as oito Helix (Hybrid e Platinum, em H/M/XH/55)
+         caíram como lâmina na primeira passada e por isso ficaram FORA do lote
+         de borrachas. Dois sinais as delatam: custam R$ 399, o mesmo preço das
+         17 borrachas Stiga confirmadas, enquanto lâmina da marca nesta loja vai
+         de R$ 400 a mais de mil; e o sufixo H/M/XH/55 é o mesmo das linhas DNA
+         Hybrid e DNA Platinum, que são borracha. */
       const LINHAS_DE_BORRACHA =
-        /dna|calibra|mantra|genesis|boost|airoc|magna|symbol|almana|innova|royal|neos/;
+        /dna|helix|calibra|mantra|genesis|boost|airoc|magna|symbol|almana|innova|royal|neos/;
       return LINHAS_DE_BORRACHA.test(slug) ? 'Borracha' : 'Lâmina';
     },
   },

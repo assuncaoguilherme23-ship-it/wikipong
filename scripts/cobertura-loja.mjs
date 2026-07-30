@@ -65,6 +65,42 @@ const FONTES = {
       return null;
     },
   },
+  palio: {
+    loja: 'Loja do Mesatenista',
+    /*
+     * A PALIO QUASE NAO E' DISTRIBUIDA NO BRASIL, e isso foi conferido por
+     * ENUMERACAO, nao por busca — o erro da Xiom foi perguntar e acreditar na
+     * resposta filtrada. O que cada loja respondeu:
+     *
+     *   AmericaTT            categoria /marca/palio/ existe e responde 200, mas
+     *                        diz "Nenhum produto foi encontrado para a sua
+     *                        selecao". Loja sem Palio.
+     *   OperaTT              456 produtos no sitemap, ZERO Palio.
+     *   Tenis de Mesa Store  335 produtos no sitemap, ZERO Palio.
+     *   Tibhar Brasil        1.622 URLs no sitemap, ZERO Palio.
+     *   JJ Yamada            categoria de borracha inteira lida, ZERO Palio.
+     *   Loja do Mesatenista  537 produtos no sitemap, DOIS Palio.
+     *
+     * E os dois da unica loja que tem estao FORA DE ESTOQUE ("Este produto esta
+     * fora de estoque e indisponivel", marcado outofstock): a AK47 Blue e a
+     * CK531A OX — esta ultima de pinos longos, que o fundador adiou de qualquer
+     * forma. Por D-13, material sem preco real verificado nao entra no catalogo.
+     *
+     * A configuracao fica aqui de proposito: no dia em que a loja repuser a
+     * AK47 Blue, ela aparece como lacuna sozinha, sem ninguem precisar lembrar
+     * de checar. Enquanto isso o relatorio da zero — e o zero e' verdadeiro.
+     */
+    sitemap: 'https://www.lojadomesatenista.com.br/product-sitemap.xml',
+    /* Esta loja usa /produto/ no singular; a Tibhar usa /produtos/. Ver porSitemap(). */
+    caminho: 'produto',
+    url: () => 'https://www.lojadomesatenista.com.br/produto/palio-ak47-blue/',
+    tipo: (slug) => {
+      if (!/palio/.test(slug)) return null;
+      /* OX = sem esponja, pinos longos. Fora da colheita por decisao do fundador. */
+      if (/-ox\b|pino|anti/.test(slug)) return null;
+      return 'Borracha';
+    },
+  },
   yasaka: {
     loja: 'Tênis de Mesa Store',
     url: (p) => `https://www.tenisdemesastore.com.br/marca/yasaka.html?pagina=${p}`,
@@ -239,15 +275,20 @@ async function porSitemap(fonte) {
   if (!res.ok) return [];
   const xml = await res.text();
   const achados = new Map();
-  for (const m of xml.matchAll(/<loc>([^<]*\/produtos\/[^<]*)<\/loc>/g)) {
+  /* O segmento de URL do produto muda de loja: a Tibhar Brasil usa /produtos/ e a
+     Loja do Mesatenista usa /produto/, no singular. Deixar "produtos" fixo fazia a
+     segunda ler ZERO — e zero aqui e' perigoso, porque parece catalogo completo. */
+  const caminho = fonte.caminho ?? 'produtos';
+  const re = new RegExp(`<loc>([^<]*\\/${caminho}\\/[^<]*)<\\/loc>`, 'g');
+  for (const m of xml.matchAll(re)) {
     const url = m[1].trim();
     /* O sitemap lista cada produto DUAS vezes: a URL canônica e uma variante de
        idioma (/pt/produtos/...). A variante devolve a página sem o bloco de
        preço, e como as duas compartilham o slug, a segunda sobrescrevia a
        primeira e a loja inteira aparecia esgotada. Fica só a canônica. */
-    if (/\/(pt|es|en)\/produtos\//.test(url)) continue;
-    const slug = url.replace(/\/$/, '').split('/produtos/')[1];
-    /* O sitemap traz também a URL da própria seção /produtos/, sem slug. */
+    if (new RegExp(`\/(pt|es|en)\/${caminho}\/`).test(url)) continue;
+    const slug = url.replace(/\/$/, '').split(`/${caminho}/`)[1];
+    /* O sitemap traz também a URL da própria seção do caminho, sem slug. */
     if (!slug) continue;
     const tipo = fonte.tipo(slug);
     if (!tipo) continue;
@@ -387,7 +428,21 @@ const chave = (s) =>
     /* Dígito solto vem de "5 + 2 carbono" e da contagem de folhas. */
     .replace(/\b\d\b/g, ' ')
     .replace(/\b(para )?tenis de mesa\b/g, ' ')
+    /* "Borracha para RAQUETE DE Tenis de mesa, Modelo Dignics 05" — a JJ Yamada
+       cadastra assim, com "raquete de" no meio e "modelo" antes do nome. Ficou
+       escondido enquanto a Dignics 05 estava ESGOTADA: sem preco, ela caia no
+       balde dos esgotados e nunca era comparada. Quando a loja repos, o nome
+       sujo virou lacuna falsa de um produto que ja' estava no catalogo. Ponto
+       cego antigo, revelado por uma reposicao — nao por mudanca minha. */
+    .replace(/\braquete de\b/g, ' ')
+    .replace(/\bmodelo\b/g, ' ')
     .replace(/\bde\b/g, ' ')
+    /* E a palavra de categoria no COMECO. Nas outras lojas ela ja' sai junto com
+       o corte "tudo ate' a marca"; a JJ Yamada nao poe a marca no titulo, entao
+       ali o "Borracha" inicial sobrevive sozinho e basta ele para o nome nao
+       casar. Ancorado em ^ de proposito: "Borracha Dignics 05" e' categoria +
+       modelo, mas uma palavra dessas no MEIO do nome pode ser parte dele. */
+    .replace(/^(borracha|madeira|lamina|raquete)\s+/, '')
     .replace(/\s*-?\s*(hugo edition|edicao hugo|lancamento|novo|nova)\s*$/i, '')
     /* Sufixo aleatório de slug do Nuvemshop, quando dois produtos disputariam a
        mesma URL: "...-super-defense-40-soft-z2fpn". Letra+dígito misturados e no

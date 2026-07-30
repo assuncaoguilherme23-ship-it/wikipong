@@ -5594,6 +5594,181 @@
         "tag": "A mais barata da família",
         "frase": "R$ 226 — a lâmina Waldner mais acessível, pensada para o jogador jovem. Sem nenhuma avaliação registrada na comunidade."
       }
+    },
+    {
+      "id": "donic-persson-powerplay",
+      "nome": "Persson Powerplay",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 297,
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 8.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 31,
+      "simples": {
+        "tag": "Velocidade e controle empatados em 8,6",
+        "frase": "A Donic publica 88 de velocidade contra 72 de controle. A comunidade empata os dois em 8,6 — e um avaliador com 15 lâminas a chama da mais controlada que tem. Divergência a favor do jogador, registrada."
+      }
+    },
+    {
+      "id": "donic-persson-powerplay-senso-v1",
+      "nome": "Persson Powerplay Senso V1",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 315,
+      "specs": {
+        "velocidade": 8.3,
+        "controle": 8.1
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.25,
+      "reviews": 15,
+      "simples": {
+        "tag": "Ponto doce maior",
+        "frase": "A comunidade destaca o retorno de sensação e o ponto doce mais amplo que a Powerplay comum. Para quem quer ataque com margem de erro."
+      }
+    },
+    {
+      "id": "donic-persson-powerplay-senso-v2",
+      "nome": "Persson Powerplay Senso V2",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 315,
+      "specs": {
+        "velocidade": 7.7,
+        "controle": 7.9
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.3,
+      "reviews": 7,
+      "simples": {
+        "tag": "Dura, para topspin e smash",
+        "frase": "A comunidade a descreve como bem dura e rápida, boa tanto para quem gira quanto para quem bate. Os números são mais modestos que os da V1 — sete avaliações sustentando."
+      }
+    },
+    {
+      "id": "donic-persson-power-carbon-senso-v1",
+      "nome": "Persson Power Carbon Senso V1",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 507,
+      "specs": {
+        "velocidade": 9.2,
+        "controle": 7.9
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 15,
+      "simples": {
+        "tag": "Velocidade 9,2, controle 7,9",
+        "frase": "A maior distância entre os dois eixos da família. A comunidade dá o conselho junto: monte com borracha macia ou média-macia, senão o tempo de contato cai e o controle vai embora."
+      }
+    },
+    {
+      "id": "donic-persson-dotec-off",
+      "nome": "Persson Dotec OFF",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 588,
+      "specs": {
+        "velocidade": 8.5,
+        "controle": 8.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 12,
+      "simples": {
+        "tag": "Leve, entre 68 e 75 gramas",
+        "frase": "A Donic publica controle 7,0; a comunidade dá 8,6. Lâmina leve e ofensiva, com a ressalva de que a trajetória alta pede ajuste de técnica no contra-ataque."
+      }
+    },
+    {
+      "id": "donic-persson-power-ar",
+      "nome": "Persson Power AR",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 297,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A allround da família",
+        "frase": "O Revspin registra uma \"Persson Power Allround\" com 17 avaliações. A sigla AR quase certamente é isso, mas quase certamente não é confirmado — a nota ficou de fora."
+      }
+    },
+    {
+      "id": "donic-persson-power-ar-senso-v1",
+      "nome": "Persson Power AR Senso V1",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 435,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A allround com Senso",
+        "frase": "Quatro avaliações na comunidade, com nota 9,4 — abaixo do nosso piso de cinco por uma avaliação."
+      }
+    },
+    {
+      "id": "donic-persson-7",
+      "nome": "Persson 7",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 435,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras da linha Persson",
+        "frase": "O Revspin tem uma \"Persson Seven\" com 8 avaliações. É provavelmente a mesma lâmina escrita por extenso, mas provável não basta — mesma régua que aplicamos à Chila Off e à Celero."
+      }
+    },
+    {
+      "id": "donic-persson-jubilee-40-2",
+      "nome": "Persson Jubilee 40",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 646,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Edição comemorativa",
+        "frase": "Duas avaliações na comunidade. A lâmina mais cara da família Persson aqui."
+      }
+    },
+    {
+      "id": "donic-persson-youngstar",
+      "nome": "Persson Youngstar",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 226,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A de entrada da família",
+        "frase": "R$ 226, pensada para o jogador jovem. Sem nenhuma avaliação registrada na comunidade."
+      }
     }
   ]
 }

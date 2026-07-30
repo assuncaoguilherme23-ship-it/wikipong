@@ -1344,6 +1344,46 @@
       "escala": 10,
       "avaliacoes": 5,
       "consultadoEm": "2026-07-30"
+    },
+    "donic-persson-powerplay": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-persson-powerplay.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 31,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-persson-powerplay-senso-v1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-persson-powerplay-senso-v1.html",
+      "nota": 8.5,
+      "escala": 10,
+      "avaliacoes": 15,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-persson-powerplay-senso-v2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-persson-powerplay-senso-v2.html",
+      "nota": 8.6,
+      "escala": 10,
+      "avaliacoes": 7,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-persson-power-carbon-senso-v1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-persson-power-carbon-senso-v1.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 15,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-persson-dotec-off": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-persson-dotec-off.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 12,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

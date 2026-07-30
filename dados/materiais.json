@@ -4200,6 +4200,136 @@
         "tag": "A Energy com peso no cabo",
         "frase": "Cinco camadas com o sistema WRB. O Revspin registra uma \"Energy WRB V2\" com 6 avaliações; o nome não bate exatamente com o da loja, então a nota ficou de fora."
       }
+    },
+    {
+      "id": "stiga-inspira-ccf",
+      "nome": "Inspira CCF",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1645,
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 8.1
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 7,
+      "simples": {
+        "tag": "Velocidade 99 na régua da marca",
+        "frase": "A Stiga publica velocidade 99 e controle 45 nesta lâmina — o perfil mais desequilibrado que ela declara em todo o catálogo. A comunidade suaviza (8,8 e 8,1), mas confirma a leitura: potência com estabilidade, para quem já domina o gesto."
+      }
+    },
+    {
+      "id": "stiga-defensive-pro",
+      "nome": "Defensive Pro",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "controlar",
+      "preco": 629,
+      "specs": {
+        "velocidade": 6.4,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 5,
+      "simples": {
+        "tag": "Controle 9,3, velocidade 6,4",
+        "frase": "A maior distância entre controle e velocidade do catálogo, e a comunidade divide: um avaliador a chama de uma das piores que já usou e outro diz que o corte fica mais consistente com ela. Lâmina de defensor — exige preparo físico para jogar longe da mesa."
+      }
+    },
+    {
+      "id": "stiga-aura-hybrid-carbon",
+      "nome": "Aura Hybrid Carbon",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1058,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Híbrida de carbono da linha Aura",
+        "frase": "Lançamento recente: zero avaliações registradas na comunidade. Entra com construção, preço real e foto."
+      }
+    },
+    {
+      "id": "stiga-i1-hybrid-carbon",
+      "nome": "i1 Hybrid Carbon",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 999,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono híbrido abaixo de mil",
+        "frase": "Cinco camadas com fibra híbrida por R$ 999. Sem amostra na comunidade — nem o Revspin a lista ainda."
+      }
+    },
+    {
+      "id": "stiga-wavy",
+      "nome": "Wavy",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 822,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A construção ondulada",
+        "frase": "O Revspin registra uma \"Wavy Ultra Fiber Cybershape\" com uma avaliação — outra especificação e outra geometria de cabeça. A Wavy simples não tem amostra própria."
+      }
+    },
+    {
+      "id": "stiga-carbon-truls-edition",
+      "nome": "Carbon Truls Edition",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1528,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A edição do Truls Moregard",
+        "frase": "Assinatura do sueco Truls Moregard. O Revspin tem uma \"Cybershape Carbon CWT Truls Edition\" com uma avaliação — é outra lâmina da mesma assinatura, e por isso a nota não foi atribuída."
+      }
+    },
+    {
+      "id": "stiga-defensive-classic-ii",
+      "nome": "Defensive Classic II",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Defensiva de entrada",
+        "frase": "Cinco camadas em classe defensiva por R$ 529 — a mais acessível deste perfil no catálogo. Zero avaliações na comunidade."
+      }
+    },
+    {
+      "id": "stiga-defensive-pro-jp",
+      "nome": "Defensive Pro JP",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "controlar",
+      "preco": 588,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Defensive Pro em versão JP",
+        "frase": "A variante japonesa da Defensive Pro, mais barata que a original. Não consta do Revspin — entra pela ficha da loja."
+      }
     }
   ]
 }

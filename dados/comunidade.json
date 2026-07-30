@@ -960,6 +960,22 @@
       "escala": 10,
       "avaliacoes": 6,
       "consultadoEm": "2026-07-30"
+    },
+    "stiga-inspira-ccf": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-inspira-ccf.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 7,
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-defensive-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-defensive-pro.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

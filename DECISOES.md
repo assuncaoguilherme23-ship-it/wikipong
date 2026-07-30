@@ -227,8 +227,28 @@ com `status ∈ {pendente, aprovado, removido}`.
 opinião em dado — e uma Tenergy vale 5★ pro avançado e 2★ pro iniciante: sem contexto de nível,
 a média mente.
 
-**Status:** ativa (design pronto; formulário de escrever avaliação pendente — campos estruturados
-primeiro, texto por último).
+**Emenda (2026-07-30) · estilo de jogo, pedido do fundador:** a avaliação ganha um QUINTO
+campo obrigatório — **estilo de quem joga** (`atacante` | `allround` | `defensor`) — que vira
+a **tag exibida embaixo do nome** em cada comentário.
+
+Os três nomes NÃO são vocabulário novo: são os do guia `/aprender/estilos-de-jogo`, que o
+site já publica. A tag linka pra lá.
+
+O porquê é o mesmo do nível, no outro eixo: um defensor dando 2★ numa borracha de ataque não
+está reprovando a borracha, está dizendo que ela não é pra ele. Sem a tag isso vira ruído;
+com ela, vira informação. `INTENCAO_DO_ESTILO` liga o estilo de QUEM JOGA à intenção do
+MATERIAL que o catálogo já usa (`atacar`/`equilibrado`/`controlar`), sem campo novo em
+`materiais.json`.
+
+**Piso de amostra (novo):** a média só é publicada a partir de **3 avaliações**. Abaixo disso
+a tela mostra as avaliações uma a uma e diz por que não há média — mesma regra que a colheita
+já pratica com o sinal do Revspin.
+
+**Status:** ativa — **no ar em prévia**. `src/logica/avaliacoes.ts` (módulo puro: validação,
+agregados derivados, Wilson, recortes) + `repositorio-avaliacoes.ts` (adaptador tipado).
+Formulário e lista na ficha do material; feed e ranking em `/comunidade`. **A escrita ainda é
+LOCAL** (localStorage) e a tela diz isso antes de qualquer campo — falta o backend do D-17.
+22 asserções cobrem o módulo, incluindo a disputa que o Wilson existe pra resolver.
 
 ---
 
@@ -482,7 +502,19 @@ D-16 — nunca fingir engajamento nem avaliação). Três features, sequenciadas
 o backend); alimenta o corpus do D-10 (IA) como opinião rotulada; herda a ordem editorial
 do D-14 na ficha; respeita D-16 (só o que existe aparece na nav).
 
-**Status:** ativa — as três features no ar (profissionais, sinal da comunidade, notícias).
+**Emenda (2026-07-30) · a Comunidade vira lugar, e o fórum sai do "não entra":** o fundador
+pediu o espaço de comunidade. Duas mudanças nesta decisão:
+
+1. **`/comunidade` existe** como página, e não mais como pasta hipotética da nav. Traz feed de
+   avaliações recentes e ranking derivado (D-11), com recorte por estilo e por nível.
+   Profissionais e Notícias seguem como as outras faces da mesma camada.
+2. **Discussões por tópico saem do "não entra"**, a pedido do fundador. O texto acima dizia
+   que fórum ao vivo muda a stack e ficava de fora; a decisão agora é construí-lo pelo mesmo
+   caminho das avaliações — UI e lógica contra o adaptador, escrita local até o backend do
+   D-17 entrar. O que NÃO muda é a honestidade: enquanto for local, a tela diz que é local.
+
+**Status:** ativa — as três features originais no ar, mais o espaço da comunidade e as
+avaliações do D-11.
 Crescem por curadoria (prints do fundador p/ o que não é fetchável). Próximo salto de
 comunidade seria o D-11 (avaliações interativas), que exige backend (D-17).
 

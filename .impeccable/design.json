@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-13T02:45:00Z",
+  "generatedAt": "2026-07-30",
   "title": "Design System: WikiPong",
   "extensions": {
     "colorMeta": {
@@ -9,7 +9,16 @@
         "displayName": "Verde-mesa (acento)",
         "canonical": "#1FA06A",
         "darkValue": "#29B077",
-        "tonalRamp": ["#06281A", "#0B4A2F", "#116B44", "#178E5A", "#1FA06A", "#4FBC8C", "#8AD5B2", "#CDEEDD"]
+        "tonalRamp": [
+          "#06281A",
+          "#0B4A2F",
+          "#116B44",
+          "#178E5A",
+          "#1FA06A",
+          "#4FBC8C",
+          "#8AD5B2",
+          "#CDEEDD"
+        ]
       },
       "acento-escuro": {
         "role": "primary",
@@ -22,30 +31,101 @@
         "displayName": "A Mesa (superfície-assinatura, invariante entre temas)",
         "canonical": "#0F3F2C",
         "darkValue": "#0F3F2C",
-        "tonalRamp": ["#061B12", "#0A2D1F", "#0F3F2C", "#15563C", "#1C6E4D", "#2E8A64", "#5FAE8A", "#A7CBB5"]
+        "tonalRamp": [
+          "#061B12",
+          "#0A2D1F",
+          "#0F3F2C",
+          "#15563C",
+          "#1C6E4D",
+          "#2E8A64",
+          "#5FAE8A",
+          "#A7CBB5"
+        ]
       },
       "tinta": {
         "role": "neutral",
         "displayName": "Tinta",
         "canonical": "#283027",
         "darkValue": "#E7ECE5",
-        "tonalRamp": ["#12160F", "#283027", "#3A4438", "#49514A", "#6B746A", "#98A096", "#C4CBc2", "#E7ECE5"]
+        "tonalRamp": [
+          "#12160F",
+          "#283027",
+          "#3A4438",
+          "#49514A",
+          "#6B746A",
+          "#98A096",
+          "#C4CBc2",
+          "#E7ECE5"
+        ]
       },
-      "papel": { "role": "neutral", "displayName": "Papel (súmula)", "canonical": "#FAFAF9", "darkValue": "#101410" },
-      "superficie": { "role": "neutral", "displayName": "Superfície", "canonical": "#FFFFFF", "darkValue": "#161C16" },
-      "superficie-2": { "role": "neutral", "displayName": "Superfície-2", "canonical": "#EDF2E9", "darkValue": "#1D261D" },
-      "tinta-suave": { "role": "neutral", "displayName": "Tinta-suave", "canonical": "#49514A", "darkValue": "#A9B3A6" },
-      "linha": { "role": "neutral", "displayName": "Linha", "canonical": "#E4EADE", "darkValue": "#232D23" },
-      "linha-forte": { "role": "neutral", "displayName": "Linha-forte", "canonical": "#D3DBCB", "darkValue": "#33402F" },
-      "acento-suave": { "role": "primary", "displayName": "Acento-suave", "canonical": "#E6F4EC", "darkValue": "#17281E" }
+      "papel": {
+        "role": "neutral",
+        "displayName": "Papel (súmula)",
+        "canonical": "#FAFAF9",
+        "darkValue": "#101410"
+      },
+      "superficie": {
+        "role": "neutral",
+        "displayName": "Superfície",
+        "canonical": "#FFFFFF",
+        "darkValue": "#161C16"
+      },
+      "superficie-2": {
+        "role": "neutral",
+        "displayName": "Superfície-2",
+        "canonical": "#EDF2E9",
+        "darkValue": "#1D261D"
+      },
+      "tinta-suave": {
+        "role": "neutral",
+        "displayName": "Tinta-suave",
+        "canonical": "#49514A",
+        "darkValue": "#A9B3A6"
+      },
+      "linha": {
+        "role": "neutral",
+        "displayName": "Linha",
+        "canonical": "#E4EADE",
+        "darkValue": "#232D23"
+      },
+      "linha-forte": {
+        "role": "neutral",
+        "displayName": "Linha-forte",
+        "canonical": "#D3DBCB",
+        "darkValue": "#33402F"
+      },
+      "acento-suave": {
+        "role": "primary",
+        "displayName": "Acento-suave",
+        "canonical": "#E6F4EC",
+        "darkValue": "#17281E"
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Só o hero da home (Archivo 800)." },
-      "small": { "displayName": "Small", "purpose": "Descrições densas em cards e listas (0.9rem)." },
-      "caption": { "displayName": "Caption", "purpose": "Notas de rodapé, trilhas, microcopy (0.8rem)." },
-      "stat": { "displayName": "Stat", "purpose": "Números de destaque na faixa de estatísticas (mono 1.5rem, tnum)." },
-      "label": { "displayName": "Label mono", "purpose": "Voz de dados: rótulos funcionais em caixa-alta. Nunca kicker decorativo." },
-      "data": { "displayName": "Dados", "purpose": "Valores numéricos tabulares (tnum) em tabelas e cards." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Só o hero da home (Archivo 800)."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Descrições densas em cards e listas (0.9rem)."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Notas de rodapé, trilhas, microcopy (0.8rem)."
+      },
+      "stat": {
+        "displayName": "Stat",
+        "purpose": "Números de destaque na faixa de estatísticas (mono 1.5rem, tnum)."
+      },
+      "label": {
+        "displayName": "Label mono",
+        "purpose": "Voz de dados: rótulos funcionais em caixa-alta. Nunca kicker decorativo."
+      },
+      "data": {
+        "displayName": "Dados",
+        "purpose": "Valores numéricos tabulares (tnum) em tabelas e cards."
+      }
     },
     "shadows": [
       {
@@ -55,15 +135,70 @@
       }
     ],
     "motion": [
-      { "name": "ease-suave", "value": "cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "Entradas (hero, telas do quiz, radar draw-in)." },
-      { "name": "dur-estado", "value": "160ms", "purpose": "Hover/press/foco em controles." },
-      { "name": "dur-entrada", "value": "280ms–700ms", "purpose": "Entrada de tela (280) → draw-in do radar (700). Tudo morre sob prefers-reduced-motion." }
+      {
+        "name": "ease-suave",
+        "value": "cubic-bezier(0.2, 0.7, 0.2, 1)",
+        "purpose": "Entradas (hero, telas do quiz, radar draw-in)."
+      },
+      {
+        "name": "dur-estado",
+        "value": "160ms",
+        "purpose": "Hover/press/foco em controles."
+      },
+      {
+        "name": "dur-entrada",
+        "value": "280ms–700ms",
+        "purpose": "Entrada de tela (280) → draw-in do radar (700). Tudo morre sob prefers-reduced-motion."
+      }
     ],
     "breakpoints": [
-      { "name": "gloss-2col", "value": "800px" },
-      { "name": "catalogo-sidebar", "value": "900px" },
-      { "name": "hero-radar", "value": "920px" }
-    ]
+      {
+        "name": "gloss-2col",
+        "value": "800px"
+      },
+      {
+        "name": "catalogo-sidebar",
+        "value": "900px"
+      },
+      {
+        "name": "hero-radar",
+        "value": "920px"
+      }
+    ],
+    "tipografia": {
+      "nota": "Escala nomeada em 2026-07-30. Os sete degraus estaticos ja batiam com o DESIGN.md ao centesimo; os fluidos eram 22 clamp() quase iguais e viraram 5. Ver o bloco ESCALA TIPOGRAFICA em app/globals.css.",
+      "estaticos": {
+        "--texto-micro": "0.72rem (= label)",
+        "--texto-mini": "0.8rem (= caption)",
+        "--texto-menor": "0.9rem (= small)",
+        "--texto-base": "1rem (= body)",
+        "--texto-dado": "1.05rem (= data)",
+        "--texto-maior": "1.12rem (= title)",
+        "--texto-numero": "1.5rem (= stat)"
+      },
+      "fluidos": {
+        "--titulo-hero": "clamp(2.3rem, 6vw, 4.4rem) — DRIFT: DESIGN.md diz clamp(2.4rem, 6.5vw, 5rem)",
+        "--titulo-1": "clamp(2rem, 5.5vw, 3rem) — novo (pageTitle)",
+        "--titulo-2": "clamp(1.6rem, 4.2vw, 2.4rem) (= headline)",
+        "--titulo-3": "clamp(1.3rem, 3vw, 1.6rem) — novo (subhead)",
+        "--titulo-4": "clamp(1.2rem, 2.8vw, 1.4rem) — novo (cardTitle)",
+        "--lede": "clamp(1rem, 2.2vw, 1.15rem) — novo"
+      },
+      "alturas": {
+        "--altura-titulo": "1.08",
+        "--altura-dado": "1",
+        "--altura-apertada": "1.2",
+        "--altura-corpo": "1.6",
+        "--altura-leitura": "1.7"
+      }
+    },
+    "corErro": {
+      "nota": "Adicionada em 2026-07-30 com o primeiro formulario do site (avaliacoes, D-11). Valor POR TEMA porque o vermelho escuro reprova AA sobre papel escuro (3,2:1).",
+      "--cor-erro": {
+        "claro": "#b3261e (6,26:1 sobre papel)",
+        "escuro": "#e8837a (7,05:1 sobre papel)"
+      }
+    }
   },
   "components": [
     {
@@ -118,10 +253,26 @@
       "Componentes táteis e confiantes: feedback físico contido, sem teatro"
     ],
     "rules": [
-      { "name": "A Regra do Acento", "body": "Texto acentuado usa o alias --cor-texto-acento (claro → acento-escuro; escuro → acento). O acento claro direto é PROIBIDO em texto pequeno; permitido só em preenchimentos, bordas, anel de foco, wordmark e display ≥24px.", "section": "colors" },
-      { "name": "A Regra da Mesa", "body": "A cor da identidade carrega superfícies inteiras, não migalhas. Bandas mesa são invariantes entre temas. A linha central tracejada aparece 1-2 vezes por página — é assinatura, não padrão de fundo.", "section": "colors" },
-      { "name": "A Regra da Voz de Dados", "body": "O mono marca INFORMAÇÃO (progresso, contagem, trilha). Kicker mono decorativo acima de seção foi aposentado — se o rótulo não carrega dado, ele não existe.", "section": "typography" },
-      { "name": "A Regra do Plano", "body": "Sombras não criam hierarquia; tom cria. Se um elemento precisa subir, ele muda de camada tonal (ou vai para a mesa), não de blur. O header sticky é a exceção deliberada: sombra scroll-driven, porque ali a sombra É estado.", "section": "elevation" }
+      {
+        "name": "A Regra do Acento",
+        "body": "Texto acentuado usa o alias --cor-texto-acento (claro → acento-escuro; escuro → acento). O acento claro direto é PROIBIDO em texto pequeno; permitido só em preenchimentos, bordas, anel de foco, wordmark e display ≥24px.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Mesa",
+        "body": "A cor da identidade carrega superfícies inteiras, não migalhas. Bandas mesa são invariantes entre temas. A linha central tracejada aparece 1-2 vezes por página — é assinatura, não padrão de fundo.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra da Voz de Dados",
+        "body": "O mono marca INFORMAÇÃO (progresso, contagem, trilha). Kicker mono decorativo acima de seção foi aposentado — se o rótulo não carrega dado, ele não existe.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra do Plano",
+        "body": "Sombras não criam hierarquia; tom cria. Se um elemento precisa subir, ele muda de camada tonal (ou vai para a mesa), não de blur. O header sticky é a exceção deliberada: sombra scroll-driven, porque ali a sombra É estado.",
+        "section": "elevation"
+      }
     ],
     "dos": [
       "Do usar --cor-texto-acento para todo texto acentuado (A Regra do Acento).",

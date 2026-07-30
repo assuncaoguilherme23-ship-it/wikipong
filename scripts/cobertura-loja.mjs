@@ -97,6 +97,31 @@ const FONTES = {
       },
     ],
   },
+  stiga: {
+    loja: 'AmericaTT',
+    url: (p) => `https://americatt.net/marca/stiga/${p > 1 ? `page/${p}/` : ''}`,
+    marcaNoTitulo: true,
+    /**
+     * Esta loja é WooCommerce e o slug do produto NÃO segue prefixo fixo: há
+     * "borracha-stiga-dna-dragon-grip" e "madeira-stiga-clipper", mas também
+     * "stiga-calibra-lt" (borracha) e "stiga-carbonado-145" (lâmina) sem
+     * prefixo nenhum. Para os slugs nus a classificação é por NOME DE LINHA
+     * conhecida — heurística de exibição, para a contagem do relatório sair
+     * legível. O que importa (a lista de lacuna) não depende dela: o tipo real
+     * de cada material é decidido na colheita, lendo a página do produto.
+     */
+    tipo: (slug) => {
+      if (!/stiga/.test(slug)) return null;
+      if (/raqueteira|capa|bola|cola|rede|mesa-de-|kit/.test(slug)) return null;
+      if (slug.startsWith('borracha-')) return 'Borracha';
+      if (slug.startsWith('madeira-')) return 'Lâmina';
+      /* "raquete-stiga-*" é raquete montada, com borracha colada. */
+      if (slug.startsWith('raquete-')) return null;
+      const LINHAS_DE_BORRACHA =
+        /dna|calibra|mantra|genesis|boost|airoc|magna|symbol|almana|innova|royal|neos/;
+      return LINHAS_DE_BORRACHA.test(slug) ? 'Borracha' : 'Lâmina';
+    },
+  },
   butterfly: {
     loja: 'JJ Yamada',
     url: (p) => `https://loja.jjyamada.com.br/categoria/23241058.html?pagina=${p}`,
@@ -182,12 +207,15 @@ async function paginas(fonte, marca) {
     const res = await fetch(fonte.url(p), { headers: { 'user-agent': 'Mozilla/5.0 WikiPong' } });
     if (!res.ok) break;
     const html = await res.text();
-    const re = /<a[^>]+href="https?:\/\/[^"/]+\/([^"?#]+?)"[^>]*title="([^"]+)"/g;
+    /* O `title=` é opcional: as lojas Tray/Loja Integrada põem, a AmericaTT
+       (WooCommerce) não. Sem ele o nome sai do slug, como no sitemap — exigir
+       title fazia o leitor devolver ZERO produto numa loja com 48 por página. */
+    const re = /<a[^>]+href="https?:\/\/[^"/]+\/([^"?#]+?)"(?:[^>]*title="([^"]+)")?/g;
     let m;
     while ((m = re.exec(html)) !== null) {
       const tipo = fonte.tipo(m[1]);
       if (!tipo) continue;
-      const nome = decodeHtml(m[2]).trim();
+      const nome = m[2] ? decodeHtml(m[2]).trim() : m[1].replace(/\/$/, '').replace(/-/g, ' ');
       /* Cada card tem VÁRIOS links para o mesmo produto (foto, nome, "Ver
          detalhes"). Só o do nome serve; os genéricos sobrescreveriam o título
          real e o relatório viraria uma lista de "Ver detalhes do produto". */
@@ -240,8 +268,8 @@ const chave = (s) =>
        a OperaTT escreve "... DHS - DHS G555", com ela duas vezes. Trocar o
        primeiro corte pelo global deixava "borracha para" sobrando no nome e
        derrubava as cinco marcas de uma vez. */
-    .replace(/^.*?\b(xiom|butterfly|tibhar|yasaka|dhs)\b\s*/i, '')
-    .replace(/\b(xiom|butterfly|tibhar|yasaka|dhs)\b/gi, ' ')
+    .replace(/^.*?\b(xiom|butterfly|tibhar|yasaka|dhs|stiga)\b\s*/i, '')
+    .replace(/\b(xiom|butterfly|tibhar|yasaka|dhs|stiga)\b/gi, ' ')
     /* Cor e espessura são opções de compra, não materiais diferentes: a Tibhar
        publica uma página por cor ("... 2.1mm preta" e "... 2.1mm vermelha") da
        mesma borracha. Sem tirar isso, cada borracha contaria em dobro. */

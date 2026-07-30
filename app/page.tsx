@@ -213,21 +213,21 @@ export default function Home() {
                 01
               </span>
               <h3>Informação espalhada</h3>
-              <p>Spec em site gringo, opinião em fórum, review em inglês. Nada explicado em um lugar só.</p>
+              <p>A ficha está num site gringo, a opinião num fórum, o vídeo em inglês. Nada explicado num lugar só.</p>
             </li>
             <li className={`${styles.dor} revela`}>
               <span className={`mono ${styles.dorNumero}`} aria-hidden="true">
                 02
               </span>
-              <h3>Jargão que exclui</h3>
-              <p>Tensor, tacky, carbono externo… tudo assume que você já sabe o que ninguém te ensinou.</p>
+              <h3>Palavra que ninguém explica</h3>
+              <p>Tensor, tacky, carbono externo… todo mundo usa esses nomes como se você já soubesse. E ninguém te ensinou.</p>
             </li>
             <li className={`${styles.dor} revela`}>
               <span className={`mono ${styles.dorNumero}`} aria-hidden="true">
                 03
               </span>
-              <h3>Critério invisível</h3>
-              <p>Review patrocinado elogia tudo, indicação muda conforme o interesse. Falta um lugar que mostre o porquê.</p>
+              <h3>Ninguém mostra o porquê</h3>
+              <p>Vídeo patrocinado elogia tudo, e a indicação muda conforme o interesse de quem fala. Falta um lugar que mostre a razão da escolha.</p>
             </li>
           </ol>
         </section>
@@ -246,7 +246,7 @@ export default function Home() {
                   <Verificado /> Recomendação explicada, nunca imposta
                 </li>
                 <li>
-                  <Verificado /> Do básico ao avançado, sem jargão gratuito
+                  <Verificado /> Do básico ao avançado, sem palavra difícil à toa
                 </li>
                 <li>
                   <Verificado /> Dados organizados, não opinião solta

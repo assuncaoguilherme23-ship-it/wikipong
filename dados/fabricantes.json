@@ -4011,6 +4011,118 @@
         }
       ],
       "nota": "A régua é a ESN, padrão das esponjas europeias. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
+    },
+    "stiga-helix-hybrid-55": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-helix-hybrid-55/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "55° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa híbrida levemente aderente"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. O grau vem do PRÓPRIO NOME do modelo — a Stiga batiza a variante 55 pela dureza da esponja. Toda a linha Helix é lançamento recente e ainda não tem amostra na comunidade — o Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5. Entram com ficha, preço real e foto."
+    },
+    "stiga-helix-hybrid-h": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-helix-hybrid-h/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa híbrida levemente aderente"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. Toda a linha Helix é lançamento recente e ainda não tem amostra na comunidade — o Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5. Entram com ficha, preço real e foto."
+    },
+    "stiga-helix-hybrid-m": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-helix-hybrid-m/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa híbrida levemente aderente"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta variante e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha: a esponja é justamente o que separa uma M de uma XH. Toda a linha Helix é lançamento recente e ainda não tem amostra na comunidade — o Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5. Entram com ficha, preço real e foto."
+    },
+    "stiga-helix-hybrid-xh": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-helix-hybrid-xh/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa híbrida, esponja extra dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta variante e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha: a esponja é justamente o que separa uma M de uma XH. Toda a linha Helix é lançamento recente e ainda não tem amostra na comunidade — o Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5. Entram com ficha, preço real e foto."
+    },
+    "stiga-helix-platinum-55": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-helix-platinum-55/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "55° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. O grau vem do PRÓPRIO NOME do modelo — a Stiga batiza a variante 55 pela dureza da esponja. Toda a linha Helix é lançamento recente e ainda não tem amostra na comunidade — o Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5. Entram com ficha, preço real e foto."
+    },
+    "stiga-helix-platinum-h": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-helix-platinum-h/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta variante e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha: a esponja é justamente o que separa uma M de uma XH. Toda a linha Helix é lançamento recente e ainda não tem amostra na comunidade — o Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5. Entram com ficha, preço real e foto."
+    },
+    "stiga-helix-platinum-m": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-helix-platinum-m/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. Toda a linha Helix é lançamento recente e ainda não tem amostra na comunidade — o Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5. Entram com ficha, preço real e foto."
+    },
+    "stiga-helix-platinum-xh": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-helix-platinum-xh/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja extra dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta variante e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha: a esponja é justamente o que separa uma M de uma XH. Toda a linha Helix é lançamento recente e ainda não tem amostra na comunidade — o Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5. Entram com ficha, preço real e foto."
     }
   }
 }

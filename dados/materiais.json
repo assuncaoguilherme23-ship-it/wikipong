@@ -3525,6 +3525,126 @@
         "tag": "A mais macia deste lote",
         "frase": "Esponja 42°, a mais macia das 17 Stiga aqui: velocidade moderada e o som característico que dá nome à variante."
       }
+    },
+    {
+      "id": "stiga-helix-hybrid-55",
+      "nome": "Helix Hybrid 55",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Híbrida de esponja 55°",
+        "frase": "A Helix é a linha mais nova da Stiga. Esta é a híbrida de esponja dura, que junta capa de estilo chinês com esponja europeia."
+      }
+    },
+    {
+      "id": "stiga-helix-hybrid-h",
+      "nome": "Helix Hybrid H",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Híbrida dura",
+        "frase": "Esponja 50° na linha Helix híbrida: o degrau abaixo da 55, com um pouco mais de margem no toque."
+      }
+    },
+    {
+      "id": "stiga-helix-hybrid-m",
+      "nome": "Helix Hybrid M",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A híbrida média",
+        "frase": "O degrau intermediário da Helix Hybrid, entre a H e a XH."
+      }
+    },
+    {
+      "id": "stiga-helix-hybrid-xh",
+      "nome": "Helix Hybrid XH",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A híbrida extra dura",
+        "frase": "O topo de dureza da Helix Hybrid, para quem já está acostumado com material chinês."
+      }
+    },
+    {
+      "id": "stiga-helix-platinum-55",
+      "nome": "Helix Platinum 55",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Tensora de esponja 55°",
+        "frase": "A Platinum é a leitura tensionada da linha Helix, sem a capa aderente da Hybrid. Esta é a versão de esponja dura."
+      }
+    },
+    {
+      "id": "stiga-helix-platinum-h",
+      "nome": "Helix Platinum H",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A dura da Platinum",
+        "frase": "O degrau duro da Helix Platinum. Duas avaliações na comunidade — abaixo do nosso piso."
+      }
+    },
+    {
+      "id": "stiga-helix-platinum-m",
+      "nome": "Helix Platinum M",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 47,5°",
+        "frase": "A média da Helix Platinum, na mesma dureza da DNA Platinum M — que é a Stiga de melhor amostra de comunidade no catálogo."
+      }
+    },
+    {
+      "id": "stiga-helix-platinum-xh",
+      "nome": "Helix Platinum XH",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A extra dura da Platinum",
+        "frase": "O topo de dureza da Helix Platinum. Sem nenhuma avaliação registrada ainda."
+      }
     }
   ]
 }

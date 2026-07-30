@@ -299,7 +299,15 @@ const chave = (s) =>
        faz parte do nome do produto — esse fica. E "copia <token>" é cadastro
        duplicado da loja. */
     .replace(/\bcopia\s+\S+/g, ' ')
-    .replace(/\b(carbono|estoque|cabo|fl|com|e|do|da|profissional|ittf|pegajosa|pegajoso|tenis|mesa|para)\b/g, ' ')
+    .replace(
+      /\b(carbono|estoque|cabo|fl|com|e|do|da|profissional|ittf|pegajosa|pegajoso|tenis|mesa|para|envio|imediato)\b/g,
+      ' ',
+    )
+    /* A AmericaTT cadastrou UMA borracha com o nome traduzido: "DNA Dragão Poder
+       52.5" para a Dragon Power 52.5. É a mesma borracha, e o resto da linha está
+       em inglês na própria loja. */
+    .replace(/\bdragao\b/g, 'dragon')
+    .replace(/\bpoder\b/g, 'power')
     /* Dígito solto vem de "5 + 2 carbono" e da contagem de folhas. */
     .replace(/\b\d\b/g, ' ')
     .replace(/\b(para )?tenis de mesa\b/g, ' ')

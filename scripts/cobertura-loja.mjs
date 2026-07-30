@@ -36,10 +36,14 @@ const FONTES = {
     loja: 'Tibhar Brasil',
     /* Loja oficial da marca no Brasil. Enumerada pelo sitemap — ver porSitemap(). */
     sitemap: 'https://www.tibhar.com.br/sitemap.xml',
+    /* A loja omite o nome da família ("MX-P 50°" para o oficial "Evolution
+       MX-P 50°"). Só estas palavras podem faltar — ver casa(). */
+    familia: ['evolution', 'hybrid'],
     url: () => 'https://www.tibhar.com.br/borrachas/lisas/',
     tipo: (slug) => {
       /* A própria loja separa lisas de pinos; o slug carrega a distinção. */
-      if (/grass|pino-longo|pinos-longos|pino-curto|pinos-curtos|anti/.test(slug)) return null;
+      /* d-tecs cobre Grass, Verde, Speedy e Vari Spin D.Tecs — todas de pinos. */
+      if (/grass|d-tecs|pino-longo|pinos-longos|pino-curto|pinos-curtos|anti/.test(slug)) return null;
       if (slug.startsWith('borracha-')) return 'Borracha';
       if (/^(madeira|raquete)-/.test(slug) && !/montada|kit/.test(slug)) return 'Lâmina';
       return null;
@@ -171,13 +175,57 @@ const chave = (s) =>
     /* Cor e espessura são opções de compra, não materiais diferentes: a Tibhar
        publica uma página por cor ("... 2.1mm preta" e "... 2.1mm vermelha") da
        mesma borracha. Sem tirar isso, cada borracha contaria em dobro. */
-    .replace(/\b(preta|preto|vermelha|vermelho|rosa)\b/g, ' ')
+    .replace(/\b(preta|preto|vermelha|vermelho|rosa|roxa|roxo|azul|verde|violeta)\b/g, ' ')
     .replace(/\b\d+[.,]?\d*\s*mm\b/g, ' ')
+    /* "max" é espessura, não modelo: a loja vende "HYBRID K3 Max" e o catálogo
+       registra "Hybrid K3". E o "de" que sobra vem do slug ("...-de-mesa-de"),
+       depois de tirar o "para tênis de mesa". */
+    .replace(/\bmax\b/g, ' ')
+    /* "classineta" é formato de cabeça e "cópia" é artefato de cadastro da loja:
+       a mesma lâmina aparece como clássica, classineta e cópia. O formato se
+       escolhe na compra, como o cabo — é um material só. */
+    .replace(/\b(classineta|classica|copia|com cabo fl|cabo fl|cabo concavo)\b/g, ' ')
+    .replace(/\b(com )?(\d+) folhas\b/g, ' ')
+    .replace(/\braquete\b/g, ' ')
     .replace(/\b(para )?tenis de mesa\b/g, ' ')
+    .replace(/\bde\b/g, ' ')
     .replace(/\s*-?\s*(hugo edition|edicao hugo|lancamento|novo|nova)\s*$/i, '')
-    .replace(/\s+/g, '');
+    /* Sufixo aleatório de slug do Nuvemshop, quando dois produtos disputariam a
+       mesma URL: "...-super-defense-40-soft-z2fpn". Letra+dígito misturados e no
+       fim — não é modelo, é desempate de endereço. */
+    .replace(/\s+(?=[a-z0-9]{4,6}$)(?=[a-z0-9]*\d)(?=[a-z0-9]*[a-z])[a-z0-9]+$/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
 
-const casa = (nomeLoja, nomeCatalogo) => chave(nomeLoja) === chave(nomeCatalogo);
+/** Palavras da chave, como conjunto — a ordem entre elas não importa. */
+const palavras = (s) => new Set(chave(s).split(' ').filter(Boolean));
+
+/**
+ * Duas coisas quebram a comparação literal, e as duas aparecem na Tibhar:
+ *
+ *  · ORDEM. A loja escreve "MK FX Hybrid" e o catálogo "Hybrid MK FX". Mesmo
+ *    produto, mesma palavras, ordem trocada. Por isso comparamos CONJUNTOS.
+ *  · PALAVRA DE FAMÍLIA OMITIDA. A loja vende "MX-P 50°" e o produto oficial é
+ *    "Evolution MX-P 50°". Aceitar qualquer subconjunto resolveria — e criaria
+ *    um erro pior: "Vega Pro" viraria "Vega Pro Hybrid" na Xiom, que é OUTRA
+ *    borracha. Então a folga é declarada POR LOJA: só as palavras que aquela
+ *    marca usa como nome de família podem faltar. Onde nada é declarado, a
+ *    comparação continua exata.
+ */
+function casa(nomeLoja, nomeCatalogo, familia = []) {
+  /* Colada primeiro: a Xiom escreve "C 52.5" na loja e "C52.5" no catálogo, e
+     por token isso vira {c,52} contra {c52} — mesma borracha, conjuntos
+     diferentes. Grudar as palavras faz as duas grafias coincidirem. */
+  if (chave(nomeLoja).replace(/\s+/g, '') === chave(nomeCatalogo).replace(/\s+/g, '')) return true;
+  const a = palavras(nomeLoja);
+  const b = palavras(nomeCatalogo);
+  if (a.size === b.size && [...a].every((t) => b.has(t))) return true;
+  if (familia.length === 0) return false;
+  const [menor, maior] = a.size <= b.size ? [a, b] : [b, a];
+  if (![...menor].every((t) => maior.has(t))) return false;
+  const sobra = [...maior].filter((t) => !menor.has(t));
+  return sobra.length > 0 && sobra.every((t) => familia.includes(t));
+}
 
 /**
  * A página do produto publica preço, ou só um "avise-me"?
@@ -230,7 +278,7 @@ async function conferir(marca) {
     (m) => normalizar(m.marca) === marca,
   );
 
-  const faltando = daLoja.filter((p) => !catalogo.some((m) => casa(p.nome, m.nome)));
+  const faltando = daLoja.filter((p) => !catalogo.some((m) => casa(p.nome, m.nome, fonte.familia)));
   const candidatos = faltando.filter((p) => !ADIADOS.test(p.nome));
   const adiados = faltando.filter((p) => ADIADOS.test(p.nome));
 

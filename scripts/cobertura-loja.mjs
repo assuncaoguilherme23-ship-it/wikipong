@@ -121,7 +121,15 @@ const FONTES = {
        linhas de BORRACHA da Donic e' outra — ver comentario em stiga.tipo(). */
     tipo: (slug) => {
       if (!/donic/.test(slug)) return null;
-      if (/raqueteira|capa|bola|cola|rede|mesa-de-|kit|^pino-|-pino-/.test(slug)) return null;
+      /* Acessorios que o filtro generico nao pegava e que apareciam contados
+         como lamina: bolsa de calcados, fita protetora, meia, side tape e
+         limpador. Nao sao material de jogo. */
+      if (
+        /raqueteira|capa|bola|cola|rede|mesa-de-|kit|^pino-|-pino-|bolsa|fita|meia|side-tape|limpador|calcado/.test(
+          slug,
+        )
+      )
+        return null;
       /* PINOS da Donic, conferidos no indice /pips/ do Revspin — que separa por
          URL: /rubber/ para lisa, /pips/ para pinos. Eu tinha desconfiado de
          Desto, Vario e Baracuda; nenhuma das tres esta la'. Sao lisas. Das que

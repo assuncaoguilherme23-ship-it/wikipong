@@ -4,7 +4,7 @@
  * Modelo honesto (D-19 f3): NÃO republicamos artigo de terceiros. Cada item é um
  * resumo curto na voz da WikiPong + crédito à fonte + link pro original + data
  * real (D-14/D-16). A lista É o produto e leva pra fonte. Instagram e afins, que
- * não conseguimos ler automaticamente, entram por curadoria do fundador.
+ * não conseguimos ler automaticamente, entram escolhidas uma a uma do fundador.
  */
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -73,7 +73,7 @@ export default function PaginaNoticias() {
           </p>
           <p>
             A base inicial vem da <strong>CBTM</strong> (Confederação Brasileira de Tênis de Mesa).
-            Notícias de perfis do tênis de mesa brasileiro (inclusive do Instagram) entram por curadoria, sempre com crédito, link e a <strong>data real</strong> da publicação. Se
+            Notícias de perfis do tênis de mesa brasileiro (inclusive do Instagram) entram escolhidas uma a uma, sempre com crédito, link e a <strong>data real</strong> da publicação. Se
             uma nota está velha, ela aparece velha.
           </p>
           <p className={estilos.notaLinks}>

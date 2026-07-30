@@ -193,8 +193,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             {m.origemSpecs === 'comunidade' && sinal ? (
               <p className={estilos.subtituloFicha}>
                 Escala 0 a 10 <strong>nossa</strong>, para permitir comparar marcas diferentes. Estes
-                números são a <strong>média de {sinal.avaliacoes} avaliações</strong> da comunidade do {sinal.fonte}, não uma estimativa nossa nem o índice de marketing do
-                fabricante (que está logo abaixo, com a fonte).
+                números são a <strong>média de {sinal.avaliacoes} avaliações</strong> da comunidade do {sinal.fonte}, não chute nosso nem o número que a marca usa pra vender (que está logo abaixo, com a fonte).
               </p>
             ) : (
               <p className={estilos.subtituloFicha}>
@@ -244,8 +243,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             </table>
             <p className={estilos.nota}>
               <span className={estilos.selo}>A validar</span> &nbsp;* Toda esta tabela é{' '}
-              <strong>estimativa do WikiPong</strong> numa base comum, com fórmula aberta e
-              pendente de validação do especialista (D-07/D-09). O dado oficial de cada
+              <strong>estimativa do WikiPong</strong> numa base comum, com a fórmula à vista, ainda esperando um especialista conferir (D-07/D-09). O dado oficial de cada
               fabricante, com fonte, está na seção abaixo.
             </p>
           </div>
@@ -334,7 +332,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
               </>
             ) : (
               <p className={estilos.fabricantePendente}>
-                Ainda não confirmamos as specs oficiais deste material numa fonte confiável, e preferimos deixar em branco a publicar número que não podemos garantir. Consulte
+                Ainda não confirmamos os números oficiais deste material numa fonte confiável, e preferimos deixar em branco a publicar número que não podemos garantir. Consulte
                 a fonte do fabricante abaixo.
               </p>
             )}
@@ -351,8 +349,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                   ))}
                 </ul>
                 <p className={estilos.indicesAviso}>
-                  Escala interna da marca, <strong>não comparável</strong> com a de outro
-                  fabricante. É por isso que a ficha unificada acima existe.
+                  Régua interna da marca. <strong>Não dá pra comparar</strong> com a de outra. É por isso que a ficha unificada acima existe.
                 </p>
               </div>
             )}
@@ -536,7 +533,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             <p className={estilos.semOferta}>
               Ainda não conferimos preço deste material em nenhuma loja. Quando conferirmos, cada
               preço aparecerá aqui com a loja e a <strong>data real</strong> da checagem, ordenado pelo preço, não por quem paga. Até lá, o valor no topo desta página é uma{' '}
-              <strong>estimativa</strong>, não um preço apurado.
+              <strong>estimativa</strong>, não um preço conferido.
             </p>
           )}
 
@@ -587,7 +584,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                   <span className={estilos.notaEscala}>/ {sinal.escala}</span>
                 </p>
                 <p className={estilos.notaMeta}>
-                  nota agregada de <strong>{sinal.avaliacoes.toLocaleString('pt-BR')}</strong>{' '}
+                  nota média de <strong>{sinal.avaliacoes.toLocaleString('pt-BR')}</strong>{' '}
                   avaliações no {sinal.fonte}
                 </p>
               </div>
@@ -599,15 +596,14 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                 · consultado em {dataLegivel(sinal.consultadoEm)}
               </p>
               <p className={estilos.comunidadeVazia}>
-                Isto é a opinião <strong>agregada de uma comunidade externa</strong>, não uma avaliação da WikiPong. As nossas, estruturadas (nível do jogador, tempo de uso) e
-                moderadas, entram depois e ficam <em>separadas da ficha técnica, que é
+                Isto é a opinião <strong>somada de gente de fora</strong>, não uma avaliação da WikiPong. As nossas, com campos fixos (nível do jogador, tempo de uso) e com moderação, entram depois e ficam <em>separadas da ficha técnica, que é
                 independente</em>.
               </p>
             </>
           ) : (
             <p className={estilos.comunidadeVazia}>
               Ainda não reunimos avaliações da comunidade para este material. Quando as nossas
-              abrirem, serão estruturadas (nível do jogador, tempo de uso e nota) e ficarão sempre nesta seção, <em>separada da ficha técnica, que é independente</em>.
+              abrirem, vão ter campos fixos (nível do jogador, tempo de uso e nota) e ficarão sempre nesta seção, <em>separada da ficha técnica, que é independente</em>.
             </p>
           )}
         </section>

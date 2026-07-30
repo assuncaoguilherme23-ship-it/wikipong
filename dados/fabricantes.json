@@ -52,7 +52,7 @@
           "valor": "Lisa, alta tensão (Spring Sponge)"
         }
       ],
-      "nota": "Os índices de velocidade/efeito desta ficha não foram embutidos: a leitura automática da página devolveu um valor inconsistente. Consulte a fonte oficial para os números vigentes."
+      "nota": "Os índices de velocidade/efeito desta ficha não foram embutidos: a leitura automática que fiz da página devolveu um valor que não bate. Consulte a fonte oficial para os números vigentes."
     },
     "dignics05": {
       "confianca": "oficial",
@@ -430,7 +430,7 @@
           "valor": "3 estrelas · aprovada pela ITTF"
         }
       ],
-      "nota": "Bola não tem índice de velocidade, efeito ou controle: o que se mede é conformidade (redondeza, quique, excentricidade, dureza e cor) ao padrão ITTF. Os valores 0 a 10 da ficha unificada não têm significado para este item."
+      "nota": "Bola não tem índice de velocidade, efeito ou controle: o que se mede é se ela está no padrão ITTF: se é redonda, se quica igual, se não sai torta, e a dureza e a cor. Os valores 0 a 10 da ficha unificada não têm significado para este item."
     },
     "tenergy05-hard": {
       "confianca": "oficial",

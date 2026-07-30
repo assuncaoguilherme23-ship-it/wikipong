@@ -44,7 +44,7 @@ export const GUIAS: Guia[] = [
         <p>
           Sob a borracha há uma camada de <Link href="/glossario/">esponja</Link>. Quanto mais
           dura, mais rápida e mais exigente com a técnica; quanto mais macia, mais controle e
-          mais tolerância ao erro. Muitas borrachas modernas usam{' '}
+          mais margem pro erro. Muitas borrachas modernas usam{' '}
           <Link href="/glossario/">tensão</Link> para ganhar efeito. São ótimas, desde que a esponja não seja dura demais para o seu momento.{' '}
           <Link href="/aprender/dureza-da-esponja/">
             Veja a régua de dureza, com material de verdade, e a pegadinha das escalas →
@@ -53,7 +53,7 @@ export const GUIAS: Guia[] = [
         <h2>Comece pelo controle</h2>
         <p>
           O erro clássico é comprar a borracha dos profissionais. Uma borracha rápida demais faz
-          a bola sair da mesa antes de você ter técnica para segurá-la. Priorize{' '}
+          a bola sair da mesa antes de você ter técnica para segurá-la. Procure{' '}
           <strong>controle alto e velocidade contida</strong>. É exatamente o que o perfil
           &ldquo;Base sólida primeiro&rdquo; recomenda. Você troca por algo mais rápido quando o
           braço pedir, não antes.
@@ -75,7 +75,7 @@ export const GUIAS: Guia[] = [
         <p>
           Sob a superfície de qualquer borracha lisa existe uma camada de{' '}
           <Link href="/glossario/">esponja</Link>. A dureza dela, medida em graus, é
-          provavelmente a spec que <strong>mais muda a sensação</strong> do seu jogo. Também é a
+          provavelmente o número que <strong>mais muda a sensação</strong> do seu jogo. Também é a
           que mais confunde, porque o número sozinho não diz nada se você não souber a escala.
         </p>
 
@@ -136,8 +136,8 @@ export const GUIAS: Guia[] = [
         </p>
         <p>
           Conclusão prática: <strong>nunca compare graus sem antes conferir a escala</strong>. Foi
-          para resolver exatamente esse problema que a ficha unificada do WikiPong existe. A tabela de conversão entre
-          escalas ainda aguarda a validação do especialista.
+          para resolver exatamente esse problema que a ficha unificada do WikiPong existe. A tabela que converte uma escala na outra
+          ainda espera um especialista conferir.
         </p>
 
         <h2>O que escolher agora</h2>
@@ -323,7 +323,7 @@ export const GUIAS: Guia[] = [
         <p>
           Trabalha devolvendo e aproveitando a velocidade da bola do adversário (o{' '}
           <Link href="/glossario/">bloqueio</Link> é a jogada-chave). Valoriza controle e
-          constância acima de tudo.
+          regularidade acima de tudo.
         </p>
         <h2>All-round</h2>
         <p>
@@ -332,7 +332,7 @@ export const GUIAS: Guia[] = [
         </p>
         <h2>E o iniciante?</h2>
         <p>
-          No começo, todo mundo é all-round. A prioridade é constância, não potência. O seu estilo
+          No começo, todo mundo é all-round. A prioridade é acertar sempre, não bater forte. O seu estilo
           vai se revelando com o tempo de mesa, e o equipamento acompanha essa descoberta, não o
           contrário.
         </p>
@@ -372,7 +372,7 @@ export const GUIAS: Guia[] = [
           As regras exigem que os dois lados tenham cores nitidamente diferentes, classicamente
           um vermelho e um preto (as{' '}
           <Link href="/aprender/regras-ittf/">regras da ITTF</Link> hoje admitem outras cores de
-          um dos lados; confira a norma vigente).
+          um dos lados; confira a regra que está valendo).
         </p>
         <h2>Comece por uma montagem simples</h2>
         <p>
@@ -406,8 +406,8 @@ export const GUIAS: Guia[] = [
         </p>
         <h2>A raquete</h2>
         <p>
-          Os dois lados precisam ter cores claramente diferentes, e as borrachas devem ser
-          homologadas (a ITTF publica a lista oficial dos modelos aprovados para competição).
+          Os dois lados precisam ter cores claramente diferentes, e as borrachas precisam ser
+          aprovadas pela ITTF (que publica a lista oficial dos modelos aprovados para competição).
         </p>
         <h2>Pontuação, em uma frase</h2>
         <p>
@@ -416,7 +416,7 @@ export const GUIAS: Guia[] = [
         </p>
         <p className="nota-guia">
           As regras oficiais evoluem e têm detalhes (saque, homologações, competição) além deste
-          resumo. Para valer em torneio, confira sempre a norma vigente da ITTF ou da sua
+          resumo. Para valer em torneio, confira sempre a regra que está valendo na ITTF ou na sua
           federação.
         </p>
         <p className="prox">

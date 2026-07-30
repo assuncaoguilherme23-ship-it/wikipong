@@ -373,7 +373,7 @@ export function CatalogoCliente() {
             )}
 
             <p className={estilos.notaDerivada}>
-              * Perdão é métrica derivada com fórmula aberta (proposta v1, pendente de validação do especialista; D-09).
+              * O Perdão é uma conta nossa, feita a partir dos outros números, e a fórmula fica à vista (versão 1, ainda esperando um especialista conferir; D-09).
             </p>
           </section>
         </div>

@@ -146,8 +146,7 @@ export default function PaginaProfissionais() {
             </li>
             <li>
               <strong>Não é a peça da loja.</strong> Quase todo profissional usa uma versão
-              “National”, feita sob medida, que não é vendida ao público. Quando a peça vira link, é
-              o equivalente de varejo mais próximo, não a peça exata dele.
+              “National”, feita sob medida, que não é vendida ao público. Quando a peça vira link, é o modelo de loja mais parecido, não a peça exata dele.
             </li>
             <li>
               <strong>Copiar não vira técnica.</strong> A borracha do Ma Long nas mãos de quem está

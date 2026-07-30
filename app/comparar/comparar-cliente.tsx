@@ -96,7 +96,7 @@ export function ComparadorCliente() {
         {semPerfil.length > 0 && (
           <p className={estilos.aviso} role="alert">
             <strong>{semPerfil.map((m) => m.nome).join(' e ')}</strong> não{' '}
-            {semPerfil.length > 1 ? 'têm' : 'tem'} ficha de desempenho: não há velocidade, efeito nem controle pra confrontar.
+            {semPerfil.length > 1 ? 'têm' : 'tem'} ficha de desempenho: não há velocidade, efeito nem controle pra comparar.
           </p>
         )}
 
@@ -131,7 +131,7 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
     <section aria-label="Escolher materiais">
       <p className={estilos.instrucao}>
         Escolha <b>dois materiais do mesmo tipo</b>. A comparação abre com radar sobreposto
-        e tabela de métricas ({escolhidos.length}/2 selecionados).
+        e tabela de números ({escolhidos.length}/2 selecionados).
         {tipoTravado && <> Mostrando só {tipoTravado.toLowerCase()}s.</>}
       </p>
       <ul className={estilos.listaEscolha}>
@@ -268,8 +268,7 @@ function Comparacao({ par, modo }: { par: [MaterialComparavel, MaterialComparave
       </div>
 
       <p className={estilos.nota}>
-        * Perdão é métrica derivada com fórmula aberta (proposta v1, pendente de validação do especialista; D-09). Destaque de “maior” é <strong>fato, não veredito</strong>: maior ≠
-        melhor, depende do seu jogo.
+        * O Perdão é uma conta nossa, feita a partir dos outros números, e a fórmula fica à vista (versão 1, ainda esperando um especialista conferir; D-09). Destaque de “maior” é <strong>só um fato, não uma nota</strong>: maior não quer dizer melhor, depende do seu jogo.
       </p>
 
       <button type="button" className={`botao-secundario ${estilos.trocar}`} onClick={trocar}>

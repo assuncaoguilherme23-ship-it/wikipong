@@ -35,7 +35,7 @@ export async function generateMetadata({
   return {
     title: `${m.nome}: materiais, preços e fichas técnicas`,
     description:
-      `Todos os materiais ${m.nome} do catálogo do WikiPong: ficha padronizada, preço real conferido ` +
+      `Todos os materiais ${m.nome} do catálogo do WikiPong: ficha no mesmo formato, preço real conferido ` +
       `e tradução em português claro. ${m.editorial?.descricao ?? ''}`.trim(),
   };
 }

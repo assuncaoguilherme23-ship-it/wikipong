@@ -37,6 +37,28 @@ npm run build   # export estático em out/
 npm test        # testes da lógica pura
 ```
 
+## Ligar a comunidade (Supabase)
+
+As avaliações, os tópicos e o perfil funcionam **hoje**, gravando no `localStorage`
+do navegador — e as telas dizem isso antes de qualquer campo. Para virar público:
+
+1. criar um projeto no [Supabase](https://supabase.com);
+2. rodar [`supabase/001-comunidade.sql`](supabase/001-comunidade.sql) no SQL Editor
+   (tabelas, índices, RLS e a view da fila de moderação);
+3. pôr as duas chaves num `.env.local`:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=ey...
+```
+
+Mais nada muda no código: `repositorio()` escolhe sozinho, e a UI passa a dizer que
+é público porque lê a flag `somenteLocal` em vez de ter a frase escrita na mão.
+
+> A chave anônima **vai no bundle** — o site é estático. Por isso a segurança mora
+> nas políticas de RLS do arquivo SQL, não no cliente: leitura pública só do que
+> está `aprovado`, escrita só logado e sempre entrando como `pendente`.
+
 ## Documentos do projeto
 
 | Arquivo | Papel |

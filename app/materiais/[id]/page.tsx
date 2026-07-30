@@ -46,6 +46,7 @@ import {
 import { profissionaisQueUsam } from '@/componentes/dados-profissionais';
 import { sinalDaComunidade, ehFavoritoDaComunidade } from '@/componentes/dados-comunidade';
 import { AvaliacoesMaterial } from '@/componentes/AvaliacoesMaterial';
+import { DiscussoesDoMaterial } from '@/componentes/DiscussoesDoMaterial';
 import { imagemDoMaterial } from '@/componentes/dados-imagens';
 import {
   escalaDoTexto,
@@ -616,6 +617,10 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
           {/* 3b. As nossas (D-11): estruturadas, com o contexto de quem escreveu. */}
           <h3 className={estilos.subComunidade}>Avaliações aqui do WikiPong</h3>
           <AvaliacoesMaterial materialId={m.id} nomeMaterial={m.nome} />
+
+          {/* Fecha o laco topico->material: quem amarrou a discussao a esta ficha
+              ve a conversa aqui. Some por inteiro quando nao ha' topico. */}
+          <DiscussoesDoMaterial materialId={m.id} />
         </section>
       </main>
 

@@ -76,17 +76,115 @@ export function repositorioLocal(): RepositorioAvaliacoes {
   };
 }
 
+// ───────────────────────── Supabase ─────────────────────────
+
 /**
- * O ponto único de troca. Quando o projeto do Supabase existir, isto vira:
+ * Implementação contra a API REST do Supabase (PostgREST).
  *
- *   return process.env.NEXT_PUBLIC_SUPABASE_URL
- *     ? repositorioSupabase()
- *     : repositorioLocal();
+ * `fetch` puro, SEM o SDK: o site é export estático e não precisa de mais um
+ * pacote no bundle pra fazer quatro requisições. Se um dia precisar de realtime
+ * ou de storage, o SDK entra — e só este arquivo muda.
  *
- * e mais nada no site precisa mudar. O schema do D-11 já está espelhado no tipo
- * `Avaliacao`, campo a campo, justamente pra que a migração seja um CREATE TABLE.
+ * O schema está em supabase/001-comunidade.sql. As colunas são snake_case
+ * (convenção do Postgres) e os campos daqui são camelCase: a tradução é feita
+ * nas duas funções de mapeamento abaixo, e em nenhum outro lugar.
+ *
+ * A moderação NÃO é decidida aqui. O banco grava tudo como 'pendente' por
+ * DEFAULT e a política de RLS só devolve o que está 'aprovado' — se este código
+ * tentasse mandar status, o banco recusaria. Segurança de site estático mora no
+ * servidor, porque a chave anônima vai no bundle, à vista de qualquer um.
  */
-export const repositorio = (): RepositorioAvaliacoes => repositorioLocal();
+export function repositorioSupabase(url: string, chave: string): RepositorioAvaliacoes {
+  const base = `${url.replace(/\/$/, '')}/rest/v1/avaliacoes`;
+  const cabecalhos = {
+    apikey: chave,
+    Authorization: `Bearer ${chave}`,
+    'Content-Type': 'application/json',
+  };
+
+  type Linha = {
+    id: string; material_id: string; usuario_id: string | null; autor: string;
+    nota: number; texto: string; nivel: string; tempo_de_uso: string;
+    estilo: string; criado_em: string; status: string;
+  };
+
+  const daLinha = (l: Linha): Avaliacao => ({
+    id: l.id,
+    materialId: l.material_id,
+    usuarioId: l.usuario_id ?? undefined,
+    autor: l.autor,
+    nota: l.nota,
+    texto: l.texto,
+    nivel: l.nivel as Avaliacao['nivel'],
+    tempoDeUso: l.tempo_de_uso as Avaliacao['tempoDeUso'],
+    estilo: l.estilo as Avaliacao['estilo'],
+    criadoEm: l.criado_em,
+    status: l.status as Avaliacao['status'],
+  });
+
+  const paraLinha = (a: Avaliacao) => ({
+    material_id: a.materialId,
+    autor: a.autor,
+    nota: a.nota,
+    texto: a.texto,
+    nivel: a.nivel,
+    tempo_de_uso: a.tempoDeUso,
+    estilo: a.estilo,
+    /* `status` e `usuario_id` ficam de fora de propósito: quem decide os dois é
+       o banco (DEFAULT 'pendente' e auth.uid()). Mandar daqui seria pedir pra
+       ser recusado pela política — e, se não fosse, seria o furo. */
+  });
+
+  const buscar = async (consulta: string): Promise<Avaliacao[]> => {
+    const res = await fetch(`${base}?${consulta}`, { headers: cabecalhos });
+    if (!res.ok) throw new Error(`Supabase respondeu ${res.status}`);
+    return ((await res.json()) as Linha[]).map(daLinha);
+  };
+
+  return {
+    rotulo: 'WikiPong',
+    somenteLocal: false,
+    listar: () => buscar('select=*&order=criado_em.desc&limit=200'),
+    doMaterial: (materialId) =>
+      buscar(`select=*&material_id=eq.${encodeURIComponent(materialId)}&order=criado_em.desc`),
+    async gravar(nova) {
+      const res = await fetch(base, {
+        method: 'POST',
+        headers: { ...cabecalhos, Prefer: 'return=minimal' },
+        body: JSON.stringify(paraLinha(nova)),
+      });
+      if (!res.ok) throw new Error(`Supabase recusou a gravação (${res.status})`);
+    },
+    async remover(id) {
+      /* Não apaga: marca como removido. Apagar de verdade tira do moderador a
+         chance de olhar o que foi denunciado, e some com o histórico. */
+      const res = await fetch(`${base}?id=eq.${encodeURIComponent(id)}`, {
+        method: 'PATCH',
+        headers: { ...cabecalhos, Prefer: 'return=minimal' },
+        body: JSON.stringify({ status: 'removido' }),
+      });
+      if (!res.ok) throw new Error(`Supabase recusou a remoção (${res.status})`);
+    },
+  };
+}
+
+/**
+ * O ponto único de troca. Nada mais no site sabe qual das duas está em uso.
+ *
+ * Pra ligar o backend: criar o projeto no Supabase, rodar
+ * supabase/001-comunidade.sql, e pôr as duas variáveis num .env.local:
+ *
+ *   NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
+ *   NEXT_PUBLIC_SUPABASE_ANON_KEY=ey...
+ *
+ * Sem elas, cai no local — e a UI passa a dizer que é local sozinha, porque lê
+ * `somenteLocal` em vez de ter a frase escrita na mão.
+ */
+export const repositorio = (): RepositorioAvaliacoes => {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const chave = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  return url && chave ? repositorioSupabase(url, chave) : repositorioLocal();
+};
 
 /** Id sem depender de crypto.randomUUID, que falta em navegador antigo. */
 export const novoId = (): string =>

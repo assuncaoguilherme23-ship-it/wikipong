@@ -3133,6 +3133,358 @@
         ]
       },
       "nota": "A régua é a ESN — a borracha é fabricada na Alemanha, e o grau alemão é esse padrão. Esta borracha ainda não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto oficial."
+    },
+    "tibhar-samsonov-alpha": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-samsonov-alpha-com-5-folhas-e-cabo-fl/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "tibhar-szocs-signature": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-szocs-signature-com-7-folhas-e-cabo-fl/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "tibhar-shang-kun-hybrid-ac": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-shang-kun-hybrid-ac/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + fibra Arylate Carbon"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "tibhar-black-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-black-carbon-com-carbono/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "tibhar-libra-zodiac-zac": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-libra-zodiac-zac-5-2-carbono/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de ZAC Composite"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "tibhar-dynamic-jc": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-dynamic-jc-com-carbono-copia-dzumb/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "tibhar-match": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-match-para-tenis-de-mesa-cabo-concavo/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "tibhar-alexis-lebrun-krypto-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-alexis-lebrun-krypto-carbon-e1j49/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + fibra Krypto Carbon"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-alvaro-robles": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-alvaro-robles-estoque/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-chila-off": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-chila-off/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin tem 10 avaliações para uma lâmina \"Patrick Chila\", que é outro modelo da marca. Não usamos aquela nota aqui: nome parecido não é o mesmo produto. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-dynamic-j7": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-dynamic-j7-para-tenis-de-mesa-7-folhas/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-oh-junsung-nova-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-oh-junsung-nova-carbon/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + fibra Nova Carbon"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-felix-lebrun-all": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-felix-lebrun-all-7-folhas/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-felix-lebrun-hyper-carbon-inner": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-felix-lebrun-hyper-carbon-inner/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + Hyper Carbon interno"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-felix-lebrun-off": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-felix-lebrun-off-com-carbono-para-tenis-de-mesa/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-fortino-pro-dc-inside": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-fortino-pro-dc-inside/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + fibra DC interna"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-mk-7": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-mk-7-para-tenis-de-mesa-7-folhas/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-mk-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-mk-carbon-para-tenis-de-mesa/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo. Na loja, a versão classineta sai por R$ 1.699 e a clássica por R$ 1.599; registramos o menor preço real. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-samsonov-stratus-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-samsonov-stratus-carbon-com-cabo-fl/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-samsonov-stratus-powerdefense": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-samsonov-stratus-powerdefense/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-samsonov-stratus-powerwood": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-samsonov-stratus-powerwood/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "madeira pura"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "tibhar-shang-kun-hybrid-zc": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tibhar.com.br/produtos/raquete-tibhar-shang-kun-hybrid-zc/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + fibra ZL Carbon"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
     }
   }
 }

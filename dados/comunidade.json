@@ -640,6 +640,62 @@
       "escala": 10,
       "avaliacoes": 20,
       "consultadoEm": "2026-07-29"
+    },
+    "tibhar-samsonov-alpha": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/tibhar-samsonov-alpha.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 24,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-szocs-signature": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/tibhar-bernadette-szocs-signature-1.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 16,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-shang-kun-hybrid-ac": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/tibhar-shang-kun-hybrid-ac.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 8,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-black-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/tibhar-black-carbon.html",
+      "nota": 8.4,
+      "escala": 10,
+      "avaliacoes": 8,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-libra-zodiac-zac": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/tibhar-zodiac-libra-zac.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 23,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-dynamic-jc": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/tibhar-dynamic-jc-darko-jorgic.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 15,
+      "consultadoEm": "2026-07-29"
+    },
+    "tibhar-match": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/tibhar-match.html",
+      "nota": 7.8,
+      "escala": 10,
+      "avaliacoes": 8,
+      "consultadoEm": "2026-07-29"
     }
   }
 }

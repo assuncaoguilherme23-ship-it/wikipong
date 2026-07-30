@@ -2590,6 +2590,371 @@
         "tag": "Feita para aprender o giro",
         "frase": "Controle 100 e velocidade 50, em espessura fina de 1,5 mm: a bola sai devagar de propósito, para o gesto do topspin ser aprendido antes da velocidade."
       }
+    },
+    {
+      "id": "tibhar-samsonov-alpha",
+      "nome": "Samsonov Alpha",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 449,
+      "specs": {
+        "velocidade": 7.8,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.35,
+      "reviews": 24,
+      "simples": {
+        "tag": "Controle no bloqueio",
+        "frase": "Assinatura do Vladimir Samsonov, em madeira pura de 5 camadas: a comunidade elogia o bloqueio de topspin pesado perto da mesa. Longe da mesa, exige braço."
+      }
+    },
+    {
+      "id": "tibhar-szocs-signature",
+      "nome": "Szocs Signature",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 599,
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 16,
+      "simples": {
+        "tag": "Sete madeiras, muito precisa",
+        "frase": "Assinatura da romena Bernadette Szocs. Controle 9,3 na comunidade com velocidade alta para uma madeira pura — o elogio recorrente é precisão."
+      }
+    },
+    {
+      "id": "tibhar-shang-kun-hybrid-ac",
+      "nome": "Shang Kun Hybrid AC",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1399,
+      "specs": {
+        "velocidade": 8.9,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 8,
+      "simples": {
+        "tag": "Equilíbrio raro no topo",
+        "frase": "Velocidade 8,9 com controle 9,2: das poucas lâminas de carbono em que a comunidade dá nota alta nos dois eixos ao mesmo tempo."
+      }
+    },
+    {
+      "id": "tibhar-black-carbon",
+      "nome": "Black Carbon",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 699,
+      "specs": {
+        "velocidade": 9.5,
+        "controle": 7.3
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.2,
+      "reviews": 8,
+      "simples": {
+        "tag": "Muito rápida, pouco perdão",
+        "frase": "Velocidade 9,5 e controle 7,3 — a maior distância entre os dois eixos do catálogo. A própria comunidade recomenda montar com borracha macia e lenta para compensar."
+      }
+    },
+    {
+      "id": "tibhar-libra-zodiac-zac",
+      "nome": "Libra Zodiac ZAC",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1799,
+      "specs": {
+        "velocidade": 8.3,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 23,
+      "simples": {
+        "tag": "Controle 9,4 com fibra",
+        "frase": "A mais cara da Tibhar. Tecnologia ZAC Composite: controle altíssimo para uma 5+2, mas relatos dizem que ela pede batida forte para render a velocidade."
+      }
+    },
+    {
+      "id": "tibhar-dynamic-jc",
+      "nome": "Dynamic JC",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1699,
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 9.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.8,
+      "reviews": 15,
+      "simples": {
+        "tag": "Assinatura do Darko Jorgic",
+        "frase": "Controle 9,6 na comunidade, o maior de todas as lâminas do catálogo — e ainda assim 8,8 de velocidade. A própria Tibhar publica índices mais modestos que a percepção dos jogadores."
+      }
+    },
+    {
+      "id": "tibhar-match",
+      "nome": "Match",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 229,
+      "specs": {
+        "velocidade": 7.0,
+        "controle": 8.1
+      },
+      "origemSpecs": "comunidade",
+      "rating": 3.9,
+      "reviews": 8,
+      "simples": {
+        "tag": "Para a primeira raquete",
+        "frase": "R$ 229 com controle 8,1: lenta de propósito, para o gesto ser aprendido antes da velocidade. Uma das poucas lâminas de entrada com amostra real de comunidade."
+      }
+    },
+    {
+      "id": "tibhar-alexis-lebrun-krypto-carbon",
+      "nome": "Alexis Lebrun Krypto Carbon",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1699,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Assinatura do Alexis Lebrun",
+        "frase": "A lâmina do francês Alexis Lebrun, com a fibra Krypto Carbon da marca. Lançamento recente — a comunidade ainda não formou amostra."
+      }
+    },
+    {
+      "id": "tibhar-alvaro-robles",
+      "nome": "Álvaro Robles",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1599,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Assinatura do Álvaro Robles",
+        "frase": "A lâmina do espanhol Álvaro Robles. Não consta no Revspin — entra com a ficha da loja e o preço real."
+      }
+    },
+    {
+      "id": "tibhar-chila-off",
+      "nome": "Chila OFF",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 299,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Madeira pura acessível",
+        "frase": "Cinco camadas em classe OFF por R$ 299: das mais baratas do catálogo com pegada ofensiva."
+      }
+    },
+    {
+      "id": "tibhar-dynamic-j7",
+      "nome": "Dynamic J7",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 849,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras do Jorgic",
+        "frase": "A versão de 7 camadas de madeira pura da linha do Darko Jorgic: velocidade sem fibra, com a sensação que só madeira dá."
+      }
+    },
+    {
+      "id": "tibhar-oh-junsung-nova-carbon",
+      "nome": "Oh Junsung Nova Carbon",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1699,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Assinatura do Oh Junsung",
+        "frase": "A lâmina do coreano Oh Junsung com a fibra Nova Carbon. Lançamento — ainda sem amostra na comunidade."
+      }
+    },
+    {
+      "id": "tibhar-felix-lebrun-all",
+      "nome": "Felix Lebrun ALL",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 449,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A de controle do Felix Lebrun",
+        "frase": "Sete camadas de madeira em classe ALL: a entrada da linha do francês, feita para quem ainda está construindo o jogo."
+      }
+    },
+    {
+      "id": "tibhar-felix-lebrun-hyper-carbon-inner",
+      "nome": "Felix Lebrun Hyper Carbon Inner",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1699,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fibra por dentro, do Felix Lebrun",
+        "frase": "A fibra Hyper Carbon fica junto ao núcleo: a bola afunda mais na madeira antes de sair, o que segura o topspin."
+      }
+    },
+    {
+      "id": "tibhar-felix-lebrun-off",
+      "nome": "Felix Lebrun OFF-",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 699,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A intermediária da linha",
+        "frase": "Classe OFF- com carbono: o degrau entre a ALL de madeira e a Hyper Carbon de competição, a um terço do preço."
+      }
+    },
+    {
+      "id": "tibhar-fortino-pro-dc-inside",
+      "nome": "Fortino Pro DC Inside",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1699,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fibra DC junto ao núcleo",
+        "frase": "Assinatura do italiano Mihai Bobocica na linha Fortino, com a fibra DC em posição interna."
+      }
+    },
+    {
+      "id": "tibhar-mk-7",
+      "nome": "MK 7",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 699,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras da linha MK",
+        "frase": "A versão de madeira pura da linha desenvolvida com Kenta Matsudaira: velocidade de 7 camadas, sem fibra."
+      }
+    },
+    {
+      "id": "tibhar-mk-carbon",
+      "nome": "MK Carbon",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1599,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A de carbono da linha MK",
+        "frase": "A versão com fibra da linha Matsudaira, para quem quer a mesma pegada com mais velocidade."
+      }
+    },
+    {
+      "id": "tibhar-samsonov-stratus-carbon",
+      "nome": "Samsonov Stratus Carbon",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 999,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Stratus com fibra",
+        "frase": "A Stratus em versão de carbono: mais rápida que a Powerwood, mantendo a cabeça e o toque da linha do Samsonov."
+      }
+    },
+    {
+      "id": "tibhar-samsonov-stratus-powerdefense",
+      "nome": "Samsonov Stratus Powerdefense",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 599,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Defensiva da linha Stratus",
+        "frase": "Feita para cortar longe da mesa com saída de contra-ataque — a leitura defensiva da linha do Samsonov."
+      }
+    },
+    {
+      "id": "tibhar-samsonov-stratus-powerwood",
+      "nome": "Samsonov Stratus Powerwood",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 549,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Madeira pura da linha Stratus",
+        "frase": "A Stratus sem fibra: velocidade moderada e a sensação de bola que a linha do Samsonov ficou conhecida por entregar."
+      }
+    },
+    {
+      "id": "tibhar-shang-kun-hybrid-zc",
+      "nome": "Shang Kun Hybrid ZC",
+      "marca": "Tibhar",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1699,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A ZL Carbon da linha",
+        "frase": "A irmã de fibra ZL da Shang Kun AC: mais leve e mais rápida, com 2 avaliações apenas — abaixo do nosso piso."
+      }
     }
   ]
 }

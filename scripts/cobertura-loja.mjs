@@ -184,9 +184,20 @@ const chave = (s) =>
     /* "classineta" é formato de cabeça e "cópia" é artefato de cadastro da loja:
        a mesma lâmina aparece como clássica, classineta e cópia. O formato se
        escolhe na compra, como o cabo — é um material só. */
-    .replace(/\b(classineta|classica|copia|com cabo fl|cabo fl|cabo concavo)\b/g, ' ')
+    /* "copia" NÃO entra aqui: quem trata dela é a regra do par "copia <token>"
+       mais abaixo. Removê-la sozinha deixaria o sufixo órfão ("dzumb") no nome. */
+    .replace(/\b(classineta|classica|com cabo fl|cabo fl|cabo concavo)\b/g, ' ')
     .replace(/\b(com )?(\d+) folhas\b/g, ' ')
     .replace(/\braquete\b/g, ' ')
+    /* A loja descreve a lâmina dentro do nome ("... com Carbono", "... e cabo
+       FL", "estoque") e o catálogo usa só o modelo. São palavras de descrição,
+       não de identidade. "carbono" em português não colide com o "Carbon" que
+       faz parte do nome do produto — esse fica. E "copia <token>" é cadastro
+       duplicado da loja. */
+    .replace(/\bcopia\s+\S+/g, ' ')
+    .replace(/\b(carbono|estoque|cabo|fl|com|e|do|da)\b/g, ' ')
+    /* Dígito solto vem de "5 + 2 carbono" e da contagem de folhas. */
+    .replace(/\b\d\b/g, ' ')
     .replace(/\b(para )?tenis de mesa\b/g, ' ')
     .replace(/\bde\b/g, ' ')
     .replace(/\s*-?\s*(hugo edition|edicao hugo|lancamento|novo|nova)\s*$/i, '')

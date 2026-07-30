@@ -40,6 +40,12 @@ export default function PaginaComunidade() {
             borracha vale coisas diferentes pra um atacante e pra um defensor.
           </p>
           <ResumoComunidade />
+          <nav className={estilos.subnav} aria-label="Seções da comunidade">
+            <Link href="/comunidade/discussoes/">Discussões</Link>
+            <Link href="/comunidade/perfil/">Meu perfil</Link>
+            <Link href="/profissionais/">O que os profissionais usam</Link>
+            <Link href="/noticias/">Notícias</Link>
+          </nav>
         </header>
 
         <ComunidadeCliente />

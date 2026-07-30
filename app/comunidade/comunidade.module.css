@@ -307,3 +307,35 @@
 .regras strong {
   color: var(--cor-tinta);
 }
+
+/* Aviso de previa no topo de pagina. Mesmo estilo de aviso que a ficha usa
+   desde sempre: texto miudo, cor apagada, largura de leitura, selo mono
+   inline. Sem caixa e sem faixa colorida na lateral. */
+.avisoLocalPagina {
+  margin: 0;
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}
+.seloPagina {
+  display: inline-block;
+  margin-right: var(--esp-2);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+}
+
+/* Sub-nav da comunidade: as outras faces da mesma camada (D-19). Links de
+   texto separados por fio, sem virar botoes — nao competem com as abas. */
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2) var(--esp-4);
+  margin-top: var(--esp-2);
+  font-size: var(--texto-menor);
+}
+.subnav a {
+  color: var(--cor-texto-acento);
+}

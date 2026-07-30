@@ -28,6 +28,10 @@ import {
   validar, resumir, ordenar, recortar, ranking, wilson, aprovadas, maisRecentes,
   ROTULO_ESTILO, INTENCAO_DO_ESTILO, PISO_PARA_MEDIA, Avaliacao,
 } from '../src/logica/avaliacoes.js';
+import {
+  validarTopico, ordenarTopicos, porAssunto, ultimaAtividade, ROTULO_ASSUNTO, Topico,
+} from '../src/logica/discussoes.js';
+import { perfilVazio, temIdentidade, pecasEscolhidas } from '../src/logica/perfil.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
@@ -623,6 +627,53 @@ afirma(ROTULO_ESTILO.allround === 'All-round', 'o rótulo do estilo é o do guia
 afirma(Object.values(INTENCAO_DO_ESTILO).every(i =>
   ['atacar', 'equilibrado', 'controlar'].includes(i)),
   'todo estilo aponta pra uma intenção que existe no catálogo');
+
+
+// ─────────── Discussões e perfil (D-19, emenda) ───────────
+
+const top = (p: Partial<Topico>): Topico => ({
+  id: p.id ?? 't1', titulo: p.titulo ?? 'Qual lâmina combina com a MX-P?',
+  texto: p.texto ?? 'Uso MX-P dos dois lados e quero trocar a madeira.',
+  assunto: p.assunto ?? 'geral', autor: p.autor ?? 'Fulano',
+  criadoEm: p.criadoEm ?? '2026-07-01', respostas: p.respostas ?? [],
+  materialId: p.materialId,
+});
+
+afirma(validarTopico({}).length === 3, 'tópico vazio acusa título, texto e assinatura');
+afirma(validarTopico({ titulo: 'curto' }).some(p => p.campo === 'titulo'),
+  'título curto demais é recusado');
+afirma(validarTopico({
+  autor: 'Ana', titulo: 'Qual lâmina combina com a MX-P?',
+  texto: 'Uso MX-P dos dois lados e quero trocar a madeira este ano.',
+}).length === 0, 'tópico completo passa');
+
+// A conversa VIVA sobe, não a mais recém-aberta: num fórum pequeno, ordenar por
+// criação enterra o que está em movimento sob tópicos que ninguém respondeu.
+const antigoComResposta = top({
+  id: 'velho', criadoEm: '2026-01-01',
+  respostas: [{ id: 'r1', autor: 'B', texto: 'oi', criadoEm: '2026-07-20' }],
+});
+const novoSemResposta = top({ id: 'novo', criadoEm: '2026-07-10' });
+const fila = [antigoComResposta, novoSemResposta];
+afirma(ordenarTopicos(fila, 'ativos')[0].id === 'velho',
+  'com movimento: o tópico respondido ontem passa o aberto na semana passada');
+afirma(ordenarTopicos(fila, 'novos')[0].id === 'novo', 'mais novos ordena por criação');
+afirma(ordenarTopicos(fila, 'sem-resposta').length === 1,
+  'sem-resposta mostra só quem ainda não teve resposta');
+afirma(ultimaAtividade(antigoComResposta) === '2026-07-20',
+  'a última atividade é a da resposta, não a da abertura');
+afirma(porAssunto([top({ assunto: 'compra' }), top({ id: 't2' })], 'compra').length === 1,
+  'filtro por assunto funciona');
+afirma(ROTULO_ASSUNTO.montagem === 'Montagem da raquete', 'o assunto tem rótulo legível');
+
+// Perfil.
+const p0 = perfilVazio();
+afirma(!temIdentidade(p0), 'perfil vazio não tem identidade');
+afirma(!temIdentidade({ ...p0, nome: 'Ana' }), 'só o nome não basta — falta o estilo');
+afirma(temIdentidade({ ...p0, nome: 'Ana', estilo: 'atacante' }),
+  'nome + estilo já dá pra apresentar a pessoa');
+afirma(pecasEscolhidas({ ...p0, equipamento: { lamina: 'x', fh: 'y' } }) === 2,
+  'conta as peças já escolhidas do equipamento');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

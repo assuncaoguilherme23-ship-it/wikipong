@@ -1,0 +1,207 @@
+.blocos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-7);
+}
+
+.carregando {
+  color: var(--cor-mudo);
+  font-size: var(--texto-menor);
+}
+
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+}
+
+.tituloSecao {
+  margin: 0;
+  font-size: var(--titulo-3);
+}
+
+.explica {
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}
+
+.faltando {
+  margin: 0;
+  font-size: var(--texto-menor);
+  color: var(--cor-mudo);
+}
+
+/* ── Campos ── */
+
+.campos,
+.pecas {
+  display: grid;
+  gap: var(--esp-4);
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+}
+
+.rotulo {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+}
+
+.campo input,
+.campo select {
+  font: inherit;
+  font-size: var(--texto-base);
+  padding: 0.55em 0.7em;
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  background: var(--cor-papel);
+  color: var(--cor-tinta);
+  width: 100%;
+}
+
+.pecaEscolhida {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  margin-top: var(--esp-1);
+}
+
+.pecaLink {
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  color: var(--cor-texto-acento);
+}
+
+/* ── Prévia do crachá ── */
+
+.previa {
+  margin-top: var(--esp-2);
+}
+
+.previaRotulo {
+  margin: 0 0 var(--esp-2);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-mudo);
+}
+
+.cracha {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  padding: var(--esp-3) var(--esp-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+}
+
+.crachaNome {
+  margin: 0;
+  font-family: var(--fonte-display);
+  font-size: var(--texto-maior);
+  line-height: var(--altura-apertada);
+}
+
+.crachaTags {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+}
+
+/* ── Equipamento ── */
+
+.resumoEquip {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding-top: var(--esp-3);
+  border-top: 1px solid var(--cor-linha);
+}
+
+.total {
+  margin: 0;
+  font-size: var(--texto-dado);
+}
+
+.observacoes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+}
+
+.observacoes li {
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  max-width: 68ch;
+}
+
+.observacoes strong {
+  color: var(--cor-tinta);
+}
+
+.obsAtencao strong {
+  color: var(--cor-texto-acento);
+}
+
+/* ── Minhas avaliações ── */
+
+.listaAv {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+}
+
+.itemAv {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--esp-2) var(--esp-3);
+  align-items: center;
+  padding: var(--esp-3) 0;
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.linkMaterial {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+
+.nomeMaterial {
+  font-family: var(--fonte-display);
+  font-size: var(--texto-maior);
+  line-height: var(--altura-apertada);
+}
+
+@media (hover: hover) {
+  .linkMaterial:hover .nomeMaterial {
+    color: var(--cor-texto-acento);
+  }
+}
+
+.textoAv {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  max-width: 68ch;
+}

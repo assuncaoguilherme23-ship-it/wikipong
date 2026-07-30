@@ -64,6 +64,39 @@ const FONTES = {
       return null;
     },
   },
+  dhs: {
+    loja: 'Tênis de Mesa Store + OperaTT',
+    /* Duas lojas: os catálogos DHS delas quase não se sobrepõem — ver paginas(). */
+    leitores: [
+      {
+        loja: 'Tênis de Mesa Store',
+        url: (p) => `https://www.tenisdemesastore.com.br/marca/dhs.html?pagina=${p}`,
+        marcaNoTitulo: true,
+        tipo: (slug) => {
+          if (/pino|anti|raqueteira|case/.test(slug)) return null;
+          if (slug.startsWith('borracha-dhs')) return 'Borracha';
+          /* A DHS numerada (1002, 2002, 3002, 1006…) é raquete MONTADA, com
+             borracha colada — a OperaTT chama assim, a Tênis de Mesa Store
+             chama de "Raquete Clássica". Não é lâmina avulsa, e a colheita de
+             marca é de borracha e lâmina. */
+          if (/-\d{4}\b/.test(slug)) return null;
+          if (/^raquete-(classica|classineta)/.test(slug)) return 'Lâmina';
+          return null;
+        },
+      },
+      {
+        loja: 'OperaTT',
+        url: (p) => `https://www.operatt.com.br/marca/dhs.html?pagina=${p}`,
+        marcaNoTitulo: true,
+        tipo: (slug) => {
+          if (/pino|anti|montada|raqueteira/.test(slug)) return null;
+          if (slug.startsWith('borracha-')) return 'Borracha';
+          if (/^madeira-/.test(slug)) return 'Lâmina';
+          return null;
+        },
+      },
+    ],
+  },
   butterfly: {
     loja: 'JJ Yamada',
     url: (p) => `https://loja.jjyamada.com.br/categoria/23241058.html?pagina=${p}`,
@@ -125,7 +158,23 @@ async function porSitemap(fonte) {
   return [...achados.values()];
 }
 
+/**
+ * Uma marca pode estar espalhada por mais de uma loja.
+ *
+ * A DHS é o caso: a Tênis de Mesa Store tem a linha Hurricane e as lâminas
+ * 2002/PG7/PG8; a OperaTT tem as Sirocco, as W1030/W1130 e a G555. Nenhuma das
+ * duas sozinha é o catálogo da marca no Brasil — ancorar numa só faria o
+ * relatório dizer "sem lacuna" com metade dos produtos de fora, que é o erro
+ * que este script existe para não deixar acontecer.
+ */
 async function paginas(fonte, marca) {
+  if (fonte.leitores) {
+    const todos = [];
+    for (const leitor of fonte.leitores) {
+      todos.push(...(await paginas({ ...leitor, familia: fonte.familia }, marca)));
+    }
+    return todos;
+  }
   if (fonte.sitemap) return porSitemap(fonte);
   const achados = new Map();
   let anterior = -1;
@@ -186,7 +235,7 @@ const chave = (s) =>
      sinal e "Vega China" e "Vega China +" — que são DUAS borrachas — colidiriam
      na mesma chave, e a segunda esconderia a primeira do relatório. */
   normalizar(s.replace(/(\d)[.,]0(?!\d)/g, '$1').replace(/\+/g, ' plus '))
-    .replace(/^.*?\b(xiom|butterfly|tibhar|yasaka)\b\s*/i, '')
+    .replace(/^.*?\b(xiom|butterfly|tibhar|yasaka|dhs)\b\s*/i, '')
     /* Cor e espessura são opções de compra, não materiais diferentes: a Tibhar
        publica uma página por cor ("... 2.1mm preta" e "... 2.1mm vermelha") da
        mesma borracha. Sem tirar isso, cada borracha contaria em dobro. */

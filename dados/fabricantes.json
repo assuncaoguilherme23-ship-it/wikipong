@@ -5071,6 +5071,186 @@
         }
       ],
       "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "donic-baracuda": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-donic-baracuda/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-baracuda-big-slam": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-baracuda-big-slam/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-acuda-s1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-acuda-s1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-acuda-s1-turbo": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-acuda-s1-turbo/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-acuda-s2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-acuda-s2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja média-dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-acuda-s3": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-acuda-s3/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-sonex-jp-gold": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-donic-sonex-jp-gold/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-vario": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-vario/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa clássica (sem tensão)"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-vario-soft": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-vario-soft/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa clássica, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-vario-big-slam": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-vario-big-slam/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa clássica, esponja 35°"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-desto-f1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-desto-f1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-desto-f1-plus": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-desto-f1-plus/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-desto-f2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-desto-f2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-desto-f3": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-desto-f3/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-desto-f4": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-desto-f4/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
     }
   }
 }

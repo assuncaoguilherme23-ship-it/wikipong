@@ -1096,6 +1096,126 @@
       "escala": 10,
       "avaliacoes": 6,
       "consultadoEm": "2026-07-30"
+    },
+    "donic-baracuda": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-baracuda.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 221,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-baracuda-big-slam": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-baracuda-big-slam.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 33,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-acuda-s1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-acuda-s1.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 58,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-acuda-s1-turbo": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-acuda-s1-turbo.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 50,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-acuda-s2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-acuda-s2.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 111,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-acuda-s3": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-acuda-s3.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 74,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-sonex-jp-gold": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-sonex-jp-gold.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 38,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-vario": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-vario.html",
+      "nota": 8.3,
+      "escala": 10,
+      "avaliacoes": 12,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-vario-soft": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-vario-soft.html",
+      "nota": 7.8,
+      "escala": 10,
+      "avaliacoes": 7,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-vario-big-slam": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-vario-big-slam.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 18,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-desto-f1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-desto-f1.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 22,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-desto-f1-plus": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-desto-f1-plus.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-desto-f2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-desto-f2.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 11,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-desto-f3": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-desto-f3.html",
+      "nota": 8.5,
+      "escala": 10,
+      "avaliacoes": 19,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-desto-f4": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-desto-f4.html",
+      "nota": 8.5,
+      "escala": 10,
+      "avaliacoes": 6,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

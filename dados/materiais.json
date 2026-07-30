@@ -4763,6 +4763,336 @@
         "tag": "Controle 9,7 — o maior do catálogo",
         "frase": "Controle 9,7 e efeito 9,6, com velocidade menor que as irmãs. Um avaliador a chama de lenta para a dureza que tem, e elogia justamente giro e controle. É a borracha de quem constrói o ponto."
       }
+    },
+    {
+      "id": "donic-baracuda",
+      "nome": "Baracuda",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 307,
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 9.5,
+        "controle": 8.6
+      },
+      "durabilidade": 7.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 221,
+      "simples": {
+        "tag": "A borracha mais avaliada do catálogo",
+        "frase": "221 avaliações — nenhum material do WikiPong tem amostra maior. Efeito 9,5, e a própria Donic publica 98 de efeito contra 71 de controle. É borracha de girar perto da mesa."
+      }
+    },
+    {
+      "id": "donic-baracuda-big-slam",
+      "nome": "Baracuda Big Slam",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 307,
+      "specs": {
+        "velocidade": 8.2,
+        "spin": 9.2,
+        "controle": 8.6
+      },
+      "durabilidade": 6.4,
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 33,
+      "simples": {
+        "tag": "A Baracuda com esponja macia",
+        "frase": "Mantém o efeito alto da Baracuda (9,2) com mais margem no toque. O alerta da comunidade é específico: as bordas lascam rápido."
+      }
+    },
+    {
+      "id": "donic-acuda-s1",
+      "nome": "Acuda S1",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 336,
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.1,
+        "controle": 8.2
+      },
+      "durabilidade": 7.0,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 58,
+      "simples": {
+        "tag": "Capa dura que não perdoa",
+        "frase": "Velocidade 9,2 com efeito 9,1. A comunidade avisa em duas frentes: precisa de movimento de braço para acionar, e a capa mais dura não perdoa a bola mal batida. Em compensação, bloqueia efeito pesado bem."
+      }
+    },
+    {
+      "id": "donic-acuda-s1-turbo",
+      "nome": "Acuda S1 Turbo",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 336,
+      "specs": {
+        "velocidade": 9.4,
+        "spin": 9.1,
+        "controle": 8.3
+      },
+      "durabilidade": 7.0,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 50,
+      "simples": {
+        "tag": "A mais rápida da linha Acuda",
+        "frase": "Velocidade 9,4. Um avaliador resume a linha inteira numa frase: velocidade não é nada sem efeito. Exige preparo físico e técnica — não é para quem está começando."
+      }
+    },
+    {
+      "id": "donic-acuda-s2",
+      "nome": "Acuda S2",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 336,
+      "specs": {
+        "velocidade": 8.8,
+        "spin": 9.0,
+        "controle": 8.6
+      },
+      "durabilidade": 7.5,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 111,
+      "simples": {
+        "tag": "111 avaliações e equilíbrio raro",
+        "frase": "A segunda maior amostra do catálogo. Rápida com efeito alto e ainda controlável — a comunidade destaca o rendimento no revés. Um relato alerta para perda de aderência em duas semanas de uso intenso."
+      }
+    },
+    {
+      "id": "donic-acuda-s3",
+      "nome": "Acuda S3",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 336,
+      "specs": {
+        "velocidade": 8.4,
+        "spin": 9.0,
+        "controle": 8.7
+      },
+      "durabilidade": 7.4,
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 74,
+      "simples": {
+        "tag": "A macia da linha, com 74 avaliações",
+        "frase": "Esponja macia com efeito 9,0 e controle 8,7: a entrada da linha Acuda para quem ainda não aciona uma esponja dura. O ponto fraco relatado é a borda, que lasca fácil."
+      }
+    },
+    {
+      "id": "donic-sonex-jp-gold",
+      "nome": "Sonex JP Gold",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 306,
+      "specs": {
+        "velocidade": 9.0,
+        "spin": 8.6,
+        "controle": 8.1
+      },
+      "durabilidade": 5.6,
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 38,
+      "simples": {
+        "tag": "A borracha do Jörgen Persson",
+        "frase": "Assinada pelo sueco Jörgen Persson, conhecido pelo bloqueio. Rápida e elástica, boa em bloqueio e colocação rápida. A durabilidade 5,6 é o preço: um avaliador recomenda para amador, não para quem treina muito."
+      }
+    },
+    {
+      "id": "donic-vario",
+      "nome": "Vario",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 241,
+      "specs": {
+        "velocidade": 7.7,
+        "spin": 7.3,
+        "controle": 8.5
+      },
+      "durabilidade": 7.2,
+      "origemSpecs": "comunidade",
+      "rating": 4.15,
+      "reviews": 12,
+      "simples": {
+        "tag": "Clássica, sem tensor",
+        "frase": "Uma das borrachas mais vendidas do mundo, e não é tensora. Controle 8,5 acima de tudo: a comunidade a chama de clássica boa para muitos jogadores, com a ressalva de que falta pegada para quem quer giro alto."
+      }
+    },
+    {
+      "id": "donic-vario-soft",
+      "nome": "Vario Soft",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 241,
+      "specs": {
+        "velocidade": 7.6,
+        "spin": 7.7,
+        "controle": 7.9
+      },
+      "durabilidade": 6.9,
+      "origemSpecs": "comunidade",
+      "rating": 3.9,
+      "reviews": 7,
+      "simples": {
+        "tag": "Para aprender o fundamento",
+        "frase": "Mais macia e mais lenta que a Vario comum. A comunidade é direta: boa para aprender, e macia demais para quem já contra-ataca."
+      }
+    },
+    {
+      "id": "donic-vario-big-slam",
+      "nome": "Vario Big Slam",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 292,
+      "specs": {
+        "velocidade": 7.6,
+        "spin": 8.4,
+        "controle": 8.8
+      },
+      "durabilidade": 5.6,
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 18,
+      "simples": {
+        "tag": "Esponja 35°, a mais macia daqui",
+        "frase": "Controle 8,8 com esponja de apenas 35°. Excelente no bloqueio, mas a comunidade avisa que ela afunda no smash de forehand — e a durabilidade é 5,6."
+      }
+    },
+    {
+      "id": "donic-desto-f1",
+      "nome": "Desto F1",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 270,
+      "specs": {
+        "velocidade": 9.4,
+        "spin": 8.6,
+        "controle": 7.4
+      },
+      "durabilidade": 4.9,
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 22,
+      "simples": {
+        "tag": "Velocidade 9,4, durabilidade 4,9",
+        "frase": "A mais rápida da série Desto, e uma das de pior durabilidade do catálogo — um avaliador deu 3,0 nesse eixo. Sacrifica jogo curto (controle 7,4). Rende melhor em lâmina fina de madeira."
+      }
+    },
+    {
+      "id": "donic-desto-f1-plus",
+      "nome": "Desto F1 Plus",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 285,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 9.2,
+        "controle": 8.7
+      },
+      "durabilidade": 7.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 5,
+      "simples": {
+        "tag": "Mais equilibrada que a F1",
+        "frase": "Ganha controle (8,7 contra 7,4) e durabilidade (7,3 contra 4,9) sobre a F1. Um avaliador relativiza o efeito alto: na prática ela pede golpe direto e drive rápido, não giro puro."
+      }
+    },
+    {
+      "id": "donic-desto-f2",
+      "nome": "Desto F2",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 270,
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 8.7,
+        "controle": 8.2
+      },
+      "durabilidade": 5.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 11,
+      "simples": {
+        "tag": "Boa no topspin, dura no toque curto",
+        "frase": "Velocidade e efeito empatados em 8,7. A comunidade elogia o topspin e reclama do toque curto: descrevem como sensível demais para empurrar ou tocar leve."
+      }
+    },
+    {
+      "id": "donic-desto-f3",
+      "nome": "Desto F3",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 270,
+      "specs": {
+        "velocidade": 7.3,
+        "spin": 8.4,
+        "controle": 8.4
+      },
+      "durabilidade": 5.6,
+      "origemSpecs": "comunidade",
+      "rating": 4.25,
+      "reviews": 19,
+      "simples": {
+        "tag": "Controle acima de velocidade",
+        "frase": "Um avaliador a chama do melhor controle que já encontrou numa borracha. Em troca, velocidade 7,3 — a mais lenta da série Desto. Feita para consistência, não para potência."
+      }
+    },
+    {
+      "id": "donic-desto-f4",
+      "nome": "Desto F4",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 241,
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 8.7,
+        "controle": 8.6
+      },
+      "durabilidade": 6.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.25,
+      "reviews": 6,
+      "simples": {
+        "tag": "Leve, para quem está subindo",
+        "frase": "A Donic a posiciona como porta de entrada para jovens ambiciosos. Pesa 38 a 55 g conforme o preparo. A comunidade elogia no forehand e avisa que pode incomodar no revés."
+      }
     }
   ]
 }

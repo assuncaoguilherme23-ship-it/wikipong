@@ -49,6 +49,21 @@ const FONTES = {
       return null;
     },
   },
+  yasaka: {
+    loja: 'Tênis de Mesa Store',
+    url: (p) => `https://www.tenisdemesastore.com.br/marca/yasaka.html?pagina=${p}`,
+    marcaNoTitulo: true,
+    /* A loja mantém no nome a linha anterior do produto: "MYTH Extra Offensive
+       (Nova Ma Lin)". A MYTH sucedeu a linha Ma Lin — é a mesma lâmina. */
+    familia: ['nova', 'ma', 'lin'],
+    tipo: (slug) => {
+      /* A loja marca no próprio slug o que é anti-spin e pinos — adiados. */
+      if (/anti-spin|anti-power|pino|long/.test(slug)) return null;
+      if (slug.startsWith('borracha-yasaka')) return 'Borracha';
+      if (/^raquete-(classica|classineta)-yasaka/.test(slug)) return 'Lâmina';
+      return null;
+    },
+  },
   butterfly: {
     loja: 'JJ Yamada',
     url: (p) => `https://loja.jjyamada.com.br/categoria/23241058.html?pagina=${p}`,
@@ -171,7 +186,7 @@ const chave = (s) =>
      sinal e "Vega China" e "Vega China +" — que são DUAS borrachas — colidiriam
      na mesma chave, e a segunda esconderia a primeira do relatório. */
   normalizar(s.replace(/(\d)[.,]0(?!\d)/g, '$1').replace(/\+/g, ' plus '))
-    .replace(/^.*?\b(xiom|butterfly|tibhar)\b\s*/i, '')
+    .replace(/^.*?\b(xiom|butterfly|tibhar|yasaka)\b\s*/i, '')
     /* Cor e espessura são opções de compra, não materiais diferentes: a Tibhar
        publica uma página por cor ("... 2.1mm preta" e "... 2.1mm vermelha") da
        mesma borracha. Sem tirar isso, cada borracha contaria em dobro. */
@@ -195,7 +210,7 @@ const chave = (s) =>
        faz parte do nome do produto — esse fica. E "copia <token>" é cadastro
        duplicado da loja. */
     .replace(/\bcopia\s+\S+/g, ' ')
-    .replace(/\b(carbono|estoque|cabo|fl|com|e|do|da)\b/g, ' ')
+    .replace(/\b(carbono|estoque|cabo|fl|com|e|do|da|profissional|ittf)\b/g, ' ')
     /* Dígito solto vem de "5 + 2 carbono" e da contagem de folhas. */
     .replace(/\b\d\b/g, ' ')
     .replace(/\b(para )?tenis de mesa\b/g, ' ')

@@ -696,6 +696,38 @@
       "escala": 10,
       "avaliacoes": 8,
       "consultadoEm": "2026-07-29"
+    },
+    "yasaka-rakza-7": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/yasaka-rakza-7.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 249,
+      "consultadoEm": "2026-07-29"
+    },
+    "yasaka-rakza-7-soft": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/yasaka-rakza-7-soft.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 140,
+      "consultadoEm": "2026-07-29"
+    },
+    "yasaka-rakza-x": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/yasaka-rakza-x.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 64,
+      "consultadoEm": "2026-07-29"
+    },
+    "yasaka-rakza-z-extra-hard": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/yasaka-rakza-z-extra-hard.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 32,
+      "consultadoEm": "2026-07-29"
     }
   }
 }

@@ -3485,6 +3485,216 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com a construção, o preço real e a foto."
+    },
+    "yasaka-rakza-7": {
+      "confianca": "oficial",
+      "fonte": "https://yasakatabletennis.com/product/rakza-7",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "45° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Hybrid Energy)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Yasaka — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 87
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 88
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 63
+          }
+        ]
+      },
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "yasaka-rakza-7-soft": {
+      "confianca": "oficial",
+      "fonte": "https://yasakatabletennis.com/product/rakza-7-soft",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Hybrid Energy), esponja macia"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Yasaka — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 84
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 88
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 67
+          }
+        ]
+      },
+      "nota": " A Yasaka não publica a dureza desta variante em página própria, e nenhuma outra fonte a declara. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau da versão comum, que é outra esponja."
+    },
+    "yasaka-rakza-7-hard": {
+      "confianca": "oficial",
+      "fonte": "https://yasakatabletennis.com/product/rakza-7-hard",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada (Hybrid Energy), esponja dura"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Yasaka — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 89
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 87
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 60
+          }
+        ]
+      },
+      "nota": " A Yasaka não publica a dureza desta variante em página própria, e nenhuma outra fonte a declara. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau da versão comum, que é outra esponja. Esta borracha não tem amostra na comunidade (Revspin registra zero avaliações) para entrar na nossa escala de desempenho. Entra com ficha, preço real e foto."
+    },
+    "yasaka-rakza-x": {
+      "confianca": "oficial",
+      "fonte": "https://yasakatabletennis.com/product/rakza-x",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa levemente aderente (capa natural + esponja dura)"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Yasaka — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 87
+          },
+          {
+            "rotulo": "Efeito",
+            "valor": 85
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 70
+          }
+        ]
+      },
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "yasaka-rakza-z-extra-hard": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-yasaka-rakza-z-extra-hard",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "52° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente tensionada, esponja extra dura"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. O grau vem da ficha da revendedora; a comunidade estima entre 52° e 57°, e essa divergência fica dita aqui em vez de escondida."
+    },
+    "yasaka-sweden-extra": {
+      "confianca": "oficial",
+      "fonte": "https://yasakatabletennis.com/product/sweden-extra",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira sueca"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Yasaka — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Velocidade",
+            "valor": 70
+          },
+          {
+            "rotulo": "Controle",
+            "valor": 77
+          }
+        ]
+      },
+      "nota": " Esta lâmina não tem amostra suficiente na comunidade para entrar na escala de desempenho. Efeito não entra: é propriedade da borracha, não da madeira."
+    },
+    "yasaka-sweden-classic-allround": {
+      "confianca": "oficial",
+      "fonte": "https://yasakatabletennis.com/product/sweden-classic-allround",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira sueca"
+        }
+      ],
+      "indices": {
+        "escala": "Índice Yasaka — escala interna da marca (não comparável com outras)",
+        "valores": [
+          {
+            "rotulo": "Controle",
+            "valor": 69
+          }
+        ]
+      },
+      "nota": " Esta lâmina não tem amostra suficiente na comunidade para entrar na escala de desempenho. Efeito não entra: é propriedade da borracha, não da madeira."
+    },
+    "yasaka-myth-extra-offensive": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classica-yasaka-ma-lin-extra-offensive",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira, fabricada na Suécia"
+        }
+      ],
+      "nota": " A loja vende em formato clássico e classineta — é a mesma madeira; o formato se escolhe na compra. Esta lâmina não tem amostra suficiente na comunidade para entrar na escala de desempenho. Efeito não entra: é propriedade da borracha, não da madeira."
     }
   }
 }

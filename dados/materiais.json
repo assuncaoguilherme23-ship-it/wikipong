@@ -2955,6 +2955,154 @@
         "tag": "A ZL Carbon da linha",
         "frase": "A irmã de fibra ZL da Shang Kun AC: mais leve e mais rápida, com 2 avaliações apenas — abaixo do nosso piso."
       }
+    },
+    {
+      "id": "yasaka-rakza-7",
+      "nome": "Rakza 7",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 399,
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 9.2,
+        "controle": 8.9
+      },
+      "durabilidade": 8.0,
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 249,
+      "simples": {
+        "tag": "A borracha mais avaliada do catálogo",
+        "frase": "249 avaliações na comunidade — a maior amostra de todo o WikiPong, e nota 9,4. Esponja 45° equilibrando giro, velocidade e controle: é a referência de custo-benefício da Yasaka há anos."
+      }
+    },
+    {
+      "id": "yasaka-rakza-7-soft",
+      "nome": "Rakza 7 Soft",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 399,
+      "specs": {
+        "velocidade": 8.5,
+        "spin": 9.2,
+        "controle": 9.1
+      },
+      "durabilidade": 7.5,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 140,
+      "simples": {
+        "tag": "A Rakza 7 com esponja macia",
+        "frase": "Mesmo efeito da Rakza 7 (9,2) com mais controle: a comunidade descreve um efeito de cola embutido. 140 avaliações — a segunda maior amostra do catálogo."
+      }
+    },
+    {
+      "id": "yasaka-rakza-7-hard",
+      "nome": "Rakza 7 Hard",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais rápida da família Rakza 7",
+        "frase": "Velocidade 89 e controle 60 no índice da marca — o extremo ofensivo da linha. Ainda sem avaliação nenhuma na comunidade."
+      }
+    },
+    {
+      "id": "yasaka-rakza-x",
+      "nome": "Rakza X",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 425,
+      "specs": {
+        "velocidade": 9.0,
+        "spin": 9.0,
+        "controle": 9.1
+      },
+      "durabilidade": 7.9,
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 64,
+      "simples": {
+        "tag": "Equilibrada nos três eixos",
+        "frase": "Velocidade, efeito e controle todos em 9,0 ou acima na comunidade — raro. Consistência 9,6 entre folhas: quem compra sabe o que vai receber."
+      }
+    },
+    {
+      "id": "yasaka-rakza-z-extra-hard",
+      "nome": "Rakza Z Extra Hard",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 425,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 9.4,
+        "controle": 8.9
+      },
+      "durabilidade": 8.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 32,
+      "simples": {
+        "tag": "Aderente e extra dura",
+        "frase": "Efeito 9,4 com aderência de estilo chinês sobre esponja extra dura. Um avaliador resume: sai mais rápida que uma Hurricane 3 sem tuning — mas exige gesto completo."
+      }
+    },
+    {
+      "id": "yasaka-sweden-extra",
+      "nome": "Sweden Extra",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 479,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Madeira sueca clássica",
+        "frase": "Cinco camadas fabricadas na Suécia, na linha que deu nome à escola sueca de tênis de mesa. Vendida em formato clássico e classineta — é a mesma madeira."
+      }
+    },
+    {
+      "id": "yasaka-sweden-classic-allround",
+      "nome": "Sweden Classic Allround",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 469,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A allround da linha sueca",
+        "frase": "A leitura de controle da linha Sweden: mais lenta que a Extra, para quem constrói o ponto antes de acelerar."
+      }
+    },
+    {
+      "id": "yasaka-myth-extra-offensive",
+      "nome": "MYTH Extra Offensive",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A sucessora da linha do Ma Lin",
+        "frase": "Cinco camadas com \"MADE IN SWEDEN\" gravado na madeira. A loja ainda a identifica como \"Nova Ma Lin\", nome da linha anterior."
+      }
     }
   ]
 }

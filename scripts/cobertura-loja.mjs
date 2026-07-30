@@ -113,6 +113,23 @@ const FONTES = {
       },
     ],
   },
+  donic: {
+    loja: 'AmericaTT',
+    url: (p) => `https://americatt.net/marca/donic/${p > 1 ? `page/${p}/` : ''}`,
+    marcaNoTitulo: true,
+    /* Mesma loja e mesmo padrao da Stiga: slug sem prefixo fixo. A lista de
+       linhas de BORRACHA da Donic e' outra — ver comentario em stiga.tipo(). */
+    tipo: (slug) => {
+      if (!/donic/.test(slug)) return null;
+      if (/raqueteira|capa|bola|cola|rede|mesa-de-|kit|^pino-|-pino-/.test(slug)) return null;
+      if (slug.startsWith('borracha-')) return 'Borracha';
+      if (slug.startsWith('madeira-')) return 'Lâmina';
+      if (slug.startsWith('raquete-')) return null;
+      const LINHAS_DE_BORRACHA =
+        /bluestorm|bluefire|baracuda|acuda|coppa|desto|vario|slice|piranja|traction|jo-?spin/;
+      return LINHAS_DE_BORRACHA.test(slug) ? 'Borracha' : 'Lâmina';
+    },
+  },
   stiga: {
     loja: 'AmericaTT',
     /* O slug "stiga-cybershape" redireciona para a Cybershape Carbon: e' apelido
@@ -294,8 +311,8 @@ const chave = (s) =>
        a OperaTT escreve "... DHS - DHS G555", com ela duas vezes. Trocar o
        primeiro corte pelo global deixava "borracha para" sobrando no nome e
        derrubava as cinco marcas de uma vez. */
-    .replace(/^.*?\b(xiom|butterfly|tibhar|yasaka|dhs|stiga)\b\s*/i, '')
-    .replace(/\b(xiom|butterfly|tibhar|yasaka|dhs|stiga)\b/gi, ' ')
+    .replace(/^.*?\b(xiom|butterfly|tibhar|yasaka|dhs|stiga|donic)\b\s*/i, '')
+    .replace(/\b(xiom|butterfly|tibhar|yasaka|dhs|stiga|donic)\b/gi, ' ')
     /* Cor e espessura são opções de compra, não materiais diferentes: a Tibhar
        publica uma página por cor ("... 2.1mm preta" e "... 2.1mm vermelha") da
        mesma borracha. Sem tirar isso, cada borracha contaria em dobro. */

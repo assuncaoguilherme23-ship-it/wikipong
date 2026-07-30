@@ -139,7 +139,7 @@ const FONTES = {
       if (slug.startsWith('madeira-')) return 'Lâmina';
       if (slug.startsWith('raquete-')) return null;
       const LINHAS_DE_BORRACHA =
-        /bluestorm|bluefire|bluestar|baracuda|acuda|coppa|desto|vario|slice|sonex|traction/;
+        /bluestorm|bluefire|bluestar|bluegrip|baracuda|acuda|coppa|desto|vario|slice|sonex|traction/;
       return LINHAS_DE_BORRACHA.test(slug) ? 'Borracha' : 'Lâmina';
     },
   },

@@ -5903,6 +5903,90 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. DOIS NOMES, UM PRODUTO: a Donic rebatizou a linha Ovtcharov como \"Original\", e a loja escreve os dois juntos (\"Ovtcharov/Original\"). É a própria vendedora dizendo que são o mesmo material — por isso a amostra registrada sob o nome antigo vale aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "donic-bluegrip-c2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluegrip-c2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida, esponja dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: a linha BlueGrip caiu como LÂMINA na primeira passada da minha heurística, porque o nome dela não estava na lista de linhas de borracha da Donic. Duas fontes independentes corrigem: o Revspin as lista no índice de borrachas (/rubber/), e a descrição da própria loja começa com \"as borrachas Donic Bluegrip\"."
+    },
+    "donic-bluegrip-c1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluegrip-c1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida, esponja muito dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: a linha BlueGrip caiu como LÂMINA na primeira passada da minha heurística, porque o nome dela não estava na lista de linhas de borracha da Donic. Duas fontes independentes corrigem: o Revspin as lista no índice de borrachas (/rubber/), e a descrição da própria loja começa com \"as borrachas Donic Bluegrip\"."
+    },
+    "donic-bluegrip-j1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluegrip-j1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: a linha BlueGrip caiu como LÂMINA na primeira passada da minha heurística, porque o nome dela não estava na lista de linhas de borracha da Donic. Duas fontes independentes corrigem: o Revspin as lista no índice de borrachas (/rubber/), e a descrição da própria loja começa com \"as borrachas Donic Bluegrip\"."
+    },
+    "donic-bluegrip-s2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluegrip-s2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, saída baixa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: a linha BlueGrip caiu como LÂMINA na primeira passada da minha heurística, porque o nome dela não estava na lista de linhas de borracha da Donic. Duas fontes independentes corrigem: o Revspin as lista no índice de borrachas (/rubber/), e a descrição da própria loja começa com \"as borrachas Donic Bluegrip\"."
+    },
+    "donic-bluegrip-s1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluegrip-s1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: a linha BlueGrip caiu como LÂMINA na primeira passada da minha heurística, porque o nome dela não estava na lista de linhas de borracha da Donic. Duas fontes independentes corrigem: o Revspin as lista no índice de borrachas (/rubber/), e a descrição da própria loja começa com \"as borrachas Donic Bluegrip\"."
+    },
+    "donic-bluegrip-j2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluegrip-j2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: a linha BlueGrip caiu como LÂMINA na primeira passada da minha heurística, porque o nome dela não estava na lista de linhas de borracha da Donic. Duas fontes independentes corrigem: o Revspin as lista no índice de borrachas (/rubber/), e a descrição da própria loja começa com \"as borrachas Donic Bluegrip\". Esta variante não tem amostra suficiente na comunidade — o piso é 5 avaliações."
+    },
+    "donic-bluegrip-j3": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-bluegrip-j3/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: a linha BlueGrip caiu como LÂMINA na primeira passada da minha heurística, porque o nome dela não estava na lista de linhas de borracha da Donic. Duas fontes independentes corrigem: o Revspin as lista no índice de borrachas (/rubber/), e a descrição da própria loja começa com \"as borrachas Donic Bluegrip\". Esta variante não tem amostra suficiente na comunidade — o piso é 5 avaliações."
     }
   }
 }

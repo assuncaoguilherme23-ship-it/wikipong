@@ -5899,6 +5899,146 @@
         "tag": "A Dotec allround",
         "frase": "Quatro avaliações na comunidade. O Revspin ainda registra uma \"Dotec ALL\" separada da \"ALL+\", com uma avaliação — são configurações diferentes, e nenhuma das duas tem amostra."
       }
+    },
+    {
+      "id": "donic-bluegrip-c2",
+      "nome": "BlueGrip C2",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 365,
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.4,
+        "controle": 9.1
+      },
+      "durabilidade": 7.6,
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 39,
+      "simples": {
+        "tag": "Efeito 9,4 com controle 9,1",
+        "frase": "A mais avaliada da linha. Um avaliador descreve o giro e a curva como enormes; outro a chama de evolução para quem gosta da Fastarc G-1 da Nittaku. Esponja dura, aderência média."
+      }
+    },
+    {
+      "id": "donic-bluegrip-c1",
+      "nome": "BlueGrip C1",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 365,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 9.3,
+        "controle": 8.7
+      },
+      "durabilidade": 8.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 10,
+      "simples": {
+        "tag": "A esponja mais dura da linha",
+        "frase": "A comunidade dá 10 de 10 na dureza da esponja. A catapulta demora a entrar e a superfície é levemente aderente, o que a torna lenta e controlável no jogo curto. Pesa cerca de 90 g sem cortar — pesada demais para muitos no revés."
+      }
+    },
+    {
+      "id": "donic-bluegrip-j1",
+      "nome": "BlueGrip J1",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 446,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.3,
+        "controle": 9.0
+      },
+      "durabilidade": 8.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.8,
+      "reviews": 7,
+      "simples": {
+        "tag": "Velocidade e efeito 9,3, durabilidade 8,8",
+        "frase": "Mais rápida que a C2 com o mesmo giro, segundo a comunidade — e sem perder controle. Durabilidade 8,8, das melhores do catálogo. A Donic a posiciona para atacante ambicioso, não para iniciante."
+      }
+    },
+    {
+      "id": "donic-bluegrip-s2",
+      "nome": "BlueGrip S2",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 365,
+      "specs": {
+        "velocidade": 8.2,
+        "spin": 9.1,
+        "controle": 9.3
+      },
+      "durabilidade": 5.9,
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 15,
+      "simples": {
+        "tag": "Controle 9,3, feita para o revés",
+        "frase": "Trajetória curta no topspin — a bola cai mais perto da rede. Um avaliador a chama da melhor borracha de revés que já usou. A durabilidade 5,9 e a aderência que pede limpeza frequente são o custo."
+      }
+    },
+    {
+      "id": "donic-bluegrip-s1",
+      "nome": "BlueGrip S1",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 365,
+      "specs": {
+        "velocidade": 8.4,
+        "spin": 9.1,
+        "controle": 9.0
+      },
+      "durabilidade": 6.9,
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 7,
+      "simples": {
+        "tag": "Ponte entre o chinês e o europeu",
+        "frase": "Efeito alto já em velocidade baixa, o que ajuda muito no saque. A comunidade a recomenda para o jogador intermediário que quer giro do estilo chinês sem a exigência física dele."
+      }
+    },
+    {
+      "id": "donic-bluegrip-j2",
+      "nome": "BlueGrip J2",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 446,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A J do meio",
+        "frase": "Quatro avaliações na comunidade, com nota 9,4 — abaixo do nosso piso de cinco por uma avaliação."
+      }
+    },
+    {
+      "id": "donic-bluegrip-j3",
+      "nome": "BlueGrip J3",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 446,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais macia da série J",
+        "frase": "Duas avaliações apenas. Entra com ficha, preço real e foto."
+      }
     }
   ]
 }

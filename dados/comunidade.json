@@ -1424,6 +1424,46 @@
       "escala": 10,
       "avaliacoes": 17,
       "consultadoEm": "2026-07-30"
+    },
+    "donic-bluegrip-c2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluegrip-c2.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 39,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluegrip-c1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluegrip-c1.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 10,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluegrip-j1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluegrip-j1.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 7,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluegrip-s2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluegrip-s2.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 15,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-bluegrip-s1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-bluegrip-s1.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 7,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

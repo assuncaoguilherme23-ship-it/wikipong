@@ -117,6 +117,15 @@ const FONTES = {
     loja: 'AmericaTT',
     url: (p) => `https://americatt.net/marca/donic/${p > 1 ? `page/${p}/` : ''}`,
     marcaNoTitulo: true,
+    /* A Donic rebatizou a linha Ovtcharov como "Original" e a loja escreve as
+       duas ("Ovtcharov Original Carbospeed"); o catalogo guarda so' a nova. Sem
+       essa folga, as 10 laminas da familia apareciam como lacuna ja' tendo sido
+       colhidas. E' a mesma decisao registrada na ficha delas. */
+    /* "plus" entra junto porque a AmericaTT engole o "+" da classe: ela cadastra
+       "World Champion 89 Appelgren ALL" e "Original Dotec ALL" onde a Donic
+       publica ALL+. Sao 5 laminas ja' colhidas DESSA MESMA loja que voltavam
+       como lacuna. Nao ha' par ALL/ALL+ na Donic que isso pudesse fundir. */
+    familia: ['ovtcharov', 'plus'],
     /* Mesma loja e mesmo padrao da Stiga: slug sem prefixo fixo. A lista de
        linhas de BORRACHA da Donic e' outra — ver comentario em stiga.tipo(). */
     tipo: (slug) => {
@@ -124,8 +133,13 @@ const FONTES = {
       /* Acessorios que o filtro generico nao pegava e que apareciam contados
          como lamina: bolsa de calcados, fita protetora, meia, side tape e
          limpador. Nao sao material de jogo. */
+      /* "estilete" e' o acessorio de MESMO NOME, nao um modelo: e' a ferramenta
+         de cortar a borracha na montagem, a R$ 35. O preco era o sinal — nenhuma
+         lamina custa isso, a mais barata da Donic aqui e' R$ 315. Sem esta linha
+         ele entrava como lamina, do jeito que a Helix e a BlueGrip entraram como
+         lamina antes: nome fora da lista conhecida cai no ramo padrao. */
       if (
-        /raqueteira|capa|bola|cola|rede|mesa-de-|kit|^pino-|-pino-|bolsa|fita|meia|side-tape|limpador|calcado/.test(
+        /raqueteira|capa|bola|cola|rede|mesa-de-|kit|^pino-|-pino-|bolsa|fita|meia|side-tape|limpador|calcado|estilete/.test(
           slug,
         )
       )
@@ -401,9 +415,14 @@ function casa(nomeLoja, nomeCatalogo, familia = []) {
   const b = palavras(nomeCatalogo);
   if (a.size === b.size && [...a].every((t) => b.has(t))) return true;
   if (familia.length === 0) return false;
-  const [menor, maior] = a.size <= b.size ? [a, b] : [b, a];
-  if (![...menor].every((t) => maior.has(t))) return false;
-  const sobra = [...maior].filter((t) => !menor.has(t));
+  /* A folga vale nos DOIS sentidos, porque os dois lados podem estar incompletos
+     ao mesmo tempo: a AmericaTT escreve "Ovtcharov Original Dotec ALL" e o
+     catálogo "Original Dotec ALL+" — sobra "ovtcharov" na loja e "plus" aqui.
+     Exigir que um seja subconjunto do outro reprovava esse caso, então o teste é
+     sobre a diferença simétrica: tudo que só aparece de um lado precisa ser
+     palavra de família declarada. Continua não sendo "qualquer subconjunto" — a
+     lista por loja é que segura, e sem ela a comparação segue exata. */
+  const sobra = [...new Set([...a, ...b])].filter((t) => !a.has(t) || !b.has(t));
   return sobra.length > 0 && sobra.every((t) => familia.includes(t));
 }
 

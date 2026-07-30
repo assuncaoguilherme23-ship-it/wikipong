@@ -4747,6 +4747,134 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
+    },
+    "stiga-inspira-hybrid-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-stiga-inspira-hybrid-carbon/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra de carbono híbrida"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "stiga-nostalgic-vii-jp": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-stiga-nostalgic-vii-jp/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira, versão japonesa"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
+    },
+    "stiga-pure-cybershape": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-stiga-pure-cybershape/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira, cabeça hexagonal"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. É um produto distinto, com preço próprio — nesta loja a versão hexagonal costuma custar menos que a redonda da mesma família. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
+    },
+    "stiga-aura-hybrid-carbon-cybershape": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-aura-hybrid-carbon-cybershape/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono híbrido, cabeça hexagonal"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. É um produto distinto, com preço próprio — nesta loja a versão hexagonal costuma custar menos que a redonda da mesma família. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
+    },
+    "stiga-defensive-classic-ii-cybershape": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-defensive-classic-ii-cybershape/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas, construção defensiva, cabeça hexagonal"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. É um produto distinto, com preço próprio — nesta loja a versão hexagonal costuma custar menos que a redonda da mesma família. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
+    },
+    "stiga-destiny-carbon-cybershape": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-destiny-carbon-cybershape/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas + carbono, cabeça hexagonal"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. É um produto distinto, com preço próprio — nesta loja a versão hexagonal costuma custar menos que a redonda da mesma família. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
+    },
+    "stiga-i1-hybrid-carbon-cybershape": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-i1-hybrid-carbon-cybershape/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas + carbono híbrido, cabeça hexagonal"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. É um produto distinto, com preço próprio — nesta loja a versão hexagonal costuma custar menos que a redonda da mesma família. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
+    },
+    "stiga-wavy-cybershape": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-wavy-cybershape/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Construção Wavy, cabeça hexagonal"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. É um produto distinto, com preço próprio — nesta loja a versão hexagonal costuma custar menos que a redonda da mesma família. Esta lâmina não tem amostra própria na comunidade que sustente números de desempenho."
     }
   }
 }

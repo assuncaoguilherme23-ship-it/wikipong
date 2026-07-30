@@ -115,6 +115,9 @@ const FONTES = {
   },
   stiga: {
     loja: 'AmericaTT',
+    /* O slug "stiga-cybershape" redireciona para a Cybershape Carbon: e' apelido
+       da mesma pagina, e a palavra que falta no nome curto e' a familia. */
+    familia: ['carbon'],
     url: (p) => `https://americatt.net/marca/stiga/${p > 1 ? `page/${p}/` : ''}`,
     marcaNoTitulo: true,
     /**
@@ -128,7 +131,8 @@ const FONTES = {
      */
     tipo: (slug) => {
       if (!/stiga/.test(slug)) return null;
-      if (/raqueteira|capa|bola|cola|rede|mesa-de-|kit/.test(slug)) return null;
+      /* "pino-stiga-symmetry" é de pinos — adiado, como nas outras marcas. */
+      if (/raqueteira|capa|bola|cola|rede|mesa-de-|kit|^pino-|-pino-/.test(slug)) return null;
       if (slug.startsWith('borracha-')) return 'Borracha';
       if (slug.startsWith('madeira-')) return 'Lâmina';
       /* "raquete-stiga-*" é raquete montada, com borracha colada. */
@@ -306,7 +310,7 @@ const chave = (s) =>
        escolhe na compra, como o cabo — é um material só. */
     /* "copia" NÃO entra aqui: quem trata dela é a regra do par "copia <token>"
        mais abaixo. Removê-la sozinha deixaria o sufixo órfão ("dzumb") no nome. */
-    .replace(/\b(classineta|classica|com cabo fl|cabo fl|cabo concavo)\b/g, ' ')
+    .replace(/\b(classinetas|classineta|classica|com cabo fl|cabo fl|cabo concavo)\b/g, ' ')
     .replace(/\b(com )?(\d+) folhas\b/g, ' ')
     .replace(/\braquete\b/g, ' ')
     /* A loja descreve a lâmina dentro do nome ("... com Carbono", "... e cabo

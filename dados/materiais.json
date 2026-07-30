@@ -3788,7 +3788,7 @@
     },
     {
       "id": "stiga-clipper-wood",
-      "nome": "Clipper Wood",
+      "nome": "Clipper",
       "marca": "Stiga",
       "tipo": "Lâmina",
       "nivel": "Avançado",
@@ -4329,6 +4329,131 @@
       "simples": {
         "tag": "A Defensive Pro em versão JP",
         "frase": "A variante japonesa da Defensive Pro, mais barata que a original. Não consta do Revspin — entra pela ficha da loja."
+      }
+    },
+    {
+      "id": "stiga-inspira-hybrid-carbon",
+      "nome": "Inspira Hybrid Carbon",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1175,
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 9.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.9,
+      "reviews": 9,
+      "simples": {
+        "tag": "A lâmina mais bem avaliada do catálogo",
+        "frase": "Nota 9,8 na comunidade — a maior de todas as lâminas do site. Controle 9,5 acima da velocidade 9,1: um avaliador resume que ela não é um monstro de velocidade apesar do rótulo OFF+, e sim que recompensa jogo inteligente e timing."
+      }
+    },
+    {
+      "id": "stiga-nostalgic-vii-jp",
+      "nome": "Nostalgic VII JP",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 646,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Nostalgic em versão JP",
+        "frase": "A variante japonesa da Nostalgic VII, mais barata que a original (R$ 646 contra R$ 763). Sem amostra própria na comunidade."
+      }
+    },
+    {
+      "id": "stiga-pure-cybershape",
+      "nome": "Pure Cybershape",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 705,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Pure em cabeça hexagonal",
+        "frase": "As mesmas 7 camadas de madeira da Pure redonda (R$ 682), na geometria Cybershape. Duas avaliações na comunidade — abaixo do nosso piso."
+      }
+    },
+    {
+      "id": "stiga-aura-hybrid-carbon-cybershape",
+      "nome": "Aura Hybrid Carbon Cybershape",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 916,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Mais barata que a versão redonda",
+        "frase": "R$ 916 contra R$ 1.058 da Aura Hybrid Carbon de cabeça redonda — na Stiga, a geometria hexagonal nem sempre custa mais. Sem avaliações registradas."
+      }
+    },
+    {
+      "id": "stiga-defensive-classic-ii-cybershape",
+      "nome": "Defensive Classic II Cybershape",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 588,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Defensiva hexagonal",
+        "frase": "A Defensive Classic II na geometria Cybershape. A cabeça maior da hexagonal costuma ajudar quem corta longe da mesa. Zero avaliações."
+      }
+    },
+    {
+      "id": "stiga-destiny-carbon-cybershape",
+      "nome": "Destiny Carbon Cybershape",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1058,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Destiny em hexagonal",
+        "frase": "R$ 1.058 contra R$ 999 da Destiny Carbon redonda. Zero avaliações na comunidade — a linha inteira é recente."
+      }
+    },
+    {
+      "id": "stiga-i1-hybrid-carbon-cybershape",
+      "nome": "i1 Hybrid Carbon Cybershape",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1034,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A i1 em hexagonal",
+        "frase": "A versão Cybershape da i1 Hybrid Carbon, R$ 35 acima da redonda. Nem o Revspin lista essa linha ainda."
+      }
+    },
+    {
+      "id": "stiga-wavy-cybershape",
+      "nome": "Wavy Cybershape",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 822,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Wavy em hexagonal",
+        "frase": "Mesmo preço da Wavy redonda (R$ 822). O Revspin tem uma \"Wavy Ultra Fiber Cybershape\" com uma avaliação, que é outra especificação de fibra."
       }
     }
   ]

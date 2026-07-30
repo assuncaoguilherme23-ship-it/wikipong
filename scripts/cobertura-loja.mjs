@@ -122,11 +122,16 @@ const FONTES = {
     tipo: (slug) => {
       if (!/donic/.test(slug)) return null;
       if (/raqueteira|capa|bola|cola|rede|mesa-de-|kit|^pino-|-pino-/.test(slug)) return null;
+      /* PINOS da Donic, conferidos no indice /pips/ do Revspin — que separa por
+         URL: /rubber/ para lisa, /pips/ para pinos. Eu tinha desconfiado de
+         Desto, Vario e Baracuda; nenhuma das tres esta la'. Sao lisas. Das que
+         eu suspeitei, so' a Piranja e' de pinos mesmo. */
+      if (/akkadi|baxster|baxter|twister|alligator|piranja|spike|zicco/.test(slug)) return null;
       if (slug.startsWith('borracha-')) return 'Borracha';
       if (slug.startsWith('madeira-')) return 'Lâmina';
       if (slug.startsWith('raquete-')) return null;
       const LINHAS_DE_BORRACHA =
-        /bluestorm|bluefire|baracuda|acuda|coppa|desto|vario|slice|piranja|traction|jo-?spin/;
+        /bluestorm|bluefire|bluestar|baracuda|acuda|coppa|desto|vario|slice|sonex|traction/;
       return LINHAS_DE_BORRACHA.test(slug) ? 'Borracha' : 'Lâmina';
     },
   },

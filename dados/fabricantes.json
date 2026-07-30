@@ -4251,6 +4251,134 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. ATENÇÃO ao nome: o Revspin tem amostra para um modelo de nome PARECIDO, mas não idêntico ao que a loja vende. Nome parecido não é o mesmo produto, então a nota não foi atribuída. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "stiga-clipper-wood": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-stiga-clipper/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "stiga-clipper-cr": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-clipper-cr/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira, tratamento CR"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Duas siglas se repetem nesta família: CR é o tratamento de superfície da madeira e WRB é o sistema de peso no cabo. Cada combinação é um produto distinto, com preço e nota próprios — não são acabamentos da mesma lâmina."
+    },
+    "stiga-clipper-cr-wrb": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-clipper-cr-wrb/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas, tratamento CR + sistema WRB no cabo"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Duas siglas se repetem nesta família: CR é o tratamento de superfície da madeira e WRB é o sistema de peso no cabo. Cada combinação é um produto distinto, com preço e nota próprios — não são acabamentos da mesma lâmina."
+    },
+    "stiga-allround-cr": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-allround-cr/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira, tratamento CR"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Duas siglas se repetem nesta família: CR é o tratamento de superfície da madeira e WRB é o sistema de peso no cabo. Cada combinação é um produto distinto, com preço e nota próprios — não são acabamentos da mesma lâmina. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "stiga-allround-evolution": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-allround-evolution/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "stiga-offensive-cr": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-offensive-cr/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira, tratamento CR"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Duas siglas se repetem nesta família: CR é o tratamento de superfície da madeira e WRB é o sistema de peso no cabo. Cada combinação é um produto distinto, com preço e nota próprios — não são acabamentos da mesma lâmina. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "stiga-offensive-cr-wrb": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-offensive-cr-wrb/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas, tratamento CR + sistema WRB"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Duas siglas se repetem nesta família: CR é o tratamento de superfície da madeira e WRB é o sistema de peso no cabo. Cada combinação é um produto distinto, com preço e nota próprios — não são acabamentos da mesma lâmina. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "stiga-allround-cr-wrb": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-allround-cr-wrb/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas, tratamento CR + sistema WRB"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Duas siglas se repetem nesta família: CR é o tratamento de superfície da madeira e WRB é o sistema de peso no cabo. Cada combinação é um produto distinto, com preço e nota próprios — não são acabamentos da mesma lâmina. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
     }
   }
 }

@@ -1657,6 +1657,70 @@
       "url": "https://americatt.net/stiga-celero-wood/",
       "atualizadoEm": "2026-07-29",
       "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-clipper-wood",
+      "loja": "AmericaTT",
+      "preco": 547,
+      "url": "https://americatt.net/madeira-stiga-clipper/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-clipper-cr",
+      "loja": "AmericaTT",
+      "preco": 565,
+      "url": "https://americatt.net/stiga-clipper-cr/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-clipper-cr-wrb",
+      "loja": "AmericaTT",
+      "preco": 612,
+      "url": "https://americatt.net/stiga-clipper-cr-wrb/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-allround-cr",
+      "loja": "AmericaTT",
+      "preco": 361,
+      "url": "https://americatt.net/stiga-allround-cr/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-allround-evolution",
+      "loja": "AmericaTT",
+      "preco": 373,
+      "url": "https://americatt.net/stiga-allround-evolution/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-offensive-cr",
+      "loja": "AmericaTT",
+      "preco": 367,
+      "url": "https://americatt.net/stiga-offensive-cr/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-offensive-cr-wrb",
+      "loja": "AmericaTT",
+      "preco": 398,
+      "url": "https://americatt.net/stiga-offensive-cr-wrb/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-allround-cr-wrb",
+      "loja": "AmericaTT",
+      "preco": 373,
+      "url": "https://americatt.net/stiga-allround-cr-wrb/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
     }
   ]
 }

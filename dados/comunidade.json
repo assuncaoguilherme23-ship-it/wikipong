@@ -848,6 +848,62 @@
       "escala": 10,
       "avaliacoes": 12,
       "consultadoEm": "2026-07-29"
+    },
+    "stiga-clipper-wood": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-clipper.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 55,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-clipper-cr": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-clipper-cr.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 14,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-clipper-cr-wrb": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-clipper-cr-wrb.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 37,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-allround-cr": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-allround-classic-cr.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 9,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-allround-evolution": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-allround-evolution.html",
+      "nota": 8.3,
+      "escala": 10,
+      "avaliacoes": 21,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-offensive-cr": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-offensive-cr.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 10,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-offensive-cr-wrb": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-offensive-cr-wrb.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 10,
+      "consultadoEm": "2026-07-29"
     }
   }
 }

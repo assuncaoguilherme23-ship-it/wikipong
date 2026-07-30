@@ -3785,6 +3785,161 @@
         "tag": "Madeira pura acessível",
         "frase": "Cinco camadas sem fibra, a mais barata deste lote. O Revspin tem 15 avaliações para uma lâmina \"Celero\" — sem o \"Wood\" — e por isso a nota não foi atribuída."
       }
+    },
+    {
+      "id": "stiga-clipper-wood",
+      "nome": "Clipper Wood",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 547,
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 55,
+      "simples": {
+        "tag": "A clássica de 7 madeiras",
+        "frase": "55 avaliações — a maior amostra de lâmina Stiga no catálogo. Sete camadas sem fibra: a comunidade a descreve para quem ataca de perto e do meio, variando drive e topspin. Madeira macia dá giro, e a rigidez dá controle."
+      }
+    },
+    {
+      "id": "stiga-clipper-cr",
+      "nome": "Clipper CR",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 565,
+      "specs": {
+        "velocidade": 9.0,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 14,
+      "simples": {
+        "tag": "A Clipper com superfície tratada",
+        "frase": "O tratamento CR endurece a superfície: velocidade sobe para 9,0 mantendo o controle da Clipper original. A comunidade a coloca para quem ataca o tempo todo."
+      }
+    },
+    {
+      "id": "stiga-clipper-cr-wrb",
+      "nome": "Clipper CR WRB",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 612,
+      "specs": {
+        "velocidade": 9.0,
+        "controle": 8.6
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 37,
+      "simples": {
+        "tag": "A mais rápida da família",
+        "frase": "Um avaliador a chama de lâmina mais rápida que já testou. Outro avisa que o controle fica um degrau abaixo da velocidade — o que, com 37 avaliações sustentando, é um aviso e não impressão isolada."
+      }
+    },
+    {
+      "id": "stiga-allround-cr",
+      "nome": "Allround CR",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 361,
+      "specs": {
+        "velocidade": 7.4,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.35,
+      "reviews": 9,
+      "simples": {
+        "tag": "Controle 9,2 por R$ 361",
+        "frase": "A própria Stiga publica velocidade 4,6 e controle 8,7 nesta lâmina — ela foi desenhada para controlar, não para atacar. A comunidade confirma: controle 9,2 contra velocidade 7,4."
+      }
+    },
+    {
+      "id": "stiga-allround-evolution",
+      "nome": "Allround Evolution",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 373,
+      "specs": {
+        "velocidade": 7.3,
+        "controle": 8.7
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.15,
+      "reviews": 21,
+      "simples": {
+        "tag": "Lenta de propósito",
+        "frase": "Um avaliador descreve a bola viajando em câmera lenta. Não é defeito: é uma lâmina de aprendizado, recomendada para quem prioriza toque e consistência antes de potência."
+      }
+    },
+    {
+      "id": "stiga-offensive-cr",
+      "nome": "Offensive CR",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 367,
+      "specs": {
+        "velocidade": 8.1,
+        "controle": 8.3
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 10,
+      "simples": {
+        "tag": "Ofensiva de entrada",
+        "frase": "Classe OFF- de verdade: a comunidade avisa que é lenta para o padrão atual, o que a torna acessível para quem está saindo da lâmina allround."
+      }
+    },
+    {
+      "id": "stiga-offensive-cr-wrb",
+      "nome": "Offensive CR WRB",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 398,
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 8.8
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 10,
+      "simples": {
+        "tag": "Controle acima da velocidade",
+        "frase": "O sistema WRB no cabo sobe os dois eixos em relação à CR simples, e o controle (8,8) fica acima da velocidade (8,6) — perfil de quem ataca sem abrir mão do toque."
+      }
+    },
+    {
+      "id": "stiga-allround-cr-wrb",
+      "nome": "Allround CR WRB",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 373,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A allround com peso no cabo",
+        "frase": "A combinação CR + WRB na linha Allround. Só duas avaliações na comunidade — abaixo do nosso piso —, então entra pela ficha."
+      }
     }
   ]
 }

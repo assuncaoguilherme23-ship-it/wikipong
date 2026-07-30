@@ -1242,6 +1242,54 @@
       "fonte": "AmericaTT",
       "fonteUrl": "https://americatt.net/stiga-celero-wood/",
       "consultadoEm": "2026-07-29"
+    },
+    "stiga-clipper-wood": {
+      "arquivo": "stiga-clipper-wood.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-stiga-clipper/",
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-clipper-cr": {
+      "arquivo": "stiga-clipper-cr.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/stiga-clipper-cr/",
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-clipper-cr-wrb": {
+      "arquivo": "stiga-clipper-cr-wrb.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/stiga-clipper-cr-wrb/",
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-allround-cr": {
+      "arquivo": "stiga-allround-cr.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/stiga-allround-cr/",
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-allround-evolution": {
+      "arquivo": "stiga-allround-evolution.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/stiga-allround-evolution/",
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-offensive-cr": {
+      "arquivo": "stiga-offensive-cr.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/stiga-offensive-cr/",
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-offensive-cr-wrb": {
+      "arquivo": "stiga-offensive-cr-wrb.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/stiga-offensive-cr-wrb/",
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-allround-cr-wrb": {
+      "arquivo": "stiga-allround-cr-wrb.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/stiga-allround-cr-wrb/",
+      "consultadoEm": "2026-07-29"
     }
   }
 }

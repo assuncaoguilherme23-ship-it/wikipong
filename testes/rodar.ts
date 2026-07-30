@@ -24,6 +24,10 @@ import {
 } from '../src/logica/escalas.js';
 import { etiquetasDoPreset } from '../src/logica/descrever-filtro.js';
 import { precoTotal, observacoes, completa, pecasDe } from '../src/logica/montagem.js';
+import {
+  validar, resumir, ordenar, recortar, ranking, wilson, aprovadas, maisRecentes,
+  ROTULO_ESTILO, INTENCAO_DO_ESTILO, PISO_PARA_MEDIA, Avaliacao,
+} from '../src/logica/avaliacoes.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
@@ -540,6 +544,85 @@ const perfilComSpin = { id: 'x', nome: 'x', descricao: 'x', presetURL: '/catalog
 const vLam = combinaComPerfil(laminaSemSpin, perfilComSpin);
 afirma(vLam.criterios.some(c => c.detalhe === 'efeito é da borracha, não da lâmina'),
   'veredito explica por que a lâmina não tem efeito');
+
+
+// ─────────── Avaliações da comunidade (D-11 + emenda do estilo) ───────────
+
+const av = (p: Partial<Avaliacao>): Avaliacao => ({
+  id: p.id ?? 'a1', materialId: p.materialId ?? 'm1', autor: p.autor ?? 'Fulano',
+  nota: p.nota ?? 5, texto: p.texto ?? 'Texto suficientemente longo pra passar.',
+  nivel: p.nivel ?? 'Intermediário', tempoDeUso: p.tempoDeUso ?? '1 a 6 meses',
+  estilo: p.estilo ?? 'allround', criadoEm: p.criadoEm ?? '2026-07-01',
+  status: p.status ?? 'aprovado',
+});
+
+// O formulário mostra TUDO que falta de uma vez, não um erro por tentativa.
+afirma(validar({}).length === 6, 'rascunho vazio acusa os 6 campos obrigatórios');
+afirma(validar({ nota: 3.5 }).some(p => p.campo === 'nota'), 'meia-estrela é recusada');
+afirma(validar({ nota: 6 }).some(p => p.campo === 'nota'), 'nota acima de 5 é recusada');
+afirma(validar({ texto: 'curto' }).some(p => p.campo === 'texto'), 'texto curto demais é recusado');
+afirma(validar({
+  autor: 'Ana', nota: 4, texto: 'Uso há meses e o controle me surpreendeu bastante.',
+  nivel: 'Avançado', tempoDeUso: '6 meses a 1 ano', estilo: 'atacante',
+}).length === 0, 'rascunho completo passa');
+
+// Só avaliação APROVADA entra em número público (pré-moderação do D-11).
+const comPendente = [
+  av({ id: 'p1', nota: 5, status: 'pendente' }),
+  av({ id: 'p2', nota: 1, status: 'removido' }),
+  av({ id: 'p3', nota: 4 }), av({ id: 'p4', nota: 4 }), av({ id: 'p5', nota: 4 }),
+];
+afirma(aprovadas(comPendente).length === 3, 'pendente e removida ficam fora da conta');
+afirma(resumir(comPendente).media === 4, 'a média ignora o que não foi aprovado');
+
+// Abaixo do piso o site mostra as avaliações, não a média.
+afirma(resumir([av({ id: 'u1' })]).media === null, 'uma avaliação não vira média');
+afirma(resumir([av({ id: 'x1' }), av({ id: 'x2' }), av({ id: 'x3' })]).media !== null,
+  `com ${PISO_PARA_MEDIA} avaliações a média já sai`);
+
+// O recorte que dá sentido à nota: a mesma borracha, lida por quem joga diferente.
+const mesmaBorracha = [
+  av({ id: 'r1', nota: 5, nivel: 'Avançado', estilo: 'atacante' }),
+  av({ id: 'r2', nota: 5, nivel: 'Avançado', estilo: 'atacante' }),
+  av({ id: 'r3', nota: 2, nivel: 'Iniciante', estilo: 'defensor' }),
+];
+const resAv = resumir(mesmaBorracha);
+afirma(resAv.porNivel['Avançado']!.media === 5 && resAv.porNivel['Iniciante']!.media === 2,
+  'a média por nível separa o 5★ do avançado do 2★ do iniciante');
+afirma(resAv.porEstilo['atacante']!.total === 2, 'e o recorte por estilo também');
+afirma(recortar(mesmaBorracha, { estilo: 'defensor' }).length === 1, 'recorte por estilo filtra');
+afirma(resAv.distribuicao[4] === 2 && resAv.distribuicao[1] === 1, 'a distribuição por estrela bate');
+
+// A ARMADILHA QUE O WILSON EXISTE PRA EVITAR: uma nota 5 não pode liderar sobre
+// um material com muitas notas altas. Ordenar por média pura erraria isso.
+const disputa = [
+  av({ id: 'n1', materialId: 'novato', nota: 5 }),
+  ...Array.from({ length: 40 }, (_, i) =>
+    av({ id: 'v' + i, materialId: 'veterano', nota: i < 36 ? 5 : 3 })),
+];
+const tabela = ranking(disputa);
+afirma(tabela[0].materialId === 'veterano',
+  'no ranking, 40 avaliações vencem a única nota 5 (Wilson, D-11)');
+afirma(tabela[1].media === 5 && tabela[1].total === 1,
+  'e o novato segue com média 5 — o que muda é a ordem, não o fato');
+afirma(wilson(1, 1) < wilson(36, 40), 'Wilson pune amostra de um');
+afirma(wilson(0, 0) === 0, 'sem amostra, pontuação zero');
+
+// Ordenação e feed.
+const linhaAv = [
+  av({ id: 'o1', criadoEm: '2026-01-01', nota: 2 }),
+  av({ id: 'o2', criadoEm: '2026-06-01', nota: 5 }),
+];
+afirma(ordenar(linhaAv, 'recentes')[0].id === 'o2', 'recentes ordena por data');
+afirma(ordenar(linhaAv, 'nota-baixa')[0].id === 'o1', 'nota-baixa mostra a crítica primeiro');
+afirma(maisRecentes(linhaAv, 1).length === 1, 'o feed respeita o limite pedido');
+
+// A tag do comentário e o guia /aprender/estilos-de-jogo falam a mesma língua,
+// e o estilo de quem joga aponta pra intenção que o catálogo já usa.
+afirma(ROTULO_ESTILO.allround === 'All-round', 'o rótulo do estilo é o do guia');
+afirma(Object.values(INTENCAO_DO_ESTILO).every(i =>
+  ['atacar', 'equilibrado', 'controlar'].includes(i)),
+  'todo estilo aponta pra uma intenção que existe no catálogo');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

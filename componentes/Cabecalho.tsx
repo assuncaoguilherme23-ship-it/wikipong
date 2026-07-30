@@ -141,6 +141,13 @@ export function Cabecalho() {
             Aprender
           </Link>
           <Link
+            href="/comunidade/"
+            className={estilos.navLink}
+            aria-current={rota.startsWith('/comunidade') ? 'page' : undefined}
+          >
+            Comunidade
+          </Link>
+          <Link
             href="/profissionais/"
             className={estilos.navLink}
             aria-current={rota.startsWith('/profissionais') ? 'page' : undefined}
@@ -207,6 +214,7 @@ export function Cabecalho() {
             <Link href="/aprender/">Guias</Link>
             <Link href="/glossario/">Glossário</Link>
             <p className={`mono ${estilos.drawerTitulo}`}>Comunidade</p>
+            <Link href="/comunidade/">Comunidade</Link>
             <Link href="/profissionais/">O que os profissionais usam</Link>
             <Link href="/noticias/">Notícias</Link>
             <Link href="/quiz/" className={`botao-primario ${estilos.drawerCta}`}>

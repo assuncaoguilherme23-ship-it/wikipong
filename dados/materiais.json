@@ -3940,6 +3940,101 @@
         "tag": "A allround com peso no cabo",
         "frase": "A combinação CR + WRB na linha Allround. Só duas avaliações na comunidade — abaixo do nosso piso —, então entra pela ficha."
       }
+    },
+    {
+      "id": "stiga-cybershape-carbon",
+      "nome": "Cybershape Carbon",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2232,
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 24,
+      "simples": {
+        "tag": "A hexagonal de carbono",
+        "frase": "Velocidade 9,1 com 24 avaliações sustentando. A comunidade avisa que a leitura muda com o nível: jogador avançado relata controle forte, e um intermediário achou o controle ruim. É lâmina que cobra gesto compacto."
+      }
+    },
+    {
+      "id": "stiga-cybershape-carbon-cwt",
+      "nome": "Cybershape Carbon CWT",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2679,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "O material mais caro do catálogo",
+        "frase": "R$ 2.679 — nenhum material do WikiPong custa mais. É a Cybershape Carbon com o sistema de peso CWT. Três avaliações na comunidade, abaixo do nosso piso."
+      }
+    },
+    {
+      "id": "stiga-cybershape-wood-cwt",
+      "nome": "Cybershape Wood CWT",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1786,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Hexagonal sem fibra",
+        "frase": "Cinco camadas de madeira pura na cabeça hexagonal, com o sistema CWT. Duas avaliações — entra pela ficha."
+      }
+    },
+    {
+      "id": "stiga-cybershape-clipper",
+      "nome": "Cybershape Clipper",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 705,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Clipper em cabeça hexagonal",
+        "frase": "As mesmas 7 camadas da Clipper Wood, na geometria Cybershape. Três avaliações — a comunidade ainda não formou amostra que sustente números."
+      }
+    },
+    {
+      "id": "stiga-cybershape-allround-classic",
+      "nome": "Cybershape Allround Classic",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 658,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Allround em cabeça hexagonal",
+        "frase": "A leitura hexagonal da Allround Classic, a lâmina de controle mais tradicional da Stiga. Quatro avaliações, abaixo do piso."
+      }
+    },
+    {
+      "id": "stiga-pure",
+      "nome": "Pure",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 682,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras sem fibra",
+        "frase": "Construção de 7 camadas de madeira pura por R$ 682. Uma única avaliação registrada na comunidade."
+      }
     }
   ]
 }

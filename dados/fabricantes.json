@@ -4379,6 +4379,102 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Duas siglas se repetem nesta família: CR é o tratamento de superfície da madeira e WRB é o sistema de peso no cabo. Cada combinação é um produto distinto, com preço e nota próprios — não são acabamentos da mesma lâmina. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "stiga-cybershape-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-cybershape-carbon/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra de carbono, cabeça hexagonal"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga, não um acabamento: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. São produtos distintos. A loja vende esta lâmina em dois formatos de cabo, clássico e classineta. O formato se escolhe na compra."
+    },
+    "stiga-cybershape-carbon-cwt": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-stiga-cybershape-carbon-cwt/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono, cabeça hexagonal, sistema CWT"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga, não um acabamento: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. São produtos distintos. CWT é o sistema de peso da Stiga aplicado a esta lâmina — outra especificação, outro preço. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "stiga-cybershape-wood-cwt": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-stiga-cybershape-wood-cwt/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira, cabeça hexagonal, sistema CWT"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga, não um acabamento: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. São produtos distintos. CWT é o sistema de peso da Stiga aplicado a esta lâmina — outra especificação, outro preço. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "stiga-cybershape-clipper": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-stiga-cybershape-clipper/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira, cabeça hexagonal"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga, não um acabamento: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. São produtos distintos. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "stiga-cybershape-allround-classic": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-stiga-cybershape-allround-classic/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira, cabeça hexagonal"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. CYBERSHAPE é a cabeça hexagonal da Stiga, não um acabamento: a geometria muda a área útil e o ponto doce em relação à cabeça redonda da mesma linha. São produtos distintos. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "stiga-pure": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-pure/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
     }
   }
 }

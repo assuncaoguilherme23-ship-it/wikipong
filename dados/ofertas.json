@@ -1721,6 +1721,54 @@
       "url": "https://americatt.net/stiga-allround-cr-wrb/",
       "atualizadoEm": "2026-07-29",
       "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-cybershape-carbon",
+      "loja": "AmericaTT",
+      "preco": 2232,
+      "url": "https://americatt.net/stiga-cybershape-carbon/",
+      "atualizadoEm": "2026-07-30",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-cybershape-carbon-cwt",
+      "loja": "AmericaTT",
+      "preco": 2679,
+      "url": "https://americatt.net/madeira-stiga-cybershape-carbon-cwt/",
+      "atualizadoEm": "2026-07-30",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-cybershape-wood-cwt",
+      "loja": "AmericaTT",
+      "preco": 1786,
+      "url": "https://americatt.net/madeira-stiga-cybershape-wood-cwt/",
+      "atualizadoEm": "2026-07-30",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-cybershape-clipper",
+      "loja": "AmericaTT",
+      "preco": 705,
+      "url": "https://americatt.net/madeira-stiga-cybershape-clipper/",
+      "atualizadoEm": "2026-07-30",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-cybershape-allround-classic",
+      "loja": "AmericaTT",
+      "preco": 658,
+      "url": "https://americatt.net/madeira-stiga-cybershape-allround-classic/",
+      "atualizadoEm": "2026-07-30",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-pure",
+      "loja": "AmericaTT",
+      "preco": 682,
+      "url": "https://americatt.net/stiga-pure/",
+      "atualizadoEm": "2026-07-30",
+      "nota": "Preço do dado estruturado da página do produto."
     }
   ]
 }

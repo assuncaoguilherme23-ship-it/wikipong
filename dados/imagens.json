@@ -1290,6 +1290,42 @@
       "fonte": "AmericaTT",
       "fonteUrl": "https://americatt.net/stiga-allround-cr-wrb/",
       "consultadoEm": "2026-07-29"
+    },
+    "stiga-cybershape-carbon": {
+      "arquivo": "stiga-cybershape-carbon.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/stiga-cybershape-carbon/",
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-cybershape-carbon-cwt": {
+      "arquivo": "stiga-cybershape-carbon-cwt.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-stiga-cybershape-carbon-cwt/",
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-cybershape-wood-cwt": {
+      "arquivo": "stiga-cybershape-wood-cwt.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-stiga-cybershape-wood-cwt/",
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-cybershape-clipper": {
+      "arquivo": "stiga-cybershape-clipper.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-stiga-cybershape-clipper/",
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-cybershape-allround-classic": {
+      "arquivo": "stiga-cybershape-allround-classic.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-stiga-cybershape-allround-classic/",
+      "consultadoEm": "2026-07-30"
+    },
+    "stiga-pure": {
+      "arquivo": "stiga-pure.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/stiga-pure/",
+      "consultadoEm": "2026-07-30"
     }
   }
 }

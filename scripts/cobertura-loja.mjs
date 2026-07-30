@@ -16,6 +16,22 @@
  *
  * NÃO roda nos testes: depende de rede e o resultado muda quando a loja muda.
  * É ferramenta de colheita, não invariante.
+ *
+ * ONDE MORA O PREÇO, LOJA A LOJA — anotado depois de eu publicar 25 borrachas
+ * Stiga a R$ 399 quando nenhuma custava isso:
+ *
+ *   AmericaTT (WooCommerce)  → schema.org ("price"). O primeiro "R$ ..." do
+ *                              HTML é um BANNER da loja, não o preço, e vem
+ *                              antes do bloco do produto. Ler o texto visível
+ *                              dá o mesmo número em toda página do site.
+ *   Tibhar Brasil            → schema.org e texto visível concordam.
+ *   Tray / Loja Integrada    → primeiro "R$ ..." é o preço; os seguintes são
+ *   (OperaTT, TMS, JJ Yamada)  parcela e Pix. Sem schema.org.
+ *
+ * O sintoma que denuncia: vários produtos de linhas diferentes com preço
+ * idêntico ao centavo. Confira sempre contra um preço que você já tem de outra
+ * fonte — invariante interno não pega leitor errado, porque catálogo e oferta
+ * saem do mesmo leitor.
  */
 import { readFileSync } from 'node:fs';
 

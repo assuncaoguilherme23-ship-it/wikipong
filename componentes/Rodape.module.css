@@ -26,14 +26,14 @@
 }
 .tagline {
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
   max-width: 34ch;
   text-wrap: pretty;
 }
 
 .colunaTitulo {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cor-sobre-mesa);
@@ -64,7 +64,7 @@
 }
 .base p {
   margin: 1.25rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
 }
 .linhaCentral {
   border: none;

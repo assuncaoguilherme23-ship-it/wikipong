@@ -10,14 +10,14 @@
 }
 
 .status {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
   margin: 0;
 }
 .titulo {
-  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-size: var(--titulo-1);
   font-weight: 800;
 }
 .material {
@@ -26,26 +26,26 @@
   max-width: 60ch;
 }
 .checado {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-mudo);
 }
 .destino {
   margin: 0.9rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   word-break: break-all;
 }
 .aviso {
   margin: 1rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   background: var(--cor-acento-suave);
   border-radius: var(--raio-md);
   padding: 0.9rem 1.1rem;
   max-width: 62ch;
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
 }
 .voltar {
   margin: 1.5rem 0 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
 }

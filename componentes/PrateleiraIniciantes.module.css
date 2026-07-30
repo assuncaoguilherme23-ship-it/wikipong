@@ -10,7 +10,7 @@
   margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
 }
 .titulo {
-  font-size: clamp(1.5rem, 3.8vw, 2rem);
+  font-size: var(--titulo-2);
 }
 .sub {
   margin: 0.4rem 0 0;
@@ -116,19 +116,19 @@
 .nome {
   font-family: var(--fonte-display);
   font-weight: 700;
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
 }
 .meta {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   color: var(--cor-tinta-suave);
 }
 .tag {
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   flex: 1; /* empurra o preço pra base, alinhando os cards */
 }
 .preco {
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
   font-weight: 600;
   font-feature-settings: 'tnum' 1;
 }
@@ -152,7 +152,7 @@
   transition: background 160ms ease;
 }
 .verTodos span {
-  font-size: 1.5rem; /* degrau stat do ramp */
+  font-size: var(--texto-numero); /* degrau stat do ramp */
 }
 .verTodos:hover {
   background: color-mix(in srgb, var(--cor-acento) 16%, transparent);

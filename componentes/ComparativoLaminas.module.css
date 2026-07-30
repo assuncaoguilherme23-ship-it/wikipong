@@ -17,7 +17,7 @@
   border: 1px solid var(--cor-linha-forte);
   border-radius: var(--raio-md);
   overflow: hidden;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
 }
 .tabela th,
 .tabela td {
@@ -33,7 +33,7 @@
 .tabela thead th {
   background: var(--cor-superficie-2);
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -68,7 +68,7 @@
   border-radius: var(--raio-md);
 }
 .indicesTitulo {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -81,7 +81,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 .indicesLista strong {
@@ -89,7 +89,7 @@
 }
 .indicesAviso {
   margin: 0.9rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   max-width: 64ch;
 }

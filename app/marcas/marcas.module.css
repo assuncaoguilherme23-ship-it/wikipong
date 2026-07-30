@@ -3,7 +3,7 @@
   min-height: 60dvh;
 }
 .titulo {
-  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-size: var(--titulo-1);
   font-weight: 800;
   margin-top: 0.5rem;
 }
@@ -47,25 +47,25 @@
   gap: 0.75rem;
 }
 .nome {
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
   font-weight: 700;
 }
 .pais {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
 }
 .descricao {
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.65;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
   color: var(--cor-tinta-suave);
   text-wrap: pretty;
 }
 .meta {
   margin: auto 0 0;
   padding-top: 0.75rem;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-mudo);
 }

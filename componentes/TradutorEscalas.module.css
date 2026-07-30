@@ -23,7 +23,7 @@
 .rotuloCampo {
   display: block;
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -39,7 +39,7 @@
   gap: 1rem;
 }
 .valorGrande {
-  font-size: 1.5rem; /* degrau stat */
+  font-size: var(--texto-numero); /* degrau stat */
   font-weight: 600;
   color: var(--cor-tinta);
   min-width: 3.5ch;
@@ -68,7 +68,7 @@
 }
 .opcaoEscala {
   font: inherit;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   font-weight: 600;
   color: var(--cor-tinta-suave);
   background: none;
@@ -93,7 +93,7 @@
 }
 .saidaTitulo {
   margin: 0 0 0.9rem;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 
@@ -109,14 +109,14 @@
   padding: 0.9rem 1.1rem;
 }
 .equivNome {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
 }
 .equivValor {
   margin: 0.2rem 0 0;
-  font-size: 1.5rem; /* degrau stat — é o número que a pessoa veio buscar */
+  font-size: var(--texto-numero); /* degrau stat — é o número que a pessoa veio buscar */
   font-weight: 600;
   color: var(--cor-tinta);
   font-feature-settings: 'tnum' 1;
@@ -139,7 +139,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   color: var(--cor-tinta-suave);
   background: var(--cor-superficie-2);
@@ -170,7 +170,7 @@
 .sensacao {
   margin: 0.9rem 0 0;
   color: var(--cor-tinta-suave);
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   max-width: 68ch;
   text-wrap: pretty;
 }
@@ -187,14 +187,14 @@
   margin: 1.25rem 0 0;
   padding-top: 1rem;
   border-top: 1px solid var(--cor-linha);
-  font-size: 0.8rem;
-  line-height: 1.6;
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
   color: var(--cor-tinta-suave);
   max-width: 72ch;
 }
 .seloTag {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);

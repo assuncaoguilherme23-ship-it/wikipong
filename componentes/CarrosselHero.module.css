@@ -84,7 +84,7 @@
   height: 44px;
   flex-shrink: 0;
   font: inherit;
-  font-size: 1.1rem;
+  font-size: var(--texto-maior);
   color: var(--cor-tinta-suave);
   background: none;
   border: 1px solid var(--cor-linha);
@@ -111,13 +111,13 @@
 }
 .legendaNome {
   font-family: var(--fonte-display);
-  font-size: 1.12rem; /* degrau title do ramp */
+  font-size: var(--texto-maior); /* degrau title do ramp */
   font-weight: 700;
-  line-height: 1.2;
+  line-height: var(--altura-apertada);
   color: var(--cor-tinta);
 }
 .legendaMarca {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
 }
 

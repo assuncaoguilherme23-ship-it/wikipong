@@ -14,17 +14,17 @@
   border-bottom: 1px solid var(--cor-linha-forte);
 }
 .nome {
-  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-size: var(--titulo-1);
   font-weight: 800;
 }
 .meta {
   margin: 0.35rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
 }
 .preco {
   margin-left: auto;
-  font-size: 1.5rem; /* degrau stat */
+  font-size: var(--texto-numero); /* degrau stat */
   font-weight: 500;
   font-feature-settings: 'tnum' 1;
   color: var(--cor-tinta);
@@ -33,7 +33,7 @@
 .precoNota {
   display: block;
   font-family: var(--fonte-corpo);
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   font-weight: 400;
   color: var(--cor-tinta-suave);
 }
@@ -52,7 +52,7 @@
   }
 }
 .fichaTexto h2 {
-  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  font-size: var(--titulo-3);
   margin-bottom: 1rem;
 }
 .tabela {
@@ -72,7 +72,7 @@
   width: 11rem;
 }
 .valor {
-  font-size: 1.05rem; /* degrau data */
+  font-size: var(--texto-dado); /* degrau data */
   font-weight: 500;
   font-feature-settings: 'tnum' 1;
 }
@@ -82,19 +82,19 @@
 }
 .palavra {
   margin-left: 0.75rem;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 .nota {
   margin-top: 1rem;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   max-width: 62ch;
 }
 .selo {
   display: inline-block;
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
@@ -118,7 +118,7 @@
   box-shadow: var(--sombra-cartao);
 }
 .radarLegenda {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -131,7 +131,7 @@
   padding: clamp(1.5rem, 4vw, 2.5rem);
 }
 .portuguesClaro h2 {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-size: var(--titulo-3);
   margin-bottom: 0.75rem;
 }
 .tag {
@@ -151,7 +151,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 .resumoSimples li span {
@@ -163,7 +163,7 @@
 /* ── 1b. O que o fabricante publica (fato de fonte externa) ── */
 .subtituloFicha {
   margin: -0.5rem 0 1rem;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   max-width: 60ch;
   text-wrap: pretty;
@@ -183,7 +183,7 @@
   margin-bottom: 1rem;
 }
 .fabricanteTopo h2 {
-  font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+  font-size: var(--titulo-4);
 }
 .seloPendente {
   color: var(--cor-tinta-suave);
@@ -206,7 +206,7 @@
 }
 .fabricanteFicha dt {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -217,7 +217,7 @@
 }
 .linkDureza {
   margin: 0.9rem 0 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   font-weight: 600;
 }
 .linkDureza a {
@@ -229,7 +229,7 @@
 }
 .fabricantePendente {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   max-width: 62ch;
   text-wrap: pretty;
@@ -242,7 +242,7 @@
   border-top: 1px dashed var(--cor-linha-forte);
 }
 .indicesEscala {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   color: var(--cor-tinta-suave);
   margin: 0 0 0.75rem;
@@ -260,24 +260,24 @@
   flex-direction: column;
 }
 .indiceValor {
-  font-size: 1.5rem; /* degrau stat */
+  font-size: var(--texto-numero); /* degrau stat */
   font-weight: 500;
   font-feature-settings: 'tnum' 1;
   color: var(--cor-tinta);
 }
 .indiceRotulo {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
 }
 .indicesAviso {
   margin: 0.9rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   max-width: 62ch;
 }
 .fabricanteNota {
   margin: 1rem 0 0;
-  font-size: 0.88rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   background: var(--cor-superficie-2);
   border-radius: var(--raio-sm);
@@ -287,7 +287,7 @@
 }
 .fonte {
   margin: 1.25rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
 }
 .consultadoEm {
@@ -299,7 +299,7 @@
   margin-top: clamp(2rem, 5vw, 3rem);
 }
 .praQuemE h2 {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-size: var(--titulo-3);
   margin-bottom: 1rem;
 }
 .fichaJogo {
@@ -319,7 +319,7 @@
   border-radius: var(--raio-sm);
 }
 .fichaJogoRotulo {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -330,7 +330,7 @@
 }
 
 .vereditosTitulo {
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
   margin-bottom: 0.75rem;
 }
 .vereditos {
@@ -367,7 +367,7 @@
 }
 .vereditoRotulo {
   margin-left: auto;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
 }
 .criterios {
@@ -377,7 +377,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
 }
 .criterioOk {
   color: var(--cor-texto-acento);
@@ -386,7 +386,7 @@
   color: var(--cor-tinta-suave);
 }
 .vereditoLink {
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   font-weight: 600;
   text-decoration: none;
 }
@@ -396,7 +396,7 @@
 }
 .vereditoNota {
   margin: 1rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   max-width: 62ch;
 }
@@ -406,7 +406,7 @@
   margin-top: clamp(2rem, 5vw, 3rem);
 }
 .ondeComprar h2 {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-size: var(--titulo-3);
   margin-bottom: 0.9rem;
 }
 .ofertas {
@@ -440,7 +440,7 @@
   font-weight: 600;
 }
 .tagParceiro {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
@@ -450,12 +450,12 @@
   padding: 0.15rem 0.55rem;
 }
 .ofertaPreco {
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
   font-weight: 600;
   font-feature-settings: 'tnum' 1;
 }
 .ofertaData {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   color: var(--cor-mudo);
 }
 .ofertaBotao {
@@ -463,25 +463,25 @@
 }
 .ofertaNota {
   grid-column: 1 / -1;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
-  line-height: 1.6;
+  line-height: var(--altura-corpo);
   max-width: 66ch;
 }
 .ofertasNota,
 .semOferta {
   margin: 1.1rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   max-width: 68ch;
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   text-wrap: pretty;
 }
 .semOferta {
   background: var(--cor-superficie-2);
   border-radius: var(--raio-md);
   padding: 1rem 1.15rem;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
 }
 
 /* Diretório de lojas — onde procurar (não afirma estoque nem preço) */
@@ -491,7 +491,7 @@
   border-top: 2px dashed var(--cor-linha-forte);
 }
 .lojasTitulo {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -526,15 +526,15 @@
   font-weight: 600;
 }
 .lojaNota {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
 }
 .lojasAviso {
   margin: 1rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   max-width: 68ch;
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   text-wrap: pretty;
 }
 
@@ -545,12 +545,12 @@
   border-top: 1px solid var(--cor-linha-forte);
 }
 .comunidade h2 {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-size: var(--titulo-3);
   margin-bottom: 0.6rem;
 }
 .comunidadeVazia {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   max-width: 62ch;
   text-wrap: pretty;
@@ -561,7 +561,7 @@
   margin-top: clamp(1.75rem, 4vw, 2.5rem);
 }
 .quemUsa h2 {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-size: var(--titulo-3);
   margin-bottom: 0.8rem;
 }
 .quemUsaLista {
@@ -589,21 +589,21 @@
   transform: translateY(-2px);
 }
 .quemUsaBandeira {
-  font-size: 1.12rem; /* degrau title do ramp */
-  line-height: 1;
+  font-size: var(--texto-maior); /* degrau title do ramp */
+  line-height: var(--altura-dado);
 }
 .quemUsaNome {
   font-weight: 600;
 }
 .quemUsaPapel {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
 }
 .quemUsaNota {
   margin: 0.9rem 0 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   max-width: 62ch;
   text-wrap: pretty;
@@ -616,7 +616,7 @@
 /* ── Sinal da comunidade externa (Revspin) na seção Comunidade (D-19 f2) ── */
 .seloFavorito {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
@@ -638,24 +638,24 @@
   margin: 0;
 }
 .notaGrande {
-  font-size: clamp(1.6rem, 4vw, 2rem);
+  font-size: var(--titulo-2);
   font-weight: 700;
   font-feature-settings: 'tnum' 1;
   color: var(--cor-tinta);
-  line-height: 1;
+  line-height: var(--altura-dado);
 }
 .notaEscala {
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 .notaMeta {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 .comunidadeFonte {
   margin: 0.7rem 0 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 .comunidadeFonte a {
@@ -677,7 +677,7 @@
 }
 .imagemCredito {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   color: var(--cor-tinta-suave);
 }
 
@@ -696,7 +696,7 @@
   margin: 0;
 }
 .traducaoDe {
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
   color: var(--cor-tinta-suave);
 }
 .traducaoSeta {
@@ -704,15 +704,15 @@
   font-weight: 700;
 }
 .traducaoPara {
-  font-size: 1.5rem; /* degrau stat — é a resposta */
+  font-size: var(--texto-numero); /* degrau stat — é a resposta */
   font-weight: 600;
   color: var(--cor-tinta);
   font-feature-settings: 'tnum' 1;
 }
 .traducaoTexto {
   margin: 0.6rem 0 0;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
   color: var(--cor-tinta-suave);
   max-width: 68ch;
   text-wrap: pretty;
@@ -736,7 +736,7 @@
 .historicoUnico,
 .historico {
   grid-column: 1 / -1;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-mudo);
 }
 .historico {

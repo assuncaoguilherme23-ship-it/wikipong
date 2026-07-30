@@ -63,6 +63,31 @@ typography:
     fontFamily: "JetBrains Mono, ui-monospace, monospace"
     fontSize: "1.05rem"
     fontWeight: 500
+  # ── Degraus fluidos ADICIONADOS no código (divergência sob D-18, a sincronizar
+  #    de volta ao Figma). Os sete estáticos acima nunca derivaram; o que faltava
+  #    era o meio da escala de títulos, entre `display` e `title`. Sem eles, cada
+  #    tela improvisava seu próprio clamp: eram 22 variações quase iguais, a
+  #    maioria usada UMA vez, dizendo cinco coisas. Agora são cinco.
+  pageTitle: # --titulo-1 · h1 de página interna
+    fontFamily: "Archivo, system-ui, sans-serif"
+    fontSize: "clamp(2rem, 5.5vw, 3rem)"
+    fontWeight: 800
+    lineHeight: 1.08
+  subhead: # --titulo-3 · h3, subtítulo de bloco
+    fontFamily: "Archivo, system-ui, sans-serif"
+    fontSize: "clamp(1.3rem, 3vw, 1.6rem)"
+    fontWeight: 700
+    lineHeight: 1.08
+  cardTitle: # --titulo-4 · título de cartão
+    fontFamily: "Archivo, system-ui, sans-serif"
+    fontSize: "clamp(1.2rem, 2.8vw, 1.4rem)"
+    fontWeight: 700
+    lineHeight: 1.2
+  lede: # --lede · parágrafo de abertura
+    fontFamily: "Inter, system-ui, sans-serif"
+    fontSize: "clamp(1rem, 2.2vw, 1.15rem)"
+    fontWeight: 400
+    lineHeight: 1.6
     fontFeature: "'tnum' 1"
 rounded:
   sm: "9px"

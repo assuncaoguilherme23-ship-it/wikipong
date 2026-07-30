@@ -122,21 +122,21 @@
   color: var(--cor-texto-acento);
 }
 .megaTitulo {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
   margin: 0 0 0.35rem;
 }
 .megaContagem {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-mudo);
   margin-left: 0.3rem;
 }
 
 .ctaNav {
   padding-block: 0.45rem;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
 }
 
 /* ── Mobile: hambúrguer + drawer verde-mesa ── */
@@ -207,7 +207,7 @@
   color: var(--cor-acento);
 }
 .drawerTitulo {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cor-sobre-mesa-suave);

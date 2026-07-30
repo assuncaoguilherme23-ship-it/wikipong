@@ -3,13 +3,13 @@
   min-height: 60dvh;
 }
 .titulo {
-  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-size: var(--titulo-1);
   font-weight: 800;
   margin-top: 0.5rem;
 }
 .pais {
   margin: 0.4rem 0 0;
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
@@ -18,7 +18,7 @@
   color: var(--cor-tinta-suave);
   max-width: 68ch;
   margin: 0.75rem 0 0;
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   text-wrap: pretty;
 }
 
@@ -40,13 +40,13 @@
 }
 .numero dd {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--texto-numero);
   font-weight: 500;
   font-feature-settings: 'tnum' 1;
   color: var(--cor-tinta);
 }
 .numero dt {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
 }
 
@@ -54,13 +54,13 @@
   margin-top: clamp(2.25rem, 5vw, 3.25rem);
 }
 .tituloSecao {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-size: var(--titulo-3);
   margin-bottom: 1rem;
 }
 .texto {
   margin: 0;
   color: var(--cor-tinta-suave);
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   max-width: 68ch;
   text-wrap: pretty;
 }
@@ -103,12 +103,12 @@
   font-weight: 600;
 }
 .cartaoMeta {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
 }
 .cartaoPreco {
   margin-left: auto;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   font-feature-settings: 'tnum' 1;
 }
@@ -155,11 +155,11 @@
   margin-top: clamp(2.25rem, 5vw, 3.25rem);
   padding-top: 1.25rem;
   border-top: 1px solid var(--cor-linha);
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 .oficialNota {
   display: block;
   margin-top: 0.35rem;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
 }

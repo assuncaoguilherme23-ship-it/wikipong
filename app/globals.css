@@ -53,6 +53,62 @@
   --fonte-corpo: var(--fonte-inter), system-ui, sans-serif;
   --fonte-mono: var(--fonte-jetbrains), ui-monospace, monospace;
 
+  /* ── ESCALA TIPOGRÁFICA (divergência registrada sob D-18 — o Figma define as
+        três famílias, mas não uma escala de tamanhos; trilha de sync).
+
+        Não foi inventada: é a escala que o site JÁ usava, extraída dos 250
+        `font-size` espalhados por 24 folhas e batizada. Os degraus estáticos
+        são exatamente os valores que mais se repetiam. Os fluidos existiam em
+        22 variações quase iguais (22 `clamp` distintos, a maioria usada UMA
+        vez) que diziam cinco coisas — aqui viraram cinco.
+
+        Nomes por PAPEL, não por número: o papel diz onde usar. Os papéis do
+        DESIGN.md continuam valendo — estes tokens são o nome PT-BR deles.
+
+        OS SETE DEGRAUS ESTÁTICOS BATEM COM O DESIGN.md AO CENTÉSIMO. Nunca
+        houve deriva neles; a bagunça estava só nos títulos fluidos:
+
+          label   → --texto-micro    0.72rem   ·  caption → --texto-mini   0.8rem
+          small   → --texto-menor    0.9rem    ·  body    → --texto-base   1rem
+          data    → --texto-dado     1.05rem   ·  title   → --texto-maior  1.12rem
+          stat    → --texto-numero   1.5rem
+
+        DIVERGÊNCIA A SINCRONIZAR (D-18) — quatro degraus fluidos que o site
+        precisava e vinha improvisando, sem existir no DESIGN.md:
+        --titulo-1, --titulo-3, --titulo-4 e --lede.
+
+        DRIFT ACHADO E NÃO CORRIGIDO SOZINHO: o DESIGN.md registra display como
+        clamp(2.4rem, 6.5vw, 5rem) e o código vinha usando clamp(2.3rem, 6vw,
+        4.4rem) — 12% menor no topo. Mantive o valor do código, porque mudar o
+        maior texto do site é decisão de desenho, não arrumação de token. Fica
+        aqui para o fundador decidir de que lado sincronizar. ── */
+
+  /* Estáticos. O degrau é ~12%, o bastante para a hierarquia se ver sem gritar. */
+  --texto-micro: 0.72rem; /* eyebrow, tag, selo, mono pequeno */
+  --texto-mini: 0.8rem; /* legenda, trilha, data de checagem, nota de rodapé */
+  --texto-menor: 0.9rem; /* apoio, texto secundário de cartão */
+  --texto-base: 1rem; /* corpo — o mesmo do body */
+  --texto-dado: 1.05rem; /* valor numérico em destaque (voz de dados, D-04) */
+  --texto-maior: 1.12rem; /* lede de cartão, corpo enfatizado */
+  --texto-numero: 1.5rem; /* estatística grande */
+
+  /* Fluidos. O vw acompanha o degrau: título maior cresce mais rápido. */
+  --titulo-hero: clamp(2.3rem, 6vw, 4.4rem); /* h1 da home, só ele */
+  --titulo-1: clamp(2rem, 5.5vw, 3rem); /* h1 de página */
+  /* = headline do DESIGN.md, valor exato. O código vinha com 4vw/2.3rem, 2% menor;
+     como a diferença é invisível e o Figma é a fonte da verdade (D-01), alinhei. */
+  --titulo-2: clamp(1.6rem, 4.2vw, 2.4rem); /* h2 de seção */
+  --titulo-3: clamp(1.3rem, 3vw, 1.6rem); /* h3, subtítulo de bloco */
+  --titulo-4: clamp(1.2rem, 2.8vw, 1.4rem); /* título de cartão */
+  --lede: clamp(1rem, 2.2vw, 1.15rem); /* parágrafo de abertura */
+
+  /* Alturas de linha. Quanto maior o texto, mais apertada a entrelinha. */
+  --altura-titulo: 1.08; /* h1–h3 */
+  --altura-dado: 1; /* número solto, sem descida */
+  --altura-apertada: 1.2; /* título curto de cartão, rótulo em duas linhas */
+  --altura-corpo: 1.6; /* corpo — o mesmo do body */
+  --altura-leitura: 1.7; /* blocos longos de prosa (guias, glossário) */
+
   /* ── Derivados de layout (não são tokens do Figma) ── */
   --largura-conteudo: 72rem;
   --sombra-cartao: 0 1px 2px rgba(40, 48, 39, 0.06), 0 8px 24px rgba(40, 48, 39, 0.06);

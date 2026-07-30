@@ -3,7 +3,7 @@
   min-height: 60dvh;
 }
 .titulo {
-  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-size: var(--titulo-1);
   font-weight: 800;
   margin-top: 0.5rem;
 }
@@ -11,7 +11,7 @@
   color: var(--cor-tinta-suave);
   max-width: 64ch;
   margin: 0.6rem 0 clamp(1.75rem, 4vw, 2.5rem);
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   text-wrap: pretty;
 }
 
@@ -47,7 +47,7 @@
 }
 .campoRotulo {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -88,15 +88,15 @@
 }
 .previaNome {
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
 }
 .previaMeta {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   color: var(--cor-tinta-suave);
 }
 .previaPreco {
   margin-left: auto;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   font-feature-settings: 'tnum' 1;
 }
@@ -104,7 +104,7 @@
 .limpar {
   align-self: flex-start;
   font: inherit;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   background: none;
   border: none;
@@ -132,14 +132,14 @@
 }
 .totalValor {
   margin: 0;
-  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  font-size: var(--titulo-1);
   font-weight: 600;
   color: var(--cor-tinta);
   font-feature-settings: 'tnum' 1;
 }
 .totalNota {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 
@@ -157,7 +157,7 @@
 }
 .tabela thead th {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -173,7 +173,7 @@
 .celulaPapel {
   display: block;
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   font-weight: 400;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -202,13 +202,13 @@
 .obsTitulo {
   margin: 0 0 0.35rem;
   font-family: var(--fonte-display);
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
   font-weight: 700;
 }
 .obsTexto {
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
   color: var(--cor-tinta-suave);
   max-width: 72ch;
   text-wrap: pretty;
@@ -224,13 +224,13 @@
 .recusaTitulo {
   margin: 0 0 0.6rem;
   font-family: var(--fonte-display);
-  font-size: clamp(1.2rem, 2.8vw, 1.4rem);
+  font-size: var(--titulo-4);
   font-weight: 700;
 }
 .recusa p {
   margin: 0 0 0.9rem;
   color: var(--cor-tinta-suave);
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   max-width: 72ch;
   text-wrap: pretty;
 }
@@ -263,13 +263,13 @@
 .vazioTitulo {
   margin: 0 0 0.5rem;
   font-family: var(--fonte-display);
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
   font-weight: 700;
 }
 .vazio p {
   margin: 0 0 0.75rem;
   color: var(--cor-tinta-suave);
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   max-width: 68ch;
   text-wrap: pretty;
 }
@@ -279,7 +279,7 @@
 
 .notaDerivada {
   margin: 1.5rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   max-width: 68ch;
 }

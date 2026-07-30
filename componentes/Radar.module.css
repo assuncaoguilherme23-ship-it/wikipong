@@ -72,7 +72,7 @@
 
 .rotulo {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem; /* era 9px: pequeno demais pra ler, e o quadro tem folga */
+  font-size: var(--texto-micro); /* era 9px: pequeno demais pra ler, e o quadro tem folga */
   letter-spacing: 0.06em;
   fill: var(--cor-mudo);
 }
@@ -82,7 +82,7 @@
   justify-content: center;
   gap: 1.25rem;
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   color: var(--cor-tinta-suave);
 }
 .legenda span {

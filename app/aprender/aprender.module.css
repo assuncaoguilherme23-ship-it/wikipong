@@ -4,7 +4,7 @@
 }
 
 .titulo {
-  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-size: var(--titulo-1);
   font-weight: 800;
   margin-top: 0.5rem;
 }
@@ -48,16 +48,16 @@
 .cartaoTitulo {
   font-family: var(--fonte-display);
   font-weight: 700;
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
 }
 .cartaoResumo {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   flex: 1;
 }
 .minutos {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-mudo);
@@ -74,28 +74,28 @@
   max-width: 44rem;
 }
 .artigoTitulo {
-  font-size: clamp(1.9rem, 5vw, 2.8rem);
+  font-size: var(--titulo-1);
   font-weight: 800;
   margin-block: 0.5rem 0.75rem;
 }
 .artigoMeta {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
 }
 
 /* Prosa: medida confortável (65–75ch) e ritmo vertical */
 .prosa {
-  font-size: 1.02rem;
+  font-size: var(--texto-base);
 }
 .prosa p {
   margin: 0 0 1.1rem;
-  line-height: 1.75;
+  line-height: var(--altura-leitura);
   max-width: 68ch;
   text-wrap: pretty;
 }
 .prosa h2 {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-size: var(--titulo-3);
   margin: 2rem 0 0.6rem;
 }
 .prosa em {
@@ -113,7 +113,7 @@
   font-weight: 600;
 }
 .prosa :global(.nota-guia) {
-  font-size: 0.88rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   background: var(--cor-superficie-2);
   border-radius: var(--raio-sm);
@@ -129,7 +129,7 @@
 }
 .continuarTitulo {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -145,7 +145,7 @@
 }
 .continuarLista a {
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   text-decoration: none;
   color: var(--cor-tinta);
   background: var(--cor-superficie);

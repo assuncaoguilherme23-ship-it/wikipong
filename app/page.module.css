@@ -36,7 +36,7 @@
   gap: 1.1rem;
 }
 .heroTitulo {
-  font-size: clamp(2.3rem, 6vw, 4.4rem);
+  font-size: var(--titulo-hero);
   font-weight: 800;
   max-width: 18ch;
 }
@@ -44,8 +44,8 @@
   color: var(--cor-acento); /* só em display/headline ≥24px — AA large (Regra do Acento) */
 }
 .lede {
-  font-size: clamp(1rem, 2.2vw, 1.15rem);
-  line-height: 1.65;
+  font-size: var(--lede);
+  line-height: var(--altura-leitura);
   color: var(--cor-tinta-suave);
   max-width: 56ch;
   text-wrap: pretty;
@@ -58,7 +58,7 @@
   margin-top: 0.5rem;
 }
 .micro {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   letter-spacing: 0.04em;
 }
@@ -81,13 +81,13 @@
 }
 .stat dd {
   margin: 0;
-  font-size: 1.5rem; /* degrau stat */
+  font-size: var(--texto-numero); /* degrau stat */
   font-weight: 500;
   font-feature-settings: 'tnum' 1;
   color: var(--cor-tinta);
 }
 .stat dt {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
 }
 
@@ -161,13 +161,13 @@
   gap: 0.9rem;
 }
 .verdade h2 {
-  font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+  font-size: var(--titulo-1);
   color: var(--cor-sobre-mesa);
   max-width: 24ch;
 }
 .verdadeTexto {
   color: var(--cor-sobre-mesa-suave);
-  line-height: 1.7; /* compensação de texto claro sobre escuro */
+  line-height: var(--altura-leitura); /* compensação de texto claro sobre escuro */
   letter-spacing: 0.01em;
   max-width: 58ch;
   margin: 0;
@@ -176,7 +176,7 @@
 
 /* ── Dores (tríade numerada do Figma) ── */
 .tituloSecao {
-  font-size: clamp(1.5rem, 3.8vw, 2rem);
+  font-size: var(--titulo-2);
   text-align: center;
 }
 .dores {
@@ -207,7 +207,7 @@
 }
 .dorNumero {
   align-self: flex-start;
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.08em;
   color: var(--cor-texto-acento);
   background: var(--cor-acento-suave);
@@ -215,11 +215,11 @@
   padding: 0.2rem 0.6rem;
 }
 .dor h3 {
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
 }
 .dor p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 
@@ -254,7 +254,7 @@
   }
 }
 .manifesto h2 {
-  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-size: var(--titulo-2);
   margin-block: 0.5rem 0.9rem;
 }
 .manifestoTexto {
@@ -291,7 +291,7 @@
   box-shadow: var(--sombra-cartao);
 }
 .impressaoLegenda {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -334,7 +334,7 @@
   transform: translateY(0) scale(0.99);
 }
 .feature h3 {
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -342,7 +342,7 @@
 }
 .feature p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 
@@ -353,7 +353,7 @@
   border-color: var(--cor-linha-forte);
 }
 .featureDestaque h3 {
-  font-size: clamp(1.2rem, 2.4vw, 1.4rem);
+  font-size: var(--titulo-4);
 }
 @media (min-width: 900px) {
   .featureDestaque {
@@ -380,11 +380,11 @@
   justify-content: center;
   gap: 0.6rem;
   margin: 1.5rem 0 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 .emBreveRotulo {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -412,14 +412,14 @@
   margin-bottom: 2rem;
 }
 .provaHead h2 {
-  font-size: clamp(1.6rem, 4.2vw, 2.4rem);
+  font-size: var(--titulo-2);
   color: var(--cor-sobre-mesa);
   margin-bottom: 0.75rem;
 }
 .provaHead p {
   color: var(--cor-sobre-mesa-suave);
   margin: 0;
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   letter-spacing: 0.01em;
   text-wrap: pretty;
 }
@@ -452,7 +452,7 @@
 .tabela thead th {
   background: var(--cor-superficie-2);
   font-family: var(--fonte-display);
-  font-size: 1rem;
+  font-size: var(--texto-base);
 }
 .tabela tbody tr {
   transition: background 140ms ease;
@@ -466,13 +466,13 @@
 }
 .valorTecnico {
   font-family: var(--fonte-mono);
-  font-size: 1.05rem;
+  font-size: var(--texto-dado);
   font-weight: 500;
   font-feature-settings: 'tnum' 1;
 }
 .valorSimples {
   display: block;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   margin-top: 0.15rem;
 }
@@ -482,7 +482,7 @@
 }
 .maxTag {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
@@ -490,10 +490,10 @@
 }
 .nota {
   margin-top: 1.25rem;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-sobre-mesa-suave); /* 6.7:1 sobre a mesa */
   max-width: 68ch;
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
 }
 .nota strong {
   color: var(--cor-sobre-mesa);
@@ -501,7 +501,7 @@
 .selo {
   display: inline-block;
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
@@ -528,14 +528,14 @@
   padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 4vw, 3rem);
 }
 .ctaCartao h2 {
-  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-size: var(--titulo-2);
   color: var(--cor-sobre-mesa);
   max-width: 22ch;
 }
 .ctaCartao p {
   color: var(--cor-sobre-mesa-suave);
   margin: 0;
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   letter-spacing: 0.01em;
 }
 .ctaBotao {
@@ -543,7 +543,7 @@
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22); /* separa o botão da mesa */
 }
 .microMesa {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-sobre-mesa-suave);
   letter-spacing: 0.04em;
 }

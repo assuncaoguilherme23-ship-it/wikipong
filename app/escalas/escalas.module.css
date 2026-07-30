@@ -4,7 +4,7 @@
 }
 
 .titulo {
-  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-size: var(--titulo-1);
   font-weight: 800;
   margin-top: 0.5rem;
 }
@@ -12,7 +12,7 @@
   color: var(--cor-tinta-suave);
   max-width: 64ch;
   margin: 0.6rem 0 clamp(1.75rem, 4vw, 2.5rem);
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   text-wrap: pretty;
 }
 .lede strong {
@@ -23,7 +23,7 @@
   margin-top: clamp(2.25rem, 5vw, 3.25rem);
 }
 .tituloSecao {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-size: var(--titulo-3);
 }
 .subtitulo {
   margin: 0.5rem 0 1.1rem;
@@ -45,20 +45,20 @@
 }
 .reguaNome {
   font-family: var(--fonte-display);
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
   font-weight: 700;
   color: var(--cor-tinta);
 }
 .reguaTexto {
   margin: 0.3rem 0 0;
   color: var(--cor-tinta-suave);
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   max-width: 68ch;
 }
 .reguaExemplos {
   display: block;
   margin-top: 0.35rem;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-mudo);
 }
 
@@ -80,7 +80,7 @@
 }
 .tabela thead th {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -102,12 +102,12 @@
 .celulaMarca {
   display: block;
   font-family: var(--fonte-corpo);
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   font-weight: 400;
   color: var(--cor-tinta-suave);
 }
 .celulaEscala {
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   color: var(--cor-mudo);
 }
 .celulaESN {
@@ -117,9 +117,9 @@
 
 .nota {
   margin: 1rem 0 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
-  line-height: 1.7;
+  line-height: var(--altura-leitura);
   max-width: 72ch;
   text-wrap: pretty;
 }

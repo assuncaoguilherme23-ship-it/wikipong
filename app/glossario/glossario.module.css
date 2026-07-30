@@ -4,7 +4,7 @@
 }
 
 .titulo {
-  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-size: var(--titulo-1);
   font-weight: 800;
   margin-top: 0.5rem;
 }
@@ -37,21 +37,21 @@
 .verbete dt {
   font-family: var(--fonte-display);
   font-weight: 700;
-  font-size: 1.12rem;
+  font-size: var(--texto-maior);
   color: var(--cor-tinta);
 }
 .verbete dd {
   margin: 0.4rem 0 0;
-  font-size: 0.9rem; /* degrau small do ramp */
+  font-size: var(--texto-menor); /* degrau small do ramp */
   color: var(--cor-tinta-suave);
-  line-height: 1.6;
+  line-height: var(--altura-corpo);
   max-width: 58ch;
   text-wrap: pretty;
 }
 
 .notaIA {
   margin-top: clamp(1.5rem, 4vw, 2.5rem);
-  font-size: 0.8rem; /* degrau caption do ramp */
+  font-size: var(--texto-mini); /* degrau caption do ramp */
   color: var(--cor-tinta-suave);
   max-width: 62ch;
 }

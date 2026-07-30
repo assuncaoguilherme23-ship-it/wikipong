@@ -40,7 +40,7 @@
 }
 .progressoRotulo {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cor-texto-acento);
@@ -74,7 +74,7 @@
 }
 
 .pergunta {
-  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+  font-size: var(--titulo-2);
   font-weight: 800;
   margin-bottom: 1.5rem;
 }
@@ -84,8 +84,8 @@
 }
 .notaPergunta {
   margin: 0 0 1.5rem;
-  font-size: 0.9rem;
-  line-height: 1.65;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
   color: var(--cor-tinta-suave);
   max-width: 62ch;
   text-wrap: pretty;
@@ -122,14 +122,14 @@
   font-weight: 600;
 }
 .opcaoSub {
-  font-size: 0.88rem;
+  font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
 }
 /* Faixa de tempo: terceiro degrau da hierarquia (titulo > sub > tempo).
    Mono porque e referencia de DADO, nao copy (D-04). */
 .opcaoTempo {
   margin-top: 0.3rem;
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.02em;
   color: var(--cor-mudo);
 }
@@ -153,12 +153,12 @@
   color: var(--cor-tinta-suave);
 }
 .perfilNome {
-  font-size: clamp(2.1rem, 6.5vw, 3.4rem);
+  font-size: var(--titulo-1);
   font-weight: 800;
   margin-block: 0 1rem;
 }
 .perfilDesc {
-  font-size: 1.15rem;
+  font-size: var(--texto-maior);
   color: var(--cor-tinta-suave);
   max-width: 44ch;
 }
@@ -179,9 +179,9 @@
 /* Hierarquia: TÍTULO > valor > nota > rótulo. O título precisa ganhar do dado
    que ele apresenta — antes era um micro-rótulo menor que o próprio conteúdo. */
 .presetTitulo {
-  font-size: clamp(1.05rem, 2.4vw, 1.2rem);
+  font-size: var(--lede);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: var(--altura-apertada);
   color: var(--cor-texto-acento);
   margin: 0;
 }
@@ -198,7 +198,7 @@
 }
 .etiquetaRotulo {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -206,15 +206,15 @@
 }
 .etiquetaValor {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   font-weight: 600;
   color: var(--cor-tinta);
   text-wrap: pretty;
 }
 
 .presetNota {
-  font-size: 0.82rem;
-  line-height: 1.6;
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
   color: var(--cor-tinta-suave);
   margin: 1.1rem 0 0;
 }

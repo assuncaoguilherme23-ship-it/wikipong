@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  font-size: 0.72rem;
+  font-size: var(--texto-micro);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
@@ -43,7 +43,7 @@
 .nome {
   display: flex;
   flex-direction: column;
-  font-size: 0.9rem;
+  font-size: var(--texto-menor);
   font-weight: 600;
 }
 .nome a {
@@ -55,7 +55,7 @@
 }
 .avisoEscala {
   font-family: var(--fonte-mono);
-  font-size: 0.72rem; /* degrau label do ramp */
+  font-size: var(--texto-micro); /* degrau label do ramp */
   font-weight: 400;
   letter-spacing: 0.04em;
   color: var(--cor-mudo);
@@ -86,7 +86,7 @@
 }
 
 .graus {
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   font-feature-settings: 'tnum' 1;
 }
@@ -98,7 +98,7 @@
 
 .rodape {
   margin: 1.1rem 0 0;
-  font-size: 0.8rem;
+  font-size: var(--texto-mini);
   color: var(--cor-tinta-suave);
   max-width: 62ch;
 }

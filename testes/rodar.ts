@@ -28,7 +28,8 @@ import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
 import { precoMedio } from '../componentes/dados-ofertas.js';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 
 let ok = 0; const falhas: string[] = [];
 function afirma(cond: boolean, msg: string) { if (cond) ok++; else falhas.push(msg); }
@@ -449,6 +450,29 @@ afirma(
   }),
   'toda imagem tem crédito, origem e arquivo no disco',
 );
+// Dois materiais NUNCA podem ter o mesmo arquivo byte a byte. Esta asserção
+// nasce de um erro que passou por 193 materiais — Donic e Stiga inteiras — sem
+// nenhum teste reclamar: o extrator pegava a PRIMEIRA imagem de /uploads/ da
+// página, e na AmericaTT essa primeira imagem é o selo "COMPRA 100% SEGURA".
+// Todas as fichas mostravam o mesmo banner no lugar do produto. As invariantes
+// que existiam passavam todas — o arquivo existia, tinha crédito e tinha origem;
+// só não era a foto certa. O que denuncia isso é a REPETIÇÃO: duas fotos de
+// produtos diferentes não podem ser o mesmo arquivo.
+{
+  const porHash = new Map<string, string[]>();
+  for (const m of MATERIAIS) {
+    const arq = `public/produtos/${imagemDoMaterial(m.id)!.arquivo}`;
+    if (!existsSync(arq)) continue;
+    const h = createHash('md5').update(readFileSync(arq)).digest('hex');
+    porHash.set(h, [...(porHash.get(h) ?? []), m.id]);
+  }
+  const repetidos = [...porHash.values()].filter((ids) => ids.length > 1);
+  afirma(
+    repetidos.length === 0,
+    'nenhuma foto se repete entre materiais' +
+      (repetidos.length ? ` — repetidas: ${repetidos.map((r) => r.join('/')).join(', ')}` : ''),
+  );
+}
 
 // Preço publicado é preço REAL. O cartão do catálogo, a página da marca e o
 // filtro de preço leem material.preco direto — se ele for a estimativa da

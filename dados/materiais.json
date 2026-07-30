@@ -6679,15 +6679,15 @@
       "id": "donic-liga",
       "nome": "Liga",
       "marca": "Donic",
-      "tipo": "Lâmina",
+      "tipo": "Borracha",
       "nivel": "Iniciante",
       "intencao": "controlar",
       "preco": 94,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A lâmina mais barata do catálogo",
-        "frase": "R$ 94 — menos da metade da segunda mais barata. É lâmina de entrada, e a loja a posiciona para quem está construindo técnica. Sem amostra na comunidade."
+        "tag": "A mais barata do catálogo",
+        "frase": "R$ 94 — nenhum material do WikiPong custa menos. É borracha de entrada, homologada pela ITTF, vendida nas espessuras 1,8 mm e 2,0 mm. Não tem amostra na comunidade."
       }
     },
     {
@@ -6763,6 +6763,26 @@
       "simples": {
         "tag": "Edição limitada, amostra não atribuída",
         "frase": "Há duas lâminas parecidas na comunidade e o nome desta loja mistura as duas — então nenhuma amostra foi atribuída. A Waldner Senso Carbon JO Shape comum está no catálogo, por R$ 524."
+      }
+    },
+    {
+      "id": "donic-anders-lind-hexa-carbon",
+      "nome": "Anders Lind Hexa Carbon",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 588,
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.75,
+      "reviews": 11,
+      "simples": {
+        "tag": "Carbono interno, controle 9,4",
+        "frase": "Assinatura do dinamarquês Anders Lind. A fibra fica junto ao núcleo, e a comunidade credita a isso o controle alto para uma lâmina de carbono: um avaliador diz que ela entrega controle enorme em toda bolada. Cerca de 85 g, equilibrada com borrachas híbridas de 50°."
       }
     }
   ]

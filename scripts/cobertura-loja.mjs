@@ -152,8 +152,13 @@ const FONTES = {
       if (slug.startsWith('borracha-')) return 'Borracha';
       if (slug.startsWith('madeira-')) return 'Lâmina';
       if (slug.startsWith('raquete-')) return null;
+      /* "liga" entrou nesta lista depois de virar lamina por engano — a TERCEIRA
+         vez que o ramo padrao "Lamina" comeu uma borracha, depois das Stiga Helix
+         e das Donic BlueGrip. O que denunciou foi o preco (R$ 94, contra R$ 226
+         da lamina mais barata da marca) confirmado pela foto oficial, que mostra
+         a embalagem com espessuras 1,8/2,0 mm e o selo ITTF. */
       const LINHAS_DE_BORRACHA =
-        /bluestorm|bluefire|bluestar|bluegrip|baracuda|acuda|coppa|desto|vario|slice|sonex|traction/;
+        /bluestorm|bluefire|bluestar|bluegrip|baracuda|acuda|coppa|desto|vario|slice|sonex|traction|liga/;
       return LINHAS_DE_BORRACHA.test(slug) ? 'Borracha' : 'Lâmina';
     },
   },

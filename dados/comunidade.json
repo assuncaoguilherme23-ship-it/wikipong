@@ -1584,6 +1584,62 @@
       "escala": 10,
       "avaliacoes": 5,
       "consultadoEm": "2026-07-30"
+    },
+    "donic-classic-allround": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-classic-allround.html",
+      "nota": 9.7,
+      "escala": 10,
+      "avaliacoes": 6,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-xtreme": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-xtreme.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 9,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-original-true-carbon-inner": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-original-true-carbon-inner.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 16,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-jo-waldner-gold-edition": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-jo-waldner-gold-edition.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-defplay-senso-v3": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-defplay-senso-v3.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 14,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-cayman": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-cayman.html",
+      "nota": 8.6,
+      "escala": 10,
+      "avaliacoes": 13,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-classic-power-allround": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-classic-power-allround.html",
+      "nota": 8.0,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

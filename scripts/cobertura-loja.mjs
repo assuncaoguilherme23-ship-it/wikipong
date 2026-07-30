@@ -354,7 +354,14 @@ const chave = (s) =>
        escolhe na compra, como o cabo — é um material só. */
     /* "copia" NÃO entra aqui: quem trata dela é a regra do par "copia <token>"
        mais abaixo. Removê-la sozinha deixaria o sufixo órfão ("dzumb") no nome. */
-    .replace(/\b(classinetas|classineta|classica|com cabo fl|cabo fl|cabo concavo)\b/g, ' ')
+    /* "conc" e "fl" soltos são a MESMA coisa que "cabo côncavo" e "cabo FL", só
+       abreviados: a AmericaTT cadastra "Persson Youngstar Conc." e "Waldner
+       Youngstar Conc FL" para lâminas que o catálogo já tinha. Tipo de cabo se
+       escolhe na compra — não é modelo. */
+    .replace(
+      /\b(classinetas|classineta|classica|com cabo fl|cabo fl|cabo concavo|conc|fl)\b/g,
+      ' ',
+    )
     .replace(/\b(com )?(\d+) folhas\b/g, ' ')
     .replace(/\braquete\b/g, ' ')
     /* A loja descreve a lâmina dentro do nome ("... com Carbono", "... e cabo

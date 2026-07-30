@@ -5251,6 +5251,162 @@
         }
       ],
       "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "donic-coppa": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-donic-coppa/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa clássica"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha."
+    },
+    "donic-coppa-jo-gold": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-coppa-jo-gold/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha."
+    },
+    "donic-coppa-jo-platin": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-coppa-jo-platin/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha."
+    },
+    "donic-coppa-jo-silver": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-coppa-jo-silver/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha."
+    },
+    "donic-coppa-x1-gold": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-coppa-x1-gold/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha."
+    },
+    "donic-coppa-x1-turbo-platin": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-coppa-x1-turbo-platin/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha."
+    },
+    "donic-coppa-x2-platin-soft": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-coppa-x2-platin-soft/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa levemente aderente, esponja média-macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha."
+    },
+    "donic-coppa-x3-silver": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-coppa-x3-silver/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha."
+    },
+    "donic-coppa-e1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-coppa-e1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha. Esta variante não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "donic-coppa-e2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-coppa-e2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha. Esta variante não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "donic-coppa-e3": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-coppa-e3/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha. Esta variante não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "donic-slice-40-cd": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-slice-40-cd/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, voltada à defesa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: eu suspeitava que a Slice 40 fosse de pinos, pelo nome e pela descrição voltada ao defensor. Não é. O Revspin a lista no índice de LISAS (/rubber/) e não no de pinos (/pips/) — é borracha lisa aderente, feita para defesa. Três avaliações na comunidade, abaixo do nosso piso de cinco."
+    },
+    "donic-slice-40-cs": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-slice-40-cs/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, voltada à defesa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: eu suspeitava que a Slice 40 fosse de pinos, pelo nome e pela descrição voltada ao defensor. Não é. O Revspin a lista no índice de LISAS (/rubber/) e não no de pinos (/pips/) — é borracha lisa aderente, feita para defesa. Três avaliações na comunidade, abaixo do nosso piso de cinco."
     }
   }
 }

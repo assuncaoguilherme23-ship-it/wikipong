@@ -5093,6 +5093,257 @@
         "tag": "Leve, para quem está subindo",
         "frase": "A Donic a posiciona como porta de entrada para jovens ambiciosos. Pesa 38 a 55 g conforme o preparo. A comunidade elogia no forehand e avisa que pode incomodar no revés."
       }
+    },
+    {
+      "id": "donic-coppa",
+      "nome": "Coppa",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 282,
+      "specs": {
+        "velocidade": 8.4,
+        "spin": 8.8,
+        "controle": 8.7
+      },
+      "durabilidade": 7.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 16,
+      "simples": {
+        "tag": "Clássica com tempo de contato longo",
+        "frase": "Um avaliador destaca o tempo que a bola fica na borracha. Efeito 8,8 e controle 8,7 quase empatados: dá para girar devagar, dar loop-drive e bater reto com a mesma folha."
+      }
+    },
+    {
+      "id": "donic-coppa-jo-gold",
+      "nome": "Coppa JO Gold",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 248,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 8.6,
+        "controle": 8.4
+      },
+      "durabilidade": 6.4,
+      "origemSpecs": "comunidade",
+      "rating": 4.45,
+      "reviews": 30,
+      "simples": {
+        "tag": "Rápida para o jogo colado à mesa",
+        "frase": "Velocidade 9,1, boa em bloqueio, flick e topspin curto. A comunidade avisa: difícil de controlar para quem está usando borracha rápida pela primeira vez."
+      }
+    },
+    {
+      "id": "donic-coppa-jo-platin",
+      "nome": "Coppa JO Platin",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 248,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 8.8,
+        "controle": 7.6
+      },
+      "durabilidade": 4.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.35,
+      "reviews": 35,
+      "simples": {
+        "tag": "Velocidade 9,3, durabilidade 4,8",
+        "frase": "A mais rápida da série JO e uma das de pior durabilidade do catálogo. Relato direto da comunidade: depois de dois meses a borracha começa a descascar. Controle 7,6 — cobra técnica."
+      }
+    },
+    {
+      "id": "donic-coppa-jo-silver",
+      "nome": "Coppa JO Silver",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 248,
+      "specs": {
+        "velocidade": 8.6,
+        "spin": 8.8,
+        "controle": 8.2
+      },
+      "durabilidade": 5.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 29,
+      "simples": {
+        "tag": "A macia da série JO",
+        "frase": "A comunidade a descreve como alternativa mais macia às irmãs duras, com efeito próximo do que se conseguia com cola de velocidade. Durabilidade 5,8."
+      }
+    },
+    {
+      "id": "donic-coppa-x1-gold",
+      "nome": "Coppa X1 Gold",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 329,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 8.8,
+        "controle": 8.7
+      },
+      "durabilidade": 7.4,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 24,
+      "simples": {
+        "tag": "Perto da Baracuda, por menos",
+        "frase": "Um avaliador a compara diretamente à Baracuda, dizendo que rende muito parecido mas exige golpe um pouco mais firme para soltar todo o giro. Custa R$ 22 a mais e tem durabilidade melhor."
+      }
+    },
+    {
+      "id": "donic-coppa-x1-turbo-platin",
+      "nome": "Coppa X1 Turbo Platin",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 329,
+      "specs": {
+        "velocidade": 9.5,
+        "spin": 9.2,
+        "controle": 8.4
+      },
+      "durabilidade": 7.7,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 53,
+      "simples": {
+        "tag": "A Donic publica 10, 10 e 5",
+        "frase": "Velocidade 10 e efeito 10 contra controle 5 na régua da própria marca — a declaração mais extrema de todo o catálogo. A comunidade suaviza (9,5 / 9,2 / 8,4) mas confirma a direção. Um relato menciona esponja que gasta fácil."
+      }
+    },
+    {
+      "id": "donic-coppa-x2-platin-soft",
+      "nome": "Coppa X2 Platin Soft",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 329,
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 9.0,
+        "controle": 8.8
+      },
+      "durabilidade": 6.9,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 25,
+      "simples": {
+        "tag": "Equilíbrio entre ataque e allround",
+        "frase": "Rende perto da mesa e à distância. A comunidade elogia controle e giro; a durabilidade 6,9 sugere troca mais cedo que nas premium."
+      }
+    },
+    {
+      "id": "donic-coppa-x3-silver",
+      "nome": "Coppa X3 Silver",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 329,
+      "specs": {
+        "velocidade": 8.4,
+        "spin": 9.2,
+        "controle": 8.5
+      },
+      "durabilidade": 7.0,
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 19,
+      "simples": {
+        "tag": "Efeito 9,2 com trajetória baixa",
+        "frase": "Esponja macia e saída baixa: forte no jogo colado à mesa e no flick. A comunidade sugere montá-la em lâmina mais rápida e dura, para compensar a maciez."
+      }
+    },
+    {
+      "id": "donic-coppa-e1",
+      "nome": "Coppa E1",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 282,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A E1 da linha Coppa",
+        "frase": "A série E é a leitura mais recente da Coppa. Duas avaliações na comunidade — abaixo do nosso piso de cinco."
+      }
+    },
+    {
+      "id": "donic-coppa-e2",
+      "nome": "Coppa E2",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 282,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A E2 da linha Coppa",
+        "frase": "O degrau intermediário da série E. Não consta do Revspin — entra com ficha, preço real e foto."
+      }
+    },
+    {
+      "id": "donic-coppa-e3",
+      "nome": "Coppa E3",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 282,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A E3 da linha Coppa",
+        "frase": "A mais macia da série E. Também sem amostra própria na comunidade."
+      }
+    },
+    {
+      "id": "donic-slice-40-cd",
+      "nome": "Slice 40 CD",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 285,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Aderente para defesa",
+        "frase": "Superfície pegajosa voltada ao corte. Nota 6,3 na comunidade — a mais baixa das Donic aqui —, mas apoiada em apenas três avaliações."
+      }
+    },
+    {
+      "id": "donic-slice-40-cs",
+      "nome": "Slice 40 CS",
+      "marca": "Donic",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 258,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A versão macia da Slice",
+        "frase": "A leitura mais macia da Slice 40, com nota 9,0 contra 6,3 da CD. Com três avaliações cada, essa diferença ainda não está sustentada por amostra — vale como indício, não como veredito."
+      }
     }
   ]
 }

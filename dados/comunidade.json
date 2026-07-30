@@ -1216,6 +1216,70 @@
       "escala": 10,
       "avaliacoes": 6,
       "consultadoEm": "2026-07-30"
+    },
+    "donic-coppa": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-coppa.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 16,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-coppa-jo-gold": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-coppa-jo-gold.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 30,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-coppa-jo-platin": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-coppa-jo-platin.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 35,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-coppa-jo-silver": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-coppa-jo-silver.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 29,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-coppa-x1-gold": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-coppa-x1-gold.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 24,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-coppa-x1-turbo-platin": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-coppa-x1-turbo-platin.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 53,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-coppa-x2-platin-soft": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-coppa-x2-platin-soft.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 25,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-coppa-x3-silver": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/donic-coppa-x3-silver.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 19,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

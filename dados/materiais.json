@@ -3645,6 +3645,146 @@
         "tag": "A extra dura da Platinum",
         "frase": "O topo de dureza da Helix Platinum. Sem nenhuma avaliação registrada ainda."
       }
+    },
+    {
+      "id": "stiga-carbonado-45",
+      "nome": "Carbonado 45",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1333,
+      "specs": {
+        "velocidade": 8.5,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 13,
+      "simples": {
+        "tag": "Carbono com ponto doce grande",
+        "frase": "Controle 9,2 com velocidade 8,5: a comunidade a descreve como ponte para quem sai da madeira pura e quer fibra sem perder o toque. Ponto doce grande e bloqueio estável."
+      }
+    },
+    {
+      "id": "stiga-carbonado-145",
+      "nome": "Carbonado 145",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1391,
+      "specs": {
+        "velocidade": 9.3,
+        "controle": 8.7
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.55,
+      "reviews": 18,
+      "simples": {
+        "tag": "Rápida sem ser exagerada",
+        "frase": "Velocidade 9,3 — a mais rápida da família Carbonado no catálogo. A comunidade resume como \"rápida, mas não rápida demais\", com consistência alta entre unidades."
+      }
+    },
+    {
+      "id": "stiga-carbonado-190",
+      "nome": "Carbonado 190",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1263,
+      "specs": {
+        "velocidade": 9.2,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.7,
+      "reviews": 27,
+      "simples": {
+        "tag": "A mais avaliada da família",
+        "frase": "Velocidade 9,2 e controle 9,3 — os dois eixos acima de 9, com 27 avaliações sustentando. É a Carbonado de maior amostra, e vários avaliadores a chamam de melhor lâmina que já usaram em sensação de bola."
+      }
+    },
+    {
+      "id": "stiga-dynasty-carbon",
+      "nome": "Dynasty Carbon",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1758,
+      "specs": {
+        "velocidade": 9.0,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 12,
+      "simples": {
+        "tag": "A mais cara do catálogo",
+        "frase": "R$ 1.758 — a lâmina mais cara de todo o WikiPong. Controle 9,2 acima da velocidade 9,0: a comunidade destaca o jogo curto e a variedade de marchas."
+      }
+    },
+    {
+      "id": "stiga-carbonado-90",
+      "nome": "Carbonado 90",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1158,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "O degrau entre a 45 e a 145",
+        "frase": "A Carbonado intermediária. Só três avaliações na comunidade — abaixo do nosso piso —, então entra pela ficha."
+      }
+    },
+    {
+      "id": "stiga-legacy-carbon",
+      "nome": "Legacy Carbon",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1450,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono da linha Legacy",
+        "frase": "O Revspin tem 17 avaliações para uma \"Legacy Carbon 12k\", que é outra especificação de fibra. Não atribuímos aquela nota aqui."
+      }
+    },
+    {
+      "id": "stiga-destiny-carbon",
+      "nome": "Destiny Carbon",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 999,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono abaixo de mil reais",
+        "frase": "A entrada da linha de carbono da Stiga aqui, em 5 camadas. Ainda sem nenhuma avaliação registrada na comunidade."
+      }
+    },
+    {
+      "id": "stiga-celero-wood",
+      "nome": "Celero Wood",
+      "marca": "Stiga",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 547,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Madeira pura acessível",
+        "frase": "Cinco camadas sem fibra, a mais barata deste lote. O Revspin tem 15 avaliações para uma lâmina \"Celero\" — sem o \"Wood\" — e por isso a nota não foi atribuída."
+      }
     }
   ]
 }

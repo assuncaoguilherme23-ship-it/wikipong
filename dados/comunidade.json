@@ -816,6 +816,38 @@
       "escala": 10,
       "avaliacoes": 9,
       "consultadoEm": "2026-07-29"
+    },
+    "stiga-carbonado-45": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-carbonado-45.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 13,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-carbonado-145": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-carbonado-145.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 18,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-carbonado-190": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-carbonado-190.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 27,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-dynasty-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/stiga-dynasty-carbon.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 12,
+      "consultadoEm": "2026-07-29"
     }
   }
 }

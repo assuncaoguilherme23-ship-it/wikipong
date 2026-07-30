@@ -4123,6 +4123,134 @@
         }
       ],
       "nota": "A AmericaTT não declara a dureza desta variante e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha: a esponja é justamente o que separa uma M de uma XH. Toda a linha Helix é lançamento recente e ainda não tem amostra na comunidade — o Revspin registra de 0 a 2 avaliações para cada, abaixo do nosso piso de 5. Entram com ficha, preço real e foto."
+    },
+    "stiga-carbonado-45": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-carbonado-45/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra de carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "stiga-carbonado-145": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-carbonado-145/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra de carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "stiga-carbonado-190": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-carbonado-190/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra de carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "stiga-dynasty-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-dynasty-carbon/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra de carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo."
+    },
+    "stiga-carbonado-90": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-carbonado-90/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra de carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "stiga-legacy-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-legacy-carbon/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra de carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. ATENÇÃO ao nome: o Revspin tem amostra para um modelo de nome PARECIDO, mas não idêntico ao que a loja vende. Nome parecido não é o mesmo produto, então a nota não foi atribuída. A loja vende esta lâmina em dois formatos de cabeça, clássica e classineta. É a mesma madeira — o formato se escolhe na compra, como o cabo. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "stiga-destiny-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-destiny-carbon/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
+    },
+    "stiga-celero-wood": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-celero-wood/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. ATENÇÃO ao nome: o Revspin tem amostra para um modelo de nome PARECIDO, mas não idêntico ao que a loja vende. Nome parecido não é o mesmo produto, então a nota não foi atribuída. Esta lâmina não tem amostra suficiente na comunidade (Revspin) para entrar na escala de desempenho — o piso é 5 avaliações."
     }
   }
 }

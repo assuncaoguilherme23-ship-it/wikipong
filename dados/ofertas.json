@@ -1593,6 +1593,70 @@
       "url": "https://americatt.net/stiga-helix-platinum-xh/",
       "atualizadoEm": "2026-07-29",
       "nota": "Preço do dado estruturado da página do produto (o R$ 399 visível na página é banner da loja, não o preço)."
+    },
+    {
+      "materialId": "stiga-carbonado-45",
+      "loja": "AmericaTT",
+      "preco": 1333,
+      "url": "https://americatt.net/stiga-carbonado-45/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-carbonado-145",
+      "loja": "AmericaTT",
+      "preco": 1391,
+      "url": "https://americatt.net/stiga-carbonado-145/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-carbonado-190",
+      "loja": "AmericaTT",
+      "preco": 1263,
+      "url": "https://americatt.net/stiga-carbonado-190/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-dynasty-carbon",
+      "loja": "AmericaTT",
+      "preco": 1758,
+      "url": "https://americatt.net/stiga-dynasty-carbon/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-carbonado-90",
+      "loja": "AmericaTT",
+      "preco": 1158,
+      "url": "https://americatt.net/stiga-carbonado-90/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-legacy-carbon",
+      "loja": "AmericaTT",
+      "preco": 1450,
+      "url": "https://americatt.net/stiga-legacy-carbon/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-destiny-carbon",
+      "loja": "AmericaTT",
+      "preco": 999,
+      "url": "https://americatt.net/stiga-destiny-carbon/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
+    },
+    {
+      "materialId": "stiga-celero-wood",
+      "loja": "AmericaTT",
+      "preco": 547,
+      "url": "https://americatt.net/stiga-celero-wood/",
+      "atualizadoEm": "2026-07-29",
+      "nota": "Preço do dado estruturado da página do produto."
     }
   ]
 }

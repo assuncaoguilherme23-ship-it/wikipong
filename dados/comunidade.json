@@ -760,6 +760,62 @@
       "escala": 10,
       "avaliacoes": 24,
       "consultadoEm": "2026-07-29"
+    },
+    "stiga-calibra-lt": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/stiga-calibra-lt.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 76,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-calibra-lt-sound": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/stiga-calibra-lt-sound.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 64,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-boost-tx": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/stiga-boost-tx.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 47,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-genesis-m": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/stiga-genesis-m.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 23,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-dna-platinum-m": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/stiga-dna-platinum-m.html",
+      "nota": 8.6,
+      "escala": 10,
+      "avaliacoes": 11,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-dna-platinum-xh": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/stiga-dna-platinum-xh.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 7,
+      "consultadoEm": "2026-07-29"
+    },
+    "stiga-dna-dragon-grip": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/stiga-dna-dragon-grip.html",
+      "nota": 7.9,
+      "escala": 10,
+      "avaliacoes": 9,
+      "consultadoEm": "2026-07-29"
     }
   }
 }

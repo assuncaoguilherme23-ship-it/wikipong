@@ -3775,6 +3775,242 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Esta lâmina não tem amostra suficiente na comunidade para entrar na escala de desempenho."
+    },
+    "stiga-calibra-lt": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-calibra-lt/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "stiga-calibra-lt-sound": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-calibra-lt-sound/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "stiga-boost-tx": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-boost-tx/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "stiga-genesis-m": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-genesis-m-2-2-vermelha-envio-imediato/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa levemente aderente, capa e esponja duras"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "stiga-dna-platinum-m": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-dna-platinum-m/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "stiga-dna-platinum-xh": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-dna-platinum-xh/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja extra dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja."
+    },
+    "stiga-dna-dragon-grip": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-stiga-dna-dragon-grip/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "55° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente (pegajosa)"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias."
+    },
+    "stiga-dna-dragon-power-52-5": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-stiga-dna-dragao-poder-52-5/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "52,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
+    },
+    "stiga-dna-dragon-power-55": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-stiga-dna-dragon-power-55/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "55° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. O grau vem do PRÓPRIO NOME do modelo — a Stiga batiza a Dragon Power pela dureza da esponja. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
+    },
+    "stiga-dna-dragon-power-57-5": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-stiga-dna-dragon-power-57-5/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "57,5° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. O grau vem do PRÓPRIO NOME do modelo — a Stiga batiza a Dragon Power pela dureza da esponja. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
+    },
+    "stiga-dna-hybrid-h": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-stiga-dna-hybrid-h/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa híbrida levemente aderente"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
+    },
+    "stiga-dna-hybrid-m": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-dna-hybrid-m/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa híbrida levemente aderente"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
+    },
+    "stiga-dna-hybrid-xh": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-dna-hybrid-xh/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa híbrida, esponja extra dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
+    },
+    "stiga-dna-platinum-h": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-dna-platinum-h/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
+    },
+    "stiga-dna-platinum-s": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-dna-platinum-s/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha e a Stiga não a publica em página acessível. Ela entra SEM a régua unificada — e por isso sem o Perdão — em vez de herdar o grau de uma irmã da mesma linha, que é outra esponja. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
+    },
+    "stiga-mantra-pro-h": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/stiga-mantra-pro-h/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
+    },
+    "stiga-mantra-sound": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-stiga-mantra-sound/",
+      "consultadoEm": "2026-07-29",
+      "ficha": [
+        {
+          "rotulo": "Dureza da esponja",
+          "valor": "42° (escala ESN)"
+        },
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa tensionada, esponja macia"
+        }
+      ],
+      "nota": "A régua é a ESN, padrão das esponjas europeias. Esta borracha não tem amostra suficiente na comunidade (Revspin) para entrar na nossa escala de desempenho — o piso é 5 avaliações. Entra com ficha, preço real e foto."
     }
   }
 }

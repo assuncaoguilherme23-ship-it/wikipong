@@ -3221,6 +3221,310 @@
         "tag": "A irmã da PG7",
         "frase": "A outra lâmina da linha Power. Como a PG7, ainda sem amostra de comunidade que sustente números de desempenho."
       }
+    },
+    {
+      "id": "stiga-calibra-lt",
+      "nome": "Calibra LT",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.1,
+        "controle": 8.9
+      },
+      "durabilidade": 7.4,
+      "origemSpecs": "comunidade",
+      "rating": 4.6,
+      "reviews": 76,
+      "simples": {
+        "tag": "A mais avaliada da Stiga",
+        "frase": "76 avaliações — a maior amostra da marca. Velocidade 9,3 com controle 8,9: a comunidade elogia a faixa entre devolver curto e girar cruzado com força total. A trajetória baixa exige ajuste."
+      }
+    },
+    {
+      "id": "stiga-calibra-lt-sound",
+      "nome": "Calibra LT Sound",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 399,
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 8.7,
+        "controle": 8.5
+      },
+      "durabilidade": 6.9,
+      "origemSpecs": "comunidade",
+      "rating": 4.35,
+      "reviews": 64,
+      "simples": {
+        "tag": "A Calibra com esponja macia",
+        "frase": "Mesma linha com esponja mais macia: melhora o bloqueio e a devolução de saque. Em troca, é a de menor durabilidade da dupla — há relato de capa gasta em dois meses."
+      }
+    },
+    {
+      "id": "stiga-boost-tx",
+      "nome": "Boost TX",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.0,
+        "controle": 8.5
+      },
+      "durabilidade": 7.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 47,
+      "simples": {
+        "tag": "Rápida, leve, trajetória baixa",
+        "frase": "Velocidade 9,3 com peso baixo. A trajetória divide a comunidade: uns dizem que dificulta o topspin, outros que é o que faz o bloqueio funcionar. Durabilidade boa — há relato de folha de 2013 ainda em uso."
+      }
+    },
+    {
+      "id": "stiga-genesis-m",
+      "nome": "Genesis M",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 399,
+      "specs": {
+        "velocidade": 8.8,
+        "spin": 8.9,
+        "controle": 8.7
+      },
+      "durabilidade": 7.1,
+      "origemSpecs": "comunidade",
+      "rating": 4.35,
+      "reviews": 23,
+      "simples": {
+        "tag": "Ponte entre a europeia e a chinesa",
+        "frase": "Capa e esponja duras sem ser pegajosa: dá giro de estilo chinês sem exigir a mesma força. A comunidade avisa que perde aderência rápido, mas segue com pegada por um tempo."
+      }
+    },
+    {
+      "id": "stiga-dna-platinum-m",
+      "nome": "DNA Platinum M",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 8.8,
+        "controle": 8.1
+      },
+      "durabilidade": 7.3,
+      "origemSpecs": "comunidade",
+      "rating": 4.3,
+      "reviews": 11,
+      "simples": {
+        "tag": "Potência que cobra técnica",
+        "frase": "Esponja 47,5° com muito salto: um avaliador a chama de arma mais potente que já usou, outro avisa que o salto exige técnica apurada para a bola não passar da mesa."
+      }
+    },
+    {
+      "id": "stiga-dna-platinum-xh",
+      "nome": "DNA Platinum XH",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "specs": {
+        "velocidade": 9.5,
+        "spin": 8.7,
+        "controle": 8.3
+      },
+      "durabilidade": 6.8,
+      "origemSpecs": "comunidade",
+      "rating": 4.65,
+      "reviews": 7,
+      "simples": {
+        "tag": "A mais rápida da linha DNA",
+        "frase": "Velocidade 9,5 — o topo da Stiga no catálogo. A comunidade a descreve como difícil de domar e não a recomenda para quem está começando."
+      }
+    },
+    {
+      "id": "stiga-dna-dragon-grip",
+      "nome": "DNA Dragon Grip",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "specs": {
+        "velocidade": 8.4,
+        "spin": 8.9,
+        "controle": 8.8
+      },
+      "durabilidade": 3.1,
+      "origemSpecs": "comunidade",
+      "rating": 3.95,
+      "reviews": 9,
+      "simples": {
+        "tag": "Giro alto, durabilidade 3,1",
+        "frase": "Efeito 8,9 e controle 8,8 logo depois de colada. Mas a durabilidade é 3,1 — a pior de TODO o catálogo, por larga margem. Os relatos falam em perda de aderência em poucos meses. Some isso ao preço antes de decidir."
+      }
+    },
+    {
+      "id": "stiga-dna-dragon-power-52-5",
+      "nome": "DNA Dragon Power 52.5",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais macia das Dragon Power",
+        "frase": "Esponja 52,5°, a entrada da linha Dragon Power — que a Stiga batiza pelo grau da esponja."
+      }
+    },
+    {
+      "id": "stiga-dna-dragon-power-55",
+      "nome": "DNA Dragon Power 55",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A do meio da linha",
+        "frase": "Esponja 55°: o degrau entre a 52,5 e a 57,5."
+      }
+    },
+    {
+      "id": "stiga-dna-dragon-power-57-5",
+      "nome": "DNA Dragon Power 57.5",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A esponja mais dura do catálogo",
+        "frase": "57,5° — a mais dura de todo o WikiPong, acima até da Omega 7 China Ying. Exige braço formado para a bola sair."
+      }
+    },
+    {
+      "id": "stiga-dna-hybrid-h",
+      "nome": "DNA Hybrid H",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Híbrida de esponja dura",
+        "frase": "Esponja 50° na linha híbrida da Stiga, que junta capa de estilo chinês com esponja europeia."
+      }
+    },
+    {
+      "id": "stiga-dna-hybrid-m",
+      "nome": "DNA Hybrid M",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A híbrida média",
+        "frase": "O degrau intermediário da linha Hybrid, entre a H e a XH."
+      }
+    },
+    {
+      "id": "stiga-dna-hybrid-xh",
+      "nome": "DNA Hybrid XH",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A híbrida extra dura",
+        "frase": "O topo de dureza da linha Hybrid, para quem já joga com material chinês."
+      }
+    },
+    {
+      "id": "stiga-dna-platinum-h",
+      "nome": "DNA Platinum H",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Entre a M e a XH",
+        "frase": "O degrau duro da linha Platinum. Quatro avaliações — abaixo do nosso piso."
+      }
+    },
+    {
+      "id": "stiga-dna-platinum-s",
+      "nome": "DNA Platinum S",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A macia da linha Platinum",
+        "frase": "A entrada da DNA Platinum, com esponja macia para quem ainda não aciona uma dura."
+      }
+    },
+    {
+      "id": "stiga-mantra-pro-h",
+      "nome": "Mantra Pro H",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 50° na linha Mantra",
+        "frase": "A versão dura da Mantra Pro, linha que a Stiga posiciona para o jogo ofensivo de meia distância."
+      }
+    },
+    {
+      "id": "stiga-mantra-sound",
+      "nome": "Mantra Sound",
+      "marca": "Stiga",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 399,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais macia deste lote",
+        "frase": "Esponja 42°, a mais macia das 17 Stiga aqui: velocidade moderada e o som característico que dá nome à variante."
+      }
     }
   ]
 }

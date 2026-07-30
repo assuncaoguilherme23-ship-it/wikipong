@@ -88,7 +88,7 @@ export function ComparadorCliente() {
               {encontrados[0].nome} é {encontrados[0].tipo.toLowerCase()} e {encontrados[1].nome} é{' '}
               {encontrados[1].tipo.toLowerCase()}
             </strong>{' '}
-            — só comparamos materiais do mesmo tipo. Velocidade de borracha e velocidade de lâmina
+            Só comparamos materiais do mesmo tipo. Velocidade de borracha e velocidade de lâmina
             são medidas de coisas diferentes: o número sairia, mas não diria nada.
           </p>
         )}
@@ -96,8 +96,7 @@ export function ComparadorCliente() {
         {semPerfil.length > 0 && (
           <p className={estilos.aviso} role="alert">
             <strong>{semPerfil.map((m) => m.nome).join(' e ')}</strong> não{' '}
-            {semPerfil.length > 1 ? 'têm' : 'tem'} ficha de desempenho — não há velocidade, efeito
-            nem controle pra confrontar.
+            {semPerfil.length > 1 ? 'têm' : 'tem'} ficha de desempenho: não há velocidade, efeito nem controle pra confrontar.
           </p>
         )}
 
@@ -131,7 +130,7 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
   return (
     <section aria-label="Escolher materiais">
       <p className={estilos.instrucao}>
-        Escolha <b>dois materiais do mesmo tipo</b> — a comparação abre com radar sobreposto
+        Escolha <b>dois materiais do mesmo tipo</b>. A comparação abre com radar sobreposto
         e tabela de métricas ({escolhidos.length}/2 selecionados).
         {tipoTravado && <> Mostrando só {tipoTravado.toLowerCase()}s.</>}
       </p>
@@ -269,8 +268,7 @@ function Comparacao({ par, modo }: { par: [MaterialComparavel, MaterialComparave
       </div>
 
       <p className={estilos.nota}>
-        * Perdão é métrica derivada com fórmula aberta (proposta v1, pendente de validação do
-        especialista — D-09). Destaque de “maior” é <strong>fato, não veredito</strong>: maior ≠
+        * Perdão é métrica derivada com fórmula aberta (proposta v1, pendente de validação do especialista; D-09). Destaque de “maior” é <strong>fato, não veredito</strong>: maior ≠
         melhor, depende do seu jogo.
       </p>
 

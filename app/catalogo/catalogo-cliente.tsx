@@ -163,17 +163,17 @@ export function CatalogoCliente() {
   }
   if (estado.velocidade)
     chips.push({
-      rotulo: `Velocidade ${estado.velocidade.min}–${estado.velocidade.max}`,
+      rotulo: `Velocidade ${estado.velocidade.min} a ${estado.velocidade.max}`,
       aoRemover: () => navegar(comFaixa(estado, 'velocidade', null)),
     });
   if (estado.spin)
     chips.push({
-      rotulo: `Efeito ${estado.spin.min}–${estado.spin.max}`,
+      rotulo: `Efeito ${estado.spin.min} a ${estado.spin.max}`,
       aoRemover: () => navegar(comFaixa(estado, 'spin', null)),
     });
   if (estado.controle)
     chips.push({
-      rotulo: `Controle ${estado.controle.min}–${estado.controle.max}`,
+      rotulo: `Controle ${estado.controle.min} a ${estado.controle.max}`,
       aoRemover: () => navegar(comFaixa(estado, 'controle', null)),
     });
   if (estado.preco)
@@ -373,8 +373,7 @@ export function CatalogoCliente() {
             )}
 
             <p className={estilos.notaDerivada}>
-              * Perdão é métrica derivada com fórmula aberta (proposta v1, pendente de validação
-              do especialista — D-09).
+              * Perdão é métrica derivada com fórmula aberta (proposta v1, pendente de validação do especialista; D-09).
             </p>
           </section>
         </div>
@@ -387,7 +386,7 @@ export function CatalogoCliente() {
           <p className={estilos.barraTexto}>
             <b className="mono">{paraComparar.length}</b> de 2 selecionados
             {paraComparar.length === 1 && (
-              <span className={estilos.barraDica}> — escolha mais um pra comparar</span>
+              <span className={estilos.barraDica}>, escolha mais um pra comparar</span>
             )}
           </p>
           <div className={estilos.barraAcoes}>

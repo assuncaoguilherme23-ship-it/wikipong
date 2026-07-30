@@ -100,7 +100,7 @@ export function observacoes(m: Montagem): Observacao[] {
     obs.push({
       tipo: 'info',
       titulo: 'Lados com propósitos diferentes',
-      texto: `Forehand voltado a ${m.fh.intencao} e backhand a ${m.bh.intencao}. Montagem assimétrica é escolha comum — muita gente usa um lado pra abrir o ponto e outro pra segurar a troca.`,
+      texto: `Forehand voltado a ${m.fh.intencao} e backhand a ${m.bh.intencao}. Montagem assimétrica é escolha comum: muita gente usa um lado pra abrir o ponto e outro pra segurar a troca.`,
     });
   }
 
@@ -113,7 +113,7 @@ export function observacoes(m: Montagem): Observacao[] {
       obs.push({
         tipo: 'info',
         titulo: 'Um lado bem mais duro que o outro',
-        texto: `${maisDura.nome} é cerca de ${dif}° mais dura que ${maisMacia.nome} na nossa régua unificada. Os dois lados vão responder diferente à mesma batida — o que pode ser exatamente o que você quer, mas exige adaptação.`,
+        texto: `${maisDura.nome} é cerca de ${dif}° mais dura que ${maisMacia.nome} na nossa régua unificada. Os dois lados vão responder diferente à mesma batida, o que pode ser exatamente o que você quer, mas exige adaptação.`,
       });
     }
   }
@@ -126,7 +126,7 @@ export function observacoes(m: Montagem): Observacao[] {
       obs.push({
         tipo: 'atencao',
         titulo: 'Conjunto que perdoa pouco dos dois lados',
-        texto: `Perdão* ${pFH.toFixed(1)} no forehand e ${pBH.toFixed(1)} no backhand. Erro de toque vira erro de bola nos dois lados — é montagem pra quem já tem consistência.`,
+        texto: `Perdão* ${pFH.toFixed(1)} no forehand e ${pBH.toFixed(1)} no backhand. Erro de toque vira erro de bola nos dois lados. É montagem pra quem já tem consistência.`,
       });
     }
   }

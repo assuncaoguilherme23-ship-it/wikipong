@@ -60,7 +60,7 @@ export default function QuizPage() {
       </a>
       <div className={styles.top}>
         <div className={`container ${styles.topRow}`}>
-          <Link href="/" className={styles.brand} aria-label="WikiPong — início">
+          <Link href="/" className={styles.brand} aria-label="WikiPong, início">
             <LogoCompleto altura={26} />
           </Link>
           <span className="trilha">o teste</span>
@@ -154,8 +154,7 @@ export default function QuizPage() {
                         ))}
                       </dl>
                       <p className={styles.presetNota}>
-                        Cada resposta virou um filtro de verdade — o botão acima abre o
-                        catálogo já assim.
+                        Cada resposta virou um filtro de verdade. O botão acima abre o catálogo já assim.
                       </p>
                     </>
                   ) : (

@@ -36,7 +36,7 @@ export function IrCliente() {
       <main className={`container ${estilos.pagina}`}>
         <h1 className={estilos.titulo}>Oferta não encontrada</h1>
         <p className={estilos.material}>
-          Este link de saída não corresponde a nenhuma oferta ativa — provavelmente ela saiu do ar
+          Este link de saída não corresponde a nenhuma oferta ativa. Provavelmente ela saiu do ar
           ou o endereço veio incompleto.
         </p>
         <Link href="/catalogo/" className="botao-primario">
@@ -54,7 +54,7 @@ export function IrCliente() {
       <h1 className={estilos.titulo}>{oferta.loja}</h1>
       {material && (
         <p className={estilos.material}>
-          {material.nome} — {material.marca}
+          {material.nome}, {material.marca}
           {oferta.preco !== undefined && (
             <>
               {' · '}

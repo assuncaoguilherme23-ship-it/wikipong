@@ -14,7 +14,7 @@ import estilos from './glossario.module.css';
 export const metadata: Metadata = {
   title: 'Glossário',
   description:
-    'Os principais termos técnicos do tênis de mesa — topspin, ALC, tensão, bloqueio — ' +
+    'Os principais termos técnicos do tênis de mesa (topspin, ALC, tensão, bloqueio), ' +
     'explicados de forma direta, em português claro.',
 };
 
@@ -44,8 +44,7 @@ export default function PaginaGlossario() {
         </dl>
 
         <p className={estilos.notaIA}>
-          Sentiu falta de um termo? O glossário cresce junto com a enciclopédia — e é a
-          primeira base de conhecimento do assistente do WikiPong.
+          Sentiu falta de um termo? O glossário cresce junto com a enciclopédia, e é a primeira base de conhecimento do assistente do WikiPong.
         </p>
       </main>
 

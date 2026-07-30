@@ -13,7 +13,7 @@ import estilos from './marcas.module.css';
 export const metadata: Metadata = {
   title: 'Marcas de tênis de mesa',
   description:
-    'Butterfly, Stiga, DHS, Tibhar, Xiom, Yasaka, Donic e Palio — o que cada marca faz, os materiais no catálogo e a régua de dureza que cada uma usa.',
+    'Butterfly, Stiga, DHS, Tibhar, Xiom, Yasaka, Donic e Palio. O que cada marca faz, os materiais no catálogo e a régua de dureza que cada uma usa.',
 };
 
 export default function PaginaMarcas() {
@@ -30,7 +30,7 @@ export default function PaginaMarcas() {
         </p>
         <h1 className={estilos.titulo}>Marcas</h1>
         <p className={estilos.lede}>
-          Cada marca mede as coisas na régua dela — por isso o WikiPong padroniza. Aqui está o
+          Cada marca mede as coisas na régua dela. Por isso o WikiPong padroniza. Aqui está o
           que cada uma faz e o que ela tem no nosso catálogo.
         </p>
 

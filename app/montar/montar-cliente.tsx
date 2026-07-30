@@ -93,8 +93,7 @@ export function MontarCliente() {
         </p>
         <h1 className={estilos.titulo}>Monte a sua raquete</h1>
         <p className={estilos.lede}>
-          Uma lâmina e duas borrachas. Escolha as peças e veja o preço real somando — e o que a
-          combinação tem de atenção. Sem palpite de nota: só o que dá pra afirmar.
+          Uma lâmina e duas borrachas. Escolha as peças e veja o preço real somando, e o que a combinação tem de atenção. Sem palpite de nota: só o que dá pra afirmar.
         </p>
 
         <div className={estilos.corpo}>
@@ -113,7 +112,7 @@ export function MontarCliente() {
                     value={atual?.id ?? ''}
                     onChange={(e) => escolher(chave, e.target.value)}
                   >
-                    <option value="">— escolher —</option>
+                    <option value="">escolher…</option>
                     {opcoes.map((o) => (
                       <option key={o.id} value={o.id}>
                         {o.nome} · {o.marca} · {brl(o.preco)}
@@ -151,7 +150,7 @@ export function MontarCliente() {
               <p className={estilos.totalNota}>
                 {pronta
                   ? 'somando as 3 peças'
-                  : `${escolhidas} de 3 peças escolhidas — o total cresce conforme você escolhe`}
+                  : `${escolhidas} de 3 peças escolhidas; o total cresce conforme você escolhe`}
               </p>
             </div>
 
@@ -232,8 +231,7 @@ export function MontarCliente() {
             )}
 
             <p className={estilos.notaDerivada}>
-              * Perdão é métrica derivada com fórmula aberta (proposta v1, pendente de validação
-              do especialista — D-09).
+              * Perdão é métrica derivada com fórmula aberta (proposta v1, pendente de validação do especialista; D-09).
             </p>
           </section>
         </div>

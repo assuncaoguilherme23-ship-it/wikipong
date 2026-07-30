@@ -54,18 +54,18 @@ export function ComparativoLaminas({ laminas }: { laminas: LaminaComparada[] }) 
       {comIndice.length > 0 && (
         <div className={estilos.indices}>
           <p className={`mono ${estilos.indicesTitulo}`}>
-            O que cada marca publica — cada uma na própria escala
+            O que cada marca publica, cada uma na própria escala
           </p>
           <ul className={estilos.indicesLista}>
             {comIndice.map((l) => (
               <li key={l.nome}>
-                <strong>{l.nome}</strong> — {l.indiceProprio}
+                <strong>{l.nome}</strong>: {l.indiceProprio}
               </li>
             ))}
           </ul>
           <p className={estilos.indicesAviso}>
             Estes números ficam fora da tabela de propósito: colocá-los em colunas vizinhas
-            sugeriria que dá pra compará-los, e não dá — são réguas diferentes, de marcas
+            sugeriria que dá pra compará-los, e não dá: são réguas diferentes, de marcas
             diferentes, medindo coisas diferentes.
           </p>
         </div>

@@ -17,9 +17,9 @@ import { PROFISSIONAIS, type Papel } from '@/componentes/dados-profissionais';
 import estilos from './profissionais.module.css';
 
 export const metadata: Metadata = {
-  title: 'O que os profissionais usam — WikiPong',
+  title: 'O que os profissionais usam · WikiPong',
   description:
-    'A lâmina e as borrachas de Hugo Calderano, Ma Long, Fan Zhendong, Harimoto e Bruna Takahashi — com fonte, data e link para a ficha de cada material.',
+    'A lâmina e as borrachas de Hugo Calderano, Ma Long, Fan Zhendong, Harimoto e Bruna Takahashi, com fonte, data e link para a ficha de cada material.',
 };
 
 // A peça sem material ainda merece um ícone: deriva do papel.
@@ -56,8 +56,7 @@ export default function PaginaProfissionais() {
         </p>
         <h1 className={estilos.titulo}>O que os profissionais usam</h1>
         <p className={estilos.lede}>
-          A lâmina e as duas borrachas de quem joga no topo — cada uma com a fonte e a data em que
-          conferimos. Dá pra clicar na peça e ler a ficha, quando temos o equivalente no catálogo.
+          A lâmina e as duas borrachas de quem joga no topo, cada uma com a fonte e a data em que conferimos. Dá pra clicar na peça e ler a ficha, quando temos o equivalente no catálogo.
           Só peça um aviso antes de sair copiando: profissional usa versão feita sob medida, e
           técnica vem antes de equipamento.
         </p>
@@ -139,20 +138,20 @@ export default function PaginaProfissionais() {
           <h2 id="titulo-nota" className={estilos.rodapeNotaTitulo}>
             Leia antes de copiar um setup
           </h2>
-          <p>Ver o que um campeão usa é divertido — e um pouco enganoso. Três coisas que a gente prefere dizer:</p>
+          <p>Ver o que um campeão usa é divertido, e um pouco enganoso. Três coisas que a gente prefere dizer:</p>
           <ul className={estilos.verdades}>
             <li>
               <strong>Setup de pro muda.</strong> Troca de patrocínio, ajuste de temporada. Por isso
-              cada peça acima tem a data em que conferimos e o link da fonte — não é foto parada.
+              cada peça acima tem a data em que conferimos e o link da fonte. Não é foto parada.
             </li>
             <li>
               <strong>Não é a peça da loja.</strong> Quase todo profissional usa uma versão
               “National”, feita sob medida, que não é vendida ao público. Quando a peça vira link, é
-              o equivalente de varejo mais próximo — não a peça exata dele.
+              o equivalente de varejo mais próximo, não a peça exata dele.
             </li>
             <li>
               <strong>Copiar não vira técnica.</strong> A borracha do Ma Long nas mãos de quem está
-              começando rende menos, não mais — ela precisa de aceleração pra funcionar. O
+              começando rende menos, não mais: ela precisa de aceleração pra funcionar. O
               equipamento certo é o que combina com o <em>seu</em> jogo.
             </li>
           </ul>

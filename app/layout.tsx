@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   description:
     'Feito pra explicar, não pra empurrar. Fichas, métricas e comparações de ' +
-    'equipamentos de tênis de mesa — recomendação explicada, nunca imposta.',
+    'equipamentos de tênis de mesa. Recomendação explicada, nunca imposta.',
   openGraph: {
     type: 'website',
     locale: 'pt_BR',

@@ -53,7 +53,7 @@ export function Rodape() {
       </div>
       <div className={`container ${estilos.base}`}>
         <hr className={estilos.linhaCentral} aria-hidden="true" />
-        <p>WikiPong — métricas com fórmula aberta, opinião sempre rotulada.</p>
+        <p>WikiPong: métricas com fórmula aberta, opinião sempre rotulada.</p>
       </div>
     </footer>
   );

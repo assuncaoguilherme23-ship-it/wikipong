@@ -30,7 +30,7 @@ export default function PaginaConjuntos() {
         <h1 className={estilos.titulo}>Conjuntos</h1>
         <p className={estilos.lede}>
           Raquete de verdade não vem pronta: é uma lâmina e duas borrachas, escolhidas para o seu
-          jogo. Estas são montagens que fazem sentido juntas — com o porquê de cada escolha e o
+          jogo. Estas são montagens que fazem sentido juntas, com o porquê de cada escolha e o
           preço real de somar as três peças.
         </p>
 
@@ -92,8 +92,7 @@ export default function PaginaConjuntos() {
           </p>
           <p>
             O que dá pra afirmar com honestidade é o que está acima: as specs reais de cada peça
-            (com a fonte do fabricante na ficha), a soma dos preços, e o raciocínio da combinação —
-            que é opinião editorial, e está rotulada como tal.
+            (com a fonte do fabricante na ficha), a soma dos preços, e o raciocínio da combinação, que é opinião editorial e está rotulada como tal.
           </p>
           <p className={estilos.notaLinks}>
             <Link href="/montar/">Montar a minha do zero →</Link>

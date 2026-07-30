@@ -57,7 +57,7 @@ const FEATURES_ATIVAS = [
   {
     titulo: 'Catálogo completo',
     texto:
-      'Borrachas, lâminas, raquetes e bolas com ficha padronizada — cada uma no modo Simples ou Técnico, do jeito que você entende.',
+      'Borrachas, lâminas, raquetes e bolas com ficha padronizada, cada uma no modo Simples ou Técnico, do jeito que você entende.',
     href: '/catalogo/',
     destaque: true,
   },
@@ -81,7 +81,7 @@ const FEATURES_ATIVAS = [
   },
   {
     titulo: 'O que os profissionais usam',
-    texto: 'O setup de Calderano, Ma Long e outros — com fonte, data e link pra ficha.',
+    texto: 'O setup de Calderano, Ma Long e outros, com fonte, data e link pra ficha.',
     href: '/profissionais/',
     destaque: false,
   },
@@ -158,8 +158,8 @@ export default function Home() {
               Tênis de mesa não precisa ser um <span className={styles.destaque}>mistério</span>.
             </h1>
             <p className={styles.lede}>
-              Do iniciante perdido ao jogador detalhista: o WikiPong explica cada material — e
-              mostra o certo pro seu jogo — num lugar só, sem você ter que caçar opinião por aí.
+              Do iniciante perdido ao jogador detalhista: o WikiPong explica cada material e
+              mostra o certo pro seu jogo, num lugar só, sem você ter que caçar opinião por aí.
             </p>
             <div className={styles.acoesHero}>
               <Link href="/quiz/" className="botao-primario">
@@ -198,7 +198,7 @@ export default function Home() {
             </h2>
             <p className={styles.verdadeTexto}>
               Quem joga sério monta a sua: uma lâmina + duas borrachas, escolhidas pro seu
-              estilo. É essa combinação que muda o jogo — e é ela que o WikiPong te ensina a
+              estilo. É essa combinação que muda o jogo, e é ela que o WikiPong te ensina a
               escolher.
             </p>
           </div>
@@ -238,7 +238,7 @@ export default function Home() {
             <div>
               <h2>Feito pra explicar, não pra empurrar.</h2>
               <p className={styles.manifestoTexto}>
-                O WikiPong existe pra te explicar — cada material ganha uma ficha neutra e
+                O WikiPong existe pra te explicar. Cada material ganha uma ficha neutra e
                 padronizada, escrita pra ser entendida por quem está começando e respeitada
                 por quem é detalhista.
               </p>
@@ -307,10 +307,10 @@ export default function Home() {
           <div className={styles.provaHead}>
             <h2>Números que dá pra comparar de verdade</h2>
             <p>
-              Nota de fabricante é escala interna de marketing — o 9.0 de uma marca não é o
+              Nota de fabricante é escala interna de marketing: o 9.0 de uma marca não é o
               9.0 da outra. Aqui, cada material mostra o dado técnico e a tradução em
-              português claro, lado a lado, além de métricas de fórmula aberta — como o
-              Perdão — que nenhum catálogo publica.
+              português claro, lado a lado, além de métricas de fórmula aberta (como o
+              Perdão) que nenhum catálogo publica.
             </p>
           </div>
 
@@ -359,7 +359,7 @@ export default function Home() {
 
           <p className={styles.nota}>
             <span className={styles.selo}>A validar</span> &nbsp;* Perdão é métrica derivada
-            (proposta v1, pendente de validação do especialista — D-09). Destaque de “maior” é{' '}
+            (proposta v1, pendente de validação do especialista; D-09). Destaque de “maior” é{' '}
             <strong>fato, não veredito</strong>: maior ≠ melhor, depende do seu jogo. Custo/mês não
             recebe destaque porque, nele, maior é pior.
           </p>

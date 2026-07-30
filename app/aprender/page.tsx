@@ -21,8 +21,7 @@ export default function PaginaAprender() {
         <p className="trilha">Aprender</p>
         <h1 className={estilos.titulo}>Aprender</h1>
         <p className={estilos.lede}>
-          Guias diretos pra escolher e montar seu equipamento sem jargão — do básico ao passo
-          seguinte, em português claro.
+          Guias diretos pra escolher e montar seu equipamento sem jargão, do básico ao passo seguinte, em português claro.
         </p>
 
         <ul className={estilos.lista}>

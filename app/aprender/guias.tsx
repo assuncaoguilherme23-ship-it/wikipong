@@ -31,14 +31,12 @@ export const GUIAS: Guia[] = [
     corpo: (
       <>
         <p>
-          A borracha é o que mais muda a sensação do seu jogo — mais até que a marca da
-          lâmina. Antes de olhar preço, entenda três coisas: o tipo, a dureza da esponja e o
+          A borracha é o que mais muda a sensação do seu jogo, mais até que a marca da lâmina. Antes de olhar preço, entenda três coisas: o tipo, a dureza da esponja e o
           que você precisa <em>agora</em>.
         </p>
         <h2>Lisa ou com pinos?</h2>
         <p>
-          Quase todo mundo começa (e faz bem) com borracha <strong>lisa</strong> — a superfície
-          virada para dentro, que dá efeito previsível e controle. Borrachas de pinos (curtos ou
+          Quase todo mundo começa (e faz bem) com borracha <strong>lisa</strong>, a de superfície virada para dentro, que dá efeito previsível e controle. Borrachas de pinos (curtos ou
           longos) servem a estilos específicos de defesa e bloqueio; deixe para quando já souber
           o que procura.
         </p>
@@ -47,8 +45,7 @@ export const GUIAS: Guia[] = [
           Sob a borracha há uma camada de <Link href="/glossario/">esponja</Link>. Quanto mais
           dura, mais rápida e mais exigente com a técnica; quanto mais macia, mais controle e
           mais tolerância ao erro. Muitas borrachas modernas usam{' '}
-          <Link href="/glossario/">tensão</Link> para ganhar efeito — ótimas, desde que a esponja
-          não seja dura demais para o seu momento.{' '}
+          <Link href="/glossario/">tensão</Link> para ganhar efeito. São ótimas, desde que a esponja não seja dura demais para o seu momento.{' '}
           <Link href="/aprender/dureza-da-esponja/">
             Veja a régua de dureza, com material de verdade, e a pegadinha das escalas →
           </Link>
@@ -57,7 +54,7 @@ export const GUIAS: Guia[] = [
         <p>
           O erro clássico é comprar a borracha dos profissionais. Uma borracha rápida demais faz
           a bola sair da mesa antes de você ter técnica para segurá-la. Priorize{' '}
-          <strong>controle alto e velocidade contida</strong> — é exatamente o que o perfil
+          <strong>controle alto e velocidade contida</strong>. É exatamente o que o perfil
           &ldquo;Base sólida primeiro&rdquo; recomenda. Você troca por algo mais rápido quando o
           braço pedir, não antes.
         </p>
@@ -71,13 +68,13 @@ export const GUIAS: Guia[] = [
   {
     slug: 'dureza-da-esponja',
     titulo: 'Dureza da esponja: o que muda no seu jogo',
-    resumo: 'Da mais macia à mais dura — o que cada extremo entrega, o que cobra, e a pegadinha das escalas.',
+    resumo: 'Da mais macia à mais dura: o que cada extremo entrega, o que cobra e a pegadinha das escalas.',
     minutos: 6,
     corpo: (
       <>
         <p>
           Sob a superfície de qualquer borracha lisa existe uma camada de{' '}
-          <Link href="/glossario/">esponja</Link>. A dureza dela — medida em graus — é
+          <Link href="/glossario/">esponja</Link>. A dureza dela, medida em graus, é
           provavelmente a spec que <strong>mais muda a sensação</strong> do seu jogo. Também é a
           que mais confunde, porque o número sozinho não diz nada se você não souber a escala.
         </p>
@@ -89,18 +86,18 @@ export const GUIAS: Guia[] = [
         </p>
         <p>
           <strong>Esponja macia</strong> afunda mais e por mais tempo. A bola “entra” na borracha
-          e permanece em contato por uma fração maior de segundo — é o que os manuais chamam de{' '}
+          e permanece em contato por uma fração maior de segundo. Os manuais chamam isso de{' '}
           <em>dwell time</em>. Mais tempo de contato significa mais chance de a superfície agarrar
           a bola e girá-la, mesmo em toques leves, e mais margem para corrigir um ângulo errado.
           Por isso ela perdoa. O preço: numa batida forte, parte da energia se perde deformando a
-          esponja em vez de voltar para a bola — o teto de velocidade é mais baixo, e em aceleração
+          esponja em vez de voltar para a bola. O teto de velocidade fica mais baixo, e em aceleração
           máxima a bola pode “afundar demais” e sair sem direção.
         </p>
         <p>
           <strong>Esponja dura</strong> deforma pouco e devolve a energia de forma mais direta e
           rápida. Isso dá velocidade e trajetória mais reta quando você bate forte. O preço é
           exigente: ela precisa de aceleração para “abrir”. Se o seu golpe não tem velocidade
-          suficiente, a esponja simplesmente não trabalha — e você fica com uma borracha que gira
+          suficiente, a esponja simplesmente não trabalha, e você fica com uma borracha que gira
           menos e perdoa menos que uma macia. Dureza não é upgrade automático: é uma troca.
         </p>
 
@@ -131,26 +128,26 @@ export const GUIAS: Guia[] = [
 
         <h2>A pegadinha: grau não é universal</h2>
         <p>
-          Repare na Hurricane acima. Ela é vendida como <strong>39°</strong> — e está posicionada
+          Repare na Hurricane acima. Ela é vendida como <strong>39°</strong>, e está posicionada
           perto do extremo duro. Não é erro: a escala chinesa (DHS) e a escala europeia (ESN, usada
           por Tibhar, Xiom, Donic e companhia) <strong>medem de formas diferentes</strong>. Uma
-          Hurricane de 39° DHS equivale a mais ou menos <strong>51° ESN</strong> — ou seja, é bem
+          Hurricane de 39° DHS equivale a mais ou menos <strong>51° ESN</strong>. Ou seja, é bem
           mais dura que uma europeia de 39°. A escala japonesa da Butterfly é uma terceira régua.
         </p>
         <p>
           Conclusão prática: <strong>nunca compare graus sem antes conferir a escala</strong>. Foi
-          para resolver exatamente esse problema que a ficha unificada do WikiPong existe — e é a
-          tabela de conversão entre escalas que ainda aguarda validação de especialista.
+          para resolver exatamente esse problema que a ficha unificada do WikiPong existe. A tabela de conversão entre
+          escalas ainda aguarda a validação do especialista.
         </p>
 
         <h2>O que escolher agora</h2>
         <p>
           <strong>Está começando:</strong> fique na faixa macia (por volta de 35° a 42° na escala
-          europeia). Você vai errar menos, sentir mais a bola e aprender o toque — que é o que
+          europeia). Você vai errar menos, sentir mais a bola e aprender o toque, que é o que
           importa nos primeiros meses.
         </p>
         <p>
-          <strong>Já ataca com consistência:</strong> subir para 45°–50° faz sentido, porque agora
+          <strong>Já ataca com consistência:</strong> subir para 45° a 50° faz sentido, porque agora
           você tem a aceleração que ativa a esponja. Suba um lado de cada vez (normalmente o
           forehand primeiro) para sentir a diferença isolada.
         </p>
@@ -180,7 +177,7 @@ export const GUIAS: Guia[] = [
       <>
         <p>
           A lâmina é a base de madeira onde as borrachas são coladas. Ela define a velocidade de
-          partida e o <em>toque</em> — a informação que volta pra sua mão quando a bola bate. A
+          partida e o <em>toque</em>, a informação que volta pra sua mão quando a bola bate. A
           dúvida mais comum de quem está começando: madeira pura ou com fibra de carbono?
         </p>
 
@@ -188,8 +185,8 @@ export const GUIAS: Guia[] = [
         <p>
           Uma lâmina é um sanduíche de lâminas finas de madeira coladas com as fibras cruzadas. No
           impacto, esse sanduíche <strong>flexiona e volta</strong>. Quanto mais ele flexiona, mais
-          tempo a bola fica em contato e mais informação você sente — e mais devagar ela sai.
-          Quanto mais rígido, mais rápido devolve a energia — e menos você sente.
+          tempo a bola fica em contato e mais informação você sente, e mais devagar ela sai.
+          Quanto mais rígido, mais rápido devolve a energia, e menos você sente.
         </p>
 
         <h2>Madeira pura: o toque que ensina</h2>
@@ -209,16 +206,16 @@ export const GUIAS: Guia[] = [
         </p>
         <p>
           <strong>O carbono</strong> é rígido: espalha o impacto por uma área maior (o famoso
-          “ponto doce” mais largo) e devolve energia com pouca perda — daí a velocidade. <strong>
+          “ponto doce” mais largo) e devolve energia com pouca perda. Daí a velocidade. <strong>
           O arylate</strong> entra justamente para compensar: é uma fibra que absorve vibração,
           domando a dureza seca do carbono puro. Por isso o ALC é a combinação mais popular do
           circuito: rápido, mas ainda com algum toque. O ZLC troca parte desse amortecimento por
-          mais rigidez ainda — mais potência, menos perdão.
+          mais rigidez ainda: mais potência, menos perdão.
         </p>
         <p>
           O custo é real: quanto mais rígida a lâmina, <strong>menos ela avisa</strong> o que está
           acontecendo e menos tempo você tem pra corrigir. Cedo demais, a fibra não te deixa mais
-          rápido — te deixa mais impreciso.
+          rápido, te deixa mais impreciso.
         </p>
 
         <h2>Lendo a classe: ALL, OFF e companhia</h2>
@@ -235,7 +232,7 @@ export const GUIAS: Guia[] = [
 
         <h2>Quatro lâminas reais, lado a lado</h2>
         <p>
-          Compare pelo que é comparável — composição, classe e espessura. A espessura é um sinal
+          Compare pelo que é comparável: composição, classe e espessura. A espessura é um sinal
           honesto: mais milímetros e mais fibra, mais velocidade.
         </p>
 
@@ -247,7 +244,7 @@ export const GUIAS: Guia[] = [
               composicao: '5 madeiras (all-wood)',
               classe: 'ALL (allround)',
               espessura: '5,1 mm',
-              indiceProprio: 'Velocidade 73 · Controle 77 (escala Stiga, 0–100)',
+              indiceProprio: 'Velocidade 73 · Controle 77 (escala Stiga, 0 a 100)',
             },
             {
               nome: 'Donic Appelgren Allplay',
@@ -255,7 +252,7 @@ export const GUIAS: Guia[] = [
               composicao: '5 madeiras (abachi no miolo, limba nas externas)',
               classe: 'ALL (allround)',
               espessura: '5,5 mm',
-              indiceProprio: 'Velocidade 73 · Controle 82 (escala Donic, 0–100)',
+              indiceProprio: 'Velocidade 73 · Controle 82 (escala Donic, 0 a 100)',
             },
             {
               nome: 'Butterfly Viscaria',
@@ -278,14 +275,14 @@ export const GUIAS: Guia[] = [
 
         <p>
           Duas leituras saltam da tabela. Primeira: as duas allwood são mais finas (5,1 e 5,5 mm)
-          que as duas com fibra (5,8 mm) — a espessura acompanha a intenção. Segunda: a Viscaria e
+          que as duas com fibra (5,8 mm). A espessura acompanha a intenção. Segunda: a Viscaria e
           a Fan Zhendong ALC têm <strong>exatamente a mesma ficha</strong>. Não é coincidência: a
           FZD usa a estrutura consagrada da Viscaria; o que muda é o acabamento e o nome no cabo.
         </p>
 
         <h2>O que pesa pra você agora</h2>
         <p>
-          Se você está começando, uma allwood classe ALL é a escolha quase sempre certa — e não é
+          Se você está começando, uma allwood classe ALL é a escolha quase sempre certa. E não é
           uma lâmina “de iniciante” que você joga fora depois: a Stiga Allround Classic está no
           mercado desde 1967 justamente porque continua fazendo sentido. A fibra espera você pedir
           por ela, e você vai saber quando for a hora: quando sentir que a lâmina está segurando o
@@ -307,7 +304,7 @@ export const GUIAS: Guia[] = [
   {
     slug: 'estilos-de-jogo',
     titulo: 'Estilos de jogo',
-    resumo: 'Atacante, defensor, all-round — e por que o iniciante não precisa escolher ainda.',
+    resumo: 'Atacante, defensor, all-round, e por que o iniciante não precisa escolher ainda.',
     minutos: 3,
     corpo: (
       <>
@@ -331,12 +328,12 @@ export const GUIAS: Guia[] = [
         <h2>All-round</h2>
         <p>
           O equilíbrio: constrói o ponto, troca bola e ataca quando abre o espaço. É o estilo mais
-          versátil — e o ponto de partida natural.
+          versátil, e o ponto de partida natural.
         </p>
         <h2>E o iniciante?</h2>
         <p>
           No começo, todo mundo é all-round. A prioridade é constância, não potência. O seu estilo
-          vai se revelando com o tempo de mesa — e o equipamento acompanha essa descoberta, não o
+          vai se revelando com o tempo de mesa, e o equipamento acompanha essa descoberta, não o
           contrário.
         </p>
         <p className="prox">
@@ -354,14 +351,14 @@ export const GUIAS: Guia[] = [
       <>
         <p>
           Aqui está o segredo que quase ninguém conta a quem está começando: a raquete de quem
-          joga sério <strong>não vem pronta da loja</strong>. Ela é montada — uma lâmina e duas
+          joga sério <strong>não vem pronta da loja</strong>. Ela é montada: uma lâmina e duas
           borrachas, escolhidas para o seu jogo.
         </p>
         <h2>As três peças</h2>
         <p>
           São a <strong>lâmina</strong> e duas borrachas: uma para o lado do{' '}
           <em>forehand</em> (o seu lado dominante) e uma para o <em>backhand</em>. Os dois lados
-          podem — e muitas vezes devem — ser diferentes, porque cada lado faz um trabalho.
+          podem ser diferentes, e muitas vezes devem, porque cada lado faz um trabalho.
         </p>
         <h2>Coladas, e trocáveis</h2>
         <p>
@@ -372,7 +369,7 @@ export const GUIAS: Guia[] = [
         </p>
         <h2>Um lado de cada cor</h2>
         <p>
-          As regras exigem que os dois lados tenham cores nitidamente diferentes — classicamente
+          As regras exigem que os dois lados tenham cores nitidamente diferentes, classicamente
           um vermelho e um preto (as{' '}
           <Link href="/aprender/regras-ittf/">regras da ITTF</Link> hoje admitem outras cores de
           um dos lados; confira a norma vigente).
@@ -380,7 +377,7 @@ export const GUIAS: Guia[] = [
         <h2>Comece por uma montagem simples</h2>
         <p>
           Para o primeiro conjunto: uma madeira allwood allround + duas borrachas de controle. É a
-          combinação que perdoa enquanto a técnica cresce — e a base de qualquer &ldquo;kit
+          combinação que perdoa enquanto a técnica cresce, e a base de qualquer &ldquo;kit
           iniciante&rdquo;.
         </p>
         <p className="prox">
@@ -419,7 +416,7 @@ export const GUIAS: Guia[] = [
         </p>
         <p className="nota-guia">
           As regras oficiais evoluem e têm detalhes (saque, homologações, competição) além deste
-          resumo — para valer em torneio, confira sempre a norma vigente da ITTF ou da sua
+          resumo. Para valer em torneio, confira sempre a norma vigente da ITTF ou da sua
           federação.
         </p>
         <p className="prox">
@@ -431,18 +428,18 @@ export const GUIAS: Guia[] = [
   {
     slug: 'cuidados-manutencao',
     titulo: 'Cuidados e manutenção',
-    resumo: 'Como limpar, guardar e saber a hora de trocar — o que estica a vida da borracha.',
+    resumo: 'Como limpar, guardar e saber a hora de trocar, para esticar a vida da borracha.',
     minutos: 3,
     corpo: (
       <>
         <p>
           Borracha é consumível: ela perde efeito com o uso e o tempo. Cuidar bem estica a vida
-          útil, mantém a aderência e adia a troca — o que, no fim, baixa o seu custo por mês.
+          útil, mantém a aderência e adia a troca, o que no fim baixa o seu custo por mês.
         </p>
         <h2>Limpe depois de jogar</h2>
         <p>
           A poeira e a oleosidade da mão matam o efeito. Passe uma esponja ou pano úmido (ou um
-          limpador próprio de borracha) depois de jogar — a diferença na aderência é enorme.
+          limpador próprio de borracha) depois de jogar. A diferença na aderência é enorme.
         </p>
         <h2>Use filme protetor</h2>
         <p>
@@ -452,13 +449,13 @@ export const GUIAS: Guia[] = [
         <h2>Longe do sol e do calor</h2>
         <p>
           Calor resseca a borracha e a esponja. Nada de deixar a raquete no carro ao sol ou perto
-          de fontes de calor — guarde em lugar fresco, dentro de um estojo.
+          de fontes de calor. Guarde em lugar fresco, dentro de um estojo.
         </p>
         <h2>Quando trocar</h2>
         <p>
           Quando a borracha perde aderência e efeito mesmo depois de limpa, chegou a hora. Uma
-          borracha de ataque tende a durar poucos meses de uso intenso; uma clássica de controle,
-          bem mais — é essa diferença que aparece no <em>custo por mês</em> das fichas.
+          borracha de ataque tende a durar poucos meses de uso intenso; uma clássica de controle dura
+          bem mais. É essa diferença que aparece no <em>custo por mês</em> das fichas.
         </p>
         <p className="prox">
           <Link href="/catalogo/">Ver o catálogo de materiais →</Link>

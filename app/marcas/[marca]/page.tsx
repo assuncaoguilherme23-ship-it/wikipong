@@ -33,7 +33,7 @@ export async function generateMetadata({
   const m = marcaPorSlug(marca);
   if (!m) return {};
   return {
-    title: `${m.nome} — materiais, preços e fichas técnicas`,
+    title: `${m.nome}: materiais, preços e fichas técnicas`,
     description:
       `Todos os materiais ${m.nome} do catálogo do WikiPong: ficha padronizada, preço real conferido ` +
       `e tradução em português claro. ${m.editorial?.descricao ?? ''}`.trim(),
@@ -156,8 +156,7 @@ export default async function PaginaMarca({ params }: { params: Promise<{ marca:
               {new URL(m.editorial.site).hostname.replace(/^www\./, '')} ↗
             </a>
             <span className={estilos.oficialNota}>
-              O WikiPong não é ligado à {m.nome} nem a nenhuma marca — as fichas são
-              independentes.
+              O WikiPong não é ligado à {m.nome} nem a nenhuma marca. As fichas são independentes.
             </span>
           </p>
         )}

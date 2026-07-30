@@ -19,7 +19,7 @@ import { escalaDoTexto, primeiroGrau, paraESN, faixaLegivel } from '@/src/logica
 import estilos from './escalas.module.css';
 
 export const metadata: Metadata = {
-  title: 'Tradutor de durezas — DHS, ESN e Butterfly',
+  title: 'Tradutor de durezas: DHS, ESN e Butterfly',
   description:
     'Uma borracha de 39° na escala chinesa não é a mesma coisa que 39° na europeia. Converta durezas entre as escalas DHS, ESN e Butterfly e veja o que cada faixa entrega em quadra.',
 };
@@ -56,8 +56,7 @@ export default function PaginaEscalas() {
         </p>
         <h1 className={estilos.titulo}>Tradutor de durezas</h1>
         <p className={estilos.lede}>
-          Uma borracha de <strong>39° na escala chinesa</strong> não é a mesma coisa que 39° na
-          europeia — é bem mais dura. Cada fabricante mede na sua própria régua e ninguém publica
+          Uma borracha de <strong>39° na escala chinesa</strong> não é a mesma coisa que 39° na europeia. É bem mais dura. Cada fabricante mede na sua própria régua e ninguém publica
           a conversão. Aqui você faz a tradução.
         </p>
 
@@ -88,8 +87,7 @@ export default function PaginaEscalas() {
               Materiais do catálogo, traduzidos
             </h2>
             <p className={estilos.subtitulo}>
-              O grau que cada fabricante publica, e o que ele significa na régua europeia — a
-              que usamos como referência.
+              O grau que cada fabricante publica, e o que ele significa na régua europeia, a que usamos como referência.
             </p>
             <div className={estilos.tabelaWrap}>
               <table className={estilos.tabela}>
@@ -119,8 +117,7 @@ export default function PaginaEscalas() {
               </table>
             </div>
             <p className={estilos.nota}>
-              Tabela montada a partir das fichas de fabricante que o catálogo já traz — só entram
-              materiais cuja ficha declara <strong>o grau e a escala</strong>. Onde o fabricante não
+              Tabela montada a partir das fichas de fabricante que o catálogo já traz. Só entram materiais cuja ficha declara <strong>o grau e a escala</strong>. Onde o fabricante não
               diz a régua, não traduzimos: seria chute.
             </p>
           </section>

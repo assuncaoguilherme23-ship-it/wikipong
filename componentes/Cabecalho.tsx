@@ -91,7 +91,7 @@ export function Cabecalho() {
     <>
       <header className={estilos.cabecalho}>
       <div className={`container ${estilos.linha}`}>
-        <Link href="/" className={estilos.marca} aria-label="WikiPong — início">
+        <Link href="/" className={estilos.marca} aria-label="WikiPong, início">
           <LogoCompleto altura={30} />
         </Link>
 

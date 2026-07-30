@@ -29,19 +29,19 @@ export const ESCALAS: readonly EscalaInfo[] = [
   {
     id: 'esn',
     nome: 'ESN (europeia)',
-    origem: 'Alemanha — fábrica que produz para Tibhar, Andro, Xiom, Donic e outras',
+    origem: 'Alemanha, fábrica que produz para Tibhar, Andro, Xiom, Donic e outras',
     exemplos: 'Tibhar Evolution MX-P, Xiom Vega, Andro Rasanter',
   },
   {
     id: 'dhs',
     nome: 'DHS (chinesa)',
-    origem: 'China — a régua das borrachas pegajosas',
+    origem: 'China, a régua das borrachas pegajosas',
     exemplos: 'DHS Hurricane 3 e variantes',
   },
   {
     id: 'butterfly',
     nome: 'Butterfly (japonesa)',
-    origem: 'Japão — escala própria, revisada em fev/2023',
+    origem: 'Japão, escala própria, revisada em fev/2023',
     exemplos: 'Tenergy, Dignics, Rozena',
   },
 ];

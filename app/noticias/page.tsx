@@ -14,9 +14,9 @@ import { NOTICIAS, dataLegivel, dominioDaFonte } from '@/componentes/dados-notic
 import estilos from './noticias.module.css';
 
 export const metadata: Metadata = {
-  title: 'Notícias — WikiPong',
+  title: 'Notícias · WikiPong',
   description:
-    'O que está acontecendo no tênis de mesa, com foco no Brasil — resumos com a fonte, a data e o link para o original.',
+    'O que está acontecendo no tênis de mesa, com foco no Brasil. Resumos com a fonte, a data e o link para o original.',
 };
 
 export default function PaginaNoticias() {
@@ -34,7 +34,7 @@ export default function PaginaNoticias() {
         <h1 className={estilos.titulo}>Notícias</h1>
         <p className={estilos.lede}>
           O que está acontecendo no tênis de mesa, com um olho no Brasil. Resumimos cada nota e
-          linkamos pro original — a notícia inteira mora na fonte, com a data à mostra.
+          linkamos pro original. A notícia inteira mora na fonte, com a data à mostra.
         </p>
 
         <ul className={estilos.lista}>
@@ -66,15 +66,14 @@ export default function PaginaNoticias() {
             Como esta página funciona
           </h2>
           <p>
-            A WikiPong não é um jornal — é uma enciclopédia. Aqui a gente faz um{' '}
+            A WikiPong não é um jornal, é uma enciclopédia. Aqui a gente faz um{' '}
             <strong>resumo curto</strong> de cada notícia e <strong>credita e linka</strong> a fonte
             que apurou. Não copiamos o texto nem as imagens de ninguém: quem quiser a matéria
             inteira, clica e vai pra origem.
           </p>
           <p>
             A base inicial vem da <strong>CBTM</strong> (Confederação Brasileira de Tênis de Mesa).
-            Notícias de perfis do tênis de mesa brasileiro (inclusive do Instagram) entram por
-            curadoria — sempre com crédito, link e a <strong>data real</strong> da publicação. Se
+            Notícias de perfis do tênis de mesa brasileiro (inclusive do Instagram) entram por curadoria, sempre com crédito, link e a <strong>data real</strong> da publicação. Se
             uma nota está velha, ela aparece velha.
           </p>
           <p className={estilos.notaLinks}>

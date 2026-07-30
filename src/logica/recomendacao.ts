@@ -53,7 +53,7 @@ const dentro = (f: Faixa, v: number | undefined): boolean =>
   v !== undefined && v >= f.min && v <= f.max;
 
 const detalheFaixa = (v: number, f: Faixa): string =>
-  `${v.toFixed(1)} — faixa pedida: ${f.min}–${f.max}`;
+  `${v.toFixed(1)} (faixa pedida: ${f.min} a ${f.max})`;
 
 /** Veredito de um material contra um perfil: combina? e por quê, critério a critério. */
 export function combinaComPerfil(material: Material, perfil: Perfil): Veredito {
@@ -65,7 +65,7 @@ export function combinaComPerfil(material: Material, perfil: Perfil): Veredito {
     criterios.push({
       rotulo: 'Nível',
       atende,
-      detalhe: atende ? material.nivel : `${material.nivel} — pedido: ${estado.niveis.join(' ou ')}`,
+      detalhe: atende ? material.nivel : `${material.nivel} (pedido: ${estado.niveis.join(' ou ')})`,
     });
   }
   /* Material sem perfil de desempenho (ex.: bola) não pode alegar atender a um
@@ -106,7 +106,7 @@ export function combinaComPerfil(material: Material, perfil: Perfil): Veredito {
     criterios.push({
       rotulo: 'Preço',
       atende: dentro(estado.preco, material.preco),
-      detalhe: `R$ ${material.preco} — faixa pedida: ${estado.preco.min}–${estado.preco.max}`,
+      detalhe: `R$ ${material.preco} (faixa pedida: ${estado.preco.min} a ${estado.preco.max})`,
     });
   }
   if (estado.tipos.length > 0) {

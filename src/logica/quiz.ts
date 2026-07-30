@@ -88,7 +88,7 @@ export const TELAS: Record<string, Tela> = {
   inicio: {
     tipo: 'pergunta',
     pergunta: 'Há quanto tempo você joga?',
-    nota: 'As faixas são só uma referência pra você se localizar — o que pesa mais é a frequência. Quem treina 3× por semana há 8 meses costuma estar à frente de quem bate bola aos domingos há 3 anos. Na dúvida entre duas, escolha a de baixo.',
+    nota: 'As faixas são só uma referência pra você se localizar. O que pesa mais é a frequência. Quem treina 3× por semana há 8 meses costuma estar à frente de quem bate bola aos domingos há 3 anos. Na dúvida entre duas, escolha a de baixo.',
     passo: { n: 1, total: 3 },
     opcoes: [
       {

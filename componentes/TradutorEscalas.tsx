@@ -121,8 +121,7 @@ export function TradutorEscalas({ inicial = 39, escalaInicial = 'dhs' as Escala 
 
         <p className={estilos.selo}>
           <span className={estilos.seloTag}>A validar</span>
-          Conversão por regra da comunidade, não medição de laboratório — por isso a
-          resposta é uma faixa, e não um número exato. Pendente de validação do
+          Conversão por regra da comunidade, não medição de laboratório. Por isso a resposta é uma faixa, e não um número exato. Pendente de validação do
           especialista (D-09).
         </p>
       </div>

@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const m = materialPorId(id);
   if (!m) return {};
   return {
-    title: `${m.nome} — ficha técnica`,
+    title: `${m.nome}: ficha técnica`,
     description: `${m.nome} (${m.marca}, ${m.tipo.toLowerCase()}): ${m.simples.frase}`,
   };
 }
@@ -176,7 +176,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             <span className={estilos.precoNota}>
               {medio !== null
                 ? `preço médio · ${ofertas.length} ${ofertas.length === 1 ? 'oferta' : 'ofertas'}`
-                : 'estimativa — sem oferta verificada'}
+                : 'estimativa, sem oferta verificada'}
             </span>
           </p>
         </header>
@@ -192,14 +192,13 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                 centenas de avaliações não é a mesma coisa que estimativa nossa. */}
             {m.origemSpecs === 'comunidade' && sinal ? (
               <p className={estilos.subtituloFicha}>
-                Escala 0–10 <strong>nossa</strong>, para permitir comparar marcas diferentes. Estes
-                números são a <strong>média de {sinal.avaliacoes} avaliações</strong> da comunidade
-                do {sinal.fonte} — não uma estimativa nossa, e não o índice de marketing do
+                Escala 0 a 10 <strong>nossa</strong>, para permitir comparar marcas diferentes. Estes
+                números são a <strong>média de {sinal.avaliacoes} avaliações</strong> da comunidade do {sinal.fonte}, não uma estimativa nossa nem o índice de marketing do
                 fabricante (que está logo abaixo, com a fonte).
               </p>
             ) : (
               <p className={estilos.subtituloFicha}>
-                Escala 0–10 <strong>nossa</strong>, para permitir comparar marcas diferentes — os
+                Escala 0 a 10 <strong>nossa</strong>, para permitir comparar marcas diferentes. os
                 números abaixo são <strong>estimativa</strong>, não o dado oficial do fabricante
                 (que está logo abaixo, com a fonte).
               </p>
@@ -225,7 +224,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                     <span className={estilos.palavra}>
                       {m.origemDureza === 'fabricante' && m.durezaFabricante
                         ? `convertida de ${m.durezaFabricante.grau}° ${m.durezaFabricante.escala.toUpperCase()}`
-                        : 'estimativa — o fabricante não publica a régua'}
+                        : 'estimativa, o fabricante não publica a régua'}
                     </span>
                   </td>
                 </tr>
@@ -335,8 +334,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
               </>
             ) : (
               <p className={estilos.fabricantePendente}>
-                Ainda não confirmamos as specs oficiais deste material numa fonte confiável — e
-                preferimos deixar em branco a publicar número que não podemos garantir. Consulte
+                Ainda não confirmamos as specs oficiais deste material numa fonte confiável, e preferimos deixar em branco a publicar número que não podemos garantir. Consulte
                 a fonte do fabricante abaixo.
               </p>
             )}
@@ -353,7 +351,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                   ))}
                 </ul>
                 <p className={estilos.indicesAviso}>
-                  Escala interna da marca — <strong>não comparável</strong> com a de outro
+                  Escala interna da marca, <strong>não comparável</strong> com a de outro
                   fabricante. É por isso que a ficha unificada acima existe.
                 </p>
               </div>
@@ -443,8 +441,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             ))}
           </ul>
           <p className={estilos.vereditoNota}>
-            Calculado pelos mesmos filtros que o teste de perfil gera — critério aberto, não
-            opinião. Não sabe seu perfil? <Link href="/quiz/">Faça o teste</Link> (leva 1 minuto).
+            Calculado pelos mesmos filtros que o teste de perfil gera: critério aberto, não opinião. Não sabe seu perfil? <Link href="/quiz/">Faça o teste</Link> (leva 1 minuto).
           </p>
         </section>
 
@@ -502,7 +499,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                       if (v.observacoes === 1)
                         return (
                           <span className={estilos.historicoUnico}>
-                            primeira checagem — ainda sem variação registrada
+                            primeira checagem, ainda sem variação registrada
                           </span>
                         );
                       const subiu = v.delta > 0;
@@ -528,7 +525,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                 ))}
               </ol>
               <p className={estilos.ofertasNota}>
-                Ordenado <strong>pelo preço</strong>, sempre — nunca por quem é parceiro. As lojas
+                Ordenado <strong>pelo preço</strong>, sempre. Nunca por quem é parceiro. As lojas
                 marcadas como <em>Parceiro</em> nos pagam comissão se você comprar, e isso{' '}
                 <strong>não muda a ordem desta lista</strong> nem o que escrevemos na ficha
                 técnica, que é independente. As datas são reais: se um preço está velho, ele
@@ -538,8 +535,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
           ) : (
             <p className={estilos.semOferta}>
               Ainda não conferimos preço deste material em nenhuma loja. Quando conferirmos, cada
-              preço aparecerá aqui com a loja e a <strong>data real</strong> da checagem, ordenado
-              pelo preço — não por quem paga. Até lá, o valor no topo desta página é uma{' '}
+              preço aparecerá aqui com a loja e a <strong>data real</strong> da checagem, ordenado pelo preço, não por quem paga. Até lá, o valor no topo desta página é uma{' '}
               <strong>estimativa</strong>, não um preço apurado.
             </p>
           )}
@@ -565,7 +561,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             <p className={estilos.lojasAviso}>
               Este é um <strong>diretório de onde procurar</strong>, não uma lista de ofertas
               conferidas: não verificamos se estas lojas têm este material em estoque nem por
-              quanto. Nenhuma delas nos paga — quando alguma for parceira, isso estará escrito
+              quanto. Nenhuma delas nos paga. Quando alguma for parceira, isso estará escrito
               aqui, com a tag <em>Parceiro</em>.
             </p>
           </div>
@@ -603,8 +599,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                 · consultado em {dataLegivel(sinal.consultadoEm)}
               </p>
               <p className={estilos.comunidadeVazia}>
-                Isto é a opinião <strong>agregada de uma comunidade externa</strong> — não uma
-                avaliação da WikiPong. As nossas, estruturadas (nível do jogador, tempo de uso) e
+                Isto é a opinião <strong>agregada de uma comunidade externa</strong>, não uma avaliação da WikiPong. As nossas, estruturadas (nível do jogador, tempo de uso) e
                 moderadas, entram depois e ficam <em>separadas da ficha técnica, que é
                 independente</em>.
               </p>
@@ -612,8 +607,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
           ) : (
             <p className={estilos.comunidadeVazia}>
               Ainda não reunimos avaliações da comunidade para este material. Quando as nossas
-              abrirem, serão estruturadas — nível do jogador, tempo de uso e nota — e ficarão sempre
-              nesta seção, <em>separada da ficha técnica, que é independente</em>.
+              abrirem, serão estruturadas (nível do jogador, tempo de uso e nota) e ficarão sempre nesta seção, <em>separada da ficha técnica, que é independente</em>.
             </p>
           )}
         </section>

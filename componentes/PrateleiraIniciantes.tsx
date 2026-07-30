@@ -53,7 +53,7 @@ export function PrateleiraIniciantes() {
             Materiais para começar
           </h2>
           <p className={estilos.sub}>
-            Controle alto e velocidade contida — a base que perdoa enquanto a sua técnica cresce.
+            Controle alto e velocidade contida, a base que perdoa enquanto a sua técnica cresce.
           </p>
         </div>
         {posicao !== 'estatico' && (

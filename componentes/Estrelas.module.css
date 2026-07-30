@@ -1,0 +1,108 @@
+.linha {
+  display: inline-flex;
+  gap: 0.1em;
+  line-height: var(--altura-dado);
+}
+
+.sm {
+  font-size: var(--texto-mini);
+}
+.md {
+  font-size: var(--texto-maior);
+}
+.lg {
+  font-size: var(--texto-numero);
+}
+
+.icone {
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
+/* A estrela cheia usa o acento como PREENCHIMENTO, não como texto: a regra do
+   acento sob D-18 libera o acento claro para preenchimento, borda e anel. */
+.cheia {
+  fill: var(--cor-acento);
+  stroke: var(--cor-acento);
+  stroke-width: 1;
+}
+
+/* Vazia é contorno, não cinza chapado: mantém a forma legível no tema escuro,
+   onde um preenchimento apagado somem contra a superfície. */
+.vazia {
+  fill: none;
+  stroke: var(--cor-linha-forte);
+  stroke-width: 1.6;
+}
+
+/* ── Entrada ── */
+
+.entradaBloco {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+}
+
+.entrada {
+  display: inline-flex;
+  gap: var(--esp-1);
+  font-size: var(--texto-numero);
+}
+
+.opcao {
+  cursor: pointer;
+  display: block;
+  padding: var(--esp-1);
+  margin: calc(var(--esp-1) * -1);
+  border-radius: var(--raio-sm);
+}
+
+/* O input fica invisível mas FOCÁVEL — some com opacity, não com display:none,
+   senão o teclado não chega nele e o radiogroup deixa de funcionar. */
+.radio {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.visual {
+  display: block;
+  transition: transform 140ms ease;
+}
+
+/* Só com ponteiro fino: no celular o dedo passa por cima sem querer escolher. */
+@media (hover: hover) {
+  .opcao:hover .visual {
+    transform: scale(1.12);
+  }
+}
+
+.radio:focus-visible + .visual {
+  outline: 3px solid var(--cor-acento);
+  outline-offset: 3px;
+  border-radius: var(--raio-sm);
+}
+
+.invalida .vazia {
+  stroke: var(--cor-erro);
+}
+
+/* Altura reservada: escolher a estrela não pode empurrar o resto do formulário. */
+.sentido {
+  margin: 0;
+  min-height: 1.4em;
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  color: var(--cor-tinta-suave);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visual {
+    transition: none;
+  }
+  .opcao:hover .visual {
+    transform: none;
+  }
+}

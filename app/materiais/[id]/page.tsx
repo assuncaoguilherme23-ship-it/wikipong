@@ -45,6 +45,7 @@ import {
 } from '@/componentes/dados-ofertas';
 import { profissionaisQueUsam } from '@/componentes/dados-profissionais';
 import { sinalDaComunidade, ehFavoritoDaComunidade } from '@/componentes/dados-comunidade';
+import { AvaliacoesMaterial } from '@/componentes/AvaliacoesMaterial';
 import { imagemDoMaterial } from '@/componentes/dados-imagens';
 import {
   escalaDoTexto,
@@ -566,11 +567,16 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
 
 
         {/* ── 3. Comunidade (OPINIÃO, rotulada, por último — D-14) ──
-               Sinal AGREGADO de comunidade externa (Revspin), sempre atribuído.
-               Não é avaliação da WikiPong — as nossas, estruturadas, vêm no D-11. */}
+               Duas vozes DIFERENTES, e a tela nunca as soma:
+                 3a. sinal AGREGADO de fora (Revspin), sempre atribuído;
+                 3b. as avaliações estruturadas daqui (D-11), com nível, tempo
+                     de uso e estilo de quem escreveu.
+               Misturar as duas daria uma média sem dono — exatamente a "opinião
+               por aí" que o produto existe pra não ser. */}
         <section className={estilos.comunidade} aria-labelledby="titulo-comunidade">
           <h2 id="titulo-comunidade">O que a comunidade acha</h2>
 
+          <h3 className={estilos.subComunidade}>Nota de fora, do {sinal?.fonte ?? 'Revspin'}</h3>
           {sinal ? (
             <>
               {ehFavoritoDaComunidade(m.id) && (
@@ -596,16 +602,20 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                 · consultado em {dataLegivel(sinal.consultadoEm)}
               </p>
               <p className={estilos.comunidadeVazia}>
-                Isto é a opinião <strong>somada de gente de fora</strong>, não uma avaliação da WikiPong. As nossas, com campos fixos (nível do jogador, tempo de uso) e com moderação, entram depois e ficam <em>separadas da ficha técnica, que é
-                independente</em>.
+                Isto é a opinião <strong>somada de gente de fora</strong>, não uma avaliação da
+                WikiPong, e fica <em>separada da ficha técnica, que é independente</em>.
               </p>
             </>
           ) : (
             <p className={estilos.comunidadeVazia}>
-              Ainda não reunimos avaliações da comunidade para este material. Quando as nossas
-              abrirem, vão ter campos fixos (nível do jogador, tempo de uso e nota) e ficarão sempre nesta seção, <em>separada da ficha técnica, que é independente</em>.
+              Este material não tem nota reunida em fonte de fora. Isso não diz nada sobre ele:
+              quer dizer que ninguém agregou avaliações num lugar que a gente possa citar.
             </p>
           )}
+
+          {/* 3b. As nossas (D-11): estruturadas, com o contexto de quem escreveu. */}
+          <h3 className={estilos.subComunidade}>Avaliações aqui do WikiPong</h3>
+          <AvaliacoesMaterial materialId={m.id} nomeMaterial={m.nome} />
         </section>
       </main>
 

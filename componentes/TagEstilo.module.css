@@ -1,0 +1,60 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.15em 0.6em 0.2em;
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: 999px;
+  font-size: var(--texto-micro);
+  line-height: var(--altura-apertada);
+  letter-spacing: 0.02em;
+  color: var(--cor-tinta-suave);
+  background: var(--cor-superficie);
+  white-space: nowrap;
+}
+
+.glifo {
+  width: 0.95em;
+  height: 0.8em;
+  flex: none;
+  stroke: currentColor;
+}
+
+.link {
+  text-decoration: none;
+  transition:
+    border-color 140ms ease,
+    color 140ms ease;
+}
+
+@media (hover: hover) {
+  .link:hover {
+    border-color: var(--cor-acento);
+    color: var(--cor-texto-acento);
+  }
+}
+
+/* Os três estilos se distinguem pela BORDA e pelo glifo, não por fundo colorido:
+   a tag mora dentro de um comentário e três pastilhas chapadas roubariam a
+   atenção do texto, que é o conteúdo. */
+.atacante {
+  border-color: var(--cor-acento);
+}
+.allround {
+  border-color: var(--cor-linha-forte);
+}
+.defensor {
+  border-color: var(--cor-mesa-borda);
+}
+
+/* Nível é secundário à tag de estilo: sem borda de cor, só o contorno neutro. */
+.nivel {
+  border-style: dashed;
+  color: var(--cor-mudo);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+}

@@ -1,0 +1,363 @@
+.bloco {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-5);
+}
+
+.carregando {
+  margin: 0;
+  color: var(--cor-mudo);
+  font-size: var(--texto-menor);
+}
+
+/* O aviso de que isto é local vem ANTES de tudo: descobrir depois de escrever
+   que ninguém vai ler seria pegadinha (D-16).
+
+   Sem caixa e sem borda de acento na lateral. A ficha do material já resolve
+   aviso desde sempre do mesmo jeito — texto miúdo, cor apagada, largura de
+   leitura e um selo mono inline (ver .nota e .selo em detalhe.module.css). Uma
+   caixa com faixa colorida aqui não seria ênfase, seria um componente novo que
+   só existe nesta tela. */
+.avisoLocal {
+  margin: 0;
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}
+
+.selo {
+  display: inline-block;
+  margin-right: var(--esp-2);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+}
+
+.vazio {
+  margin: 0;
+  color: var(--cor-tinta-suave);
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+}
+
+.limpar {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--cor-texto-acento);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ── Resumo ── */
+
+.resumo {
+  display: grid;
+  gap: var(--esp-5);
+  grid-template-columns: minmax(9rem, auto) minmax(12rem, 1fr);
+  align-items: start;
+  padding: var(--esp-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+}
+
+@media (max-width: 34rem) {
+  .resumo {
+    grid-template-columns: 1fr;
+  }
+}
+
+.media {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+}
+
+.mediaNumero {
+  margin: 0;
+  font-size: clamp(2.2rem, 7vw, 2.8rem);
+  line-height: var(--altura-dado);
+  font-weight: 500;
+}
+
+.semMedia {
+  margin: 0;
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  max-width: 22ch;
+}
+
+.totalAvaliacoes {
+  margin: 0;
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+
+.distribuicao {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+}
+
+.barraLinha {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr 1.6rem;
+  align-items: center;
+  gap: var(--esp-2);
+}
+
+.barraRotulo,
+.barraContagem {
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+
+.barraContagem {
+  text-align: right;
+}
+
+.barraTrilho {
+  height: 0.5rem;
+  background: var(--cor-superficie-2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.barraCheia {
+  display: block;
+  height: 100%;
+  background: var(--cor-acento);
+  border-radius: 999px;
+}
+
+.recortes {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--cor-linha);
+  padding-top: var(--esp-3);
+}
+
+.recorteTitulo {
+  margin: 0 0 var(--esp-2);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-mudo);
+}
+
+.recorteLista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-4);
+}
+
+.recorteLista li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--esp-2);
+}
+
+.recorteNota {
+  font-size: var(--texto-dado);
+  font-weight: 500;
+}
+
+.recorteTotal {
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+
+/* ── Controles ── */
+
+.acoes {
+  display: flex;
+  gap: var(--esp-3);
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-4);
+}
+
+.controle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+}
+
+.controleRotulo {
+  font-size: var(--texto-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-mudo);
+}
+
+.controle select {
+  font: inherit;
+  font-size: var(--texto-menor);
+  padding: 0.4em 0.6em;
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  background: var(--cor-superficie);
+  color: var(--cor-tinta);
+}
+
+/* ── Lista ── */
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+}
+
+.item {
+  padding: var(--esp-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+}
+
+.cabecalhoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--esp-3);
+  flex-wrap: wrap;
+}
+
+.autor {
+  margin: 0;
+  font-family: var(--fonte-display);
+  font-size: var(--texto-maior);
+  line-height: var(--altura-apertada);
+}
+
+.tags {
+  margin: var(--esp-1) 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+}
+
+.notaItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--esp-1);
+}
+
+.data {
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+
+.texto {
+  margin: var(--esp-3) 0 0;
+  line-height: var(--altura-leitura);
+  white-space: pre-wrap;
+}
+
+.uso {
+  margin: var(--esp-2) 0 0;
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+
+/* ── Formulário ── */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+  padding: var(--esp-5);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-cartao);
+}
+
+.formTitulo {
+  margin: 0;
+  font-size: var(--titulo-4);
+  line-height: var(--altura-apertada);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  position: relative;
+}
+
+.rotulo {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+}
+
+.grade {
+  display: grid;
+  gap: var(--esp-4);
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  font: inherit;
+  font-size: var(--texto-base);
+  padding: 0.55em 0.7em;
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  background: var(--cor-papel);
+  color: var(--cor-tinta);
+  width: 100%;
+}
+
+.campo textarea {
+  resize: vertical;
+  line-height: var(--altura-corpo);
+}
+
+.campo input[aria-invalid='true'],
+.campo select[aria-invalid='true'],
+.campo textarea[aria-invalid='true'] {
+  border-color: var(--cor-erro);
+}
+
+.contador {
+  align-self: flex-end;
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+
+.erro {
+  font-size: var(--texto-mini);
+  color: var(--cor-erro);
+}
+
+.formAcoes {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  flex-wrap: wrap;
+}
+
+.resumoErro {
+  margin: 0;
+  font-size: var(--texto-mini);
+  color: var(--cor-erro);
+}

@@ -33,6 +33,15 @@
      No tema claro é o acento-escuro (5.1:1); no escuro, o próprio acento resolve. */
   --cor-texto-acento: var(--cor-acento-escuro);
 
+  /* ── Erro (divergência registrada sob D-18 — adição ao sistema) ──
+     A paleta Verde-mesa não tinha cor de erro porque o site não tinha
+     FORMULÁRIO: o de avaliação (D-11) é o primeiro. Entra como token e não
+     como valor solto, com um valor POR TEMA — o vermelho escuro que funciona
+     sobre papel claro reprova AA sobre papel escuro (3.2:1), e reprovar
+     contraste justo na mensagem que diz o que deu errado seria o pior lugar.
+     Claro: 6.26:1 sobre papel, 6.54:1 sobre superfície. */
+  --cor-erro: #b3261e;
+
   /* ── Raios (px) — Figma ── */
   --raio-sm: 9px;
   --raio-md: 13px;
@@ -142,6 +151,8 @@
     --cor-acento: #29b077;
     --cor-acento-suave: #17281e;
     --cor-texto-acento: var(--cor-acento); /* ~6:1 sobre o papel escuro */
+    /* Clareia, como o `mudo` faz: 7.05:1 sobre papel, 6.57:1 sobre superfície. */
+    --cor-erro: #e8837a;
     --sombra-cartao: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
   }
 }
@@ -325,6 +336,23 @@ a {
 ::selection {
   background: var(--cor-acento-suave);
   color: var(--cor-tinta);
+}
+
+/* Texto só para leitor de tela. Existe porque muita informação do site é VISUAL
+   e não se lê em voz alta: cinco estrelas desenhadas, um selo, uma barra de
+   distribuição. Em vez de deixar essa gente sem a informação, o rótulo em
+   palavras vai aqui — fora da tela, dentro da árvore de acessibilidade.
+   `clip-path` + 1px em vez de `display:none`, que o leitor de tela ignoraria. */
+.apenas-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Link "pular para o conteúdo" (a11y): fora da tela até receber foco de teclado */

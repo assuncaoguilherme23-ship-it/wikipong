@@ -753,3 +753,15 @@
 .historicoBaixa {
   color: var(--cor-texto-acento);
 }
+
+/* Divide as DUAS vozes da secao Comunidade: a de fora e a daqui. Peso menor
+   que o h2, porque as duas sao subordinadas a "O que a comunidade acha". */
+.subComunidade {
+  margin: var(--esp-5) 0 var(--esp-3);
+  font-size: var(--titulo-4);
+  line-height: var(--altura-apertada);
+  color: var(--cor-tinta);
+}
+.subComunidade:first-of-type {
+  margin-top: var(--esp-4);
+}

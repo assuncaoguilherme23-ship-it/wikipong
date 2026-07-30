@@ -5733,12 +5733,17 @@
       "nivel": "Avançado",
       "intencao": "atacar",
       "preco": 435,
-      "rating": 4.5,
-      "reviews": 0,
+      "rating": 4.4,
+      "reviews": 8,
       "simples": {
         "tag": "Sete madeiras da linha Persson",
-        "frase": "O Revspin tem uma \"Persson Seven\" com 8 avaliações. É provavelmente a mesma lâmina escrita por extenso, mas provável não basta — mesma régua que aplicamos à Chila Off e à Celero."
-      }
+        "frase": "Sete camadas de Limba e Ayous, cerca de 90 g. A Donic a desenvolveu para o topspinista moderno, e a comunidade dá controle 8,7 acima da velocidade 8,5."
+      },
+      "specs": {
+        "velocidade": 8.5,
+        "controle": 8.7
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "donic-persson-jubilee-40-2",
@@ -6038,6 +6043,186 @@
       "simples": {
         "tag": "A mais macia da série J",
         "frase": "Duas avaliações apenas. Entra com ficha, preço real e foto."
+      }
+    },
+    {
+      "id": "donic-epox-topspeed",
+      "nome": "Epox TopSpeed",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 392,
+      "specs": {
+        "velocidade": 9.4,
+        "controle": 7.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 22,
+      "simples": {
+        "tag": "Velocidade 9,4, controle 7,2",
+        "frase": "A Donic a chama da mais rápida de todas as Epox. A comunidade concorda e cobra o preço: um avaliador diz que é pesada demais e que o controle não é bom. A distância entre os eixos é das maiores do catálogo."
+      }
+    },
+    {
+      "id": "donic-epox-offensive",
+      "nome": "Epox Offensive",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 373,
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 8.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.35,
+      "reviews": 21,
+      "simples": {
+        "tag": "Velocidade com sensação de madeira",
+        "frase": "A comunidade a recomenda para quem gosta de topspin, bloqueio e smash — e destaca a combinação de velocidade com sensação de madeira, que lâmina de fibra costuma não dar."
+      }
+    },
+    {
+      "id": "donic-epox-control",
+      "nome": "Epox Control",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 373,
+      "specs": {
+        "velocidade": 7.7,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 20,
+      "simples": {
+        "tag": "Controle 9,1 e vibração quase nula",
+        "frase": "A Donic publica velocidade 7,0 e controle 9,0 — e a comunidade praticamente confirma (7,7 e 9,1). O elogio recorrente é a ausência total de vibração; um avaliador diz que bloquear com ela é fácil demais."
+      }
+    },
+    {
+      "id": "donic-burn-off",
+      "nome": "Burn OFF",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 356,
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 8.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 8,
+      "simples": {
+        "tag": "Rápida sem abrir mão do controle",
+        "frase": "Velocidade 9,1. A comunidade descreve como velocidade ultra rápida com controle surpreendente — perfil de quem ataca sem querer perder precisão."
+      }
+    },
+    {
+      "id": "donic-burn-off-2",
+      "nome": "Burn OFF-",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 356,
+      "specs": {
+        "velocidade": 8.3,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.4,
+      "reviews": 26,
+      "simples": {
+        "tag": "A mais equilibrada da linha Burn",
+        "frase": "Controle acima da velocidade, com 26 avaliações. A comunidade a resume como boa para a classe OFF-: controle bom sem ser lenta demais."
+      }
+    },
+    {
+      "id": "donic-burn-all",
+      "nome": "Burn ALL+",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 356,
+      "specs": {
+        "velocidade": 7.9,
+        "controle": 8.8
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.35,
+      "reviews": 19,
+      "simples": {
+        "tag": "Bloqueio como ponto forte",
+        "frase": "Um avaliador confessa que ela não é tão lenta quanto ele esperava; outro elogia o controle no bloqueio. Classe ALL+ com mais pegada ofensiva do que o nome sugere."
+      }
+    },
+    {
+      "id": "donic-appelgren-allplay-senso-v2",
+      "nome": "Appelgren Allplay Senso V2",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 315,
+      "specs": {
+        "velocidade": 6.7,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 10,
+      "simples": {
+        "tag": "Controle 9,2, velocidade 6,7",
+        "frase": "A maior distância a favor do controle entre as lâminas do catálogo. A comunidade a indica para quem gira, empurra e corta — não para quem bate forte."
+      }
+    },
+    {
+      "id": "donic-appelgren-allplay-senso-v1",
+      "nome": "Appelgren Allplay Senso V1",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 315,
+      "specs": {
+        "velocidade": 6.7,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.5,
+      "reviews": 13,
+      "simples": {
+        "tag": "A Donic publica 73 e 90",
+        "frase": "Velocidade 73 contra controle 90 na régua da marca, e a comunidade confirma quase exatamente (6,7 e 9,1). Das poucas vezes em que fabricante e jogadores concordam sem ressalva."
+      }
+    },
+    {
+      "id": "donic-appelgren-dotec-control",
+      "nome": "Appelgren Dotec Control",
+      "marca": "Donic",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 565,
+      "specs": {
+        "velocidade": 7.4,
+        "controle": 8.4
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.15,
+      "reviews": 12,
+      "simples": {
+        "tag": "Precisão acima de potência",
+        "frase": "A leitura Dotec da linha Appelgren: velocidade razoável com controle bom, para quem prioriza colocar a bola."
       }
     }
   ]

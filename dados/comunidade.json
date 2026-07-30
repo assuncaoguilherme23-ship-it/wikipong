@@ -1464,6 +1464,86 @@
       "escala": 10,
       "avaliacoes": 7,
       "consultadoEm": "2026-07-30"
+    },
+    "donic-epox-topspeed": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-epox-topspeed.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 22,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-epox-offensive": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-epox-offensiv.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 21,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-epox-control": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-epox-control.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 20,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-burn-off": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-burn-off.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 8,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-burn-off-2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-burn-off-minus.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 26,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-burn-all": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-burn-all-plus.html",
+      "nota": 8.7,
+      "escala": 10,
+      "avaliacoes": 19,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-appelgren-allplay-senso-v2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-appelgren-allplay-senso-v2.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 10,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-appelgren-allplay-senso-v1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-appelgren-allplay-senso-v1.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 13,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-appelgren-dotec-control": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-appelgren-dotec-control.html",
+      "nota": 8.3,
+      "escala": 10,
+      "avaliacoes": 12,
+      "consultadoEm": "2026-07-30"
+    },
+    "donic-persson-7": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/donic-persson-seven.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 8,
+      "consultadoEm": "2026-07-30"
     }
   }
 }

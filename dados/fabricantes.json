@@ -5758,7 +5758,7 @@
           "valor": "7 camadas de madeira"
         }
       ],
-      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. ATENÇÃO ao nome: o Revspin tem amostra para um modelo de nome PARECIDO, mas não idêntico ao que a loja vende. Nome parecido não é o mesmo produto, então a nota não foi atribuída. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. NOME EM DUAS GRAFIAS: a loja escreve \"Persson 7\" e o Revspin \"Persson Seven\" — o mesmo número, por algarismo e por extenso. Não existe outra lâmina Persson que pudesse ser confundida, então a amostra foi atribuída. Numa primeira passada eu tinha recusado, tratando isso como dois nomes distintos; era rigor mal aplicado, e o critério aqui passou a ser o mesmo da Epox Offensive."
     },
     "donic-persson-jubilee-40-2": {
       "confianca": "revendedor",
@@ -5987,6 +5987,150 @@
         }
       ],
       "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. CLASSIFICAÇÃO CONFERIDA: a linha BlueGrip caiu como LÂMINA na primeira passada da minha heurística, porque o nome dela não estava na lista de linhas de borracha da Donic. Duas fontes independentes corrigem: o Revspin as lista no índice de borrachas (/rubber/), e a descrição da própria loja começa com \"as borrachas Donic Bluegrip\". Esta variante não tem amostra suficiente na comunidade — o piso é 5 avaliações."
+    },
+    "donic-epox-topspeed": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-epox-topspeed/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, linha Epox"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-epox-offensive": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-epox-offensive/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, linha Epox"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. NOME EM DUAS GRAFIAS: a loja escreve \"Offensive\" e o Revspin \"Offensiv\" — a mesma palavra em inglês e alemão. Não há outro modelo Epox que pudesse ser confundido com este, então a amostra foi atribuída. Diferente de dois NOMES distintos, aqui é uma palavra só."
+    },
+    "donic-epox-control": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-epox-control/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, linha Epox"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-burn-off": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-burn-off/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, linha Burn"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-burn-off-2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-burn-off-2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, linha Burn"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-burn-all": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-burn-all/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, linha Burn"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-appelgren-allplay-senso-v2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-appelgren-allplay-senso-v2/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, sistema Senso no cabo"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-appelgren-allplay-senso-v1": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-appelgren-allplay-senso-v1/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, sistema Senso no cabo"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "donic-appelgren-dotec-control": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/donic-appelgren-dotec-control/",
+      "consultadoEm": "2026-07-30",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa — o cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, sistema Dotec"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
     }
   }
 }

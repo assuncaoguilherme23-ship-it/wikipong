@@ -90,6 +90,16 @@ aprovação segue pelo painel: **Table Editor → `avaliacoes`**, mudando `statu
 > a API do Supabase mas nunca rodou de ponta a ponta aqui, porque não há projeto. Se
 > algo falhar na primeira vez, o suspeito nº 1 é a *Redirect URL* não cadastrada.
 
+### Abrir cadastro para outras pessoas
+
+O provedor de e-mail nativo do Supabase manda ~2 mensagens por hora. Serve para você
+entrar na moderação; **não serve para cadastro de usuário** — a terceira pessoa da
+hora não recebe nada.
+
+Antes de abrir contas, siga o **[guia de SMTP e e-mails](supabase/SMTP-E-EMAILS.md)**.
+Ele cobre o servidor de envio próprio (Resend + DNS) e a tradução do e-mail de login,
+que hoje sai no texto padrão em inglês.
+
 ## Documentos do projeto
 
 | Arquivo | Papel |

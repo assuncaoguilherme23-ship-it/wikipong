@@ -13,7 +13,8 @@
  * o que você escreve fica NO SEU NAVEGADOR, ninguém mais vê. Não há avaliação
  * de mentira semeada no repo pra encher a tela. Comunidade vazia aparece vazia.
  */
-import type { Avaliacao } from './avaliacoes.js';
+import type { Avaliacao } from './avaliacoes';
+import { tokenGuardado } from './sessao';
 
 export interface RepositorioAvaliacoes {
   /** Nome curto pra UI dizer a verdade sobre onde isto está indo. */
@@ -112,11 +113,15 @@ export function repositorioLocal(): RepositorioAvaliacoes {
  */
 export function repositorioSupabase(url: string, chave: string): RepositorioAvaliacoes {
   const base = `${url.replace(/\/$/, '')}/rest/v1/avaliacoes`;
-  const cabecalhos = {
+  /* Quando ha' sessao, o Bearer e' o token DA PESSOA — e' o que faz o banco
+     saber quem esta' pedindo e liberar o que e' de admin ou de dono. Sem sessao,
+     cai na chave anonima, que so' enxerga o que esta' aprovado. Recalculado a
+     cada chamada de proposito: sessao nasce e morre no meio da navegacao. */
+  const cabecalhos = () => ({
     apikey: chave,
-    Authorization: `Bearer ${chave}`,
+    Authorization: `Bearer ${tokenGuardado() ?? chave}`,
     'Content-Type': 'application/json',
-  };
+  });
 
   type Linha = {
     id: string; material_id: string; usuario_id: string | null; autor: string;
@@ -152,7 +157,7 @@ export function repositorioSupabase(url: string, chave: string): RepositorioAval
   });
 
   const buscar = async (consulta: string): Promise<Avaliacao[]> => {
-    const res = await fetch(`${base}?${consulta}`, { headers: cabecalhos });
+    const res = await fetch(`${base}?${consulta}`, { headers: cabecalhos() });
     if (!res.ok) throw new Error(`Supabase respondeu ${res.status}`);
     return ((await res.json()) as Linha[]).map(daLinha);
   };
@@ -160,16 +165,16 @@ export function repositorioSupabase(url: string, chave: string): RepositorioAval
   return {
     rotulo: 'WikiPong',
     somenteLocal: false,
-    /* A politica de leitura so' devolve 'aprovado' para a chave anonima: nao ha'
-       o que moderar daqui. Ver o comentario na interface. */
-    podeModerar: false,
+    /* Com sessao, o banco decide (politicas de admin da migracao 002). Sem
+       sessao, a chave anonima so' enxerga 'aprovado' e nao ha' fila pra ver. */
+    podeModerar: Boolean(tokenGuardado()),
     listar: () => buscar('select=*&order=criado_em.desc&limit=200'),
     doMaterial: (materialId) =>
       buscar(`select=*&material_id=eq.${encodeURIComponent(materialId)}&order=criado_em.desc`),
     async gravar(nova) {
       const res = await fetch(base, {
         method: 'POST',
-        headers: { ...cabecalhos, Prefer: 'return=minimal' },
+        headers: { ...cabecalhos(), Prefer: 'return=minimal' },
         body: JSON.stringify(paraLinha(nova)),
       });
       if (!res.ok) throw new Error(`Supabase recusou a gravação (${res.status})`);
@@ -179,7 +184,7 @@ export function repositorioSupabase(url: string, chave: string): RepositorioAval
          chance de olhar o que foi denunciado, e some com o histórico. */
       const res = await fetch(`${base}?id=eq.${encodeURIComponent(id)}`, {
         method: 'PATCH',
-        headers: { ...cabecalhos, Prefer: 'return=minimal' },
+        headers: { ...cabecalhos(), Prefer: 'return=minimal' },
         body: JSON.stringify({ status: 'removido' }),
       });
       if (!res.ok) throw new Error(`Supabase recusou a remoção (${res.status})`);
@@ -187,7 +192,7 @@ export function repositorioSupabase(url: string, chave: string): RepositorioAval
     async moderar(id, status) {
       const res = await fetch(`${base}?id=eq.${encodeURIComponent(id)}`, {
         method: 'PATCH',
-        headers: { ...cabecalhos, Prefer: 'return=minimal' },
+        headers: { ...cabecalhos(), Prefer: 'return=minimal' },
         body: JSON.stringify({ status }),
       });
       if (!res.ok) throw new Error(`Supabase recusou a moderação (${res.status})`);

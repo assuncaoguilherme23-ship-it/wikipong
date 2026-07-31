@@ -13,7 +13,7 @@
  * backhand. Não é entidade nova: é a mesma raquete que a pessoa já monta lá,
  * agora com dono.
  */
-import type { EstiloJogador, NivelJogador } from './avaliacoes.js';
+import type { EstiloJogador, NivelJogador } from './avaliacoes';
 
 export interface Perfil {
   nome: string;

@@ -56,23 +56,35 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=ey...
 Não há código de servidor pra escrever: `repositorio()` escolhe sozinho entre local e
 Supabase, e a UI passa a dizer que é público porque lê a flag `somenteLocal`.
 
-### Aprovar o que chega
+### Login e moderação
 
-Tudo entra como `pendente` e **fica invisível** até ser aprovado — é a pré-moderação que
-o D-11 exige. Enquanto não existe tela de moderação no site, a aprovação é feita no
-painel: **Table Editor → `avaliacoes`**, mudar `status` de `pendente` para `aprovado`.
-A view `fila_moderacao` junta avaliações, tópicos e respostas à espera, mais antigos
-primeiro.
+Rode também [`supabase/002-login.sql`](supabase/002-login.sql). Ele cria a tabela
+`admins` e as regras que deixam moderar pelo site em vez do painel.
 
-> **Sem login, e de propósito.** O site não tem contas, então a escrita é liberada pra
-> visitante e quem segura o portão é a moderação. O preço, dito na cara: não dá pra
-> garantir uma avaliação por pessoa, e ninguém pode editar ou apagar o que escreveu.
-> As políticas para usuário logado já estão no arquivo SQL, prontas pro dia em que o
-> login entrar.
+No painel, em **Authentication → Providers**, deixe **Email** ligado com *magic link*
+(é o padrão). Em **Authentication → URL Configuration**, acrescente a URL do site em
+*Redirect URLs* — sem isso o link chega mas volta pro lugar errado.
 
-> A chave anônima **vai no bundle** — o site é estático. Por isso a segurança mora nas
-> políticas de RLS: leitura pública só do que está `aprovado`, e escrita sempre forçada
-> a entrar como `pendente`.
+Para virar moderador:
+
+1. entrar uma vez em `/comunidade/moderacao/` com o seu e-mail;
+2. no SQL Editor, rodar (trocando pelo seu e-mail):
+
+```sql
+insert into public.admins (usuario_id)
+select id from auth.users where email = 'voce@exemplo.com'
+on conflict do nothing;
+```
+
+3. recarregar a página.
+
+Sem a migração 002, ou sem estar na tabela `admins`, a fila continua invisível e a
+aprovação segue pelo painel: **Table Editor → `avaliacoes`**, mudando `status` de
+`pendente` para `aprovado`. A view `fila_moderacao` junta tudo que está esperando.
+
+> **Ainda não testado contra um projeto real.** O fluxo de login foi escrito conforme
+> a API do Supabase mas nunca rodou de ponta a ponta aqui, porque não há projeto. Se
+> algo falhar na primeira vez, o suspeito nº 1 é a *Redirect URL* não cadastrada.
 
 ## Documentos do projeto
 

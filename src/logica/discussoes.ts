@@ -15,7 +15,7 @@
  *  · quem escreve carrega a mesma tag de estilo das avaliações. A pergunta
  *    "vale a pena pra mim?" depende de quem responde.
  */
-import type { EstiloJogador, NivelJogador } from './avaliacoes.js';
+import type { EstiloJogador, NivelJogador } from './avaliacoes';
 
 export type Assunto = 'material' | 'montagem' | 'tecnica' | 'compra' | 'geral';
 

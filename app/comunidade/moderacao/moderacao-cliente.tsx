@@ -25,6 +25,8 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { ordenar, type Avaliacao } from '@/src/logica/avaliacoes';
 import { repositorio } from '@/src/logica/repositorio-avaliacoes';
+import { Login } from '@/componentes/Login';
+import { sessaoAtual, souAdmin, sair, type Sessao } from '@/src/logica/sessao';
 import { materialPorId } from '@/componentes/dados-materiais';
 import { Estrelas } from '@/componentes/Estrelas';
 import { TagEstilo, TagNivel } from '@/componentes/TagEstilo';
@@ -44,43 +46,75 @@ export function ModeracaoCliente() {
   const [lista, setLista] = useState<Avaliacao[] | null>(null);
   const [filtro, setFiltro] = useState<Avaliacao['status'] | 'todas'>('todas');
 
+  /* Quatro estados de acesso, e a tela precisa distinguir os quatro:
+       local          — modera tudo, você é o dono do navegador;
+       sem sessão     — mostra o login;
+       logado não-admin — entrou, mas o banco não reconhece como moderador;
+       admin          — modera de verdade.
+     `undefined` é "ainda perguntando", pra não piscar a tela de login pra quem
+     já está logado. */
+  const [sessao, setSessao] = useState<Sessao | null | undefined>(undefined);
+  const [admin, setAdmin] = useState<boolean | undefined>(undefined);
+
   useEffect(() => {
-    if (!repo.podeModerar) {
-      setLista([]);
+    if (repo.somenteLocal) {
+      setSessao(null);
+      setAdmin(true);
       return;
     }
-    repo.listar().then((todas) => setLista(ordenar(todas, 'recentes')));
+    sessaoAtual().then(async (s) => {
+      setSessao(s);
+      setAdmin(s ? await souAdmin(s) : false);
+    });
   }, [repo]);
+
+  useEffect(() => {
+    if (admin !== true) return;
+    repo.listar().then((todas) => setLista(ordenar(todas, 'recentes')));
+  }, [repo, admin]);
 
   async function mudar(id: string, status: Avaliacao['status']) {
     await repo.moderar(id, status);
     setLista(ordenar(await repo.listar(), 'recentes'));
   }
 
-  if (!repo.podeModerar) {
+  if (sessao === undefined || admin === undefined) {
+    return <p className={estilos.carregando}>Verificando o acesso…</p>;
+  }
+
+  /* Sem sessão e com servidor ligado: não dá pra ver a fila com a chave anônima
+     (a política só devolve 'aprovado'), então a tela pede o login em vez de
+     mostrar uma lista vazia que pareceria "não há nada esperando". */
+  if (!repo.somenteLocal && !sessao) {
+    return (
+      <Login
+        titulo="Entrar para moderar"
+        explicacao="A fila de aprovação só aparece pra quem o banco reconhece como moderador. É por isso que esta tela pede o e-mail antes de mostrar qualquer coisa."
+      />
+    );
+  }
+
+  if (!repo.somenteLocal && sessao && !admin) {
     return (
       <div className={estilos.impedida}>
-        <p className={estilos.impedidaTitulo}>
-          Esta tela não modera o conteúdo do servidor, e isso é de propósito.
-        </p>
+        <p className={estilos.impedidaTitulo}>Você entrou, mas esta conta não modera.</p>
         <p>
-          O site é estático: a chave que ele carrega é a <strong>anônima</strong>, e ela está
-          visível pra qualquer pessoa que abrir as ferramentas do navegador. Se esta tela
-          aprovasse avaliações com essa chave, qualquer visitante aprovaria as próprias.
-        </p>
-        <p>
-          Por isso a regra no banco só devolve o que já está aprovado, e nem esta página
-          enxerga a fila. Moderar exige saber <em>quem</em> está moderando, e isso exige login
-          — que ainda não existe aqui.
+          O banco é quem decide isso, não o site: só quem está na tabela{' '}
+          <span className="mono">admins</span> enxerga a fila. Foi de propósito — se o navegador
+          pudesse se declarar moderador, qualquer visitante aprovaria as próprias avaliações.
         </p>
         <p className={estilos.enquantoIsso}>
-          <strong>Enquanto isso:</strong> aprove pelo painel do Supabase, em{' '}
-          <span className="mono">Table Editor → avaliacoes</span>, mudando{' '}
-          <span className="mono">status</span> de <span className="mono">pendente</span> para{' '}
-          <span className="mono">aprovado</span>. A view{' '}
-          <span className="mono">fila_moderacao</span> junta tudo que está esperando, mais
-          antigo primeiro.
+          <strong>Pra virar moderador:</strong> no SQL Editor do Supabase, rode{' '}
+          <span className="mono">
+            insert into public.admins (usuario_id) select id from auth.users where email =
+            &apos;seu@email&apos;
+          </span>{' '}
+          e recarregue esta página. O passo a passo também está no fim de{' '}
+          <span className="mono">supabase/002-login.sql</span>.
         </p>
+        <button type="button" className={estilos.linkAcao} onClick={() => sair().then(() => location.reload())}>
+          sair desta conta
+        </button>
       </div>
     );
   }
@@ -101,6 +135,19 @@ export function ModeracaoCliente() {
 
   return (
     <>
+      {sessao && (
+        <p className={estilos.barraSessao}>
+          moderando como <strong>{sessao.email ?? 'administrador'}</strong>
+          <button
+            type="button"
+            className={estilos.linkAcao}
+            onClick={() => sair().then(() => location.reload())}
+          >
+            sair
+          </button>
+        </p>
+      )}
+
       <div className={estilos.filtros} role="group" aria-label="Filtrar por situação">
         {(['todas', 'pendente', 'aprovado', 'removido'] as const).map((f) => (
           <button

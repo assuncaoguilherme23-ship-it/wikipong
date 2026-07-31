@@ -1,0 +1,107 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--esp-3);
+  max-width: 34rem;
+  padding: var(--esp-5);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-cartao);
+}
+
+.titulo {
+  margin: 0;
+  font-size: var(--titulo-4);
+  line-height: var(--altura-apertada);
+}
+
+.explicacao {
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  width: 100%;
+}
+
+.rotulo {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+}
+
+.campo input {
+  font: inherit;
+  font-size: var(--texto-base);
+  padding: 0.55em 0.7em;
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  background: var(--cor-papel);
+  color: var(--cor-tinta);
+  width: 100%;
+}
+
+.campo input[aria-invalid='true'] {
+  border-color: var(--cor-erro);
+}
+
+.erro {
+  margin: 0;
+  font-size: var(--texto-mini);
+  color: var(--cor-erro);
+}
+
+.nota {
+  margin: 0;
+  font-size: var(--texto-mini);
+  color: var(--cor-mudo);
+}
+
+/* ── Depois de enviar ── */
+
+.enviado {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--esp-3);
+  max-width: 46ch;
+}
+
+.enviado p {
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+}
+
+.enviadoTitulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-4);
+  line-height: var(--altura-apertada);
+  color: var(--cor-tinta) !important;
+}
+
+.linkAcao {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: var(--texto-mini);
+  color: var(--cor-texto-acento);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.semBackend {
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}

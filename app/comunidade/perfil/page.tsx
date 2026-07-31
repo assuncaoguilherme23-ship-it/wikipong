@@ -30,12 +30,10 @@ export default function PaginaPerfil() {
           <p className={estilos.lede}>
             Quem você é, o que você joga com, e o que você já avaliou.
           </p>
-          <p className={estilos.avisoLocalPagina}>
-            <span className={`mono ${estilos.seloPagina}`}>prévia</span>
-            Isto fica <strong>só neste navegador</strong>, sem conta e sem servidor. Ninguém
-            mais vê, e some se você limpar os dados do site. Quando as contas abrirem, o perfil
-            passa a ser seu de verdade, em qualquer aparelho.
-          </p>
+          {/* O aviso de "só neste navegador" saiu daqui porque virou MENTIRA pra
+              metade dos casos: quem entra passa a ter o perfil no servidor. Ele
+              agora é dito pelo componente cliente, que sabe se há sessão — e no
+              lugar certo, junto do convite pra entrar. */}
         </header>
 
         <PerfilCliente />

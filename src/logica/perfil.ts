@@ -14,6 +14,7 @@
  * agora com dono.
  */
 import type { EstiloJogador, NivelJogador } from './avaliacoes';
+import { sessaoAtual, usuarioAtual } from './sessao';
 
 export interface Perfil {
   nome: string;
@@ -91,5 +92,114 @@ export function repositorioPerfilLocal(): RepositorioPerfil {
   };
 }
 
-/** Ponto único de troca, igual ao das avaliações. */
+/**
+ * Perfil no Supabase — só existe pra quem entrou.
+ *
+ * A tabela `perfis` tem `usuario_id` como chave, referenciando `auth.users`:
+ * perfil sem conta não tem dono, e qualquer um poderia sobrescrever o de
+ * qualquer um. Por isso, deslogado, quem responde é sempre o local.
+ *
+ * O que se ganha ao entrar: o perfil te acompanha em qualquer aparelho, e o
+ * estilo que você escolheu uma vez passa a assinar todas as suas avaliações
+ * sozinho.
+ */
+export function repositorioPerfilSupabase(
+  url: string,
+  chave: string,
+  token: string,
+  usuarioId: string,
+): RepositorioPerfil {
+  const base = `${url.replace(/\/$/, '')}/rest/v1/perfis`;
+  const cabecalhos = {
+    apikey: chave,
+    Authorization: `Bearer ${token}`,
+    'Content-Type': 'application/json',
+  };
+
+  type Linha = {
+    nome: string; estilo: string | null; nivel: string | null;
+    equip_lamina: string | null; equip_fh: string | null; equip_bh: string | null;
+    atualizado_em: string;
+  };
+
+  return {
+    somenteLocal: false,
+    async ler() {
+      try {
+        const res = await fetch(
+          `${base}?usuario_id=eq.${encodeURIComponent(usuarioId)}&select=*`,
+          { headers: cabecalhos },
+        );
+        if (!res.ok) return perfilVazio();
+        const linhas = (await res.json()) as Linha[];
+        const l = linhas[0];
+        if (!l) return perfilVazio();
+        return {
+          nome: l.nome,
+          estilo: (l.estilo ?? undefined) as Perfil['estilo'],
+          nivel: (l.nivel ?? undefined) as Perfil['nivel'],
+          equipamento: {
+            lamina: l.equip_lamina ?? undefined,
+            fh: l.equip_fh ?? undefined,
+            bh: l.equip_bh ?? undefined,
+          },
+          atualizadoEm: l.atualizado_em,
+        };
+      } catch {
+        /* Sem rede: melhor um perfil vazio que uma tela quebrada. */
+        return perfilVazio();
+      }
+    },
+    async gravar(p) {
+      /* Upsert: a pessoa tem UM perfil, e salvar de novo é atualizar o mesmo.
+         `resolution=merge-duplicates` é o que faz o PostgREST tratar o conflito
+         de chave como update em vez de erro. */
+      await fetch(base, {
+        method: 'POST',
+        headers: { ...cabecalhos, Prefer: 'resolution=merge-duplicates,return=minimal' },
+        body: JSON.stringify({
+          usuario_id: usuarioId,
+          nome: p.nome.trim(),
+          estilo: p.estilo ?? null,
+          nivel: p.nivel ?? null,
+          equip_lamina: p.equipamento.lamina ?? null,
+          equip_fh: p.equipamento.fh ?? null,
+          equip_bh: p.equipamento.bh ?? null,
+          atualizado_em: new Date().toISOString(),
+        }),
+      }).catch(() => {
+        /* Falha de rede não pode derrubar a tela enquanto se digita. */
+      });
+    },
+    async limpar() {
+      await fetch(`${base}?usuario_id=eq.${encodeURIComponent(usuarioId)}`, {
+        method: 'DELETE',
+        headers: cabecalhos,
+      }).catch(() => {});
+    },
+  };
+}
+
+/**
+ * Ponto único de troca. Assíncrono porque descobrir QUEM está logado exige
+ * perguntar ao servidor — e sem saber quem é, não há perfil remoto possível.
+ *
+ * Cai no local em três casos, todos legítimos: sem Supabase configurado, sem
+ * ninguém logado, ou sessão expirada.
+ */
+export async function repositorioPerfilAtual(): Promise<RepositorioPerfil> {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const chave = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !chave) return repositorioPerfilLocal();
+
+  const s = await sessaoAtual();
+  if (!s) return repositorioPerfilLocal();
+
+  const u = await usuarioAtual(s);
+  if (!u) return repositorioPerfilLocal();
+
+  return repositorioPerfilSupabase(url, chave, s.accessToken, u.id);
+}
+
+/** Versão síncrona, para quem só precisa do local (testes, primeira pintura). */
 export const repositorioPerfil = (): RepositorioPerfil => repositorioPerfilLocal();

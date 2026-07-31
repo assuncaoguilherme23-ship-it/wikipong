@@ -19,8 +19,12 @@ import {
 } from '@/src/logica/avaliacoes';
 import { repositorio } from '@/src/logica/repositorio-avaliacoes';
 import {
-  repositorioPerfil, perfilVazio, temIdentidade, pecasEscolhidas, type Perfil,
+  repositorioPerfilAtual, perfilVazio, temIdentidade, pecasEscolhidas,
+  type Perfil, type RepositorioPerfil,
 } from '@/src/logica/perfil';
+import { Login } from '@/componentes/Login';
+import { usarSessao } from '@/componentes/usarSessao';
+import { sair } from '@/src/logica/sessao';
 import {
   pecasDe, precoTotal, completa, observacoes, ROTULO_PAPEL,
   type Montagem, type PecaMontagem, type PapelPeca,
@@ -41,14 +45,22 @@ const comoPeca = (id?: string): PecaMontagem | undefined => {
 };
 
 export function PerfilCliente() {
-  const repoPerfil = useMemo(() => repositorioPerfil(), []);
+  const { usuario, carregando, disponivel } = usarSessao();
   const repoAv = useMemo(() => repositorio(), []);
+  const [repoPerfil, setRepoPerfil] = useState<RepositorioPerfil | null>(null);
   const [perfil, setPerfil] = useState<Perfil | null>(null);
   const [minhas, setMinhas] = useState<Avaliacao[]>([]);
 
+  /* O repositorio depende de QUEM esta' logado, entao so' pode ser escolhido
+     depois que a sessao responde. Refaz quando o usuario muda: entrar ou sair
+     troca de onde o perfil vem. */
   useEffect(() => {
-    repoPerfil.ler().then(setPerfil);
-  }, [repoPerfil]);
+    if (carregando) return;
+    repositorioPerfilAtual().then(async (r) => {
+      setRepoPerfil(r);
+      setPerfil(await r.ler());
+    });
+  }, [carregando, usuario?.id]);
 
   useEffect(() => {
     if (!perfil?.nome) return;
@@ -61,7 +73,7 @@ export function PerfilCliente() {
   const salvar = (mudanca: Partial<Perfil>) => {
     const novo = { ...(perfil ?? perfilVazio()), ...mudanca } as Perfil;
     setPerfil(novo);
-    void repoPerfil.gravar(novo);
+    void repoPerfil?.gravar(novo);
   };
 
   const montagem: Montagem = useMemo(
@@ -73,13 +85,52 @@ export function PerfilCliente() {
     [perfil?.equipamento.lamina, perfil?.equipamento.fh, perfil?.equipamento.bh],
   );
 
-  if (perfil === null) return <p className={estilos.carregando}>Carregando…</p>;
+  if (carregando || perfil === null) {
+    return <p className={estilos.carregando}>Carregando…</p>;
+  }
 
   const escolhidas = pecasEscolhidas(perfil);
   const obs = observacoes(montagem);
 
   return (
     <div className={estilos.blocos}>
+      {/* ── A conta, quando há servidor. Login é OPCIONAL: quem não entra usa o
+             site inteiro do mesmo jeito, só sem levar o perfil junto. ── */}
+      {disponivel && (
+        usuario ? (
+          <p className={estilos.barraConta}>
+            <span>
+              Entrou como <strong>{usuario.email}</strong>. Seu perfil e suas avaliações
+              acompanham você em qualquer aparelho.
+            </span>
+            <button
+              type="button"
+              className={estilos.linkAcao}
+              onClick={() => sair().then(() => location.reload())}
+            >
+              sair
+            </button>
+          </p>
+        ) : (
+          <section className={estilos.secao} aria-labelledby="t-conta">
+            <h2 id="t-conta" className={estilos.tituloSecao}>
+              Quer levar isto com você?
+            </h2>
+            <p className={estilos.explica}>
+              Sem conta, o que você preencher aqui fica <strong>só neste navegador</strong>: some
+              se você limpar os dados e não aparece no celular. Entrando, o perfil te acompanha,
+              e as avaliações que você escrever passam a ser suas — dá pra corrigir e apagar
+              depois.{' '}
+              <strong>Não é obrigatório.</strong> O site inteiro funciona sem entrar.
+            </p>
+            <Login
+              titulo="Entrar ou criar conta"
+              explicacao="É o mesmo campo pros dois: se ainda não houver conta com esse e-mail, ela é criada na hora em que você clicar no link."
+            />
+          </section>
+        )
+      )}
+
       {/* ── Quem você é ── */}
       <section className={estilos.secao} aria-labelledby="t-identidade">
         <h2 id="t-identidade" className={estilos.tituloSecao}>

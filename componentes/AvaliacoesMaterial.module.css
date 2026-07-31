@@ -361,3 +361,13 @@
   font-size: var(--texto-mini);
   color: var(--cor-erro);
 }
+
+/* Convite pra criar conta, no rodape do formulario. Peso de nota de rodape:
+   o botao de publicar continua sendo a acao principal. */
+.dicaConta {
+  margin: 0;
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}

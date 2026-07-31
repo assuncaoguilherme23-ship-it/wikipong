@@ -201,8 +201,16 @@ export async function sessaoAtual(): Promise<Sessao | null> {
   return expirada(s) ? renovar(s) : s;
 }
 
-/** Quem está logado, pra tela dizer o nome. Uma chamada, sem cache. */
-export async function quemSou(s: Sessao): Promise<string | null> {
+export interface Usuario {
+  id: string;
+  email?: string;
+}
+
+/**
+ * Quem está logado. O `id` é o que importa pro banco — é ele que assina a
+ * avaliação e é a chave do perfil. O e-mail serve pra tela dizer o nome.
+ */
+export async function usuarioAtual(s: Sessao): Promise<Usuario | null> {
   const base = url();
   const anon = chave();
   if (!base || !anon) return null;
@@ -211,12 +219,16 @@ export async function quemSou(s: Sessao): Promise<string | null> {
       headers: { apikey: anon, Authorization: `Bearer ${s.accessToken}` },
     });
     if (!res.ok) return null;
-    const d = (await res.json()) as { email?: string };
-    return d.email ?? null;
+    const d = (await res.json()) as { id?: string; email?: string };
+    return d.id ? { id: d.id, email: d.email } : null;
   } catch {
     return null;
   }
 }
+
+/** Só o e-mail, pra quem só quer mostrar o nome na tela. */
+export const quemSou = async (s: Sessao): Promise<string | null> =>
+  (await usuarioAtual(s))?.email ?? null;
 
 export async function sair(): Promise<void> {
   const base = url();

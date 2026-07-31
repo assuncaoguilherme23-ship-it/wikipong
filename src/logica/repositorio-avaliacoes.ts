@@ -165,9 +165,16 @@ export function repositorioSupabase(url: string, chave: string): RepositorioAval
     nivel: a.nivel,
     tempo_de_uso: a.tempoDeUso,
     estilo: a.estilo,
-    /* `status` e `usuario_id` ficam de fora de propósito: quem decide os dois é
-       o banco (DEFAULT 'pendente' e auth.uid()). Mandar daqui seria pedir pra
-       ser recusado pela política — e, se não fosse, seria o furo. */
+    /* `status` fica de fora de propósito: quem decide é o banco (DEFAULT
+       'pendente'). Mandar daqui seria pedir pra ser recusado pela política — e,
+       se não fosse, seria o furo.
+
+       `usuario_id` só vai quando a pessoa entrou. É ele que:
+         · faz valer o índice único (uma avaliação por pessoa por material);
+         · dá a ela o direito de corrigir e apagar o que escreveu.
+       Anônimo continua podendo escrever, e vai sem dono — escreveu, entregou.
+       A política da 002 confere que o id mandado é mesmo o de quem pede. */
+    ...(a.usuarioId ? { usuario_id: a.usuarioId } : {}),
   });
 
   const buscar = async (consulta: string): Promise<Avaliacao[]> => {

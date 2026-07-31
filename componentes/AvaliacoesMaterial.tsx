@@ -14,6 +14,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import {
   validar, resumir, ordenar, recortar, ROTULO_ESTILO, NIVEIS, TEMPOS_DE_USO,
   PISO_PARA_MEDIA, NOTA_MAXIMA, TEXTO_MAXIMO,
@@ -21,6 +22,8 @@ import {
   type Ordem, type ProblemaCampo,
 } from '@/src/logica/avaliacoes';
 import { repositorio, novoId } from '@/src/logica/repositorio-avaliacoes';
+import { repositorioPerfilAtual, type Perfil } from '@/src/logica/perfil';
+import { usarSessao } from './usarSessao';
 import { Estrelas, EstrelasEntrada } from './Estrelas';
 import { TagEstilo, TagNivel } from './TagEstilo';
 import estilos from './AvaliacoesMaterial.module.css';
@@ -42,10 +45,19 @@ export function AvaliacoesMaterial({
   const [ordem, setOrdem] = useState<Ordem>('recentes');
   const [filtroEstilo, setFiltroEstilo] = useState<EstiloJogador | ''>('');
   const [abrirForm, setAbrirForm] = useState(false);
+  /* O perfil serve pra NAO perguntar de novo o que a pessoa ja' respondeu:
+     nome, estilo e nivel chegam preenchidos. Formulario repetitivo e'
+     formulario abandonado. */
+  const { usuario } = usarSessao();
+  const [perfil, setPerfil] = useState<Perfil | null>(null);
 
   useEffect(() => {
     repo.doMaterial(materialId).then(setLista);
   }, [repo, materialId]);
+
+  useEffect(() => {
+    repositorioPerfilAtual().then((r) => r.ler()).then(setPerfil);
+  }, [usuario?.id]);
 
   const resumo = useMemo(() => resumir(lista ?? []), [lista]);
   const visiveis = useMemo(() => {
@@ -71,8 +83,7 @@ export function AvaliacoesMaterial({
         <p className={estilos.avisoLocal}>
           <span className={`mono ${estilos.selo}`}>prévia</span>
           As avaliações ainda ficam <strong>só neste navegador</strong>. Ninguém mais vê o que
-          você escrever, e some se você limpar os dados do site. Quando as contas abrirem, isto
-          vira público e passa por moderação.
+          você escrever, e some se você limpar os dados do site.
         </p>
       )}
 
@@ -97,7 +108,13 @@ export function AvaliacoesMaterial({
       </div>
 
       {abrirForm && (
-        <Formulario materialId={materialId} nomeMaterial={nomeMaterial} aoGravar={gravar} />
+        <Formulario
+          materialId={materialId}
+          nomeMaterial={nomeMaterial}
+          perfil={perfil}
+          usuarioId={usuario?.id}
+          aoGravar={gravar}
+        />
       )}
 
       {visiveis.length > 0 && (
@@ -247,18 +264,25 @@ function ResumoNotas({ resumo }: { resumo: ReturnType<typeof resumir> }) {
 function Formulario({
   materialId,
   nomeMaterial,
+  perfil,
+  usuarioId,
   aoGravar,
 }: {
   materialId: string;
   nomeMaterial: string;
+  perfil: Perfil | null;
+  usuarioId?: string;
   aoGravar: (a: Avaliacao) => Promise<void>;
 }) {
-  const [autor, setAutor] = useState('');
+  /* Tudo que o perfil já sabe chega preenchido, e continua editável: pode ser
+     que nesta borracha específica a pessoa queira dizer outra coisa. O perfil é
+     ponto de partida, não camisa de força. */
+  const [autor, setAutor] = useState(perfil?.nome ?? '');
   const [nota, setNota] = useState<number | undefined>();
   const [texto, setTexto] = useState('');
-  const [nivel, setNivel] = useState<NivelJogador | ''>('');
+  const [nivel, setNivel] = useState<NivelJogador | ''>(perfil?.nivel ?? '');
   const [tempoDeUso, setTempo] = useState<TempoDeUso | ''>('');
-  const [estilo, setEstilo] = useState<EstiloJogador | ''>('');
+  const [estilo, setEstilo] = useState<EstiloJogador | ''>(perfil?.estilo ?? '');
   const [tentou, setTentou] = useState(false);
 
   const rascunho = {
@@ -284,7 +308,10 @@ function Formulario({
       nivel: nivel as NivelJogador,
       tempoDeUso: tempoDeUso as TempoDeUso,
       estilo: estilo as EstiloJogador,
+      usuarioId,
       criadoEm: new Date().toISOString(),
+      /* Local grava publicado (o segundo par de olhos e' o dono do navegador).
+         No servidor este campo e' ignorado: o banco forca 'pendente'. */
       status: 'aprovado',
     });
   }
@@ -393,6 +420,17 @@ function Formulario({
           </p>
         )}
       </div>
+
+      {/* Convite, não porteiro. O botão acima funciona sem conta; isto só conta o
+          que se ganha entrando — e diz de saída que não é obrigatório, pra
+          ninguém achar que topou num muro. */}
+      {!usuarioId && (
+        <p className={estilos.dicaConta}>
+          Você pode publicar assim mesmo, sem conta.{' '}
+          <Link href="/comunidade/perfil/">Entrando</Link>, esta avaliação fica sendo sua: dá
+          pra corrigir e apagar depois, e o seu estilo e nível vêm preenchidos da próxima vez.
+        </p>
+      )}
     </form>
   );
 }

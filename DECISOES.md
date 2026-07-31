@@ -244,6 +244,26 @@ MATERIAL que o catálogo já usa (`atacar`/`equilibrado`/`controlar`), sem campo
 a tela mostra as avaliações uma a uma e diz por que não há média — mesma regra que a colheita
 já pratica com o sinal do Revspin.
 
+**Emenda (2026-07-31) · conta de usuário, e ela é OPCIONAL:** o fundador pediu que o
+usuário possa se cadastrar e ter perfil. Login por link no e-mail, o mesmo mecanismo
+do administrador.
+
+**Avaliar NÃO exige conta, e essa é a decisão.** Exigir cadastro num site com zero
+avaliações troca "poucas avaliações" por "nenhuma": o custo de criar conta é alto
+quando não há nada na tela que prove que vale a pena. Quem segura o portão continua
+sendo a moderação, como já era.
+
+O que a conta dá, e por isso é convite e não porteiro:
+· o perfil (estilo, nível, "meu equipamento") acompanha em qualquer aparelho;
+· o formulário chega preenchido — sem perguntar de novo o que já foi respondido;
+· a avaliação passa a ter dono: dá pra corrigir e apagar (políticas da 002);
+· o índice único (uma avaliação por pessoa por material) passa a valer.
+
+**Dependência que virou obrigatória:** o provedor de e-mail nativo do Supabase manda
+~2 mensagens por hora. Era irrelevante quando só o administrador entrava; com cadastro
+de usuário é bloqueante. SMTP próprio (Resend/SES) entra JUNTO com este pacote, não
+depois — sem ele o cadastro não funciona para mais de duas pessoas por hora.
+
 **Status:** ativa — **no ar em prévia**. `src/logica/avaliacoes.ts` (módulo puro: validação,
 agregados derivados, Wilson, recortes) + `repositorio-avaliacoes.ts` (adaptador tipado).
 Formulário e lista na ficha do material; feed e ranking em `/comunidade`. **A escrita ainda é

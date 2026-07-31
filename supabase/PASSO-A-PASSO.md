@@ -61,29 +61,56 @@ Para conferir: abra **Table Editor** no menu. Devem estar lá `avaliacoes`,
 
 ## Parte 3 — Ligar o site no banco (5 min)
 
-1. No menu, vá em **Project Settings** (engrenagem) → **API**.
-2. Copie dois valores:
-   - **Project URL** — algo como `https://abcdefgh.supabase.co`
-   - a chave **anon / public** (em projetos novos ela pode aparecer como
-     *publishable key*). **Não** use a `service_role`: ela dá poder total e não
-     pode ir para dentro do site.
-3. Na pasta do projeto, crie um arquivo chamado **`.env.local`** com estas duas
-   linhas, trocando pelos seus valores:
+São dois valores: o endereço do projeto e a chave pública. Eles ficam em telas
+diferentes.
+
+### A chave
+
+**Settings → API Keys**. Pegue a de cima, em **Publishable key** — começa com
+`sb_publishable_`. É a que pode ficar à vista no site.
+
+> **Não pegue a Secret key** (`sb_secret_...`), logo abaixo na mesma tela. Ela dá
+> poder total sobre o banco e ignora todas as regras de segurança. Se ela entrar no
+> site, qualquer visitante pode apagar tudo.
+
+> Se o seu projeto for mais antigo, no lugar de *Publishable* pode aparecer **anon /
+> public**, com a chave começando em `eyJ...`. As duas funcionam — o site aceita as
+> duas gerações.
+
+### O endereço
+
+Não fica na mesma tela das chaves. Ele é sempre:
+
+```
+https://SEU-PROJETO.supabase.co
+```
+
+onde `SEU-PROJETO` é aquele código que aparece na barra de endereço do próprio
+painel, em `supabase.com/dashboard/project/SEU-PROJETO/...`. Também dá para achar
+pronto em **Settings → Data API**.
+
+### Juntando
+
+Na pasta do projeto, crie um arquivo chamado **`.env.local`** com estas duas linhas,
+trocando pelos seus valores:
 
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=https://abcdefgh.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOi...
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_...
 ```
 
-4. **Pare o servidor** (`Ctrl+C` no terminal onde roda `npm run dev`) e **rode de
-   novo**.
+> O nome da variável ainda diz `ANON_KEY` mesmo que a chave se chame *publishable*.
+> É só o nome interno — não mexa nele, senão o site não acha a chave.
 
-> **Este passo 4 é o que mais confunde.** As variáveis só são lidas quando o
-> servidor sobe. Se você criar o arquivo com ele rodando, nada muda e parece que
-> não funcionou.
+Depois, **pare o servidor** (`Ctrl+C` no terminal onde roda `npm run dev`) e **rode
+de novo**.
 
-Para conferir: abra `/comunidade/perfil/`. O aviso de "prévia" que fala em *só
-neste navegador* deve ter sumido das telas de avaliação.
+> **Este último passo é o que mais confunde.** As variáveis só são lidas quando o
+> servidor sobe. Se você criar o arquivo com ele rodando, nada muda e parece que não
+> funcionou.
+
+Para conferir: abra `/comunidade/perfil/`. O aviso de "prévia" que fala em *só neste
+navegador* deve ter sumido das telas de avaliação.
 
 ---
 
@@ -167,6 +194,7 @@ que tem que ser.
 | "Você entrou, mas esta conta não modera" | Falta rodar o `insert into public.admins` (Parte 5) |
 | A avaliação some depois de publicada | É o esperado: ela entra pendente e você aprova na moderação |
 | Erro de tabela inexistente no SQL | Rodou o `002` antes do `001` |
+| Erro 401 em tudo, mesmo deslogado | Pegou a *Secret key* no lugar da *Publishable* |
 | O site parou de mostrar avaliações do nada | Projeto pausado por inatividade — clique em *Restore* |
 | Alerta vermelho **Security Definer View** | Rode o `003-conserta-fila.sql` (Parte 2) |
 

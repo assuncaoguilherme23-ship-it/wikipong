@@ -113,15 +113,29 @@ export function repositorioLocal(): RepositorioAvaliacoes {
  */
 export function repositorioSupabase(url: string, chave: string): RepositorioAvaliacoes {
   const base = `${url.replace(/\/$/, '')}/rest/v1/avaliacoes`;
-  /* Quando ha' sessao, o Bearer e' o token DA PESSOA — e' o que faz o banco
-     saber quem esta' pedindo e liberar o que e' de admin ou de dono. Sem sessao,
-     cai na chave anonima, que so' enxerga o que esta' aprovado. Recalculado a
-     cada chamada de proposito: sessao nasce e morre no meio da navegacao. */
-  const cabecalhos = () => ({
-    apikey: chave,
-    Authorization: `Bearer ${tokenGuardado() ?? chave}`,
-    'Content-Type': 'application/json',
-  });
+  /*
+   * DUAS GERAÇÕES DE CHAVE, e o cabeçalho muda entre elas.
+   *
+   * A antiga (`anon`) era um JWT: mandá-la em `Authorization: Bearer` era o
+   * padrão e funcionava. A nova (`sb_publishable_...`) NÃO é JWT — mandar ela
+   * como Bearer é mandar um token que o servidor não sabe ler.
+   *
+   * Então: `apikey` sempre; `Authorization` só quando há algo que seja de fato
+   * um token. Com sessão, é o token DA PESSOA, que é o que faz o banco liberar
+   * o que é de admin ou de dono. Sem sessão e com chave antiga, mantém o Bearer
+   * por compatibilidade com quem já tinha o projeto ligado.
+   *
+   * Recalculado a cada chamada de propósito: sessão nasce e morre no meio da
+   * navegação.
+   */
+  const chaveEhJwt = chave.startsWith('ey');
+
+  const cabecalhos = (): Record<string, string> => {
+    const h: Record<string, string> = { apikey: chave, 'Content-Type': 'application/json' };
+    const token = tokenGuardado() ?? (chaveEhJwt ? chave : undefined);
+    if (token) h.Authorization = `Bearer ${token}`;
+    return h;
+  };
 
   type Linha = {
     id: string; material_id: string; usuario_id: string | null; autor: string;

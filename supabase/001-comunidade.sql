@@ -178,7 +178,17 @@ create policy "perfil e' publico em leitura"
 -- ───────────────────────── Moderação ─────────────────────────
 -- A fila do D-11: o que está esperando um par de olhos, mais antigo primeiro.
 -- É view e não tabela porque não há estado novo aqui, só um recorte.
-create or replace view public.fila_moderacao as
+--
+-- ATENÇÃO AO `security_invoker` LOGO ABAIXO — ele não é detalhe.
+--
+-- Sem ele, esta view roda com as permissões de QUEM A CRIOU (você, dono do
+-- banco) e não de quem a consulta. Isso faz ela ler as três tabelas IGNORANDO o
+-- RLS: qualquer pessoa com a chave anônima leria todo o conteúdo pendente, sem
+-- moderação. A primeira versão deste arquivo tinha exatamente esse buraco, e
+-- quem apontou foi o verificador de segurança do próprio Supabase.
+create or replace view public.fila_moderacao
+  with (security_invoker = on)
+  as
   select 'avaliacao' as tipo, id, autor, criado_em, texto from public.avaliacoes
     where status = 'pendente'
   union all
@@ -188,3 +198,8 @@ create or replace view public.fila_moderacao as
   select 'resposta', id, autor, criado_em, texto from public.respostas
     where status = 'pendente'
   order by criado_em;
+
+-- Segunda camada: nem com security_invoker o visitante tem motivo pra tocar
+-- nesta view. Ela e' ferramenta de moderacao.
+revoke all on public.fila_moderacao from anon;
+grant select on public.fila_moderacao to authenticated;

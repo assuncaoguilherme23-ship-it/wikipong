@@ -44,6 +44,12 @@ No menu da esquerda, abra o **SQL Editor** (ícone de terminal).
 4. Deve aparecer **Success. No rows returned**. É isso mesmo: ele criou coisas, não
    buscou nada.
 5. Repita com o arquivo **`supabase/002-login.sql`**.
+6. Repita com **`supabase/003-conserta-fila.sql`**.
+
+> **Se você já rodou o `001` antes de 31/07/2026**, o `003` é obrigatório: a
+> primeira versão tinha uma falha em que a view `fila_moderacao` deixava qualquer
+> pessoa ler o conteúdo ainda não moderado. O painel do Supabase aponta isso
+> sozinho, com um alerta vermelho de *Security Definer View*.
 
 > Se der erro no 002 dizendo que algo não existe, você provavelmente pulou o 001.
 > A ordem importa.
@@ -162,6 +168,7 @@ que tem que ser.
 | A avaliação some depois de publicada | É o esperado: ela entra pendente e você aprova na moderação |
 | Erro de tabela inexistente no SQL | Rodou o `002` antes do `001` |
 | O site parou de mostrar avaliações do nada | Projeto pausado por inatividade — clique em *Restore* |
+| Alerta vermelho **Security Definer View** | Rode o `003-conserta-fila.sql` (Parte 2) |
 
 ---
 

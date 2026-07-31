@@ -6,6 +6,11 @@ chaves e marcar seu e-mail como moderador.
 
 Leva uns 20 minutos na primeira vez.
 
+> **Sobre os blocos de código deste guia:** as linhas com três crases (```) são
+> marcação do documento, não conteúdo. Copie só o que está **entre** elas. Se você
+> estiver lendo isto no GitHub ou num visualizador de Markdown, as crases nem
+> aparecem — o bloco vira uma caixinha cinza, e aí é só copiar a caixinha inteira.
+
 **Antes de começar, entenda o que muda:** hoje o que você escreve no site fica só
 no seu navegador. Depois disso, fica num banco de dados de verdade e todo mundo vê
 (depois de você aprovar). É um caminho sem volta fácil — não porque quebre algo,

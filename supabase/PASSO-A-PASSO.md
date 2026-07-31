@@ -165,7 +165,13 @@ https://seudominio.com.br/**
 ```
 
 > **Se o login falhar, o suspeito nº 1 é este passo.** Sem a URL cadastrada, o
-> e-mail chega normalmente mas o link joga a pessoa para fora do site.
+> Supabase ignora o endereço que o site pediu e manda a pessoa para o **Site URL**
+> do projeto. O sintoma é clicar no link do e-mail e cair no site publicado, com
+> `error_code=otp_expired` na barra de endereço.
+
+> **O link é de uso único, e o Gmail o gasta sozinho.** Alguns provedores abrem os
+> links da mensagem para pré-visualizar, e isso já consome o código. Se der
+> `otp_expired` na primeira tentativa, peça outro link e clique nele o quanto antes.
 
 ---
 
@@ -224,7 +230,8 @@ que tem que ser.
 |---|---|
 | O aviso de "prévia" continua aparecendo | Não reiniciou o servidor depois de criar o `.env.local` |
 | O e-mail com o link não chega | Olhe o spam. O plano gratuito limita quantos e-mails por hora |
-| O link volta para uma página estranha | Redirect URL não cadastrada (Parte 4) |
+| O link cai no site publicado, com `otp_expired` | Redirect URL não cadastrada (Parte 4). Sem ela o Supabase usa o *Site URL* |
+| `otp_expired` mesmo com a URL certa | O provedor de e-mail consumiu o link ao pré-visualizar. Peça outro |
 | "Você entrou, mas esta conta não modera" | Falta rodar o `insert into public.admins` (Parte 5) |
 | A avaliação some depois de publicada | É o esperado: ela entra pendente e você aprova na moderação |
 | Erro de tabela inexistente no SQL | Rodou o `002` antes do `001` |

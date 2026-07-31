@@ -80,10 +80,20 @@ export async function pedirLink(email: string, redirecionar: string): Promise<vo
   const anon = chave();
   if (!base || !anon) throw new Error('Supabase não configurado.');
 
-  const res = await fetch(`${base}/auth/v1/otp`, {
+  /*
+   * O `redirect_to` vai na QUERY STRING, não no corpo.
+   *
+   * A primeira versão mandava `{ email, options: { email_redirect_to } }` no
+   * JSON, imitando a forma do SDK. A API REST ignora isso em silêncio: não dá
+   * erro, manda o e-mail normalmente, e o link volta pro "Site URL" do projeto
+   * em vez do endereço pedido. O sintoma aparece longe da causa — a pessoa
+   * clica no link e cai noutro site, sem nada indicando o porquê.
+   */
+  const destino = `${base}/auth/v1/otp?redirect_to=${encodeURIComponent(redirecionar)}`;
+  const res = await fetch(destino, {
     method: 'POST',
     headers: { apikey: anon, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, options: { email_redirect_to: redirecionar } }),
+    body: JSON.stringify({ email, create_user: true }),
   });
   if (!res.ok) {
     /* A mensagem do Supabase costuma ser útil (e-mail inválido, limite de envio). */

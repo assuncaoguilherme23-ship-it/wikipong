@@ -100,16 +100,29 @@ pronto em **Settings → Data API**.
 > arquivo no **seu computador**, dentro da pasta do WikiPong. Colar isto no SQL
 > Editor dá `syntax error`, porque não é SQL.
 
-Abra o terminal na pasta do projeto e rode este comando, trocando os dois valores:
+Abra o terminal **na pasta do projeto** e crie o arquivo. Repare no `cd`: se você
+abrir o terminal e sair digitando, ele começa na sua pasta pessoal, e o arquivo vai
+parar no lugar errado.
+
+**No Windows (PowerShell):**
 
 ```
+cd C:\caminho\para\wikipong
+"NEXT_PUBLIC_SUPABASE_URL=https://SEU-PROJETO.supabase.co", "NEXT_PUBLIC_SUPABASE_ANON_KEY=SUA-CHAVE" | Set-Content .env.local -Encoding utf8
+```
+
+**No Mac ou Linux:**
+
+```
+cd /caminho/para/wikipong
 printf 'NEXT_PUBLIC_SUPABASE_URL=https://SEU-PROJETO.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=SUA-CHAVE
 ' > .env.local
 ```
 
-Ou, se preferir criar o arquivo à mão no editor: chame de `.env.local` (com o ponto
-na frente), salve na raiz do projeto, e ponha só estas duas linhas:
+Ou, mais simples que qualquer comando: crie o arquivo **pelo editor de código**.
+Novo arquivo, nome `.env.local` (com o ponto na frente), salvo na raiz do projeto,
+com só estas duas linhas:
 
 ```
 NEXT_PUBLIC_SUPABASE_URL=https://abcdefgh.supabase.co
@@ -217,6 +230,8 @@ que tem que ser.
 | Erro de tabela inexistente no SQL | Rodou o `002` antes do `001` |
 | Erro 401 em tudo, mesmo deslogado | Pegou a *Secret key* no lugar da *Publishable* |
 | `syntax error at or near "NEXT_PUBLIC..."` | Colou o `.env.local` no SQL Editor. Ele é arquivo do seu computador, não SQL |
+| `printf : O termo 'printf' não é reconhecido` | Está no PowerShell e usou o comando de Mac/Linux. Use o de Windows acima |
+| Criou o arquivo mas nada mudou | Ele foi parar noutra pasta. Confira que está na raiz do projeto, ao lado do `package.json` |
 | Erro de conexão, ou nada carrega | A URL tem `/rest/v1/` ou barra sobrando. Ela acaba em `.supabase.co` |
 | O site parou de mostrar avaliações do nada | Projeto pausado por inatividade — clique em *Restore* |
 | Alerta vermelho **Security Definer View** | Rode o `003-conserta-fila.sql` (Parte 2) |

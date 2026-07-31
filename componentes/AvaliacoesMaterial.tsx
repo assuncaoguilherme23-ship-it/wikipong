@@ -50,6 +50,7 @@ export function AvaliacoesMaterial({
      formulario abandonado. */
   const { usuario } = usarSessao();
   const [perfil, setPerfil] = useState<Perfil | null>(null);
+  const [aviso, setAviso] = useState<{ tipo: 'ok' | 'erro'; texto: string } | null>(null);
 
   useEffect(() => {
     repo.doMaterial(materialId).then(setLista);
@@ -60,15 +61,52 @@ export function AvaliacoesMaterial({
   }, [usuario?.id]);
 
   const resumo = useMemo(() => resumir(lista ?? []), [lista]);
+  /* A SUA avaliacao pendente aparece PRA VOCE, marcada. Sem isso ela some no
+     instante em que e' escrita, e o site parece ter engolido o texto — que foi
+     exatamente o que aconteceu no primeiro teste com servidor de verdade. */
   const visiveis = useMemo(() => {
-    const base = (lista ?? []).filter((a) => a.status === 'aprovado');
+    const base = (lista ?? []).filter(
+      (a) =>
+        a.status === 'aprovado' ||
+        (a.status === 'pendente' && usuario?.id !== undefined && a.usuarioId === usuario.id),
+    );
     return ordenar(recortar(base, filtroEstilo ? { estilo: filtroEstilo } : {}), ordem);
-  }, [lista, ordem, filtroEstilo]);
+  }, [lista, ordem, filtroEstilo, usuario?.id]);
 
+  /*
+   * Gravar SEM dizer que gravou foi o pior defeito desta tela. No servidor a
+   * avaliação entra como pendente e some da lista — do ponto de vista de quem
+   * escreveu, o formulário fechou e nada aconteceu. A reação natural é mandar
+   * de novo, e aí o índice único devolve 409 e a página quebra.
+   *
+   * Agora: confirmação explícita no sucesso, e o 409 vira frase.
+   */
   async function gravar(nova: Avaliacao) {
-    await repo.gravar(nova);
-    setLista(await repo.doMaterial(materialId));
-    setAbrirForm(false);
+    try {
+      await repo.gravar(nova);
+      setLista(await repo.doMaterial(materialId));
+      setAbrirForm(false);
+      setAviso(
+        repo.somenteLocal
+          ? { tipo: 'ok', texto: 'Avaliação publicada.' }
+          : {
+              tipo: 'ok',
+              texto:
+                'Avaliação enviada. Ela fica esperando aprovação antes de aparecer para os ' +
+                'outros — é assim com toda avaliação, inclusive a sua.',
+            },
+      );
+    } catch (err) {
+      const jaAvaliou = err instanceof Error && err.message === 'JA_AVALIOU';
+      setAviso({
+        tipo: 'erro',
+        texto: jaAvaliou
+          ? 'Você já avaliou este material. Cada pessoa escreve uma avaliação por material — ' +
+            'se ela ainda não apareceu, é porque está esperando aprovação.'
+          : 'Não deu pra enviar agora. Confira a conexão e tente de novo — o que você escreveu ' +
+            'continua aí.',
+      });
+    }
   }
 
   /* null = ainda lendo o storage. Não renderizar "nenhuma avaliação" antes de
@@ -93,6 +131,15 @@ export function AvaliacoesMaterial({
         <p className={estilos.vazio}>
           Ninguém avaliou <strong>{nomeMaterial}</strong> ainda. Se você usa, a sua é a primeira
           — e a ficha técnica acima continua valendo do mesmo jeito.
+        </p>
+      )}
+
+      {aviso && (
+        <p
+          className={aviso.tipo === 'ok' ? estilos.avisoOk : estilos.avisoErro}
+          role="status"
+        >
+          {aviso.texto}
         </p>
       )}
 
@@ -165,6 +212,11 @@ export function AvaliacoesMaterial({
                     </time>
                   </div>
                 </div>
+                {a.status === 'pendente' && (
+                  <p className={`mono ${estilos.seloPendente}`}>
+                    esperando aprovação · só você está vendo
+                  </p>
+                )}
                 <p className={estilos.texto}>{a.texto}</p>
                 <p className={`mono ${estilos.uso}`}>usa há {a.tempoDeUso}</p>
               </li>

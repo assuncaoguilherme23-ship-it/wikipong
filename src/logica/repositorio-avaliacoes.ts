@@ -198,7 +198,18 @@ export function repositorioSupabase(url: string, chave: string): RepositorioAval
         headers: { ...cabecalhos(), Prefer: 'return=minimal' },
         body: JSON.stringify(paraLinha(nova)),
       });
-      if (!res.ok) throw new Error(`Supabase recusou a gravação (${res.status})`);
+      if (!res.ok) {
+        /*
+         * 409 é o índice único da migração 001 fazendo o trabalho dele: uma
+         * avaliação por pessoa por material. Não é falha, é regra — e a tela
+         * precisa dizer isso com palavras, porque "409" não significa nada pra
+         * quem acabou de escrever um texto e apertou publicar.
+         */
+        if (res.status === 409) {
+          throw new Error('JA_AVALIOU');
+        }
+        throw new Error(`Supabase recusou a gravação (${res.status})`);
+      }
     },
     async remover(id) {
       /* Não apaga: marca como removido. Apagar de verdade tira do moderador a

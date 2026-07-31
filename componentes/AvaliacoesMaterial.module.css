@@ -371,3 +371,30 @@
   color: var(--cor-tinta-suave);
   max-width: 62ch;
 }
+
+/* Confirmação e erro do envio. Sem caixa, no estilo de aviso da casa — o que
+   muda entre os dois é a cor do texto, não uma moldura nova. */
+.avisoOk,
+.avisoErro {
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  max-width: 62ch;
+}
+
+.avisoOk {
+  color: var(--cor-texto-acento);
+}
+
+.avisoErro {
+  color: var(--cor-erro);
+}
+
+/* A sua avaliação ainda não aprovada, marcada dentro do próprio cartão. */
+.seloPendente {
+  margin: var(--esp-2) 0 0;
+  font-size: var(--texto-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+}

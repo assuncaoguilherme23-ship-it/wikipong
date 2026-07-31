@@ -1,0 +1,183 @@
+.carregando,
+.vazio {
+  margin: 0;
+  color: var(--cor-tinta-suave);
+  font-size: var(--texto-menor);
+}
+
+/* ── Quando a tela não pode moderar (Supabase ligado) ── */
+
+.impedida {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  max-width: 64ch;
+}
+
+.impedida p {
+  margin: 0;
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  font-size: var(--texto-menor);
+}
+
+.impedidaTitulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-4);
+  line-height: var(--altura-apertada);
+  color: var(--cor-tinta) !important;
+}
+
+.enquantoIsso {
+  padding-top: var(--esp-3);
+  border-top: 1px solid var(--cor-linha);
+}
+
+.enquantoIsso strong {
+  color: var(--cor-tinta);
+}
+
+/* ── Filtros ── */
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--esp-2);
+  padding: 0.3em 0.8em;
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: 999px;
+  background: var(--cor-superficie);
+  color: var(--cor-tinta-suave);
+  font: inherit;
+  font-size: var(--texto-mini);
+  cursor: pointer;
+}
+
+.chipAtivo {
+  border-color: var(--cor-acento);
+  color: var(--cor-tinta);
+}
+
+.contagem {
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+
+/* ── Lista ── */
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+}
+
+.item {
+  padding: var(--esp-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+}
+
+/* A situação se lê pela OPACIDADE e pelo rótulo, não por fundo colorido: três
+   cartões pintados de verde, amarelo e vermelho seriam um semáforo brigando
+   com o texto, que é o que precisa ser lido pra decidir. */
+.removido {
+  opacity: 0.55;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--esp-3);
+  flex-wrap: wrap;
+}
+
+.quem {
+  min-width: 0;
+}
+
+.autor {
+  margin: 0;
+  font-family: var(--fonte-display);
+  font-size: var(--texto-maior);
+  line-height: var(--altura-apertada);
+}
+
+.tags {
+  margin: var(--esp-1) 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+}
+
+.direita {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--esp-1);
+}
+
+.situacao {
+  font-size: var(--texto-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-mudo);
+}
+
+.pendente .situacao {
+  color: var(--cor-texto-acento);
+}
+
+.sobre {
+  margin: var(--esp-3) 0 0;
+  font-size: var(--texto-mini);
+  color: var(--cor-mudo);
+}
+
+.orfa {
+  color: var(--cor-erro);
+}
+
+.texto {
+  margin: var(--esp-3) 0 0;
+  line-height: var(--altura-leitura);
+  font-size: var(--texto-menor);
+  white-space: pre-wrap;
+}
+
+.acoes {
+  margin-top: var(--esp-4);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--esp-3);
+}
+
+.linkAcao {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: var(--texto-mini);
+  color: var(--cor-texto-acento);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nota {
+  margin: 0;
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}

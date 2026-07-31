@@ -20,10 +20,22 @@ export interface RepositorioAvaliacoes {
   readonly rotulo: string;
   /** true quando o que se escreve some do alcance de outras pessoas. */
   readonly somenteLocal: boolean;
+  /**
+   * true quando esta implementação consegue ENXERGAR o que está pendente.
+   *
+   * É falso no Supabase e não é limitação a consertar: a política de leitura só
+   * devolve o que está 'aprovado', e a chave que o site carrega é a anônima,
+   * visível no bundle. Uma tela que moderasse com essa chave seria uma tela em
+   * que qualquer visitante aprova o que quiser. A moderação de verdade espera
+   * login de administrador; até lá, é pelo painel do Supabase.
+   */
+  readonly podeModerar: boolean;
   listar(): Promise<Avaliacao[]>;
   doMaterial(materialId: string): Promise<Avaliacao[]>;
   gravar(nova: Avaliacao): Promise<void>;
   remover(id: string): Promise<void>;
+  /** Muda o status de uma avaliação. Só faz sentido quando `podeModerar`. */
+  moderar(id: string, status: Avaliacao['status']): Promise<void>;
 }
 
 const CHAVE = 'wikipong:avaliacoes:v1';
@@ -61,6 +73,7 @@ export function repositorioLocal(): RepositorioAvaliacoes {
   return {
     rotulo: 'este navegador',
     somenteLocal: true,
+    podeModerar: true,
     async listar() {
       return ler();
     },
@@ -72,6 +85,9 @@ export function repositorioLocal(): RepositorioAvaliacoes {
     },
     async remover(id) {
       escrever(ler().filter((a) => a.id !== id));
+    },
+    async moderar(id, status) {
+      escrever(ler().map((a) => (a.id === id ? { ...a, status } : a)));
     },
   };
 }
@@ -144,6 +160,9 @@ export function repositorioSupabase(url: string, chave: string): RepositorioAval
   return {
     rotulo: 'WikiPong',
     somenteLocal: false,
+    /* A politica de leitura so' devolve 'aprovado' para a chave anonima: nao ha'
+       o que moderar daqui. Ver o comentario na interface. */
+    podeModerar: false,
     listar: () => buscar('select=*&order=criado_em.desc&limit=200'),
     doMaterial: (materialId) =>
       buscar(`select=*&material_id=eq.${encodeURIComponent(materialId)}&order=criado_em.desc`),
@@ -164,6 +183,14 @@ export function repositorioSupabase(url: string, chave: string): RepositorioAval
         body: JSON.stringify({ status: 'removido' }),
       });
       if (!res.ok) throw new Error(`Supabase recusou a remoção (${res.status})`);
+    },
+    async moderar(id, status) {
+      const res = await fetch(`${base}?id=eq.${encodeURIComponent(id)}`, {
+        method: 'PATCH',
+        headers: { ...cabecalhos, Prefer: 'return=minimal' },
+        body: JSON.stringify({ status }),
+      });
+      if (!res.ok) throw new Error(`Supabase recusou a moderação (${res.status})`);
     },
   };
 }

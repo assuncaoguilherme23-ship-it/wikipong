@@ -95,11 +95,40 @@ export async function pedirLink(email: string, redirecionar: string): Promise<vo
     headers: { apikey: anon, 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, create_user: true }),
   });
-  if (!res.ok) {
-    /* A mensagem do Supabase costuma ser útil (e-mail inválido, limite de envio). */
-    const corpo = await res.text().catch(() => '');
-    throw new Error(`Não deu pra enviar o link (${res.status}). ${corpo}`.trim());
+  if (!res.ok) throw new Error(await explicar(res));
+}
+
+/**
+ * Traduz a resposta de erro do Supabase para uma frase que a pessoa entenda.
+ *
+ * A primeira versão jogava o JSON cru na tela — `{"code":429,"error_code":
+ * "over_email_send_rate_limit",...}`. Quem lê isso não descobre nem o que houve
+ * nem o que fazer. E o pior é que o mais comum dos erros, o limite de envio, tem
+ * uma solução simples: esperar.
+ */
+async function explicar(res: Response): Promise<string> {
+  let codigo = '';
+  try {
+    const d = (await res.json()) as { error_code?: string; msg?: string; message?: string };
+    codigo = d.error_code ?? '';
+    if (!codigo && (d.msg ?? d.message)) codigo = (d.msg ?? d.message)!;
+  } catch {
+    /* Sem corpo legível: sobra o status. */
   }
+
+  if (res.status === 429 || codigo.includes('rate_limit')) {
+    return (
+      'O Supabase gratuito manda poucos e-mails por hora, e a cota acabou. ' +
+      'Espere uns minutos e peça de novo — não é problema no seu e-mail.'
+    );
+  }
+  if (res.status === 422 || codigo.includes('invalid')) {
+    return 'Esse e-mail não foi aceito. Confira se está escrito certo.';
+  }
+  if (res.status === 401 || res.status === 403) {
+    return 'A chave do projeto não foi aceita. Confira o NEXT_PUBLIC_SUPABASE_ANON_KEY.';
+  }
+  return `Não deu pra enviar o link (erro ${res.status}${codigo ? `: ${codigo}` : ''}).`;
 }
 
 /**

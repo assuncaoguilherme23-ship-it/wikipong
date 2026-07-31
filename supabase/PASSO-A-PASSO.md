@@ -192,6 +192,11 @@ on conflict do nothing;
 
 6. Recarregue a página de moderação. Agora a fila aparece.
 
+> **Não precisa esperar o login pra rodar o passo 5.** A conta em `auth.users` é
+> criada assim que você pede o PRIMEIRO link, mesmo que ele expire ou você não
+> clique. Confira em **Authentication → Users**: se o e-mail está lá, rode o insert
+> agora e pule direto pra fila quando conseguir entrar.
+
 ---
 
 ## Parte 6 — Testar de ponta a ponta
@@ -232,6 +237,7 @@ que tem que ser.
 | O e-mail com o link não chega | Olhe o spam. O plano gratuito limita quantos e-mails por hora |
 | O link cai no site publicado, com `otp_expired` | Redirect URL não cadastrada (Parte 4). Sem ela o Supabase usa o *Site URL* |
 | `otp_expired` mesmo com a URL certa | O provedor de e-mail consumiu o link ao pré-visualizar. Peça outro |
+| "O Supabase gratuito manda poucos e-mails por hora" | Cota de envio esgotada. Espere uns minutos. A conta já foi criada no primeiro pedido — dá pra rodar o `insert into public.admins` enquanto isso |
 | "Você entrou, mas esta conta não modera" | Falta rodar o `insert into public.admins` (Parte 5) |
 | A avaliação some depois de publicada | É o esperado: ela entra pendente e você aprova na moderação |
 | Erro de tabela inexistente no SQL | Rodou o `002` antes do `001` |

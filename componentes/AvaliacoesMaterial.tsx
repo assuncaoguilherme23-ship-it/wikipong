@@ -125,12 +125,20 @@ export function AvaliacoesMaterial({
         </p>
       )}
 
+      {/* `resumo` só conta o que está APROVADO. Então, com a sua avaliação
+          pendente na lista logo abaixo, a tela dizia "ninguém avaliou ainda"
+          bem em cima de uma avaliação — contradizendo a si mesma na mesma
+          dobra. O vazio agora exige que não haja NADA visível. */}
       {resumo.total > 0 ? (
         <ResumoNotas resumo={resumo} />
-      ) : (
+      ) : visiveis.length === 0 ? (
         <p className={estilos.vazio}>
           Ninguém avaliou <strong>{nomeMaterial}</strong> ainda. Se você usa, a sua é a primeira
           — e a ficha técnica acima continua valendo do mesmo jeito.
+        </p>
+      ) : (
+        <p className={estilos.vazio}>
+          Nenhuma avaliação aprovada ainda. A sua está abaixo, esperando.
         </p>
       )}
 

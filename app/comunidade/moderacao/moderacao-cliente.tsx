@@ -124,29 +124,46 @@ export function ModeracaoCliente() {
   const visiveis = filtro === 'todas' ? lista : lista.filter((a) => a.status === filtro);
   const contar = (s: Avaliacao['status']) => lista.filter((a) => a.status === s).length;
 
+  /* A barra de sessão sai daqui de propósito, e não de dentro do bloco de baixo:
+     ela precisa aparecer TAMBÉM com a fila vazia. Antes ficava depois do retorno
+     antecipado e sumia justo no momento em que é mais necessária — logo depois
+     de entrar, quando a única pergunta na cabeça de quem chegou é "será que
+     funcionou?". A fila vazia parecia falha de login. */
+  const barra = sessao && (
+    <p className={estilos.barraSessao}>
+      moderando como <strong>{sessao.email ?? 'administrador'}</strong>
+      <button
+        type="button"
+        className={estilos.linkAcao}
+        onClick={() => sair().then(() => location.reload())}
+      >
+        sair
+      </button>
+    </p>
+  );
+
   if (lista.length === 0) {
     return (
-      <p className={estilos.vazio}>
-        Nada escrito neste navegador ainda.{' '}
-        <Link href="/catalogo/">Avaliar um material →</Link>
-      </p>
+      <>
+        {barra}
+        <p className={estilos.vazio}>
+          {repo.somenteLocal ? (
+            <>Nada escrito neste navegador ainda. </>
+          ) : (
+            <>
+              <strong>Fila vazia.</strong> Nenhuma avaliação esperando aprovação — e isso é
+              notícia boa, não erro.{' '}
+            </>
+          )}
+          <Link href="/catalogo/">Avaliar um material →</Link>
+        </p>
+      </>
     );
   }
 
   return (
     <>
-      {sessao && (
-        <p className={estilos.barraSessao}>
-          moderando como <strong>{sessao.email ?? 'administrador'}</strong>
-          <button
-            type="button"
-            className={estilos.linkAcao}
-            onClick={() => sair().then(() => location.reload())}
-          >
-            sair
-          </button>
-        </p>
-      )}
+      {barra}
 
       <div className={estilos.filtros} role="group" aria-label="Filtrar por situação">
         {(['todas', 'pendente', 'aprovado', 'removido'] as const).map((f) => (

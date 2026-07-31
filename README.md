@@ -39,6 +39,10 @@ npm test        # testes da lógica pura
 
 ## Ligar a comunidade (Supabase)
 
+> Nunca mexeu com backend? Siga o **[passo a passo comentado](supabase/PASSO-A-PASSO.md)**,
+> que assume zero conhecimento e tem uma tabela de "se der errado". O resumo abaixo é
+> para quem já conhece a ferramenta.
+
 As avaliações, os tópicos e o perfil funcionam **hoje**, gravando no `localStorage`
 do navegador — e as telas dizem isso antes de qualquer campo. Para virar público:
 

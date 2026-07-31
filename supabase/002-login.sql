@@ -116,6 +116,10 @@ create policy "logado assina o que escreve"
 --
 --    insert into public.admins (usuario_id)
 --    select id from auth.users where email = 'voce@exemplo.com'
---    on conflict do nothing;
+--    on conflict do nothing
+--    returning usuario_id;
+--
+--    O `returning` diz se funcionou: uma linha = gravou, 0 rows = a conta ainda
+--    nao existe em auth.users. Sem ele o painel responde 'Success' nos dois casos.
 --
 -- 3. recarregar a página de moderação.

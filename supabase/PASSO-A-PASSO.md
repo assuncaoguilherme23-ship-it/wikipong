@@ -187,7 +187,19 @@ https://seudominio.com.br/**
 ```sql
 insert into public.admins (usuario_id)
 select id from auth.users where email = 'voce@exemplo.com'
-on conflict do nothing;
+on conflict do nothing
+returning usuario_id;
+```
+
+**O `returning` é como você sabe se deu certo.** Se funcionou, aparece uma linha com
+um código. Se vier *0 rows*, não gravou nada — quase sempre porque a conta ainda não
+existe em `auth.users`. Sem essa linha o Supabase diria *Success* nos dois casos, e
+não haveria como diferenciar.
+
+Se vier vazio, confira antes se a conta existe:
+
+```sql
+select email, created_at from auth.users;
 ```
 
 6. Recarregue a página de moderação. Agora a fila aparece.

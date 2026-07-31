@@ -127,25 +127,43 @@ drop policy if exists "respostas aprovadas sao publicas" on public.respostas;
 create policy "respostas aprovadas sao publicas"
   on public.respostas for select using (status = 'aprovado');
 
--- Escrita: só logado, só no próprio nome, e nunca escolhendo o próprio status.
--- O `status = 'pendente'` no WITH CHECK é o que impede alguém de publicar já
--- aprovado montando a requisição na mão.
-drop policy if exists "logado cria a propria avaliacao" on public.avaliacoes;
-create policy "logado cria a propria avaliacao"
-  on public.avaliacoes for insert to authenticated
-  with check (usuario_id = auth.uid() and status = 'pendente');
+-- ESCRITA SEM LOGIN, e por que isso é o certo AGORA.
+--
+-- A primeira versão deste arquivo exigia `to authenticated` nas três políticas
+-- de escrita. Estava errado: o WikiPong não tem tela de login, então NENHUMA
+-- escrita passaria — leitura funcionaria e todo "Publicar" devolveria 401.
+-- Exigir conta antes de existir conta é pedir pro site nascer quebrado.
+--
+-- Quem segura o portão enquanto não há login é a MODERAÇÃO, que o D-11 já
+-- exigia de qualquer jeito: tudo entra como 'pendente' e some da vista até
+-- alguém aprovar. O `status = 'pendente'` no WITH CHECK é o que impede publicar
+-- já aprovado montando a requisição na mão.
+--
+-- O que se perde sem login, dito na cara: não dá pra garantir uma avaliação por
+-- pessoa (o índice único lá em cima só funciona com usuario_id), e ninguém é
+-- dono do que escreveu — não dá pra editar nem apagar depois. Os dois se
+-- resolvem quando o login entrar, e as políticas de logado ficam aqui prontas
+-- pra esse dia.
+drop policy if exists "qualquer um cria avaliacao, sempre pendente" on public.avaliacoes;
+create policy "qualquer um cria avaliacao, sempre pendente"
+  on public.avaliacoes for insert to anon, authenticated
+  with check (status = 'pendente');
 
-drop policy if exists "logado cria o proprio topico" on public.topicos;
-create policy "logado cria o proprio topico"
-  on public.topicos for insert to authenticated
-  with check (usuario_id = auth.uid() and status = 'pendente');
+drop policy if exists "qualquer um abre topico, sempre pendente" on public.topicos;
+create policy "qualquer um abre topico, sempre pendente"
+  on public.topicos for insert to anon, authenticated
+  with check (status = 'pendente');
 
-drop policy if exists "logado cria a propria resposta" on public.respostas;
-create policy "logado cria a propria resposta"
-  on public.respostas for insert to authenticated
-  with check (usuario_id = auth.uid() and status = 'pendente');
+drop policy if exists "qualquer um responde, sempre pendente" on public.respostas;
+create policy "qualquer um responde, sempre pendente"
+  on public.respostas for insert to anon, authenticated
+  with check (status = 'pendente');
 
--- Cada pessoa vê e edita o próprio perfil.
+-- PERFIL FICA DE FORA POR ENQUANTO. A tabela existe e as políticas também, mas
+-- perfil sem login não tem dono: qualquer um poderia sobrescrever o de qualquer
+-- um. Enquanto não há conta, o perfil segue no navegador da pessoa (é onde ele
+-- já está hoje, e a tela diz isso). Estas duas políticas passam a valer sozinhas
+-- no dia em que o login entrar.
 drop policy if exists "perfil e' do dono" on public.perfis;
 create policy "perfil e' do dono"
   on public.perfis for all to authenticated

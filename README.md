@@ -42,22 +42,37 @@ npm test        # testes da lógica pura
 As avaliações, os tópicos e o perfil funcionam **hoje**, gravando no `localStorage`
 do navegador — e as telas dizem isso antes de qualquer campo. Para virar público:
 
-1. criar um projeto no [Supabase](https://supabase.com);
-2. rodar [`supabase/001-comunidade.sql`](supabase/001-comunidade.sql) no SQL Editor
-   (tabelas, índices, RLS e a view da fila de moderação);
-3. pôr as duas chaves num `.env.local`:
+1. criar conta e um projeto novo em [supabase.com](https://supabase.com);
+2. abrir o **SQL Editor**, colar [`supabase/001-comunidade.sql`](supabase/001-comunidade.sql)
+   inteiro e clicar em *Run* (cria tabelas, índices, políticas e a fila de moderação);
+3. em **Project Settings → API**, copiar a *Project URL* e a chave *anon public*
+   para um arquivo `.env.local` na raiz:
 
 ```bash
 NEXT_PUBLIC_SUPABASE_URL=https://xxxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=ey...
 ```
 
-Mais nada muda no código: `repositorio()` escolhe sozinho, e a UI passa a dizer que
-é público porque lê a flag `somenteLocal` em vez de ter a frase escrita na mão.
+Não há código de servidor pra escrever: `repositorio()` escolhe sozinho entre local e
+Supabase, e a UI passa a dizer que é público porque lê a flag `somenteLocal`.
 
-> A chave anônima **vai no bundle** — o site é estático. Por isso a segurança mora
-> nas políticas de RLS do arquivo SQL, não no cliente: leitura pública só do que
-> está `aprovado`, escrita só logado e sempre entrando como `pendente`.
+### Aprovar o que chega
+
+Tudo entra como `pendente` e **fica invisível** até ser aprovado — é a pré-moderação que
+o D-11 exige. Enquanto não existe tela de moderação no site, a aprovação é feita no
+painel: **Table Editor → `avaliacoes`**, mudar `status` de `pendente` para `aprovado`.
+A view `fila_moderacao` junta avaliações, tópicos e respostas à espera, mais antigos
+primeiro.
+
+> **Sem login, e de propósito.** O site não tem contas, então a escrita é liberada pra
+> visitante e quem segura o portão é a moderação. O preço, dito na cara: não dá pra
+> garantir uma avaliação por pessoa, e ninguém pode editar ou apagar o que escreveu.
+> As políticas para usuário logado já estão no arquivo SQL, prontas pro dia em que o
+> login entrar.
+
+> A chave anônima **vai no bundle** — o site é estático. Por isso a segurança mora nas
+> políticas de RLS: leitura pública só do que está `aprovado`, e escrita sempre forçada
+> a entrar como `pendente`.
 
 ## Documentos do projeto
 

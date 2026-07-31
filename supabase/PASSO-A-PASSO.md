@@ -96,16 +96,32 @@ pronto em **Settings → Data API**.
 
 ### Juntando
 
-Na pasta do projeto, crie um arquivo chamado **`.env.local`** com estas duas linhas,
-trocando pelos seus valores:
+> **Aqui você SAI do Supabase.** O que vem agora não é para rodar no painel: é um
+> arquivo no **seu computador**, dentro da pasta do WikiPong. Colar isto no SQL
+> Editor dá `syntax error`, porque não é SQL.
 
-```bash
+Abra o terminal na pasta do projeto e rode este comando, trocando os dois valores:
+
+```
+printf 'NEXT_PUBLIC_SUPABASE_URL=https://SEU-PROJETO.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=SUA-CHAVE
+' > .env.local
+```
+
+Ou, se preferir criar o arquivo à mão no editor: chame de `.env.local` (com o ponto
+na frente), salve na raiz do projeto, e ponha só estas duas linhas:
+
+```
 NEXT_PUBLIC_SUPABASE_URL=https://abcdefgh.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_...
 ```
 
-> O nome da variável ainda diz `ANON_KEY` mesmo que a chave se chame *publishable*.
-> É só o nome interno — não mexa nele, senão o site não acha a chave.
+**Confira a URL:** ela termina em `.supabase.co` e mais nada. Sem `/rest/v1/`, sem
+barra no fim. Se você copiou de algum exemplo da documentação, provavelmente veio com
+caminho junto.
+
+> O nome da variável continua `NEXT_PUBLIC_SUPABASE_ANON_KEY` mesmo que a chave se
+> chame *publishable*. É o nome interno que o código procura — mudar quebra.
 
 Depois, **pare o servidor** (`Ctrl+C` no terminal onde roda `npm run dev`) e **rode
 de novo**.
@@ -200,6 +216,8 @@ que tem que ser.
 | A avaliação some depois de publicada | É o esperado: ela entra pendente e você aprova na moderação |
 | Erro de tabela inexistente no SQL | Rodou o `002` antes do `001` |
 | Erro 401 em tudo, mesmo deslogado | Pegou a *Secret key* no lugar da *Publishable* |
+| `syntax error at or near "NEXT_PUBLIC..."` | Colou o `.env.local` no SQL Editor. Ele é arquivo do seu computador, não SQL |
+| Erro de conexão, ou nada carrega | A URL tem `/rest/v1/` ou barra sobrando. Ela acaba em `.supabase.co` |
 | O site parou de mostrar avaliações do nada | Projeto pausado por inatividade — clique em *Restore* |
 | Alerta vermelho **Security Definer View** | Rode o `003-conserta-fila.sql` (Parte 2) |
 

@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { ComunidadeCliente, ResumoComunidade } from './comunidade-cliente';
+import { LinkModeracao } from '@/componentes/LinkModeracao';
 import estilos from './comunidade.module.css';
 
 export const metadata: Metadata = {
@@ -43,7 +44,10 @@ export default function PaginaComunidade() {
           <nav className={estilos.subnav} aria-label="Seções da comunidade">
             <Link href="/comunidade/discussoes/">Discussões</Link>
             <Link href="/comunidade/perfil/">Meu perfil</Link>
-            <Link href="/comunidade/moderacao/">Moderação</Link>
+            {/* Só aparece para quem o BANCO reconhece como administrador. Ver o
+                cabeçalho do componente: isto é arrumação, não segurança — quem
+                protege a fila é o RLS. */}
+            <LinkModeracao />
             <Link href="/profissionais/">O que os profissionais usam</Link>
             <Link href="/noticias/">Notícias</Link>
           </nav>

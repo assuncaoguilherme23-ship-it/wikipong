@@ -51,7 +51,7 @@ import { readFileSync } from 'node:fs';
  * no relatorio, o primeiro lugar pra olhar e' aqui.
  */
 const NAO_E_MATERIAL =
-  /raqueteira|capa|bola|cola|rede|mesa-de-|kit|pino|anti|bolsa|fita|meia|side-tape|limpador|calcado|estilete|moeda|adesivo|protetor|toalha|camisa|bermuda|short|munhequeira|sapato|marcador|placar|contador|suporte|expositor|caneleira|mochila|garrafa|unidades|estrelas|-star|limpeza|folha-protetora|cortica|roundcase/;
+  /raqueteira|capa|bola|cola|rede|mesa-de-|kit|pino|anti|bolsa|fita|meia|side-tape|limpador|calcado|estilete|moeda|adesivo|protetor|toalha|camisa|bermuda|short|munhequeira|sapato|marcador|placar|contador|suporte|expositor|caneleira|mochila|garrafa|unidades|estrelas|-star|limpeza|folha-protetora|cortica|roundcase|chaveiro|saco-|estojo|nori-sheet|arbitro|backside/;
 /** Onde cada marca é vendida no Brasil, e como ler a listagem. */
 const FONTES = {
   xiom: {
@@ -195,6 +195,10 @@ const FONTES = {
   },
   nittaku: {
     loja: 'AmericaTT',
+    /* 'lg' e' como a loja marca o cabo grande (Large handle) — o catalogo
+       escreve a palavra por extenso. 'g' e 'revision' vem da linha
+       G-Revision, que a loja repete no titulo. */
+    familia: ['lg', 'g', 'revision', 'fl', 'special'],
     url: (p) => `https://americatt.net/marca/nittaku/${p > 1 ? `page/${p}/` : ''}`,
     marcaNoTitulo: true,
     tipo: (slug) => {
@@ -424,7 +428,7 @@ const FONTES = {
 const MAX_PAGINAS = 12;
 
 /** Pinos e anti-spin foram adiados de propósito pelo fundador — não são lacuna. */
-const ADIADOS = /feint|impartial|ilius|speedy|orthodox|challenger|super\s*anti|bugller|chop|\bp\.?o\.?\b|\bl\.?p\.?\b|long|\bo\.?x\.?\b|pips|curl\s*p\d|spectol|spinpips/i;
+const ADIADOS = /feint|impartial|ilius|speedy|orthodox|challenger|super\s*anti|bugller|chop|\bp\.?o\.?\b|\bl\.?p\.?\b|long|\bo\.?x\.?\b|pips|curl\s*p\d|spectol|spinpips|do\s*knuckle|\bexpress\b|moristo\s*(sp|lp)/i;
 
 const normalizar = (s) =>
   s

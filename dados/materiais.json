@@ -9739,6 +9739,1671 @@
         "tag": "Fibra por fora",
         "frase": "Mesmo preço da IN, R$ 879. A IN tem 16 avaliações; esta não tem registro."
       }
+    },
+    {
+      "id": "nittaku-fastarc-g1",
+      "nome": "Fastarc G1",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 299,
+      "rating": 4.7,
+      "reviews": 187,
+      "simples": {
+        "tag": "187 avaliações — a maior amostra do catálogo",
+        "frase": "A borracha mais avaliada de todo o WikiPong, e por larga margem: 187 pessoas contra 93 da segunda colocada. A Fastarc G-1 é uma das tensionadas japonesas mais usadas do mundo."
+      }
+    },
+    {
+      "id": "nittaku-fastarc-s1",
+      "nome": "Fastarc S1",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 299,
+      "rating": 4.65,
+      "reviews": 68,
+      "simples": {
+        "tag": "68 avaliações",
+        "frase": "A S-1 é a versão de mais giro da linha Fastarc; a G-1, a mais equilibrada."
+      }
+    },
+    {
+      "id": "nittaku-flyatt-soft",
+      "nome": "Flyatt Soft",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 250,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Flyatt macia",
+        "frase": "R$ 250, junto com a Spin a mais barata da linha."
+      }
+    },
+    {
+      "id": "nittaku-flyatt-spin",
+      "nome": "Flyatt Spin",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 250,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Flyatt de giro",
+        "frase": "R$ 250."
+      }
+    },
+    {
+      "id": "nittaku-genextion",
+      "nome": "Genextion",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 470,
+      "rating": 4.7,
+      "reviews": 5,
+      "simples": {
+        "tag": "Cinco avaliações, no limite",
+        "frase": "Exatamente o piso de cinco. Nota 9,4."
+      }
+    },
+    {
+      "id": "nittaku-hammond",
+      "nome": "Hammond",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 212,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hammond original",
+        "frase": "R$ 212. O Revspin registra a Z2 e a Pro Beta desta linha, não a comum."
+      }
+    },
+    {
+      "id": "nittaku-hammond-cr",
+      "nome": "Hammond CR",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 219,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hammond CR",
+        "frase": "R$ 219."
+      }
+    },
+    {
+      "id": "nittaku-hammond-fa",
+      "nome": "Hammond FA",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 210,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais barata da marca",
+        "frase": "R$ 210 — a borracha Nittaku mais barata do catálogo."
+      }
+    },
+    {
+      "id": "nittaku-hammond-power",
+      "nome": "Hammond Power",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 292,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hammond de potência",
+        "frase": "R$ 292."
+      }
+    },
+    {
+      "id": "nittaku-hammond-z2",
+      "nome": "Hammond Z2",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 341,
+      "rating": 4.75,
+      "reviews": 79,
+      "simples": {
+        "tag": "Nota 9,5 com 79 avaliações",
+        "frase": "A nota mais alta entre as borrachas Nittaku com amostra grande."
+      }
+    },
+    {
+      "id": "nittaku-hurricane-3-neo-8701",
+      "nome": "Hurricane 3 Neo 8701",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 292,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hurricane Neo",
+        "frase": "R$ 292. O Revspin registra as Turbo, não esta."
+      }
+    },
+    {
+      "id": "nittaku-hurricane-pro-3",
+      "nome": "Hurricane Pro 3",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 264,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hurricane sem Turbo",
+        "frase": "R$ 264, a mais barata das quatro Hurricane aqui."
+      }
+    },
+    {
+      "id": "nittaku-hurricane-pro-3-turbo-blue",
+      "nome": "Hurricane Pro 3 Turbo Blue",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 336,
+      "rating": 4.7,
+      "reviews": 30,
+      "simples": {
+        "tag": "A Hurricane azul",
+        "frase": "A Nittaku licencia a Hurricane da DHS e vende com esponja própria. Turbo Blue e Turbo Orange diferem na esponja: a azul é mais dura."
+      }
+    },
+    {
+      "id": "nittaku-hurricane-pro-3-turbo-orange",
+      "nome": "Hurricane Pro 3 Turbo Orange",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 321,
+      "rating": 4.6,
+      "reviews": 39,
+      "simples": {
+        "tag": "A Hurricane laranja",
+        "frase": "39 avaliações — a versão laranja tem amostra maior que a azul."
+      }
+    },
+    {
+      "id": "nittaku-moristo-df",
+      "nome": "Moristo DF",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 289,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A única Moristo lisa aqui",
+        "frase": "As outras três Moristo da loja são de pinos e ficaram adiadas. Esta é lisa."
+      }
+    },
+    {
+      "id": "nittaku-sonic-ar",
+      "nome": "Sonic AR",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 278,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fora do Revspin",
+        "frase": "R$ 278."
+      }
+    },
+    {
+      "id": "nittaku-specialist-x",
+      "nome": "Specialist X",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 329,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fora do Revspin",
+        "frase": "R$ 329."
+      }
+    },
+    {
+      "id": "nittaku-spintial",
+      "nome": "Spintial",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 201,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Registrada sem nenhuma avaliação",
+        "frase": "R$ 201. Consta do Revspin sem nota e sem avaliação."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-carbon-g-revision",
+      "nome": "Acoustic Carbon G-Revision",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 940,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Acoustic",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-carbon-inner-g-revision",
+      "nome": "Acoustic Carbon Inner G-Revision",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 940,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Acoustic",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-g-revision",
+      "nome": "Acoustic G-Revision",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 846,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Acoustic",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-sg-special",
+      "nome": "Acoustic SG Special",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 999,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Acoustic",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-actec-classineta",
+      "nome": "Actec Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1528,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "R$ 1528. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-arrester",
+      "nome": "Arrester",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem amostra na comunidade",
+        "frase": "R$ 529. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-eto-blade-2024-dragon",
+      "nome": "Eto Blade 2024 Dragon",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 4171,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De as Eto Blade",
+        "frase": "Edições anuais do zodíaco chinês. Edição limitada quase nunca tem amostra própria na comunidade."
+      }
+    },
+    {
+      "id": "nittaku-gyo-en",
+      "nome": "Gyo-En",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 940,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem amostra na comunidade",
+        "frase": "R$ 940. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-hina-hayata-h2",
+      "nome": "Hina Hayata H2",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1340,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem amostra na comunidade",
+        "frase": "R$ 1340. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-hino-blade-5-22-classineta",
+      "nome": "Hino Blade 5.22 Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 834,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A 5.22 tem cinco avaliações e a 7.22, catorze."
+      }
+    },
+    {
+      "id": "nittaku-kasumi-eternity",
+      "nome": "Kasumi Eternity",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2291,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a linha Kasumi",
+        "frase": "A Kasumi Basic tem 17 avaliações."
+      }
+    },
+    {
+      "id": "nittaku-miyabi-classineta",
+      "nome": "Miyabi Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 799,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A Miyabi comum tem 14 avaliações."
+      }
+    },
+    {
+      "id": "nittaku-so-ten",
+      "nome": "So-Ten",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 940,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a linha So-Ten",
+        "frase": "Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-acoustic",
+      "nome": "Acoustic",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1216,
+      "rating": 4.8,
+      "reviews": 96,
+      "simples": {
+        "tag": "Nota 9,6 com 96 avaliações",
+        "frase": "A lâmina mais avaliada de todo o catálogo. Madeira pura, sem fibra — a Acoustic é uma das lâminas japonesas mais conhecidas do mundo, e o nome vem da sensação sonora do impacto."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-carbon",
+      "nome": "Acoustic Carbon",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1290,
+      "rating": 4.65,
+      "reviews": 24,
+      "simples": {
+        "tag": "A Acoustic com fibra",
+        "frase": "Mesma família da Acoustic, com carbono. 24 avaliações."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-carbon-classineta",
+      "nome": "Acoustic Carbon Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1290,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-carbon-inner",
+      "nome": "Acoustic Carbon Inner",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1290,
+      "rating": 4.75,
+      "reviews": 19,
+      "simples": {
+        "tag": "Carbono por dentro",
+        "frase": "A fibra fica junto ao núcleo: a bola afunda mais na madeira antes de sair. 19 avaliações."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-carbon-inner-5-8",
+      "nome": "Acoustic Carbon Inner 5.8",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1175,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Acoustic",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-carbon-inner-5-8-special",
+      "nome": "Acoustic Carbon Inner 5.8 Special Acoustic Carbon Inner 5.8 Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1058,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Acoustic",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-carbon-outer-5-8",
+      "nome": "Acoustic Carbon Outer 5.8",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1175,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Acoustic",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-classineta",
+      "nome": "Acoustic Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1216,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-acoustic-lg-large-handle",
+      "nome": "Acoustic Large Handle",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1216,
+      "rating": 4.75,
+      "reviews": 24,
+      "simples": {
+        "tag": "Mesma lâmina, cabo maior",
+        "frase": "A Acoustic com punho grande, para mão maior. 24 avaliações próprias — o Revspin a registra separado da comum."
+      }
+    },
+    {
+      "id": "nittaku-advance-carbon",
+      "nome": "Advance Carbon",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 881,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem amostra na comunidade",
+        "frase": "R$ 881. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-ataras-fl",
+      "nome": "Ataras FL",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 352,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem amostra na comunidade",
+        "frase": "R$ 352. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-basaltec-inner",
+      "nome": "Basaltec Inner",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1758,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a linha Meister Basaltec",
+        "frase": "O Revspin registra a Basaltec Outer com 11 avaliações. Basalto é fibra de rocha vulcânica, mais macia que o carbono."
+      }
+    },
+    {
+      "id": "nittaku-basaltec-inner-classineta",
+      "nome": "Basaltec Inner Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1683,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "O Revspin registra a Basaltec Outer com 11 avaliações. Basalto é fibra de rocha vulcânica, mais macia que o carbono."
+      }
+    },
+    {
+      "id": "nittaku-basaltec-outer",
+      "nome": "Basaltec Outer",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1758,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a linha Meister Basaltec",
+        "frase": "O Revspin registra a Basaltec Outer com 11 avaliações. Basalto é fibra de rocha vulcânica, mais macia que o carbono."
+      }
+    },
+    {
+      "id": "nittaku-blastac",
+      "nome": "Blastac",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 306,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fora do Revspin",
+        "frase": "R$ 306. Não consta da comunidade internacional sob nenhuma grafia."
+      }
+    },
+    {
+      "id": "nittaku-bloodwood",
+      "nome": "Bloodwood",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 808,
+      "rating": 4.65,
+      "reviews": 14,
+      "simples": {
+        "tag": "Madeira vermelha",
+        "frase": "Bloodwood é o pau-brasil — madeira densa e vermelha. 14 avaliações."
+      }
+    },
+    {
+      "id": "nittaku-engent",
+      "nome": "Engent",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 470,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fora do Revspin",
+        "frase": "R$ 470, junto com a Fistard a mais cara da marca aqui."
+      }
+    },
+    {
+      "id": "nittaku-eto-blade-2025-snake-fl",
+      "nome": "Eto Blade 2025 Snake FL",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 4136,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De as Eto Blade",
+        "frase": "Edições anuais do zodíaco chinês. Edição limitada quase nunca tem amostra própria na comunidade."
+      }
+    },
+    {
+      "id": "nittaku-eto-blade-2026-horse",
+      "nome": "Eto Blade 2026 Horse",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 4230,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De as Eto Blade",
+        "frase": "Edições anuais do zodíaco chinês. Edição limitada quase nunca tem amostra própria na comunidade."
+      }
+    },
+    {
+      "id": "nittaku-excellent-p-caneta",
+      "nome": "Excellent-P Caneta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2199,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina de caneta",
+        "frase": "R$ 2199. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-factive",
+      "nome": "Factive",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 219,
+      "rating": 4.5,
+      "reviews": 26,
+      "simples": {
+        "tag": "26 avaliações por R$ 219",
+        "frase": "Das borrachas Nittaku com boa amostra, é a mais barata."
+      }
+    },
+    {
+      "id": "nittaku-factive-7",
+      "nome": "Factive 7",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 405,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Factive de topo",
+        "frase": "R$ 405 contra R$ 219 da Factive comum, que tem 26 avaliações."
+      }
+    },
+    {
+      "id": "nittaku-fastarc-c1",
+      "nome": "Fastarc C1",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 299,
+      "rating": 4.6,
+      "reviews": 60,
+      "simples": {
+        "tag": "60 avaliações",
+        "frase": "A C-1 fecha o trio Fastarc. As três custam o mesmo: R$ 299."
+      }
+    },
+    {
+      "id": "nittaku-fistard",
+      "nome": "Fistard",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 470,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fora do Revspin",
+        "frase": "R$ 470."
+      }
+    },
+    {
+      "id": "nittaku-flyatt-carbon",
+      "nome": "Flyatt Carbon",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 543,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Flyatt com carbono na esponja",
+        "frase": "O Revspin registra uma \"Flyatt Hard\" com 23 avaliações — outra versão da mesma linha."
+      }
+    },
+    {
+      "id": "nittaku-flyatt-carbon-pro",
+      "nome": "Flyatt Carbon Pro",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 649,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Flyatt mais cara",
+        "frase": "R$ 649 — a borracha Nittaku mais cara do catálogo."
+      }
+    },
+    {
+      "id": "nittaku-flyatt-evo",
+      "nome": "Flyatt Evo",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 294,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Flyatt intermediária",
+        "frase": "R$ 294."
+      }
+    },
+    {
+      "id": "nittaku-genextion-v2c-2",
+      "nome": "Genextion V2C",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 411,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Genextion V2C",
+        "frase": "R$ 411. A Genextion comum tem cinco avaliações; esta versão não é registrada separado."
+      }
+    },
+    {
+      "id": "nittaku-goriki",
+      "nome": "Goriki",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2057,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Goriki",
+        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+      }
+    },
+    {
+      "id": "nittaku-goriki-caneta",
+      "nome": "Goriki Caneta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2807,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina de caneta",
+        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+      }
+    },
+    {
+      "id": "nittaku-goriki-classineta",
+      "nome": "Goriki Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1982,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+      }
+    },
+    {
+      "id": "nittaku-goriki-danshi",
+      "nome": "Goriki Danshi",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2057,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Goriki",
+        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+      }
+    },
+    {
+      "id": "nittaku-goriki-junior",
+      "nome": "Goriki Junior",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 1962,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Goriki",
+        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+      }
+    },
+    {
+      "id": "nittaku-goriki-super-cut",
+      "nome": "Goriki Super Cut",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "controlar",
+      "preco": 2057,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Goriki",
+        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+      }
+    },
+    {
+      "id": "nittaku-goriki-super-drive",
+      "nome": "Goriki Super Drive",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 2057,
+      "rating": 4.75,
+      "reviews": 10,
+      "simples": {
+        "tag": "A Goriki mais avaliada",
+        "frase": "Dez avaliações. A Goriki comum tem quatro, abaixo do nosso piso."
+      }
+    },
+    {
+      "id": "nittaku-h301-nxd",
+      "nome": "H301 NXD",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1128,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem amostra na comunidade",
+        "frase": "R$ 1128. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-hammond-z2-special-version",
+      "nome": "Hammond Z2 Special Version",
+      "marca": "Nittaku",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 341,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Z2 em versão especial",
+        "frase": "Mesmo preço da Z2 comum, R$ 341. A comum tem 79 avaliações; esta versão não é registrada separado, e a nota dela não foi copiada pra cá."
+      }
+    },
+    {
+      "id": "nittaku-hino-blade-5-22-fl",
+      "nome": "Hino Blade 5.22",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 940,
+      "rating": 4.8,
+      "reviews": 5,
+      "simples": {
+        "tag": "Cinco avaliações, no limite",
+        "frase": "Exatamente o piso. Cinco camadas de hinoki."
+      }
+    },
+    {
+      "id": "nittaku-hino-blade-7-22-classineta",
+      "nome": "Hino Blade 7.22 Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 881,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A 5.22 tem cinco avaliações e a 7.22, catorze."
+      }
+    },
+    {
+      "id": "nittaku-hino-blade-7-22-fl",
+      "nome": "Hino Blade 7.22",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 940,
+      "rating": 4.75,
+      "reviews": 14,
+      "simples": {
+        "tag": "A Hino de sete camadas",
+        "frase": "Hinoki é o cipreste japonês. O número é a construção: 7 camadas, 2,2 mm."
+      }
+    },
+    {
+      "id": "nittaku-holz-sieben",
+      "nome": "Holz Sieben",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1671,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a linha Meister Holz Sieben",
+        "frase": "Três avaliações no Revspin, abaixo do nosso piso."
+      }
+    },
+    {
+      "id": "nittaku-holz-sieben-classineta",
+      "nome": "Holz Sieben Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1595,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "Três avaliações no Revspin, abaixo do nosso piso."
+      }
+    },
+    {
+      "id": "nittaku-kasumi-basic",
+      "nome": "Kasumi Basic",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 580,
+      "rating": 4.75,
+      "reviews": 17,
+      "simples": {
+        "tag": "A Kasumi de entrada",
+        "frase": "17 avaliações, nota 9,5. R$ 580 — das lâminas japonesas com boa amostra, é a mais barata daqui."
+      }
+    },
+    {
+      "id": "nittaku-large-dratsuka",
+      "nome": "Large Dratsuka",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 822,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem amostra na comunidade",
+        "frase": "R$ 822. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-latika-carbon",
+      "nome": "Latika Carbon",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1290,
+      "rating": 4.75,
+      "reviews": 13,
+      "simples": {
+        "tag": "13 avaliações",
+        "frase": "Nota 9,5. R$ 1.290."
+      }
+    },
+    {
+      "id": "nittaku-latika-classineta",
+      "nome": "Latika Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 538,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A Latika Carbon tem 13 avaliações e a Light, 10."
+      }
+    },
+    {
+      "id": "nittaku-latika-light",
+      "nome": "Latika Light",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 516,
+      "rating": 4.75,
+      "reviews": 10,
+      "simples": {
+        "tag": "A Latika leve",
+        "frase": "10 avaliações, nota 9,5. R$ 516 — a mais barata da família Latika."
+      }
+    },
+    {
+      "id": "nittaku-ludeack",
+      "nome": "Ludeack",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 766,
+      "rating": 4.75,
+      "reviews": 36,
+      "simples": {
+        "tag": "36 avaliações",
+        "frase": "Nota 9,5. R$ 766."
+      }
+    },
+    {
+      "id": "nittaku-ludeack-classineta",
+      "nome": "Ludeack Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 766,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A Ludeack comum tem 36 avaliações e nota 9,5."
+      }
+    },
+    {
+      "id": "nittaku-mima-ito-carbon",
+      "nome": "Mima Ito Carbon",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1449,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem amostra na comunidade",
+        "frase": "R$ 1449. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-miyabi",
+      "nome": "Miyabi",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 822,
+      "rating": 4.4,
+      "reviews": 14,
+      "simples": {
+        "tag": "Nota 8,8 com 14 avaliações",
+        "frase": "R$ 822."
+      }
+    },
+    {
+      "id": "nittaku-miyabi-r-caneta",
+      "nome": "Miyabi R Caneta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1216,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina de caneta",
+        "frase": "A Miyabi comum tem 14 avaliações."
+      }
+    },
+    {
+      "id": "nittaku-rutis-revo",
+      "nome": "Rutis Revo",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 763,
+      "rating": 4.6,
+      "reviews": 13,
+      "simples": {
+        "tag": "A Rutis é LÂMINA, não borracha",
+        "frase": "O nome não diz e o preço engana, mas a Rutis é lâmina — confirmado no índice de lâminas do Revspin. A Revo tem o núcleo mais grosso que a Rutis original."
+      }
+    },
+    {
+      "id": "nittaku-s-series-s-5",
+      "nome": "S-Series S-5",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 662,
+      "rating": 4.8,
+      "reviews": 17,
+      "simples": {
+        "tag": "Nota 9,6, a entrada da série S",
+        "frase": "17 avaliações. R$ 662."
+      }
+    },
+    {
+      "id": "nittaku-s-series-s-5-c-classineta",
+      "nome": "S-series S-5 C Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 662,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+      }
+    },
+    {
+      "id": "nittaku-s-series-s-7",
+      "nome": "S-series S-7",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 769,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a série S",
+        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+      }
+    },
+    {
+      "id": "nittaku-s-series-s-7-classineta",
+      "nome": "S-series S-7 Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 811,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+      }
+    },
+    {
+      "id": "nittaku-s-series-s-cz",
+      "nome": "S-Series S-CZ",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 851,
+      "rating": 4.7,
+      "reviews": 20,
+      "simples": {
+        "tag": "A S-CZ, 20 avaliações",
+        "frase": "A série S da Nittaku vai da S-5 à S-KC, subindo em velocidade e preço."
+      }
+    },
+    {
+      "id": "nittaku-s-series-s-cz-classineta",
+      "nome": "S-series S-CZ Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 851,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+      }
+    },
+    {
+      "id": "nittaku-s-series-s-kc",
+      "nome": "S-series S-KC",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 895,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a série S",
+        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+      }
+    },
+    {
+      "id": "nittaku-s-series-s-kc-classineta",
+      "nome": "S-series S-KC Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 895,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+      }
+    },
+    {
+      "id": "nittaku-septear",
+      "nome": "Septear",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 649,
+      "rating": 4.65,
+      "reviews": 27,
+      "simples": {
+        "tag": "27 avaliações",
+        "frase": "Sete camadas de madeira dão velocidade sem fibra nenhuma."
+      }
+    },
+    {
+      "id": "nittaku-septear-classineta",
+      "nome": "Septear Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 649,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A Septear comum tem 27 avaliações."
+      }
+    },
+    {
+      "id": "nittaku-septear-feel-inner",
+      "nome": "Septear Feel Inner",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 920,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Septear",
+        "frase": "A Septear comum tem 27 avaliações."
+      }
+    },
+    {
+      "id": "nittaku-shake-defence",
+      "nome": "Shake Defence",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 763,
+      "rating": 4.15,
+      "reviews": 15,
+      "simples": {
+        "tag": "Nota 8,3 — a mais baixa das lâminas Nittaku",
+        "frase": "15 avaliações. Lâmina de defesa: lenta de propósito, para quem corta longe da mesa."
+      }
+    },
+    {
+      "id": "nittaku-so-ten-classineta",
+      "nome": "So-Ten Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 975,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-tenaly-acoustic",
+      "nome": "Tenaly Acoustic",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 979,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Acoustic",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-tenaly-acoustic-carbon-inner",
+      "nome": "Tenaly Acoustic Carbon Inner",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1263,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Acoustic",
+        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-tenaly-carbon",
+      "nome": "Tenaly Carbon",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 715,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a linha Tenaly",
+        "frase": "A Tenaly Acoustic tem duas avaliações, abaixo do piso."
+      }
+    },
+    {
+      "id": "nittaku-tenaly-original",
+      "nome": "Tenaly Original",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 607,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a linha Tenaly",
+        "frase": "A Tenaly Acoustic tem duas avaliações, abaixo do piso."
+      }
+    },
+    {
+      "id": "nittaku-tenor",
+      "nome": "Tenor",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1237,
+      "rating": 4.75,
+      "reviews": 24,
+      "simples": {
+        "tag": "24 avaliações",
+        "frase": "Nota 9,5. R$ 1.237."
+      }
+    },
+    {
+      "id": "nittaku-tribus-carbon-fl",
+      "nome": "Tribus Carbon FL",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 540,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a linha Tribus",
+        "frase": "Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-tribus-fl",
+      "nome": "Tribus FL",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 540,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a linha Tribus",
+        "frase": "Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-violin",
+      "nome": "Violin",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1216,
+      "rating": 4.7,
+      "reviews": 50,
+      "simples": {
+        "tag": "50 avaliações, nota 9,4",
+        "frase": "A Violin e a Acoustic são as duas madeiras puras clássicas da Nittaku. A Violin é um pouco mais rápida."
+      }
+    },
+    {
+      "id": "nittaku-violin-classineta",
+      "nome": "Violin Classineta",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1216,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo classineta",
+        "frase": "A Violin comum tem 50 avaliações. Esta variação não é registrada separado no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-violin-j",
+      "nome": "Violin J",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 996,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Violin",
+        "frase": "A Violin comum tem 50 avaliações. Esta variação não é registrada separado no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-violin-lg-large-handle",
+      "nome": "Violin LG (Large Handle)",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1216,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "De a família Violin",
+        "frase": "A Violin comum tem 50 avaliações. Esta variação não é registrada separado no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-violoncello",
+      "nome": "Violoncello",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1184,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem amostra na comunidade",
+        "frase": "R$ 1184. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "nittaku-winglight",
+      "nome": "Winglight",
+      "marca": "Nittaku",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 385,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem amostra na comunidade",
+        "frase": "R$ 385. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "butterfly-zyre-03",
+      "nome": "Zyre 03",
+      "marca": "Butterfly",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 880,
+      "rating": 4.65,
+      "reviews": 13,
+      "simples": {
+        "tag": "13 avaliações, nota 9,3",
+        "frase": "R$ 880 — a borracha mais cara do catálogo inteiro. A Zyre é a linha nova da Butterfly, e o Revspin já registra 13 avaliações com nota 9,3."
+      }
     }
   ]
 }

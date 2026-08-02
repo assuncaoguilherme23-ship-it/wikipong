@@ -2272,6 +2272,238 @@
       "escala": 10,
       "avaliacoes": 8,
       "consultadoEm": "2026-08-01"
+    },
+    "nittaku-fastarc-g1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/nittaku-fastarc-g-1.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 187,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-fastarc-s1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/nittaku-fastarc-s-1.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 68,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-genextion": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/nittaku-genextion.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-hammond-z2": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/nittaku-hammond-z2.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 79,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-hurricane-pro-3-turbo-blue": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/nittaku-hurricane-pro-iii-turbo-blue.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 30,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-hurricane-pro-3-turbo-orange": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/nittaku-hurricane-pro-iii-turbo-orange.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 39,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-acoustic": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-acoustic.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 96,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-acoustic-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-acoustic-carbon.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 24,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-acoustic-carbon-inner": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-acoustic-carbon-inner.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 19,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-acoustic-lg-large-handle": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-acoustic--large-handle.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 24,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-bloodwood": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-bloodwood.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 14,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-factive": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/nittaku-factive.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 26,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-fastarc-c1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/nittaku-fastarc-c-1.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 60,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-goriki-super-drive": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-goriki-super-drive.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 10,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-hino-blade-5-22-fl": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-hino-522.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-hino-blade-7-22-fl": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-hino-722.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 14,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-kasumi-basic": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-kasumi-basic.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 17,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-latika-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-latika-carbon.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 13,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-latika-light": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-latika-light.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 10,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-ludeack": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-ludeack.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 36,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-miyabi": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-miyabi.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 14,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-rutis-revo": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-rutis.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 13,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-s-series-s-5": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-s-series-s-5.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 17,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-s-series-s-cz": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-s-series-s-cz.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 20,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-septear": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-septear.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 27,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-shake-defence": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-shake-defence.html",
+      "nota": 8.3,
+      "escala": 10,
+      "avaliacoes": 15,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-tenor": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-tenor.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 24,
+      "consultadoEm": "2026-08-01"
+    },
+    "nittaku-violin": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/nittaku-violin.html",
+      "nota": 9.4,
+      "escala": 10,
+      "avaliacoes": 50,
+      "consultadoEm": "2026-08-01"
+    },
+    "butterfly-zyre-03": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/butterfly-zyre-03.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 13,
+      "consultadoEm": "2026-08-01"
     }
   }
 }

@@ -262,6 +262,7 @@ que tem que ser.
 | Criou o arquivo mas nada mudou | Ele foi parar noutra pasta. Confira que está na raiz do projeto, ao lado do `package.json` |
 | Erro de conexão, ou nada carrega | A URL tem `/rest/v1/` ou barra sobrando. Ela acaba em `.supabase.co` |
 | O site parou de mostrar avaliações do nada | Projeto pausado por inatividade — clique em *Restore* |
+| Aviso **Leaked Password Protection Disabled** que não sai | É recurso do plano **Pro**; no Free o botão não liga. Fica aceso de propósito — o WikiPong não usa senha, então não há o que proteger |
 | Alerta vermelho **Security Definer View** | Rode o `003-conserta-fila.sql` (Parte 2) |
 | Aviso **Signed-In / Public Can Execute SECURITY DEFINER Function** | Rode o `004` (para a `eh_admin`) e o `005` (para a `rls_auto_enable`) |
 | O aviso de SECURITY DEFINER **continua depois de rodar** | Falta revogar do `PUBLIC`. Toda função no Postgres nasce com EXECUTE concedido a ele, e tirar de `anon` não basta. As versões atuais do `004` e do `005` já fazem isso |

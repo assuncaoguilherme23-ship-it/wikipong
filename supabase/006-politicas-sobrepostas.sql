@@ -92,16 +92,24 @@ create policy "logado assina a resposta"
               and (usuario_id is null or usuario_id = (select auth.uid())));
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- 4. O aviso que sobra NÃO é SQL
+-- 4. O aviso que sobra NÃO é SQL, E NÃO DÁ PARA RESOLVER NO PLANO FREE
 -- ═══════════════════════════════════════════════════════════════════════════
 --
--- "Leaked Password Protection Disabled" é uma chave do painel, em
--- Authentication → Providers. Ela compara a senha escolhida contra a base do
--- HaveIBeenPwned e recusa as que já vazaram.
+-- "Leaked Password Protection Disabled" é uma chave em Authentication →
+-- Sign In / Providers → Email, chamada "Prevent use of leaked passwords". Ela
+-- compara a senha escolhida contra a base do HaveIBeenPwned e recusa as que já
+-- vazaram.
 --
--- O WikiPong NÃO USA SENHA: quem entra usa link no e-mail. Enquanto for assim,
--- a proteção não tem o que proteger — não há senha para conferir.
+-- A PRÓPRIA TELA DIZ: "Only available on Pro plan and above". No plano Free o
+-- botão aparece e não liga.
 --
--- Ligar mesmo assim não custa nada e cobre o dia em que o login por senha
--- entrar. Se preferir deixar desligada, o aviso fica no painel de propósito, e
--- isso é uma escolha defensável — não um esquecimento.
+-- ENTÃO ESTE AVISO FICA NO PAINEL PARA SEMPRE, enquanto o projeto for Free. E
+-- está tudo bem: o WikiPong NÃO USA SENHA. Quem entra recebe link no e-mail, e
+-- a caixa de entrada é a prova de identidade. Não há senha para conferir contra
+-- base nenhuma.
+--
+-- Só passaria a importar no dia em que o login por senha entrasse — e aí o
+-- plano Pro seria a menor das decisões envolvidas.
+--
+-- Registrado aqui para não virar dúvida recorrente: um aviso que fica aceso de
+-- propósito é diferente de um que ninguém viu.

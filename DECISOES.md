@@ -244,6 +244,24 @@ MATERIAL que o catálogo já usa (`atacar`/`equilibrado`/`controlar`), sem campo
 a tela mostra as avaliações uma a uma e diz por que não há média — mesma regra que a colheita
 já pratica com o sinal do Revspin.
 
+**Direção declarada (2026-08-02) · senha vem depois:** o fundador disse que "lá na frente"
+o perfil vai pedir senha. Não é para construir agora — fica registrado porque muda o
+cálculo de três coisas que já estão no ar:
+
+1. **O aviso "Leaked Password Protection" deixa de ser cosmético.** Hoje ele fica aceso no
+   painel do Supabase de propósito: é recurso do plano **Pro**, e um site sem senha não tem
+   o que proteger. No dia em que a senha entrar, ele vira motivo real para avaliar o Pro —
+   ver a Parte 4 de `supabase/006-politicas-sobrepostas.sql`.
+2. **O SMTP próprio já está pronto**, e foi feito para isso. O provedor nativo manda ~2
+   e-mails por hora; com cadastro por senha vêm confirmação de e-mail e "esqueci minha
+   senha", que multiplicam o volume.
+3. **Link e senha convivem.** O Supabase aceita os dois no mesmo provedor de e-mail, e o
+   módulo `src/logica/sessao.ts` guarda a sessão do mesmo jeito seja qual for a origem. A
+   recomendação é MANTER o link: ele é o caminho sem atrito para quem só quer avaliar uma
+   borracha, e a senha atende quem quer conta de verdade.
+
+**O que NÃO muda:** avaliar continua sem exigir conta (a decisão da emenda acima). Senha é
+mais um jeito de entrar, não um portão novo.
 **Emenda (2026-07-31) · conta de usuário, e ela é OPCIONAL:** o fundador pediu que o
 usuário possa se cadastrar e ter perfil. Login por link no e-mail, o mesmo mecanismo
 do administrador.

@@ -40,9 +40,10 @@
   align-items: center;
   gap: 0.9rem;
 }
+/* A bandeira agora é SVG, não emoji — o tamanho vem do componente. */
 .bandeira {
-  font-size: var(--titulo-1);
-  line-height: var(--altura-dado);
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 .identidadeTexto {

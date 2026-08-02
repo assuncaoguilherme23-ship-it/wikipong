@@ -13,6 +13,7 @@ import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { Glifo } from '@/componentes/Glifo';
 import { FotoProduto } from '@/componentes/FotoProduto';
+import { Bandeira } from '@/componentes/Bandeira';
 import { PROFISSIONAIS, type Papel } from '@/componentes/dados-profissionais';
 import estilos from './profissionais.module.css';
 
@@ -65,8 +66,10 @@ export default function PaginaProfissionais() {
           {PROFISSIONAIS.map((p) => (
             <li key={p.id} id={p.id} className={estilos.card}>
               <div className={estilos.identidade}>
-                <span className={estilos.bandeira} aria-hidden="true">
-                  {p.bandeira}
+                {/* Desenhada, não emoji: o Windows não tem glifo de bandeira e
+                    mostraria "BR", "CN", "JP" em caixinhas. Ver Bandeira.tsx. */}
+                <span className={estilos.bandeira}>
+                  <Bandeira pais={p.pais} altura={26} />
                 </span>
                 <div className={estilos.identidadeTexto}>
                   <h2 className={estilos.nome}>{p.nome}</h2>

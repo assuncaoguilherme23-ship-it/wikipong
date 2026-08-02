@@ -9,12 +9,20 @@
       "mao": "Destro",
       "estilo": "Ataque potente dos dois lados, com muita mobilidade",
       "destaque": "O maior nome da história do tênis de mesa brasileiro e um dos melhores do mundo.",
-      "lamina": { "nome": "JOOLA Hugo Calderano ARY-C" },
-      "forehand": { "nome": "JOOLA Trinity Charged (assinatura Hugo Calderano)" },
-      "backhand": { "nome": "JOOLA Trinity Dynamic (assinatura Hugo Calderano)" },
+      "lamina": {
+        "nome": "JOOLA Hugo Calderano ARY-C"
+      },
+      "forehand": {
+        "nome": "JOOLA Trinity Charged (assinatura Hugo Calderano)",
+        "materialId": "joola-trinity-charged"
+      },
+      "backhand": {
+        "nome": "JOOLA Trinity Dynamic (assinatura Hugo Calderano)",
+        "materialId": "joola-trinity-dynamic"
+      },
       "fonte": "https://tabletennis-reference.com/player/detail/134",
       "consultadoEm": "2026-07-23",
-      "nota": "Trocou a XIOM pela JOOLA em 2026 e hoje joga a linha de assinatura dele — por isso nenhuma peça aparece (ainda) no nosso catálogo. Antes da JOOLA, jogou anos com equipamento XIOM."
+      "nota": "Trocou a XIOM pela JOOLA em 2026 e hoje joga a linha de assinatura dele. As duas borrachas Trinity já estão no catálogo; a lâmina ARY-C não — a loja brasileira vende a AW-7, a KL-C Inner e a Infinity Carbon da mesma linha, que são outras madeiras. Antes da JOOLA, jogou anos com equipamento XIOM."
     },
     {
       "id": "bruna-takahashi",
@@ -24,12 +32,21 @@
       "mao": "Destra",
       "estilo": "Ofensiva, forte no contra-ataque",
       "destaque": "A principal mesatenista brasileira, entre as melhores do mundo no feminino.",
-      "lamina": { "nome": "Andro Synteliac VCI" },
-      "forehand": { "nome": "Andro NUZN 55" },
-      "backhand": { "nome": "Andro NUZN 55" },
+      "lamina": {
+        "nome": "Andro Synteliac VCI",
+        "materialId": "andro-synteliac-vci-off"
+      },
+      "forehand": {
+        "nome": "Andro NUZN 55",
+        "materialId": "andro-nuzn-55"
+      },
+      "backhand": {
+        "nome": "Andro NUZN 55",
+        "materialId": "andro-nuzn-55"
+      },
       "fonte": "https://pingsunday.com/bruna-takahashi-equipment/",
       "consultadoEm": "2026-07-23",
-      "nota": "Passou a jogar com a alemã Andro em 2025 (antes usava Victas). Setup recente — os modelos exatos das borrachas valem reconferir na fonte."
+      "nota": "A raquete inteira dela está no catálogo desde que a Andro entrou: a lâmina Synteliac VCI e a NUZN 55 dos dois lados. Usar a mesma borracha em forehand e backhand é escolha, não economia — dá resposta idêntica dos dois lados."
     },
     {
       "id": "ma-long",
@@ -39,9 +56,17 @@
       "mao": "Destro",
       "estilo": "Ofensivo completo — considerado o jogo mais equilibrado da história",
       "destaque": "Bicampeão olímpico de simples e o jogador mais vitorioso de todos os tempos.",
-      "lamina": { "nome": "DHS W968 (no varejo, a cousin é a Hurricane Long 5)" },
-      "forehand": { "nome": "DHS Hurricane 3 (versão National, esponja azul)", "materialId": "hurricane" },
-      "backhand": { "nome": "DHS Hurricane 3 (esponja laranja, mais macia)" },
+      "lamina": {
+        "nome": "DHS W968 (no varejo, a cousin é a Hurricane Long 5)"
+      },
+      "forehand": {
+        "nome": "DHS Hurricane 3 (versão National, esponja azul)",
+        "materialId": "hurricane"
+      },
+      "backhand": {
+        "nome": "DHS Hurricane 3 (esponja laranja, mais macia)",
+        "materialId": "dhs-hurricane-3"
+      },
       "fonte": "https://pingsunday.com/ma-long-equipment/",
       "consultadoEm": "2026-07-23",
       "nota": "Lâmina W968 é personalizada e não é vendida ao público na forma idêntica. A Hurricane 3 dele é a National, feita sob medida — a nossa ficha é da Hurricane 3 Neo, a prima de varejo mais próxima."
@@ -54,9 +79,18 @@
       "mao": "Destro",
       "estilo": "Força e velocidade explosivas dos dois lados",
       "destaque": "Campeão olímpico e ex-número 1 do mundo.",
-      "lamina": { "nome": "Butterfly Fan Zhendong ALC", "materialId": "fzd" },
-      "forehand": { "nome": "DHS Hurricane 3 (versão National)", "materialId": "hurricane" },
-      "backhand": { "nome": "Butterfly Dignics 09C" },
+      "lamina": {
+        "nome": "Butterfly Fan Zhendong ALC",
+        "materialId": "fzd"
+      },
+      "forehand": {
+        "nome": "DHS Hurricane 3 (versão National)",
+        "materialId": "hurricane"
+      },
+      "backhand": {
+        "nome": "Butterfly Dignics 09C",
+        "materialId": "dignics09c"
+      },
       "fonte": "https://pingsunday.com/fan-zhendong-equipment/",
       "consultadoEm": "2026-07-23",
       "nota": "A lâmina de assinatura dele é justamente uma das nossas fichas. Em 2025–2026 foi visto alternando os lados das borrachas conforme a mesa e a bola do torneio — setup em ajuste."
@@ -69,9 +103,18 @@
       "mao": "Destro",
       "estilo": "Ataque colado à mesa, muito rápido",
       "destaque": "Estrela japonesa, entre os melhores do mundo desde a adolescência.",
-      "lamina": { "nome": "Butterfly Harimoto Innerforce ALC" },
-      "forehand": { "nome": "Butterfly Dignics 05", "materialId": "dignics05" },
-      "backhand": { "nome": "Butterfly Tenergy 05", "materialId": "tenergy05" },
+      "lamina": {
+        "nome": "Butterfly Harimoto Innerforce ALC",
+        "materialId": "harimoto-innerforce-alc"
+      },
+      "forehand": {
+        "nome": "Butterfly Dignics 05",
+        "materialId": "dignics05"
+      },
+      "backhand": {
+        "nome": "Butterfly Tenergy 05",
+        "materialId": "tenergy05"
+      },
       "fonte": "https://pingsunday.com/tomokazu-harimoto-equipment/",
       "consultadoEm": "2026-07-23",
       "nota": "Duas das borrachas dele estão no nosso catálogo. Fontes recentes indicam que ele pode ter passado a usar Dignics 05 também no backhand — vale reconferir na fonte."

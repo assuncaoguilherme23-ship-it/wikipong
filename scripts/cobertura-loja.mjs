@@ -51,7 +51,7 @@ import { readFileSync } from 'node:fs';
  * no relatorio, o primeiro lugar pra olhar e' aqui.
  */
 const NAO_E_MATERIAL =
-  /raqueteira|capa|bola|cola|rede|mesa-de-|kit|pino|anti|bolsa|fita|meia|side-tape|limpador|calcado|estilete|moeda|adesivo|protetor|toalha|camisa|bermuda|short|munhequeira|sapato|marcador|placar|contador|suporte|expositor|caneleira|mochila|garrafa/;
+  /raqueteira|capa|bola|cola|rede|mesa-de-|kit|pino|anti|bolsa|fita|meia|side-tape|limpador|calcado|estilete|moeda|adesivo|protetor|toalha|camisa|bermuda|short|munhequeira|sapato|marcador|placar|contador|suporte|expositor|caneleira|mochila|garrafa|unidades|estrelas|-star/;
 /** Onde cada marca é vendida no Brasil, e como ler a listagem. */
 const FONTES = {
   xiom: {
@@ -237,8 +237,11 @@ const FONTES = {
   },
   '729': {
     loja: 'AmericaTT',
-    /* A marca aparece como '729' e como 'Friendship 729' — sao a mesma. */
-    familia: ['friendship'],
+    /* A loja poe a DUREZA da esponja no titulo ("Battle Taichi 37/39"), e o
+       catalogo registra a borracha uma vez so', com as duas durezas na ficha —
+       sao opcoes de compra do mesmo produto, com mesmo preco e mesma foto. */
+    familia: ['friendship', '37', '39'],
+
     url: (p) => `https://americatt.net/marca/729/${p > 1 ? `page/${p}/` : ''}`,
     marcaNoTitulo: true,
     tipo: (slug) => {
@@ -561,7 +564,7 @@ const chave = (s) =>
      * carbono), o título fica inteiro e quem limpa é o resto do pipeline.
      */
     .replace(
-      /^(.*?)\b(xiom|butterfly|tibhar|yasaka|dhs|stiga|donic|palio|joola|andro|victas|nittaku|sanwei|yinhe|galaxy|friendship)\b\s*/i,
+      /^(.*?)\b(xiom|butterfly|tibhar|yasaka|dhs|stiga|donic|palio|joola|andro|victas|nittaku|sanwei|yinhe|galaxy|friendship|729)\b\s*/i,
       (inteiro, antes) => {
         /* Palavra de EMBALAGEM = tudo que a loja põe antes do nome do produto:
            categoria, tipo de cabo, adjetivo de vitrine. `caneta`, `chinesa` e
@@ -574,7 +577,7 @@ const chave = (s) =>
         return palavras.every((p) => EMBALAGEM.test(p)) ? '' : inteiro;
       },
     )
-    .replace(/\b(xiom|butterfly|tibhar|yasaka|dhs|stiga|donic|palio|joola|andro|victas|nittaku|sanwei|yinhe|galaxy|friendship)\b/gi, ' ')
+    .replace(/\b(xiom|butterfly|tibhar|yasaka|dhs|stiga|donic|palio|joola|andro|victas|nittaku|sanwei|yinhe|galaxy|friendship|729)\b/gi, ' ')
     /* Cor e espessura são opções de compra, não materiais diferentes: a Tibhar
        publica uma página por cor ("... 2.1mm preta" e "... 2.1mm vermelha") da
        mesma borracha. Sem tirar isso, cada borracha contaria em dobro. */
@@ -735,8 +738,20 @@ async function conferir(marca) {
     return Number.POSITIVE_INFINITY;
   }
 
+  /*
+   * A marca do CATÁLOGO nem sempre é a chave da fonte. A Friendship/729 é
+   * vendida sob os dois nomes — as lojas escrevem "729", "Friendship 729" e
+   * "Friendship" na mesma prateleira — e o catálogo a registra como
+   * "Friendship 729". Exigir igualdade exata fazia o filtro devolver ZERO
+   * material e, com isso, as dez borrachas recém-gravadas voltavam como lacuna.
+   *
+   * `inclui` em vez de `===`: basta a chave da fonte aparecer no nome da marca.
+   */
   const catalogo = JSON.parse(readFileSync('dados/materiais.json', 'utf8')).materiais.filter(
-    (m) => normalizar(m.marca) === marca,
+    (m) => {
+      const daMarca = normalizar(m.marca);
+      return daMarca === marca || daMarca.split(/\s+/).includes(marca);
+    },
   );
 
   const faltando = daLoja.filter((p) => !catalogo.some((m) => casa(p.nome, m.nome, fonte.familia)));

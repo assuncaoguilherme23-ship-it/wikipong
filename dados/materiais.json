@@ -6919,6 +6919,156 @@
         "tag": "A terceira das allround de R$ 459",
         "frase": "A loja escreve \"Chalenger\", com um L; a marca escreve \"Challenger\". É a mesma lâmina. Sem amostra na comunidade."
       }
+    },
+    {
+      "id": "f729-battle-ii-provincial",
+      "nome": "Battle II Provincial",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 270,
+      "rating": 4.7,
+      "reviews": 47,
+      "simples": {
+        "tag": "47 avaliações, nota 9,4",
+        "frase": "A mais avaliada da 729 aqui, e de longe: 47 pessoas contra 2 ou 4 das outras. A versão Provincial fica entre a comum e a National na escala de seleção que as fábricas chinesas usam — lote escolhido, não linha diferente."
+      }
+    },
+    {
+      "id": "f729-battle-taichi",
+      "nome": "Battle Taichi",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 270,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Vendida em duas durezas",
+        "frase": "Duas avaliações no Revspin, abaixo do nosso piso de cinco. A loja vende 37/39 e 39/37 pelo mesmo preço — é a mesma borracha com esponja diferente."
+      }
+    },
+    {
+      "id": "f729-battle-limitless-37-39",
+      "nome": "Battle Limitless 37/39",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 270,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Limitless mais macia",
+        "frase": "Não consta do Revspin com este nome — entra com ficha, preço real e foto. A loja a descreve como equilíbrio entre controle e potência."
+      }
+    },
+    {
+      "id": "f729-battle-limitless-39-37",
+      "nome": "Battle Limitless 39/37",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 270,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Limitless mais dura",
+        "frase": "A irmã dura da 37/39, e a loja fotografa as duas separado — diferente das Taichi, que dividem a mesma imagem. Sem amostra na comunidade."
+      }
+    },
+    {
+      "id": "f729-higher-transcend",
+      "nome": "Higher Transcend Sponge",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 212,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Transcend mais cara aqui",
+        "frase": "R$ 212. A linha Transcend tem várias versões no Revspin, e nenhuma se chama \"Higher\" — sem certeza de qual é, ela entra sem nota da comunidade."
+      }
+    },
+    {
+      "id": "f729-faster-transcend",
+      "nome": "Faster Transcend Sponge",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 200,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A irmã de ataque da Higher",
+        "frase": "R$ 200, doze reais mais barata que a Higher. Como ela, não tem correspondente claro no Revspin."
+      }
+    },
+    {
+      "id": "f729-2",
+      "nome": "729-2",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 106,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A clássica barata da marca",
+        "frase": "R$ 106, uma das mais baratas do catálogo inteiro. Borracha aderente de escola chinesa, do tipo que ensina o toque antes de dar velocidade."
+      }
+    },
+    {
+      "id": "f729-fx-super-soft",
+      "nome": "FX Super Soft",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 106,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja macia, R$ 106",
+        "frase": "Registrada no Revspin sem nenhuma avaliação. Esponja macia e preço de entrada — perfil de quem está aprendendo a sentir a bola."
+      }
+    },
+    {
+      "id": "f729-ktl-pro-xt",
+      "nome": "KTL Pro XT",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 109,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A linha KTL da Friendship",
+        "frase": "A loja a descreve para quem busca evolução técnica. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "f729-ktl-rapid-speed",
+      "nome": "KTL Rapid Speed",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 140,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A KTL de velocidade",
+        "frase": "A mais cara das duas KTL, R$ 140 contra R$ 109 da Pro XT. Sem amostra na comunidade."
+      }
     }
   ]
 }

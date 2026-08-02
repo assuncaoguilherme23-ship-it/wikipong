@@ -6791,6 +6791,126 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "f729-battle-ii-provincial": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/friendship-729-battle-ii-provincial-2/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja chinesa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada."
+    },
+    "f729-battle-taichi": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/friendship-729-battle-taichi-37-39/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja chinesa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. DUAS DUREZAS, UM PRODUTO: a loja anuncia \"37/39\" e \"39/37\" como itens separados, com o MESMO preço e a MESMA foto. São opções de dureza de esponja da mesma borracha, e entram como um material só. Quem comprar escolhe a dureza na loja. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "f729-battle-limitless-37-39": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/friendship-729-battle-limitless-37-39/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja 37/39"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "f729-battle-limitless-39-37": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/friendship-729-battle-limitless-39-37/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja 39/37"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "f729-higher-transcend": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-729-higher-transcend-sponge/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, esponja Transcend"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. NOME SÓ DESTA LOJA: o Revspin lista \"729 Transcend\", \"SP Transcend\" e \"Cream Transcend\", nenhuma \"Higher\". Não dá pra saber qual delas é, então nenhuma nota foi atribuída — emprestar a nota da vizinha seria inventar. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "f729-faster-transcend": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-729-faster-transcend-sponge/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, esponja Transcend"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. NOME SÓ DESTA LOJA: mesma situação da Higher — o Revspin não tem nenhuma \"Faster Transcend\". Entra sem nota. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "f729-2": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/friendship-729-2-2-vermelha-envio-imediato/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente clássica"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A loja anuncia como \"Friendship 729\", sem número. O slug traz \"729 2 2\", que é o modelo 729-2 na espessura 2,2 mm — é assim que ela entra aqui. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "f729-fx-super-soft": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/friendship-729-fx-super-soft/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "f729-ktl-pro-xt": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/friendship-ktl-pro-xt/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. KTL é uma linha da própria Friendship, e não uma marca separada — a loja a vende dentro da 729. O Revspin não a lista sob nenhum dos dois nomes. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "f729-ktl-rapid-speed": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/friendship-ktl-rapid-speed/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. KTL é linha da Friendship, vendida dentro da 729. Sem registro no Revspin. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
     }
   }
 }

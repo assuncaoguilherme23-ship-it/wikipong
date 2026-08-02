@@ -2208,6 +2208,60 @@
       "fonte": "AmericaTT",
       "fonteUrl": "https://americatt.net/donic-anders-lind-hexa-carbon/",
       "consultadoEm": "2026-07-30"
+    },
+    "joola-vizon": {
+      "arquivo": "joola-vizon.webp",
+      "fonte": "Tênis de Mesa Store",
+      "fonteUrl": "https://www.tenisdemesastore.com.br/borracha-joola-vizon-tenis-mesa-profissional-ittf-all-round",
+      "consultadoEm": "2026-08-01"
+    },
+    "joola-trinity-dynamic": {
+      "arquivo": "joola-trinity-dynamic.webp",
+      "fonte": "Tênis de Mesa Store",
+      "fonteUrl": "https://www.tenisdemesastore.com.br/borracha-hugo-calderano-trinity-dynamic-joola-tenis-de-mesa",
+      "consultadoEm": "2026-08-01"
+    },
+    "joola-trinity-charged": {
+      "arquivo": "joola-trinity-charged.webp",
+      "fonte": "Tênis de Mesa Store",
+      "fonteUrl": "https://www.tenisdemesastore.com.br/borracha-joola-hugo-calderano-trinity-charged-tenis-de-mesa",
+      "consultadoEm": "2026-08-01"
+    },
+    "joola-infinity-carbon": {
+      "arquivo": "joola-infinity-carbon.webp",
+      "fonte": "Tênis de Mesa Store",
+      "fonteUrl": "https://www.tenisdemesastore.com.br/raquete-calderano-infinity-carbon-joola-profissional-ittf-bo",
+      "consultadoEm": "2026-08-01"
+    },
+    "joola-klc-inner": {
+      "arquivo": "joola-klc-inner.webp",
+      "fonte": "Tênis de Mesa Store",
+      "fonteUrl": "https://www.tenisdemesastore.com.br/raquete-classineta-joola-hugo-calderano-klc-inner-tenis-mesa",
+      "consultadoEm": "2026-08-01"
+    },
+    "joola-aw7": {
+      "arquivo": "joola-aw7.webp",
+      "fonte": "Tênis de Mesa Store",
+      "fonteUrl": "https://www.tenisdemesastore.com.br/raquete-classineta-joola-hugo-calderano-aw-7-tenis-de-mesa-a",
+      "consultadoEm": "2026-08-01"
+    },
+    "joola-baseline-allround": {
+      "arquivo": "joola-baseline-allround.webp",
+      "fonte": "Tênis de Mesa Store",
+      "fonteUrl": "https://www.tenisdemesastore.com.br/raquete-joola-classica-fl-allround-controle-tenis-de-mesa-ci",
+      "consultadoEm": "2026-08-01"
+    },
+    "joola-j-allround": {
+      "arquivo": "joola-j-allround.webp",
+      "fonte": "Tênis de Mesa Store",
+      "fonteUrl": "https://www.tenisdemesastore.com.br/raquete-classica-joola-j-all-round-profissional-tenis-mesa",
+      "consultadoEm": "2026-08-01"
+    },
+    "joola-challenger-all": {
+      "arquivo": "joola-challenger-all.webp",
+      "fonte": "Tênis de Mesa Store",
+      "fonteUrl": "https://www.tenisdemesastore.com.br/raquete-classica-profissional-joola-chalenger-all-tenis-mesa",
+      "consultadoEm": "2026-08-01"
     }
   }
 }

@@ -2945,6 +2945,78 @@
       "url": "https://americatt.net/donic-anders-lind-hexa-carbon/",
       "atualizadoEm": "2026-07-30",
       "nota": "Preço lido da ficha de dados que a loja publica na página do produto."
+    },
+    {
+      "materialId": "joola-vizon",
+      "loja": "Tênis de Mesa Store",
+      "preco": 209,
+      "url": "https://www.tenisdemesastore.com.br/borracha-joola-vizon-tenis-mesa-profissional-ittf-all-round",
+      "atualizadoEm": "2026-08-01",
+      "nota": "Preço visível na página do produto (Tray/Loja Integrada: o primeiro R$ é o preço)."
+    },
+    {
+      "materialId": "joola-trinity-dynamic",
+      "loja": "Tênis de Mesa Store",
+      "preco": 641,
+      "url": "https://www.tenisdemesastore.com.br/borracha-hugo-calderano-trinity-dynamic-joola-tenis-de-mesa",
+      "atualizadoEm": "2026-08-01",
+      "nota": "Preço visível na página do produto (Tray/Loja Integrada: o primeiro R$ é o preço)."
+    },
+    {
+      "materialId": "joola-trinity-charged",
+      "loja": "Tênis de Mesa Store",
+      "preco": 699,
+      "url": "https://www.tenisdemesastore.com.br/borracha-joola-hugo-calderano-trinity-charged-tenis-de-mesa",
+      "atualizadoEm": "2026-08-01",
+      "nota": "Preço visível na página do produto (Tray/Loja Integrada: o primeiro R$ é o preço)."
+    },
+    {
+      "materialId": "joola-infinity-carbon",
+      "loja": "Tênis de Mesa Store",
+      "preco": 838,
+      "url": "https://www.tenisdemesastore.com.br/raquete-calderano-infinity-carbon-joola-profissional-ittf-bo",
+      "atualizadoEm": "2026-08-01",
+      "nota": "Preço visível na página do produto (Tray/Loja Integrada: o primeiro R$ é o preço)."
+    },
+    {
+      "materialId": "joola-klc-inner",
+      "loja": "Tênis de Mesa Store",
+      "preco": 859,
+      "url": "https://www.tenisdemesastore.com.br/raquete-classineta-joola-hugo-calderano-klc-inner-tenis-mesa",
+      "atualizadoEm": "2026-08-01",
+      "nota": "Preço visível na página do produto (Tray/Loja Integrada: o primeiro R$ é o preço)."
+    },
+    {
+      "materialId": "joola-aw7",
+      "loja": "Tênis de Mesa Store",
+      "preco": 798,
+      "url": "https://www.tenisdemesastore.com.br/raquete-classineta-joola-hugo-calderano-aw-7-tenis-de-mesa-a",
+      "atualizadoEm": "2026-08-01",
+      "nota": "Preço visível na página do produto (Tray/Loja Integrada: o primeiro R$ é o preço)."
+    },
+    {
+      "materialId": "joola-baseline-allround",
+      "loja": "Tênis de Mesa Store",
+      "preco": 459,
+      "url": "https://www.tenisdemesastore.com.br/raquete-joola-classica-fl-allround-controle-tenis-de-mesa-ci",
+      "atualizadoEm": "2026-08-01",
+      "nota": "Preço visível na página do produto (Tray/Loja Integrada: o primeiro R$ é o preço)."
+    },
+    {
+      "materialId": "joola-j-allround",
+      "loja": "Tênis de Mesa Store",
+      "preco": 459,
+      "url": "https://www.tenisdemesastore.com.br/raquete-classica-joola-j-all-round-profissional-tenis-mesa",
+      "atualizadoEm": "2026-08-01",
+      "nota": "Preço visível na página do produto (Tray/Loja Integrada: o primeiro R$ é o preço)."
+    },
+    {
+      "materialId": "joola-challenger-all",
+      "loja": "Tênis de Mesa Store",
+      "preco": 459,
+      "url": "https://www.tenisdemesastore.com.br/raquete-classica-profissional-joola-chalenger-all-tenis-mesa",
+      "atualizadoEm": "2026-08-01",
+      "nota": "Preço visível na página do produto (Tray/Loja Integrada: o primeiro R$ é o preço)."
     }
   ]
 }

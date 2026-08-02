@@ -134,6 +134,14 @@ const FONTES = {
    */
   joola: {
     loja: 'Tênis de Mesa Store',
+    /* A loja enfia o ATLETA e palavras de marketing no titulo: 'Borracha Joola
+       Hugo Calderano Trinity Charged Profissional Tenis De Mesa' para a que o
+       catalogo chama de 'Trinity Charged'. Sem esta folga, as nove entram como
+       lacuna ja' tendo sido colhidas. 'hugo' e 'calderano' entram porque a
+       linha inteira leva o nome dele — nao ha' outro produto Joola com que
+       confundir. */
+    familia: ['hugo', 'calderano', 'profissional', 'ittf', 'competicao',
+              'controle', 'camadas', 'madeira', 'carbono', 'allround'],
     url: (p) => `https://www.tenisdemesastore.com.br/marca/joola.html?pagina=${p}`,
     marcaNoTitulo: true,
     tipo: (slug) => {
@@ -535,8 +543,38 @@ const chave = (s) =>
        a OperaTT escreve "... DHS - DHS G555", com ela duas vezes. Trocar o
        primeiro corte pelo global deixava "borracha para" sobrando no nome e
        derrubava as cinco marcas de uma vez. */
-    .replace(/^.*?\b(xiom|butterfly|tibhar|yasaka|dhs|stiga|donic)\b\s*/i, '')
-    .replace(/\b(xiom|butterfly|tibhar|yasaka|dhs|stiga|donic)\b/gi, ' ')
+    /*
+     * CORTE ATÉ A MARCA — só quando tudo que vem antes é embalagem.
+     *
+     * A versão anterior cortava sempre, e isso funcionava para "Borracha Para
+     * Raquete de Tênis de Mesa XIOM - Vega Europe" (onde tudo antes da marca é
+     * palavrório) e QUEBRAVA quando a marca aparece no meio do nome:
+     * "Raquete Classineta Carbono KL-C Joola Hugo Calderano Inner" virava
+     * "hugo calderano inner", sem o KL-C — e a lâmina já catalogada voltava
+     * como lacuna.
+     *
+     * Desligar o corte também não serve: sem ele a Xiom volta a acusar 5
+     * lacunas falsas. Foi medido nas duas direções.
+     *
+     * A regra que resolve as duas: corta se, e só se, cada palavra antes da
+     * marca for de embalagem. Se houver qualquer palavra de MODELO ali (kl, c,
+     * carbono), o título fica inteiro e quem limpa é o resto do pipeline.
+     */
+    .replace(
+      /^(.*?)\b(xiom|butterfly|tibhar|yasaka|dhs|stiga|donic|palio|joola|andro|victas|nittaku|sanwei|yinhe|galaxy|friendship)\b\s*/i,
+      (inteiro, antes) => {
+        /* Palavra de EMBALAGEM = tudo que a loja põe antes do nome do produto:
+           categoria, tipo de cabo, adjetivo de vitrine. `caneta`, `chinesa` e
+           `japonesa` entram porque descrevem o CABO ("Madeira Caneta XIOM -
+           Katana Gold"), não o modelo — deixá-las de fora fazia as cinco
+           canetas da Xiom voltarem como lacuna falsa. */
+        const EMBALAGEM =
+          /^(borracha|borrachas|para|raquete|raquetes|de|do|da|tenis|mesa|madeira|lamina|laminas|modelo|classica|classineta|clssica|profissional|kit|com|e|caneta|chinesa|japonesa|jpen|cpen)$/;
+        const palavras = antes.trim().split(/\s+/).filter(Boolean);
+        return palavras.every((p) => EMBALAGEM.test(p)) ? '' : inteiro;
+      },
+    )
+    .replace(/\b(xiom|butterfly|tibhar|yasaka|dhs|stiga|donic|palio|joola|andro|victas|nittaku|sanwei|yinhe|galaxy|friendship)\b/gi, ' ')
     /* Cor e espessura são opções de compra, não materiais diferentes: a Tibhar
        publica uma página por cor ("... 2.1mm preta" e "... 2.1mm vermelha") da
        mesma borracha. Sem tirar isso, cada borracha contaria em dobro. */
@@ -546,6 +584,9 @@ const chave = (s) =>
        registra "Hybrid K3". E o "de" que sobra vem do slug ("...-de-mesa-de"),
        depois de tirar o "para tênis de mesa". */
     .replace(/\bmax\b/g, ' ')
+    /* 'All Round' e 'Allround' sao a mesma classe, escrita com e sem espaco.
+       A loja alterna entre as duas na mesma pagina. */
+    .replace(/\ball\s+round\b/g, 'allround')
     /* "classineta" é formato de cabeça e "cópia" é artefato de cadastro da loja:
        a mesma lâmina aparece como clássica, classineta e cópia. O formato se
        escolhe na compra, como o cabo — é um material só. */
@@ -578,7 +619,10 @@ const chave = (s) =>
     .replace(/\bpoder\b/g, 'power')
     /* Dígito solto vem de "5 + 2 carbono" e da contagem de folhas. */
     .replace(/\b\d\b/g, ' ')
-    .replace(/\b(para )?tenis de mesa\b/g, ' ')
+    /* O "de" é opcional: a Tênis de Mesa Store escreve tanto "Tênis de Mesa"
+       quanto "Tênis Mesa" — às vezes no mesmo título. Sem isto, "tenis" e
+       "mesa" sobravam no nome e nenhuma comparação casava. */
+    .replace(/\b(para )?tenis (de )?mesa\b/g, ' ')
     /* "Borracha para RAQUETE DE Tenis de mesa, Modelo Dignics 05" — a JJ Yamada
        cadastra assim, com "raquete de" no meio e "modelo" antes do nome. Ficou
        escondido enquanto a Dignics 05 estava ESGOTADA: sem preco, ela caia no

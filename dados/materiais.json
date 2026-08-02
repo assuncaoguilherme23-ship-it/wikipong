@@ -6784,6 +6784,141 @@
         "tag": "Carbono interno, controle 9,4",
         "frase": "Assinatura do dinamarquês Anders Lind. A fibra fica junto ao núcleo, e a comunidade credita a isso o controle alto para uma lâmina de carbono: um avaliador diz que ela entrega controle enorme em toda bolada. Cerca de 85 g, equilibrada com borrachas híbridas de 50°."
       }
+    },
+    {
+      "id": "joola-vizon",
+      "nome": "Vizon",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 209,
+      "rating": 3.65,
+      "reviews": 6,
+      "simples": {
+        "tag": "A única Joola com amostra aqui",
+        "frase": "Seis avaliações no Revspin, nota 7,3 — a única da marca que passa do nosso piso de cinco. É a porta de entrada da linha: R$ 209 contra R$ 641 e R$ 699 das Trinity."
+      }
+    },
+    {
+      "id": "joola-trinity-dynamic",
+      "nome": "Trinity Dynamic",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 641,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Trinity de arco alto",
+        "frase": "A linha leva o nome de HUGO CALDERANO, o brasileiro nº 1 do mundo em 2025 — é a assinatura dele com a marca. Sendo recente, quase não tem amostra de comunidade ainda: são poucas avaliações, não desinteresse."
+      }
+    },
+    {
+      "id": "joola-trinity-charged",
+      "nome": "Trinity Charged",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 699,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da linha Trinity",
+        "frase": "R$ 699, a borracha Joola mais cara do catálogo. Uma avaliação registrada na comunidade."
+      }
+    },
+    {
+      "id": "joola-infinity-carbon",
+      "nome": "Hugo Calderano Infinity Carbon",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 838,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da Joola aqui",
+        "frase": "R$ 838. Homologada pela ITTF para competição. Sem amostra própria na comunidade."
+      }
+    },
+    {
+      "id": "joola-klc-inner",
+      "nome": "Hugo Calderano KL-C Inner",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 859,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono por dentro",
+        "frase": "A fibra fica junto ao núcleo: a bola afunda mais na madeira antes de sair. Vendida em clássica e classineta pelo mesmo material — o cabo se escolhe na compra."
+      }
+    },
+    {
+      "id": "joola-aw7",
+      "nome": "Hugo Calderano AW-7",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 798,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete camadas, sem fibra",
+        "frase": "Madeira pura em 7 camadas — velocidade de lâmina com fibra, mantendo a sensação de bola que só madeira dá. Uma avaliação na comunidade, com nota 4,0."
+      }
+    },
+    {
+      "id": "joola-baseline-allround",
+      "nome": "BASEline Allround",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 459,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Allround para começar",
+        "frase": "Classe allround, que é onde quase todo mundo deve começar: controle acima de velocidade, enquanto a técnica cresce."
+      }
+    },
+    {
+      "id": "joola-j-allround",
+      "nome": "J Allround",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 459,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A allround de entrada",
+        "frase": "Mesmo preço da BASEline e da Challenger: R$ 459 é o degrau de entrada da Joola em lâmina."
+      }
+    },
+    {
+      "id": "joola-challenger-all",
+      "nome": "Challenger ALL",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 459,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A terceira das allround de R$ 459",
+        "frase": "A loja escreve \"Chalenger\", com um L; a marca escreve \"Challenger\". É a mesma lâmina. Sem amostra na comunidade."
+      }
     }
   ]
 }

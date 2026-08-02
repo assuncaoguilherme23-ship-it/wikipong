@@ -6659,6 +6659,138 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "joola-vizon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-joola-vizon-tenis-mesa-profissional-ittf-all-round",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada, homologada pela ITTF"
+        }
+      ],
+      "nota": "A loja não declara a dureza desta borracha; ela entra sem a régua unificada."
+    },
+    "joola-trinity-dynamic": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-hugo-calderano-trinity-dynamic-joola-tenis-de-mesa",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A loja não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "joola-trinity-charged": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-joola-hugo-calderano-trinity-charged-tenis-de-mesa",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A loja não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "joola-infinity-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-calderano-infinity-carbon-joola-profissional-ittf-bo",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "joola-klc-inner": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classineta-joola-hugo-calderano-klc-inner-tenis-mesa",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono em posição interna"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "joola-aw7": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classineta-joola-hugo-calderano-aw-7-tenis-de-mesa-a",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira pura, 7 camadas"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "joola-baseline-allround": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-joola-classica-fl-allround-controle-tenis-de-mesa-ci",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, classe allround"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "joola-j-allround": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classica-joola-j-all-round-profissional-tenis-mesa",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, classe allround"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "joola-challenger-all": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classica-profissional-joola-chalenger-all-tenis-mesa",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, classe ALL"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
     }
   }
 }

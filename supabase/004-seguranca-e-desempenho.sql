@@ -137,30 +137,13 @@ create policy "leitura de respostas"
   );
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- 4. A OUTRA FUNÇÃO DO AVISO NÃO É MINHA
+-- 4. A OUTRA FUNÇÃO DO AVISO: RESOLVIDA NA 005
 -- ═══════════════════════════════════════════════════════════════════════════
 --
--- O painel também acusou `public.rls_auto_enable()`. Ela NÃO existe em nenhuma
--- das migrações deste repositório — nem a 001, nem a 002, nem a 003 a criam.
--- Veio de outro lugar: um template do painel, um assistente, ou algo colado no
--- SQL Editor.
+-- O painel também acusou `public.rls_auto_enable()`, que não existe em nenhuma
+-- migração deste repositório. Lemos o corpo dela: é um gatilho de evento que
+-- LIGA RLS automaticamente em toda tabela nova do schema `public` — uma rede de
+-- segurança, não um buraco.
 --
--- NÃO MEXO no que não escrevi e não sei o que faz. Para descobrir, rode:
---
---   select prosrc, prosecdef, proacl
---     from pg_proc
---    where proname = 'rls_auto_enable';
---
--- `prosrc` é o corpo dela. Se for coisa que você não reconhece e não usa,
--- o mais seguro é apagar:
---
---   drop function if exists public.rls_auto_enable();
---
--- Se for algo que você quer manter, o mesmo tratamento da eh_admin resolve o
--- aviso:
---
---   revoke execute on function public.rls_auto_enable() from anon, authenticated;
---
--- O nome sugere que ela LIGA RLS automaticamente em tabelas. Se for isso e
--- estiver exposta na API, qualquer visitante poderia chamá-la — daí a
--- gravidade do aviso ser maior que a da eh_admin.
+-- Ela NÃO deve ser apagada. O tratamento está em 005-rls-auto-enable.sql, com o
+-- raciocínio completo.

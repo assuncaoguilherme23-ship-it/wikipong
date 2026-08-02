@@ -1,0 +1,47 @@
+-- WikiPong · Migração 005 — tira a rls_auto_enable da API, sem apagá-la
+-- ---------------------------------------------------------------------------
+-- Rodar depois da 004. Idempotente.
+--
+-- ═══ ESTA FUNÇÃO NÃO É NOSSA, E NÃO DEVE SER APAGADA ═══
+--
+-- O verificador do Supabase acusou `public.rls_auto_enable()` como SECURITY
+-- DEFINER exposta na API, para `anon` e para `authenticated`. Ela não aparece
+-- em nenhuma migração deste repositório — veio de um template do painel ou de
+-- alguma ferramenta de segurança.
+--
+-- Lendo o corpo dela (via `select prosrc from pg_proc where proname =
+-- 'rls_auto_enable'`), o que ela faz é:
+--
+--   Toda vez que uma TABELA é criada no schema `public`, ela roda
+--   `alter table ... enable row level security` automaticamente.
+--
+-- Isto é uma REDE DE SEGURANÇA, não um buraco. Protege contra o erro mais
+-- comum de Supabase: criar tabela e esquecer de ligar o RLS, deixando os dados
+-- abertos para qualquer visitante. Se ela já estivesse ativa e cobrisse views,
+-- a falha da `fila_moderacao` que a migração 003 consertou talvez não tivesse
+-- acontecido.
+--
+-- POR QUE O AVISO É EXAGERADO NESTE CASO: a função chama
+-- `pg_event_trigger_ddl_commands()`, que só funciona DENTRO de um gatilho de
+-- evento. Chamada pela API, ela dá erro e não faz nada. O verificador não sabe
+-- distinguir isso; ele só vê "SECURITY DEFINER exposta" e avisa. A regra dele é
+-- boa, este caso é que é atípico.
+--
+-- O CONSERTO é tirá-la da API e manter o gatilho. Gatilho de evento é disparado
+-- pelo próprio banco quando a DDL acontece, não por alguém chamar a função —
+-- então revogar o EXECUTE não desliga a proteção.
+
+revoke execute on function public.rls_auto_enable() from anon, authenticated;
+
+-- Para conferir que o gatilho continua de pé (deve devolver uma linha):
+--
+--   select evtname, evtenabled
+--     from pg_event_trigger
+--    where evtfoid = 'public.rls_auto_enable()'::regprocedure;
+--
+-- E para testar a proteção de verdade, crie uma tabela qualquer no public e
+-- veja se ela já nasce com RLS ligado:
+--
+--   create table public.teste_rls (id int);
+--   select relrowsecurity from pg_class where relname = 'teste_rls';  -- true
+--   drop table public.teste_rls;

@@ -2,6 +2,51 @@
   "aviso": "NOTÍCIAS — digest curado (D-19, feature 3). Cada item é um resumo CURTO na voz da WikiPong + atribuição à fonte + link pro original + data REAL da publicação (D-14/D-16). NÃO republicamos o artigo nem a imagem de terceiros: resumimos, creditamos e linkamos. Só entra notícia verificável (evento real, link real, data real). Fontes que não conseguimos ler automaticamente (Instagram etc.) entram por curadoria do fundador, no mesmo padrão. Notícia envelhece: a data é sempre visível e a lista é ordenada da mais nova pra mais antiga.",
   "noticias": [
     {
+      "id": "calderano-celebra-titulo-forca-mental",
+      "titulo": "Calderano credita o título à cabeça: “a parte mental dita o ritmo”",
+      "resumo": "Depois de vencer em São José dos Campos, Hugo Calderano falou do que segurou a virada: foco com o corpo cansado de jogar duas competições no mesmo dia, e a torcida brasileira empurrando.",
+      "fonte": "CBTM",
+      "url": "https://www.cbtm.org.br/noticia/detalhe/103183/hugo-calderano-celebra-titulo-em-sao-jose-dos-campos-e-destaca-forca-mental-na-conquista",
+      "publicadoEm": "2026-07-27",
+      "tag": "Seleção"
+    },
+    {
+      "id": "calderano-campeao-star-contender-sao-jose",
+      "titulo": "Calderano é campeão em casa: 4 a 3 sobre Alexis Lebrun na final",
+      "resumo": "O número 8 do mundo venceu o francês por 4 sets a 3 e levou o WTT Star Contender de São José dos Campos. É o terceiro ano seguido em que ele ganha um torneio do circuito disputado no Brasil. Com Bruna Takahashi, ficou também com a prata nas duplas mistas.",
+      "fonte": "CBTM",
+      "url": "https://www.cbtm.org.br/noticia/detalhe/103177/empurrado-pela-torcida-hugo-calderano-conquista-o-titulo-do-wtt-star-contender-sao-jose-dos-campos",
+      "publicadoEm": "2026-07-26",
+      "tag": "Seleção"
+    },
+    {
+      "id": "cbtm-renova-certidao-ministerio-do-esporte",
+      "titulo": "CBTM renova o registro junto ao Ministério do Esporte",
+      "resumo": "A Certidão de Registro Cadastral é o documento que habilita a confederação a receber recurso público e a organizar competição oficial. Renovação de rotina, mas é ela que mantém o calendário de pé.",
+      "fonte": "CBTM",
+      "url": "https://www.cbtm.org.br/noticia/detalhe/103173/cbtm-renova-certidao-de-registro-cadastral-junto-ao-ministerio-do-esporte",
+      "publicadoEm": "2026-07-25",
+      "tag": "Brasil"
+    },
+    {
+      "id": "calderano-takahashi-seguem-star-contender",
+      "titulo": "Calderano e Takahashi avançam juntos no Star Contender",
+      "resumo": "Os dois principais nomes do Brasil seguiram vivos no torneio de São José dos Campos — a caminho do título dele e da prata dos dois nas duplas mistas.",
+      "fonte": "CBTM",
+      "url": "https://www.cbtm.org.br/noticia/detalhe/103172/hugo-calderano-e-bruna-takahashi-seguem-na-disputa-do-wtt-star-contender-sao-jose-dos-campos",
+      "publicadoEm": "2026-07-24",
+      "tag": "Seleção"
+    },
+    {
+      "id": "hugo-hoyama-missao-crescimento-do-esporte",
+      "titulo": "Hugo Hoyama: “minha missão é continuar ajudando no crescimento do esporte”",
+      "resumo": "O maior medalhista da história do Pan-Americano falou em São José dos Campos sobre o papel dele hoje, fora da mesa, na formação de quem vem depois.",
+      "fonte": "CBTM",
+      "url": "https://www.cbtm.org.br/noticia/detalhe/103171/minha-missao-e-continuar-ajudando-no-crescimento-do-esporte-afirma-hugo-hoyama-no-wtt-star-contender-sao-jose-dos-campos",
+      "publicadoEm": "2026-07-24",
+      "tag": "Brasil"
+    },
+    {
       "id": "allan-sarmento-vira-e-vai-a-chave-principal",
       "titulo": "Allan Sarmento vira o jogo e vai à chave principal",
       "resumo": "De virada sobre o colombiano Naranjo, Allan Sarmento garantiu vaga na chave principal do WTT Star Contender de São José dos Campos (SP).",

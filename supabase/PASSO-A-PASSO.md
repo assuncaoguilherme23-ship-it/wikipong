@@ -52,6 +52,7 @@ No menu da esquerda, abra o **SQL Editor** (ícone de terminal).
 6. Repita com **`supabase/003-conserta-fila.sql`**.
 7. Repita com **`supabase/004-seguranca-e-desempenho.sql`**.
 8. Repita com **`supabase/005-rls-auto-enable.sql`**.
+9. Repita com **`supabase/006-politicas-sobrepostas.sql`**.
 
 > **Se você já rodou o `001` antes de 31/07/2026**, o `003` é obrigatório: a
 > primeira versão tinha uma falha em que a view `fila_moderacao` deixava qualquer

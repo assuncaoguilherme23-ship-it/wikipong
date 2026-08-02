@@ -7069,6 +7069,351 @@
         "tag": "A KTL de velocidade",
         "frase": "A mais cara das duas KTL, R$ 140 contra R$ 109 da Pro XT. Sem amostra na comunidade."
       }
+    },
+    {
+      "id": "sanwei-target-national",
+      "nome": "Target National",
+      "marca": "Sanwei",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 220,
+      "rating": 4.45,
+      "reviews": 37,
+      "simples": {
+        "tag": "37 avaliações, a maior da marca",
+        "frase": "A Sanwei mais avaliada do catálogo. Aderente de escola chinesa, do tipo que exige gesto completo e devolve giro pesado."
+      }
+    },
+    {
+      "id": "sanwei-target-national-gordanga",
+      "nome": "Target National Gordanga Edition",
+      "marca": "Sanwei",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 310,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "R$ 90 mais cara que a National comum",
+        "frase": "R$ 310 contra R$ 220 da Target National. A loja não explica o que muda, e o Revspin não registra esta edição — entra com ficha, preço e foto."
+      }
+    },
+    {
+      "id": "sanwei-target-pro-blue",
+      "nome": "Target Pro Blue",
+      "marca": "Sanwei",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 200,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Quatro avaliações, a uma do piso",
+        "frase": "Nota 8,6 no Revspin com quatro avaliações — falta uma para o nosso piso de cinco."
+      }
+    },
+    {
+      "id": "sanwei-target-3rd",
+      "nome": "Target 3rd Edition",
+      "marca": "Sanwei",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 150,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Target de entrada",
+        "frase": "R$ 150, a mais barata da linha Target. Uma avaliação registrada na comunidade."
+      }
+    },
+    {
+      "id": "sanwei-taiji-plus-2023",
+      "nome": "Taiji Plus 2023",
+      "marca": "Sanwei",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 150,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "O ano no nome sugere revisão",
+        "frase": "A loja acrescenta \"2023\" ao nome, o que costuma marcar uma versão nova da mesma borracha. Como o Revspin tem três Taiji parecidas, não dá pra saber qual é esta."
+      }
+    },
+    {
+      "id": "sanwei-taiji-light",
+      "nome": "Taiji Light",
+      "marca": "Sanwei",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 140,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Taiji leve",
+        "frase": "Uma avaliação no Revspin, nota 7,7. Abaixo do nosso piso de cinco."
+      }
+    },
+    {
+      "id": "sanwei-gear-hyper",
+      "nome": "Gear Hyper",
+      "marca": "Sanwei",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 210,
+      "rating": 4.25,
+      "reviews": 11,
+      "simples": {
+        "tag": "Onze avaliações, nota 8,5",
+        "frase": "A segunda mais avaliada da Sanwei aqui. O Revspin também tem uma versão Hard, com seis avaliações e nota 8,8 — a loja vende a comum."
+      }
+    },
+    {
+      "id": "sanwei-ultra-spin",
+      "nome": "Ultra Spin",
+      "marca": "Sanwei",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 90,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais barata da marca",
+        "frase": "R$ 90. Registrada no Revspin sem nenhuma avaliação."
+      }
+    },
+    {
+      "id": "sanwei-ultra-spin-blue",
+      "nome": "Ultra Spin Blue",
+      "marca": "Sanwei",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 95,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A irmã azul da Ultra Spin",
+        "frase": "Cinco reais mais cara que a comum. Uma avaliação na comunidade, nota 7,0."
+      }
+    },
+    {
+      "id": "sanwei-feather-carbon",
+      "nome": "Feather Carbon",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 290,
+      "rating": 4.75,
+      "reviews": 5,
+      "simples": {
+        "tag": "Nota 9,5, no limite do piso",
+        "frase": "Cinco avaliações — exatamente o mínimo que a gente exige para publicar média. Nota 9,5, a mais alta entre as Sanwei com amostra suficiente."
+      }
+    },
+    {
+      "id": "sanwei-verdi",
+      "nome": "Verdi",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 460,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da Sanwei aqui",
+        "frase": "R$ 460. O Revspin não a registra — só a versão Inner, que é outra construção."
+      }
+    },
+    {
+      "id": "sanwei-verdi-inner",
+      "nome": "Verdi Inner",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 380,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fibra por dentro, R$ 80 mais barata",
+        "frase": "A fibra fica junto ao núcleo: a bola afunda mais na madeira antes de sair. Uma avaliação no Revspin, nota 9,8."
+      }
+    },
+    {
+      "id": "sanwei-nova-carbon",
+      "nome": "Nova Carbon",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 450,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma avaliação só",
+        "frase": "Nota 8,0 com uma avaliação. Entra com ficha, preço real e foto."
+      }
+    },
+    {
+      "id": "sanwei-hynover",
+      "nome": "Hynover",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 380,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Nota 9,5 com duas avaliações",
+        "frase": "Duas avaliações apenas — abaixo do piso, mas com nota alta entre quem usou."
+      }
+    },
+    {
+      "id": "sanwei-shrafton",
+      "nome": "Shrafton",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 380,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Registrada, sem nota",
+        "frase": "Consta do Revspin com uma avaliação e sem nota publicada."
+      }
+    },
+    {
+      "id": "sanwei-echo",
+      "nome": "Echo",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 380,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Três avaliações, nota 8,8",
+        "frase": "Abaixo do nosso piso por duas avaliações."
+      }
+    },
+    {
+      "id": "sanwei-parla",
+      "nome": "Parla",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 220,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Nota 9,3, amostra fina",
+        "frase": "Três avaliações com nota 9,3. R$ 220 — das mais baratas da marca."
+      }
+    },
+    {
+      "id": "sanwei-accumulator-c",
+      "nome": "Accumulator C",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 160,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "R$ 160, entrada da marca",
+        "frase": "Uma avaliação no Revspin, sem nota publicada."
+      }
+    },
+    {
+      "id": "sanwei-accumulator-s",
+      "nome": "Accumulator S",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 150,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais barata da Sanwei aqui",
+        "frase": "R$ 150. Duas avaliações, nota 7,5 — a mais baixa da marca entre as registradas."
+      }
+    },
+    {
+      "id": "sanwei-multilayer-1",
+      "nome": "Multilayer 1",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 380,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Registrada sem nenhuma avaliação",
+        "frase": "Consta do Revspin sem nota e sem avaliação."
+      }
+    },
+    {
+      "id": "sanwei-breeze",
+      "nome": "Surge Breeze",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 300,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A allround da linha Surge",
+        "frase": "Registrada no Revspin sem nenhuma avaliação."
+      }
+    },
+    {
+      "id": "sanwei-nitro",
+      "nome": "Surge Nitro",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 380,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A ofensiva da linha Surge",
+        "frase": "Registrada no Revspin sem nenhuma avaliação."
+      }
+    },
+    {
+      "id": "sanwei-prism",
+      "nome": "Surge Prism",
+      "marca": "Sanwei",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 380,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais avaliada das três Surge",
+        "frase": "Três avaliações com nota 8,5 — ainda abaixo do nosso piso de cinco, mas é a única das três Surge que alguém avaliou."
+      }
     }
   ]
 }

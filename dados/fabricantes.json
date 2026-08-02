@@ -6911,6 +6911,338 @@
         }
       ],
       "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. KTL é linha da Friendship, vendida dentro da 729. Sem registro no Revspin. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-target-national": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-sanwei---target-national",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja chinesa"
+        }
+      ],
+      "nota": "A OperaTT não declara a dureza desta borracha; ela entra sem a régua unificada. O Revspin também lista uma \"Target National (New)\", com 14 avaliações e nota 9,3. A loja não diz qual versão vende, então a nota atribuída é a da original, que tem a amostra maior."
+    },
+    "sanwei-target-national-gordanga": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-para-raquete-de-tnis-de-mesa-sanwei-target-national-gordanga-edition",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, edição especial"
+        }
+      ],
+      "nota": "A OperaTT não declara a dureza desta borracha; ela entra sem a régua unificada. EDIÇÃO QUE NÃO EXISTE NO REVSPIN: não há nenhuma \"Gordanga\" registrada lá. Não dá pra saber se é a Target National comum com outra embalagem ou uma esponja diferente, então nenhuma nota foi emprestada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-target-pro-blue": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-para-raquete-de-tnis-de-mesa-sanwei-target-pro-blue",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja azul"
+        }
+      ],
+      "nota": "A OperaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-target-3rd": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-sanwei-target-3rd-edition",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "A OperaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-taiji-plus-2023": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-sanwei---taiji-plus-2023",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "A OperaTT não declara a dureza desta borracha; ela entra sem a régua unificada. TRÊS NOMES PARECIDOS NO REVSPIN: \"Taiji Plus\" (6 avaliações), \"T88-TAIJI PLUS\" (1) e \"T88 TAIJI\" (3). A loja vende \"Taiji Plus 2023\", e o ano sugere revisão. Sem saber qual das três é, nenhuma nota foi atribuída. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-taiji-light": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-sanwei---taiji-light",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja leve"
+        }
+      ],
+      "nota": "A OperaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-gear-hyper": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-sanwei---gear-hyper",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A OperaTT não declara a dureza desta borracha; ela entra sem a régua unificada."
+    },
+    "sanwei-ultra-spin": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-sanwei---ultra-spin",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "A OperaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-ultra-spin-blue": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/borracha-para-raquete-de-tnis-de-mesa-sanwei-ultra-spin-blue",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja azul"
+        }
+      ],
+      "nota": "A OperaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-feather-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-sanwei---feather-carbon",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "sanwei-verdi": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-sanwei-verdi",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin registra a \"Verdi Inner\" mas não a Verdi comum. São construções diferentes (fibra por dentro contra por fora), então a nota da Inner não vale aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-verdi-inner": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-sanwei-verdi-inner",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra em posição interna"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-nova-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-sanwei-nova-carbon",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-hynover": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-sanwei---hynover",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-shrafton": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-sanwei---shrafton",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-echo": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-classica-sanwei-echo",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-parla": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-sanwei---parla",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-accumulator-c": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-sanwei---accumulator-c",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-accumulator-s": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-sanwei---accumulator-s",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Vendida em clássica e classineta pelo mesmo preço — é a mesma lâmina, o cabo se escolhe. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-multilayer-1": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-sanwei---multilayer-1",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. PREÇOS QUE NÃO BATEM: a loja anuncia a clássica a R$ 380 e a classineta a R$ 150. Nas outras lâminas as duas versões custam igual. Registrei o preço da clássica, que é a listagem conferida; se a diferença for erro de cadastro, o preço muda na próxima checagem. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-breeze": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/raquete-de-tnis-de-mesa-clssica-sanwei-breeze",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. NOME ENCURTADO PELA LOJA: o Revspin a registra como \"Surge Breeze\"; a OperaTT vende como \"Breeze\". É a mesma lâmina — a linha Surge da Sanwei. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-nitro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/raquete-de-tnis-de-mesa-clssica-sanwei-nitro",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. NOME ENCURTADO PELA LOJA: o Revspin a registra como \"Surge Nitro\"; a OperaTT vende como \"Nitro\". É a mesma lâmina — a linha Surge da Sanwei. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "sanwei-prism": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/raquete-de-tnis-de-mesa-clssica-sanwei-prism",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. NOME ENCURTADO PELA LOJA: o Revspin a registra como \"Surge Prism\"; a OperaTT vende como \"Prism\". É a mesma lâmina — a linha Surge da Sanwei. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
     }
   }
 }

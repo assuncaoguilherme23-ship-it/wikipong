@@ -203,6 +203,10 @@ const FONTES = {
   },
   sanwei: {
     loja: 'OperaTT',
+    /* A loja omite o nome da LINHA: vende "Nitro" e "Breeze" para as que o
+       Revspin registra como "Surge Nitro" e "Surge Breeze". Mesma situacao
+       do 'evolution' da Tibhar. */
+    familia: ['surge'],
     url: (p) => `https://www.operatt.com.br/marca/sanwei.html?pagina=${p}`,
     marcaNoTitulo: true,
     tipo: (slug) => {

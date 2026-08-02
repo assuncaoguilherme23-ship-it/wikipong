@@ -1664,6 +1664,30 @@
       "escala": 10,
       "avaliacoes": 47,
       "consultadoEm": "2026-08-01"
+    },
+    "sanwei-target-national": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/sanwei-target-national.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 37,
+      "consultadoEm": "2026-08-01"
+    },
+    "sanwei-gear-hyper": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/sanwei-gear-hyper.html",
+      "nota": 8.5,
+      "escala": 10,
+      "avaliacoes": 11,
+      "consultadoEm": "2026-08-01"
+    },
+    "sanwei-feather-carbon": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/sanwei-feather-carbon.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-08-01"
     }
   }
 }

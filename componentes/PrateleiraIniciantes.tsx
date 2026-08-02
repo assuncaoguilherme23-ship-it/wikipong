@@ -13,7 +13,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { MATERIAIS } from './dados-materiais';
 import { FotoProduto } from './FotoProduto';
-import { brl } from './formato';
+import { dinheiro, brl } from './formato';
 import estilos from './PrateleiraIniciantes.module.css';
 
 const INICIANTES = MATERIAIS.filter((m) => m.nivel === 'Iniciante');
@@ -101,7 +101,7 @@ export function PrateleiraIniciantes() {
                 {m.marca} · {m.tipo}
               </span>
               <span className={estilos.tag}>{m.simples.tag}</span>
-              <span className={`mono ${estilos.preco}`}>{brl(m.preco)}</span>
+              <span className={`mono ${estilos.preco}`}>{dinheiro(m.preco, m.moeda)}</span>
             </Link>
           </li>
         ))}

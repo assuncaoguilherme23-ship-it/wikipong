@@ -315,6 +315,27 @@ verdade** (um objeto de estado; sidebar, chips, contagem e grid são views deriv
   não se recupera retroativamente).
 - Nunca fingir frescor: exibir timestamp real de atualização.
 
+**Emenda (2026-08-02) · fonte internacional liberada:** o fundador autorizou buscar material
+fora do varejo brasileiro. Isso levanta a pergunta que esta decisão não respondia: **que preço
+publicar, se não há preço em reais?**
+
+**A resposta é o preço na moeda de origem, dito como tal.** Converter dólar em real daria um
+número que muda todo dia e que ninguém vai pagar — importar tem frete e imposto que o câmbio
+não cobre. Melhor "US$ 149" verdadeiro que "R$ 810" inventado.
+
+Consequências, todas já no código (`moeda?: 'USD' | 'EUR'` em `filtros.ts`):
+
+· material em moeda estrangeira fica **fora do filtro e da ordenação por preço**. Ordenar
+  R$ 300 contra US$ 149 exigiria câmbio, e câmbio é chute. Ele aparece na busca, na marca e
+  no comparador — em tudo que não depende de comparar dinheiro;
+· o formatador `dinheiro(valor, moeda)` substituiu o `brl()` no cartão do catálogo e na
+  prateleira, e sai em real quando a moeda está ausente, que é o caso de todo o catálogo atual;
+· **a regra da foto continua valendo**: material sem foto oficial não entra, venha de onde
+  vier. Foi o que barrou as duas primeiras candidatas (a lâmina ARY-C do Calderano e a W968 do
+  Ma Long): sem loja brasileira, não há de onde tirar a foto, e nem o Revspin hospeda.
+
+**Pendente:** achar fonte de foto oficial para material internacional — site do fabricante,
+provavelmente. Sem isso a emenda fica só no mecanismo.
 **Status:** ativa.
 
 **Nota de implementação (2026-07-22) — colisão com a D-17 (export estático):** esta decisão

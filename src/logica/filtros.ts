@@ -28,6 +28,15 @@ export interface Material {
   intencao: string; // 'atacar' | 'controlar' | 'equilibrado' (plain.intent do protótipo)
   preco: number;
   /**
+   * Moeda do `preco`. Ausente = real, que é o caso de 99% do catálogo.
+   *
+   * Existe porque o catálogo passou a aceitar material que NÃO se vende no
+   * Brasil (D-13, emenda de 2026-08-02). Publicar o preço em dólar dito como
+   * dólar é honesto; converter para real seria inventar — o câmbio muda todo
+   * dia e não é o custo real de importar.
+   */
+  moeda?: 'USD' | 'EUR';
+  /**
    * PERFIL DE DESEMPENHO — opcional de propósito. Nem todo material tem um:
    * uma bola não tem "controle 9.0", e inventar o número só para preencher a
    * coluna seria exatamente a precisão fingida que o produto combate (D-16).
@@ -255,7 +264,10 @@ function comparador(ordenar: Ordenacao): (a: Material, b: Material) => number {
         return perdaoDe(m);
       case 'preco-asc':
       case 'preco-desc':
-        return m.preco;
+        /* Material em moeda estrangeira não entra na ordenação por preço:
+           comparar R$ 300 com US$ 149 exigiria câmbio, e câmbio é chute. Vai
+           pro fim da lista nas duas direções, com o Infinity do sort. */
+        return m.moeda ? Number.POSITIVE_INFINITY : m.preco;
       default:
         return m.rating; // relevancia
     }
@@ -286,7 +298,11 @@ export function aplicar(materiais: readonly Material[], estado: FiltroEstado): M
       dentro(m.specs?.velocidade, estado.velocidade) &&
       dentro(m.specs?.spin, estado.spin) &&
       dentro(m.specs?.controle, estado.controle) &&
-      dentro(m.preco, estado.preco),
+      /* Pelo mesmo motivo da ordenação: quem está em moeda estrangeira sai do
+         filtro de preço em vez de entrar com um valor comparado errado. */
+      (estado.preco === null || m.moeda !== undefined
+        ? m.moeda === undefined
+        : dentro(m.preco, estado.preco)),
   );
   return filtrados.sort(comparador(estado.ordenar));
 }

@@ -35,7 +35,7 @@ import { PALAVRAS, paraPalavra, perdao } from '@/src/logica/metricas';
 import { MATERIAIS, type MaterialCatalogo } from '@/componentes/dados-materiais';
 import { ehFavoritoDaComunidade } from '@/componentes/dados-comunidade';
 import { Bolinhas } from '@/componentes/Bolinhas';
-import { brl } from '@/componentes/formato';
+import { dinheiro, brl } from '@/componentes/formato';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { FotoProduto } from '@/componentes/FotoProduto';
@@ -511,7 +511,7 @@ function CartaoMaterial({
         </div>
       )}
 
-      <p className={`mono ${estilos.preco}`}>{brl(m.preco)}</p>
+      <p className={`mono ${estilos.preco}`}>{dinheiro(m.preco, m.moeda)}</p>
     </Link>
     </li>
   );

@@ -27,7 +27,7 @@ import { Radar } from '@/componentes/Radar';
 import { FotoProduto } from '@/componentes/FotoProduto';
 import { Bolinhas } from '@/componentes/Bolinhas';
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
-import { brl } from '@/componentes/formato';
+import { brl, dinheiro } from '@/componentes/formato';
 import { perdao, paraPalavra } from '@/src/logica/metricas';
 import { vereditosDoMaterial, ROTULO_INTENCAO } from '@/src/logica/recomendacao';
 import {
@@ -173,12 +173,17 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
               · {m.tipo} · nível {m.nivel}
             </p>
           </div>
+          {/* Três casos, e a etiqueta diz qual é (D-16): média de ofertas reais em
+              reais; preço conferido lá fora, na moeda de lá; ou estimativa da
+              semente. Havia só dois — o do meio entrou com o D-13 emendado. */}
           <p className={`mono ${estilos.preco}`}>
-            {brl(medio ?? m.preco)}
+            {medio !== null ? brl(medio) : dinheiro(m.preco, m.moeda)}
             <span className={estilos.precoNota}>
               {medio !== null
                 ? `preço médio · ${ofertas.length} ${ofertas.length === 1 ? 'oferta' : 'ofertas'}`
-                : 'estimativa, sem oferta verificada'}
+                : m.moeda
+                  ? 'conferido fora do Brasil · não se vende aqui'
+                  : 'estimativa, sem oferta verificada'}
             </span>
           </p>
         </header>

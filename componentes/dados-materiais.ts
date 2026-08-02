@@ -58,11 +58,32 @@ function durezaDaFicha(id: string): { unificada: number; grau: number; escala: s
   };
 }
 
+const MOEDAS = ['USD', 'EUR'] as const;
+
+/**
+ * `moeda` do JSON de volta ao tipo estreito — ou um erro que quebra o build.
+ *
+ * Um código errado aqui não pode passar calado: ou a página vai tentar formatar
+ * uma moeda que não existe e quebrar longe da causa, ou — pior — o valor sai
+ * como se fosse real, e o leitor lê US$ 800 como R$ 800. Falhar no build é a
+ * hora certa de descobrir isso.
+ */
+function moedaDo(m: { id: string; moeda?: string }): 'USD' | 'EUR' | undefined {
+  if (m.moeda === undefined) return undefined;
+  const achada = MOEDAS.find((c) => c === m.moeda);
+  if (!achada) {
+    throw new Error(
+      `Material "${m.id}": moeda "${m.moeda}" não é uma das conhecidas (${MOEDAS.join(', ')}).`,
+    );
+  }
+  return achada;
+}
+
 function resolver(m: (typeof dados.materiais)[number]): MaterialCatalogo {
   /* O JSON infere `origemSpecs` como string; aqui ela volta ao tipo estreito.
      Ausente = 'semente' (os materiais anteriores a esta distinção). */
   const origemSpecs = ((m as { origemSpecs?: string }).origemSpecs ?? 'semente') as OrigemSpecs;
-  const base = { ...m, origemSpecs };
+  const base = { ...m, origemSpecs, moeda: moedaDo(m) };
 
   const doFabricante = durezaDaFicha(m.id);
   if (!doFabricante) return { ...base, origemDureza: 'semente' };

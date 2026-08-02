@@ -14,7 +14,7 @@ import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { FotoProduto } from '@/componentes/FotoProduto';
 import { MARCAS, marcaPorSlug } from '@/componentes/dados-marcas';
-import { brl } from '@/componentes/formato';
+import { brl, dinheiro } from '@/componentes/formato';
 import { ESCALAS } from '@/src/logica/escalas';
 import estilos from './marca.module.css';
 
@@ -99,7 +99,9 @@ export default async function PaginaMarca({ params }: { params: Promise<{ marca:
                       {mat.tipo} · {mat.nivel}
                     </span>
                   </span>
-                  <span className={`mono ${estilos.cartaoPreco}`}>{brl(mat.preco)}</span>
+                  <span className={`mono ${estilos.cartaoPreco}`}>
+                    {dinheiro(mat.preco, mat.moeda)}
+                  </span>
                 </Link>
               </li>
             ))}

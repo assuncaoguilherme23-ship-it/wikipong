@@ -11404,6 +11404,38 @@
         "tag": "13 avaliações, nota 9,3",
         "frase": "R$ 880 — a borracha mais cara do catálogo inteiro. A Zyre é a linha nova da Butterfly, e o Revspin já registra 13 avaliações com nota 9,3."
       }
+    },
+    {
+      "id": "joola-calderano-ary-c",
+      "nome": "Hugo Calderano ARY-C",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 218,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A lâmina que o Calderano joga de verdade",
+        "frase": "É esta a madeira do número 8 do mundo — e não a AW-7 nem a KL-C Inner, que são as da linha dele que chegam ao Brasil. Cinco camadas de madeira com duas de fibra ARY-C por dentro. US$ 218 lá fora, sem venda por aqui."
+      }
+    },
+    {
+      "id": "dhs-w968",
+      "nome": "W968 Hurricane Long 5 National",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 800,
+      "moeda": "USD",
+      "rating": 4.8,
+      "reviews": 17,
+      "simples": {
+        "tag": "A do Ma Long — US$ 800",
+        "frase": "Nota 9,6 com 17 avaliações. É a versão NATIONAL: o lote separado para a seleção chinesa. A Hurricane Long 5 comum, essa sim de prateleira, tem 86 avaliações e a mesma nota — por uma fração do preço."
+      }
     }
   ]
 }

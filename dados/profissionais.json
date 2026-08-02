@@ -10,7 +10,8 @@
       "estilo": "Ataque potente dos dois lados, com muita mobilidade",
       "destaque": "O maior nome da história do tênis de mesa brasileiro e um dos melhores do mundo.",
       "lamina": {
-        "nome": "JOOLA Hugo Calderano ARY-C"
+        "nome": "JOOLA Hugo Calderano ARY-C",
+        "materialId": "joola-calderano-ary-c"
       },
       "forehand": {
         "nome": "JOOLA Trinity Charged (assinatura Hugo Calderano)",
@@ -22,7 +23,7 @@
       },
       "fonte": "https://tabletennis-reference.com/player/detail/134",
       "consultadoEm": "2026-07-23",
-      "nota": "Trocou a XIOM pela JOOLA em 2026 e hoje joga a linha de assinatura dele. As duas borrachas Trinity já estão no catálogo; a lâmina ARY-C não — a loja brasileira vende a AW-7, a KL-C Inner e a Infinity Carbon da mesma linha, que são outras madeiras. Antes da JOOLA, jogou anos com equipamento XIOM."
+      "nota": "Trocou a XIOM pela JOOLA em 2026 e hoje joga a linha de assinatura dele. A raquete inteira está no catálogo — a lâmina ARY-C entra com preço em dólar porque não é vendida no Brasil: por aqui a loja tem a AW-7, a KL-C Inner e a Infinity Carbon da mesma linha, que são outras madeiras. Antes da JOOLA, jogou anos com equipamento XIOM."
     },
     {
       "id": "bruna-takahashi",
@@ -57,7 +58,8 @@
       "estilo": "Ofensivo completo — considerado o jogo mais equilibrado da história",
       "destaque": "Bicampeão olímpico de simples e o jogador mais vitorioso de todos os tempos.",
       "lamina": {
-        "nome": "DHS W968 (no varejo, a cousin é a Hurricane Long 5)"
+        "nome": "DHS W968 Hurricane Long 5 National",
+        "materialId": "dhs-w968"
       },
       "forehand": {
         "nome": "DHS Hurricane 3 (versão National, esponja azul)",
@@ -69,7 +71,7 @@
       },
       "fonte": "https://pingsunday.com/ma-long-equipment/",
       "consultadoEm": "2026-07-23",
-      "nota": "Lâmina W968 é personalizada e não é vendida ao público na forma idêntica. A Hurricane 3 dele é a National, feita sob medida — a nossa ficha é da Hurricane 3 Neo, a prima de varejo mais próxima."
+      "nota": "A W968 é a lâmina de seleção — no catálogo com preço em dólar, porque não se vende no Brasil. A Hurricane 3 dele também é National, feita sob medida; a nossa ficha é da Hurricane 3 Neo, a prima de varejo mais próxima."
     },
     {
       "id": "fan-zhendong",

@@ -46,7 +46,10 @@ function nomesDeMarca(): string[] {
 
 function montar(nome: string): Marca {
   const materiais = MATERIAIS.filter((m) => m.marca === nome);
-  const precos = materiais.map((m) => m.preco);
+  /* A faixa é em REAIS, então só entra nela quem tem preço em reais. Material
+     internacional (D-13, emenda de 2026-08-02) traz o preço na moeda de origem;
+     jogar US$ 218 num "a partir de R$" daria um mínimo falso E na moeda errada. */
+  const precos = materiais.filter((m) => m.moeda === undefined).map((m) => m.preco);
 
   // Escalas de dureza que as fichas de fabricante desta marca realmente citam.
   const escalas = new Set<string>();

@@ -2504,6 +2504,14 @@
       "escala": 10,
       "avaliacoes": 13,
       "consultadoEm": "2026-08-01"
+    },
+    "dhs-w968": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/dhs-w968-hurricane-long-5-national.html",
+      "nota": 9.6,
+      "escala": 10,
+      "avaliacoes": 17,
+      "consultadoEm": "2026-08-02"
     }
   }
 }

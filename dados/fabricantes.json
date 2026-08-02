@@ -11115,6 +11115,38 @@
         }
       ],
       "nota": "A loja não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha aparecia como lacuna havia vários lotes, e não por erro do levantamento: a loja a tinha ESGOTADA, e por D-13 material sem preço real verificado não entra no catálogo. Ela entrou no dia em que foi reposta."
+    },
+    "joola-calderano-ary-c": {
+      "confianca": "oficial",
+      "fonte": "https://joola.de/en/products/joola-blade-hugo-calderano-ary-c",
+      "consultadoEm": "2026-08-02",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira 5+2, com fibra ARY-C em posição interna"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. NÃO É VENDIDA NO BRASIL. O preço está em dólar porque é a moeda em que foi conferido; converter para real daria um número que muda todo dia e que ninguém vai pagar, já que importar tem frete e imposto que o câmbio não cobre. Por não estar em reais, ela fica fora do filtro e da ordenação por preço do catálogo. Foto e ficha do site da JOOLA; o preço de US$ 218 foi lido na tabletennisstore.eu. Nenhuma avaliação no Revspin ainda — a lâmina é recente, e por isso ela entra sem nota da comunidade."
+    },
+    "dhs-w968": {
+      "confianca": "revendedor",
+      "fonte": "https://www.paddlepalace.com/DHS-Hurricane-Long-5-National-W968/productinfo/SCHL5N/",
+      "consultadoEm": "2026-08-02",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira 5+2 com fibra arylate-carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. NÃO É VENDIDA NO BRASIL. O preço está em dólar porque é a moeda em que foi conferido; converter para real daria um número que muda todo dia e que ninguém vai pagar, já que importar tem frete e imposto que o câmbio não cobre. Por não estar em reais, ela fica fora do filtro e da ordenação por preço do catálogo. Foto e preço da Paddle Palace, nos Estados Unidos. Vale o aviso: a Hurricane Long 5 de prateleira tem a MESMA nota na comunidade (9,6) com 86 avaliações contra 17, e custa uma fração dos US$ 800. O que se paga aqui é a seleção de lote, não desempenho comprovado."
     }
   }
 }

@@ -31,6 +31,13 @@
 -- pelo próprio banco quando a DDL acontece, não por alguém chamar a função —
 -- então revogar o EXECUTE não desliga a proteção.
 
+-- O `revoke ... from public` É O QUE RESOLVE, e a primeira versão deste arquivo
+-- não tinha. No PostgreSQL, toda função nasce com EXECUTE concedido a PUBLIC —
+-- o pseudo-papel que TODO mundo herda. Revogar de `anon` e `authenticated`
+-- não tira nada: eles continuam podendo executar pela herança do PUBLIC.
+-- Foi por isso que os dois avisos continuaram no painel depois da primeira
+-- rodada.
+revoke execute on function public.rls_auto_enable() from public;
 revoke execute on function public.rls_auto_enable() from anon, authenticated;
 
 -- Para conferir que o gatilho continua de pé (deve devolver uma linha):

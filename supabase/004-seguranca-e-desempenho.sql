@@ -35,6 +35,10 @@ as $$
   select exists (select 1 from public.admins where usuario_id = (select auth.uid()));
 $$;
 
+-- REVOGAR DO PUBLIC PRIMEIRO. Toda função no PostgreSQL nasce com EXECUTE
+-- concedido a PUBLIC, o pseudo-papel que todos herdam. Tirar de `anon` sem
+-- tirar do PUBLIC não muda nada — ele continua podendo executar pela herança.
+revoke execute on function public.eh_admin() from public;
 revoke execute on function public.eh_admin() from anon;
 grant execute on function public.eh_admin() to authenticated;
 

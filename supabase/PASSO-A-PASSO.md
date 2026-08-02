@@ -263,6 +263,7 @@ que tem que ser.
 | O site parou de mostrar avaliações do nada | Projeto pausado por inatividade — clique em *Restore* |
 | Alerta vermelho **Security Definer View** | Rode o `003-conserta-fila.sql` (Parte 2) |
 | Aviso **Signed-In / Public Can Execute SECURITY DEFINER Function** | Rode o `004` (para a `eh_admin`) e o `005` (para a `rls_auto_enable`) |
+| O aviso de SECURITY DEFINER **continua depois de rodar** | Falta revogar do `PUBLIC`. Toda função no Postgres nasce com EXECUTE concedido a ele, e tirar de `anon` não basta. As versões atuais do `004` e do `005` já fazem isso |
 
 ---
 

@@ -35,6 +35,23 @@
  */
 import { readFileSync } from 'node:fs';
 
+/**
+ * O que NAO e' material de jogo, e por isso nunca entra no catalogo.
+ *
+ * Existe como constante porque estava copiado em quatro marcas — e regex
+ * copiada e' regex consertada num lugar e esquecida nos outros tres. Foi
+ * exatamente o que aconteceu: a lista original nao tinha `moeda` nem
+ * `adesivo`, e a AmericaTT vende moeda de arbitro da Nittaku e adesivo
+ * protetor da Victas. Os dois entraram no relatorio como LAMINA.
+ *
+ * O padrao do erro se repete: acessorio com nome fora da lista conhecida cai
+ * no ramo padrao do `tipo()`, que chuta 'Lâmina'. Ja' aconteceu com o estilete
+ * da Donic (R$ 35, uma ferramenta de cortar borracha) e com as Helix e
+ * BlueGrip, que sao BORRACHA e viraram lamina. Quando aparecer algo estranho
+ * no relatorio, o primeiro lugar pra olhar e' aqui.
+ */
+const NAO_E_MATERIAL =
+  /raqueteira|capa|bola|cola|rede|mesa-de-|kit|pino|anti|bolsa|fita|meia|side-tape|limpador|calcado|estilete|moeda|adesivo|protetor|toalha|camisa|bermuda|short|munhequeira|sapato|marcador|placar|contador|suporte|expositor|caneleira|mochila|garrafa/;
 /** Onde cada marca é vendida no Brasil, e como ler a listagem. */
 const FONTES = {
   xiom: {
@@ -98,6 +115,130 @@ const FONTES = {
       if (!/palio/.test(slug)) return null;
       /* OX = sem esponja, pinos longos. Fora da colheita por decisao do fundador. */
       if (/-ox\b|pino|anti/.test(slug)) return null;
+      return 'Borracha';
+    },
+  },
+  /*
+   * ── AS SETE MARCAS NOVAS ──────────────────────────────────────────────
+   * Cada uma foi ancorada na loja que mais tem dela, medido por contagem de
+   * produtos antes de escrever isto. O numero entre parenteses e' o que a
+   * pagina 1 mostrava; o total costuma ser maior, porque a listagem pagina.
+   *
+   *   joola   -> Tenis de Mesa Store (42)   andro  -> AmericaTT (55)
+   *   victas  -> AmericaTT (54)             nittaku-> AmericaTT (55)
+   *   sanwei  -> OperaTT (40)               yinhe  -> Tenis de Mesa Store (49)
+   *   729     -> AmericaTT (22)
+   *
+   * Pinos e anti-spin ficam de fora em todas, por decisao do fundador. Nas
+   * marcas chinesas isso pesa mais: a Yinhe e a 729 tem linha grande de pinos.
+   */
+  joola: {
+    loja: 'Tênis de Mesa Store',
+    url: (p) => `https://www.tenisdemesastore.com.br/marca/joola.html?pagina=${p}`,
+    marcaNoTitulo: true,
+    tipo: (slug) => {
+      if (/anti-spin|anti-power|pino|long|montada|kit|raqueteira|case/.test(slug)) return null;
+      if (slug.startsWith('borracha-')) return 'Borracha';
+      /* A loja escreve o slug de lamina de pelo menos cinco jeitos, incluindo
+         'raquete-clssica' com erro de digitacao dela. Exigir o padrao certinho
+         perdia quatro de sete. Aqui basta comecar com raquete-, ja' que kit,
+         montada e raqueteira sairam no filtro acima. */
+      if (/^(madeira|raquete)/.test(slug)) return 'Lâmina';
+      return null;
+    },
+  },
+  andro: {
+    loja: 'AmericaTT',
+    url: (p) => `https://americatt.net/marca/andro/${p > 1 ? `page/${p}/` : ''}`,
+    marcaNoTitulo: true,
+    tipo: (slug) => {
+      if (!/andro/.test(slug)) return null;
+      if (NAO_E_MATERIAL.test(slug)) return null;
+      if (slug.startsWith('borracha-')) return 'Borracha';
+      if (slug.startsWith('madeira-')) return 'Lâmina';
+      if (slug.startsWith('raquete-')) return null;
+      /* Linhas de BORRACHA da Andro. O que nao estiver aqui cai como lamina —
+         mesmo ramo padrao que ja' errou com a Helix e a BlueGrip, entao
+         conferir no indice /rubber/ do Revspin antes de confiar. */
+      const LINHAS_DE_BORRACHA =
+        /rasant|hexer|rasanter|plaxon|blowfish|impuls|good|nuzn/;
+      return LINHAS_DE_BORRACHA.test(slug) ? 'Borracha' : 'Lâmina';
+    },
+  },
+  victas: {
+    loja: 'AmericaTT',
+    url: (p) => `https://americatt.net/marca/victas/${p > 1 ? `page/${p}/` : ''}`,
+    marcaNoTitulo: true,
+    tipo: (slug) => {
+      if (!/victas/.test(slug)) return null;
+      if (NAO_E_MATERIAL.test(slug)) return null;
+      if (slug.startsWith('borracha-')) return 'Borracha';
+      if (slug.startsWith('madeira-')) return 'Lâmina';
+      if (slug.startsWith('raquete-')) return null;
+      const LINHAS_DE_BORRACHA = /ventus|v-?[0-9]|curl|spectol|triple/;
+      return LINHAS_DE_BORRACHA.test(slug) ? 'Borracha' : 'Lâmina';
+    },
+  },
+  nittaku: {
+    loja: 'AmericaTT',
+    url: (p) => `https://americatt.net/marca/nittaku/${p > 1 ? `page/${p}/` : ''}`,
+    marcaNoTitulo: true,
+    tipo: (slug) => {
+      if (!/nittaku/.test(slug)) return null;
+      if (NAO_E_MATERIAL.test(slug)) return null;
+      if (slug.startsWith('borracha-')) return 'Borracha';
+      if (slug.startsWith('madeira-')) return 'Lâmina';
+      if (slug.startsWith('raquete-')) return null;
+      const LINHAS_DE_BORRACHA = /fastarc|hurricane|moristo|narucross|renanos|factive|jubilee/;
+      return LINHAS_DE_BORRACHA.test(slug) ? 'Borracha' : 'Lâmina';
+    },
+  },
+  sanwei: {
+    loja: 'OperaTT',
+    url: (p) => `https://www.operatt.com.br/marca/sanwei.html?pagina=${p}`,
+    marcaNoTitulo: true,
+    tipo: (slug) => {
+      if (/pino|anti|montada|raqueteira|kit|bola/.test(slug)) return null;
+      if (slug.startsWith('borracha-')) return 'Borracha';
+      /* A loja escreve o slug de lamina de pelo menos cinco jeitos, incluindo
+         'raquete-clssica' com erro de digitacao dela. Exigir o padrao certinho
+         perdia quatro de sete. Aqui basta comecar com raquete-, ja' que kit,
+         montada e raqueteira sairam no filtro acima. */
+      if (/^(madeira|raquete)/.test(slug)) return 'Lâmina';
+      return null;
+    },
+  },
+  yinhe: {
+    loja: 'Tênis de Mesa Store',
+    /* Yinhe e Galaxy sao a MESMA marca — a fabrica usa os dois nomes, e as
+       lojas brasileiras alternam entre eles. Sem esta folga, metade do
+       catalogo apareceria como lacuna ja' tendo sido colhida. */
+    familia: ['galaxy', 'yinhe'],
+    url: (p) => `https://www.tenisdemesastore.com.br/marca/yinhe.html?pagina=${p}`,
+    marcaNoTitulo: true,
+    tipo: (slug) => {
+      if (/anti-spin|anti-power|pino|long|montada|kit|raqueteira/.test(slug)) return null;
+      if (slug.startsWith('borracha-')) return 'Borracha';
+      /* A loja escreve o slug de lamina de pelo menos cinco jeitos, incluindo
+         'raquete-clssica' com erro de digitacao dela. Exigir o padrao certinho
+         perdia quatro de sete. Aqui basta comecar com raquete-, ja' que kit,
+         montada e raqueteira sairam no filtro acima. */
+      if (/^(madeira|raquete)/.test(slug)) return 'Lâmina';
+      return null;
+    },
+  },
+  '729': {
+    loja: 'AmericaTT',
+    /* A marca aparece como '729' e como 'Friendship 729' — sao a mesma. */
+    familia: ['friendship'],
+    url: (p) => `https://americatt.net/marca/729/${p > 1 ? `page/${p}/` : ''}`,
+    marcaNoTitulo: true,
+    tipo: (slug) => {
+      if (!/729|friendship/.test(slug)) return null;
+      if (NAO_E_MATERIAL.test(slug)) return null;
+      if (slug.startsWith('borracha-')) return 'Borracha';
+      if (slug.startsWith('madeira-')) return 'Lâmina';
+      if (slug.startsWith('raquete-')) return null;
       return 'Borracha';
     },
   },
@@ -329,7 +470,17 @@ async function paginas(fonte, marca) {
     const re = /<a[^>]+href="https?:\/\/[^"/]+\/([^"?#]+?)"(?:[^>]*title="([^"]+)")?/g;
     let m;
     while ((m = re.exec(html)) !== null) {
-      const tipo = fonte.tipo(m[1]);
+      /*
+       * MINÚSCULA ANTES DE CLASSIFICAR, e isto não é detalhe.
+       *
+       * A Tênis de Mesa Store cadastra alguns produtos com o slug capitalizado
+       * ("Raquete-Classineta-Yasaka-Sweden-Classic-Allround"), e TODAS as regras
+       * de `tipo()` são escritas em minúscula. Sem normalizar, essas linhas
+       * caíam como "não é material" e sumiam do relatório — o que é o pior
+       * resultado possível numa ferramenta que existe pra dizer o que falta:
+       * ela respondia "sem lacuna" sobre produtos que nunca chegou a ver.
+       */
+      const tipo = fonte.tipo(m[1].toLowerCase());
       if (!tipo) continue;
       const nome = m[2] ? decodeHtml(m[2]).trim() : m[1].replace(/\/$/, '').replace(/-/g, ' ');
       /* Cada card tem VÁRIOS links para o mesmo produto (foto, nome, "Ver

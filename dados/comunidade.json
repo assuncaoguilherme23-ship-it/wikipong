@@ -1688,6 +1688,94 @@
       "escala": 10,
       "avaliacoes": 5,
       "consultadoEm": "2026-08-01"
+    },
+    "yinhe-mercury-ii": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/yinhe-galaxy-mercury-ii.html",
+      "nota": 8.6,
+      "escala": 10,
+      "avaliacoes": 106,
+      "consultadoEm": "2026-08-01"
+    },
+    "yinhe-big-dipper": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/rubber/galaxy-yinhe-big-dipper.html",
+      "nota": 8.9,
+      "escala": 10,
+      "avaliacoes": 61,
+      "consultadoEm": "2026-08-01"
+    },
+    "yinhe-v14-pro": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/galaxy-yinhe-venus-v-14-pro.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 68,
+      "consultadoEm": "2026-08-01"
+    },
+    "yinhe-t11s": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/yinhe-t11s.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 28,
+      "consultadoEm": "2026-08-01"
+    },
+    "yinhe-mercury-13": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/galaxy-yinhe-mercury-y-13.html",
+      "nota": 9.0,
+      "escala": 10,
+      "avaliacoes": 26,
+      "consultadoEm": "2026-08-01"
+    },
+    "yinhe-j1": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/yinhe-galaxy-j-1.html",
+      "nota": 8.3,
+      "escala": 10,
+      "avaliacoes": 20,
+      "consultadoEm": "2026-08-01"
+    },
+    "yinhe-980": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/galaxy-980.html",
+      "nota": 9.3,
+      "escala": 10,
+      "avaliacoes": 18,
+      "consultadoEm": "2026-08-01"
+    },
+    "yinhe-988": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/yinhe-galaxy-988.html",
+      "nota": 9.1,
+      "escala": 10,
+      "avaliacoes": 12,
+      "consultadoEm": "2026-08-01"
+    },
+    "yinhe-985": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/yinhe-galaxy-985.html",
+      "nota": 9.2,
+      "escala": 10,
+      "avaliacoes": 7,
+      "consultadoEm": "2026-08-01"
+    },
+    "yinhe-989": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/galaxy-yinhe-989.html",
+      "nota": 8.8,
+      "escala": 10,
+      "avaliacoes": 6,
+      "consultadoEm": "2026-08-01"
+    },
+    "yinhe-t1s": {
+      "fonte": "Revspin",
+      "url": "https://revspin.net/blade/yinhe-t-1s.html",
+      "nota": 9.5,
+      "escala": 10,
+      "avaliacoes": 5,
+      "consultadoEm": "2026-08-01"
     }
   }
 }

@@ -225,7 +225,17 @@ const FONTES = {
     /* Yinhe e Galaxy sao a MESMA marca — a fabrica usa os dois nomes, e as
        lojas brasileiras alternam entre eles. Sem esta folga, metade do
        catalogo apareceria como lacuna ja' tendo sido colhida. */
-    familia: ['galaxy', 'yinhe'],
+    /* Yinhe e Galaxy sao a MESMA marca — a fabrica usa os dois nomes.
+       O resto da lista e' ADJETIVO DE VITRINE que a loja enfia no titulo:
+       'Borracha Chinesa Pegajosa - Yinhe Big Dipper Tensionada' para a que o
+       catalogo chama de 'Big Dipper'. Nenhuma dessas palavras e' nome de
+       modelo; sem a folga, oito materiais ja' colhidos voltavam como lacuna. */
+    familia: ['galaxy', 'yinhe', 'chinesa', 'pegajosa', 'tensionada', 'moxa',
+              'aprovado', 'ittf', 'hibrida', 'cato', 'cateiro', 'forehand',
+              'velocidade', 'ofensiva', 'folha', 'unica', 'azul', 'efeito',
+              'carbono', 'alc', 'off', 'for', 'defensiva', 'profissional', '40',
+              /* o limpador converte "+" em "plus": Off+ vira "off plus". */
+              'plus'],
     url: (p) => `https://www.tenisdemesastore.com.br/marca/yinhe.html?pagina=${p}`,
     marcaNoTitulo: true,
     tipo: (slug) => {

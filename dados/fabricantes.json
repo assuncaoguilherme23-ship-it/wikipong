@@ -7243,6 +7243,318 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. NOME ENCURTADO PELA LOJA: o Revspin a registra como \"Surge Prism\"; a OperaTT vende como \"Prism\". É a mesma lâmina — a linha Surge da Sanwei. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "yinhe-mercury-ii": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-tenis-de-mesa-yinhe-mercury-ii-moxa-aprovado-ittf-2025-02-14-13-33-13",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, homologada pela ITTF"
+        }
+      ],
+      "nota": "A loja não declara a dureza desta borracha; ela entra sem a régua unificada. A loja acrescenta \"Moxa\" ao nome; o Revspin registra só \"Mercury II\", e não há outra Mercury II com que confundir. A amostra foi atribuída."
+    },
+    "yinhe-big-dipper": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-chinesa-pegajosa-yinhe-big-dipper-tensionada",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente chinesa, tensionada"
+        }
+      ],
+      "nota": "A loja não declara a dureza desta borracha; ela entra sem a régua unificada. O Revspin tem cinco Big Dipper (comum, II, III, IV e 5). A loja vende só \"Big Dipper Tensionada\", sem número — atribuí a da versão comum, que é a que tem 61 avaliações. Se a loja estiver vendendo uma das numeradas, a nota muda."
+    },
+    "yinhe-jupiter-3-euro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-pegajosa-yinhe-jupiter-3-euro-tenis-de-mesa-hibrida",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente híbrida"
+        }
+      ],
+      "nota": "A loja não declara a dureza desta borracha; ela entra sem a régua unificada. O Revspin tem \"Jupiter III Euro\" com 4 avaliações e \"Jupiter 3 Asia\" com 30. São versões DIFERENTES — Euro e Asia mudam a esponja. Usar a nota da Asia aqui seria trocar um produto pelo outro, então esta entra sem nota. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "yinhe-big-dipper-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-yinhe-big-dipper-pro-forehand-velocidade-tenis-mesa",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, para forehand"
+        }
+      ],
+      "nota": "A loja não declara a dureza desta borracha; ela entra sem a régua unificada. Não há nenhuma \"Big Dipper Pro\" no Revspin — só a comum e as numeradas. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "yinhe-mars-ii": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-yinhe-mars-ii",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "A loja não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "yinhe-moon-12-blue": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/borracha-yinhe-moon-12-blue-azul-spin-efeito-tenis-de-mesa",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, esponja azul"
+        }
+      ],
+      "nota": "A loja não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "yinhe-v14-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classica-yinhe-v14-pro-carbono-alc-off-tenis-mesa",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + arylate-carbono (ALC), classe OFF+"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O catálogo usa \"V14 Pro\", que é como a loja brasileira vende. O Revspin registra a mesma lâmina como \"Venus V-14 PRO\" — Venus é o nome da linha, que a loja omite."
+    },
+    "yinhe-t11s": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classica-yinhe-galaxy-t11-carbono",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. DOIS NOMES, UMA MARCA: a fábrica usa \"Yinhe\" e \"Galaxy\" indistintamente, e as lojas brasileiras alternam entre os dois. O Revspin registra sob os dois também. É a mesma marca."
+    },
+    "yinhe-mercury-13": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classica-yinhe-mercury-13-fibra-de-vidro",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra de vidro"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja escreve \"Mercury 13\"; o Revspin, \"Mercury Y-13\". Mesma lâmina. PREÇOS QUE NÃO BATEM: a clássica custa R$ 279 e a classineta R$ 249. Registrei o da clássica, que é a listagem conferida."
+    },
+    "yinhe-j1": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-caneta-japonesa-profissional-tenis-de-mesa-yinhe-j-1",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta (penhold) — cabo integrado, não se escolhe"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Caneta japonesa (JPEN), madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "yinhe-980": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-cato-yinhe-980-defensiva",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, classe defensiva"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. A loja a chama de \"cato\" ou \"cateiro\" — gíria brasileira para o estilo defensivo de corte longe da mesa."
+    },
+    "yinhe-988": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-caneta-yinhe-988-carbono",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta (penhold) — cabo integrado, não se escolhe"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Caneta, madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "yinhe-985": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-caneta-yinhe-985",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta (penhold) — cabo integrado, não se escolhe"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Caneta, madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "yinhe-989": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-caneta-yinhe-989-cabo-rotor",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta (penhold) — cabo integrado, não se escolhe"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Caneta, madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "yinhe-t1s": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classica-yinhe-galaxy-t1s-carbono",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. DOIS NOMES, UMA MARCA: a fábrica usa \"Yinhe\" e \"Galaxy\" indistintamente, e as lojas brasileiras alternam entre os dois. O Revspin registra sob os dois também. É a mesma marca."
+    },
+    "yinhe-t2s": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-classica-yinhe-galaxy-t2s-carbono",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. DOIS NOMES, UMA MARCA: a fábrica usa \"Yinhe\" e \"Galaxy\" indistintamente, e as lojas brasileiras alternam entre os dois. O Revspin registra sob os dois também. É a mesma marca. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "yinhe-987": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/yinhe-987-raquete-caneta-chinesa-tenis-de-mesa",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta (penhold) — cabo integrado, não se escolhe"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Caneta chinesa, madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "yinhe-986": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-caneta-chinesa-yinhe-986",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta (penhold) — cabo integrado, não se escolhe"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Caneta chinesa, madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "yinhe-981": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-caneta-yinhe-981",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta (penhold) — cabo integrado, não se escolhe"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Caneta, madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "yinhe-982": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-caneta-yinhe-galaxy-982-hinoki",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta (penhold) — cabo integrado, não se escolhe"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Caneta japonesa, hinoki"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Hinoki é o cipreste japonês usado em lâminas de caneta: leve, macio e caro. É o que explica o preço acima das outras canetas da marca. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "yinhe-kiso-hinoki": {
+      "confianca": "revendedor",
+      "fonte": "https://www.tenisdemesastore.com.br/raquete-caneta-japonesa-yinhe-kiso-hinoki-10mm-ofensiva",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina de caneta (penhold) — cabo integrado, não se escolhe"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Caneta japonesa, folha única de hinoki Kiso, 10 mm"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. FOLHA ÚNICA: não é sanduíche de camadas coladas, é uma tábua só de hinoki da região de Kiso, com 10 mm. Construção tradicional japonesa de caneta, e o motivo do preço. O Revspin tem uma \"Kiso Hinoki V\" com uma avaliação — pode não ser esta, então nenhuma nota foi atribuída. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
     }
   }
 }

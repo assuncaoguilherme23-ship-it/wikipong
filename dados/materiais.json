@@ -7414,6 +7414,321 @@
         "tag": "A mais avaliada das três Surge",
         "frase": "Três avaliações com nota 8,5 — ainda abaixo do nosso piso de cinco, mas é a única das três Surge que alguém avaliou."
       }
+    },
+    {
+      "id": "yinhe-mercury-ii",
+      "nome": "Mercury II",
+      "marca": "Yinhe",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 90,
+      "rating": 4.3,
+      "reviews": 106,
+      "simples": {
+        "tag": "106 avaliações por R$ 90",
+        "frase": "A borracha mais avaliada de todo o catálogo em relação ao preço: 106 pessoas, nota 8,6, e custa R$ 90. É a porta de entrada clássica de quem começa a montar a própria raquete."
+      }
+    },
+    {
+      "id": "yinhe-big-dipper",
+      "nome": "Big Dipper",
+      "marca": "Yinhe",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 229,
+      "rating": 4.45,
+      "reviews": 61,
+      "simples": {
+        "tag": "61 avaliações, aderente chinesa",
+        "frase": "Aderente de escola chinesa com esponja tensionada: giro pesado sem exigir o gesto completo que as chinesas tradicionais pedem."
+      }
+    },
+    {
+      "id": "yinhe-jupiter-3-euro",
+      "nome": "Jupiter 3 Euro",
+      "marca": "Yinhe",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 209,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A quatro avaliações do piso",
+        "frase": "A versão Euro tem 4 avaliações no Revspin; a Asia tem 30. São esponjas diferentes, e a nota de uma não vale pra outra."
+      }
+    },
+    {
+      "id": "yinhe-big-dipper-pro",
+      "nome": "Big Dipper Pro",
+      "marca": "Yinhe",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 309,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da linha Big Dipper",
+        "frase": "R$ 309 contra R$ 229 da comum. A loja a posiciona para o forehand, o lado que costuma pedir mais velocidade."
+      }
+    },
+    {
+      "id": "yinhe-mars-ii",
+      "nome": "Mars II",
+      "marca": "Yinhe",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 169,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Registrada sem nenhuma avaliação",
+        "frase": "Consta do Revspin sem nota e sem avaliação. A Mars V2, que é outra, tem 35."
+      }
+    },
+    {
+      "id": "yinhe-moon-12-blue",
+      "nome": "Moon 12 Blue",
+      "marca": "Yinhe",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 239,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Nota 9,3 com quatro avaliações",
+        "frase": "Falta uma avaliação para o nosso piso de cinco. A Moon 12 comum tem 10 avaliações e nota 8,3 — a Blue é outra esponja."
+      }
+    },
+    {
+      "id": "yinhe-v14-pro",
+      "nome": "V14 Pro",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 589,
+      "rating": 4.65,
+      "reviews": 68,
+      "simples": {
+        "tag": "68 avaliações, a lâmina mais avaliada aqui",
+        "frase": "A Yinhe mais avaliada do catálogo. Construção ALC — a mesma família da Viscaria — por R$ 589, contra mais de R$ 1.700 das japonesas equivalentes."
+      }
+    },
+    {
+      "id": "yinhe-t11s",
+      "nome": "Galaxy T11s",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 339,
+      "rating": 4.55,
+      "reviews": 28,
+      "simples": {
+        "tag": "28 avaliações por R$ 339",
+        "frase": "A T11s é das lâminas de carbono mais recomendadas para quem quer fibra sem gastar o preço de uma japonesa."
+      }
+    },
+    {
+      "id": "yinhe-mercury-13",
+      "nome": "Mercury Y-13",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 279,
+      "rating": 4.5,
+      "reviews": 26,
+      "simples": {
+        "tag": "Fibra de vidro em vez de carbono",
+        "frase": "Fibra de vidro é mais macia que o carbono: acrescenta velocidade sem tirar tanto do toque. 26 avaliações, nota 9,0."
+      }
+    },
+    {
+      "id": "yinhe-j1",
+      "nome": "J-1",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 349,
+      "rating": 4.15,
+      "reviews": 20,
+      "simples": {
+        "tag": "A caneta mais avaliada aqui",
+        "frase": "20 avaliações. Caneta japonesa — o cabo é integrado à madeira e não se escolhe, diferente das clássicas."
+      }
+    },
+    {
+      "id": "yinhe-980",
+      "nome": "980 Defensiva",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 329,
+      "rating": 4.65,
+      "reviews": 18,
+      "simples": {
+        "tag": "Nota 9,3 entre defensores",
+        "frase": "18 avaliações. Lâmina de defesa: lenta de propósito, para quem corta de longe e devolve a velocidade do adversário."
+      }
+    },
+    {
+      "id": "yinhe-988",
+      "nome": "988 Carbono",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 319,
+      "rating": 4.55,
+      "reviews": 12,
+      "simples": {
+        "tag": "Caneta com carbono, 12 avaliações",
+        "frase": "Nota 9,1. Carbono em lâmina de caneta é combinação menos comum, e a comunidade aprova."
+      }
+    },
+    {
+      "id": "yinhe-985",
+      "nome": "985",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 309,
+      "rating": 4.6,
+      "reviews": 7,
+      "simples": {
+        "tag": "Sete avaliações, nota 9,2",
+        "frase": "Uma das canetas de madeira pura mais bem avaliadas da marca."
+      }
+    },
+    {
+      "id": "yinhe-989",
+      "nome": "989 Cabo Rotor",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 309,
+      "rating": 4.4,
+      "reviews": 6,
+      "simples": {
+        "tag": "Seis avaliações, nota 8,8",
+        "frase": "O \"cabo rotor\" é o formato de punho que a loja destaca no nome."
+      }
+    },
+    {
+      "id": "yinhe-t1s",
+      "nome": "Galaxy T1s",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 359,
+      "rating": 4.75,
+      "reviews": 5,
+      "simples": {
+        "tag": "Nota 9,5, no limite do piso",
+        "frase": "Cinco avaliações — exatamente o mínimo para publicarmos média. A mais cara das três T."
+      }
+    },
+    {
+      "id": "yinhe-t2s",
+      "nome": "Galaxy T2s",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 339,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A T do meio, sem amostra",
+        "frase": "Uma avaliação no Revspin, nota 8,0. As irmãs T1s e T11s têm 5 e 28."
+      }
+    },
+    {
+      "id": "yinhe-987",
+      "nome": "987",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 319,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Nota 9,4 com três avaliações",
+        "frase": "Abaixo do piso por duas avaliações, mas com a nota mais alta entre as canetas da marca."
+      }
+    },
+    {
+      "id": "yinhe-986",
+      "nome": "986",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 299,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Duas avaliações",
+        "frase": "Nota 8,6 com duas avaliações. Caneta chinesa — o cabo é curto e o polegar e o indicador seguram a frente da lâmina."
+      }
+    },
+    {
+      "id": "yinhe-981",
+      "nome": "981",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 309,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A uma avaliação do piso",
+        "frase": "Quatro avaliações, nota 8,3 — falta uma para publicarmos média."
+      }
+    },
+    {
+      "id": "yinhe-982",
+      "nome": "982 Hinoki",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 659,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Hinoki por R$ 659",
+        "frase": "Uma avaliação no Revspin, sem nota publicada."
+      }
+    },
+    {
+      "id": "yinhe-kiso-hinoki",
+      "nome": "Kiso Hinoki 10mm",
+      "marca": "Yinhe",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1890,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "R$ 1.890 — o material mais caro do catálogo",
+        "frase": "A mais cara de todo o WikiPong. Uma tábua única de cipreste japonês de 10 mm, sem colagem de camadas — o oposto de tudo que existe no catálogo."
+      }
     }
   ]
 }

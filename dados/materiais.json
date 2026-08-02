@@ -7729,6 +7729,891 @@
         "tag": "R$ 1.890 — o material mais caro do catálogo",
         "frase": "A mais cara de todo o WikiPong. Uma tábua única de cipreste japonês de 10 mm, sem colagem de camadas — o oposto de tudo que existe no catálogo."
       }
+    },
+    {
+      "id": "andro-rasanter-r47",
+      "nome": "Rasanter R47",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 367,
+      "rating": 4.65,
+      "reviews": 93,
+      "simples": {
+        "tag": "93 avaliações — a mais avaliada da Andro",
+        "frase": "A borracha mais avaliada de toda a Andro aqui. R47 é o meio da linha Rasanter R: dureza 47, que é onde a maioria dos jogadores de ataque se encontra."
+      }
+    },
+    {
+      "id": "andro-rasanter-r42",
+      "nome": "Rasanter R42",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 367,
+      "rating": 4.6,
+      "reviews": 67,
+      "simples": {
+        "tag": "67 avaliações, esponja mais macia",
+        "frase": "Dureza 42 — cinco graus mais macia que a R47. Esponja macia perdoa mais o toque impreciso."
+      }
+    },
+    {
+      "id": "andro-rasanter-r48",
+      "nome": "Rasanter R48",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 411,
+      "rating": 4.65,
+      "reviews": 52,
+      "simples": {
+        "tag": "52 avaliações",
+        "frase": "A mais cara da linha R, R$ 411. Um grau mais dura que a R47."
+      }
+    },
+    {
+      "id": "andro-rasanter-r37",
+      "nome": "Rasanter R37",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 367,
+      "rating": 4.6,
+      "reviews": 44,
+      "simples": {
+        "tag": "A mais macia da linha R",
+        "frase": "Dureza 37, a mais macia das Rasanter R. 44 avaliações — a escolha de quem quer a linha de topo sem a exigência técnica das duras."
+      }
+    },
+    {
+      "id": "andro-rasanter-r50",
+      "nome": "Rasanter R50",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 367,
+      "rating": 4.7,
+      "reviews": 43,
+      "simples": {
+        "tag": "Nota 9,4 com 43 avaliações",
+        "frase": "Dureza 50. A partir daqui a esponja pede gesto completo — não perdoa toque curto."
+      }
+    },
+    {
+      "id": "andro-rasanter-r53",
+      "nome": "Rasanter R53",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 367,
+      "rating": 4.7,
+      "reviews": 38,
+      "simples": {
+        "tag": "A mais dura da linha R",
+        "frase": "Dureza 53, o extremo da linha. 38 avaliações com nota 9,4."
+      }
+    },
+    {
+      "id": "andro-rasanter-v42",
+      "nome": "Rasanter V42",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 330,
+      "rating": 4.55,
+      "reviews": 22,
+      "simples": {
+        "tag": "A linha V, mais rápida",
+        "frase": "A linha V troca parte do giro por velocidade direta, comparada à R de mesma dureza."
+      }
+    },
+    {
+      "id": "andro-rasanter-v47",
+      "nome": "Rasanter V47",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 367,
+      "rating": 4.45,
+      "reviews": 22,
+      "simples": {
+        "tag": "A V dura",
+        "frase": "Nota 8,9 — a mais baixa entre as Rasanter avaliadas, ainda assim alta."
+      }
+    },
+    {
+      "id": "andro-rasanter-c48",
+      "nome": "Rasanter C48",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 364,
+      "rating": 4.7,
+      "reviews": 18,
+      "simples": {
+        "tag": "A linha C, aderente",
+        "frase": "A linha C é a resposta da Andro às aderentes chinesas: superfície pegajosa com esponja europeia tensionada por baixo."
+      }
+    },
+    {
+      "id": "andro-rasanter-c53",
+      "nome": "Rasanter C53",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 364,
+      "rating": 4.6,
+      "reviews": 9,
+      "simples": {
+        "tag": "A C mais dura",
+        "frase": "Nove avaliações. Dureza 53 com superfície aderente — o perfil mais exigente da marca."
+      }
+    },
+    {
+      "id": "andro-rasanter-c45",
+      "nome": "Rasanter C45",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 364,
+      "rating": 4.7,
+      "reviews": 5,
+      "simples": {
+        "tag": "Cinco avaliações, no limite",
+        "frase": "Exatamente o piso de cinco avaliações. Nota 9,4."
+      }
+    },
+    {
+      "id": "andro-hexer",
+      "nome": "Hexer",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 330,
+      "rating": 4.5,
+      "reviews": 47,
+      "simples": {
+        "tag": "47 avaliações, a base da linha",
+        "frase": "A Hexer original. Toda a linha Hexer sai daqui."
+      }
+    },
+    {
+      "id": "andro-hexer-powergrip",
+      "nome": "Hexer Powergrip",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 330,
+      "rating": 4.7,
+      "reviews": 46,
+      "simples": {
+        "tag": "Nota 9,4 — a melhor da linha Hexer",
+        "frase": "46 avaliações. A combinação de superfície com aderência e esponja de força é o que dá o nome."
+      }
+    },
+    {
+      "id": "andro-hexer-duro",
+      "nome": "Hexer Duro",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 293,
+      "rating": 4.55,
+      "reviews": 42,
+      "simples": {
+        "tag": "A Hexer dura, 42 avaliações",
+        "frase": "R$ 293 — a mais barata da linha Hexer, apesar de ser a versão dura."
+      }
+    },
+    {
+      "id": "andro-hexer-grip-sfx",
+      "nome": "Hexer Grip SFX",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 330,
+      "rating": 4.55,
+      "reviews": 40,
+      "simples": {
+        "tag": "SFX = esponja macia",
+        "frase": "SFX na Andro marca a versão de esponja mais macia. 40 avaliações, nota 9,1."
+      }
+    },
+    {
+      "id": "andro-hexer-grip",
+      "nome": "Hexer Grip",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 330,
+      "rating": 4.55,
+      "reviews": 34,
+      "simples": {
+        "tag": "34 avaliações",
+        "frase": "A Hexer com superfície mais aderente — mais giro, um pouco menos velocidade direta."
+      }
+    },
+    {
+      "id": "andro-hexer-powergrip-sfx",
+      "nome": "Hexer Powergrip SFX",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 330,
+      "rating": 4.65,
+      "reviews": 32,
+      "simples": {
+        "tag": "A Powergrip em esponja macia",
+        "frase": "32 avaliações. Mesma superfície da Powergrip com esponja que perdoa mais."
+      }
+    },
+    {
+      "id": "andro-hexer-powersponge",
+      "nome": "Hexer Powersponge",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 330,
+      "rating": 4.35,
+      "reviews": 27,
+      "simples": {
+        "tag": "27 avaliações",
+        "frase": "Nota 8,7 — a mais baixa da linha Hexer entre as avaliadas."
+      }
+    },
+    {
+      "id": "andro-hexer-plus",
+      "nome": "Hexer+",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 330,
+      "rating": 4.6,
+      "reviews": 26,
+      "simples": {
+        "tag": "A Hexer com \"+\"",
+        "frase": "26 avaliações, nota 9,2. O \"+\" marca a revisão da fórmula original."
+      }
+    },
+    {
+      "id": "andro-gtt-45",
+      "nome": "GTT 45",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 270,
+      "rating": 4.35,
+      "reviews": 20,
+      "simples": {
+        "tag": "20 avaliações por R$ 270",
+        "frase": "A linha GTT é o degrau de entrada da Andro. R$ 270 com 20 avaliações e nota 8,7."
+      }
+    },
+    {
+      "id": "andro-impuls-speed",
+      "nome": "Impuls Speed",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 293,
+      "rating": 3.95,
+      "reviews": 14,
+      "simples": {
+        "tag": "A nota mais baixa da marca aqui",
+        "frase": "Nota 7,9 com 14 avaliações — a única Andro do catálogo abaixo de 8. O número honesto vale mais que a omissão: quem gosta de velocidade direta pode gostar, e quem não gosta fica avisado."
+      }
+    },
+    {
+      "id": "andro-impuls-powersponge",
+      "nome": "Impuls Powersponge",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 330,
+      "rating": 4.6,
+      "reviews": 12,
+      "simples": {
+        "tag": "Nota 9,2 contra 7,9 da irmã",
+        "frase": "A mesma linha Impuls, com esponja de força, salta de 7,9 para 9,2 — a esponja muda mais que o nome sugere."
+      }
+    },
+    {
+      "id": "andro-nuzn-55",
+      "nome": "NUZN 55",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 352,
+      "rating": 4.7,
+      "reviews": 12,
+      "simples": {
+        "tag": "A mais dura da linha NUZN",
+        "frase": "Nota 9,4 com 12 avaliações."
+      }
+    },
+    {
+      "id": "andro-good",
+      "nome": "Good!",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 212,
+      "rating": 4.55,
+      "reviews": 12,
+      "simples": {
+        "tag": "R$ 212 com nota 9,1",
+        "frase": "A mais barata da Andro no catálogo, e ainda assim com 12 avaliações e nota 9,1. O nome com exclamação é da marca mesmo."
+      }
+    },
+    {
+      "id": "andro-nuzn-50",
+      "nome": "NUZN 50",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 352,
+      "rating": 4.65,
+      "reviews": 8,
+      "simples": {
+        "tag": "Oito avaliações",
+        "frase": "Nota 9,3. O meio da linha NUZN."
+      }
+    },
+    {
+      "id": "andro-nuzn-48",
+      "nome": "NUZN 48",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 317,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A NUZN mais macia",
+        "frase": "Duas avaliações no Revspin, abaixo do nosso piso. As irmãs 50 e 55 têm 8 e 12."
+      }
+    },
+    {
+      "id": "andro-bype",
+      "nome": "Bype",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 376,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Duas avaliações, sem nota",
+        "frase": "Registrada no Revspin com duas avaliações e sem nota publicada."
+      }
+    },
+    {
+      "id": "andro-bype-sfx",
+      "nome": "Bype SFX",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 376,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Bype de esponja macia",
+        "frase": "Registrada no Revspin sem nenhuma avaliação."
+      }
+    },
+    {
+      "id": "andro-hy-q-42",
+      "nome": "HY-Q 42",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 352,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sem nenhuma avaliação",
+        "frase": "Consta do Revspin sem nota e sem avaliação."
+      }
+    },
+    {
+      "id": "andro-hy-q-48",
+      "nome": "HY-Q 48",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 352,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A HY-Q dura, sem amostra",
+        "frase": "Consta do Revspin sem nota e sem avaliação."
+      }
+    },
+    {
+      "id": "andro-blowfish",
+      "nome": "Blowfish",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 293,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fora do Revspin",
+        "frase": "A loja vende Blowfish e Blowfish+ pelo mesmo preço. Nenhuma das duas está registrada no Revspin."
+      }
+    },
+    {
+      "id": "andro-blowfish-plus",
+      "nome": "Blowfish+",
+      "marca": "Andro",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 293,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A irmã \"+\" da Blowfish",
+        "frase": "Mesmo preço da Blowfish comum, R$ 293. Sem registro na comunidade."
+      }
+    },
+    {
+      "id": "andro-gauzy-sl-off",
+      "nome": "Gauzy SL OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 938,
+      "rating": 4.75,
+      "reviews": 28,
+      "simples": {
+        "tag": "Nota 9,5 com 28 avaliações",
+        "frase": "A lâmina Andro mais avaliada do catálogo, e uma das mais caras: R$ 938."
+      }
+    },
+    {
+      "id": "andro-synteliac-vci-off",
+      "nome": "Synteliac VCI OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1152,
+      "rating": 4.75,
+      "reviews": 22,
+      "simples": {
+        "tag": "R$ 1.152, nota 9,5",
+        "frase": "CI no nome da Andro marca a fibra em posição interna (Carbon Inner): a bola afunda mais na madeira antes de encontrar a fibra."
+      }
+    },
+    {
+      "id": "andro-novacell-off",
+      "nome": "Novacell OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 397,
+      "rating": 4.7,
+      "reviews": 16,
+      "simples": {
+        "tag": "16 avaliações, nota 9,4",
+        "frase": "Madeira pura de classe ofensiva por R$ 397 — das lâminas de melhor amostra por preço aqui."
+      }
+    },
+    {
+      "id": "andro-novacell-off-s",
+      "nome": "Novacell OFF/S",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 397,
+      "rating": 4.7,
+      "reviews": 12,
+      "simples": {
+        "tag": "A Novacell intermediária",
+        "frase": "OFF/S fica entre a OFF e a ALL/S: um pouco menos rápida que a ofensiva pura."
+      }
+    },
+    {
+      "id": "andro-timber-5-all-s",
+      "nome": "Timber 5 ALL/S",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 367,
+      "rating": 4.7,
+      "reviews": 11,
+      "simples": {
+        "tag": "Nota 9,4, classe allround",
+        "frase": "Cinco camadas de madeira em classe allround — o perfil que a maioria deveria usar antes de partir para lâminas ofensivas."
+      }
+    },
+    {
+      "id": "andro-tp-ligna-co-off",
+      "nome": "TP_Ligna CO OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 996,
+      "rating": 4.65,
+      "reviews": 11,
+      "simples": {
+        "tag": "Carbono por fora, R$ 996",
+        "frase": "CO = Carbon Outer: a fibra fica perto da superfície, e a bola sai mais rápido e mais direta."
+      }
+    },
+    {
+      "id": "andro-novacell-all-s",
+      "nome": "Novacell ALL/S",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 397,
+      "rating": 4.7,
+      "reviews": 10,
+      "simples": {
+        "tag": "A Novacell de controle",
+        "frase": "10 avaliações, nota 9,4. Mesmo preço das irmãs OFF: R$ 397."
+      }
+    },
+    {
+      "id": "andro-tp-ligna-ci-off",
+      "nome": "TP_Ligna CI OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 996,
+      "rating": 4.7,
+      "reviews": 10,
+      "simples": {
+        "tag": "Carbono por dentro, mesmo preço da CO",
+        "frase": "R$ 996, igual à CO. O que muda é onde a fibra fica: por dentro, a bola afunda mais antes de sair."
+      }
+    },
+    {
+      "id": "andro-timber-5-off",
+      "nome": "Timber 5 OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 367,
+      "rating": 4.65,
+      "reviews": 9,
+      "simples": {
+        "tag": "A Timber 5 ofensiva",
+        "frase": "Mesmas cinco camadas da ALL/S, montagem mais rápida. Nove avaliações."
+      }
+    },
+    {
+      "id": "andro-timber-7-off",
+      "nome": "Timber 7 OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 397,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete camadas, quatro avaliações",
+        "frase": "Quatro avaliações — falta uma para o nosso piso. Sete camadas dão velocidade sem fibra."
+      }
+    },
+    {
+      "id": "andro-timber-7-off-s",
+      "nome": "Timber 7 OFF/S",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 397,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Timber 7 intermediária",
+        "frase": "Também com quatro avaliações, a uma do piso."
+      }
+    },
+    {
+      "id": "andro-timber-5-def",
+      "nome": "Timber 5 DEF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 501,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Timber defensiva",
+        "frase": "R$ 501, a mais cara das Timber 5. Lâmina de defesa: lenta de propósito."
+      }
+    },
+    {
+      "id": "andro-timber-5-all-s-small-fl",
+      "nome": "Timber 5 ALL/S Small FL",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 348,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cabo pequeno, R$ 348",
+        "frase": "R$ 19 mais barata que a ALL/S comum, com punho reduzido. Boa porta de entrada para jogador jovem."
+      }
+    },
+    {
+      "id": "andro-treiber-cl-off",
+      "nome": "Treiber CL OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 728,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A letra do nome não existe no Revspin",
+        "frase": "R$ 728. O Revspin não tem nenhuma Treiber CL — só CI, CO, FI, FO, K e Z."
+      }
+    },
+    {
+      "id": "andro-treiber-co-all-s-2",
+      "nome": "Treiber CO ALL/S",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 728,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Treiber de controle",
+        "frase": "R$ 728. Versão allround da linha Treiber CO."
+      }
+    },
+    {
+      "id": "andro-treiber-fo-off-s",
+      "nome": "Treiber FO OFF/S",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 588,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A FO intermediária",
+        "frase": "R$ 588. O Revspin registra só a versão OFF pura desta linha."
+      }
+    },
+    {
+      "id": "andro-tp-ligna-def",
+      "nome": "TP_Ligna DEF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 905,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A TP_Ligna defensiva",
+        "frase": "R$ 905. Lâmina de defesa da linha mais cara da Andro."
+      }
+    },
+    {
+      "id": "andro-tp-ligna-basalt-inner-off-2",
+      "nome": "TP_Ligna Basalt Inner OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 975,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fibra de basalto, não carbono",
+        "frase": "R$ 975. Basalto é fibra de rocha: mais elástica que o carbono, com sensação mais próxima da madeira pura."
+      }
+    },
+    {
+      "id": "andro-synteliac-zci-off",
+      "nome": "Synteliac ZCI OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1269,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da Andro: R$ 1.269",
+        "frase": "A lâmina Andro mais cara do catálogo. A irmã VCI, que é outra fibra, tem 22 avaliações e nota 9,5."
+      }
+    },
+    {
+      "id": "andro-gauzy-hl-co-off",
+      "nome": "Gauzy HL CO OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 588,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Gauzy de carbono externo",
+        "frase": "R$ 588, R$ 350 mais barata que a SL. Sem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "andro-kanter-co-off",
+      "nome": "Kanter CO OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 647,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "R$ 647, sem amostra",
+        "frase": "Nenhuma Kanter CO registrada no Revspin."
+      }
+    },
+    {
+      "id": "andro-achanta-ci-off",
+      "nome": "Achanta CI OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 764,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A lâmina do Achanta",
+        "frase": "R$ 764. A linha leva o nome de Achanta, jogador alemão. Registrada no Revspin sem avaliação."
+      }
+    },
+    {
+      "id": "andro-achanta-legacy-off",
+      "nome": "Achanta Legacy OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Legacy do Achanta",
+        "frase": "Registrada no Revspin sem nenhuma avaliação. R$ 529, como as outras três Legacy."
+      }
+    },
+    {
+      "id": "andro-eloi-legacy-off-s",
+      "nome": "Eloi Legacy OFF/S",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma avaliação, nota 8,8",
+        "frase": "Abaixo do nosso piso de cinco. A linha Legacy leva nomes de jogadores da marca."
+      }
+    },
+    {
+      "id": "andro-heister-legacy-off",
+      "nome": "Heister Legacy OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma avaliação, nota 8,0",
+        "frase": "A nota mais baixa entre as quatro Legacy, com uma avaliação só."
+      }
+    },
+    {
+      "id": "andro-wosik-legacy-off",
+      "nome": "Wosik Legacy OFF",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 470,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Legacy mais barata",
+        "frase": "R$ 470, R$ 59 mais barata que as outras Legacy. Uma avaliação, nota 8,3."
+      }
+    },
+    {
+      "id": "andro-tp-ligna-all",
+      "nome": "TP_Ligna ALL",
+      "marca": "Andro",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 763,
+      "rating": 4.5,
+      "reviews": 10,
+      "simples": {
+        "tag": "A TP_Ligna de controle",
+        "frase": "Dez avaliações com nota 9,0. É a versão allround da linha mais cara da Andro — mesma família das CI e CO, sem a pressa delas."
+      }
     }
   ]
 }

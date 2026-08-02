@@ -50,6 +50,7 @@ No menu da esquerda, abra o **SQL Editor** (ícone de terminal).
    buscou nada.
 5. Repita com o arquivo **`supabase/002-login.sql`**.
 6. Repita com **`supabase/003-conserta-fila.sql`**.
+7. Repita com **`supabase/004-seguranca-e-desempenho.sql`**.
 
 > **Se você já rodou o `001` antes de 31/07/2026**, o `003` é obrigatório: a
 > primeira versão tinha uma falha em que a view `fila_moderacao` deixava qualquer
@@ -260,6 +261,7 @@ que tem que ser.
 | Erro de conexão, ou nada carrega | A URL tem `/rest/v1/` ou barra sobrando. Ela acaba em `.supabase.co` |
 | O site parou de mostrar avaliações do nada | Projeto pausado por inatividade — clique em *Restore* |
 | Alerta vermelho **Security Definer View** | Rode o `003-conserta-fila.sql` (Parte 2) |
+| Aviso **Signed-In / Public Can Execute SECURITY DEFINER Function** | Rode o `004`. Se o aviso citar `rls_auto_enable`, leia a Parte 4 do arquivo: essa função não é do WikiPong |
 
 ---
 

@@ -54,11 +54,6 @@ create policy "vejo se eu sou admin"
   on public.admins for select to authenticated
   using (usuario_id = (select auth.uid()));
 
-drop policy if exists "vejo a minha avaliacao mesmo pendente" on public.avaliacoes;
-create policy "vejo a minha avaliacao mesmo pendente"
-  on public.avaliacoes for select to authenticated
-  using (usuario_id = (select auth.uid()));
-
 drop policy if exists "edito a minha avaliacao" on public.avaliacoes;
 create policy "edito a minha avaliacao"
   on public.avaliacoes for update to authenticated
@@ -70,27 +65,16 @@ create policy "apago a minha avaliacao"
   on public.avaliacoes for delete to authenticated
   using (usuario_id = (select auth.uid()));
 
+-- As políticas de SELECT não aparecem aqui: elas são refeitas inteiras na
+-- seção 3, que junta as duplicadas. Recriá-las aqui só para apagá-las três
+-- linhas depois confundiria quem lê.
 drop policy if exists "logado assina o que escreve" on public.avaliacoes;
 create policy "logado assina o que escreve"
   on public.avaliacoes for insert to authenticated
   with check (status = 'pendente'
               and (usuario_id is null or usuario_id = (select auth.uid())));
 
-drop policy if exists "vejo o meu topico mesmo pendente" on public.topicos;
-create policy "vejo o meu topico mesmo pendente"
-  on public.topicos for select to authenticated
-  using (usuario_id = (select auth.uid()));
-
-drop policy if exists "vejo a minha resposta mesmo pendente" on public.respostas;
-create policy "vejo a minha resposta mesmo pendente"
-  on public.respostas for select to authenticated
-  using (usuario_id = (select auth.uid()));
-
-drop policy if exists "perfil e' do dono" on public.perfis;
-create policy "perfil e' do dono"
-  on public.perfis for all to authenticated
-  using (usuario_id = (select auth.uid()))
-  with check (usuario_id = (select auth.uid()));
+-- (a `perfis` é tratada na seção 3, que separa leitura de escrita)
 
 -- ═══════════════════════════════════════════════════════════════════════════
 -- 3. Políticas de leitura duplicadas
@@ -103,6 +87,10 @@ create policy "perfil e' do dono"
 -- Juntando numa só, ele avalia uma expressão. A regra continua idêntica:
 -- aprovado é público; o seu, você vê mesmo pendente; admin vê tudo.
 
+-- O `drop` da política NOVA precisa vir junto: sem ele, rodar este arquivo duas
+-- vezes falha com "policy already exists" — que foi exatamente o que aconteceu
+-- na primeira tentativa, depois de eu escrever "idempotente" no cabeçalho.
+drop policy if exists "leitura de avaliacoes" on public.avaliacoes;
 drop policy if exists "avaliacoes aprovadas sao publicas" on public.avaliacoes;
 drop policy if exists "admin ve tudo em avaliacoes" on public.avaliacoes;
 drop policy if exists "vejo a minha avaliacao mesmo pendente" on public.avaliacoes;
@@ -114,6 +102,7 @@ create policy "leitura de avaliacoes"
     or public.eh_admin()
   );
 
+drop policy if exists "leitura de topicos" on public.topicos;
 drop policy if exists "topicos aprovados sao publicos" on public.topicos;
 drop policy if exists "admin ve tudo em topicos" on public.topicos;
 drop policy if exists "vejo o meu topico mesmo pendente" on public.topicos;
@@ -125,6 +114,34 @@ create policy "leitura de topicos"
     or public.eh_admin()
   );
 
+-- A tabela `perfis` tinha o mesmo problema, e este eu não tinha visto: a
+-- política "perfil é do dono" é FOR ALL — o que inclui SELECT — e convive com
+-- a "perfil é público em leitura". Duas expressões avaliadas em toda leitura.
+-- Separando: o dono manda em escrita, e a leitura é pública numa política só.
+drop policy if exists "perfil e' do dono" on public.perfis;
+drop policy if exists "perfil e' publico em leitura" on public.perfis;
+drop policy if exists "leitura de perfis" on public.perfis;
+drop policy if exists "dono escreve o proprio perfil" on public.perfis;
+drop policy if exists "dono atualiza o proprio perfil" on public.perfis;
+drop policy if exists "dono apaga o proprio perfil" on public.perfis;
+
+create policy "leitura de perfis"
+  on public.perfis for select using (true);
+
+create policy "dono escreve o proprio perfil"
+  on public.perfis for insert to authenticated
+  with check (usuario_id = (select auth.uid()));
+
+create policy "dono atualiza o proprio perfil"
+  on public.perfis for update to authenticated
+  using (usuario_id = (select auth.uid()))
+  with check (usuario_id = (select auth.uid()));
+
+create policy "dono apaga o proprio perfil"
+  on public.perfis for delete to authenticated
+  using (usuario_id = (select auth.uid()));
+
+drop policy if exists "leitura de respostas" on public.respostas;
 drop policy if exists "respostas aprovadas sao publicas" on public.respostas;
 drop policy if exists "admin ve tudo em respostas" on public.respostas;
 drop policy if exists "vejo a minha resposta mesmo pendente" on public.respostas;

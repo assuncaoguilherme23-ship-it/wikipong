@@ -8371,6 +8371,1094 @@
         }
       ],
       "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. Esta lâmina quase ficou de fora da colheita: o slug da loja tem underscore (tp_ligna) e o extrator de endereços só aceitava letras, números e hífen."
+    },
+    "victas-v-01-limber": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-v-01-limber/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-v-15-extra": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-victas-v-15-extra/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-v-22-double-extra": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-v-22-double-extra/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-v-01-stiff": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-v-01-stiff/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada, dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-vs-401": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-vs-401/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-v-15-limber": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-v-15-limber/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-ventus-extra": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-ventus-extra/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada."
+    },
+    "victas-v-11-extra": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-victas-v-11-extra/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-v-01": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-v-01/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-v-15-stiff": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-v-15-stiff/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada, dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-vs-402-double-extra": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-vs-402-double-extra/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-vs-402-limber": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-vs-402-limber/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-v-20-double-extra": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-v-20-double-extra/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-vj-07-stiff": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-vj-07-stiff/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada, dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-triple-double-extra": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-triple-double-extra/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada."
+    },
+    "victas-ventus-stiff": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-ventus-stiff/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada, dura"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada."
+    },
+    "victas-vj-07-regular": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-vj-07-regular/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita."
+    },
+    "victas-triple-extra": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-triple-extra/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada."
+    },
+    "victas-v-20-extra": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/borracha-victas-v-20-extra/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-v-15-sticky": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-v-15-sticky/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-v-15-sticky-soft": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-v-15-sticky-soft/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja macia"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-v-03": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-v-03/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com uma seta (\"V&gt;01\"); o catálogo usa hífen, que é como a loja brasileira vende e como se digita. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-ventus-limber": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-ventus-limber/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-ventus-regular": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-ventus-regular/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-triple-regular": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-triple-regular/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-vo-101": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-vo-101/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A LINHA VO NÃO EXISTE NO REVSPIN: nenhuma VO-101, 102 ou 103 aparece lá. As três entram com ficha, preço real e foto, sem nota da comunidade. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-vo-102": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-vo-102/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Como as outras VO, não consta do Revspin. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-vo-103": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-vo-103/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Como as outras VO, não consta do Revspin. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-koki-niwa-wood": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-koki-niwa-wood/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira pura"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "victas-fire-fall-fc": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-fire-fall-fc/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "victas-koji-matsushita": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-koji-matsushita/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "victas-koji-matsushita-defensive": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-koji-matsushita-defensive/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, classe defensiva"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "victas-zx-gear-in": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-zx-gear-in/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra ZX em posição interna"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "victas-fire-fall-vc": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-fire-fall-vc/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "victas-koji-matsushita-offensive": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-koji-matsushita-offensive/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "victas-liam-pitchford": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-liam-pitchford/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "victas-koki-niwa": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-koki-niwa/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui."
+    },
+    "victas-award-offensive": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-award-offensive/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-award-offensive-light": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-award-offensive-light/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, construção leve"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-balsa-2-5": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-balsa-2-5/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com miolo de balsa"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-balsa-3-5": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-balsa-3-5/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com miolo de balsa"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-balsa-4-5": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-balsa-4-5/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com miolo de balsa"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-balsa-5-5": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-balsa-5-5/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com miolo de balsa"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-balsa-6-5": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-balsa-6-5/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com miolo de balsa"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-balsa-8-5": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-balsa-8-5/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com miolo de balsa"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-black-balsa-3-0": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-black-balsa-3-0/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com miolo de balsa preta"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-black-balsa-5-0": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-black-balsa-5-0/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com miolo de balsa preta"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-black-balsa-7-0": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-black-balsa-7-0/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com miolo de balsa preta"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-swat": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-swat/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-swat-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-swat-carbon/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-swat-power": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-swat-power/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-swat-speed": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-swat-speed/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-swat-5-pw": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-swat-5-pw/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, 5 camadas"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-hino-carbon-power": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-hino-carbon-power/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Hinoki + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-dyna-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-dyna-carbon/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-dyna-five": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-dyna-five/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, 5 camadas"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-dyna-five-hard": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-dyna-five-hard/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, 5 camadas, dura"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-fire-fall-ac": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-fire-fall-ac/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra arylate"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-fire-fall-hc": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-fire-fall-hc/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-fire-fall-lc": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-fire-fall-lc/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-fire-fall-sc": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-fire-fall-sc/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-gladias-ar": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-gladias-ar/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-gladias-ex": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-gladias-ex/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-gladias-ha": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-gladias-ha/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-koji-matsushita-special": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-koji-matsushita-special/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, classe defensiva"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-koji-matsushita-zc": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-koji-matsushita-zc/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra ZC"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-koki-niwa-zc": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/madeira-victas-koki-niwa-zc/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra ZC"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-koki-niwa-zc-inner": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-koki-niwa-zc-inner/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra ZC em posição interna"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-koki-niwa-blue-edge-10th-limited-edition": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-koki-niwa-blue-edge-10th-limited-edition/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra, edição limitada"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-koki-niwa-wood-blue-edge-10th-limited-edition": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-koki-niwa-wood-blue-edge-10th-limited-edition/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira pura, edição limitada"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-koki-niwa-zf-blue-edge-10th-limited-edition": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-koki-niwa-zf-blue-edge-10th-limited-edition/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra ZF, edição limitada"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-benedikt-duda-afc": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-benedikt-duda-afc/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra arylate-carbono"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-norio-takashima-the-legend-st": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-norio-takashima-the-legend-st/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-zx-gear-fiber": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-zx-gear-fiber/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra ZX"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
+    },
+    "victas-zx-gear-out": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/victas-zx-gear-out/",
+      "consultadoEm": "2026-08-01",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira + fibra ZX em posição externa"
+        }
+      ],
+      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. O Revspin não registra esta lâmina. Esta lâmina não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
     }
   }
 }

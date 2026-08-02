@@ -8614,6 +8614,1131 @@
         "tag": "A TP_Ligna de controle",
         "frase": "Dez avaliações com nota 9,0. É a versão allround da linha mais cara da Andro — mesma família das CI e CO, sem a pressa delas."
       }
+    },
+    {
+      "id": "victas-v-01-limber",
+      "nome": "V-01 Limber",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 329,
+      "rating": 4.7,
+      "reviews": 51,
+      "simples": {
+        "tag": "51 avaliações — a mais avaliada da Victas",
+        "frase": "A borracha Victas mais avaliada do catálogo. \"Limber\" na Victas marca a esponja mais flexível da mesma família."
+      }
+    },
+    {
+      "id": "victas-v-15-extra",
+      "nome": "V-15 Extra",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 365,
+      "rating": 4.55,
+      "reviews": 41,
+      "simples": {
+        "tag": "41 avaliações",
+        "frase": "A V-15 é a linha de ataque da marca. \"Extra\" é o grau de tensionamento."
+      }
+    },
+    {
+      "id": "victas-v-22-double-extra",
+      "nome": "V-22 Double Extra",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 364,
+      "rating": 4.75,
+      "reviews": 36,
+      "simples": {
+        "tag": "Nota 9,5 com 36 avaliações",
+        "frase": "A nota mais alta entre as borrachas Victas com amostra suficiente. \"Double Extra\" é o tensionamento mais forte da marca."
+      }
+    },
+    {
+      "id": "victas-v-01-stiff",
+      "nome": "V-01 Stiff",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 329,
+      "rating": 4.65,
+      "reviews": 34,
+      "simples": {
+        "tag": "A V-01 dura",
+        "frase": "\"Stiff\" é a esponja dura da família; \"Limber\", a flexível. Mesma superfície, sensação oposta."
+      }
+    },
+    {
+      "id": "victas-vs-401",
+      "nome": "VS-401",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 314,
+      "rating": 4.6,
+      "reviews": 32,
+      "simples": {
+        "tag": "32 avaliações",
+        "frase": "A linha VS é a de velocidade da Victas."
+      }
+    },
+    {
+      "id": "victas-v-15-limber",
+      "nome": "V-15 Limber",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 365,
+      "rating": 4.65,
+      "reviews": 30,
+      "simples": {
+        "tag": "A V-15 flexível",
+        "frase": "30 avaliações, nota 9,3."
+      }
+    },
+    {
+      "id": "victas-ventus-extra",
+      "nome": "Ventus Extra",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 311,
+      "rating": 4.7,
+      "reviews": 42,
+      "simples": {
+        "tag": "42 avaliações por R$ 311",
+        "frase": "A Ventus é a linha intermediária da marca, e a Extra é de longe a mais avaliada dela: 42 contra 1, 3 e 6 das irmãs."
+      }
+    },
+    {
+      "id": "victas-v-11-extra",
+      "nome": "V-11 Extra",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 343,
+      "rating": 4.6,
+      "reviews": 22,
+      "simples": {
+        "tag": "22 avaliações",
+        "frase": "A V-11 fica abaixo da V-15 na escala de velocidade da marca."
+      }
+    },
+    {
+      "id": "victas-v-01",
+      "nome": "V-01",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 329,
+      "rating": 4.5,
+      "reviews": 19,
+      "simples": {
+        "tag": "A V-01 padrão",
+        "frase": "A versão de esponja intermediária, entre a Limber e a Stiff."
+      }
+    },
+    {
+      "id": "victas-v-15-stiff",
+      "nome": "V-15 Stiff",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 365,
+      "rating": 4.55,
+      "reviews": 17,
+      "simples": {
+        "tag": "17 avaliações",
+        "frase": "A V-15 de esponja dura."
+      }
+    },
+    {
+      "id": "victas-vs-402-double-extra",
+      "nome": "VS-402 Double Extra",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 314,
+      "rating": 4.65,
+      "reviews": 17,
+      "simples": {
+        "tag": "A VS mais tensionada",
+        "frase": "17 avaliações, nota 9,3."
+      }
+    },
+    {
+      "id": "victas-vs-402-limber",
+      "nome": "VS-402 Limber",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 314,
+      "rating": 4.6,
+      "reviews": 15,
+      "simples": {
+        "tag": "A VS-402 flexível",
+        "frase": "Mesmo preço da Double Extra: R$ 314."
+      }
+    },
+    {
+      "id": "victas-v-20-double-extra",
+      "nome": "V-20 Double Extra",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 364,
+      "rating": 4.7,
+      "reviews": 12,
+      "simples": {
+        "tag": "Nota 9,4",
+        "frase": "Doze avaliações. A V-20 comum, com quatro, fica abaixo do nosso piso."
+      }
+    },
+    {
+      "id": "victas-vj-07-stiff",
+      "nome": "VJ-07 Stiff",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 314,
+      "rating": 4.7,
+      "reviews": 11,
+      "simples": {
+        "tag": "A VJ-07 dura",
+        "frase": "Onze avaliações, nota 9,4 — a melhor amostra da linha VJ."
+      }
+    },
+    {
+      "id": "victas-triple-double-extra",
+      "nome": "Triple Double Extra",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 361,
+      "rating": 4.75,
+      "reviews": 10,
+      "simples": {
+        "tag": "Nota 9,5, a mais alta da marca",
+        "frase": "A linha Triple é a aderente da Victas — superfície pegajosa de escola chinesa com esponja japonesa por baixo."
+      }
+    },
+    {
+      "id": "victas-ventus-stiff",
+      "nome": "Ventus Stiff",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 267,
+      "rating": 4.5,
+      "reviews": 6,
+      "simples": {
+        "tag": "Seis avaliações",
+        "frase": "R$ 267 — junto com a Limber, a Victas mais barata do catálogo."
+      }
+    },
+    {
+      "id": "victas-vj-07-regular",
+      "nome": "VJ-07 Regular",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 263,
+      "rating": 4.65,
+      "reviews": 5,
+      "simples": {
+        "tag": "Cinco avaliações, no limite",
+        "frase": "Exatamente o piso. R$ 263, a mais barata da marca aqui."
+      }
+    },
+    {
+      "id": "victas-triple-extra",
+      "nome": "Triple Extra",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 332,
+      "rating": 4.5,
+      "reviews": 5,
+      "simples": {
+        "tag": "A Triple intermediária",
+        "frase": "Cinco avaliações, exatamente o piso."
+      }
+    },
+    {
+      "id": "victas-v-20-extra",
+      "nome": "V-20 Extra",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 364,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Quatro avaliações, a uma do piso",
+        "frase": "Nota 9,2 com quatro avaliações. A Double Extra da mesma linha tem doze."
+      }
+    },
+    {
+      "id": "victas-v-15-sticky",
+      "nome": "V-15 Sticky",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 411,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A V-15 aderente",
+        "frase": "Quatro avaliações, nota 9,3. \"Sticky\" marca a superfície pegajosa."
+      }
+    },
+    {
+      "id": "victas-v-15-sticky-soft",
+      "nome": "V-15 Sticky Soft",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 400,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Aderente de esponja macia",
+        "frase": "Duas avaliações. Aderência de escola chinesa com esponja que perdoa mais."
+      }
+    },
+    {
+      "id": "victas-v-03",
+      "nome": "V-03",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 292,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Três avaliações",
+        "frase": "Nota 8,5. R$ 292 — a V-03 fica abaixo da V-11 na escala da marca."
+      }
+    },
+    {
+      "id": "victas-ventus-limber",
+      "nome": "Ventus Limber",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 267,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Três avaliações",
+        "frase": "Nota 9,2. A Extra da mesma linha tem 42 avaliações."
+      }
+    },
+    {
+      "id": "victas-ventus-regular",
+      "nome": "Ventus Regular",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 286,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma avaliação",
+        "frase": "Nota 8,0 com uma avaliação. O Revspin também lista uma \"Ventus Regular Alpha\", que é outra."
+      }
+    },
+    {
+      "id": "victas-triple-regular",
+      "nome": "Triple Regular",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 289,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Triple de entrada",
+        "frase": "Uma avaliação, nota 7,0 — a mais baixa da marca. Uma amostra não é a comunidade, e por isso ela não vira média aqui."
+      }
+    },
+    {
+      "id": "victas-vo-101",
+      "nome": "VO-101",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 292,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fora do Revspin",
+        "frase": "R$ 292. A linha VO não é registrada na comunidade internacional."
+      }
+    },
+    {
+      "id": "victas-vo-102",
+      "nome": "VO-102",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 292,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A VO do meio",
+        "frase": "Mesmo preço das irmãs: R$ 292."
+      }
+    },
+    {
+      "id": "victas-vo-103",
+      "nome": "VO-103",
+      "marca": "Victas",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 292,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A VO mais rápida",
+        "frase": "Mesmo preço das irmãs: R$ 292."
+      }
+    },
+    {
+      "id": "victas-koki-niwa-wood",
+      "nome": "Koki Niwa Wood",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 938,
+      "rating": 4.85,
+      "reviews": 46,
+      "simples": {
+        "tag": "Nota 9,7 com 46 avaliações — a mais alta do catálogo",
+        "frase": "A lâmina mais bem avaliada de todo o WikiPong. Madeira pura, sem fibra, com o nome do japonês Koki Niwa. R$ 938."
+      }
+    },
+    {
+      "id": "victas-fire-fall-fc",
+      "nome": "Fire Fall FC",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 705,
+      "rating": 4.7,
+      "reviews": 24,
+      "simples": {
+        "tag": "24 avaliações",
+        "frase": "A Fire Fall é uma família de seis lâminas que se distinguem pela fibra. A FC é a mais avaliada delas."
+      }
+    },
+    {
+      "id": "victas-koji-matsushita",
+      "nome": "Koji Matsushita",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 879,
+      "rating": 4.6,
+      "reviews": 18,
+      "simples": {
+        "tag": "A lâmina de defesa mais avaliada aqui",
+        "frase": "Koji Matsushita é o defensor japonês que dá nome à linha. Lâminas de defesa são lentas de propósito, para quem corta longe da mesa."
+      }
+    },
+    {
+      "id": "victas-koji-matsushita-defensive",
+      "nome": "Koji Matsushita Defensive",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 879,
+      "rating": 4.75,
+      "reviews": 17,
+      "simples": {
+        "tag": "Nota 9,5 entre defensores",
+        "frase": "17 avaliações. A versão mais lenta da linha."
+      }
+    },
+    {
+      "id": "victas-zx-gear-in",
+      "nome": "ZX-GEAR IN",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 879,
+      "rating": 4.65,
+      "reviews": 16,
+      "simples": {
+        "tag": "Fibra ZX por dentro",
+        "frase": "IN e OUT marcam onde a fibra fica. Por dentro, a bola afunda mais na madeira antes de sair."
+      }
+    },
+    {
+      "id": "victas-fire-fall-vc",
+      "nome": "Fire Fall VC",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 705,
+      "rating": 4.7,
+      "reviews": 14,
+      "simples": {
+        "tag": "A segunda Fire Fall com amostra",
+        "frase": "14 avaliações. As outras quatro da família não têm registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-koji-matsushita-offensive",
+      "nome": "Koji Matsushita Offensive",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 879,
+      "rating": 4.8,
+      "reviews": 13,
+      "simples": {
+        "tag": "Nota 9,6 — a mais alta da linha",
+        "frase": "A versão ofensiva da lâmina de um defensor: para quem corta mas também ataca."
+      }
+    },
+    {
+      "id": "victas-liam-pitchford",
+      "nome": "Liam Pitchford",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1274,
+      "rating": 3.9,
+      "reviews": 12,
+      "simples": {
+        "tag": "Nota 7,8 — a mais baixa das lâminas daqui",
+        "frase": "R$ 1.274 com nota 7,8 e 12 avaliações. É o número que a comunidade deu, e ele fica à vista do mesmo jeito que os 9,7 da Koki Niwa Wood."
+      }
+    },
+    {
+      "id": "victas-koki-niwa",
+      "nome": "Koki Niwa",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1116,
+      "rating": 4.55,
+      "reviews": 8,
+      "simples": {
+        "tag": "Oito avaliações",
+        "frase": "A versão com fibra da linha Koki Niwa. A de madeira pura tem 46 avaliações e nota mais alta."
+      }
+    },
+    {
+      "id": "victas-award-offensive",
+      "nome": "Award Offensive",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 352,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Award de entrada",
+        "frase": "R$ 352 — a lâmina Victas mais barata do catálogo."
+      }
+    },
+    {
+      "id": "victas-award-offensive-light",
+      "nome": "Award Offensive Light",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 352,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Award leve",
+        "frase": "Mesmo preço da comum. \"Light\" é o peso da montagem, não a velocidade."
+      }
+    },
+    {
+      "id": "victas-balsa-2-5",
+      "nome": "Balsa 2.5",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A balsa mais fina",
+        "frase": "Balsa é a madeira mais leve usada em lâminas. O número é a espessura do miolo em milímetros: quanto mais grosso, mais leve e mais lento fica o conjunto."
+      }
+    },
+    {
+      "id": "victas-balsa-3-5",
+      "nome": "Balsa 3.5",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Miolo de 3,5 mm",
+        "frase": "Balsa é a madeira mais leve usada em lâminas. O número é a espessura do miolo em milímetros: quanto mais grosso, mais leve e mais lento fica o conjunto."
+      }
+    },
+    {
+      "id": "victas-balsa-4-5",
+      "nome": "Balsa 4.5",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Miolo de 4,5 mm",
+        "frase": "Balsa é a madeira mais leve usada em lâminas. O número é a espessura do miolo em milímetros: quanto mais grosso, mais leve e mais lento fica o conjunto."
+      }
+    },
+    {
+      "id": "victas-balsa-5-5",
+      "nome": "Balsa 5.5",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Miolo de 5,5 mm",
+        "frase": "Balsa é a madeira mais leve usada em lâminas. O número é a espessura do miolo em milímetros: quanto mais grosso, mais leve e mais lento fica o conjunto."
+      }
+    },
+    {
+      "id": "victas-balsa-6-5",
+      "nome": "Balsa 6.5",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Miolo de 6,5 mm",
+        "frase": "Balsa é a madeira mais leve usada em lâminas. O número é a espessura do miolo em milímetros: quanto mais grosso, mais leve e mais lento fica o conjunto."
+      }
+    },
+    {
+      "id": "victas-balsa-8-5",
+      "nome": "Balsa 8.5",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A balsa mais grossa",
+        "frase": "Balsa é a madeira mais leve usada em lâminas. O número é a espessura do miolo em milímetros: quanto mais grosso, mais leve e mais lento fica o conjunto. Esta é a mais grossa das seis, e a mais leve do conjunto."
+      }
+    },
+    {
+      "id": "victas-black-balsa-3-0",
+      "nome": "Black Balsa 3.0",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma avaliação, sem nota",
+        "frase": "A única Black Balsa registrada no Revspin, com uma avaliação e sem nota publicada."
+      }
+    },
+    {
+      "id": "victas-black-balsa-5-0",
+      "nome": "Black Balsa 5.0",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Miolo de 5 mm",
+        "frase": "Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-black-balsa-7-0",
+      "nome": "Black Balsa 7.0",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 458,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Black Balsa mais grossa",
+        "frase": "R$ 458 — a mais barata das três Black Balsa. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-swat",
+      "nome": "SWAT",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 529,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Quatro avaliações, a uma do piso",
+        "frase": "Nota 9,2 com quatro avaliações. A SWAT é a linha de entrada ofensiva da marca."
+      }
+    },
+    {
+      "id": "victas-swat-carbon",
+      "nome": "SWAT Carbon",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 588,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma avaliação",
+        "frase": "Nota 8,6 com uma avaliação."
+      }
+    },
+    {
+      "id": "victas-swat-power",
+      "nome": "SWAT Power",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 646,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A SWAT de potência",
+        "frase": "Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-swat-speed",
+      "nome": "SWAT Speed",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 646,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A SWAT de velocidade",
+        "frase": "Mesmo preço da Power: R$ 646. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-swat-5-pw",
+      "nome": "SWAT 5 PW",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 376,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A SWAT de cinco camadas",
+        "frase": "R$ 376. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-hino-carbon-power",
+      "nome": "Hino-Carbon Power",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 764,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Três avaliações",
+        "frase": "Nota 9,3 com três avaliações. Hinoki é o cipreste japonês, madeira leve e macia."
+      }
+    },
+    {
+      "id": "victas-dyna-carbon",
+      "nome": "Dyna Carbon",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 646,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma avaliação",
+        "frase": "Nota 9,0 com uma avaliação."
+      }
+    },
+    {
+      "id": "victas-dyna-five",
+      "nome": "Dyna Five",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 588,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cinco camadas de madeira",
+        "frase": "Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-dyna-five-hard",
+      "nome": "Dyna Five Hard",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 680,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Dyna Five dura",
+        "frase": "Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-fire-fall-ac",
+      "nome": "Fire Fall AC",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 705,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Fire Fall de arylate",
+        "frase": "Das seis Fire Fall, só a FC e a VC têm registro no Revspin. As outras quatro, incluindo esta, não aparecem lá."
+      }
+    },
+    {
+      "id": "victas-fire-fall-hc",
+      "nome": "Fire Fall HC",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 705,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma das quatro Fire Fall sem registro",
+        "frase": "Todas as seis custam R$ 705."
+      }
+    },
+    {
+      "id": "victas-fire-fall-lc",
+      "nome": "Fire Fall LC",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 705,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma das quatro Fire Fall sem registro",
+        "frase": "Todas as seis custam R$ 705."
+      }
+    },
+    {
+      "id": "victas-fire-fall-sc",
+      "nome": "Fire Fall SC",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 705,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma das quatro Fire Fall sem registro",
+        "frase": "Todas as seis custam R$ 705."
+      }
+    },
+    {
+      "id": "victas-gladias-ar",
+      "nome": "Gladias AR",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 822,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A linha Gladias",
+        "frase": "As três Gladias custam R$ 822 e nenhuma consta do Revspin."
+      }
+    },
+    {
+      "id": "victas-gladias-ex",
+      "nome": "Gladias EX",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 822,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Gladias EX",
+        "frase": "Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-gladias-ha",
+      "nome": "Gladias HA",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 822,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Gladias HA",
+        "frase": "Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-koji-matsushita-special",
+      "nome": "Koji Matsushita Special",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "controlar",
+      "preco": 929,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da linha de defesa",
+        "frase": "R$ 929. O Revspin registra a comum, a Defensive e a Offensive — não a Special."
+      }
+    },
+    {
+      "id": "victas-koji-matsushita-zc",
+      "nome": "Koji Matsushita ZC",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "controlar",
+      "preco": 999,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Defesa com fibra",
+        "frase": "R$ 999. Sem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "victas-koki-niwa-zc",
+      "nome": "Koki Niwa ZC",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1292,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma avaliação",
+        "frase": "Nota 9,2 com uma avaliação. R$ 1.292."
+      }
+    },
+    {
+      "id": "victas-koki-niwa-zc-inner",
+      "nome": "Koki Niwa ZC Inner",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 1351,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fibra por dentro",
+        "frase": "R$ 1.351. Sem registro próprio no Revspin."
+      }
+    },
+    {
+      "id": "victas-koki-niwa-blue-edge-10th-limited-edition",
+      "nome": "Koki Niwa Blue Edge 10th",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1175,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Edição de 10 anos",
+        "frase": "Edição comemorativa. Edições limitadas quase nunca têm amostra própria na comunidade."
+      }
+    },
+    {
+      "id": "victas-koki-niwa-wood-blue-edge-10th-limited-edition",
+      "nome": "Koki Niwa Wood Blue Edge 10th",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 881,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Wood em edição limitada",
+        "frase": "R$ 881 — mais barata que a Wood comum, que custa R$ 938 e tem 46 avaliações."
+      }
+    },
+    {
+      "id": "victas-koki-niwa-zf-blue-edge-10th-limited-edition",
+      "nome": "Koki Niwa ZF Blue Edge 10th",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1410,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "R$ 1.410, a mais cara da marca",
+        "frase": "A lâmina Victas mais cara do catálogo. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-benedikt-duda-afc",
+      "nome": "Benedikt Duda AFC",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1104,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A lâmina do Duda",
+        "frase": "R$ 1.104. Benedikt Duda é o alemão que dá nome à linha. Sem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-norio-takashima-the-legend-st",
+      "nome": "Norio Takashima The Legend ST",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1363,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "R$ 1.363, sem amostra",
+        "frase": "Uma das mais caras da marca, sem nenhum registro na comunidade internacional."
+      }
+    },
+    {
+      "id": "victas-zx-gear-fiber",
+      "nome": "ZX-GEAR FIBER",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 763,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A ZX-GEAR de fibra",
+        "frase": "R$ 763. Das três ZX-GEAR, só a IN tem registro no Revspin."
+      }
+    },
+    {
+      "id": "victas-zx-gear-out",
+      "nome": "ZX-GEAR OUT",
+      "marca": "Victas",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 879,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Fibra por fora",
+        "frase": "Mesmo preço da IN, R$ 879. A IN tem 16 avaliações; esta não tem registro."
+      }
     }
   ]
 }

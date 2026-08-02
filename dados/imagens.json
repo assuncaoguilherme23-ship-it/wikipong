@@ -2940,6 +2940,456 @@
       "fonte": "AmericaTT",
       "fonteUrl": "https://americatt.net/andro-tp_ligna-all/",
       "consultadoEm": "2026-08-01"
+    },
+    "victas-v-01-limber": {
+      "arquivo": "victas-v-01-limber.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-v-01-limber/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-15-extra": {
+      "arquivo": "victas-v-15-extra.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/borracha-victas-v-15-extra/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-22-double-extra": {
+      "arquivo": "victas-v-22-double-extra.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-v-22-double-extra/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-01-stiff": {
+      "arquivo": "victas-v-01-stiff.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-v-01-stiff/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-vs-401": {
+      "arquivo": "victas-vs-401.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-vs-401/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-15-limber": {
+      "arquivo": "victas-v-15-limber.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-v-15-limber/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-ventus-extra": {
+      "arquivo": "victas-ventus-extra.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-ventus-extra/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-11-extra": {
+      "arquivo": "victas-v-11-extra.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/borracha-victas-v-11-extra/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-01": {
+      "arquivo": "victas-v-01.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-v-01/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-15-stiff": {
+      "arquivo": "victas-v-15-stiff.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-v-15-stiff/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-vs-402-double-extra": {
+      "arquivo": "victas-vs-402-double-extra.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-vs-402-double-extra/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-vs-402-limber": {
+      "arquivo": "victas-vs-402-limber.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-vs-402-limber/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-20-double-extra": {
+      "arquivo": "victas-v-20-double-extra.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-v-20-double-extra/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-vj-07-stiff": {
+      "arquivo": "victas-vj-07-stiff.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-vj-07-stiff/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-triple-double-extra": {
+      "arquivo": "victas-triple-double-extra.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-triple-double-extra/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-ventus-stiff": {
+      "arquivo": "victas-ventus-stiff.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-ventus-stiff/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-vj-07-regular": {
+      "arquivo": "victas-vj-07-regular.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-vj-07-regular/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-triple-extra": {
+      "arquivo": "victas-triple-extra.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-triple-extra/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-20-extra": {
+      "arquivo": "victas-v-20-extra.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/borracha-victas-v-20-extra/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-15-sticky": {
+      "arquivo": "victas-v-15-sticky.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-v-15-sticky/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-15-sticky-soft": {
+      "arquivo": "victas-v-15-sticky-soft.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-v-15-sticky-soft/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-v-03": {
+      "arquivo": "victas-v-03.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-v-03/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-ventus-limber": {
+      "arquivo": "victas-ventus-limber.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-ventus-limber/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-ventus-regular": {
+      "arquivo": "victas-ventus-regular.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-ventus-regular/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-triple-regular": {
+      "arquivo": "victas-triple-regular.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-triple-regular/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-vo-101": {
+      "arquivo": "victas-vo-101.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-vo-101/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-vo-102": {
+      "arquivo": "victas-vo-102.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-vo-102/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-vo-103": {
+      "arquivo": "victas-vo-103.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-vo-103/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koki-niwa-wood": {
+      "arquivo": "victas-koki-niwa-wood.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-koki-niwa-wood/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-fire-fall-fc": {
+      "arquivo": "victas-fire-fall-fc.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-fire-fall-fc/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koji-matsushita": {
+      "arquivo": "victas-koji-matsushita.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-koji-matsushita/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koji-matsushita-defensive": {
+      "arquivo": "victas-koji-matsushita-defensive.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-koji-matsushita-defensive/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-zx-gear-in": {
+      "arquivo": "victas-zx-gear-in.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-zx-gear-in/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-fire-fall-vc": {
+      "arquivo": "victas-fire-fall-vc.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-fire-fall-vc/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koji-matsushita-offensive": {
+      "arquivo": "victas-koji-matsushita-offensive.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-koji-matsushita-offensive/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-liam-pitchford": {
+      "arquivo": "victas-liam-pitchford.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-liam-pitchford/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koki-niwa": {
+      "arquivo": "victas-koki-niwa.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-koki-niwa/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-award-offensive": {
+      "arquivo": "victas-award-offensive.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-award-offensive/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-award-offensive-light": {
+      "arquivo": "victas-award-offensive-light.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-award-offensive-light/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-balsa-2-5": {
+      "arquivo": "victas-balsa-2-5.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-balsa-2-5/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-balsa-3-5": {
+      "arquivo": "victas-balsa-3-5.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-balsa-3-5/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-balsa-4-5": {
+      "arquivo": "victas-balsa-4-5.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-balsa-4-5/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-balsa-5-5": {
+      "arquivo": "victas-balsa-5-5.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-balsa-5-5/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-balsa-6-5": {
+      "arquivo": "victas-balsa-6-5.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-balsa-6-5/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-balsa-8-5": {
+      "arquivo": "victas-balsa-8-5.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-balsa-8-5/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-black-balsa-3-0": {
+      "arquivo": "victas-black-balsa-3-0.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-black-balsa-3-0/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-black-balsa-5-0": {
+      "arquivo": "victas-black-balsa-5-0.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-black-balsa-5-0/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-black-balsa-7-0": {
+      "arquivo": "victas-black-balsa-7-0.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-black-balsa-7-0/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-swat": {
+      "arquivo": "victas-swat.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-swat/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-swat-carbon": {
+      "arquivo": "victas-swat-carbon.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-swat-carbon/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-swat-power": {
+      "arquivo": "victas-swat-power.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-swat-power/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-swat-speed": {
+      "arquivo": "victas-swat-speed.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-swat-speed/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-swat-5-pw": {
+      "arquivo": "victas-swat-5-pw.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-swat-5-pw/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-hino-carbon-power": {
+      "arquivo": "victas-hino-carbon-power.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-hino-carbon-power/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-dyna-carbon": {
+      "arquivo": "victas-dyna-carbon.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-dyna-carbon/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-dyna-five": {
+      "arquivo": "victas-dyna-five.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-dyna-five/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-dyna-five-hard": {
+      "arquivo": "victas-dyna-five-hard.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-dyna-five-hard/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-fire-fall-ac": {
+      "arquivo": "victas-fire-fall-ac.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-fire-fall-ac/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-fire-fall-hc": {
+      "arquivo": "victas-fire-fall-hc.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-fire-fall-hc/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-fire-fall-lc": {
+      "arquivo": "victas-fire-fall-lc.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-fire-fall-lc/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-fire-fall-sc": {
+      "arquivo": "victas-fire-fall-sc.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-fire-fall-sc/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-gladias-ar": {
+      "arquivo": "victas-gladias-ar.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-gladias-ar/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-gladias-ex": {
+      "arquivo": "victas-gladias-ex.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-gladias-ex/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-gladias-ha": {
+      "arquivo": "victas-gladias-ha.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-gladias-ha/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koji-matsushita-special": {
+      "arquivo": "victas-koji-matsushita-special.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-koji-matsushita-special/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koji-matsushita-zc": {
+      "arquivo": "victas-koji-matsushita-zc.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-koji-matsushita-zc/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koki-niwa-zc": {
+      "arquivo": "victas-koki-niwa-zc.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/madeira-victas-koki-niwa-zc/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koki-niwa-zc-inner": {
+      "arquivo": "victas-koki-niwa-zc-inner.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-koki-niwa-zc-inner/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koki-niwa-blue-edge-10th-limited-edition": {
+      "arquivo": "victas-koki-niwa-blue-edge-10th-limited-edition.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-koki-niwa-blue-edge-10th-limited-edition/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koki-niwa-wood-blue-edge-10th-limited-edition": {
+      "arquivo": "victas-koki-niwa-wood-blue-edge-10th-limited-edition.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-koki-niwa-wood-blue-edge-10th-limited-edition/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-koki-niwa-zf-blue-edge-10th-limited-edition": {
+      "arquivo": "victas-koki-niwa-zf-blue-edge-10th-limited-edition.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-koki-niwa-zf-blue-edge-10th-limited-edition/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-benedikt-duda-afc": {
+      "arquivo": "victas-benedikt-duda-afc.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-benedikt-duda-afc/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-norio-takashima-the-legend-st": {
+      "arquivo": "victas-norio-takashima-the-legend-st.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-norio-takashima-the-legend-st/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-zx-gear-fiber": {
+      "arquivo": "victas-zx-gear-fiber.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-zx-gear-fiber/",
+      "consultadoEm": "2026-08-01"
+    },
+    "victas-zx-gear-out": {
+      "arquivo": "victas-zx-gear-out.webp",
+      "fonte": "AmericaTT",
+      "fonteUrl": "https://americatt.net/victas-zx-gear-out/",
+      "consultadoEm": "2026-08-01"
     }
   }
 }

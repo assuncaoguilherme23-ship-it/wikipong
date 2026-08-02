@@ -51,7 +51,7 @@ import { readFileSync } from 'node:fs';
  * no relatorio, o primeiro lugar pra olhar e' aqui.
  */
 const NAO_E_MATERIAL =
-  /raqueteira|capa|bola|cola|rede|mesa-de-|kit|pino|anti|bolsa|fita|meia|side-tape|limpador|calcado|estilete|moeda|adesivo|protetor|toalha|camisa|bermuda|short|munhequeira|sapato|marcador|placar|contador|suporte|expositor|caneleira|mochila|garrafa|unidades|estrelas|-star|limpeza|folha-protetora/;
+  /raqueteira|capa|bola|cola|rede|mesa-de-|kit|pino|anti|bolsa|fita|meia|side-tape|limpador|calcado|estilete|moeda|adesivo|protetor|toalha|camisa|bermuda|short|munhequeira|sapato|marcador|placar|contador|suporte|expositor|caneleira|mochila|garrafa|unidades|estrelas|-star|limpeza|folha-protetora|cortica|roundcase/;
 /** Onde cada marca é vendida no Brasil, e como ler a listagem. */
 const FONTES = {
   xiom: {
@@ -175,6 +175,12 @@ const FONTES = {
   },
   victas: {
     loja: 'AmericaTT',
+    /* A loja repete "Limited Edition" no titulo das tres edicoes de 10
+       anos; o catalogo abrevia pra "Blue Edge 10th".
+       O '10th' entra por uma ASSIMETRIA do limpador: ele remove numero no
+       FIM do nome, entao o titulo do catalogo perde o '10th' e o da loja,
+       onde ele fica no meio, nao. */
+    familia: ['limited', 'edition', '10th'],
     url: (p) => `https://americatt.net/marca/victas/${p > 1 ? `page/${p}/` : ''}`,
     marcaNoTitulo: true,
     tipo: (slug) => {
@@ -418,7 +424,7 @@ const FONTES = {
 const MAX_PAGINAS = 12;
 
 /** Pinos e anti-spin foram adiados de propósito pelo fundador — não são lacuna. */
-const ADIADOS = /feint|impartial|ilius|speedy|orthodox|challenger|super\s*anti|bugller|chop|\bp\.?o\.?\b|\bl\.?p\.?\b|long|\bo\.?x\.?\b|pips/i;
+const ADIADOS = /feint|impartial|ilius|speedy|orthodox|challenger|super\s*anti|bugller|chop|\bp\.?o\.?\b|\bl\.?p\.?\b|long|\bo\.?x\.?\b|pips|curl\s*p\d|spectol|spinpips/i;
 
 const normalizar = (s) =>
   s

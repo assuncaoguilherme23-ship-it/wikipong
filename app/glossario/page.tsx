@@ -14,9 +14,22 @@ import estilos from './glossario.module.css';
 export const metadata: Metadata = {
   title: 'Glossário',
   description:
-    'Os principais termos técnicos do tênis de mesa (topspin, ALC, tensão, bloqueio), ' +
-    'explicados de forma direta, em português claro.',
+    'Os termos técnicos do tênis de mesa — do topspin ao efeito catapulta, da pegajosidade ' +
+    'ao ponto de fundo — explicados de forma direta, em português claro.',
 };
+
+/* A ordem segue o caminho de quem aprende, não o alfabeto: primeiro o que a bola
+   toca (a capa), depois o que está embaixo (a esponja), depois o que acontece no
+   milésimo do impacto, e por último o que só se descobre com o tempo de uso.
+   Categoria fora desta lista não aparece — é erro de digitação no dado, e sumir
+   é melhor que abrir uma seção órfã sem título pensado. */
+const CATEGORIAS = [
+  'A superfície',
+  'A esponja',
+  'A física do impacto',
+  'Golpes e efeitos',
+  'Uso e manutenção',
+] as const;
 
 export default function PaginaGlossario() {
   return (
@@ -33,15 +46,29 @@ export default function PaginaGlossario() {
           Os principais termos técnicos do tênis de mesa, explicados de forma direta.
         </p>
 
-        {/* Lista tipográfica de enciclopédia: fios, não cards */}
-        <dl className={estilos.lista}>
-          {glossario.verbetes.map((v) => (
-            <div key={v.termo} className={`${estilos.verbete} revela`}>
-              <dt>{v.termo}</dt>
-              <dd>{v.definicao}</dd>
-            </div>
-          ))}
-        </dl>
+        {/* ── AGRUPADO POR CATEGORIA ───────────────────────────────────────
+            Eram 10 verbetes e uma lista corrida bastava. Com 33, corrido vira
+            parede: quem procura "o que é catapulta" não sabe se já passou por
+            ela. A ordem das categorias não é alfabética — segue o caminho de
+            quem está aprendendo, do que a bola toca primeiro (a capa) para o
+            que só se percebe com o tempo (o desgaste). */}
+        {CATEGORIAS.map((categoria) => {
+          const verbetes = glossario.verbetes.filter((v) => v.categoria === categoria);
+          if (verbetes.length === 0) return null;
+          return (
+            <section key={categoria} className={estilos.grupo}>
+              <h2 className={estilos.grupoTitulo}>{categoria}</h2>
+              <dl className={estilos.lista}>
+                {verbetes.map((v) => (
+                  <div key={v.termo} className={`${estilos.verbete} revela`}>
+                    <dt>{v.termo}</dt>
+                    <dd>{v.definicao}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          );
+        })}
 
         <p className={estilos.notaIA}>
           Sentiu falta de um termo? O glossário cresce junto com a enciclopédia, e é a primeira base de conhecimento do assistente do WikiPong.

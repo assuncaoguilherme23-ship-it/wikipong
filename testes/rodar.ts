@@ -36,6 +36,7 @@ import {
   traduzirFicha, familiaDaLamina, familiaDaBorracha, LAMINA, BORRACHA,
 } from '../src/logica/traduzir.js';
 import { metricasComparaveis, metricasDoRadar, temRadar } from '../src/logica/comparacao.js';
+import { posicaoNaFaixa, fracaoNaFaixa, leituraDaPosicao } from '../src/logica/posicao.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
@@ -799,6 +800,40 @@ for (const k of Object.keys(LAMINA)) {
 for (const k of Object.keys(BORRACHA)) {
   afirma(BORRACHA[k as keyof typeof BORRACHA].resumo.length > 40, `resumo de borracha "${k}" existe`);
 }
+
+// ───────── Régua do catálogo: onde o material cai entre os semelhantes ─────────
+/* O radar precisa de 3 eixos e por isso atendia 114 dos 678 materiais e NENHUMA
+   das 393 lâminas. A régua funciona com um índice só. */
+const universoTeste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const pos = posicaoNaFaixa(8, universoTeste)!;
+afirma(pos.percentil === 70, `8 supera 70% de 1..10 (veio ${pos.percentil})`);
+afirma(pos.min === 1 && pos.max === 10, 'as pontas da régua são o mínimo e o máximo do universo');
+afirma(aprox(fracaoNaFaixa(pos), 7 / 9), 'a fração desenhada é a posição REAL no intervalo, não o percentil');
+
+/* Empate não conta como superado: sem isso, o mais lento de um grupo com muitos
+   empates apareceria como "mais rápido que 40%", o contrário do que se vê. */
+afirma(posicaoNaFaixa(5, [5, 5, 5, 5, 5, 5, 5, 5, 9])!.percentil === 0,
+  'empate não conta como superado');
+
+afirma(posicaoNaFaixa(5, [1, 2, 3]) === null, 'base pequena demais não vira régua');
+afirma(posicaoNaFaixa(5, [5, 5, 5, 5, 5, 5, 5, 5, 5]) === null,
+  'universo sem variação não tem "mais" nem "menos" a dizer');
+
+afirma(leituraDaPosicao({ ...pos, percentil: 95 }, 'velocidade').includes('10%'),
+  'percentil alto vira "entre os 10% de maior velocidade"');
+afirma(leituraDaPosicao({ ...pos, percentil: 50 }, 'preço').includes('média'),
+  'percentil no meio vira "na média"');
+
+/* O alcance é o motivo de o módulo existir: TODO material precisa de gráfico. */
+let comRegua = 0;
+for (const mat of MATERIAIS) {
+  const doMesmoTipo = MATERIAIS.filter((x) => x.tipo === mat.tipo && x.moeda === undefined);
+  if (mat.moeda === undefined && posicaoNaFaixa(mat.preco, doMesmoTipo.map((x) => x.preco)) !== null) {
+    comRegua++;
+  }
+}
+afirma(comRegua > 650,
+  `a régua de preço alcança quase todo o catálogo (${comRegua} de ${MATERIAIS.length})`);
 
 // ───────── O quiz precisa RESPONDER: nenhum caminho pode morrer vazio ─────────
 /* Percorre os 43 caminhos possíveis do grafo e conta quantos materiais a URL

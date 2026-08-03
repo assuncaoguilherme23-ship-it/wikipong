@@ -1,15 +1,170 @@
 {
   "aviso": "Conteúdo migrado da Page 1 antiga do Figma (frame 'Glossário', node 423:3204) em 2026-07-09, a convite do fundador. É também o PRIMEIRO corpus do assistente IA (D-10: glossário → fichas → comunidade). Revisão do especialista (D-07) bem-vinda antes de expandir.",
   "verbetes": [
-    { "termo": "Topspin", "definicao": "Efeito para frente que faz a bola mergulhar após o pico, dando arco e segurança ao ataque." },
-    { "termo": "Backspin (chop)", "definicao": "Efeito reverso que faz a bola flutuar baixa; usado na defesa e em saques curtos." },
-    { "termo": "ALC (Arylate-Carbon)", "definicao": "Fibra que combina arylate e carbono, dando velocidade com toque controlado à lâmina." },
-    { "termo": "ZLC (Zylon-Carbon)", "definicao": "Fibra mais rígida que o ALC, voltada a jogadores que buscam potência máxima." },
-    { "termo": "Esponja (sponge)", "definicao": "Camada sob a borracha; sua dureza define velocidade, controle e sensação no impacto." },
-    { "termo": "Tensão (high tension)", "definicao": "Tecnologia que pré-tensiona a borracha, aumentando o efeito de catapulta." },
-    { "termo": "Bloqueio (block)", "definicao": "Devolução passiva próxima à mesa que aproveita a velocidade da bola do adversário." },
-    { "termo": "Flick", "definicao": "Ataque curto de pulso sobre a mesa, usado contra bolas baixas e curtas." },
-    { "termo": "ITTF", "definicao": "Federação Internacional de Tênis de Mesa, responsável pelas regras e homologações." },
-    { "termo": "Bola 40+", "definicao": "Bola de plástico (poli) de 40mm+ adotada pela ITTF em substituição ao celuloide." }
+    {
+      "termo": "Topspin",
+      "definicao": "Efeito para frente que faz a bola mergulhar após o pico, dando arco e segurança ao ataque.",
+      "categoria": "Golpes e efeitos"
+    },
+    {
+      "termo": "Backspin (chop)",
+      "definicao": "Efeito reverso que faz a bola flutuar baixa; usado na defesa e em saques curtos.",
+      "categoria": "Golpes e efeitos"
+    },
+    {
+      "termo": "ALC (Arylate-Carbon)",
+      "definicao": "Fibra que combina arylate e carbono, dando velocidade com toque controlado à lâmina.",
+      "categoria": "Golpes e efeitos"
+    },
+    {
+      "termo": "ZLC (Zylon-Carbon)",
+      "definicao": "Fibra mais rígida que o ALC, voltada a jogadores que buscam potência máxima.",
+      "categoria": "Golpes e efeitos"
+    },
+    {
+      "termo": "Esponja (sponge)",
+      "definicao": "Camada sob a borracha; sua dureza define velocidade, controle e sensação no impacto.",
+      "categoria": "Golpes e efeitos"
+    },
+    {
+      "termo": "Tensão (high tension)",
+      "definicao": "Tecnologia que pré-tensiona a borracha, aumentando o efeito de catapulta.",
+      "categoria": "Golpes e efeitos"
+    },
+    {
+      "termo": "Bloqueio (block)",
+      "definicao": "Devolução passiva próxima à mesa que aproveita a velocidade da bola do adversário.",
+      "categoria": "Golpes e efeitos"
+    },
+    {
+      "termo": "Flick",
+      "definicao": "Ataque curto de pulso sobre a mesa, usado contra bolas baixas e curtas.",
+      "categoria": "Golpes e efeitos"
+    },
+    {
+      "termo": "ITTF",
+      "definicao": "Federação Internacional de Tênis de Mesa, responsável pelas regras e homologações.",
+      "categoria": "Golpes e efeitos"
+    },
+    {
+      "termo": "Bola 40+",
+      "definicao": "Bola de plástico (poli) de 40mm+ adotada pela ITTF em substituição ao celuloide.",
+      "categoria": "Golpes e efeitos"
+    },
+    {
+      "termo": "Capa (top sheet)",
+      "categoria": "A superfície",
+      "definicao": "A folha de borracha de cima, a única que toca a bola. É nela que o efeito nasce: todo giro vem do atrito entre ela e a bola. A esponja embaixo não toca a bola nunca."
+    },
+    {
+      "termo": "Coeficiente de atrito (COF)",
+      "categoria": "A superfície",
+      "definicao": "A medida de quanto a capa agarra a bola por atrito puro, sem depender de cola química. É o que faz uma borracha lisa comum gerar efeito."
+    },
+    {
+      "termo": "Pegajosidade (tackiness)",
+      "categoria": "A superfície",
+      "definicao": "A propriedade química de GRUDAR na bola, típica das borrachas chinesas. As mais pegajosas seguram a bola de cabeça para baixo por alguns segundos. Rende giro pesado, mas exige gesto completo: quem bate curto sente a bola morrer."
+    },
+    {
+      "termo": "Elasticidade da capa",
+      "categoria": "A superfície",
+      "definicao": "A capacidade da folha de cima de esticar e voltar rápido no impacto. É o que devolve energia sem precisar da esponja."
+    },
+    {
+      "termo": "Geometria dos pinos internos",
+      "categoria": "A superfície",
+      "definicao": "Numa borracha lisa, os pinos ficam voltados para DENTRO, contra a esponja, e variam em altura, largura e espaçamento. Pinos mais grossos e juntos deixam a borracha mais firme e rápida; mais finos e espaçados aumentam o tempo de contato e o controle."
+    },
+    {
+      "termo": "Cor da borracha",
+      "categoria": "A superfície",
+      "definicao": "Regra da ITTF: um lado obrigatoriamente preto e o outro de uma cor viva e diferente — vermelho, azul, verde, rosa ou roxo. Existe para o adversário conseguir ver qual lado você usou."
+    },
+    {
+      "termo": "Esponja",
+      "categoria": "A esponja",
+      "definicao": "A camada entre a capa e a madeira. Não toca a bola: o trabalho dela é guardar e devolver energia. É de onde vem a velocidade."
+    },
+    {
+      "termo": "Dureza da esponja (graus)",
+      "categoria": "A esponja",
+      "definicao": "A rigidez da esponja, medida em graus. A régua MUDA de fabricante para fabricante — 40° chinês não é 40° europeu — e por isso o WikiPong converte tudo para uma escala única antes de comparar."
+    },
+    {
+      "termo": "Porosidade",
+      "categoria": "A esponja",
+      "definicao": "O tamanho e a quantidade de bolhas de ar dentro da esponja. Poros grandes agem como molas pequenas e aumentam a velocidade: é o princípio das esponjas tensionadas."
+    },
+    {
+      "termo": "Espessura",
+      "categoria": "A esponja",
+      "definicao": "Quanta esponja existe, de OX (nenhuma) até o MAX perto de 2,2 mm. Mais esponja guarda mais energia: mais velocidade e mais arco, menos controle. O conjunto capa + esponja é limitado a 4 mm pela ITTF."
+    },
+    {
+      "termo": "Tensionamento (pré-tensão)",
+      "categoria": "A esponja",
+      "definicao": "A borracha sai de fábrica com a capa já esticada sobre a esponja, como um trampolim armado. Foi o que substituiu a cola rápida quando ela foi proibida por toxicidade — e é o que permite velocidade e efeito sem gesto perfeito."
+    },
+    {
+      "termo": "Amortecimento (damping)",
+      "categoria": "A esponja",
+      "definicao": "A capacidade de FREAR uma bola que chega rápido, em vez de devolvê-la. É o que define uma borracha defensiva, e é o oposto do efeito catapulta."
+    },
+    {
+      "termo": "Tempo de contato (dwell time)",
+      "categoria": "A física do impacto",
+      "definicao": "Os milésimos de segundo em que a bola fica grudada na raquete durante o golpe — algo entre 3 e 8 ms. Quanto maior, mais tempo a borracha tem para agarrar a bola e mais tempo você tem para corrigir a direção."
+    },
+    {
+      "termo": "Ângulo de lançamento (arco)",
+      "categoria": "A física do impacto",
+      "definicao": "A altura da trajetória de saída da bola. Arco alto ajuda a passar por cima da rede em bola girada de meia-distância; arco baixo mantém o bloqueio rente à mesa."
+    },
+    {
+      "termo": "Janela de ativação",
+      "categoria": "A física do impacto",
+      "definicao": "A faixa de força em que a borracha \"acorda\". Borracha dura só entrega a velocidade dela se você bater forte o bastante — abaixo disso, ela parece morta. É por isso que material de avançado frustra quem ainda não acelera."
+    },
+    {
+      "termo": "Ponto de fundo (bottoming out)",
+      "categoria": "A física do impacto",
+      "definicao": "Quando a batida é tão forte que a bola esmaga a esponja inteira e chega na madeira. O som muda e a trajetória sai do previsto. Esponja fina e macia chega lá com menos força."
+    },
+    {
+      "termo": "Linearidade",
+      "categoria": "A física do impacto",
+      "definicao": "O quanto a resposta é proporcional à força aplicada. Borracha linear devolve exatamente na medida do que você fez; não-linear tem um estilingue que dispara de repente, e é mais difícil de dosar."
+    },
+    {
+      "termo": "Efeito catapulta",
+      "categoria": "A física do impacto",
+      "definicao": "A energia que a esponja guarda no impacto e devolve como velocidade pura. Alta catapulta dá bola rápida com gesto curto — e tira previsibilidade do toque leve."
+    },
+    {
+      "termo": "Sensibilidade ao efeito alheio",
+      "categoria": "A física do impacto",
+      "definicao": "A facilidade com que a borracha \"lê\" o giro que vem do adversário. Borracha de muito efeito sofre mais para devolver saque carregado, porque agarra o giro do outro também."
+    },
+    {
+      "termo": "Inversão de efeito",
+      "categoria": "A física do impacto",
+      "definicao": "Devolver o giro recebido invertido — o topspin do adversário volta como backspin. É exclusivo de pinos longos e anti-spin, e é o que torna esses materiais difíceis de ler."
+    },
+    {
+      "termo": "Vida útil da borracha",
+      "categoria": "Uso e manutenção",
+      "definicao": "Borracha é consumível: a capa perde atrito com o uso, a poeira e o próprio ar. Ela morre devagar, e é por isso que a pessoa acha que o jogo piorou. Sinais: a bola escorrega no saque, o arco baixa e a capa fica lisa e brilhante em vez de fosca."
+    },
+    {
+      "termo": "Peso da folha",
+      "categoria": "Uso e manutenção",
+      "definicao": "O peso da borracha antes de ser cortada no formato da lâmina. Esponja densa e dura deixa a raquete montada visivelmente mais pesada, e isso muda o balanço na mão."
+    },
+    {
+      "termo": "Encolhimento",
+      "categoria": "Uso e manutenção",
+      "definicao": "A tendência da borracha de diminuir de tamanho com o tempo, sobretudo depois de colada e descolada. Acontece mais nas muito tensionadas — a tensão de fábrica vai cedendo."
+    }
   ]
 }

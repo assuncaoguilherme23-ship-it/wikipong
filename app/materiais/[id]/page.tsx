@@ -26,6 +26,7 @@ import { Rodape } from '@/componentes/Rodape';
 import { Radar } from '@/componentes/Radar';
 import { FotoProduto } from '@/componentes/FotoProduto';
 import { Bolinhas } from '@/componentes/Bolinhas';
+import { FaixaCatalogo } from '@/componentes/FaixaCatalogo';
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
 import { brl, dinheiro } from '@/componentes/formato';
 import { paraPalavra } from '@/src/logica/metricas';
@@ -143,6 +144,37 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
   const valoresFicha = indices.map((i) => i.valor);
   /* Polígono precisa de três vértices para ser forma (mesma regra do /comparar). */
   const temRadarFicha = indices.length >= 3;
+
+  /* ── A RÉGUA DO CATÁLOGO ────────────────────────────────────────────────────
+     O radar precisa de três eixos e por isso atende 114 dos 678 materiais e
+     NENHUMA das 393 lâminas. Esta régua funciona com um índice só.
+
+     O universo é sempre do MESMO TIPO — comparar velocidade de borracha com a de
+     lâmina é o erro que o /comparar já proíbe. O preço entra porque existe em
+     678 de 678, e é o que dá gráfico a todo material, inclusive aos que não têm
+     spec nenhuma. Moeda estrangeira fica fora da régua de preço pelo mesmo
+     motivo de sempre: dólar não se compara com real sem câmbio. */
+  const doTipo = MATERIAIS.filter((x) => x.tipo === m.tipo);
+  const linhasFaixa = [
+    ...indices.map((i) => ({
+      rotulo: i.rotulo,
+      rotuloFrase: i.rotulo.toLowerCase(),
+      valor: i.valor,
+      universo: doTipo
+        .map((x) => (i.atributo === 'durabilidade' ? x.durabilidade : x.specs?.[i.atributo]))
+        .filter((v): v is number => v !== undefined),
+      formato: (v: number) => v.toFixed(1),
+    })),
+    ...(m.moeda === undefined
+      ? [{
+          rotulo: 'Preço',
+          rotuloFrase: 'preço',
+          valor: m.preco,
+          universo: doTipo.filter((x) => x.moeda === undefined).map((x) => x.preco),
+          formato: (v: number) => brl(v),
+        }]
+      : []),
+  ];
 
   // Dado sincero: os presets do quiz rodados contra ESTE material (recomendacao.ts)
   const vereditos = vereditosDoMaterial(m);
@@ -477,6 +509,14 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             <p className={estilos.procedenciaNota}>{m.simples.frase}</p>
           )}
         </section>
+
+        {/* ── 2c. Onde este material cai no catálogo ─────────────────────────
+            Depois da tradução e antes de "pra quem é": primeiro o que a peça é,
+            depois onde ela cai entre as outras, depois a quem ela serve. */}
+        <FaixaCatalogo
+          linhas={linhasFaixa}
+          universoRotulo={`as ${doTipo.length} ${m.tipo.toLowerCase()}s do catálogo`}
+        />
 
         {/* ── 2b. Pra quem é — DADO SINCERO: os mesmos presets que o quiz gera,
                rodados contra este material pelo motor de filtros (recomendacao.ts).

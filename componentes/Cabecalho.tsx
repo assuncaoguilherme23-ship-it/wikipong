@@ -194,13 +194,11 @@ export function Cabecalho() {
               </div>
             )}
           </div>
-          <Link
-            href="/profissionais/"
-            className={estilos.navLink}
-            aria-current={rota.startsWith('/profissionais') ? 'page' : undefined}
-          >
-            Profissionais
-          </Link>
+          {/* Profissionais saiu do nível principal e vive só dentro de
+              Comunidade ▾ (decisão do fundador, 2026-08-03). O motivo é
+              espaço: a barra precisa comportar a área de conta quando o
+              cadastro entrar. Quatro itens de texto mais o CTA já é o limite
+              antes de a barra começar a espremer em notebook. */}
           <Link href="/quiz/" className={`botao-primario ${estilos.ctaNav}`}>
             Fazer o teste
           </Link>

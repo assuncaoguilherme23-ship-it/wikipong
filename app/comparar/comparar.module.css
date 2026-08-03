@@ -162,6 +162,69 @@
   margin-left: 0.4rem;
 }
 
+/* ── "Em português claro" lado a lado ────────────────────────────────────────
+   Entrou quando o radar deixou de ser desenhado para lâminas (duas métricas não
+   fazem polígono). A construção traduzida diz mais sobre a diferença entre duas
+   madeiras do que velocidade e controle sozinhos.
+
+   Duas colunas iguais; empilha em tela estreita, onde ler lado a lado já não
+   acontece de qualquer jeito. */
+.claroLado {
+  margin-top: clamp(1.5rem, 4vw, 2.25rem);
+  padding-top: clamp(1.25rem, 3vw, 1.75rem);
+  border-top: 1px solid var(--cor-linha);
+}
+.claroTitulo {
+  font-size: var(--titulo-3);
+  margin: 0 0 1rem;
+}
+.claroGrade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 720px) {
+  .claroGrade {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+.claroNome {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--cor-tinta);
+}
+.claroResumo {
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+}
+.claroTracos {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.claroTracos li {
+  font-size: var(--texto-mini);
+  line-height: 1.45;
+  color: var(--cor-mudo);
+  text-wrap: pretty;
+}
+.claroTracos b {
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--cor-tinta-suave);
+}
+
 .nota {
   margin-top: 1.25rem;
   font-size: var(--texto-mini);

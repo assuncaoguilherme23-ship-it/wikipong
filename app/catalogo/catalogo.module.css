@@ -333,10 +333,19 @@
 .itemGrade {
   position: relative;
 }
+/* ── Onde a pílula "Comparar" fica ──────────────────────────────────────────
+   Ela ficava no canto SUPERIOR direito — exatamente sobre o nome do material.
+   Como só aparece no hover, ela surgia por cima do título bem no momento em que
+   a pessoa estava lendo, e cobria o fim da primeira linha em todo nome longo
+   ("Syntelia VCI OFF", "Anders Lind Hexa Carbon").
+
+   Foi para o canto INFERIOR direito. Ali embaixo mora o preço, que é curto e
+   alinhado à esquerda — sobra a metade direita da linha, vazia em todos os
+   cartões. O `padding-right` no preço garante que nem um valor longo encoste. */
 .marcarComparar {
   position: absolute;
   z-index: 1;
-  top: 0.6rem;
+  bottom: 0.6rem;
   right: 0.6rem;
   display: inline-flex;
   align-items: center;
@@ -565,6 +574,9 @@
 .preco {
   margin: auto 0 0;
   padding-top: 0.75rem;
+  /* Espaço reservado para a pílula "Comparar", que se sobrepõe aqui no canto
+     direito. Sem ele, um preço longo passaria por baixo dela. */
+  padding-right: 7.5rem;
   border-top: 1px solid var(--cor-linha);
   font-size: var(--texto-maior);
   font-weight: 600;

@@ -35,6 +35,7 @@ import { perfilVazio, temIdentidade, pecasEscolhidas } from '../src/logica/perfi
 import {
   traduzirFicha, familiaDaLamina, familiaDaBorracha, LAMINA, BORRACHA,
 } from '../src/logica/traduzir.js';
+import { metricasComparaveis, metricasDoRadar, temRadar } from '../src/logica/comparacao.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
@@ -746,6 +747,61 @@ for (const k of Object.keys(LAMINA)) {
 for (const k of Object.keys(BORRACHA)) {
   afirma(BORRACHA[k as keyof typeof BORRACHA].resumo.length > 40, `resumo de borracha "${k}" existe`);
 }
+
+// ───────────────── Comparação: nenhum par pode quebrar a tela ─────────────────
+
+const soVel = { specs: { velocidade: 8, controle: 7 } };               // lâmina
+const completo = { specs: { velocidade: 8, spin: 9, controle: 7 }, durabilidade: 8, durezaUnificada: 47 };
+
+afirma(metricasComparaveis(soVel, soVel).length === 2,
+  'lâmina × lâmina: só velocidade e controle — sem efeito, durabilidade ou Perdão');
+afirma(metricasComparaveis(completo, completo).length === 5,
+  'borracha completa × completa: as cinco métricas');
+afirma(metricasComparaveis(completo, soVel).length === 2,
+  'métrica só entra quando OS DOIS têm — o lado mais pobre manda');
+afirma(!temRadar(metricasComparaveis(soVel, soVel)),
+  'com 2 eixos não se desenha radar: polígono de 2 vértices é um traço');
+afirma(temRadar(metricasComparaveis(completo, completo)), 'com 4 eixos o radar sai');
+
+/* A INVARIANTE QUE FALTAVA, e que teria evitado o crash em produção.
+   Varre TODOS os pares do mesmo tipo — a regra do fundador, borracha com
+   borracha e madeira com madeira — e exige duas coisas de cada um:
+
+     1. nenhuma célula undefined ou NaN. Era `durabilidade.toFixed(1)` em
+        undefined, porque o tipo declarava obrigatório o que a guarda não
+        checava. Todas as 94 lâminas estão sem durabilidade, então TODA
+        comparação lâmina × lâmina quebrava: 4.371 dos 10.588 pares.
+
+     2. tantos valores quanto eixos no radar. Eram duas listas paralelas, e o
+        JSX passava quatro rótulos fixos para três valores — cada número
+        plotado no eixo errado. Isso não quebrava; mentia. */
+const comparaveisTeste = MATERIAIS.filter(temDesempenho);
+let paresVarridos = 0;
+let celulasRuins = 0;
+let radarDesalinhado = 0;
+for (let i = 0; i < comparaveisTeste.length; i++) {
+  for (let j = i + 1; j < comparaveisTeste.length; j++) {
+    const x = comparaveisTeste[i];
+    const y = comparaveisTeste[j];
+    if (x.tipo !== y.tipo) continue;
+    paresVarridos++;
+    const met = metricasComparaveis(x, y);
+    for (const linha of met) {
+      for (const v of linha.valores) {
+        if (v === undefined || Number.isNaN(v)) celulasRuins++;
+      }
+    }
+    const doRadar = metricasDoRadar(met);
+    if (doRadar.map((r) => r.eixo).length !== doRadar.map((r) => r.valores[0]).length) {
+      radarDesalinhado++;
+    }
+  }
+}
+afirma(paresVarridos > 10000, `varreu os pares do mesmo tipo (${paresVarridos})`);
+afirma(celulasRuins === 0,
+  `nenhuma célula da comparação é undefined ou NaN (achadas: ${celulasRuins})`);
+afirma(radarDesalinhado === 0,
+  `radar sempre com tantos valores quanto eixos (desalinhados: ${radarDesalinhado})`);
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

@@ -302,6 +302,154 @@ export const GUIAS: Guia[] = [
     ),
   },
   {
+    slug: 'anatomia-da-lamina',
+    titulo: 'Anatomia da lâmina: onde a fibra fica, e as letras do cabo',
+    resumo:
+      'Tempo de contato, fibra interna × externa, ponto doce, balanço, vibração — e o que FL, ST, AN e CS querem dizer.',
+    minutos: 8,
+    corpo: (
+      <>
+        <p>
+          O guia <Link href="/aprender/madeira-vs-carbono/">madeira vs carbono</Link> responde a
+          primeira pergunta: <em>tem fibra ou não?</em> Este responde as seguintes, que aparecem
+          na hora de escolher uma lâmina específica e quase nunca são explicadas — inclusive as
+          quatro letras que a loja pede pra você escolher no cabo.
+        </p>
+
+        <h2>Tempo de contato: o milésimo que decide</h2>
+        <p>
+          É quanto tempo a bola fica grudada na raquete durante o golpe. Parece detalhe, e é a
+          coisa que mais muda o que você consegue fazer.
+        </p>
+        <p>
+          Lâminas flexíveis — em geral 5 camadas de madeira pura — <strong>afundam</strong> um
+          pouco no impacto. A bola fica ali mais tempo, e nesse intervalo duas coisas acontecem:
+          a borracha tem mais tempo pra <em>agarrar</em> a bola e gerar efeito, e você tem mais
+          tempo pra corrigir a direção. Lâminas rígidas devolvem quase na hora: mais velocidade,
+          menos tempo pra qualquer ajuste.
+        </p>
+        <p>
+          É por isso que a lâmina, sozinha, não cria efeito — quem cria é a{' '}
+          <Link href="/aprender/como-escolher-borracha/">borracha</Link> — mas ela{' '}
+          <strong>define o teto</strong> do efeito que você consegue tirar.
+        </p>
+
+        <h2>Onde a fibra está muda tudo</h2>
+        <p>
+          Duas lâminas podem ter exatamente a mesma fibra e jogar de formas opostas, dependendo
+          da profundidade em que ela foi colada. É a diferença entre <strong>externa</strong> e{' '}
+          <strong>interna</strong>, e nenhuma das duas é melhor:
+        </p>
+        <p>
+          <strong>Fibra externa</strong> (a Viscaria é o exemplo clássico): o carbono fica logo
+          abaixo da folha de fora. A bola encontra a fibra quase imediatamente. Saída seca,
+          rápida, direta, arco mais baixo. Favorece quem joga colado na mesa, bloqueando e
+          devolvendo forte, aproveitando a força que vem do outro lado.
+        </p>
+        <p>
+          <strong>Fibra interna</strong> (a Innerforce é o exemplo clássico): o carbono fica sobre
+          o núcleo, coberto por duas camadas de madeira. Em bola lenta você sente madeira, com o
+          controle que vem disso; a fibra só entra quando você bate forte. O tempo de contato
+          chega a ser <strong>15% a 20% maior</strong> que na versão externa da mesma linha — e é
+          isso que faz o topspin sair mais fácil e o erro de centro doer menos.
+        </p>
+        <p>
+          Regra prática: se o seu jogo é próximo da mesa e de resposta rápida, externa. Se você
+          gira a bola e joga um passo atrás, interna.
+        </p>
+
+        <h2>Ponto doce: por que a bola perde força perto da borda</h2>
+        <p>
+          É a região da raquete onde a batida sai limpa. Fora dela, parte da energia vira
+          vibração e a bola sai mais fraca — aquela sensação de “peguei torto”.
+        </p>
+        <p>
+          Madeira pura tem ponto doce <strong>menor</strong>: bater um pouco fora do centro
+          custa caro. Fibras rígidas espalham o impacto por uma área maior e alargam esse ponto,
+          o que dá <strong>regularidade</strong>. É um dos ganhos reais do carbono, e ele não
+          aparece em nenhum número de velocidade.
+        </p>
+
+        <h2>Rígida ou flexível</h2>
+        <p>
+          <strong>Rígida</strong> não dobra no impacto: concentra tudo em velocidade. Excelente
+          em batida reta, bloqueio e contra-ataque.
+        </p>
+        <p>
+          <strong>Flexível</strong> dobra sutilmente: absorve a velocidade que vem do adversário
+          e devolve com mais efeito e arco mais alto. Perdoa mais, e por isso é onde quase todo
+          mundo deve começar.
+        </p>
+
+        <h2>Vibração: a lâmina conversando com você</h2>
+        <p>
+          O tremor que sobe pela lâmina até a mão depois do impacto não é defeito — é{' '}
+          <strong>informação</strong>. É por ele que você sente se pegou a bola no lugar certo.
+        </p>
+        <p>
+          Lâminas de controle transmitem essa vibração de forma limpa, e é isso que ensina o
+          gesto. Lâminas muito rígidas, ou com amortecimento no cabo, calam esse retorno: a
+          sensação fica anestesiada. Para quem já tem o gesto pronto, é conforto; para quem está
+          formando, é ficar sem o professor.
+        </p>
+
+        <h2>Balanço: duas lâminas de 85 g podem parecer bem diferentes</h2>
+        <p>
+          O peso na balança diz pouco. O que a mão sente é <strong>onde</strong> esse peso está.
+        </p>
+        <p>
+          <strong>Peso na cabeça</strong>: concentrado na ponta. Aumenta a força nos golpes de
+          ataque e ajuda o topspin pesado, mas cansa mais o pulso ao longo do jogo.
+        </p>
+        <p>
+          <strong>Peso no cabo</strong>: perto da mão. A raquete parece mais leve do que é e
+          troca de lado mais rápido — bom pra quem alterna forehand e backhand na mesa.
+        </p>
+
+        <h2>As letras do cabo: FL, ST, AN e CS</h2>
+        <p>
+          A loja pede pra você escolher, quase nunca explica, e não dá pra trocar depois. Não há
+          formato certo: há o que combina com a sua mão e com o seu jogo.
+        </p>
+        <p>
+          <strong>FL — côncavo (flared)</strong>: mais estreito no pescoço e mais largo na base.
+          A mão “trava” sozinha e a raquete não escorrega. É o mais usado, com folga, e o padrão
+          seguro pra quem está começando ou não tem como experimentar antes.
+        </p>
+        <p>
+          <strong>ST — reto (straight)</strong>: mesma largura do começo ao fim. Deixa você
+          girar levemente o cabo na mão durante o ponto, mudando o ângulo entre um golpe e outro.
+          Comum em quem defende e em quem usa muito o backhand.
+        </p>
+        <p>
+          <strong>AN — anatômico</strong>: tem uma ondulação no meio que preenche a palma.
+          Máxima firmeza, sempre na mesma posição — o oposto exato da proposta do reto.
+        </p>
+        <p>
+          <strong>CS — caneta chinesa</strong>: cabo curto e cônico, pra quem segura a raquete
+          como se fosse um lápis. Não é variação de pegada: é outra empunhadura, e só faz sentido
+          se você já joga assim.
+        </p>
+        <p>
+          Se for a sua primeira lâmina e você não tem em quem experimentar, <strong>FL</strong>.
+          É a escolha que menos exige que você já saiba o que prefere.
+        </p>
+
+        <h2>O que o WikiPong publica de cada uma</h2>
+        <p>
+          Boa parte do que está acima <strong>o fabricante não declara</strong> na ficha, e nós
+          não inventamos: balanço, vibração e ponto doce quase nunca vêm publicados. Onde a marca
+          diz — construção, número de camadas, posição da fibra, classe — a ficha do material
+          mostra, com a fonte e a data da consulta. Onde não diz, fica em branco, e o branco é
+          honesto.
+        </p>
+        <p>
+          <Link href="/catalogo/?tipos=L%C3%A2mina">Ver as lâminas do catálogo →</Link>
+        </p>
+      </>
+    ),
+  },
+  {
     slug: 'estilos-de-jogo',
     titulo: 'Estilos de jogo',
     resumo: 'Atacante, defensor, all-round, e por que o iniciante não precisa escolher ainda.',

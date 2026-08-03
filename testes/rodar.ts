@@ -683,8 +683,18 @@ afirma(pecasEscolhidas({ ...p0, equipamento: { lamina: 'x', fh: 'y' } }) === 2,
 
 const fichaDe = (v: string, rotulo = 'Construção') => [{ rotulo, valor: v }];
 
-afirma(familiaDaLamina(fichaDe('Madeira + carbono em posição interna')) === 'com-fibra',
-  'carbono na construção → família com fibra');
+/* ONDE a fibra está muda a dinâmica inteira: externa dá saída seca e arco baixo,
+   interna mantém toque de madeira no toque leve e só "acorda" na pancada (tempo
+   de contato 15–20% maior). Chamar as duas de "com fibra" escondia justamente a
+   informação que faz a pessoa escolher. */
+afirma(familiaDaLamina(fichaDe('Madeira + carbono em posição interna')) === 'fibra-interna',
+  'ficha que diz "interna" → família fibra-interna, não o genérico');
+afirma(familiaDaLamina(fichaDe('5 madeiras + 2 de Axylium-Carbon externas')) === 'fibra-externa',
+  'ficha que diz "externas" → família fibra-externa');
+afirma(familiaDaLamina(fichaDe('Innerforce Layer ZLC')) === 'fibra-interna',
+  '"Innerforce" na construção conta como declaração de fibra interna');
+afirma(familiaDaLamina(fichaDe('Madeira + carbono')) === 'com-fibra',
+  'sem dizer onde a fibra está, fica no genérico — não se deduz a posição');
 afirma(familiaDaLamina(fichaDe('5 madeiras + 2 ZL-Carbon')) === 'com-fibra',
   'Carbon em inglês também conta como fibra');
 afirma(familiaDaLamina(fichaDe('5 camadas de madeira pura (sem fibra)')) === 'madeira-pura',

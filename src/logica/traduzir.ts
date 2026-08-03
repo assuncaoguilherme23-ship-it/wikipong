@@ -49,10 +49,27 @@ export interface LinhaFicha {
 }
 
 /**
- * Famílias de lâmina. O eixo que muda a vida de quem joga é UM: tem fibra
- * (carbono, arylate, vidro) ou é madeira pura. O resto é variação.
+ * Famílias de lâmina.
+ *
+ * A primeira versão tinha só `com-fibra`, tratando toda fibra como a mesma
+ * coisa. Não é: ONDE a fibra está colada muda a dinâmica inteira.
+ *
+ *   · EXTERNA — logo abaixo da folha de fora. A bola encontra o carbono quase
+ *     na hora: saída seca, rápida, direta, arco baixo.
+ *   · INTERNA — sobre o núcleo, coberta por duas camadas de madeira. Em bola
+ *     lenta você sente madeira; a fibra só "acorda" quando você bate forte.
+ *     O tempo de contato chega a ser 15–20% maior que na externa.
+ *
+ * São opostos em sensação, e dizer "tem fibra" para os dois esconde justamente
+ * a informação que faz a pessoa escolher. Só 36 das 393 lâminas declaram qual é
+ * — as outras ficam em `com-fibra`, que continua verdadeiro e mais vago.
  */
-export type FamiliaLamina = 'com-fibra' | 'balsa' | 'madeira-pura';
+export type FamiliaLamina =
+  | 'fibra-externa'
+  | 'fibra-interna'
+  | 'com-fibra'
+  | 'balsa'
+  | 'madeira-pura';
 
 /** Famílias de borracha — os mesmos nomes que `metricas.ts` já usa. */
 export type FamiliaBorracha = 'tensor' | 'aderente' | 'hibrida' | 'classica';
@@ -77,6 +94,20 @@ export interface LeituraSimples {
  * Consenso do esporte, não medição nossa.
  */
 export const LAMINA: Record<FamiliaLamina, { resumo: string; traco: Traco }> = {
+  'fibra-externa': {
+    resumo:
+      'Lâmina com a fibra logo abaixo da folha de fora. A bola encontra o carbono quase na hora ' +
+      'do impacto: a saída é seca, rápida e direta, com arco mais baixo. É a escolha de quem joga ' +
+      'colado na mesa, bloqueando e devolvendo forte — e a que menos avisa quando o gesto sai errado.',
+    traco: { rotulo: 'Fibra externa', significa: 'saída seca e rápida, arco baixo, perto da mesa' },
+  },
+  'fibra-interna': {
+    resumo:
+      'Lâmina com a fibra por dentro, sobre o núcleo e coberta por duas camadas de madeira. Em ' +
+      'bola lenta você sente madeira, com o controle que vem disso; a fibra só entra quando você ' +
+      'bate forte. A bola fica mais tempo na borracha, o que ajuda a levantar efeito no topspin.',
+    traco: { rotulo: 'Fibra interna', significa: 'toque de madeira no toque leve, carbono na pancada' },
+  },
   'com-fibra': {
     resumo:
       'Lâmina com uma camada de fibra dentro da madeira. A fibra devolve a bola mais rápido e ' +
@@ -211,7 +242,14 @@ const FALA_DE_MADEIRA = /madeira|ply|camada|balsa|hinoki|koto|limba|ayous|kiri|c
 export function familiaDaLamina(ficha: readonly LinhaFicha[]): FamiliaLamina | null {
   const t = textoDaFicha(ficha);
   if (/\bpura\b|sem fibra/.test(t)) return 'madeira-pura';
-  if (FIBRA.test(t)) return 'com-fibra';
+  if (FIBRA.test(t)) {
+    /* Onde a fibra está é mais informativo que o fato de existir. Só vale
+       quando a ficha DIZ — "innerforce"/"inner" e "externa"/"outer" são
+       declaração do fabricante, não dedução pelo nome comercial. */
+    if (/\binterna|\binterno|inner/.test(t)) return 'fibra-interna';
+    if (/\bexterna|\bexterno|outer/.test(t)) return 'fibra-externa';
+    return 'com-fibra';
+  }
   if (/balsa/.test(t)) return 'balsa';
   /* Só afirma madeira pura se a ficha falou de madeira. Silêncio não é resposta. */
   return FALA_DE_MADEIRA.test(t) ? 'madeira-pura' : null;

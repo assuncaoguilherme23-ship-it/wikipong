@@ -120,6 +120,12 @@
 
   /* ── Derivados de layout (não são tokens do Figma) ── */
   --largura-conteudo: 72rem;
+  /* Altura do cabeçalho, que é sticky em top:0. Todo elemento que também se
+     fixa precisa encostar ABAIXO dele, e o número estava copiado à mão nos
+     filtros do catálogo — copiar de novo em cada barra nova era garantir que
+     um dia um deles ficasse pra trás e passasse por baixo do menu.
+     Vem de padding-block 0.85rem × 2 + alvo de toque de 44px. */
+  --altura-cabecalho: 4.5rem;
   --sombra-cartao: 0 1px 2px rgba(40, 48, 39, 0.06), 0 8px 24px rgba(40, 48, 39, 0.06);
 
   /* ── "A mesa" (derivados — divergência registrada sob D-18) ──

@@ -194,9 +194,13 @@ export function CatalogoCliente() {
       <Cabecalho />
 
       <main id="conteudo" className={`container ${estilos.pagina}`}>
+        {/* O seletor de modo NÃO mora mais aqui. Preso ao lado do h1, ele saía
+            da tela no primeiro rolar e só voltava subindo tudo de novo — e o
+            modo é justamente o que se quer trocar OLHANDO os cartões. Foi para
+            a barra de resultados, que agora é fixa e reúne os três controles de
+            "como estou vendo isto": contagem, ordenação e modo. */}
         <div className={estilos.topo}>
           <h1 className={estilos.titulo}>Materiais</h1>
-          <SeletorModo modo={modo} aoMudar={mudarModo} />
         </div>
 
         {/* Busca: o caminho de quem JÁ sabe o nome do produto e não quer filtrar. */}
@@ -299,19 +303,25 @@ export function CatalogoCliente() {
                 <b className="mono">{resultados.length}</b>{' '}
                 {resultados.length === 1 ? 'material encontrado' : 'materiais encontrados'}
               </p>
-              <label className={estilos.ordenacao}>
-                <span>Ordenar:</span>
-                <select
-                  value={estado.ordenar}
-                  onChange={(e) => navegar(comOrdenacao(estado, e.target.value as Ordenacao))}
-                >
-                  {Object.entries(ROTULOS_ORDENACAO).map(([valor, rotulo]) => (
-                    <option key={valor} value={valor}>
-                      {rotulo}
-                    </option>
-                  ))}
-                </select>
-              </label>
+              {/* Os dois controles juntos à direita: o space-between da barra
+                  jogaria o seletor pro meio, longe do irmão que faz o mesmo
+                  tipo de trabalho. */}
+              <div className={estilos.controlesVisao}>
+                <SeletorModo modo={modo} aoMudar={mudarModo} />
+                <label className={estilos.ordenacao}>
+                  <span>Ordenar:</span>
+                  <select
+                    value={estado.ordenar}
+                    onChange={(e) => navegar(comOrdenacao(estado, e.target.value as Ordenacao))}
+                  >
+                    {Object.entries(ROTULOS_ORDENACAO).map(([valor, rotulo]) => (
+                      <option key={valor} value={valor}>
+                        {rotulo}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
             </div>
 
             {temFiltro && (

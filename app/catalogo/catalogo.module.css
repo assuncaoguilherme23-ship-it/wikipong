@@ -108,10 +108,27 @@
   .alternarFiltros {
     display: none;
   }
+  /* ── A lateral rola sozinha ────────────────────────────────────────────────
+     Ela já era sticky, e era isso que causava o problema: a lista de filtros é
+     mais alta que a tela, e um elemento sticky mais alto que a janela fica
+     PRESO no topo com o resto pendurado fora da vista. As últimas opções só
+     apareciam rolando a página inteira até o fim, quando o sticky solta.
+
+     max-height + overflow-y dão à lateral a própria barra de rolagem. O
+     overscroll-behavior impede que, ao chegar no fim dela, a rolagem "vaze"
+     para a página e leve o leitor embora do painel sem querer. */
   .filtros {
     display: block;
     position: sticky;
-    top: 4.5rem;
+    top: var(--altura-cabecalho);
+    max-height: calc(100dvh - var(--altura-cabecalho) - 1.5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    /* Respiro para a barra de rolagem não encostar no conteúdo. */
+    padding-right: 0.5rem;
+    /* Fina e discreta onde o navegador deixa escolher. */
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-linha-forte) transparent;
   }
 }
 
@@ -187,6 +204,15 @@
 }
 
 /* ── Barra de resultados ── */
+/* ── Barra de resultados: FIXA ao rolar ──────────────────────────────────────
+   Reúne os três controles de "como estou vendo isto": contagem, modo
+   Simples/Técnico e ordenação. O modo vivia lá em cima ao lado do <h1> e sumia
+   no primeiro rolar — e ele é exatamente o que se quer trocar OLHANDO os
+   cartões, não voltando ao topo.
+
+   Encosta logo abaixo do cabeçalho do site, que é sticky em top:0. O fundo
+   opaco não é enfeite: sem ele os cartões passariam por baixo e a barra viraria
+   texto sobreposto. z-index fica abaixo do cabeçalho (10) e acima da grade. */
 .barraResultados {
   display: flex;
   align-items: center;
@@ -194,10 +220,41 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 1rem;
+
+  position: sticky;
+  top: var(--altura-cabecalho);
+  z-index: 5;
+  background: var(--cor-papel);
+  padding-block: 0.75rem;
+  border-bottom: 1px solid var(--cor-linha);
 }
 .contagem {
   margin: 0;
   color: var(--cor-tinta-suave);
+}
+
+/* Modo + ordenação: os dois controles de visão, juntos à direita da barra. */
+.controlesVisao {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Barra fixa em tela estreita: contagem, modo e ordenação não cabem numa linha
+   só e quebram. Fixa e alta demais rouba a tela justamente de quem tem menos —
+   então aqui ela aperta o passo em vez de crescer. */
+@media (max-width: 560px) {
+  .barraResultados {
+    padding-block: 0.5rem;
+    gap: 0.5rem;
+  }
+  .contagem {
+    font-size: var(--texto-menor);
+  }
+  .ordenacao {
+    font-size: var(--texto-mini);
+  }
 }
 .contagem b {
   color: var(--cor-tinta);

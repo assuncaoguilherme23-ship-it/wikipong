@@ -290,6 +290,124 @@ export const GUIAS: Guia[] = [
     ),
   },
   {
+    slug: 'fisica-do-impacto',
+    titulo: 'O que acontece nos 5 milésimos em que a bola toca a raquete',
+    resumo:
+      'Tempo de contato, janela de ativação, ponto de fundo, linearidade e catapulta — por que duas borrachas de "velocidade 10" jogam diferente.',
+    minutos: 8,
+    corpo: (
+      <>
+        <p>
+          A bola fica em contato com a raquete entre <strong>3 e 8 milésimos de segundo</strong>.
+          Tudo o que a borracha e a lâmina fazem, fazem nesse intervalo. Este guia é sobre o que
+          acontece ali dentro — e é o que explica a coisa mais confusa do equipamento: por que{' '}
+          <strong>duas borrachas com nota 10 em velocidade se comportam de formas opostas</strong>.
+        </p>
+
+        <h2>Por que três índices não bastam</h2>
+        <p>
+          Velocidade, efeito e controle é o trio que quase toda marca publica, e é o que o WikiPong
+          mostra na ficha. Ele é útil e é insuficiente, e vale saber por quê.
+        </p>
+        <p>
+          Uma borracha pode ser rápida <em>em bola fraca perto da mesa</em>, porque a esponja
+          devolve energia sozinha. Outra pode ser rápida <em>só quando você acelera de verdade</em>.
+          As duas recebem 10. Na mão, uma parece um foguete e a outra parece morta — e quem comprou
+          a segunda acha que errou de produto, quando na verdade errou de <em>gesto</em>.
+        </p>
+
+        <h2>Janela de ativação: por que material bom parece ruim</h2>
+        <p>
+          Toda borracha tem uma faixa de força em que ela <strong>acorda</strong>. Abaixo dela, a
+          esponja nem chega a comprimir: você bate e a bola sai devagar, sem giro, sem sensação.
+        </p>
+        <p>
+          Borrachas duras e muito tensionadas têm janela alta — foram feitas para quem já acelera o
+          braço. É a razão número um pela qual um iniciante compra a borracha do profissional e joga
+          pior do que jogava antes. Não é a borracha que é ruim, nem a pessoa: é que{' '}
+          <strong>ela nunca sai do lugar</strong>.
+        </p>
+        <p>
+          Do outro lado, esponja macia acorda com pouco — o que é ótimo para aprender e vira
+          limitação quando o gesto cresce.
+        </p>
+
+        <h2>Ponto de fundo: quando a bola encontra a madeira</h2>
+        <p>
+          Se a batida for forte o bastante, a bola comprime a esponja até o fim e chega na madeira.
+          O som muda, e a trajetória sai do previsto.
+        </p>
+        <p>
+          Esponja fina ou macia chega lá com menos força. É por isso que{' '}
+          <Link href="/aprender/anatomia-da-borracha/">espessura</Link> não é só velocidade: ela
+          define quanta margem existe antes de a peça ficar sem resposta.
+        </p>
+
+        <h2>Linearidade: previsível ou estilingue</h2>
+        <p>
+          Borracha <strong>linear</strong> devolve exatamente na proporção da força que você
+          aplicou. Bateu 30% mais forte, a bola sai 30% mais rápida. É previsível, e previsível é o
+          que permite corrigir.
+        </p>
+        <p>
+          Borracha <strong>não-linear</strong> tem um ponto em que dispara: até certa força ela
+          responde pouco, e depois solta tudo de uma vez. Rende bolas espetaculares e erros
+          espetaculares. Quase todo tensor moderno é um pouco não-linear — é isso que dá a sensação
+          de "explosão" que se vê em vídeo.
+        </p>
+
+        <h2>Catapulta: a energia que volta sem você pedir</h2>
+        <p>
+          É quanto a esponja guarda no impacto e devolve como velocidade pura. Catapulta alta dá
+          bola rápida com gesto curto, o que parece só vantagem.
+        </p>
+        <p>
+          O preço aparece no toque leve: quando você quer só devolver curto, a borracha devolve com
+          energia própria e a bola sobe. Quem joga muito perto da mesa costuma preferir catapulta
+          menor pelo mesmo motivo que um carro de cidade não precisa de motor de pista.
+        </p>
+
+        <h2>Sensibilidade ao efeito do outro</h2>
+        <p>
+          A mesma aderência que faz você imprimir giro faz a borracha <em>ler</em> o giro que chega.
+          Quem tem muito efeito sofre mais para devolver saque carregado — a bola agarra e vai para
+          onde o efeito do adversário mandou, não para onde você apontou.
+        </p>
+        <p>
+          É um trade-off real e pouco falado: subir de borracha aumenta o seu efeito{' '}
+          <strong>e</strong> o efeito que o outro consegue impor a você.
+        </p>
+
+        <h2>E a lâmina, no mesmo intervalo</h2>
+        <p>
+          A lâmina responde no mesmo milésimo. Madeira flexível afunda e devolve depois — mais tempo
+          de contato, mais chance de a borracha agarrar. Fibra rígida devolve quase na hora.
+        </p>
+        <p>
+          O guia da <Link href="/aprender/anatomia-da-lamina/">anatomia da lâmina</Link> detalha
+          isso, inclusive a diferença entre fibra externa e interna, que muda o tempo de contato em
+          15% a 20% dentro da mesma linha.
+        </p>
+
+        <h2>O que fazer com tudo isso</h2>
+        <p>
+          Nada disso vem publicado como número — nenhum fabricante mede catapulta ou linearidade numa
+          escala comparável, e por isso <strong>você não vai ver esses valores na ficha de nenhum
+          material do WikiPong</strong>. Colocar um número ali seria inventar.
+        </p>
+        <p>
+          Serve para outra coisa, mais útil: entender o que você está sentindo. Se a bola some
+          quando você toca leve, é catapulta. Se a borracha parece morta, é janela de ativação. Se
+          às vezes explode sem aviso, é não-linearidade. Ter nome para o que acontece é o que separa
+          trocar de material com critério de trocar por chute.
+        </p>
+        <p>
+          <Link href="/glossario/">Ver todos os termos no glossário →</Link>
+        </p>
+      </>
+    ),
+  },
+  {
     slug: 'madeira-vs-carbono',
     titulo: 'Lâminas: madeira vs carbono',
     resumo: 'O que a fibra faz de verdade, como ler a classe (ALL/OFF) e quando ela passa a valer a pena.',

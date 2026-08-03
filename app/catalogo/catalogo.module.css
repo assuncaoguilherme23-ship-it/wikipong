@@ -429,11 +429,28 @@
 }
 
 /* Técnico: números tabulares */
+/* ── Modo Técnico: uma métrica por linha ─────────────────────────────────────
+   Era `grid-template-columns: repeat(4, 1fr)` — quatro colunas iguais dentro de
+   um cartão com ~213px de conteúdo (a grade tem minmax(15.5rem, 1fr) e o cartão
+   tira 2,2rem de padding). Sobravam ~52px por coluna, e "VELOCIDADE" em mono
+   maiúsculo com letter-spacing pede ~70px: a palavra vazava para fora do cartão,
+   e os números ficavam colados uns nos outros sem alinhar com o rótulo de cima.
+
+   Agora é uma linha por métrica, rótulo à esquerda e número à direita. Não tem
+   como vazar, os números alinham numa coluna só (tabular-nums), e a altura passa
+   a bater com a do modo Simples — que também é uma linha por métrica. Trocar de
+   modo deixou de pular o layout. */
 .specsTecnico {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
   margin: 0;
+}
+.specsTecnico > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
 }
 .specsTecnico dt {
   font-family: var(--fonte-mono);
@@ -441,12 +458,17 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cor-mudo);
+  /* Encolhe antes de empurrar o número para fora, se o rótulo crescer. */
+  min-width: 0;
 }
 .specsTecnico dd {
-  margin: 0.15rem 0 0;
+  margin: 0;
   font-size: var(--texto-dado);
   font-weight: 500;
+  /* Largura fixa por dígito: a coluna de números fica reta entre as linhas. */
+  font-variant-numeric: tabular-nums;
   font-feature-settings: 'tnum' 1;
+  flex-shrink: 0;
 }
 
 /* Simples: bolinhas + palavra + "pra quem é" (D-08) */

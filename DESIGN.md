@@ -301,3 +301,45 @@ alternativa acessível. Eixos em mono 9px. Usado no hero (SSG) e no /comparar.
 - **Don't** sublinhar TEXTO com o tracejado da linha central: tracejado sob palavra é
   a convenção visual de abbr/tooltip e promete uma definição que não existe (decisão
   do fundador, 2026-07-14). A linha central vive em divisores e no rodapé.
+
+
+---
+
+## 7. Divergências aplicadas (sync pendente com o Figma)
+
+Registro exigido pelo D-18, regra 2: mudança significativa aplicada no código
+antes de existir no Figma.
+
+### D-18/01 · O modo Simples passa a traduzir a ficha (2026-08-03)
+
+**O que mudava antes.** O cartão do catálogo tinha três caminhos, e o terceiro
+não era um modo: material SEM perfil de desempenho mostrava o mesmo texto em
+Simples e em Técnico. Eram **470 de 678 materiais (69% do catálogo)** para os
+quais o botão não mudava um pixel.
+
+E o texto mostrado falava da colheita, não da peça — "17 avaliações", "R$ 905,
+a mais cara da Andro", "zero avaliações registradas". Isso responde *o quanto a
+gente sabe disso*; quem aperta Simples pergunta *o que essa peça faz*.
+
+**O que passa a valer.** A divisão é por PERGUNTA, não por disponibilidade de
+número:
+
+| | responde | conteúdo |
+|---|---|---|
+| **Técnico** | o que a fonte diz | números quando existem; as palavras do próprio fabricante quando não; mais a procedência |
+| **Simples** | o que isso significa pra quem joga | bolinhas quando existem + resumo traduzido + traços |
+
+A procedência **migrou para o Técnico**. Não foi corte: é pergunta técnica, e
+estava ocupando o lugar da resposta que o Simples devia dar.
+
+**O texto do Simples é DERIVADO, não digitado.** Mesmo argumento do D-09 para a
+dureza: escrever à mão 470 descrições de peças que ninguém aqui jogou seria
+inventar. O fabricante declara construção e superfície em 678 de 678 fichas —
+o que faltava era tradução, não dado. Vive em `src/logica/traduzir.ts`, com as
+tabelas carimbadas A VALIDAR.
+
+**Cobertura:** 208 → **678 de 678**. Nenhum material fica mudo no Simples.
+
+**Componente novo:** `.tracos` — lista de "RÓTULO — o que significa", rótulo em
+mono maiúsculo. Sem barra lateral: a primeira versão usou `border-left` de 2px
+no acento, que é Don't documentado nesta mesma página.

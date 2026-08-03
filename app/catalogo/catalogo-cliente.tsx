@@ -32,6 +32,8 @@ import {
   type Ordenacao,
 } from '@/src/logica/filtros';
 import { PALAVRAS, paraPalavra, perdao } from '@/src/logica/metricas';
+import { traduzirFicha } from '@/src/logica/traduzir';
+import { fabricantePorId } from '@/componentes/dados-fabricante';
 import { MATERIAIS, type MaterialCatalogo } from '@/componentes/dados-materiais';
 import { ehFavoritoDaComunidade } from '@/componentes/dados-comunidade';
 import { Bolinhas } from '@/componentes/Bolinhas';
@@ -429,6 +431,11 @@ function CartaoMaterial({
      Sem ele, o cartão mostra o que É verdade — foto, marca, preço e a frase em
      português claro — em vez de inventar números pra preencher a coluna (D-16). */
   const comSpecs = temDesempenho(m);
+  /* A tradução da ficha do fabricante — é ela que faz o modo Simples significar
+     algo para os 470 materiais sem perfil de desempenho, que eram 69% do
+     catálogo mostrando texto idêntico nos dois modos. Ver src/logica/traduzir. */
+  const ficha = fabricantePorId(m.id)?.ficha;
+  const leitura = traduzirFicha(m.tipo, ficha);
   const perdaoValor =
     comSpecs && m.durezaUnificada !== undefined ? perdao(m.specs, m.durezaUnificada) : null;
   const linhas = comSpecs
@@ -473,26 +480,51 @@ function CartaoMaterial({
         <p className={`mono ${estilos.seloFavorito}`}>★ Favorito da comunidade</p>
       )}
 
-      {!comSpecs ? (
-        /* Sem perfil: só a tradução honesta, sem tabela vazia nem zeros. */
-        <p className={estilos.praQuemE}>
-          <b>{m.simples.tag}.</b> {m.simples.frase}
-        </p>
-      ) : modo === 'tecnico' ? (
-        <dl className={estilos.specsTecnico}>
-          {linhas.map(([rotulo, , valor]) => (
-            <div key={rotulo}>
-              <dt>{rotulo === 'Efeito' ? 'Spin' : rotulo}</dt>
-              <dd className="mono">{valor.toFixed(1)}</dd>
-            </div>
-          ))}
-          {perdaoValor !== null && (
-            <div>
-              <dt>Perdão*</dt>
-              <dd className="mono">{perdaoValor.toFixed(1)}</dd>
-            </div>
+      {/* ── OS DOIS MODOS, E O QUE MUDA ENTRE ELES (D-08) ───────────────────
+          Antes: quem não tinha perfil de desempenho caía num terceiro caminho
+          onde o botão Simples/Técnico não mudava NADA — 470 de 678 materiais.
+
+          Agora a divisão é por PERGUNTA, não por disponibilidade de número:
+            · Técnico  = o que a fonte diz. Números quando existem, e as
+              palavras do próprio fabricante quando não; mais a procedência.
+            · Simples  = o que isso significa para quem vai jogar.
+
+          A frase de procedência ("17 avaliações", "R$ 905, a mais cara da
+          Andro") migrou para o Técnico de propósito: ela responde "o quanto a
+          gente sabe disso", que é pergunta técnica. Quem aperta Simples está
+          perguntando outra coisa. */}
+      {modo === 'tecnico' ? (
+        <div className={estilos.blocoTecnico}>
+          {comSpecs && (
+            <dl className={estilos.specsTecnico}>
+              {linhas.map(([rotulo, , valor]) => (
+                <div key={rotulo}>
+                  <dt>{rotulo === 'Efeito' ? 'Spin' : rotulo}</dt>
+                  <dd className="mono">{valor.toFixed(1)}</dd>
+                </div>
+              ))}
+              {perdaoValor !== null && (
+                <div>
+                  <dt>Perdão*</dt>
+                  <dd className="mono">{perdaoValor.toFixed(1)}</dd>
+                </div>
+              )}
+            </dl>
           )}
-        </dl>
+          {/* Sem números, o técnico é a ficha do fabricante nas palavras dele —
+              não uma tabela de zeros (D-16). */}
+          {!comSpecs && ficha && ficha.length > 0 && (
+            <dl className={estilos.fichaTecnica}>
+              {ficha.slice(0, 2).map((l) => (
+                <div key={l.rotulo}>
+                  <dt>{l.rotulo}</dt>
+                  <dd>{l.valor}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+          <p className={estilos.procedencia}>{m.simples.frase}</p>
+        </div>
       ) : (
         <div className={estilos.specsSimples}>
           {linhas.map(([rotulo, atributo, valor]) => (
@@ -502,9 +534,26 @@ function CartaoMaterial({
               <span className={estilos.palavraSimples}>{paraPalavra(atributo, valor)}</span>
             </p>
           ))}
-          <p className={estilos.praQuemE}>
-            <b>{m.simples.tag}.</b> {m.simples.frase}
-          </p>
+          {leitura && leitura.resumo && (
+            <p className={estilos.praQuemE}>
+              <b>{m.simples.tag}.</b> {leitura.resumo}
+            </p>
+          )}
+          {/* Sem tradução possível, o editorial assume — nunca fica vazio. */}
+          {(!leitura || !leitura.resumo) && (
+            <p className={estilos.praQuemE}>
+              <b>{m.simples.tag}.</b> {m.simples.frase}
+            </p>
+          )}
+          {leitura && leitura.tracos.length > 0 && (
+            <ul className={estilos.tracos}>
+              {leitura.tracos.map((t) => (
+                <li key={t.rotulo}>
+                  <b>{t.rotulo}</b> — {t.significa}
+                </li>
+              ))}
+            </ul>
+          )}
           {perdaoValor !== null && (
             <p className={estilos.seloPerdao}>{paraPalavra('perdao', perdaoValor)}*</p>
           )}

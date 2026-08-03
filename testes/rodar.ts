@@ -32,6 +32,9 @@ import {
   validarTopico, ordenarTopicos, porAssunto, ultimaAtividade, ROTULO_ASSUNTO, Topico,
 } from '../src/logica/discussoes.js';
 import { perfilVazio, temIdentidade, pecasEscolhidas } from '../src/logica/perfil.js';
+import {
+  traduzirFicha, familiaDaLamina, familiaDaBorracha, LAMINA, BORRACHA,
+} from '../src/logica/traduzir.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
@@ -674,6 +677,68 @@ afirma(temIdentidade({ ...p0, nome: 'Ana', estilo: 'atacante' }),
   'nome + estilo já dá pra apresentar a pessoa');
 afirma(pecasEscolhidas({ ...p0, equipamento: { lamina: 'x', fh: 'y' } }) === 2,
   'conta as peças já escolhidas do equipamento');
+
+// ───────────────── Tradutor de ficha → linguagem de gente ─────────────────
+
+const fichaDe = (v: string, rotulo = 'Construção') => [{ rotulo, valor: v }];
+
+afirma(familiaDaLamina(fichaDe('Madeira + carbono em posição interna')) === 'com-fibra',
+  'carbono na construção → família com fibra');
+afirma(familiaDaLamina(fichaDe('5 madeiras + 2 ZL-Carbon')) === 'com-fibra',
+  'Carbon em inglês também conta como fibra');
+afirma(familiaDaLamina(fichaDe('5 camadas de madeira pura (sem fibra)')) === 'madeira-pura',
+  'a negação vence: "sem fibra" não pode cair em com-fibra por conter "fibra"');
+afirma(familiaDaLamina(fichaDe('Madeira com miolo de balsa')) === 'balsa', 'balsa é família própria');
+
+/* A REGRA QUE PEGOU O DEFEITO. A primeira versão do tradutor tinha
+   `madeira-pura` como default do else final, e por isso classificou a Viscaria
+   Super ALC, a Timo Boll ALC e mais treze lâminas de fibra como "madeira pura,
+   sem fibra — a recomendada para quem está formando a técnica". A ficha delas
+   não declara construção: só "Lâmina avulsa, o cabo se escolhe na loja".
+   Ausência de dado virou afirmação. Sem sinal, agora é null. */
+afirma(familiaDaLamina(fichaDe('Lâmina avulsa. O cabo se escolhe na loja', 'Tipo de lâmina')) === null,
+  'ficha que só fala de cabo não autoriza afirmar família nenhuma');
+afirma(traduzirFicha('Lâmina', fichaDe('Lâmina avulsa. O cabo se escolhe na loja', 'Tipo de lâmina')) === null,
+  'sem família e sem traço, o tradutor cala a boca em vez de chutar (D-16)');
+
+afirma(familiaDaBorracha(fichaDe('Lisa, tensionada', 'Superfície')) === 'tensor', 'tensionada → tensor');
+afirma(familiaDaBorracha(fichaDe('Lisa aderente', 'Superfície')) === 'aderente', 'aderente → aderente');
+afirma(familiaDaBorracha(fichaDe('Lisa aderente, tensionada', 'Superfície')) === 'hibrida',
+  'aderente E tensionada é híbrida — a combinação é testada antes das puras');
+afirma(familiaDaBorracha(fichaDe('Lisa', 'Superfície')) === 'classica', 'lisa e mais nada é clássica');
+afirma(familiaDaBorracha(fichaDe('Lâmina avulsa', 'Tipo')) === null, 'ficha sem superfície → null');
+
+/* Traço sobrevive sem família: a Defensive Pro JP e a Wavy Cybershape não
+   declaram construção de madeira, mas dizem "defensiva" e "hexagonal". */
+const soTraco = traduzirFicha('Lâmina', fichaDe('Construção defensiva, versão japonesa'));
+afirma(soTraco !== null && soTraco.tracos.length > 0,
+  'ficha sem família mas com traço ainda produz leitura');
+
+// ── INVARIANTE DO CATÁLOGO: o tradutor não pode contradizer o nome do produto ──
+// Uma lâmina cujo NOME diz ALC/ZLC/Carbon jamais pode ser descrita como madeira
+// pura. É a asserção que teria quebrado no primeiro material afetado.
+const NOME_DIZ_FIBRA = /\bALC\b|\bZLC\b|\bZLF\b|carbon|arylate|zylon|kevlar|\bCNF\b|fiber|fibra/i;
+let contradicoes = 0;
+let semLeituraNenhuma = 0;
+for (const mat of MATERIAIS) {
+  const f = fabricantePorId(mat.id)?.ficha;
+  if (/mina/i.test(mat.tipo) && f && NOME_DIZ_FIBRA.test(mat.nome)
+      && familiaDaLamina(f) === 'madeira-pura') contradicoes++;
+  // Todo material precisa de ALGO no modo Simples: bolinhas ou tradução.
+  if (!temDesempenho(mat) && traduzirFicha(mat.tipo, f) === null) semLeituraNenhuma++;
+}
+afirma(contradicoes === 0,
+  `nenhuma lâmina com fibra no nome pode ser classificada como madeira pura (achadas: ${contradicoes})`);
+afirma(semLeituraNenhuma === 0,
+  `todo material tem o que dizer no modo Simples (mudos: ${semLeituraNenhuma})`);
+
+// As tabelas são configuração exportada (D-07): toda família precisa de texto.
+for (const k of Object.keys(LAMINA)) {
+  afirma(LAMINA[k as keyof typeof LAMINA].resumo.length > 40, `resumo de lâmina "${k}" existe`);
+}
+for (const k of Object.keys(BORRACHA)) {
+  afirma(BORRACHA[k as keyof typeof BORRACHA].resumo.length > 40, `resumo de borracha "${k}" existe`);
+}
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

@@ -225,7 +225,14 @@ export function familiaDaLamina(ficha: readonly LinhaFicha[]): FamiliaLamina | n
  */
 export function familiaDaBorracha(ficha: readonly LinhaFicha[]): FamiliaBorracha | null {
   const t = textoDaFicha(ficha);
-  const aderente = /aderent|pegajos|hibrid|tacky/.test(t);
+  /* "Híbrida" PRIMEIRO e sozinha. A primeira versão colocava `hibrid` dentro do
+     teste de aderente, e o resultado é que "Lisa aderente híbrida" — o próprio
+     fabricante dizendo o nome da família — casava como aderente, não casava
+     como tensionada, e saía classificada como aderente. Dezessete borrachas
+     assim (as Hybrid da Xiom, as DNA Hybrid, as Helix Hybrid): a palavra que
+     dava a resposta estava sendo gasta como prova de outra coisa. */
+  if (/hibrid|hybrid/.test(t)) return 'hibrida';
+  const aderente = /aderent|pegajos|tacky/.test(t);
   const tensionada = /tensionad|tensor|tension/.test(t);
   if (aderente && tensionada) return 'hibrida';
   if (aderente) return 'aderente';

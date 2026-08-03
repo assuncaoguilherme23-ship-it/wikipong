@@ -705,6 +705,13 @@ afirma(familiaDaBorracha(fichaDe('Lisa, tensionada', 'Superfície')) === 'tensor
 afirma(familiaDaBorracha(fichaDe('Lisa aderente', 'Superfície')) === 'aderente', 'aderente → aderente');
 afirma(familiaDaBorracha(fichaDe('Lisa aderente, tensionada', 'Superfície')) === 'hibrida',
   'aderente E tensionada é híbrida — a combinação é testada antes das puras');
+/* A palavra do fabricante vale mais que a dedução. "Lisa aderente híbrida" saía
+   como aderente porque `hibrid` estava dentro do teste de aderente: a palavra
+   que dava a resposta era gasta como prova de outra coisa. 17 borrachas. */
+afirma(familiaDaBorracha(fichaDe('Lisa aderente híbrida (capa chinesa + esponja alemã)', 'Superfície')) === 'hibrida',
+  'ficha que diz "híbrida" é híbrida, mesmo sem a palavra tensionada');
+afirma(familiaDaBorracha(fichaDe('Lisa levemente aderente (China Hybrid, capa H-Touch)', 'Superfície')) === 'hibrida',
+  '"Hybrid" em inglês na ficha também conta');
 afirma(familiaDaBorracha(fichaDe('Lisa', 'Superfície')) === 'classica', 'lisa e mais nada é clássica');
 afirma(familiaDaBorracha(fichaDe('Lâmina avulsa', 'Tipo')) === null, 'ficha sem superfície → null');
 

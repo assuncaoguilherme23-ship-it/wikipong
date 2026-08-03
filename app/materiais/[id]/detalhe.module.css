@@ -160,6 +160,47 @@
   font-weight: 500;
 }
 
+/* Traços traduzidos da ficha do fabricante — "RÓTULO — o que significa".
+   Mesmo componente do cartão do catálogo (.tracos), mesma marcação de rótulo
+   em mono maiúsculo. Sem barra lateral: side-stripe é Don't do DESIGN.md. */
+.tracos {
+  list-style: none;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 60ch;
+}
+.tracos li {
+  font-size: var(--texto-menor);
+  line-height: 1.5;
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+}
+.tracos b {
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--cor-tinta);
+}
+
+/* A procedência ("17 avaliações", "R$ 905, a mais cara da Andro"). Fica por
+   último e em voz baixa: é contexto da nossa apuração, não a resposta que o
+   leitor abriu a página para achar. */
+.procedenciaNota {
+  margin: 1.1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--cor-linha);
+  font-size: var(--texto-mini);
+  line-height: 1.5;
+  color: var(--cor-mudo);
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+
 /* ── 1b. O que o fabricante publica (fato de fonte externa) ── */
 .subtituloFicha {
   margin: -0.5rem 0 1rem;

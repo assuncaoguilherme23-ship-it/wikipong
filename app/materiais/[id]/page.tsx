@@ -29,6 +29,7 @@ import { Bolinhas } from '@/componentes/Bolinhas';
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
 import { brl, dinheiro } from '@/componentes/formato';
 import { perdao, paraPalavra } from '@/src/logica/metricas';
+import { traduzirFicha } from '@/src/logica/traduzir';
 import { vereditosDoMaterial, ROTULO_INTENCAO } from '@/src/logica/recomendacao';
 import {
   fabricantePorId,
@@ -105,6 +106,11 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
 
   // Fato de fonte externa (dados/fabricantes.json) — separado da nossa derivação
   const fab = fabricantePorId(m.id);
+
+  /* A ficha do fabricante traduzida para linguagem de gente. É o que dá conteúdo
+     real à seção "Em português claro" nos 470 materiais sem perfil de
+     desempenho — antes ela repetia a prosa de colheita. Ver src/logica/traduzir. */
+  const leitura = traduzirFicha(m.tipo, fab?.ficha);
 
   // Ofertas reais (D-13). Preço médio é DERIVADO delas; sem oferta, o valor da
   // semente é exibido como estimativa — nunca como preço apurado (D-16).
@@ -373,12 +379,30 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
           </section>
         )}
 
-        {/* ── 2. Em português claro (TRADUÇÃO — D-14/D-08) ── */}
+        {/* ── 2. Em português claro (TRADUÇÃO — D-14/D-08) ────────────────────
+            Esta seção é DECLARADA pelo D-14 como a tradução — e para 470 dos
+            678 materiais ela não traduzia nada: mostrava a mesma prosa de
+            colheita da ficha ("17 avaliações", "R$ 905, a mais cara da Andro"),
+            que responde o quanto A GENTE sabe, não o que a peça faz.
+
+            Aqui NÃO entra seletor Simples/Técnico. A página já mostra os dois:
+            a ficha acima é o fato, esta seção é a tradução, e o D-14 chama essa
+            ordem de inviolável. Um botão que escondesse metade brigaria com ela
+            — o modo alternado é feature de CARTÃO, onde não cabem os dois. */}
         <section className={estilos.portuguesClaro} aria-labelledby="titulo-claro">
           <h2 id="titulo-claro">Em português claro</h2>
           <p className={estilos.tag}>
-            <b>{m.simples.tag}.</b> {m.simples.frase}
+            <b>{m.simples.tag}.</b> {leitura?.resumo || m.simples.frase}
           </p>
+          {leitura && leitura.tracos.length > 0 && (
+            <ul className={estilos.tracos}>
+              {leitura.tracos.map((t) => (
+                <li key={t.rotulo}>
+                  <b>{t.rotulo}</b> — {t.significa}
+                </li>
+              ))}
+            </ul>
+          )}
           {comSpecs && (
             <ul className={estilos.resumoSimples}>
               <li>
@@ -396,6 +420,12 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                 {paraPalavra('controle', m.specs.controle)}
               </li>
             </ul>
+          )}
+          {/* A procedência fica, mas embaixo e como nota: ela é contexto da
+              nossa apuração, não a resposta que o leitor veio buscar. Só
+              aparece quando o resumo traduzido assumiu o lugar dela acima. */}
+          {leitura?.resumo && (
+            <p className={estilos.procedenciaNota}>{m.simples.frase}</p>
           )}
         </section>
 

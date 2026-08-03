@@ -28,7 +28,7 @@ import { FotoProduto } from '@/componentes/FotoProduto';
 import { Bolinhas } from '@/componentes/Bolinhas';
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
 import { brl, dinheiro } from '@/componentes/formato';
-import { perdao, paraPalavra } from '@/src/logica/metricas';
+import { paraPalavra } from '@/src/logica/metricas';
 import { traduzirFicha } from '@/src/logica/traduzir';
 import { vereditosDoMaterial, ROTULO_INTENCAO } from '@/src/logica/recomendacao';
 import {
@@ -76,7 +76,31 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   };
 }
 
-const EIXOS = ['VEL', 'EFE', 'CTR', 'PER*'] as const;
+/* Não há mais lista fixa de eixos: eles saem de `indices`, que só inclui o que
+   o material realmente tem. Uma constante de quatro rótulos aqui foi o que fez o
+   radar plotar zero no eixo de efeito das lâminas. */
+
+/**
+ * O QUE CADA ÍNDICE MEDE, em uma frase.
+ *
+ * A ficha mostrava número e palavra e nunca dizia o que o índice É. Quem já sabe
+ * não precisa; quem chegou para aprender ficava com "Controle 7,8" e nenhuma
+ * pista do que isso governa na mão.
+ *
+ * As definições vêm do levantamento do fundador (2026-08-03) sobre como as
+ * marcas classificam borracha, conferido contra o que o site já publica nos
+ * guias — não são invenção desta tela, e por isso não contradizem o Aprender.
+ */
+const O_QUE_MEDE: Record<'velocidade' | 'spin' | 'controle' | 'durabilidade', string> = {
+  velocidade:
+    'Quanto a peça devolve a bola por conta própria. Mais velocidade pede gesto mais curto e preciso — sobra menos tempo para corrigir.',
+  spin:
+    'Quanta rotação a superfície consegue imprimir. É o que faz o topspin curvar e o saque enganar; quem tem muito efeito também sofre mais para devolver o efeito do outro.',
+  controle:
+    'Facilidade de mandar a bola onde você quer. Anda ao contrário da velocidade: quanto mais rápida a peça, menos ela avisa e menos tempo dá para consertar o gesto.',
+  durabilidade:
+    'Quanto tempo a peça mantém o que tinha de fábrica antes de gastar. Muda a conta de qual é cara: borracha é consumível, e uma que dura o dobro custa metade por ano.',
+};
 
 export default async function PaginaDetalhe({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -88,18 +112,37 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
      mostrar zeros ou números inventados (D-16). O resto da página (foto, preço,
      onde comprar, comunidade) continua igual. */
   const comSpecs = temDesempenho(m);
-  /* Perdão deriva da maciez da esponja — lâmina é de madeira e não tem. Sem
-     dureza, não há Perdão, e a linha e o eixo do radar somem (D-16). */
-  const perdaoValor =
-    comSpecs && m.durezaUnificada !== undefined ? perdao(m.specs, m.durezaUnificada) : null;
-  /* Eixos do radar seguem o que EXISTE: sem Perdão (lâmina), 3 eixos em vez de 4.
-     Só é calculado quando há specs — a bola não chega aqui. */
-  const eixosFicha = perdaoValor !== null ? EIXOS : (['VEL', 'EFE', 'CTR'] as const);
-  const valoresFicha = !comSpecs
+
+  /* ── OS ÍNDICES QUE ESTE MATERIAL TEM, RÓTULO E VALOR JUNTOS ────────────────
+     Duas correções moram aqui.
+
+     A primeira: o eixo de EFEITO recebia `m.specs.spin ?? 0`. Lâmina não tem
+     efeito publicado por fonte nenhuma, e um zero no radar não lê como "não se
+     aplica" — lê como "efeito nenhum", que é afirmação falsa sobre a peça. Era
+     o mesmo defeito que a comparação tinha, e a regra agora é a mesma: eixo só
+     existe quando o número existe.
+
+     A segunda: o PERDÃO saiu (2026-08-03). Ele era o quarto eixo e dependia da
+     dureza unificada, que existe em 10 materiais de 678. No lugar entrou a
+     DURABILIDADE, que já estava no dado.
+
+     Rótulo e valor nascem no mesmo objeto — nunca mais duas listas paralelas. */
+  const indices = !comSpecs
     ? []
-    : perdaoValor !== null
-      ? [m.specs.velocidade, m.specs.spin ?? 0, m.specs.controle, perdaoValor]
-      : [m.specs.velocidade, m.specs.spin ?? 0, m.specs.controle];
+    : [
+        { eixo: 'VEL', rotulo: 'Velocidade', atributo: 'velocidade' as const, valor: m.specs.velocidade },
+        ...(m.specs.spin !== undefined
+          ? [{ eixo: 'EFE', rotulo: 'Efeito', atributo: 'spin' as const, valor: m.specs.spin }]
+          : []),
+        { eixo: 'CTR', rotulo: 'Controle', atributo: 'controle' as const, valor: m.specs.controle },
+        ...(m.durabilidade !== undefined
+          ? [{ eixo: 'DUR', rotulo: 'Durabilidade', atributo: 'durabilidade' as const, valor: m.durabilidade }]
+          : []),
+      ];
+  const eixosFicha = indices.map((i) => i.eixo);
+  const valoresFicha = indices.map((i) => i.valor);
+  /* Polígono precisa de três vértices para ser forma (mesma regra do /comparar). */
+  const temRadarFicha = indices.length >= 3;
 
   // Dado sincero: os presets do quiz rodados contra ESTE material (recomendacao.ts)
   const vereditos = vereditosDoMaterial(m);
@@ -147,7 +190,8 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
         { rotulo: 'Controle', valor: m.specs.controle, palavra: paraPalavra('controle', m.specs.controle) },
         // Durabilidade só entra quando há fonte: lâmina não tem número publicado.
         ...(m.durabilidade !== undefined
-          ? [{ rotulo: 'Durabilidade', valor: m.durabilidade, palavra: null }]
+          ? [{ rotulo: 'Durabilidade', valor: m.durabilidade,
+               palavra: paraPalavra('durabilidade', m.durabilidade) }]
           : []),
       ]
     : [];
@@ -241,19 +285,22 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                   </td>
                 </tr>
                 )}
-                {perdaoValor !== null && (
-                  <tr>
-                    <th scope="row">Perdão*</th>
-                    <td>
-                      <span className={`mono ${estilos.valor} ${estilos.derivada}`}>
-                        {perdaoValor.toFixed(1)}
-                      </span>
-                      <span className={estilos.palavra}>{paraPalavra('perdao', perdaoValor)}</span>
-                    </td>
-                  </tr>
-                )}
               </tbody>
             </table>
+            {/* ── O QUE CADA NÚMERO MEDE ────────────────────────────────────
+                A tabela mostrava número e palavra, e nunca dizia o que o índice
+                é. Quem já sabe não precisa; quem chegou aqui pra aprender ficava
+                sem. Só entram os índices que ESTE material tem — a lista sai de
+                `indices`, a mesma que alimenta a tabela e o radar. */}
+            <dl className={estilos.oQueMede}>
+              {indices.map((i) => (
+                <div key={i.eixo}>
+                  <dt>{i.rotulo}</dt>
+                  <dd>{O_QUE_MEDE[i.atributo]}</dd>
+                </div>
+              ))}
+            </dl>
+
             <p className={estilos.nota}>
               <span className={estilos.selo}>A validar</span> &nbsp;* Toda esta tabela é{' '}
               <strong>estimativa do WikiPong</strong> numa base comum, com a fórmula à vista, ainda esperando um especialista conferir (D-07/D-09). O dado oficial de cada
@@ -261,6 +308,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
             </p>
           </div>
 
+          {temRadarFicha && (
           <figure className={estilos.radarCaixa}>
             <Radar
               eixos={eixosFicha}
@@ -281,6 +329,7 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
               Comparar com outro material →
             </Link>
           </figure>
+          )}
         </section>
         )}
 

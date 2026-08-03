@@ -7,15 +7,15 @@
  *
  * O estado do filtro é a FONTE ÚNICA DE VERDADE e vive na URL (D-12): parseQuery /
  * serializeQuery convertem de/para query string no MESMO formato dos presetURL que
- * o quiz gera — ex.: "/catalogo?nivel=iniciante&ctrl=8-10&vel=3-6&ordenar=perdao".
+ * o quiz gera — ex.: "/catalogo?nivel=iniciante&ordenar=durabilidade".
  *
  * Divergências conscientes vs. protótipo (exigidas pelos presets do D-12):
  *   · numéricos viram FAIXAS {min,max} — o threshold do protótipo é o caso min-only;
  *   · Controle entra como faceta numérica (o protótipo só filtrava vel/spin);
- *   · a ordenação ganha 'controle' e 'perdao'. Perdão reusa a fórmula de metricas.ts
+ *   · a ordenação ganha 'controle' e 'durabilidade'
  *     (D-09) — fonte única; por isso o Material carrega `durezaUnificada`.
  */
-import { perdao, type Specs } from './metricas';
+import type { Specs } from './metricas';
 
 // ───────────────────────── Tipos ─────────────────────────
 
@@ -60,7 +60,7 @@ export type Ordenacao =
   | 'velocidade'
   | 'spin'
   | 'controle'
-  | 'perdao'
+  | 'durabilidade'
   | 'preco-asc'
   | 'preco-desc';
 
@@ -81,7 +81,7 @@ const ORDENACOES: readonly Ordenacao[] = [
   'velocidade',
   'spin',
   'controle',
-  'perdao',
+  'durabilidade',
   'preco-asc',
   'preco-desc',
 ];
@@ -247,8 +247,6 @@ const contemSlug = (slugs: readonly string[], valor: string): boolean =>
   slugs.length === 0 || slugs.includes(slug(valor));
 
 /** Perdão exige perfil completo; sem ele não há o que derivar. */
-const perdaoDe = (m: Material): number | null =>
-  m.specs && m.durezaUnificada !== undefined ? perdao(m.specs, m.durezaUnificada) : null;
 
 function comparador(ordenar: Ordenacao): (a: Material, b: Material) => number {
   /** Valor que ordena. null = material sem esse dado (ex.: bola não tem spec). */
@@ -260,8 +258,8 @@ function comparador(ordenar: Ordenacao): (a: Material, b: Material) => number {
         return m.specs?.spin ?? null;
       case 'controle':
         return m.specs?.controle ?? null;
-      case 'perdao':
-        return perdaoDe(m);
+      case 'durabilidade':
+        return m.durabilidade ?? null;
       case 'preco-asc':
       case 'preco-desc':
         /* Material em moeda estrangeira não entra na ordenação por preço:

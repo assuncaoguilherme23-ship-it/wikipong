@@ -29,13 +29,12 @@
  * O que é da BORRACHA e por isso falta na lâmina:
  *   · efeito       — propriedade da borracha; a madeira não tem
  *   · durabilidade — esponja gasta; madeira não gasta assim
- *   · Perdão       — deriva da maciez da esponja; sem esponja, não existe
  *
  * Comparar borracha com lâmina continua proibido, e isso é decisão de produto:
  * velocidade de borracha e velocidade de lâmina medem realidades diferentes.
  * Esta função não julga tipo — quem chama já garantiu o par.
  */
-import { perdao, type Specs } from './metricas';
+import type { Specs } from './metricas';
 
 /**
  * O mínimo que este módulo precisa saber de um material.
@@ -60,8 +59,8 @@ export interface Metrica {
   /** [a, b], na ordem em que o par foi passado. */
   valores: [number, number];
   /** Para o modo Simples traduzir em bolinhas + palavra. `null` = só número. */
-  atributo: 'velocidade' | 'spin' | 'controle' | 'perdao' | null;
-  /** Preço e Perdão ficam de fora do radar; ver `metricasDoRadar`. */
+  atributo: 'velocidade' | 'spin' | 'controle' | 'durabilidade' | null;
+  /** O preço fica de fora do radar: o eixo mede 0–10, e reais não são isso. */
   noRadar: boolean;
 }
 
@@ -117,24 +116,15 @@ export function metricasComparaveis(
       rotulo: 'Durabilidade',
       eixo: 'DUR',
       valores: [a.durabilidade, b.durabilidade],
-      atributo: null,
+      atributo: 'durabilidade',
       noRadar: true,
     });
   }
 
-  /* Perdão precisa da dureza dos DOIS: `maciez(undefined)` propaga NaN, e a
-     tabela publicava "NaN" com cara de número. Fora do radar porque é conta
-     nossa derivada dos outros eixos — desenhá-la ao lado deles contaria a
-     mesma informação duas vezes e deformaria a figura. */
-  if (a.durezaUnificada !== undefined && b.durezaUnificada !== undefined) {
-    m.push({
-      rotulo: 'Perdão*',
-      eixo: 'PER',
-      valores: [perdao(sa, a.durezaUnificada), perdao(sb, b.durezaUnificada)],
-      atributo: 'perdao',
-      noRadar: false,
-    });
-  }
+  /* O PERDÃO ficava aqui. Saiu em 2026-08-03: aparecia em 10 materiais de 678
+     (dependia da dureza unificada) e era um composto de pesos nossos
+     apresentado ao lado de índices que as marcas publicam. A durabilidade, que
+     já estava logo acima, assumiu o lugar dele como quarto índice. */
 
   return m;
 }

@@ -31,7 +31,7 @@ import {
   type FiltroEstado,
   type Ordenacao,
 } from '@/src/logica/filtros';
-import { PALAVRAS, paraPalavra, perdao } from '@/src/logica/metricas';
+import { PALAVRAS, paraPalavra } from '@/src/logica/metricas';
 import { traduzirFicha } from '@/src/logica/traduzir';
 import { fabricantePorId } from '@/componentes/dados-fabricante';
 import { MATERIAIS, type MaterialCatalogo } from '@/componentes/dados-materiais';
@@ -65,7 +65,7 @@ const ROTULOS_ORDENACAO: Record<Ordenacao, string> = {
   velocidade: 'Mais velocidade',
   spin: 'Mais efeito',
   controle: 'Mais controle',
-  perdao: 'Mais perdão*',
+  durabilidade: 'Maior durabilidade',
   'preco-asc': 'Menor preço',
   'preco-desc': 'Maior preço',
 };
@@ -387,9 +387,9 @@ export function CatalogoCliente() {
               </ul>
             )}
 
-            <p className={estilos.notaDerivada}>
-              * O Perdão é uma conta nossa, feita a partir dos outros números, e a fórmula fica à vista (versão 1, ainda esperando um especialista conferir; D-09).
-            </p>
+            {/* A nota do asterisco saiu junto com o Perdão: os quatro índices
+                que ficam — velocidade, efeito, controle e durabilidade — não são
+                conta nossa, e não precisam de rodapé se defendendo. */}
           </section>
         </div>
       </main>
@@ -449,8 +449,9 @@ function CartaoMaterial({
      catálogo mostrando texto idêntico nos dois modos. Ver src/logica/traduzir. */
   const ficha = fabricantePorId(m.id)?.ficha;
   const leitura = traduzirFicha(m.tipo, ficha);
-  const perdaoValor =
-    comSpecs && m.durezaUnificada !== undefined ? perdao(m.specs, m.durezaUnificada) : null;
+  /* O Perdão saiu (2026-08-03): aparecia em 10 materiais de 678 e era um
+     composto de pesos nossos. No lugar, DURABILIDADE — dado que já existe
+     em 114 e conversa com o custo/mês. Ver PALAVRAS em metricas.ts. */
   const linhas = comSpecs
     ? ([
         ['Velocidade', 'velocidade', m.specs.velocidade],
@@ -459,6 +460,10 @@ function CartaoMaterial({
           ? ([['Efeito', 'spin', m.specs.spin]] as const)
           : []),
         ['Controle', 'controle', m.specs.controle],
+        // Só a borracha gasta: a linha some na lâmina em vez de mostrar vazio.
+        ...(m.durabilidade !== undefined
+          ? ([['Durabilidade', 'durabilidade', m.durabilidade]] as const)
+          : []),
       ] as const)
     : ([] as const);
 
@@ -516,12 +521,6 @@ function CartaoMaterial({
                   <dd className="mono">{valor.toFixed(1)}</dd>
                 </div>
               ))}
-              {perdaoValor !== null && (
-                <div>
-                  <dt>Perdão*</dt>
-                  <dd className="mono">{perdaoValor.toFixed(1)}</dd>
-                </div>
-              )}
             </dl>
           )}
           {/* Sem números, o técnico é a ficha do fabricante nas palavras dele —
@@ -566,9 +565,6 @@ function CartaoMaterial({
                 </li>
               ))}
             </ul>
-          )}
-          {perdaoValor !== null && (
-            <p className={estilos.seloPerdao}>{paraPalavra('perdao', perdaoValor)}*</p>
           )}
         </div>
       )}

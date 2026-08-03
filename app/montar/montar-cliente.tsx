@@ -23,7 +23,7 @@ import { FotoProduto } from '@/componentes/FotoProduto';
 import { MATERIAIS, materialPorId, type MaterialCatalogo } from '@/componentes/dados-materiais';
 import { temDesempenho } from '@/src/logica/filtros';
 import { brl } from '@/componentes/formato';
-import { perdao, paraPalavra } from '@/src/logica/metricas';
+import { paraPalavra } from '@/src/logica/metricas';
 import {
   observacoes,
   precoTotal,
@@ -164,7 +164,7 @@ export function MontarCliente() {
                       <th scope="col">Vel.</th>
                       <th scope="col">Efeito</th>
                       <th scope="col">Controle</th>
-                      <th scope="col">Perdão*</th>
+                      <th scope="col">Durab.</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -180,7 +180,10 @@ export function MontarCliente() {
                           {/* Lamina nao tem efeito: travessao em vez de numero inventado. */}
                           <td className="mono">{p.specs.spin !== undefined ? p.specs.spin.toFixed(1) : "—"}</td>
                           <td className="mono">{p.specs.controle.toFixed(1)}</td>
-                          <td className="mono">{perdao(p.specs, p.durezaUnificada).toFixed(1)}</td>
+                          {/* Só a borracha gasta: travessão na lâmina, não zero. */}
+                          <td className="mono">
+                            {p.durabilidade !== undefined ? p.durabilidade.toFixed(1) : '—'}
+                          </td>
                         </tr>
                       );
                     })}
@@ -230,9 +233,6 @@ export function MontarCliente() {
               </div>
             )}
 
-            <p className={estilos.notaDerivada}>
-              * O Perdão é uma conta nossa, feita a partir dos outros números, e a fórmula fica à vista (versão 1, ainda esperando um especialista conferir; D-09).
-            </p>
           </section>
         </div>
       </main>

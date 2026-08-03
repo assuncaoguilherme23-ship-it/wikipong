@@ -160,6 +160,33 @@
   font-weight: 500;
 }
 
+/* "O que cada número mede" — sob a tabela da ficha unificada. Rótulo em mono
+   maiúsculo, como o resto do site marca rótulo; a definição em corpo normal,
+   porque é para ler, não para escanear. */
+.oQueMede {
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--cor-linha);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-width: 62ch;
+}
+.oQueMede dt {
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-tinta);
+}
+.oQueMede dd {
+  margin: 0.2rem 0 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+}
+
 /* Traços traduzidos da ficha do fabricante — "RÓTULO — o que significa".
    Mesmo componente do cartão do catálogo (.tracos), mesma marcação de rótulo
    em mono maiúsculo. Sem barra lateral: side-stripe é Don't do DESIGN.md. */

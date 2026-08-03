@@ -4,7 +4,7 @@
  * e telas de Comparação) — se o código divergir do que está desenhado, isto quebra.
  */
 import {
-  perdao, maciez, custoMensal, custoMensalPorClasse,
+  maciez, custoMensal, custoMensalPorClasse,
   paraBolinhas, paraPalavra, indicesDoMaximo, Specs,
 } from '../src/logica/metricas.js';
 import {
@@ -53,8 +53,9 @@ const markv: Specs = { velocidade: 7.0, spin: 7.5, controle: 9.0 };
 
 afirma(aprox(maciez(47), 4), 'maciez(47°) deve ser 4');
 afirma(aprox(maciez(42), 5), 'maciez(42°) deve ser 5');
-afirma(perdao(tenergy, 47) === 4.6, `perdão Tenergy = 4.6 (veio ${perdao(tenergy, 47)})`);
-afirma(perdao(markv, 42) === 6.4, `perdão Mark V = 6.4 (veio ${perdao(markv, 42)})`);
+/* As duas asserções do Perdão saíram com a função (2026-08-03). `maciez`, que
+   era insumo dele, continua testada acima: ela alimenta a tradução de dureza e
+   sai de um grau declarado pelo fabricante, não de pesos escolhidos por nós. */
 
 afirma(aprox(custoMensal(450, 4), 112.5), 'custo Tenergy = 112.5/mês');
 afirma(aprox(custoMensal(180, 10), 18), 'custo Mark V = 18/mês');
@@ -70,8 +71,11 @@ afirma(paraPalavra('spin', 9.3) === 'Altíssimo', 'spin 9.3 → Altíssimo');
 afirma(paraPalavra('spin', 7.5) === 'Bom', 'spin 7.5 → Bom');
 afirma(paraPalavra('controle', 9.0) === 'Muito fácil', 'ctrl 9.0 → Muito fácil');
 afirma(paraPalavra('controle', 7.0) === 'Exige atenção', 'ctrl 7.0 → Exige atenção');
-afirma(paraPalavra('perdao', 4.6) === 'Perdoa pouco', 'perdão 4.6 → Perdoa pouco');
-afirma(paraPalavra('perdao', 6.4) === 'Perdoa bem', 'perdão 6.4 → Perdoa bem');
+/* O Perdão saiu de PALAVRAS em 2026-08-03 (aparecia em 10 de 678 e era composto
+   de pesos nossos). A durabilidade entrou no lugar como quarto índice. */
+afirma(paraPalavra('durabilidade', 9.0) === 'Vida longa', 'durabilidade 9.0 → Vida longa');
+afirma(paraPalavra('durabilidade', 7.5) === 'Dura bem', 'durabilidade 7.5 → Dura bem');
+afirma(paraPalavra('durabilidade', 3.0) === 'Gasta rápido', 'durabilidade 3.0 → Gasta rápido');
 
 afirma(JSON.stringify(indicesDoMaximo([9.0, 7.0])) === '[0]', 'máximo simples');
 afirma(JSON.stringify(indicesDoMaximo([7, 7])) === '[0,1]', 'empate destaca ambos');
@@ -127,7 +131,7 @@ for (const [id, tela] of Object.entries(TELAS)) {
 // ───────── filtros: URL (D-12), aplicação e imutabilidade ─────────
 const jeq = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 
-// catálogo-fixture (dureza escolhida p/ tornar o Perdão verificável no sort)
+// catálogo-fixture
 const mat = (
   id: string, nivel: string, intencao: string, marca: string, tipo: string,
   preco: number, velocidade: number, spin: number, controle: number, dureza: number, rating: number,
@@ -147,7 +151,7 @@ const CAT: Material[] = [
 const ids = (ms: Material[]) => ms.map(m => m.id);
 
 // os 4 presetURL EXATOS que o quiz gera (src/logica/quiz.ts)
-const P_BASE = '/catalogo?nivel=iniciante&ctrl=8-10&vel=3-6&ordenar=perdao';
+const P_BASE = '/catalogo?nivel=iniciante&ordenar=controle';
 const P_ATAC = '/catalogo?nivel=intermediario&vel=6-8&ctrl=7-10';
 const P_CTRL = '/catalogo?vel=5-7&ctrl=8-10&ordenar=controle';
 const P_EXPL = '/catalogo?modo=simples';
@@ -155,9 +159,11 @@ const P_EXPL = '/catalogo?modo=simples';
 // parse dos 4 perfis
 const eBase = parseQuery(P_BASE);
 afirma(jeq(eBase.niveis, ['iniciante']), 'base: nivel=iniciante');
-afirma(jeq(eBase.velocidade, { min: 3, max: 6 }), 'base: vel 3-6');
-afirma(jeq(eBase.controle, { min: 8, max: 10 }), 'base: ctrl 8-10');
-afirma(eBase.ordenar === 'perdao', 'base: ordenar=perdao');
+/* O preset do iniciante nao carrega mais FAIXA de spec: faixa descartava de
+   saida os 470 materiais sem perfil de desempenho e deixava 6 de 678 na tela. */
+afirma(eBase.velocidade === null && eBase.controle === null,
+  'base: nenhuma faixa de spec — faceta filtra, spec ordena');
+afirma(eBase.ordenar === 'controle', 'base: ordenar=controle');
 
 const eAtac = parseQuery(P_ATAC);
 afirma(jeq(eAtac.niveis, ['intermediario']) && jeq(eAtac.velocidade, { min: 6, max: 8 })
@@ -178,7 +184,8 @@ for (const [nome, url] of [['base', P_BASE], ['atac', P_ATAC], ['ctrl', P_CTRL],
 }
 
 // aplicar sobre o catálogo-fixture
-afirma(jeq(ids(aplicar(CAT, eBase)), ['M1', 'M2']), 'base: iniciantes ctrl8-10/vel3-6, ord Perdão desc');
+afirma(jeq(ids(aplicar(CAT, eBase)), ['M1', 'M2', 'M3', 'M5']),
+  'base: TODOS os iniciantes, ordenados por controle desc (9.0, 8.5, 8.0, 7.0)');
 afirma(jeq(ids(aplicar(CAT, eCtrl)), ['M1', 'M4', 'M6']), 'construtor: vel5-7/ctrl8-10, ord Controle desc + desempate id');
 afirma(jeq(ids(aplicar(CAT, eAtac)), ['M7', 'M6']), 'atacante: intermediários, ord relevância (rating desc)');
 const expl = aplicar(CAT, eExpl);
@@ -199,7 +206,7 @@ afirma(CAT.length === catLen && CAT[0].id === cat0, 'aplicar não muta o array d
 const f0 = filtroVazio();
 const f1 = alternarFaceta(f0, 'tipos', 'borracha');
 afirma(f0.tipos.length === 0 && jeq(f1.tipos, ['borracha']), 'alternarFaceta é imutável');
-afirma(f0.ordenar === 'relevancia' && comOrdenacao(f0, 'perdao').ordenar === 'perdao', 'comOrdenacao é imutável');
+afirma(f0.ordenar === 'relevancia' && comOrdenacao(f0, 'durabilidade').ordenar === 'durabilidade', 'comOrdenacao é imutável');
 
 // ───────── busca textual: compõe com o motor, não é campo do estado ─────────
 afirma(normalizar('Lâmina') === 'lamina', 'normalizar tira acento e caixa');
@@ -231,7 +238,7 @@ afirma(jeq(uIni.niveis, ['iniciante']), 'preset refinado preserva o nível do pe
 const pApr = responder(responder(responder(iniciar(), 'comecando'), 'aprender'), 'sem-teto');
 const uApr = parseQuery(presetFinal(pApr) ?? '');
 afirma(uApr.preco === null, 'sem-teto não cria filtro de preço (D-16)');
-afirma(uApr.ordenar === 'perdao', '"aprender o básico" ordena pelo Perdão');
+afirma(uApr.ordenar === 'controle', '"aprender o básico" ordena por controle');
 afirma(uApr.controle === null && uApr.velocidade === null,
   'nenhuma faixa de spec no preset do iniciante — ela deixava 6 materiais de 678');
 
@@ -538,7 +545,7 @@ afirma(ids(aplicar(CAT2, parseQuery('preco=100'))).includes('X1'), 'filtro de pr
 
 // Ordenação por spec: quem não tem o dado afunda, nunca lidera.
 afirma(ids(aplicar(CAT2, parseQuery('ordenar=velocidade'))).at(-1) === 'X1', 'sem specs afunda ao ordenar por velocidade');
-afirma(ids(aplicar(CAT2, parseQuery('ordenar=perdao'))).at(-1) === 'X1', 'sem specs afunda ao ordenar por Perdão');
+afirma(ids(aplicar(CAT2, parseQuery('ordenar=durabilidade'))).at(-1) === 'X1', 'sem specs afunda ao ordenar por durabilidade');
 // Mas em ordenação que não depende de spec, participa normalmente.
 afirma(ids(aplicar(CAT2, parseQuery('ordenar=preco-asc')))[0] === 'X1', 'no menor preço, lidera (R$ 25)');
 
@@ -846,9 +853,9 @@ const soVel = { specs: { velocidade: 8, controle: 7 } };               // lâmin
 const completo = { specs: { velocidade: 8, spin: 9, controle: 7 }, durabilidade: 8, durezaUnificada: 47 };
 
 afirma(metricasComparaveis(soVel, soVel).length === 2,
-  'lâmina × lâmina: só velocidade e controle — sem efeito, durabilidade ou Perdão');
-afirma(metricasComparaveis(completo, completo).length === 5,
-  'borracha completa × completa: as cinco métricas');
+  'lâmina × lâmina: só velocidade e controle — sem efeito nem durabilidade');
+afirma(metricasComparaveis(completo, completo).length === 4,
+  'borracha completa × completa: velocidade, efeito, controle e durabilidade');
 afirma(metricasComparaveis(completo, soVel).length === 2,
   'métrica só entra quando OS DOIS têm — o lado mais pobre manda');
 afirma(!temRadar(metricasComparaveis(soVel, soVel)),

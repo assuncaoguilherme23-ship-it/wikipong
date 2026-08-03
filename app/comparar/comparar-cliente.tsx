@@ -308,7 +308,7 @@ function Comparacao({ par, modo }: { par: [MaterialComparavel, MaterialComparave
   const linhas: {
     rotulo: string;
     valores: [number, number];
-    atributo: 'velocidade' | 'spin' | 'controle' | 'perdao' | null;
+    atributo: 'velocidade' | 'spin' | 'controle' | 'durabilidade' | null;
     destacar: boolean;
     formato: (v: number) => string;
   }[] = [

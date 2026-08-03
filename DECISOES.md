@@ -182,6 +182,39 @@ publica; custo/mês é a única escala universal (dinheiro).
 - **Custo/mês sem destaque** (a convenção marca o maior; no custo, maior é pior).
 - Toda derivada leva asterisco + nota de rodapé declarando estimativa v1.
 
+### Emenda (2026-08-03) · O PERDÃO SAIU. Durabilidade assume o quarto índice.
+
+**Decisão do fundador:** remover o Perdão dos índices de desempenho e pôr no lugar
+um índice que já existisse. Escolhido: **Durabilidade**.
+
+**O que derrubou o Perdão, em ordem de peso:**
+
+1. **Cobertura, medida.** Ele dependia da `durezaUnificada`, e ela existe em
+   **10 materiais de 678**. O índice que a home anunciava como razão de ser do
+   site (*"a métrica que o iniciante precisa e nenhum fabricante publica"*)
+   aparecia em 1,5% do catálogo. A tabela acima nunca disse isso porque o número
+   nunca havia sido contado.
+2. **Natureza.** Era composto de pesos **nossos** (0.5 / 0.3 / 0.2), nunca
+   calibrados por especialista — a coluna "Nota" desta tabela dizia isso desde o
+   começo — e aparecia lado a lado com índices que as marcas publicam. Número
+   derivado é aceitável quando a derivação é rastreável e o insumo é declarado;
+   é o caso da dureza unificada, que continua. Não era o caso aqui.
+
+**Por que Durabilidade:** já estava no dado (114 materiais), já era o quarto eixo
+do radar, é conceito real do esporte, e conversa com o custo/mês — borracha é
+consumível, e quanto ela dura muda a conta de qual é cara.
+
+**O que ficou de fora, e por quê:** *Arco* (ângulo de lançamento) é publicado
+pelas marcas, mas só em 15 materiais — vira índice ausente em 98% dos cartões.
+Continua aparecendo na seção de índices do fabricante, onde é fato de fonte.
+
+**Consequência colateral, boa:** a régua de palavras (`PALAVRAS`) ganhou
+`durabilidade` e perdeu `perdao`; a observação da montagem que avisava "perdoa
+pouco dos dois lados" passou a usar **controle**, com o corte lido da própria
+tabela (`6,0` = piso de "Exige atenção") em vez de digitado à mão.
+
+**Status:** ativa. A tabela acima fica como registro do que foi tentado.
+
 **Flywheel:** o formulário de avaliação (D-11) pergunta *velocidade percebida* e *meses até trocar*
 — calibram as notas de fabricante e a durabilidade real. As métricas se autocorrigem com volume.
 

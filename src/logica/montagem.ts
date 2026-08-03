@@ -12,7 +12,11 @@
  *    não é soma nem média. Publicar isso seria invenção com cara de medição
  *    (mesma decisão já tomada em /conjuntos — D-16).
  */
-import { perdao, type Specs } from './metricas';
+import { PALAVRAS, type Specs } from './metricas';
+
+/* O piso de "Exige atenção" na régua de controle. Sai da tabela em vez de ser
+   digitado aqui: um corte copiado à mão é um corte que um dia diverge dela. */
+const CONTROLE_EXIGENTE = PALAVRAS.controle.find((f) => f.palavra === 'Exige atenção')!.min;
 
 export interface PecaMontagem {
   id: string;
@@ -23,6 +27,10 @@ export interface PecaMontagem {
   intencao: string;
   preco: number;
   specs: Specs;
+  /* Opcional porque é da BORRACHA: esponja gasta, madeira não gasta assim.
+     Declará-la obrigatória aqui foi exatamente o formato de erro que quebrou o
+     /comparar — tipo que afirma o que a guarda não confere. */
+  durabilidade?: number;
   durezaUnificada: number;
 }
 
@@ -118,15 +126,20 @@ export function observacoes(m: Montagem): Observacao[] {
     }
   }
 
-  // 4) Perdão baixo dos dois lados: a montagem cobra técnica em toda bola.
+  /* 4) Controle baixo dos dois lados: a montagem cobra técnica em toda bola.
+        Era o Perdão que media isto, e ele saiu (2026-08-03) — aparecia em 10
+        materiais de 678 e era composto de pesos nossos. O controle diz a mesma
+        coisa com número que as marcas publicam, e o corte não é escolhido aqui:
+        6,0 é o piso de "Exige atenção" na tabela PALAVRAS. Abaixo disso, a
+        própria tabela já chama de "Difícil de domar". */
   if (m.fh && m.bh) {
-    const pFH = perdao(m.fh.specs, m.fh.durezaUnificada);
-    const pBH = perdao(m.bh.specs, m.bh.durezaUnificada);
-    if (pFH < 5 && pBH < 5) {
+    const cFH = m.fh.specs.controle;
+    const cBH = m.bh.specs.controle;
+    if (cFH < CONTROLE_EXIGENTE && cBH < CONTROLE_EXIGENTE) {
       obs.push({
         tipo: 'atencao',
-        titulo: 'Conjunto que perdoa pouco dos dois lados',
-        texto: `Perdão* ${pFH.toFixed(1)} no forehand e ${pBH.toFixed(1)} no backhand. Erro de toque vira erro de bola nos dois lados. É montagem pra quem já tem consistência.`,
+        titulo: 'Conjunto exigente dos dois lados',
+        texto: `Controle ${cFH.toFixed(1)} no forehand e ${cBH.toFixed(1)} no backhand — os dois abaixo de ${CONTROLE_EXIGENTE.toFixed(1)}, que é onde a nossa régua passa a chamar de "difícil de domar". Erro de toque vira erro de bola nos dois lados. É montagem pra quem já tem consistência.`,
       });
     }
   }

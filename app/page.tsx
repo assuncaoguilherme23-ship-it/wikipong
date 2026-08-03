@@ -21,7 +21,6 @@ import { CarrosselHero } from '@/componentes/CarrosselHero';
 import { MATERIAIS } from '@/componentes/dados-materiais';
 import { brl } from '@/componentes/formato';
 import {
-  perdao,
   custoMensalPorClasse,
   paraPalavra,
   indicesDoMaximo,
@@ -34,21 +33,27 @@ import styles from './page.module.css';
 type Amostra = {
   nome: string;
   specs: Specs;
+  durabilidade: number;
   durezaUnificada: number;
   precoMedio: number;
   classe: ClasseBorracha;
 };
 
 const AMOSTRAS: Amostra[] = [
-  { nome: 'Tenergy 05', specs: { velocidade: 9.0, spin: 9.3, controle: 7.0 }, durezaUnificada: 47, precoMedio: 450, classe: 'tensor' },
-  { nome: 'Mark V', specs: { velocidade: 7.0, spin: 7.5, controle: 9.0 }, durezaUnificada: 42, precoMedio: 180, classe: 'classica' },
+  /* `durabilidade` veio do catálogo (tenergy05 = 7.5, markv = 9.0) e não de
+     número escolhido aqui: a home é vitrine da ficha, e vitrine que mostra
+     outro número que a ficha seria a primeira a desmentir o site. */
+  { nome: 'Tenergy 05', specs: { velocidade: 9.0, spin: 9.3, controle: 7.0 }, durabilidade: 7.5, durezaUnificada: 47, precoMedio: 450, classe: 'tensor' },
+  { nome: 'Mark V', specs: { velocidade: 7.0, spin: 7.5, controle: 9.0 }, durabilidade: 9.0, durezaUnificada: 42, precoMedio: 180, classe: 'classica' },
 ];
 
 /* Custo/mês exibe centavos: brl(v, true) do formatador único (componentes/formato). */
 const brlCentavos = (v: number) => brl(v, true);
 
-// Eixos do radar "impressão digital": valores reais, Perdão derivado incluído (D-09).
-const EIXOS_RADAR = ['VEL', 'EFE', 'CTR', 'PER*'] as const;
+/* Eixos do radar "impressão digital". O quarto era o Perdão; virou DURABILIDADE
+   em 2026-08-03, quando o Perdão saiu por aparecer em 10 materiais de 678 e por
+   ser composto de pesos nossos. Ver PALAVRAS em metricas.ts. */
+const EIXOS_RADAR = ['VEL', 'EFE', 'CTR', 'DUR'] as const;
 
 /* Os dois primeiros são as ações que importam — a grade dá peso maior a eles.
    Só entra o que EXISTE (D-16): Profissionais e Notícias saíram do "em breve"
@@ -129,15 +134,15 @@ export default function Home() {
   // AMOSTRAS sao borrachas declaradas aqui mesmo, com spin literal — sempre existe.
   const efeitos = AMOSTRAS.map((a) => a.specs.spin!);
   const controles = AMOSTRAS.map((a) => a.specs.controle);
-  const perdoes = AMOSTRAS.map((a) => perdao(a.specs, a.durezaUnificada));
+  const durabilidades = AMOSTRAS.map((a) => a.durabilidade);
   const custos = AMOSTRAS.map((a) => custoMensalPorClasse(a.precoMedio, a.classe));
-  const radarDe = (i: number) => [velocidades[i], efeitos[i], controles[i], perdoes[i]];
+  const radarDe = (i: number) => [velocidades[i], efeitos[i], controles[i], durabilidades[i]];
 
   const linhas = [
     { rotulo: 'Velocidade', valores: velocidades, atributo: 'velocidade' as const, destacar: true, fmt: (v: number) => v.toFixed(1) },
     { rotulo: 'Efeito', valores: efeitos, atributo: 'spin' as const, destacar: true, fmt: (v: number) => v.toFixed(1) },
     { rotulo: 'Controle', valores: controles, atributo: 'controle' as const, destacar: true, fmt: (v: number) => v.toFixed(1) },
-    { rotulo: 'Perdão*', valores: perdoes, atributo: 'perdao' as const, destacar: true, fmt: (v: number) => v.toFixed(1) },
+    { rotulo: 'Durabilidade', valores: durabilidades, atributo: 'durabilidade' as const, destacar: true, fmt: (v: number) => v.toFixed(1) },
     // D-09: custo NÃO recebe destaque de máximo (maior = pior).
     { rotulo: 'Custo/mês', valores: custos, atributo: null, destacar: false, fmt: brlCentavos },
   ];
@@ -308,8 +313,8 @@ export default function Home() {
             <p>
               A nota que o fabricante dá é a régua dele, feita pra vender: o 9,0 de uma marca não é o
               9,0 da outra. Aqui, cada material mostra o dado técnico e a tradução em
-              português claro, lado a lado, além de métricas de fórmula aberta (como o
-              Perdão) que nenhum catálogo publica.
+              português claro, lado a lado — incluindo quanto a peça dura, que muda a
+              conta de qual é cara e quase nenhum catálogo mostra.
             </p>
           </div>
 
@@ -357,8 +362,8 @@ export default function Home() {
           </div>
 
           <p className={styles.nota}>
-            <span className={styles.selo}>A validar</span> &nbsp;* O Perdão é uma conta nossa, feita a partir dos outros números
-            (versão 1, ainda esperando um especialista conferir; D-09). Destaque de “maior” é{' '}
+            <span className={styles.selo}>A validar</span> &nbsp;A durabilidade é estimativa por
+            classe de borracha (D-09), ainda esperando um especialista conferir. Destaque de “maior” é{' '}
             <strong>só um fato, não uma nota</strong>: maior não quer dizer melhor, depende do seu jogo. Custo/mês não
             recebe destaque porque, nele, maior é pior.
           </p>

@@ -34,8 +34,29 @@ export type Trajetoria = 'baixa' | 'media' | 'alta';
 /** Faixa de tradução número → palavra (modo Simples). Ordenar por `min` decrescente. */
 type Faixa = { min: number; palavra: string };
 
-/** A VALIDAR: limiares propostos na v1 (consistentes com as telas do Figma) */
-export const PALAVRAS: Record<'velocidade' | 'spin' | 'controle' | 'perdao', Faixa[]> = {
+/**
+ * A VALIDAR: limiares propostos na v1 (consistentes com as telas do Figma)
+ *
+ * ── O PERDÃO SAIU DAQUI (2026-08-03, decisão do fundador) ────────────────────
+ *
+ * Ele era o quarto índice e o diferencial anunciado na home: "a métrica que o
+ * iniciante precisa e nenhum fabricante publica". Duas coisas o derrubaram.
+ *
+ * A primeira é cobertura, e foi medida: o Perdão dependia da dureza unificada,
+ * e ela existe em DEZ materiais de 678. O índice que a home apresentava como
+ * razão de ser do site aparecia em 1,5% do catálogo.
+ *
+ * A segunda é natureza: ele era um composto inventado por nós
+ * (0.5·controle + 0.3·(10−velocidade) + 0.2·maciez), com pesos que nunca foram
+ * validados por ninguém. Publicar número derivado é aceitável quando a
+ * derivação é rastreável e o insumo é declarado — é o caso da dureza unificada.
+ * Não era o caso aqui: os pesos eram escolha nossa apresentada como medida.
+ *
+ * No lugar entrou DURABILIDADE, que já estava no dado (114 materiais), já era o
+ * quarto eixo do radar e conversa com o custo/mês — borracha é consumível, e
+ * quanto ela dura muda a conta de qual é cara.
+ */
+export const PALAVRAS: Record<'velocidade' | 'spin' | 'controle' | 'durabilidade', Faixa[]> = {
   velocidade: [
     { min: 8.5, palavra: 'Muito rápida' },
     { min: 7.5, palavra: 'Rápida' },
@@ -54,10 +75,13 @@ export const PALAVRAS: Record<'velocidade' | 'spin' | 'controle' | 'perdao', Fai
     { min: 6.0, palavra: 'Exige atenção' },
     { min: 0,   palavra: 'Difícil de domar' },
   ],
-  perdao: [
-    { min: 6.0, palavra: 'Perdoa bem' },
-    { min: 4.0, palavra: 'Perdoa pouco' },
-    { min: 0,   palavra: 'Impiedosa' },
+  /* Quanto a peça aguenta antes de perder o que tinha de fábrica. Alto é bom —
+     ao contrário do preço, e igual aos outros três desta tabela. */
+  durabilidade: [
+    { min: 8.5, palavra: 'Vida longa' },
+    { min: 7.0, palavra: 'Dura bem' },
+    { min: 5.0, palavra: 'Vida média' },
+    { min: 0,   palavra: 'Gasta rápido' },
   ],
 };
 
@@ -94,15 +118,10 @@ export function maciez(durezaUnificada: number): number {
   return clamp((67 - durezaUnificada) / 5, 0, 10);
 }
 
-/**
- * PERDÃO (0–10) — tolerância a erro. A métrica que o iniciante precisa e
- * nenhum fabricante publica. A VALIDAR (pesos v1):
- *   perdao = 0.5·controle + 0.3·(10 − velocidade) + 0.2·maciez
- */
-export function perdao(specs: Specs, durezaUnificada: number): number {
-  const p = 0.5 * specs.controle + 0.3 * (10 - specs.velocidade) + 0.2 * maciez(durezaUnificada);
-  return Math.round(p * 10) / 10;
-}
+/* O PERDÃO ficava aqui. Foi removido em 2026-08-03 — o porquê está no cabeçalho
+   de PALAVRAS, acima. `maciez` continua: ela é insumo da tradução de dureza
+   (traduzir.ts) e da ficha do material, e sai de um grau declarado pelo
+   fabricante, não de pesos escolhidos por nós. */
 
 /**
  * CUSTO ESTIMADO POR MÊS (R$) — o grande equalizador (D-09).

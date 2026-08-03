@@ -145,7 +145,7 @@ export const TELAS: Record<string, Tela> = {
         id: 'aprender',
         titulo: 'Errar menos e aprender o básico',
         proximo: 'ini-orcamento',
-        filtro: 'ordenar=perdao', // o que mais perdoa primeiro
+        filtro: 'ordenar=controle', // controle alto e' o que de fato perdoa erro
       },
       {
         id: 'jogar-ja',
@@ -247,7 +247,7 @@ export const TELAS: Record<string, Tela> = {
         id: 'nao-sei',
         titulo: 'Ainda estou descobrindo',
         proximo: 'resultado-em-formacao',
-        filtro: 'ordenar=perdao',
+        filtro: 'ordenar=controle',
       },
     ],
   },
@@ -277,7 +277,7 @@ export const TELAS: Record<string, Tela> = {
         id: 'mistura',
         titulo: 'Defendo e ataco quando dá',
         proximo: 'resultado-controle',
-        filtro: 'ordenar=perdao',
+        filtro: 'ordenar=controle',
       },
     ],
   },
@@ -321,8 +321,8 @@ export const TELAS: Record<string, Tela> = {
     perfil: {
       id: 'base-solida',
       nome: 'Base sólida primeiro',
-      descricao: 'Material que perdoa: a técnica cresce sem brigar com a raquete. Ordenado pelo Perdão, que é a conta de quanto o material tolera erro.',
-      presetURL: '/catalogo?nivel=iniciante&ordenar=perdao',
+      descricao: 'Material que perdoa: a técnica cresce sem brigar com a raquete. Ordenado por controle, que é o índice que de fato mede quanto a peça tolera erro de gesto.',
+      presetURL: '/catalogo?nivel=iniciante&ordenar=controle',
     },
   },
   'resultado-em-formacao': {
@@ -330,8 +330,8 @@ export const TELAS: Record<string, Tela> = {
     perfil: {
       id: 'atacante-em-formacao',
       nome: 'Atacante em formação',
-      descricao: 'Rápido o bastante pra crescer, tolerante o bastante pra errar. O nível intermediário inteiro, com o mais perdoado primeiro.',
-      presetURL: '/catalogo?nivel=intermediario&ordenar=perdao',
+      descricao: 'Rápido o bastante pra crescer, tolerante o bastante pra errar. O nível intermediário inteiro, com o de maior controle primeiro.',
+      presetURL: '/catalogo?nivel=intermediario&ordenar=controle',
     },
   },
   'resultado-controle': {

@@ -37,9 +37,17 @@
  */
 import { perdao, type Specs } from './metricas';
 
-/** O mínimo que este módulo precisa saber de um material. */
+/**
+ * O mínimo que este módulo precisa saber de um material.
+ *
+ * `specs` é OPCIONAL desde que a comparação foi aberta aos materiais sem perfil
+ * de desempenho — 470 dos 678. Eles não têm velocidade nem controle, mas têm
+ * ficha do fabricante, construção traduzida e preço, e isso já é comparação.
+ * Aqui a consequência é simples: sem specs, nenhuma métrica numérica sai, e a
+ * tela cai no confronto de ficha (ver `/comparar`).
+ */
 export interface Comparavel {
-  specs: Specs;
+  specs?: Specs;
   durabilidade?: number;
   durezaUnificada?: number;
 }
@@ -69,21 +77,28 @@ export function metricasComparaveis(
   b: Comparavel,
   rotuloEfeito = 'Spin',
 ): Metrica[] {
+  /* Sem perfil dos DOIS lados não há métrica numérica nenhuma — nem velocidade,
+     que é a única que todo material com specs tem. Devolver lista vazia é o
+     certo: quem chama já sabe cair no confronto de ficha. */
+  const sa = a.specs;
+  const sb = b.specs;
+  if (!sa || !sb) return [];
+
   const m: Metrica[] = [
     {
       rotulo: 'Velocidade',
       eixo: 'VEL',
-      valores: [a.specs.velocidade, b.specs.velocidade],
+      valores: [sa.velocidade, sb.velocidade],
       atributo: 'velocidade',
       noRadar: true,
     },
   ];
 
-  if (a.specs.spin !== undefined && b.specs.spin !== undefined) {
+  if (sa.spin !== undefined && sb.spin !== undefined) {
     m.push({
       rotulo: rotuloEfeito,
       eixo: 'EFE',
-      valores: [a.specs.spin, b.specs.spin],
+      valores: [sa.spin, sb.spin],
       atributo: 'spin',
       noRadar: true,
     });
@@ -92,7 +107,7 @@ export function metricasComparaveis(
   m.push({
     rotulo: 'Controle',
     eixo: 'CTR',
-    valores: [a.specs.controle, b.specs.controle],
+    valores: [sa.controle, sb.controle],
     atributo: 'controle',
     noRadar: true,
   });
@@ -115,7 +130,7 @@ export function metricasComparaveis(
     m.push({
       rotulo: 'Perdão*',
       eixo: 'PER',
-      valores: [perdao(a.specs, a.durezaUnificada), perdao(b.specs, b.durezaUnificada)],
+      valores: [perdao(sa, a.durezaUnificada), perdao(sb, b.durezaUnificada)],
       atributo: 'perdao',
       noRadar: false,
     });

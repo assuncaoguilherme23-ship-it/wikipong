@@ -83,12 +83,21 @@ afirma(progresso(e0)?.rotulo === 'Pergunta 1 de 3', 'progresso inicial 1 de 3');
 
 const e1 = responder(e0, 'casual');
 afirma(e1.atual === 'evo-estilo' && progresso(e1)?.n === 2, 'casual → evo-estilo (2 de 3)');
+/* "Ataque" agora abre ramo próprio (evo-ataque-distancia): a pergunta que separa
+   dois atacantes é ONDE eles jogam, não o que pesa mais na escolha. */
 const e2 = responder(e1, 'ataque');
-const e3 = responder(e2, 'potencia');
-afirma(e3.atual === 'resultado-em-formacao', 'chega no resultado');
-afirma(resultado(e3)?.nome === 'Atacante em formação', 'perfil correto');
-afirma((resultado(e3)?.presetURL ?? '').includes('vel=6-8'), 'preset na URL (D-12)');
+afirma(e2.atual === 'evo-ataque-distancia' && progresso(e2)?.n === 3,
+  'ataque → pergunta de distância da mesa (3 de 3)');
+const e3 = responder(e2, 'meia-distancia');
+afirma(e3.atual === 'resultado-topspin', 'chega no resultado');
+afirma(resultado(e3)?.nome === 'Topspin de meia-distância', 'perfil correto');
+afirma((resultado(e3)?.presetURL ?? '').includes('intencao=atacar'), 'preset na URL (D-12)');
 afirma(progresso(e3) === null, 'resultado não tem progresso');
+
+/* Quem defende tinha as mesmas três respostas de quem ataca. Agora tem ramo. */
+const d1 = responder(responder(iniciar(), 'serio'), 'defesa');
+afirma(d1.atual === 'evo-defesa-como', 'defesa abre ramo próprio');
+afirma(resultado(responder(d1, 'corte'))?.id === 'defensor', 'corte longe da mesa → Defensor');
 
 const ex = responder(iniciar(), 'explorar');
 afirma(resultado(ex)?.id === 'explorador', 'explorar vai direto ao resultado');
@@ -215,14 +224,16 @@ afirma(CAT.length === antesBusca, 'buscar não muta o array de entrada');
 const pIni = responder(responder(responder(iniciar(), 'comecando'), 'jogar-ja'), 'ate-200');
 const uIni = parseQuery(presetFinal(pIni) ?? '');
 afirma(uIni.preco?.max === 200, 'orçamento vira filtro de preço real');
-afirma(jeq(uIni.velocidade, { min: 6, max: 8 }), '"competir" sobrescreve a faixa de velocidade do perfil');
+afirma(uIni.ordenar === 'velocidade', '"competir" ordena por velocidade em vez de recortar por faixa');
 afirma(jeq(uIni.niveis, ['iniciante']), 'preset refinado preserva o nível do perfil');
 
 // "sem teto" NÃO inventa faixa de preço; "aprender" aperta o controle
 const pApr = responder(responder(responder(iniciar(), 'comecando'), 'aprender'), 'sem-teto');
 const uApr = parseQuery(presetFinal(pApr) ?? '');
 afirma(uApr.preco === null, 'sem-teto não cria filtro de preço (D-16)');
-afirma(jeq(uApr.controle, { min: 9, max: 10 }), '"aprender o básico" aperta o controle');
+afirma(uApr.ordenar === 'perdao', '"aprender o básico" ordena pelo Perdão');
+afirma(uApr.controle === null && uApr.velocidade === null,
+  'nenhuma faixa de spec no preset do iniciante — ela deixava 6 materiais de 678');
 
 // "raquete pronta" vira filtro de tipo
 const pPro = responder(responder(responder(iniciar(), 'comecando'), 'pronta'), 'ate-400');
@@ -232,12 +243,16 @@ afirma(jeq(parseQuery(presetFinal(pPro) ?? '').tipos, ['raquete']), 'raquete pro
 const pVol = responder(responder(responder(iniciar(), 'voltando'), 'aprender'), 'sem-teto');
 afirma(parseQuery(presetFinal(pVol) ?? '').niveis.includes('intermediario'), '"voltei" abre o intermediário');
 
-// evolução: nível, estilo e prioridade contam
-const pEvo = responder(responder(responder(iniciar(), 'serio'), 'ataque'), 'potencia');
+/* Evolução: nível, estilo e distância da mesa se acumulam na URL.
+   O estilo deixou de puxar FAIXA de velocidade e passou a puxar INTENÇÃO — a
+   faixa descartava os 470 materiais sem perfil de desempenho antes de qualquer
+   outro critério, e era o que esvaziava os resultados do quiz. */
+const pEvo = responder(responder(responder(iniciar(), 'serio'), 'ataque'), 'meia-distancia');
 const uEvo = parseQuery(presetFinal(pEvo) ?? '');
 afirma(uEvo.niveis.includes('avancado'), '"treino sério" abre materiais avançados');
-afirma(uEvo.velocidade?.min === 7, 'estilo de ataque puxa a velocidade');
-afirma(uEvo.ordenar === 'spin', 'prioridade potência ordena por efeito');
+afirma(jeq(uEvo.intencoes, ['atacar']), 'estilo de ataque filtra por intenção, não por faixa de spec');
+afirma(uEvo.velocidade === null, 'nenhuma faixa de spec entra no preset — ela descartaria 470 materiais');
+afirma(uEvo.ordenar === 'spin', 'meia-distância ordena por efeito');
 
 const pCus = responder(responder(responder(iniciar(), 'casual'), 'allround'), 'custo');
 const uCus = parseQuery(presetFinal(pCus) ?? '');
@@ -278,8 +293,11 @@ const valorDe = (url: string, rotulo: string) =>
 const uCusStr = presetFinal(pCus) ?? '';
 afirma(valorDe(uCusStr, 'Estilo') === 'Equilibrado', 'intenção vira "Estilo: Equilibrado"');
 afirma(valorDe(uCusStr, 'Ordem') === 'Menor preço', 'ordenar=preco-asc → "Menor preço"');
-afirma(valorDe(uCusStr, 'Controle') === '8 ou mais', 'faixa no teto lê "8 ou mais"');
-afirma(valorDe(uCusStr, 'Velocidade') === '5 a 7', 'faixa fechada lê "5 a 7"');
+/* A leitura de faixa é do descritor, não do quiz — testar com URL literal
+   desacopla os dois. Antes isto vinha de um preset do quiz, e mudar o quiz
+   quebrava um teste que não era sobre o quiz. */
+afirma(valorDe('/catalogo?ctrl=8-10', 'Controle') === '8 ou mais', 'faixa no teto lê "8 ou mais"');
+afirma(valorDe('/catalogo?vel=5-7', 'Velocidade') === '5 a 7', 'faixa fechada lê "5 a 7"');
 afirma(valorDe(uCusStr, 'Nível') === undefined, 'não inventa etiqueta de filtro ausente');
 
 afirma(valorDe(presetFinal(pEvo) ?? '', 'Nível') === 'Intermediário · Avançado',
@@ -290,8 +308,13 @@ afirma(etiquetasDoPreset(P_EXPL).length === 0,
   'explorador não gera etiqueta (a UI diz "catálogo inteiro" em vez de caixa vazia)');
 
 // ───────── recomendação: veredito material ↔ perfil (dado sincero) ─────────
-afirma(PERFIS_COM_CRITERIO.length === 3, 'só os 3 perfis que filtram entram (explorador fora)');
+/* Eram 3; agora são 6, com a defesa e as duas distâncias de mesa que o quiz
+   passou a distinguir. Ficam de fora os que não filtram nada: `explorador` e
+   `custo-beneficio` só ordenam, e um perfil que combina com tudo não é veredito. */
+afirma(PERFIS_COM_CRITERIO.length === 6, 'os 6 perfis que filtram entram');
 afirma(!PERFIS_COM_CRITERIO.some(p => p.id === 'explorador'), 'explorador excluído (combinaria com tudo)');
+afirma(!PERFIS_COM_CRITERIO.some(p => p.id === 'custo-beneficio'),
+  'custo-benefício excluído: só ordena, não filtra');
 
 // COERÊNCIA: o veredito tem que bater com o motor de filtros em TODOS os pares
 for (const m of CAT) {
@@ -305,13 +328,16 @@ for (const m of CAT) {
 const baseSolida = PERFIS_COM_CRITERIO.find(p => p.id === 'base-solida')!;
 const vM4 = combinaComPerfil(CAT[3], baseSolida); // M4: Avançado, vel 5.0, ctrl 9.0
 afirma(!vM4.combina, 'M4 não combina com base-solida');
+/* O perfil passou a ter UM critério só, o nível. As faixas de velocidade e
+   controle saíram de propósito: elas reprovavam de saída todo material sem
+   perfil de desempenho, que é a maioria do catálogo. */
+afirma(vM4.criterios.length === 1, 'base-solida cobra só o nível');
 afirma(vM4.criterios[0].rotulo === 'Nível' && !vM4.criterios[0].atende, 'M4: nível reprova');
-afirma(vM4.criterios[1].atende && vM4.criterios[2].atende, 'M4: vel 5.0 e ctrl 9.0 passam');
 
-const atacante = PERFIS_COM_CRITERIO.find(p => p.id === 'atacante-em-formacao')!;
-afirma(combinaComPerfil(CAT[5], atacante).combina, 'M6 combina com atacante-em-formacao');
+const defensor = PERFIS_COM_CRITERIO.find(p => p.id === 'defensor')!;
+afirma(defensor.presetURL.includes('intencao=controlar'), 'defensor filtra por intenção de controle');
 
-afirma(vereditosDoMaterial(CAT[0]).length === 3, 'vereditosDoMaterial cobre os 3 perfis');
+afirma(vereditosDoMaterial(CAT[0]).length === 6, 'vereditosDoMaterial cobre os 6 perfis');
 afirma(ROTULO_INTENCAO.atacar === 'Ataque', 'rótulo de intenção traduzido');
 
 
@@ -517,7 +543,16 @@ afirma(ids(aplicar(CAT2, parseQuery('ordenar=perdao'))).at(-1) === 'X1', 'sem sp
 afirma(ids(aplicar(CAT2, parseQuery('ordenar=preco-asc')))[0] === 'X1', 'no menor preço, lidera (R$ 25)');
 
 // Veredito diz POR QUE reprova, em vez de reprovar em silêncio.
-const vSemPerfil = combinaComPerfil(semPerfil, baseSolida);
+/* Perfil sintético, porque nenhum perfil do quiz pede spec agora — e não é sobre
+   o quiz: é sobre o veredito explicar a AUSÊNCIA de dado em vez de reprovar
+   calado ou mostrar zero como se fosse medição. */
+const perfilQuePedeSpec = {
+  id: 'so-para-teste',
+  nome: 'Perfil que pede spec',
+  descricao: 'existe só neste teste',
+  presetURL: '/catalogo?ctrl=8-10',
+};
+const vSemPerfil = combinaComPerfil(semPerfil, perfilQuePedeSpec);
 afirma(!vSemPerfil.combina, 'sem perfil não combina com perfil que pede spec');
 afirma(vSemPerfil.criterios.some(c => c.detalhe === 'não tem ficha de desempenho'),
   'o critério explica a ausência em vez de mostrar número falso');
@@ -758,6 +793,53 @@ for (const k of Object.keys(BORRACHA)) {
   afirma(BORRACHA[k as keyof typeof BORRACHA].resumo.length > 40, `resumo de borracha "${k}" existe`);
 }
 
+// ───────── O quiz precisa RESPONDER: nenhum caminho pode morrer vazio ─────────
+/* Percorre os 43 caminhos possíveis do grafo e conta quantos materiais a URL
+   final de cada um devolve. Foi assim que apareceu o defeito: 4 caminhos
+   terminavam em ZERO e 18 em menos de 10, porque os presets filtravam por FAIXA
+   DE SPEC — e faixa de spec descarta de saída os 470 materiais sem perfil de
+   desempenho. Agora faceta filtra e spec ordena.
+
+   Os que sobram vazios são todos o ramo "raquete pronta": o catálogo tem duas
+   montadas, a partir de R$ 295, e quem pede "até R$ 200" recebe lista vazia
+   porque é verdade. A opção avisa isso antes. */
+const TETO_VAZIOS_ACEITOS = 2;
+let caminhosQuiz = 0;
+let caminhosVazios = 0;
+let caminhosMagros = 0;
+function andarQuiz(e: ReturnType<typeof iniciar>) {
+  const tela = TELAS[e.atual];
+  if (!tela) return;
+  if (tela.tipo === 'resultado') {
+    caminhosQuiz++;
+    const url = presetFinal(e);
+    const n = url ? aplicar(MATERIAIS, parseQuery(url)).length : 0;
+    if (n === 0) caminhosVazios++;
+    else if (n < 10) caminhosMagros++;
+    return;
+  }
+  for (const op of tela.opcoes) andarQuiz(responder(e, op.id));
+}
+andarQuiz(iniciar());
+afirma(caminhosQuiz > 40, `o grafo do quiz tem ${caminhosQuiz} caminhos`);
+afirma(caminhosVazios <= TETO_VAZIOS_ACEITOS,
+  `caminhos do quiz que terminam vazios: ${caminhosVazios} (teto: ${TETO_VAZIOS_ACEITOS})`);
+afirma(caminhosMagros <= 6,
+  `caminhos com menos de 10 materiais: ${caminhosMagros}`);
+
+// ───────── Moeda estrangeira: fora do FILTRO de preço, não do catálogo ─────────
+/* Uma precedência errada (`a || b ? c : d`) fazia material em dólar sumir do
+   catálogo inteiro, e não só do filtro de preço. Duas asserções guardam os dois
+   lados da regra, porque só uma deixaria o bug voltar pelo outro. */
+const semFiltro = aplicar(MATERIAIS, filtroVazio());
+afirma(semFiltro.length === MATERIAIS.length,
+  `sem filtro nenhum, o catálogo inteiro aparece (${semFiltro.length} de ${MATERIAIS.length})`);
+afirma(semFiltro.some((m) => m.moeda !== undefined),
+  'material em moeda estrangeira aparece quando não há filtro de preço');
+const comTeto = aplicar(MATERIAIS, parseQuery('preco=2000'));
+afirma(comTeto.every((m) => m.moeda === undefined),
+  'com filtro de preço em reais, moeda estrangeira sai — dólar não se compara com real');
+
 // ───────────────── Comparação: nenhum par pode quebrar a tela ─────────────────
 
 const soVel = { specs: { velocidade: 8, controle: 7 } };               // lâmina
@@ -785,10 +867,14 @@ afirma(temRadar(metricasComparaveis(completo, completo)), 'com 4 eixos o radar s
      2. tantos valores quanto eixos no radar. Eram duas listas paralelas, e o
         JSX passava quatro rótulos fixos para três valores — cada número
         plotado no eixo errado. Isso não quebrava; mentia. */
-const comparaveisTeste = MATERIAIS.filter(temDesempenho);
+/* A varredura passou a cobrir o CATÁLOGO INTEIRO, não só quem tem specs: a
+   comparação foi aberta aos 470 materiais sem perfil de desempenho, que se
+   confrontam pela ficha do fabricante traduzida. São ~117 mil pares. */
+const comparaveisTeste = MATERIAIS;
 let paresVarridos = 0;
 let celulasRuins = 0;
 let radarDesalinhado = 0;
+let paresSemMetrica = 0;
 for (let i = 0; i < comparaveisTeste.length; i++) {
   for (let j = i + 1; j < comparaveisTeste.length; j++) {
     const x = comparaveisTeste[i];
@@ -796,6 +882,7 @@ for (let i = 0; i < comparaveisTeste.length; i++) {
     if (x.tipo !== y.tipo) continue;
     paresVarridos++;
     const met = metricasComparaveis(x, y);
+    if (met.length === 0) paresSemMetrica++;
     for (const linha of met) {
       for (const v of linha.valores) {
         if (v === undefined || Number.isNaN(v)) celulasRuins++;
@@ -805,9 +892,18 @@ for (let i = 0; i < comparaveisTeste.length; i++) {
     if (doRadar.map((r) => r.eixo).length !== doRadar.map((r) => r.valores[0]).length) {
       radarDesalinhado++;
     }
+    /* Sem métrica nenhuma, a tela cai no confronto de ficha — e aí a ficha
+       precisa existir dos dois lados, senão a comparação fica vazia. */
+    if (met.length === 0) {
+      const fa = fabricantePorId(x.id)?.ficha;
+      const fb = fabricantePorId(y.id)?.ficha;
+      if (!fa?.length || !fb?.length) celulasRuins++;
+    }
   }
 }
-afirma(paresVarridos > 10000, `varreu os pares do mesmo tipo (${paresVarridos})`);
+afirma(paresVarridos > 100000, `varreu os pares do mesmo tipo (${paresVarridos})`);
+afirma(paresSemMetrica > 0,
+  `há pares sem número nenhum, e eles se comparam pela ficha (${paresSemMetrica})`);
 afirma(celulasRuins === 0,
   `nenhuma célula da comparação é undefined ou NaN (achadas: ${celulasRuins})`);
 afirma(radarDesalinhado === 0,

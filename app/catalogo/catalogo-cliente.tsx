@@ -123,7 +123,10 @@ export function CatalogoCliente() {
   /** Pode entrar na comparação? Diz também POR QUE não, para a UI explicar. */
   function bloqueioDeComparacao(m: MaterialCatalogo): string | null {
     if (paraComparar.includes(m.id)) return null;
-    if (!temDesempenho(m)) return 'Sem ficha de desempenho para comparar';
+    /* A trava "sem ficha de desempenho" saiu daqui: ela bloqueava 470 dos 678
+       materiais — a maioria do catálogo com o cursor barrado. Fazia sentido
+       quando comparar era só radar e números; hoje a comparação confronta
+       também a ficha do fabricante traduzida, que existe em 678 de 678. */
     if (paraComparar.length >= 2) return 'A comparação é de dois materiais';
     if (tipoTravado !== null && m.tipo !== tipoTravado)
       return `Só comparamos ${tipoTravado.toLowerCase()} com ${tipoTravado.toLowerCase()}`;

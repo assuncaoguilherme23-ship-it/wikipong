@@ -34,6 +34,7 @@ function temCriterios(estado: FiltroEstado): boolean {
     estado.niveis.length > 0 ||
     estado.tipos.length > 0 ||
     estado.marcas.length > 0 ||
+    estado.intencoes.length > 0 ||
     estado.velocidade !== null ||
     estado.spin !== null ||
     estado.controle !== null ||
@@ -116,6 +117,18 @@ export function combinaComPerfil(material: Material, perfil: Perfil): Veredito {
   if (estado.marcas.length > 0) {
     const atende = estado.marcas.includes(slug(material.marca));
     criterios.push({ rotulo: 'Marca', atende, detalhe: material.marca });
+  }
+  /* INTENÇÃO faltava aqui, e o motor de filtros sempre soube dela. Não doía
+     enquanto nenhum perfil do quiz filtrava por intenção; quando os perfis
+     passaram a filtrar (defensor, colado na mesa, topspin), eles simplesmente
+     não contavam como "perfil com critério" e sumiam do "Pra quem é". */
+  if (estado.intencoes.length > 0) {
+    const atende = estado.intencoes.includes(slug(material.intencao));
+    criterios.push({
+      rotulo: 'Estilo de jogo',
+      atende,
+      detalhe: ROTULO_INTENCAO[material.intencao] ?? material.intencao,
+    });
   }
 
   return {

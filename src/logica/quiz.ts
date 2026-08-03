@@ -104,8 +104,8 @@ export const TELAS: Record<string, Tela> = {
         sub: 'já sei o básico',
         tempo: 'joguei antes · retomando agora',
         proximo: 'ini-objetivo',
-        // Já tem base: abre o intermediário e tolera um pouco mais de velocidade
-        filtro: 'nivel=iniciante,intermediario&vel=3-8',
+        // Já tem base: abre o intermediário junto com o iniciante.
+        filtro: 'nivel=iniciante,intermediario',
       },
       {
         id: 'casual',
@@ -132,22 +132,35 @@ export const TELAS: Record<string, Tela> = {
     pergunta: 'O que você quer da sua primeira raquete de verdade?',
     passo: { n: 2, total: 3 },
     opcoes: [
+      /* ── POR QUE ESTES FILTROS VIRARAM ORDENAÇÃO ─────────────────────────
+         Eram faixas de spec: `ctrl=9-10` e `vel=6-8`. Faixa de spec só casa com
+         material QUE TEM spec — 208 de 678 — e no nível iniciante são 10 de 33.
+         O resultado é que o quiz respondia com quase nada: medindo os 37
+         caminhos possíveis, 4 terminavam em ZERO materiais e 18 em menos de 10.
+
+         Nível, tipo e intenção existem em 678 de 678; velocidade e controle,
+         não. Então o que FILTRA é faceta, e o que a preferência faz é ORDENAR —
+         a lista continua completa e a ordem responde ao que a pessoa pediu. */
       {
         id: 'aprender',
         titulo: 'Errar menos e aprender o básico',
         proximo: 'ini-orcamento',
-        filtro: 'ctrl=9-10', // aperta o controle: só o que mais perdoa
+        filtro: 'ordenar=perdao', // o que mais perdoa primeiro
       },
       {
         id: 'jogar-ja',
         titulo: 'Já competir com os amigos',
         proximo: 'ini-orcamento',
-        filtro: 'vel=6-8', // aceita mais velocidade que a base
+        filtro: 'ordenar=velocidade',
       },
       {
         id: 'pronta',
         titulo: 'Uma raquete pronta, sem montar nada',
-        sub: 'já vem com as borrachas',
+        /* O aviso é a única coisa honesta a fazer aqui: o catálogo tem DUAS
+           raquetes montadas, de R$ 295 e R$ 443. Sem ele, quem escolhe "até
+           R$ 200" na pergunta seguinte cai numa lista vazia sem entender por
+           quê — e o vazio, nesse caso, é verdade sobre o acervo, não erro. */
+        sub: 'o catálogo tem só 2 montadas hoje, a partir de R$ 295',
         proximo: 'ini-orcamento',
         filtro: 'tipo=raquete',
       },
@@ -179,14 +192,16 @@ export const TELAS: Record<string, Tela> = {
       {
         id: 'ataque',
         titulo: 'Gosto de atacar e finalizar',
-        proximo: 'evo-prioridade',
-        filtro: 'vel=7-10',
+        // Ataque ganhou ramo próprio: a pergunta que separa dois atacantes não é
+        // "o que pesa mais", é ONDE eles jogam. Ver `evo-ataque-distancia`.
+        proximo: 'evo-ataque-distancia',
+        filtro: 'intencao=atacar',
       },
       {
         id: 'troca',
         titulo: 'Prefiro trocar bola e construir o ponto',
         proximo: 'evo-prioridade',
-        filtro: 'ctrl=8-10',
+        filtro: 'intencao=controlar,equilibrado',
       },
       {
         id: 'allround',
@@ -194,6 +209,75 @@ export const TELAS: Record<string, Tela> = {
         sub: 'depende do adversário',
         proximo: 'evo-prioridade',
         filtro: 'intencao=equilibrado',
+      },
+      {
+        id: 'defesa',
+        titulo: 'Defendo, devolvo tudo e espero o erro',
+        sub: 'corte e bloqueio',
+        proximo: 'evo-defesa-como',
+        filtro: 'intencao=controlar',
+      },
+    ],
+  },
+
+  /* Ramo do ATAQUE. A distância da mesa é o eixo que mais muda o material de um
+     atacante — e é o mesmo eixo da posição da fibra na lâmina: externa favorece
+     quem joga colado, interna favorece quem gira um passo atrás. */
+  'evo-ataque-distancia': {
+    tipo: 'pergunta',
+    pergunta: 'Onde você fica quando ataca?',
+    nota: 'Se você ainda não sabe, escolha a última. Distância de mesa é das últimas coisas que se define, e material errado por causa disso atrapalha mais do que ajuda.',
+    passo: { n: 3, total: 3 },
+    opcoes: [
+      {
+        id: 'colado',
+        titulo: 'Colado na mesa, no contra-ataque',
+        sub: 'bloqueio e devolvo rápido',
+        proximo: 'resultado-perto-da-mesa',
+        filtro: 'ordenar=velocidade',
+      },
+      {
+        id: 'meia-distancia',
+        titulo: 'Um passo atrás, girando a bola',
+        sub: 'topspin com arco',
+        proximo: 'resultado-topspin',
+        filtro: 'ordenar=spin',
+      },
+      {
+        id: 'nao-sei',
+        titulo: 'Ainda estou descobrindo',
+        proximo: 'resultado-em-formacao',
+        filtro: 'ordenar=perdao',
+      },
+    ],
+  },
+
+  /* Ramo da DEFESA. Não existia: quem se descrevia como defensor caía nas mesmas
+     três respostas de quem ataca. */
+  'evo-defesa-como': {
+    tipo: 'pergunta',
+    pergunta: 'Como você defende?',
+    passo: { n: 3, total: 3 },
+    opcoes: [
+      {
+        id: 'corte',
+        titulo: 'Corto longe da mesa',
+        sub: 'espero o erro do ataque',
+        proximo: 'resultado-defensor',
+        filtro: 'ordenar=controle',
+      },
+      {
+        id: 'bloqueio',
+        titulo: 'Bloqueio colado na mesa',
+        sub: 'devolvo a força do outro',
+        proximo: 'resultado-perto-da-mesa',
+        filtro: 'ordenar=controle',
+      },
+      {
+        id: 'mistura',
+        titulo: 'Defendo e ataco quando dá',
+        proximo: 'resultado-controle',
+        filtro: 'ordenar=perdao',
       },
     ],
   },
@@ -219,20 +303,26 @@ export const TELAS: Record<string, Tela> = {
         id: 'custo',
         titulo: 'Que dure e valha o preço',
         sub: 'custo-benefício',
-        proximo: 'resultado-controle',
+        // Ia para "Construtor de pontos", que não fala de dinheiro em lugar
+        // nenhum. Agora tem resultado próprio.
+        proximo: 'resultado-custo',
         filtro: 'ordenar=preco-asc',
       },
     ],
   },
 
-  // Resultados (perfis) — o CTA carrega o preset na URL (D-12)
+  /* Resultados (perfis) — o CTA carrega o preset na URL (D-12).
+     Os presets FILTRAM por faceta (nível, tipo, intenção — declaradas em 678 de
+     678) e ORDENAM por spec. A versão anterior filtrava por faixa de spec e
+     entregava listas de 1 a 6 materiais, porque faixa de spec descarta os 470
+     sem perfil de desempenho antes de qualquer outra coisa. */
   'resultado-base': {
     tipo: 'resultado',
     perfil: {
       id: 'base-solida',
       nome: 'Base sólida primeiro',
-      descricao: 'Material que perdoa: controle alto e velocidade contida, pra técnica crescer sem brigar com a raquete.',
-      presetURL: '/catalogo?nivel=iniciante&ctrl=8-10&vel=3-6&ordenar=perdao',
+      descricao: 'Material que perdoa: a técnica cresce sem brigar com a raquete. Ordenado pelo Perdão, que é a conta de quanto o material tolera erro.',
+      presetURL: '/catalogo?nivel=iniciante&ordenar=perdao',
     },
   },
   'resultado-em-formacao': {
@@ -240,8 +330,8 @@ export const TELAS: Record<string, Tela> = {
     perfil: {
       id: 'atacante-em-formacao',
       nome: 'Atacante em formação',
-      descricao: 'Velocidade média-alta com controle ainda alto: rápido o bastante pra crescer, tolerante o bastante pra errar.',
-      presetURL: '/catalogo?nivel=intermediario&vel=6-8&ctrl=7-10',
+      descricao: 'Rápido o bastante pra crescer, tolerante o bastante pra errar. O nível intermediário inteiro, com o mais perdoado primeiro.',
+      presetURL: '/catalogo?nivel=intermediario&ordenar=perdao',
     },
   },
   'resultado-controle': {
@@ -249,8 +339,44 @@ export const TELAS: Record<string, Tela> = {
     perfil: {
       id: 'construtor-de-pontos',
       nome: 'Construtor de pontos',
-      descricao: 'Consistência acima de tudo: controle e efeito pra trocar bola até abrir o espaço certo.',
-      presetURL: '/catalogo?vel=5-7&ctrl=8-10&ordenar=controle',
+      descricao: 'Consistência acima de tudo: trocar bola até abrir o espaço certo. Ordenado por controle.',
+      presetURL: '/catalogo?intencao=controlar,equilibrado&ordenar=controle',
+    },
+  },
+  'resultado-defensor': {
+    tipo: 'resultado',
+    perfil: {
+      id: 'defensor',
+      nome: 'Defensor',
+      descricao: 'Material feito para devolver, não para finalizar: controle alto e velocidade contida, para o ponto durar até o outro errar.',
+      presetURL: '/catalogo?intencao=controlar&ordenar=controle',
+    },
+  },
+  'resultado-perto-da-mesa': {
+    tipo: 'resultado',
+    perfil: {
+      id: 'perto-da-mesa',
+      nome: 'Jogo colado na mesa',
+      descricao: 'Resposta imediata e arco baixo, aproveitando a força que vem do outro lado. Em lâmina, é o território da fibra externa.',
+      presetURL: '/catalogo?intencao=atacar&ordenar=velocidade',
+    },
+  },
+  'resultado-topspin': {
+    tipo: 'resultado',
+    perfil: {
+      id: 'topspin-meia-distancia',
+      nome: 'Topspin de meia-distância',
+      descricao: 'Girar a bola um passo atrás da mesa, com arco. Pede tempo de contato — em lâmina, é o território da fibra interna.',
+      presetURL: '/catalogo?intencao=atacar&ordenar=spin',
+    },
+  },
+  'resultado-custo': {
+    tipo: 'resultado',
+    perfil: {
+      id: 'custo-beneficio',
+      nome: 'Custo-benefício',
+      descricao: 'Do mais barato para o mais caro, com preço real de loja conferido. Lembrando que borracha é consumível: o que dura mais pode sair mais barato por ano.',
+      presetURL: '/catalogo?ordenar=preco-asc',
     },
   },
   'resultado-explorador': {

@@ -225,6 +225,41 @@
   color: var(--cor-tinta-suave);
 }
 
+/* A ficha crua do fabricante, embaixo da tradução. Rótulo em mono maiúsculo,
+   como o resto do site marca rótulo. */
+.claroFicha {
+  margin: 0.9rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--cor-linha);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.claroFicha dt {
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-mudo);
+}
+.claroFicha dd {
+  margin: 0.15rem 0 0;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+}
+
+/* Explica a tabela curta quando não há métrica nenhuma medida. */
+.claroSemNumero {
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--cor-linha);
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
 .nota {
   margin-top: 1.25rem;
   font-size: var(--texto-mini);

@@ -169,6 +169,127 @@ export const GUIAS: Guia[] = [
     ),
   },
   {
+    slug: 'anatomia-da-borracha',
+    titulo: 'Anatomia da borracha: as duas camadas, tensão e aderência',
+    resumo:
+      'Capa e esponja fazem trabalhos diferentes. Os dois jeitos de fazer efeito, o que a espessura muda e quando a borracha morre.',
+    minutos: 7,
+    corpo: (
+      <>
+        <p>
+          Os guias de <Link href="/aprender/como-escolher-borracha/">como escolher</Link> e de{' '}
+          <Link href="/aprender/dureza-da-esponja/">dureza da esponja</Link> respondem o que
+          comprar. Este explica <em>como a peça funciona</em> — o que é útil quando você lê uma
+          ficha e ela diz “lisa aderente híbrida, esponja 47,5°” e você quer saber o que isso
+          significa na mão.
+        </p>
+
+        <h2>São duas peças coladas, com funções opostas</h2>
+        <p>
+          Toda borracha é um sanduíche de dois materiais que quase nunca são explicados separados:
+        </p>
+        <p>
+          <strong>A capa</strong> é a folha de borracha de cima, a que toca a bola. É ela que
+          <em> agarra</em>: todo o efeito nasce no atrito entre ela e a bola.
+        </p>
+        <p>
+          <strong>A esponja</strong> fica embaixo, entre a capa e a madeira. Ela não toca a bola
+          nunca. O trabalho dela é <em>guardar e devolver energia</em>: afunda no impacto e
+          empurra na volta. É de onde vem a velocidade.
+        </p>
+        <p>
+          Quase toda a confusão sobre borracha some quando essa divisão fica clara. “Dureza” quase
+          sempre se refere à esponja. “Aderência” é sempre da capa. Uma borracha pode ter capa
+          muito aderente sobre esponja dura, ou o contrário — e são peças completamente diferentes
+          de jogar.
+        </p>
+
+        <h2>Os dois jeitos de fazer efeito</h2>
+        <p>
+          Existem duas escolas para o mesmo objetivo, e a ficha do material sempre diz qual é.
+        </p>
+        <p>
+          <strong>Tensionada (o caminho europeu e japonês)</strong>: a borracha sai de fábrica com
+          a capa já esticada sobre a esponja, como um trampolim armado. No impacto, essa tensão
+          devolve energia sozinha. Você consegue velocidade e efeito <em>sem</em> precisar de um
+          gesto perfeito — é o que tornou o jogo moderno acessível. Foi o que substituiu a cola
+          rápida quando ela foi proibida.
+        </p>
+        <p>
+          <strong>Aderente (o caminho chinês)</strong>: a capa é pegajosa, quase gruda no dedo. O
+          efeito vem do atrito bruto, não da tensão. Rende um giro muito pesado, mas exige gesto
+          completo e acelerado — quem bate curto sente a bola simplesmente morrer na mesa, porque
+          não há trampolim nenhum ajudando.
+        </p>
+        <p>
+          <strong>Híbrida</strong>: capa aderente chinesa sobre esponja tensionada. É a tentativa
+          de ficar com o giro de uma e a saída da outra, e virou a categoria que mais cresce.
+        </p>
+
+        <h2>Espessura: quanto de esponja</h2>
+        <p>
+          A regra da ITTF limita o conjunto todo a <strong>4 mm</strong>. Na prática você escolhe
+          entre algo como 1,8 mm, 2,0 mm e “max” (perto de 2,2 mm).
+        </p>
+        <p>
+          Mais esponja significa mais material para guardar energia: <strong>mais velocidade e
+          mais arco</strong>, e menos controle. Menos esponja aproxima a bola da madeira: você
+          sente mais e erra menos, com menos potência.
+        </p>
+        <p>
+          Para quem está começando, 1,8 mm ou 2,0 mm é conselho antigo e bom. Vale saber que{' '}
+          <strong>a diferença entre 1,8 e 2,0 é sutil</strong> — bem menor do que a diferença
+          entre uma esponja macia e uma dura. Não é onde compensa agonizar.
+        </p>
+
+        <h2>A dureza da esponja em uma linha</h2>
+        <p>
+          Esponja macia afunda mais, segura a bola por mais tempo e perdoa; esponja dura rende
+          mais na batida forte e castiga o toque leve. Cada material do catálogo mostra isso
+          traduzido quando o fabricante declara o grau — e o{' '}
+          <Link href="/aprender/dureza-da-esponja/">guia da dureza</Link> explica a pegadinha das
+          réguas, que é séria: 40° de uma marca não é 40° de outra.
+        </p>
+
+        <h2>Borracha morre, e mais rápido do que se imagina</h2>
+        <p>
+          Diferente da lâmina, a borracha é consumível. A capa perde aderência com o uso, com a
+          poeira do ginásio e com o próprio ar. E o pior é que ela morre <strong>devagar</strong>:
+          você se acostuma com a perda e acha que é o seu jogo que piorou.
+        </p>
+        <p>
+          Sinais de que passou da hora: a bola escorrega no saque, o arco fica mais baixo do que
+          você lembra, e a capa começa a ficar lisa e brilhante em vez de fosca.
+        </p>
+        <p>
+          Para quem joga umas três vezes por semana, a conta de referência que o WikiPong usa é
+          esta — e ela aparece no custo por mês de cada material:
+        </p>
+        <p>
+          <strong>Tensionada</strong>: cerca de 4 meses. É a que mais perde performance, porque a
+          tensão de fábrica vai cedendo. <strong>Aderente</strong>: cerca de 6 meses.{' '}
+          <strong>Clássica sem tensão</strong>: até 10 meses, e é por isso que ela ainda faz
+          sentido para quem treina muito e não quer trocar toda hora.
+        </p>
+        <p>
+          Isso muda a conta de qual borracha é cara. Uma de R$ 400 que dura 4 meses custa mais por
+          ano que uma de R$ 250 que dura 10.
+        </p>
+
+        <h2>O que o WikiPong publica de cada uma</h2>
+        <p>
+          A superfície vem da ficha do fabricante em todas as borrachas do catálogo, e é dela que
+          sai a leitura em português claro. A dureza aparece quando a marca declara o grau e a
+          régua — e aí o número é <strong>convertido</strong> para uma escala única, porque
+          comparar grau de marcas diferentes sem converter é comparar coisa nenhuma.
+        </p>
+        <p>
+          <Link href="/catalogo/?tipos=Borracha">Ver as borrachas do catálogo →</Link>
+        </p>
+      </>
+    ),
+  },
+  {
     slug: 'madeira-vs-carbono',
     titulo: 'Lâminas: madeira vs carbono',
     resumo: 'O que a fibra faz de verdade, como ler a classe (ALL/OFF) e quando ela passa a valer a pena.',

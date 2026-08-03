@@ -299,10 +299,20 @@ export function aplicar(materiais: readonly Material[], estado: FiltroEstado): M
       dentro(m.specs?.spin, estado.spin) &&
       dentro(m.specs?.controle, estado.controle) &&
       /* Pelo mesmo motivo da ordenação: quem está em moeda estrangeira sai do
-         filtro de preço em vez de entrar com um valor comparado errado. */
-      (estado.preco === null || m.moeda !== undefined
-        ? m.moeda === undefined
-        : dentro(m.preco, estado.preco)),
+         filtro de preço em vez de entrar com um valor comparado errado.
+         SEM filtro de preço, porém, todo mundo passa.
+
+         A primeira versão errou a precedência e cobrou caro:
+
+             estado.preco === null || m.moeda !== undefined ? A : B
+
+         é lido como `(a || b) ? A : B`, não como `a || (b ? A : B)`. Com o
+         filtro desligado a condição já era verdadeira, caía em `A` —
+         `m.moeda === undefined` — e as duas lâminas internacionais ficavam
+         FORA DO CATÁLOGO INTEIRO, não só do filtro de preço. Apareceu ao contar
+         quantos materiais o preset "Explorador" do quiz devolvia: 676 de 678. */
+      (estado.preco === null ||
+        (m.moeda === undefined && dentro(m.preco, estado.preco))),
   );
   return filtrados.sort(comparador(estado.ordenar));
 }

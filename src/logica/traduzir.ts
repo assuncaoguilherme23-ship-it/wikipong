@@ -37,8 +37,11 @@
  * em português o que a palavra técnica já dizia em jargão.
  *
  * Módulo PURO: sem DOM, sem framework, sem import de dado. Recebe a ficha,
- * devolve texto.
+ * devolve texto. A única dependência é `escalas.ts`, também puro — e ela existe
+ * de propósito: a dureza traduzida aqui precisa sair da MESMA tabela que a ficha
+ * do material publica, senão as duas telas se contradizem sobre a mesma esponja.
  */
+import { grauRepresentativo, escalaDoTexto, paraESN, sensacao } from './escalas';
 
 // ─────────────────────────── Tipos ───────────────────────────
 
@@ -280,6 +283,30 @@ export function familiaDaBorracha(ficha: readonly LinhaFicha[]): FamiliaBorracha
   return /\blisa\b|invertid|smooth/.test(t) ? 'classica' : null;
 }
 
+/**
+ * Dureza da esponja traduzida A PARTIR DO GRAU DECLARADO, não da palavra.
+ *
+ * A primeira versão procurava "dura" ou "macia" no texto da ficha, e isso é
+ * pobre por dois motivos: quase nenhuma ficha usa essas palavras, e as que usam
+ * não dizem quanto. Enquanto isso, 100 das 282 borrachas declaram o grau E a
+ * régua ("47,5° (escala ESN)") — dado exato, ignorado.
+ *
+ * Agora converte para ESN-equivalente e usa a mesma tabela de sensação que a
+ * ficha do material já publica (`escalas.ts`), então as duas telas nunca se
+ * contradizem. Sem grau declarado, cai na palavra; sem nenhum dos dois, silêncio.
+ */
+function durezaDaFicha(ficha: readonly LinhaFicha[]): Traco | null {
+  const linha = ficha.find((l) => /dureza/i.test(l.rotulo));
+  if (!linha) return null;
+  const grau = grauRepresentativo(linha.valor);
+  const escala = escalaDoTexto(linha.valor);
+  if (grau === null || escala === null) return null;
+  const faixa = paraESN(grau, escala);
+  const esn = Math.round((faixa.min + faixa.max) / 2);
+  const s = sensacao(esn);
+  return { rotulo: `Esponja ${s.rotulo.toLowerCase()}`, significa: s.descricao };
+}
+
 /** Traços extras declarados na ficha, na ordem em que aparecem na tabela. */
 export function extrasDaFicha(ficha: readonly LinhaFicha[]): Traco[] {
   const t = textoDaFicha(ficha);
@@ -288,8 +315,14 @@ export function extrasDaFicha(ficha: readonly LinhaFicha[]): Traco[] {
   if (/caneta|penhold/.test(t)) achados.push(EXTRAS.caneta);
   if (/hinoki/.test(t)) achados.push(EXTRAS.hinoki);
   if (/hexagonal|cybershape/.test(t)) achados.push(EXTRAS.hexagonal);
-  if (/\bdura\b|\bhard\b/.test(t)) achados.push(EXTRAS.dura);
-  if (/\bmacia\b|\bsoft\b/.test(t)) achados.push(EXTRAS.macia);
+
+  /* O grau declarado vence a palavra: é mais preciso e cobre muito mais fichas.
+     A palavra só entra quando não há número. */
+  const porGrau = durezaDaFicha(ficha);
+  if (porGrau) achados.push(porGrau);
+  else if (/\bdura\b|\bhard\b/.test(t)) achados.push(EXTRAS.dura);
+  else if (/\bmacia\b|\bsoft\b/.test(t)) achados.push(EXTRAS.macia);
+
   return achados;
 }
 

@@ -56,9 +56,12 @@ No menu da esquerda, abra o **SQL Editor** (ícone de terminal).
 10. Repita com **`supabase/007-leitura-publica-quebrada.sql`**.
 11. Repita com **`supabase/008-indices-de-usuario.sql`**.
 
-> **Depois do `008`, o painel fica com dois avisos acesos de propósito**: o
-> *Unused Index* do `topicos_por_material` e o *Leaked Password Protection*.
-> Os dois são decisão, não pendência — o motivo de cada um está no `008`.
+> **Depois do `008`, o painel fica com cinco avisos acesos de propósito**:
+> quatro *Unused Index* e o *Leaked Password Protection*. Três dos quatro são
+> os índices que o próprio `008` criou — índice recém-criado nasce marcado como
+> não usado. **O painel não vai a zero**, e não deve: *chave estrangeira sem
+> índice* e *índice não usado* pedem coisas opostas, então apagar um índice para
+> calar o segundo traz o primeiro de volta. O motivo de cada um está no `008`.
 
 > **Se você já rodou o `004`, o `007` é OBRIGATÓRIO e é urgente.** O `004`
 > deixou a comunidade invisível para quem não está logado: avaliação aprovada,
@@ -280,6 +283,8 @@ que tem que ser.
 | Aviso **Leaked Password Protection Disabled** que não sai | É recurso do plano **Pro**; no Free o botão não liga. Fica aceso de propósito — o WikiPong não usa senha, então não há o que proteger |
 | Aviso **Unindexed foreign keys** nas três tabelas | Rode o `008` |
 | Aviso **Unused Index** no `topicos_por_material` | Fica aceso de propósito. Ele está sem uso porque as discussões ainda não têm nada, não porque seja inútil — apagar agora obriga a recriar com a tabela cheia |
+| Aviso **Unused Index** nos três `*_por_usuario` | Fica. São os índices que o `008` criou, e índice novo nasce sem uso. Em tabela pequena o Postgres nem usa índice — ele passa a usar quando crescer, que é quando o índice vale |
+| Rodei o `008` e continuam **cinco** avisos | São outros cinco. Os três de *chave estrangeira* sumiram e entraram três de *índice não usado*. Compare os nomes, não a quantidade |
 | Alerta vermelho **Security Definer View** | Rode o `003-conserta-fila.sql` (Parte 2) |
 | Aviso **Signed-In / Public Can Execute SECURITY DEFINER Function** | Rode o `004` (para a `eh_admin`) e o `005` (para a `rls_auto_enable`) |
 | O aviso de SECURITY DEFINER **continua depois de rodar** | Falta revogar do `PUBLIC`. Toda função no Postgres nasce com EXECUTE concedido a ele, e tirar de `anon` não basta. As versões atuais do `004` e do `005` já fazem isso |

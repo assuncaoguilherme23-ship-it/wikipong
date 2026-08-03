@@ -82,11 +82,32 @@ create index if not exists respostas_por_usuario
 -- o login por senha, ele deixa de ser ruído e vira requisito.
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- COMO CONFERIR
+-- COMO CONFERIR — E O QUE EU PREVI ERRADO AQUI
 -- ═══════════════════════════════════════════════════════════════════════════
 --
--- Depois de rodar, o painel deve ficar com DOIS avisos: o índice não usado e o
--- de senha vazada. Os três de chave estrangeira somem.
+-- Escrevi antes de rodar que sobrariam DOIS avisos. Sobraram CINCO, e a conta
+-- certa é esta:
 --
--- Se sumirem os três, acabou. Os dois que sobram são os desta migração — estão
--- acesos porque foi decidido que ficassem.
+--   · os três "Unindexed foreign keys" SUMIRAM — é o conserto desta migração
+--   · apareceram três "Unused Index" novos, que são OS ÍNDICES CRIADOS AQUI
+--   · continuam o "Unused Index" do topicos_por_material e o de senha
+--
+-- Não contei que criar um índice acende na hora o aviso de índice não usado.
+-- O número total ficou igual por coincidência; a lista é outra.
+--
+-- ── E ELES NÃO VÃO SAIR DA LISTA TÃO CEDO ─────────────────────────────────
+--
+-- Em tabela pequena o Postgres prefere varredura sequencial a usar índice — ler
+-- tudo é mais barato que consultar o índice e voltar à tabela. Estes três só
+-- começam a ser usados quando as tabelas crescerem, que é exatamente quando
+-- passam a valer. E o caminho que mais os justifica, o `on delete set null` de
+-- quem apaga a conta, quase nunca roda.
+--
+-- ── OS DOIS AVISOS SE CONTRADIZEM, E POR ISSO O PAINEL NÃO VAI A ZERO ─────
+--
+-- "Chave estrangeira sem índice" e "índice não usado" pedem coisas opostas.
+-- Apagar estes três para calar o segundo traz o primeiro de volta, e assim
+-- indefinidamente.
+--
+-- A decisão é ficar como está: quatro "Unused Index" e o de senha, todos INFO
+-- menos o último. Perseguir o zero aqui é trocar um aviso por outro.

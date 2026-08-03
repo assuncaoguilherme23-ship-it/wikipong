@@ -54,6 +54,11 @@ No menu da esquerda, abra o **SQL Editor** (ícone de terminal).
 8. Repita com **`supabase/005-rls-auto-enable.sql`**.
 9. Repita com **`supabase/006-politicas-sobrepostas.sql`**.
 10. Repita com **`supabase/007-leitura-publica-quebrada.sql`**.
+11. Repita com **`supabase/008-indices-de-usuario.sql`**.
+
+> **Depois do `008`, o painel fica com dois avisos acesos de propósito**: o
+> *Unused Index* do `topicos_por_material` e o *Leaked Password Protection*.
+> Os dois são decisão, não pendência — o motivo de cada um está no `008`.
 
 > **Se você já rodou o `004`, o `007` é OBRIGATÓRIO e é urgente.** O `004`
 > deixou a comunidade invisível para quem não está logado: avaliação aprovada,
@@ -273,6 +278,8 @@ que tem que ser.
 | O site parou de mostrar avaliações do nada | Projeto pausado por inatividade — clique em *Restore* |
 | Aparece logado, mas some em aba anônima | Falta rodar o `007`. O `004` tirou do visitante o direito de ler a comunidade; o admin não percebe porque está logado |
 | Aviso **Leaked Password Protection Disabled** que não sai | É recurso do plano **Pro**; no Free o botão não liga. Fica aceso de propósito — o WikiPong não usa senha, então não há o que proteger |
+| Aviso **Unindexed foreign keys** nas três tabelas | Rode o `008` |
+| Aviso **Unused Index** no `topicos_por_material` | Fica aceso de propósito. Ele está sem uso porque as discussões ainda não têm nada, não porque seja inútil — apagar agora obriga a recriar com a tabela cheia |
 | Alerta vermelho **Security Definer View** | Rode o `003-conserta-fila.sql` (Parte 2) |
 | Aviso **Signed-In / Public Can Execute SECURITY DEFINER Function** | Rode o `004` (para a `eh_admin`) e o `005` (para a `rls_auto_enable`) |
 | O aviso de SECURITY DEFINER **continua depois de rodar** | Falta revogar do `PUBLIC`. Toda função no Postgres nasce com EXECUTE concedido a ele, e tirar de `anon` não basta. As versões atuais do `004` e do `005` já fazem isso |

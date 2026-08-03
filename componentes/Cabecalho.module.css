@@ -99,6 +99,12 @@
   min-width: 26rem;
   animation: megaEntrar 200ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
 }
+
+/* O painel de Comunidade tem duas colunas curtas — 26rem sobrariam de largura
+   vazia e o menu pareceria maior do que o conteúdo que carrega. */
+.megaEstreito {
+  min-width: 20rem;
+}
 @keyframes megaEntrar {
   from {
     opacity: 0;

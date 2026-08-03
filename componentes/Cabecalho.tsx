@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LogoCompleto } from './Logo';
+import { LinkModeracao } from './LinkModeracao';
 import { MATERIAIS } from './dados-materiais';
 import { slug } from '@/src/logica/filtros';
 import estilos from './Cabecalho.module.css';
@@ -43,26 +44,32 @@ function IconeMenu({ aberto }: { aberto: boolean }) {
 export function Cabecalho() {
   const rota = usePathname();
   const [megaAberto, setMegaAberto] = useState(false);
+  const [comunidadeAberto, setComunidadeAberto] = useState(false);
   const [drawerAberto, setDrawerAberto] = useState(false);
   const megaRef = useRef<HTMLDivElement | null>(null);
+  const comunidadeRef = useRef<HTMLDivElement | null>(null);
   const drawerRef = useRef<HTMLDivElement | null>(null);
 
   // Navegou → fecha tudo
   useEffect(() => {
     setMegaAberto(false);
+    setComunidadeAberto(false);
     setDrawerAberto(false);
   }, [rota]);
 
-  // Escape fecha; clique fora fecha o mega
+  // Escape fecha; clique fora fecha os menus
   useEffect(() => {
     const aoTeclar = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setMegaAberto(false);
+        setComunidadeAberto(false);
         setDrawerAberto(false);
       }
     };
     const aoClicar = (e: MouseEvent) => {
-      if (megaRef.current && !megaRef.current.contains(e.target as Node)) setMegaAberto(false);
+      const alvo = e.target as Node;
+      if (megaRef.current && !megaRef.current.contains(alvo)) setMegaAberto(false);
+      if (comunidadeRef.current && !comunidadeRef.current.contains(alvo)) setComunidadeAberto(false);
     };
     document.addEventListener('keydown', aoTeclar);
     document.addEventListener('pointerdown', aoClicar);
@@ -103,7 +110,11 @@ export function Cabecalho() {
               className={`${estilos.navLink} ${estilos.megaBotao}`}
               aria-expanded={megaAberto}
               aria-controls="painel-materiais"
-              onClick={() => setMegaAberto((v) => !v)}
+              /* Abrir um fecha o outro: dois painéis abertos se sobrepõem. */
+              onClick={() => {
+                setComunidadeAberto(false);
+                setMegaAberto((v) => !v);
+              }}
             >
               Materiais
               <svg width="10" height="7" viewBox="0 0 10 7" aria-hidden="true" className={estilos.seta}>
@@ -140,26 +151,55 @@ export function Cabecalho() {
           >
             Aprender
           </Link>
-          <Link
-            href="/comunidade/"
-            className={estilos.navLink}
-            aria-current={rota.startsWith('/comunidade') ? 'page' : undefined}
-          >
-            Comunidade
-          </Link>
+          {/* ── Comunidade ▾ ──────────────────────────────────────────────────
+              Era link direto, e Notícias ocupava um lugar próprio na barra. Mas
+              notícia É conteúdo de comunidade, e a página de comunidade já
+              listava as mesmas seções numa subnav própria — a barra do topo
+              repetia parte e escondia o resto.
+
+              Agora o grupo reúne o que a subnav já reunia. A moderação entra
+              pelo LinkModeracao, que some para quem não é admin (arrumação, não
+              segurança: quem protege a fila é o RLS). */}
+          <div className={estilos.megaEscopo} ref={comunidadeRef}>
+            <button
+              type="button"
+              className={`${estilos.navLink} ${estilos.megaBotao}`}
+              aria-expanded={comunidadeAberto}
+              aria-controls="painel-comunidade"
+              aria-current={rota.startsWith('/comunidade') || rota.startsWith('/noticias') ? 'page' : undefined}
+              onClick={() => {
+                setMegaAberto(false);
+                setComunidadeAberto((v) => !v);
+              }}
+            >
+              Comunidade
+              <svg width="10" height="7" viewBox="0 0 10 7" aria-hidden="true" className={estilos.seta}>
+                <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              </svg>
+            </button>
+            {comunidadeAberto && (
+              <div id="painel-comunidade" className={`${estilos.mega} ${estilos.megaEstreito}`}>
+                <div className={estilos.megaColuna}>
+                  <p className={`mono ${estilos.megaTitulo}`}>Comunidade</p>
+                  <Link href="/comunidade/">Visão geral</Link>
+                  <Link href="/comunidade/discussoes/">Discussões</Link>
+                  <Link href="/comunidade/perfil/">Meu perfil</Link>
+                  <LinkModeracao />
+                </div>
+                <div className={estilos.megaColuna}>
+                  <p className={`mono ${estilos.megaTitulo}`}>Acompanhar</p>
+                  <Link href="/noticias/">Notícias</Link>
+                  <Link href="/profissionais/">O que os profissionais usam</Link>
+                </div>
+              </div>
+            )}
+          </div>
           <Link
             href="/profissionais/"
             className={estilos.navLink}
             aria-current={rota.startsWith('/profissionais') ? 'page' : undefined}
           >
             Profissionais
-          </Link>
-          <Link
-            href="/noticias/"
-            className={estilos.navLink}
-            aria-current={rota.startsWith('/noticias') ? 'page' : undefined}
-          >
-            Notícias
           </Link>
           <Link href="/quiz/" className={`botao-primario ${estilos.ctaNav}`}>
             Fazer o teste
@@ -213,10 +253,15 @@ export function Cabecalho() {
             <p className={`mono ${estilos.drawerTitulo}`}>Aprender</p>
             <Link href="/aprender/">Guias</Link>
             <Link href="/glossario/">Glossário</Link>
+            {/* Mesma arquitetura do desktop (D-03): o drawer listava só três
+                itens e escondia discussões e perfil, que são o miolo da área. */}
             <p className={`mono ${estilos.drawerTitulo}`}>Comunidade</p>
-            <Link href="/comunidade/">Comunidade</Link>
-            <Link href="/profissionais/">O que os profissionais usam</Link>
+            <Link href="/comunidade/">Visão geral</Link>
+            <Link href="/comunidade/discussoes/">Discussões</Link>
+            <Link href="/comunidade/perfil/">Meu perfil</Link>
+            <LinkModeracao />
             <Link href="/noticias/">Notícias</Link>
+            <Link href="/profissionais/">O que os profissionais usam</Link>
             <Link href="/quiz/" className={`botao-primario ${estilos.drawerCta}`}>
               Fazer o teste →
             </Link>

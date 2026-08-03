@@ -53,6 +53,14 @@ No menu da esquerda, abra o **SQL Editor** (ícone de terminal).
 7. Repita com **`supabase/004-seguranca-e-desempenho.sql`**.
 8. Repita com **`supabase/005-rls-auto-enable.sql`**.
 9. Repita com **`supabase/006-politicas-sobrepostas.sql`**.
+10. Repita com **`supabase/007-leitura-publica-quebrada.sql`**.
+
+> **Se você já rodou o `004`, o `007` é OBRIGATÓRIO e é urgente.** O `004`
+> deixou a comunidade invisível para quem não está logado: avaliação aprovada,
+> tópico e resposta passaram a dar erro 401 em vez de aparecer. O painel do
+> Supabase **não** acusa isso — é permissão de menos, não de mais, e o
+> verificador só procura o contrário. A explicação inteira está no cabeçalho do
+> `007`.
 
 > **Se você já rodou o `001` antes de 31/07/2026**, o `003` é obrigatório: a
 > primeira versão tinha uma falha em que a view `fila_moderacao` deixava qualquer
@@ -256,12 +264,14 @@ que tem que ser.
 | "Você entrou, mas esta conta não modera" | Falta rodar o `insert into public.admins` (Parte 5) |
 | A avaliação some depois de publicada | É o esperado: ela entra pendente e você aprova na moderação |
 | Erro de tabela inexistente no SQL | Rodou o `002` antes do `001` |
-| Erro 401 em tudo, mesmo deslogado | Pegou a *Secret key* no lugar da *Publishable* |
+| Erro 401 em **tudo**, mesmo deslogado | Pegou a *Secret key* no lugar da *Publishable* |
+| Erro 401 **só** em avaliações, tópicos e respostas | Falta o `007`. Se `perfis` responde e as três não, é isto — e não a chave, que serve as duas do mesmo jeito |
 | `syntax error at or near "NEXT_PUBLIC..."` | Colou o `.env.local` no SQL Editor. Ele é arquivo do seu computador, não SQL |
 | `printf : O termo 'printf' não é reconhecido` | Está no PowerShell e usou o comando de Mac/Linux. Use o de Windows acima |
 | Criou o arquivo mas nada mudou | Ele foi parar noutra pasta. Confira que está na raiz do projeto, ao lado do `package.json` |
 | Erro de conexão, ou nada carrega | A URL tem `/rest/v1/` ou barra sobrando. Ela acaba em `.supabase.co` |
 | O site parou de mostrar avaliações do nada | Projeto pausado por inatividade — clique em *Restore* |
+| Aparece logado, mas some em aba anônima | Falta rodar o `007`. O `004` tirou do visitante o direito de ler a comunidade; o admin não percebe porque está logado |
 | Aviso **Leaked Password Protection Disabled** que não sai | É recurso do plano **Pro**; no Free o botão não liga. Fica aceso de propósito — o WikiPong não usa senha, então não há o que proteger |
 | Alerta vermelho **Security Definer View** | Rode o `003-conserta-fila.sql` (Parte 2) |
 | Aviso **Signed-In / Public Can Execute SECURITY DEFINER Function** | Rode o `004` (para a `eh_admin`) e o `005` (para a `rls_auto_enable`) |

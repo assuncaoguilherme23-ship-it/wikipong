@@ -147,13 +147,28 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
       atual.includes(id) ? atual.filter((e) => e !== id) : atual.length < 2 ? [...atual, id] : atual,
     );
 
-  /* O catálogo INTEIRO entra na lista — assim que o primeiro é escolhido, ela
-     trava no tipo dele, e o usuário nunca monta um par inválido pra descobrir
-     depois. Antes esta lista era filtrada por perfil de desempenho e escondia
-     470 dos 678 materiais de quem chegava aqui pelo caminho do seletor. */
-  const comparaveis = MATERIAIS;
+  const [busca, setBusca] = useState('');
+
   const tipoTravado =
     escolhidos.length > 0 ? materialPorId(escolhidos[0])?.tipo ?? null : null;
+
+  /* ── A LISTA AGORA CUMPRE O QUE A FRASE PROMETE ─────────────────────────────
+     A instrução dizia "Mostrando só borrachas" e o que se via era o catálogo
+     inteiro — lâmina, raquete e bola no meio, apenas desabilitadas. Frase e tela
+     discordavam, e com 678 materiais isso virou uma lista enorme de itens que
+     não dá para clicar.
+
+     Agora o tipo travado FILTRA de verdade, e a busca corta o resto. O que some
+     não é informação escondida: é opção que não pode ser escolhida. */
+  const comparaveis = MATERIAIS.filter((m) => {
+    if (tipoTravado !== null && m.tipo !== tipoTravado && !escolhidos.includes(m.id)) return false;
+    if (!busca.trim()) return true;
+    const alvo = `${m.nome} ${m.marca} ${m.tipo}`.toLowerCase();
+    return busca
+      .toLowerCase()
+      .split(/\s+/)
+      .every((termo) => alvo.includes(termo));
+  });
 
   const comparar = () => {
     window.history.pushState(null, '', `?ids=${escolhidos.join(',')}`);
@@ -163,9 +178,33 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
     <section aria-label="Escolher materiais">
       <p className={estilos.instrucao}>
         Escolha <b>dois materiais do mesmo tipo</b>. A comparação abre com radar sobreposto
-        e tabela de números ({escolhidos.length}/2 selecionados).
-        {tipoTravado && <> Mostrando só {tipoTravado.toLowerCase()}s.</>}
+        e tabela de números.
+        {tipoTravado && (
+          <>
+            {' '}
+            Mostrando só {tipoTravado.toLowerCase()}s, porque é com o que a{' '}
+            {tipoTravado.toLowerCase()} escolhida se compara.
+          </>
+        )}
       </p>
+
+      {/* Com 678 materiais, rolar até achar não é caminho. */}
+      <input
+        type="search"
+        className={estilos.buscaEscolha}
+        value={busca}
+        onChange={(e) => setBusca(e.target.value)}
+        placeholder="Buscar por nome, marca ou tipo…"
+        aria-label="Buscar material para comparar"
+      />
+
+      {comparaveis.length === 0 && (
+        <p className={estilos.semResultado}>
+          Nada com <b>{busca}</b>
+          {tipoTravado ? ` entre as ${tipoTravado.toLowerCase()}s` : ''}. Tente outro termo.
+        </p>
+      )}
+
       <ul className={estilos.listaEscolha}>
         {comparaveis.map((m) => {
           const marcado = escolhidos.includes(m.id);
@@ -192,14 +231,45 @@ function Seletor({ preSelecionados }: { preSelecionados: MaterialCatalogo[] }) {
           );
         })}
       </ul>
-      <button
-        type="button"
-        className="botao-primario"
-        disabled={escolhidos.length !== 2}
-        onClick={comparar}
-      >
-        Comparar selecionados →
-      </button>
+
+      {/* ── A BARRA DE AÇÃO GRUDA NO PÉ DA TELA ───────────────────────────────
+          O botão ficava depois da lista. Com 678 materiais isso significava
+          rolar a página inteira até o fim para clicar em "Comparar" — inclusive
+          quando os dois já estavam escolhidos na primeira tela.
+
+          Fixa no rodapé da janela, ela está sempre a um clique, e o contador ao
+          lado diz o que falta sem precisar voltar lá em cima. */}
+      <div className={estilos.barraAcao}>
+        <p className={estilos.contadorEscolha} aria-live="polite">
+          {escolhidos.length === 0 && 'Nenhum material escolhido'}
+          {escolhidos.length === 1 && `${materialPorId(escolhidos[0])?.nome} · falta escolher o segundo`}
+          {escolhidos.length === 2 && (
+            <>
+              {materialPorId(escolhidos[0])?.nome} <span aria-hidden="true">×</span>{' '}
+              {materialPorId(escolhidos[1])?.nome}
+            </>
+          )}
+        </p>
+        <div className={estilos.barraAcaoBotoes}>
+          {escolhidos.length > 0 && (
+            <button
+              type="button"
+              className={`botao-secundario ${estilos.limparEscolha}`}
+              onClick={() => setEscolhidos([])}
+            >
+              Limpar
+            </button>
+          )}
+          <button
+            type="button"
+            className="botao-primario"
+            disabled={escolhidos.length !== 2}
+            onClick={comparar}
+          >
+            Comparar <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
     </section>
   );
 }

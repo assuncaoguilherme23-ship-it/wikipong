@@ -32,6 +32,24 @@
   color: var(--cor-tinta-suave);
   max-width: 52ch;
 }
+/* Busca do seletor: com 678 materiais, rolar até achar não é caminho. */
+.buscaEscolha {
+  width: 100%;
+  max-width: 32rem;
+  margin-top: 1rem;
+  font: inherit;
+  color: var(--cor-tinta);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  padding: 0.7rem 0.9rem;
+  min-height: 44px;
+}
+.semResultado {
+  margin: 1rem 0 0;
+  color: var(--cor-tinta-suave);
+}
+
 .listaEscolha {
   list-style: none;
   margin: 1.25rem 0;
@@ -39,6 +57,46 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 0.6rem;
+  /* Espaço para a barra fixa não cobrir o último item da lista. */
+  padding-bottom: 5.5rem;
+}
+
+/* ── Barra de ação fixa no pé da janela ──────────────────────────────────────
+   O botão "Comparar" ficava depois da lista inteira. Com 678 materiais, era
+   rolar a página toda até o fim para clicar — mesmo com os dois já escolhidos.
+
+   `position: fixed` e não `sticky`: sticky ficaria preso ao fluxo da <section>
+   e continuaria exigindo chegar ao fim dela. */
+.barraAcao {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  padding: 0.85rem clamp(1rem, 4vw, 2rem);
+  background: var(--cor-papel);
+  border-top: 1px solid var(--cor-linha-forte);
+  box-shadow: 0 -6px 24px rgb(0 0 0 / 0.07);
+}
+.contadorEscolha {
+  margin: 0;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  min-width: 0;
+}
+.barraAcaoBotoes {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: auto;
+}
+.limparEscolha {
+  white-space: nowrap;
 }
 .itemEscolha {
   display: flex;

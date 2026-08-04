@@ -119,10 +119,13 @@ export function TradutorEscalas({ inicial = 39, escalaInicial = 'dhs' as Escala 
           </p>
         </div>
 
+        {/* Sai o "pendente de validação"; fica o que importa e é verificável:
+            a conversão vem de regra da comunidade, não de laboratório, e por
+            isso a resposta é FAIXA. A faixa já é a admissão de incerteza — o
+            selo em cima dela era a mesma ressalva dita duas vezes. */}
         <p className={estilos.selo}>
-          <span className={estilos.seloTag}>A validar</span>
-          Conversão por regra da comunidade, não medição de laboratório. Por isso a resposta é uma faixa, e não um número exato. Pendente de validação do
-          especialista (D-09).
+          Conversão por regra da comunidade, não medição de laboratório. É por isso que a resposta
+          é uma faixa, e não um número exato.
         </p>
       </div>
     </div>

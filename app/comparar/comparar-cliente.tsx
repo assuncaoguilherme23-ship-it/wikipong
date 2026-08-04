@@ -457,8 +457,12 @@ function Comparacao({ par, modo }: { par: [MaterialComparavel, MaterialComparave
         )}
       </section>
 
+      {/* A nota falava do Perdão, que saiu do site em 2026-08-03 — texto que já
+          descrevia algo inexistente. O que continua valendo é a regra de leitura
+          do destaque, e só ela ficou. */}
       <p className={estilos.nota}>
-        * O Perdão é uma conta nossa, feita a partir dos outros números, e a fórmula fica à vista (versão 1, ainda esperando um especialista conferir; D-09). Destaque de “maior” é <strong>só um fato, não uma nota</strong>: maior não quer dizer melhor, depende do seu jogo.
+        Destaque de “maior” é <strong>só um fato, não uma nota</strong>: maior não quer dizer
+        melhor, depende do seu jogo.
       </p>
 
       <button type="button" className={`botao-secundario ${estilos.trocar}`} onClick={trocar}>

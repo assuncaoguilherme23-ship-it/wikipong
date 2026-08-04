@@ -32,13 +32,17 @@ draw-in, padrões de `prefers-reduced-motion`.
 
 **Colheita CONCLUÍDA.** Consumo: `/catalogo` usa `filtros.ts` (URL = fonte única, D-12,
 via pushState + useSearchParams); `/comparar?ids=` usa o Radar + `metricas.ts`;
-`dados/materiais.json` é a semente colhida do protótipo (dureza A VALIDAR).
+`dados/materiais.json` é a semente colhida do protótipo.
 
 ## Convenções
 - **PT-BR em tudo**: nomes de arquivos, funções, variáveis, comentários, commits.
 - Lógica de negócio = **módulos puros** em `src/logica/` (sem DOM, sem framework).
 - Tabelas de lookup (limiares, conversões, pesos) são **configuração exportada**,
-  sempre com carimbo `A VALIDAR` até o especialista assinar (D-07, D-09).
+  num lugar só, para poderem ser revistas sem caçar número espalhado pelo código.
+  **Não carimbe mais `A VALIDAR`** (decisão do fundador, 2026-08-04): o selo
+  prometia um aval sem data nem responsável, e um aviso permanente de "isto ainda
+  não vale" ensina o leitor a não confiar em nada da página. O que continua
+  obrigatório é dizer a PROCEDÊNCIA — de onde o número veio e com que régua.
 - Estado navegável vive na **URL** (D-12).
 
 ## Comandos

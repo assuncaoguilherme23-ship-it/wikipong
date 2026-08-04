@@ -136,8 +136,9 @@ export const GUIAS: Guia[] = [
         </p>
         <p>
           Conclusão prática: <strong>nunca compare graus sem antes conferir a escala</strong>. Foi
-          para resolver exatamente esse problema que a ficha unificada do WikiPong existe. A tabela que converte uma escala na outra
-          ainda espera um especialista conferir.
+          para resolver exatamente esse problema que a ficha unificada do WikiPong existe. A tabela que
+          converte uma escala na outra vem da regra que a comunidade usa, e por isso ela responde em
+          faixa: 40° de uma marca cai numa FAIXA da outra, nunca num ponto só.
         </p>
 
         <h2>O que escolher agora</h2>

@@ -333,10 +333,20 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
               ))}
             </dl>
 
+            {/* O selo "A validar" saiu daqui (decisão do fundador, 2026-08-04).
+                O que ele prometia — o aval de um especialista — não tinha data
+                nem responsável, e um aviso permanente de "isto ainda não vale"
+                em cima de todo número acaba ensinando o leitor a não confiar em
+                nada da página, inclusive no que é fato de fonte.
+
+                O que NÃO sai é a procedência: continua dito que a escala é nossa
+                e que o número do fabricante está logo abaixo, com a fonte. Sair
+                do hedge não é virar categórico — é parar de pedir desculpa por
+                um dado que já se explica. */}
             <p className={estilos.nota}>
-              <span className={estilos.selo}>A validar</span> &nbsp;* Toda esta tabela é{' '}
-              <strong>estimativa do WikiPong</strong> numa base comum, com a fórmula à vista, ainda esperando um especialista conferir (D-07/D-09). O dado oficial de cada
-              fabricante, com fonte, está na seção abaixo.
+              * A escala 0 a 10 é <strong>do WikiPong</strong>, construída para deixar marcas
+              diferentes lado a lado. O número que cada fabricante publica, na régua dele, está
+              logo abaixo com a fonte e a data da consulta.
             </p>
           </div>
 

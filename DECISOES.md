@@ -218,8 +218,21 @@ tabela (`6,0` = piso de "Exige atenção") em vez de digitado à mão.
 **Flywheel:** o formulário de avaliação (D-11) pergunta *velocidade percebida* e *meses até trocar*
 — calibram as notas de fabricante e a durabilidade real. As métricas se autocorrigem com volume.
 
-**Status:** proposta v1, pendente validação do especialista. **Não remover os carimbos "A VALIDAR"
-até a assinatura.**
+**Status (emenda de 2026-08-04, decisão do fundador):** os carimbos "A VALIDAR" e toda menção a
+"pendente de validação do especialista" **saíram do site**. Motivo: o selo prometia um aval que não
+tinha data nem responsável, e um aviso permanente de "isto ainda não vale" em cima de cada número
+acaba ensinando o leitor a não confiar em nada da página — inclusive no que é fato de fonte, com
+link e data.
+
+A durabilidade passa a ser tratada como **dado real** do site, não estimativa provisória.
+
+O que NÃO mudou, e é o que sustentava o selo: a **procedência continua dita em toda tela**. A ficha
+segue dizendo que a escala 0–10 é nossa e mostrando, logo abaixo, o número que o fabricante publica
+na régua dele, com fonte e data. O tradutor de durezas segue respondendo em FAIXA, porque a
+conversão vem de regra da comunidade e não de laboratório — e a faixa já é a admissão de incerteza
+que o selo repetia por cima.
+
+O papel do especialista fica em aberto para ser desenhado depois.
 
 ---
 

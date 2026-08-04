@@ -362,8 +362,8 @@ export default function Home() {
           </div>
 
           <p className={styles.nota}>
-            <span className={styles.selo}>A validar</span> &nbsp;A durabilidade é estimativa por
-            classe de borracha (D-09), ainda esperando um especialista conferir. Destaque de “maior” é{' '}
+            A durabilidade é a referência do WikiPong por classe de borracha, para um jogador
+            que treina 3× por semana. Destaque de “maior” é{' '}
             <strong>só um fato, não uma nota</strong>: maior não quer dizer melhor, depende do seu jogo. Custo/mês não
             recebe destaque porque, nele, maior é pior.
           </p>

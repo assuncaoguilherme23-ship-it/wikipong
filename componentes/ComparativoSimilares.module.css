@@ -1,0 +1,126 @@
+/* "Parecidos com este" — tabela comparativa com barra dentro da célula. */
+.bloco {
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  padding-top: clamp(1.25rem, 3vw, 1.75rem);
+  border-top: 1px solid var(--cor-linha);
+}
+.titulo {
+  font-size: var(--titulo-3);
+  margin: 0 0 0.5rem;
+}
+.subtitulo {
+  margin: 0 0 1.25rem;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+/* Quatro colunas de material não cabem em telefone: rola na horizontal dentro
+   do próprio bloco, sem empurrar a página inteira para o lado. */
+.rolagem {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-inline: calc(-1 * clamp(0.5rem, 2vw, 1rem));
+  padding-inline: clamp(0.5rem, 2vw, 1rem);
+}
+.tabela {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+}
+.legenda {
+  text-align: left;
+  font-size: var(--texto-mini);
+  color: var(--cor-mudo);
+  padding-bottom: 0.6rem;
+}
+.tabela th,
+.tabela td {
+  padding: 0.7rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--cor-linha);
+}
+.tabela thead th {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+  border-bottom: 1px solid var(--cor-linha-forte);
+}
+.tabela thead a {
+  color: var(--cor-texto-acento);
+}
+.nomeAlvo {
+  color: var(--cor-tinta);
+}
+.rotuloLinha {
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-mudo);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* A coluna deste material fica marcada por FUNDO, não por borda lateral —
+   side-stripe é Don't do DESIGN.md. */
+.colunaAlvo {
+  background: var(--cor-acento-suave);
+}
+
+.numero {
+  display: block;
+  font-size: var(--texto-dado);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.ausente {
+  color: var(--cor-mudo);
+}
+
+.barra {
+  display: block;
+  margin-top: 0.35rem;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--cor-linha);
+  overflow: hidden;
+}
+.preenchimento,
+.preenchimentoAlvo {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+.preenchimento {
+  background: var(--cor-tinta-suave);
+}
+.preenchimentoAlvo {
+  background: var(--cor-acento-escuro);
+}
+
+.acoes {
+  margin: 1.1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+.acao {
+  font-size: var(--texto-menor);
+}
+
+/* A barra cresce da esquerda ao entrar. Quem pediu menos movimento recebe ela
+   pronta — o número ao lado já diz tudo, então nada se perde. */
+@media (prefers-reduced-motion: no-preference) {
+  .preenchimento,
+  .preenchimentoAlvo {
+    animation: crescerBarra 520ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+    transform-origin: left center;
+  }
+  @keyframes crescerBarra {
+    from {
+      transform: scaleX(0);
+    }
+  }
+}

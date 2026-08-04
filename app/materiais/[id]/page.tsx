@@ -27,6 +27,9 @@ import { Radar } from '@/componentes/Radar';
 import { FotoProduto } from '@/componentes/FotoProduto';
 import { Bolinhas } from '@/componentes/Bolinhas';
 import { FaixaCatalogo } from '@/componentes/FaixaCatalogo';
+import { ComparativoSimilares } from '@/componentes/ComparativoSimilares';
+import { similares, type Similar } from '@/src/logica/similares';
+import { familiaDaLamina, familiaDaBorracha } from '@/src/logica/traduzir';
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
 import { brl, dinheiro } from '@/componentes/formato';
 import { paraPalavra } from '@/src/logica/metricas';
@@ -185,6 +188,32 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
   /* Só desenha a referência se TODOS os eixos tiverem mediana: um polígono com
      um vértice caído no zero mentiria sobre aquele eixo. */
   const temMediana = valoresMedianos.every((v) => v !== null);
+
+  /* ── PARECIDOS COM ESTE ─────────────────────────────────────────────────────
+     A mediana e a régua respondem "8,2 é muito?". Nenhuma responde a seguinte,
+     que é a que faz alguém abrir a ficha: E O QUE MAIS EXISTE PARECIDO? Mediana
+     não tem nome, não tem preço e não se compra.
+
+     A família da construção entra no cálculo porque, para os 470 sem índice
+     nenhum, é o único sinal real que sobra além do preço — madeira pura e fibra
+     externa jogam diferente mesmo com o mesmo nível na etiqueta. */
+  const paraSimilar = (x: (typeof MATERIAIS)[number]): Similar => {
+    const f = fabricantePorId(x.id)?.ficha;
+    const familia = !f
+      ? null
+      : /mina/i.test(x.tipo)
+        ? familiaDaLamina(f)
+        : x.tipo === 'Borracha'
+          ? familiaDaBorracha(f)
+          : null;
+    return {
+      id: x.id, nome: x.nome, tipo: x.tipo, nivel: x.nivel,
+      preco: x.preco, moeda: x.moeda, specs: x.specs,
+      durabilidade: x.durabilidade, familia,
+    };
+  };
+  const alvoSimilar = paraSimilar(m);
+  const parecidos = similares(alvoSimilar, MATERIAIS.map(paraSimilar), 3);
   const linhasFaixa = [
     ...indices.map((i) => ({
       rotulo: i.rotulo,
@@ -563,6 +592,18 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
         <FaixaCatalogo
           linhas={linhasFaixa}
           universoRotulo={`as ${doTipo.length} ${m.tipo.toLowerCase()}s do catálogo`}
+        />
+
+        {/* ── 2d. Parecidos com este (comparação COM NOME) ──────────────────── */}
+        <ComparativoSimilares
+          alvo={alvoSimilar}
+          similares={parecidos}
+          indices={[
+            { rotulo: 'Velocidade', ler: (x) => x.specs?.velocidade },
+            { rotulo: 'Efeito', ler: (x) => x.specs?.spin },
+            { rotulo: 'Controle', ler: (x) => x.specs?.controle },
+            { rotulo: 'Durabilidade', ler: (x) => x.durabilidade },
+          ]}
         />
 
         {/* ── 2b. Pra quem é — DADO SINCERO: os mesmos presets que o quiz gera,

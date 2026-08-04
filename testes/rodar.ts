@@ -37,6 +37,7 @@ import {
 } from '../src/logica/traduzir.js';
 import { metricasComparaveis, metricasDoRadar, temRadar } from '../src/logica/comparacao.js';
 import { posicaoNaFaixa, fracaoNaFaixa, leituraDaPosicao } from '../src/logica/posicao.js';
+import { similares, distancia, type Similar } from '../src/logica/similares.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
@@ -950,6 +951,48 @@ afirma(celulasRuins === 0,
   `nenhuma célula da comparação é undefined ou NaN (achadas: ${celulasRuins})`);
 afirma(radarDesalinhado === 0,
   `radar sempre com tantos valores quanto eixos (desalinhados: ${radarDesalinhado})`);
+
+// PARECIDOS COM ESTE: a comparacao que tem NOME
+/* A mediana e a regua respondem "8,2 e muito?". Nenhuma responde "e o que mais
+   existe parecido?" -- mediana nao tem nome, nao tem preco e nao se compra. */
+const sim = (id: string, tipo: string, vel: number, ctrl: number, preco: number,
+             extra: Partial<Similar> = {}): Similar =>
+  ({ id, nome: id, tipo, nivel: 'Avancado', preco,
+     specs: { velocidade: vel, controle: ctrl }, ...extra });
+
+const alvoSim = sim('alvo', 'Borracha', 9, 7, 400);
+const universoSim: Similar[] = [
+  alvoSim,
+  sim('quase-igual', 'Borracha', 9.1, 7.1, 410),
+  sim('parecido', 'Borracha', 8.5, 7.5, 380),
+  sim('distante', 'Borracha', 4, 9.5, 90),
+  sim('outro-tipo', 'Lamina', 9, 7, 400),
+];
+const viz = similares(alvoSim, universoSim, 2);
+afirma(viz.length === 2, 'devolve a quantidade pedida de vizinhos');
+afirma(viz[0].id === 'quase-igual', 'o mais proximo vem primeiro');
+afirma(!viz.some((v) => v.id === 'alvo'), 'o proprio material nunca entra na lista');
+afirma(!viz.some((v) => v.tipo === 'Lamina'),
+  'nunca cruza tipo: borracha so se compara com borracha');
+
+/* Sem indice nenhum (470 materiais), a distancia cai no categorico: familia da
+   construcao primeiro, nivel depois, preco como termo fraco. */
+const semSpec = (id: string, familia: string | null, nivel: string, preco: number): Similar =>
+  ({ id, nome: id, tipo: 'Lamina', nivel, preco, familia });
+const alvoCego = semSpec('cego', 'madeira-pura', 'Iniciante', 300);
+const vizCego = similares(alvoCego, [
+  alvoCego,
+  semSpec('mesma-familia', 'madeira-pura', 'Iniciante', 320),
+  semSpec('outra-familia', 'fibra-externa', 'Iniciante', 310),
+], 1);
+afirma(vizCego[0].id === 'mesma-familia',
+  'sem specs, a familia da construcao manda no vizinho');
+
+afirma(distancia(alvoSim, { ...alvoSim, id: 'x' }, 400) === 0,
+  'material identico a si mesmo tem distancia zero');
+afirma(distancia({ id: 'a', nome: 'a', tipo: 'X', nivel: '', preco: 0 },
+                 { id: 'b', nome: 'b', tipo: 'X', nivel: '', preco: 0 }, 0) === null,
+  'sem nada em comum para medir, devolve null em vez de inventar proximidade');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

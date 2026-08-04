@@ -155,6 +155,36 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
      spec nenhuma. Moeda estrangeira fica fora da régua de preço pelo mesmo
      motivo de sempre: dólar não se compara com real sem câmbio. */
   const doTipo = MATERIAIS.filter((x) => x.tipo === m.tipo);
+
+  /* ── A MEDIANA DO CATÁLOGO, DESENHADA ATRÁS ─────────────────────────────────
+     Um polígono sozinho é forma sem régua: dá para ver que um lado é maior que o
+     outro e não dá para saber se o material é rápido ou lento PARA O QUE EXISTE.
+     Radar é bom em comparar duas formas — era isso que ele fazia no /comparar e
+     não fazia aqui.
+
+     Agora a segunda série é a mediana dos materiais do mesmo tipo. O desenho
+     passa a responder "8,2 é muito?" sem texto nenhum: onde o sólido ultrapassa
+     o tracejado, este material está acima do comum.
+
+     MEDIANA e não média, de propósito: preço e specs têm cauda longa (uma
+     Hurricane National de US$ 800 puxaria a média de um jeito que não descreve
+     o catálogo). Mediana é o material do meio da fila. */
+  const medianaDe = (valores: number[]): number | null => {
+    if (valores.length < 8) return null;
+    const ord = [...valores].sort((a, b) => a - b);
+    const meio = Math.floor(ord.length / 2);
+    return ord.length % 2 ? ord[meio] : (ord[meio - 1] + ord[meio]) / 2;
+  };
+  const valoresMedianos = indices.map((i) =>
+    medianaDe(
+      doTipo
+        .map((x) => (i.atributo === 'durabilidade' ? x.durabilidade : x.specs?.[i.atributo]))
+        .filter((v): v is number => v !== undefined),
+    ),
+  );
+  /* Só desenha a referência se TODOS os eixos tiverem mediana: um polígono com
+     um vértice caído no zero mentiria sobre aquele eixo. */
+  const temMediana = valoresMedianos.every((v) => v !== null);
   const linhasFaixa = [
     ...indices.map((i) => ({
       rotulo: i.rotulo,
@@ -353,19 +383,26 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
           {temRadarFicha && (
           <figure className={estilos.radarCaixa}>
             <Radar
+              id={m.id}
               eixos={eixosFicha}
               series={[
-                {
-                  nome: m.nome,
-                  valores: valoresFicha,
-                  variante: 'solida',
-                },
+                ...(temMediana
+                  ? [{
+                      nome: `mediana das ${m.tipo.toLowerCase()}s`,
+                      valores: valoresMedianos as number[],
+                      variante: 'tracejada' as const,
+                    }]
+                  : []),
+                { nome: m.nome, valores: valoresFicha, variante: 'solida' as const },
               ]}
               animado
-              legenda={false}
+              mostrarValores
+              legenda={temMediana}
             />
             <figcaption className={`mono ${estilos.radarLegenda}`}>
-              a impressão digital deste material
+              {temMediana
+                ? `este material contra a mediana das ${doTipo.length} ${m.tipo.toLowerCase()}s do catálogo`
+                : 'a impressão digital deste material'}
             </figcaption>
             <Link href={`/comparar/?ids=${m.id}`} className="botao-secundario">
               Comparar com outro material →

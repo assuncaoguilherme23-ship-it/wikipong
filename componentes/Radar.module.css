@@ -100,3 +100,11 @@
   border-top-style: dashed;
   border-top-color: var(--cor-tinta-suave);
 }
+
+/* O número ao lado da sigla do eixo. Entrou porque radar sozinho é forma sem
+   régua: dá pra ver que um lado é maior e não dá pra saber quanto. */
+.valorEixo {
+  font-family: var(--fonte-mono);
+  font-weight: 600;
+  fill: var(--cor-tinta);
+}

@@ -42,8 +42,19 @@ export interface OpcaoMaterial {
   moeda?: string;
 }
 
-/** Quantos itens a lista mostra por vez. Acima disso, a busca é o caminho. */
-const TETO_VISIVEL = 40;
+/* ── NÃO HÁ TETO DE ITENS, E ISSO FOI UM CONSERTO ────────────────────────────
+   A primeira versão cortava em 40 e escrevia "refine a busca". O efeito prático
+   era o mesmo defeito que este componente veio corrigir: quem abria a lista de
+   lâminas via 40 de 393 e concluía, com razão, que o catálogo não estava ali.
+
+   O corte existia por medo de performance, e o medo não se sustenta: o
+   `FotoProduto` carrega com `loading="lazy"`, então renderizar as 393 opções não
+   baixa 393 imagens — só as que entram na vista. O que sobra são ~400 <li> de
+   texto dentro de um container que rola, o que nenhum navegador sente.
+
+   E há um ganho de acessibilidade: `aria-activedescendant` exige que o item
+   apontado EXISTA no DOM. Com corte, navegar por seta até o fim da lista
+   apontaria para um id inexistente. */
 
 export function SeletorMaterial({
   rotulo,
@@ -65,8 +76,7 @@ export function SeletorMaterial({
   const caixaRef = useRef<HTMLDivElement | null>(null);
   const listaRef = useRef<HTMLUListElement | null>(null);
 
-  const filtradas = useMemo(() => filtrarPorTexto(opcoes, busca), [opcoes, busca]);
-  const visiveis = filtradas.slice(0, TETO_VISIVEL);
+  const visiveis = useMemo(() => filtrarPorTexto(opcoes, busca), [opcoes, busca]);
 
   // Clique fora fecha e devolve o campo ao estado de leitura.
   useEffect(() => {
@@ -168,10 +178,10 @@ export function SeletorMaterial({
       {aberto && (
         <div className={estilos.painel}>
           <p className={`mono ${estilos.contagem}`} aria-live="polite">
-            {filtradas.length === 0
+            {visiveis.length === 0
               ? 'nada com esse termo'
-              : `${filtradas.length} ${filtradas.length === 1 ? 'opção' : 'opções'}${
-                  filtradas.length > TETO_VISIVEL ? ` · mostrando ${TETO_VISIVEL}, refine a busca` : ''
+              : `${visiveis.length} ${visiveis.length === 1 ? 'opção' : 'opções'}${
+                  busca.trim() ? '' : ' · role ou digite para filtrar'
                 }`}
           </p>
           <ul className={estilos.lista} role="listbox" id={`${idBase}-lista`} ref={listaRef}>

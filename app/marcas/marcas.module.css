@@ -40,12 +40,6 @@
   border-color: var(--cor-acento);
   transform: translateY(-3px);
 }
-.cartaoTopo {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
 .nome {
   font-size: var(--texto-maior);
   font-weight: 700;
@@ -56,8 +50,29 @@
   text-transform: uppercase;
   color: var(--cor-tinta-suave);
 }
+/* Cabeçalho do cartão: monograma + (nome, país) empilhados ao lado.
+   Era nome à esquerda e país à direita, com um vão entre os dois quando o nome
+   era curto. O monograma dá âncora e o país passa a pertencer à identidade da
+   marca, não a flutuar no canto. */
+.cartaoTopo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.15rem;
+}
+.identidade {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
 .descricao {
   margin: 0;
+  /* Reserva ~3 linhas. Sem isso, um cartão de texto curto ao lado de um de
+     texto longo deixa a linha da grade visualmente torta — que foi o que o
+     fundador viu. Não corta nada: é mínimo, não máximo. */
+  min-height: 4.5em;
   font-size: var(--texto-menor);
   line-height: var(--altura-leitura);
   color: var(--cor-tinta-suave);

@@ -7,13 +7,14 @@ import Link from 'next/link';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { MARCAS } from '@/componentes/dados-marcas';
+import { MonogramaMarca } from '@/componentes/MonogramaMarca';
 import { brl } from '@/componentes/formato';
 import estilos from './marcas.module.css';
 
 export const metadata: Metadata = {
   title: 'Marcas de tênis de mesa',
   description:
-    'Butterfly, Stiga, DHS, Tibhar, Xiom, Yasaka, Donic e Palio. O que cada marca faz, os materiais no catálogo e a régua de dureza que cada uma usa.',
+    'As 15 marcas do catálogo: o que cada uma faz, de que país vem, quantos materiais tem aqui e a régua de dureza que usa.',
 };
 
 export default function PaginaMarcas() {
@@ -37,10 +38,28 @@ export default function PaginaMarcas() {
         <ul className={estilos.lista}>
           {MARCAS.map((m) => (
             <li key={m.slug}>
+              {/* ── O CARTÃO ────────────────────────────────────────────────
+                  Sete das quinze marcas não tinham texto, e o cartão delas ficava
+                  com um vão no meio: nome em cima, contagem embaixo e nada entre
+                  os dois. As sete foram escritas; o que mudou aqui é a estrutura,
+                  para o cartão não depender do texto para ter forma.
+
+                  O monograma dá âncora visual igual em todas — logo real não
+                  daria, porque os quinze têm proporções incompatíveis e numa
+                  grade uniforme isso vira desalinhamento.
+
+                  O país saiu do canto solto e entrou no monograma como bandeira:
+                  em tênis de mesa a origem diz muito, porque borracha alemã e
+                  chinesa são escolas diferentes de jogar. */}
               <Link href={`/marcas/${m.slug}/`} className={estilos.cartao}>
                 <div className={estilos.cartaoTopo}>
-                  <h2 className={estilos.nome}>{m.nome}</h2>
-                  {m.editorial && <span className={`mono ${estilos.pais}`}>{m.editorial.pais}</span>}
+                  <MonogramaMarca nome={m.nome} pais={m.editorial?.pais} />
+                  <span className={estilos.identidade}>
+                    <h2 className={estilos.nome}>{m.nome}</h2>
+                    {m.editorial && (
+                      <span className={`mono ${estilos.pais}`}>{m.editorial.pais}</span>
+                    )}
+                  </span>
                 </div>
                 {m.editorial && <p className={estilos.descricao}>{m.editorial.descricao}</p>}
                 <p className={`mono ${estilos.meta}`}>

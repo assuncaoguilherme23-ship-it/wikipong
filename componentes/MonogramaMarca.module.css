@@ -1,0 +1,35 @@
+/* Monograma da marca: tile com as iniciais e a bandeira do país no canto.
+   Forma idêntica em todas as marcas — é o que um grid de logos reais não teria. */
+.tile {
+  position: relative;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--raio-md);
+  background: var(--cor-superficie-2);
+  border: 1px solid var(--cor-linha);
+}
+
+.iniciais {
+  font-family: var(--fonte-titulo, var(--fonte-display));
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--cor-tinta);
+  line-height: 1;
+}
+
+/* A bandeira encosta no canto inferior direito, mordendo a borda do tile — sem
+   isso ela pareceria um segundo elemento solto ao lado, e não parte da peça. */
+.bandeira {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  display: flex;
+  /* Moldura na cor da superfície em vez de anel por box-shadow: separa a
+     bandeira do tile em qualquer tema — a do Japão é quase toda branca — e usa
+     o raio documentado, sem inventar valor fora da escala. */
+  padding: 2px;
+  background: var(--cor-superficie);
+  border-radius: var(--raio-sm);
+}

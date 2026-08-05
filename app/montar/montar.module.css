@@ -283,3 +283,64 @@
   color: var(--cor-tinta-suave);
   max-width: 68ch;
 }
+
+/* ── "Combina com o seu perfil?" ──────────────────────────────────────────────
+   Entrou quando o configurador passou a ler o estilo e o nível declarados na
+   comunidade. Só aparece para quem tem perfil. */
+.perfil {
+  margin-top: clamp(1.25rem, 3vw, 1.75rem);
+  padding-top: clamp(1rem, 2.5vw, 1.5rem);
+  border-top: 1px solid var(--cor-linha);
+}
+.perfilTitulo {
+  font-size: var(--texto-maior);
+  margin: 0 0 0.4rem;
+}
+.perfilLede {
+  margin: 0 0 1rem;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+.perfilLista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.perfilItem {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+}
+.perfilItem b {
+  color: var(--cor-tinta);
+}
+
+/* Marcador de estado. Ponto e não ícone: três formas diferentes virariam
+   semáforo, e "destoa" aqui não é erro — é diferença digna de nota. */
+.marcaCombina,
+.marcaDestoa,
+.marcaNeutra {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: translateY(-1px);
+}
+.marcaCombina {
+  background: var(--cor-acento-escuro);
+}
+.marcaDestoa {
+  background: var(--cor-linha-forte);
+  box-shadow: inset 0 0 0 2px var(--cor-superficie);
+}
+.marcaNeutra {
+  background: var(--cor-linha);
+}

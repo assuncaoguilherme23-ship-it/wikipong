@@ -14,18 +14,22 @@
  * de cada peça, soma dos preços) e observações derivadas com critério visível.
  * A recusa fica dita na própria tela, não escondida.
  */
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { FotoProduto } from '@/componentes/FotoProduto';
 import { SeletorMaterial } from '@/componentes/SeletorMaterial';
+import { LadosDaRaquete } from '@/componentes/LadosDaRaquete';
+import { repositorioPerfilAtual, perfilVazio, type Perfil } from '@/src/logica/perfil';
+import { INTENCAO_DO_ESTILO, ROTULO_ESTILO } from '@/src/logica/avaliacoes';
 import { MATERIAIS, materialPorId, type MaterialCatalogo } from '@/componentes/dados-materiais';
 import { brl } from '@/componentes/formato';
 import { paraPalavra } from '@/src/logica/metricas';
 import {
   observacoes,
+  vereditosDaMontagem,
   precoTotal,
   completa,
   ROTULO_PAPEL,
@@ -67,6 +71,42 @@ export function MontarCliente() {
       bh: pecaValida(materialPorId(parametros.get('bh') ?? '')),
     }),
     [parametros],
+  );
+
+  /* ── O PERFIL DE QUEM MONTA ─────────────────────────────────────────────────
+     A tela dizia o preço e apontava choques entre as peças, e nunca relacionava
+     nada com QUEM está montando. A pessoa já declarou estilo e nível no perfil
+     da comunidade — usar isso é o mínimo, e é dado que ela mesma deu.
+
+     Lido no cliente porque o perfil pode estar no localStorage ou no Supabase, e
+     esta página é export estático: no build não existe pessoa nenhuma. */
+  const [perfil, setPerfil] = useState<Perfil>(perfilVazio);
+  useEffect(() => {
+    let vivo = true;
+    repositorioPerfilAtual()
+      .then((r) => r.ler())
+      .then((p) => { if (vivo) setPerfil(p); })
+      .catch(() => { /* sem perfil, a seção simplesmente não aparece */ });
+    return () => { vivo = false; };
+  }, []);
+
+  const vereditos = useMemo(
+    () => vereditosDaMontagem(montagem, perfil.estilo, perfil.nivel, INTENCAO_DO_ESTILO),
+    [montagem, perfil],
+  );
+  const temPerfil = Boolean(perfil.estilo || perfil.nivel);
+
+  /* As características que dá para confrontar entre os dois lados. Só borracha
+     tem efeito e durabilidade; a lâmina não entra aqui de propósito, porque ela
+     é UMA e o gráfico é sobre a diferença entre DOIS lados. */
+  const linhasLados = useMemo(
+    () => [
+      { rotulo: 'Velocidade', fh: montagem.fh?.specs?.velocidade, bh: montagem.bh?.specs?.velocidade },
+      { rotulo: 'Efeito', fh: montagem.fh?.specs?.spin, bh: montagem.bh?.specs?.spin },
+      { rotulo: 'Controle', fh: montagem.fh?.specs?.controle, bh: montagem.bh?.specs?.controle },
+      { rotulo: 'Durab.', fh: montagem.fh?.durabilidade, bh: montagem.bh?.durabilidade },
+    ],
+    [montagem],
   );
 
   const total = precoTotal(montagem);
@@ -191,6 +231,60 @@ export function MontarCliente() {
                     })}
                   </tbody>
                 </table>
+
+                {/* ── OS DOIS LADOS, FRENTE A FRENTE ─────────────────────
+                    Radar e barra já existem na ficha e na comparação. Aqui a
+                    pergunta é outra — "os meus dois lados estão
+                    desequilibrados?" — e ela pede outro desenho: uma borboleta,
+                    com o forehand crescendo para a esquerda e o backhand para a
+                    direita a partir do nome da característica. Barra simétrica
+                    lê como lados parecidos; barra torta, como um lado que
+                    domina. Sem legenda, sem cor para decorar. */}
+                {montagem.fh && montagem.bh && (
+                  <LadosDaRaquete
+                    linhas={linhasLados}
+                    nomeFH={montagem.fh.nome}
+                    nomeBH={montagem.bh.nome}
+                  />
+                )}
+
+                {/* ── COMBINA COM O SEU PERFIL? ──────────────────────────────
+                    Só aparece para quem já declarou estilo ou nível na
+                    comunidade. Sem perfil, a seção some em vez de pedir cadastro
+                    no meio de uma ferramenta que funciona sem ele. */}
+                {temPerfil && vereditos.length > 0 && (
+                  <section className={estilos.perfil} aria-labelledby="titulo-perfil">
+                    <h3 id="titulo-perfil" className={estilos.perfilTitulo}>
+                      Combina com o seu perfil?
+                    </h3>
+                    <p className={estilos.perfilLede}>
+                      Comparado com o que você declarou na comunidade
+                      {perfil.estilo ? `: ${ROTULO_ESTILO[perfil.estilo]}` : ''}
+                      {perfil.nivel ? `, nível ${perfil.nivel}` : ''}. É ponto de partida, não
+                      sentença — montar contra o próprio estilo é escolha legítima.
+                    </p>
+                    <ul className={estilos.perfilLista}>
+                      {vereditos.map((v) => (
+                        <li key={v.papel} className={estilos.perfilItem}>
+                          <span
+                            className={
+                              v.estilo === 'destoa' || v.nivel === 'destoa'
+                                ? estilos.marcaDestoa
+                                : v.estilo === 'combina' || v.nivel === 'combina'
+                                  ? estilos.marcaCombina
+                                  : estilos.marcaNeutra
+                            }
+                            aria-hidden="true"
+                          />
+                          <span>
+                            <b>{ROTULO_PAPEL[v.papel]}</b> — {v.peca.nome}
+                            {v.texto ? `: ${v.texto}.` : ' não tem nada que destoe do seu perfil.'}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
 
                 {obs.length > 0 && (
                   <ul className={estilos.observacoes}>

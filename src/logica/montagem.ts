@@ -154,3 +154,78 @@ export function observacoes(m: Montagem): Observacao[] {
 
   return obs;
 }
+
+// ─────────────── A montagem contra o perfil de quem monta ───────────────
+
+/**
+ * ESTA MONTAGEM COMBINA COM VOCÊ?
+ *
+ * O configurador dizia o preço e apontava choques entre as peças, e nunca
+ * relacionava nada com QUEM está montando. A pessoa já declarou estilo e nível
+ * no perfil da comunidade — usar isso é o mínimo, e é dado que ela mesma deu.
+ *
+ * A conta é deliberadamente simples e aberta, porque é opinião derivada e
+ * precisa poder ser discutida:
+ *
+ *   · ESTILO — `INTENCAO_DO_ESTILO` já mapeia atacante→atacar, defensor→
+ *     controlar, all-round→equilibrado. Peça com a intenção do seu estilo
+ *     combina; com a intenção oposta, não. `equilibrado` nunca destoa: é o que
+ *     serve a todo mundo.
+ *   · NÍVEL — peça DOIS degraus acima do seu (iniciante pegando avançada) é
+ *     aviso. Um degrau acima é crescimento normal e não vira alerta.
+ *
+ * O que esta função NÃO faz: dar nota, ordenar peça por "compatibilidade" ou
+ * dizer que uma escolha está errada. Estilo declarado é ponto de partida, não
+ * sentença — muita gente monta de propósito contra o próprio estilo.
+ */
+export type Combina = 'combina' | 'destoa' | 'neutro';
+
+export interface VereditoDeMontagem {
+  papel: PapelPeca;
+  peca: PecaMontagem;
+  estilo: Combina;
+  nivel: Combina;
+  /** A frase que a UI mostra. Vazia quando não há nada a dizer. */
+  texto: string;
+}
+
+const ORDEM = ORDEM_NIVEL;
+
+export function vereditosDaMontagem(
+  m: Montagem,
+  estiloJogador: string | undefined,
+  nivelJogador: string | undefined,
+  intencaoDoEstilo: Readonly<Record<string, string>>,
+): VereditoDeMontagem[] {
+  return pecasDe(m).map(({ papel, peca }) => {
+    let estilo: Combina = 'neutro';
+    let nivel: Combina = 'neutro';
+    const partes: string[] = [];
+
+    const intencaoAlvo = estiloJogador ? intencaoDoEstilo[estiloJogador] : undefined;
+    if (intencaoAlvo) {
+      if (peca.intencao === intencaoAlvo) {
+        estilo = 'combina';
+        partes.push(`é de ${peca.intencao}, como o seu jogo`);
+      } else if (peca.intencao === 'equilibrado') {
+        partes.push('é equilibrada, serve a qualquer estilo');
+      } else {
+        estilo = 'destoa';
+        partes.push(`é de ${peca.intencao} e você se descreve de ${intencaoAlvo}`);
+      }
+    }
+
+    const meu = nivelJogador ? ORDEM[nivelJogador] ?? 0 : 0;
+    const dela = ORDEM[peca.nivel] ?? 0;
+    if (meu > 0 && dela > 0) {
+      if (dela - meu >= 2) {
+        nivel = 'destoa';
+        partes.push(`é de nível ${peca.nivel} e você marcou ${nivelJogador}`);
+      } else if (dela === meu) {
+        nivel = 'combina';
+      }
+    }
+
+    return { papel, peca, estilo, nivel, texto: partes.join('; ') };
+  });
+}

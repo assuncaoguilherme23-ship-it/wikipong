@@ -22,6 +22,8 @@ import { Rodape } from '@/componentes/Rodape';
 import { FotoProduto } from '@/componentes/FotoProduto';
 import { SeletorMaterial } from '@/componentes/SeletorMaterial';
 import { LadosDaRaquete } from '@/componentes/LadosDaRaquete';
+import { familiaDaLamina, familiaDaBorracha } from '@/src/logica/traduzir';
+import { fabricantePorId } from '@/componentes/dados-fabricante';
 import { repositorioPerfilAtual, perfilVazio, type Perfil } from '@/src/logica/perfil';
 import { INTENCAO_DO_ESTILO, ROTULO_ESTILO } from '@/src/logica/avaliacoes';
 import { MATERIAIS, materialPorId, type MaterialCatalogo } from '@/componentes/dados-materiais';
@@ -30,6 +32,7 @@ import { paraPalavra } from '@/src/logica/metricas';
 import {
   observacoes,
   vereditosDaMontagem,
+  resumoDaMontagem,
   precoTotal,
   completa,
   ROTULO_PAPEL,
@@ -108,6 +111,26 @@ export function MontarCliente() {
     ],
     [montagem],
   );
+
+  /* ── O RESUMO EM PROSA ──────────────────────────────────────────────────────
+     As famílias vêm do `traduzir.ts`, lidas da ficha do fabricante — as mesmas
+     que a ficha do material usa. Assim o texto do configurador não pode
+     contradizer o texto da peça: os dois saem da mesma leitura. */
+  const familias = useMemo(() => {
+    const familiaDe = (peca?: PecaMontagem) => {
+      if (!peca) return null;
+      const f = fabricantePorId(peca.id)?.ficha;
+      if (!f) return null;
+      return peca.tipo === 'Lâmina' ? familiaDaLamina(f) : familiaDaBorracha(f);
+    };
+    return {
+      lamina: familiaDe(montagem.lamina),
+      fh: familiaDe(montagem.fh),
+      bh: familiaDe(montagem.bh),
+    };
+  }, [montagem]);
+
+  const resumo = useMemo(() => resumoDaMontagem(montagem, familias), [montagem, familias]);
 
   const total = precoTotal(montagem);
   const obs = observacoes(montagem);
@@ -231,6 +254,42 @@ export function MontarCliente() {
                     })}
                   </tbody>
                 </table>
+
+                {/* ── O RESUMO: O QUE ESTA RAQUETE É ─────────────────────────
+                    Vem ANTES dos números e do gráfico de propósito: quem acabou
+                    de montar quer saber o que fez, não conferir decimais. Os
+                    números ficam logo abaixo, para quem quiser checar.
+
+                    Nenhuma frase aqui é ponderada ou calibrada — cada uma
+                    rastreia até um campo declarado. Nota combinada continua
+                    proibida (ver o cabeçalho de montagem.ts). */}
+                {resumo && (
+                  <section className={estilos.resumo} aria-labelledby="titulo-resumo">
+                    <h3 id="titulo-resumo" className={estilos.resumoTitulo}>
+                      {resumo.titulo}
+                    </h3>
+                    {resumo.paragrafos.map((t) => (
+                      <p key={t.slice(0, 24)} className={estilos.resumoTexto}>
+                        {t}
+                      </p>
+                    ))}
+                    <dl className={estilos.resumoFatos}>
+                      <div>
+                        <dt>A quem serve</dt>
+                        <dd>{resumo.serve}</dd>
+                      </div>
+                      <div>
+                        <dt>O que exige</dt>
+                        <dd>{resumo.exige}</dd>
+                      </div>
+                    </dl>
+                    <p className={estilos.resumoNota}>
+                      Descrição composta a partir da construção que cada fabricante declara e do
+                      nível e estilo de cada peça. <strong>Não existe nota do conjunto</strong>:
+                      lâmina e borrachas interagem, e o resultado não é soma nem média de números.
+                    </p>
+                  </section>
+                )}
 
                 {/* ── OS DOIS LADOS, FRENTE A FRENTE ─────────────────────
                     Radar e barra já existem na ficha e na comparação. Aqui a

@@ -229,3 +229,123 @@ export function vereditosDaMontagem(
     return { papel, peca, estilo, nivel, texto: partes.join('; ') };
   });
 }
+
+// ─────────────── O resumo em prosa da raquete montada ───────────────
+
+/**
+ * O QUE A RAQUETE INTEIRA É — em texto, não em nota.
+ *
+ * O cabeçalho deste módulo proíbe NOTA DE DESEMPENHO COMBINADA, e a proibição
+ * continua de pé: lâmina e as duas borrachas interagem, e o resultado não é soma
+ * nem média. Publicar um "8,4 do conjunto" seria invenção com cara de medição.
+ *
+ * Texto é outra coisa. Dá para descrever o conjunto sem inventar número, desde
+ * que CADA FRASE RASTREIE ATÉ UM CAMPO DECLARADO. É o que esta função faz:
+ * compõe as descrições das partes — a família da lâmina, a família de cada
+ * borracha, a intenção e o nível — do mesmo jeito que o `traduzir.ts` compõe a
+ * descrição de uma peça só a partir da ficha do fabricante.
+ *
+ * Nada aqui é ponderado, somado ou calibrado. Se a lâmina tem fibra externa e as
+ * duas borrachas são tensionadas, o texto diz isso e diz o que isso significa —
+ * não afirma que o conjunto "vale 8,4" nem que é melhor que outro.
+ */
+export interface ResumoMontagem {
+  /** Uma linha que nomeia o conjunto. */
+  titulo: string;
+  /** O corpo, em parágrafos curtos. */
+  paragrafos: string[];
+  /** A quem serve, derivado da intenção das peças. */
+  serve: string;
+  /** O que o conjunto exige de quem joga. */
+  exige: string;
+}
+
+/** Famílias vindas do `traduzir.ts` — quem chama já tem a ficha em mãos. */
+export interface FamiliasDaMontagem {
+  lamina?: string | null;
+  fh?: string | null;
+  bh?: string | null;
+}
+
+const TEXTO_LAMINA: Readonly<Record<string, string>> = {
+  'madeira-pura':
+    'A base é madeira pura, sem fibra: a bola sai mais devagar e sobra tempo para corrigir o gesto',
+  'fibra-externa':
+    'A base tem fibra logo abaixo da folha de fora, então a bola encontra o carbono quase na hora do impacto: saída seca, rápida e de arco baixo',
+  'fibra-interna':
+    'A base tem fibra por dentro, sob duas camadas de madeira: em bola lenta você sente madeira, e a fibra só entra quando você bate forte',
+  'com-fibra':
+    'A base tem fibra dentro da madeira, o que acelera a saída e tira vibração',
+  balsa:
+    'A base tem miolo de balsa, madeira muito leve: velocidade sem peso na mão, com toque mais mole',
+};
+
+const TEXTO_BORRACHA: Readonly<Record<string, string>> = {
+  tensor: 'tensionada, que devolve energia sozinha e dá velocidade sem exigir força',
+  aderente: 'aderente do estilo chinês, que rende giro pesado mas exige gesto completo',
+  hibrida: 'híbrida, com capa aderente sobre esponja tensionada',
+  classica: 'clássica sem tensionamento, mais lenta, mais previsível e de vida longa',
+};
+
+/**
+ * `null` quando a montagem não está completa: descrever meia raquete seria
+ * afirmar sobre um conjunto que ainda não existe.
+ */
+export function resumoDaMontagem(
+  m: Montagem,
+  familias: FamiliasDaMontagem,
+): ResumoMontagem | null {
+  if (!completa(m)) return null;
+  const { lamina, fh, bh } = m as Required<Montagem>;
+
+  const paragrafos: string[] = [];
+
+  // 1) A base, e o que ela impõe ao conjunto inteiro.
+  const daLamina = familias.lamina ? TEXTO_LAMINA[familias.lamina] : undefined;
+  paragrafos.push(
+    daLamina
+      ? `${daLamina}. É a peça que dita o comportamento dos dois lados: a borracha responde ao que a madeira devolve.`
+      : `A lâmina ${lamina.nome} não tem a construção declarada pelo fabricante, então não dá para dizer o que ela impõe ao conjunto sem chutar.`,
+  );
+
+  // 2) Os dois lados: iguais ou diferentes, e o que isso significa.
+  const tFH = familias.fh ? TEXTO_BORRACHA[familias.fh] : undefined;
+  const tBH = familias.bh ? TEXTO_BORRACHA[familias.bh] : undefined;
+  if (tFH && tBH) {
+    paragrafos.push(
+      familias.fh === familias.bh
+        ? `Os dois lados usam borracha ${tFH} — montagem simétrica, em que forehand e backhand respondem parecido e a adaptação é mais rápida.`
+        : `O forehand usa borracha ${tFH}. O backhand usa borracha ${tBH}. Lados diferentes são escolha comum: um abre o ponto, o outro segura a troca — mas exigem gesto diferente de cada lado.`,
+    );
+  }
+
+  // 3) O nível que o conjunto cobra é o da peça mais exigente.
+  const maisExigente = pecasDe(m)
+    .map(({ peca }) => ({ peca, ordem: ORDEM_NIVEL[peca.nivel] ?? 0 }))
+    .reduce((a, b) => (a.ordem >= b.ordem ? a : b));
+  const exige =
+    maisExigente.ordem >= 3
+      ? 'Pede técnica formada: a peça mais exigente do conjunto é de nível avançado, e numa raquete é ela que puxa o resto.'
+      : maisExigente.ordem === 2
+        ? 'Serve a quem já joga com alguma consistência — o conjunto todo fica no nível intermediário ou abaixo.'
+        : 'Está inteiro na faixa de iniciante: é conjunto para aprender o gesto sem brigar com o material.';
+
+  // 4) A quem serve, pela intenção declarada das peças (nunca por nota).
+  const intencoes = pecasDe(m).map(({ peca }) => peca.intencao);
+  const conta = (v: string) => intencoes.filter((i) => i === v).length;
+  const serve =
+    conta('atacar') >= 2
+      ? 'Conjunto voltado a atacar: a maioria das peças é de ataque.'
+      : conta('controlar') >= 2
+        ? 'Conjunto voltado a controlar: a maioria das peças é de controle.'
+        : 'Conjunto sem um lado dominante — as peças não convergem para um estilo só, o que costuma ser exatamente o que quem joga all-round procura.';
+
+  const titulo =
+    conta('atacar') >= 2
+      ? 'Uma raquete de ataque'
+      : conta('controlar') >= 2
+        ? 'Uma raquete de controle'
+        : 'Uma raquete equilibrada';
+
+  return { titulo, paragrafos, serve, exige };
+}

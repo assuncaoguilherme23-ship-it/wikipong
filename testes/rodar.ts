@@ -23,7 +23,7 @@ import {
   DESLOCAMENTO_ATE_ESN, INCERTEZA, grauRepresentativo,
 } from '../src/logica/escalas.js';
 import { etiquetasDoPreset } from '../src/logica/descrever-filtro.js';
-import { precoTotal, observacoes, completa, pecasDe, vereditosDaMontagem } from '../src/logica/montagem.js';
+import { precoTotal, observacoes, completa, pecasDe, vereditosDaMontagem, resumoDaMontagem } from '../src/logica/montagem.js';
 import {
   validar, resumir, ordenar, recortar, ranking, wilson, aprovadas, maisRecentes,
   ROTULO_ESTILO, INTENCAO_DO_ESTILO, PISO_PARA_MEDIA, Avaliacao,
@@ -1060,6 +1060,52 @@ afirma(vMontagemSemPerfil[0].texto === '', 'sem perfil, nao ha' + "'" + ' frase 
 afirma(vereditosDaMontagem({}, 'atacante', 'Avançado', INT).length === 0,
   'montagem vazia nao gera veredito');
 
+// O RESUMO EM PROSA DA RAQUETE MONTADA
+/* O cabecalho de montagem.ts proibe NOTA DE DESEMPENHO COMBINADA, e a proibicao
+   continua de pe'. Texto e' outra coisa: descreve o conjunto compondo o que cada
+   peca declara, sem ponderar nem somar nada. */
+const pm = (id: string, tipo: string, intencao: string, nivel: string): PecaMontagem =>
+  ({ id, nome: id, marca: 'M', tipo, nivel, intencao, preco: 200 });
+
+const montagemAtaque = {
+  lamina: pm('lam', 'Lâmina', 'atacar', 'Avançado'),
+  fh: pm('b1', 'Borracha', 'atacar', 'Avançado'),
+  bh: pm('b2', 'Borracha', 'equilibrado', 'Intermediário'),
+};
+const rAtaque = resumoDaMontagem(montagemAtaque,
+  { lamina: 'fibra-externa', fh: 'tensor', bh: 'tensor' })!;
+afirma(rAtaque.titulo.includes('ataque'), 'duas pecas de ataque -> raquete de ataque');
+afirma(rAtaque.exige.includes('tecnica formada') || rAtaque.exige.includes('técnica formada'),
+  'peca avancada no conjunto -> exige tecnica formada');
+afirma(rAtaque.paragrafos[0].includes('fibra logo abaixo'),
+  'a base descrita e' + "'" + ' a familia declarada da lamina');
+afirma(rAtaque.paragrafos[1].includes('simetrica') || rAtaque.paragrafos[1].includes('simétrica'),
+  'duas borrachas da mesma familia -> montagem simetrica');
+
+/* Lados de familias diferentes sao descritos como diferentes, sem julgamento. */
+const rMisto = resumoDaMontagem(montagemAtaque,
+  { lamina: 'madeira-pura', fh: 'tensor', bh: 'aderente' })!;
+afirma(rMisto.paragrafos[1].includes('forehand') || rMisto.paragrafos[1].includes('Lados')
+  || rMisto.paragrafos[1].includes('O forehand'), 'lados diferentes viram descricao dos dois lados');
+
+/* Montagem incompleta NAO ganha resumo: descrever meia raquete seria afirmar
+   sobre um conjunto que ainda nao existe. */
+afirma(resumoDaMontagem({ lamina: pm('so', 'Lâmina', 'atacar', 'Avançado') }, {}) === null,
+  'montagem incompleta nao gera resumo');
+
+/* Sem construcao declarada, o texto DIZ que nao da' pra afirmar -- nao inventa. */
+const rSemFicha = resumoDaMontagem(montagemAtaque, { lamina: null, fh: null, bh: null })!;
+afirma(rSemFicha.paragrafos[0].includes('sem chutar'),
+  'lamina sem construcao declarada: o resumo admite em vez de inventar');
+afirma(rSemFicha.paragrafos.length === 1,
+  'sem familia das borrachas, o paragrafo dos lados nao e' + "'" + ' escrito');
+
+/* A invariante que protege a decisao antiga: NENHUM numero de desempenho no
+   resumo. Preco e' outra coisa e nao entra aqui. */
+const todoTexto = [rAtaque.titulo, ...rAtaque.paragrafos, rAtaque.serve, rAtaque.exige].join(' ');
+afirma(!/\d+[,.]\d/.test(todoTexto),
+  'o resumo nao publica nota nem decimal do conjunto (nota combinada segue proibida)');
+
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

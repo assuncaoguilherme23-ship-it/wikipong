@@ -38,6 +38,7 @@ import {
 import { metricasComparaveis, metricasDoRadar, temRadar } from '../src/logica/comparacao.js';
 import { posicaoNaFaixa, fracaoNaFaixa, leituraDaPosicao } from '../src/logica/posicao.js';
 import { similares, distancia, type Similar } from '../src/logica/similares.js';
+import { filtrarPorTexto } from '../src/logica/busca-material.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
@@ -993,6 +994,34 @@ afirma(distancia(alvoSim, { ...alvoSim, id: 'x' }, 400) === 0,
 afirma(distancia({ id: 'a', nome: 'a', tipo: 'X', nivel: '', preco: 0 },
                  { id: 'b', nome: 'b', tipo: 'X', nivel: '', preco: 0 }, 0) === null,
   'sem nada em comum para medir, devolve null em vez de inventar proximidade');
+
+// BUSCA DO SELETOR DE MATERIAL
+/* O montador usava <select> nativo com 393 laminas: sem busca, sem imagem, e
+   escondendo 469 das 675 pecas por exigir perfil de desempenho. */
+afirma(filtrarPorTexto(MATERIAIS, '').length === MATERIAIS.length,
+  'busca vazia devolve o catalogo inteiro');
+
+/* Termos em QUALQUER ordem: quem procura nao sabe como o catalogo escreve. */
+const porOrdem1 = filtrarPorTexto(MATERIAIS, 'timo boll').map((x) => x.id).sort();
+const porOrdem2 = filtrarPorTexto(MATERIAIS, 'boll timo').map((x) => x.id).sort();
+afirma(jeq(porOrdem1, porOrdem2), 'a ordem dos termos nao muda o resultado');
+afirma(porOrdem1.length > 1, `"timo boll" acha as laminas da linha (${porOrdem1.length})`);
+
+/* Acento ignorado dos dois lados: quem digita "lamina" acha "Lamina". */
+afirma(filtrarPorTexto(MATERIAIS, 'lamina').length === filtrarPorTexto(MATERIAIS, 'lâmina').length,
+  'acento na busca nao muda o resultado');
+
+/* Marca tambem entra no alvo, nao so' o nome. */
+const daButterfly = filtrarPorTexto(MATERIAIS, 'butterfly');
+afirma(daButterfly.length > 40 && daButterfly.every((x) => x.marca === 'Butterfly'),
+  `busca por marca traz so' a marca (${daButterfly.length} da Butterfly)`);
+
+afirma(filtrarPorTexto(MATERIAIS, 'zzzz').length === 0, 'termo sem resultado devolve lista vazia');
+
+/* O montador passou a oferecer TODAS as pecas de raquete. */
+const pecasMontaveis = MATERIAIS.filter((x) => x.tipo === 'Lâmina' || x.tipo === 'Borracha');
+afirma(pecasMontaveis.length > 660,
+  `o montador oferece todas as laminas e borrachas (${pecasMontaveis.length})`);
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

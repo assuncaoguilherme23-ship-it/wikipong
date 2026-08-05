@@ -26,12 +26,16 @@ export interface PecaMontagem {
   nivel: string;
   intencao: string;
   preco: number;
-  specs: Specs;
+  /* OPCIONAL desde 2026-08-04: o montador exigia perfil de desempenho e com
+     isso escondia 469 das 675 peças — 299 lâminas e 170 borrachas. Quem monta
+     raquete escolhe pelo nome e pelo preço, como na loja; a tabela de specs é
+     consequência do que existe, não porta de entrada. */
+  specs?: Specs;
   /* Opcional porque é da BORRACHA: esponja gasta, madeira não gasta assim.
      Declará-la obrigatória aqui foi exatamente o formato de erro que quebrou o
      /comparar — tipo que afirma o que a guarda não confere. */
   durabilidade?: number;
-  durezaUnificada: number;
+  durezaUnificada?: number;
 }
 
 export type PapelPeca = 'lamina' | 'fh' | 'bh';
@@ -113,7 +117,10 @@ export function observacoes(m: Montagem): Observacao[] {
   }
 
   // 3) Diferença grande de dureza entre os lados (a régua unificada, A VALIDAR).
-  if (m.fh && m.bh) {
+  /* Guarda de verdade, não `!`: só 10 materiais têm dureza unificada, e afirmar
+     ao compilador que ela existe é o mesmo formato de erro que quebrou o
+     /comparar em 41% dos pares. */
+  if (m.fh?.durezaUnificada !== undefined && m.bh?.durezaUnificada !== undefined) {
     const dif = Math.abs(m.fh.durezaUnificada - m.bh.durezaUnificada);
     if (dif >= 6) {
       const maisDura = m.fh.durezaUnificada > m.bh.durezaUnificada ? m.fh : m.bh;
@@ -133,9 +140,10 @@ export function observacoes(m: Montagem): Observacao[] {
         6,0 é o piso de "Exige atenção" na tabela PALAVRAS. Abaixo disso, a
         própria tabela já chama de "Difícil de domar". */
   if (m.fh && m.bh) {
-    const cFH = m.fh.specs.controle;
-    const cBH = m.bh.specs.controle;
-    if (cFH < CONTROLE_EXIGENTE && cBH < CONTROLE_EXIGENTE) {
+    const cFH = m.fh.specs?.controle;
+    const cBH = m.bh.specs?.controle;
+    if (cFH !== undefined && cBH !== undefined
+        && cFH < CONTROLE_EXIGENTE && cBH < CONTROLE_EXIGENTE) {
       obs.push({
         tipo: 'atencao',
         titulo: 'Conjunto exigente dos dois lados',

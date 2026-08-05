@@ -20,8 +20,8 @@ import { useSearchParams } from 'next/navigation';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { FotoProduto } from '@/componentes/FotoProduto';
+import { SeletorMaterial } from '@/componentes/SeletorMaterial';
 import { MATERIAIS, materialPorId, type MaterialCatalogo } from '@/componentes/dados-materiais';
-import { temDesempenho } from '@/src/logica/filtros';
 import { brl } from '@/componentes/formato';
 import { paraPalavra } from '@/src/logica/metricas';
 import {
@@ -35,15 +35,21 @@ import {
 } from '@/src/logica/montagem';
 import estilos from './montar.module.css';
 
-/* Só entra na montagem quem tem perfil de desempenho — o configurador mostra
-   specs lado a lado, e peça sem spec não teria o que mostrar. Na prática isso já
-   exclui a bola, que não é peça de raquete de todo jeito. */
-const ehPeca = (m: MaterialCatalogo): m is MaterialCatalogo & PecaMontagem => temDesempenho(m);
+/* ── A TRAVA DE PERFIL DE DESEMPENHO SAIU (2026-08-04) ────────────────────────
+   O montador só oferecia peça com specs, e com isso escondia 469 das 675:
+   299 lâminas de 393 e 170 borrachas de 282. Quem monta raquete não escolhe por
+   decimal — escolhe pelo nome, pela marca e pelo preço, como na loja. A tabela
+   de specs é CONSEQUÊNCIA do que as peças têm, não porta de entrada.
+
+   O que continua barrado é o que nunca foi peça de raquete: bola e raquete já
+   montada. Isso é tipo, não dado. */
+const ehPeca = (m: MaterialCatalogo): m is MaterialCatalogo & PecaMontagem =>
+  m.tipo === 'Lâmina' || m.tipo === 'Borracha';
 const pecaValida = (m: MaterialCatalogo | undefined): PecaMontagem | undefined =>
   m && ehPeca(m) ? m : undefined;
 
-const LAMINAS = MATERIAIS.filter(ehPeca).filter((m) => m.tipo === 'Lâmina');
-const BORRACHAS = MATERIAIS.filter(ehPeca).filter((m) => m.tipo === 'Borracha');
+const LAMINAS = MATERIAIS.filter((m) => m.tipo === 'Lâmina');
+const BORRACHAS = MATERIAIS.filter((m) => m.tipo === 'Borracha');
 
 const CAMPOS: { papel: PapelPeca; chave: string; opcoes: typeof MATERIAIS }[] = [
   { papel: 'lamina', chave: 'lamina', opcoes: LAMINAS },
@@ -103,22 +109,12 @@ export function MontarCliente() {
               const atual = montagem[papel];
               return (
                 <div key={chave} className={estilos.campo}>
-                  <label className={estilos.campoRotulo} htmlFor={`campo-${chave}`}>
-                    {ROTULO_PAPEL[papel]}
-                  </label>
-                  <select
-                    id={`campo-${chave}`}
-                    className={estilos.select}
-                    value={atual?.id ?? ''}
-                    onChange={(e) => escolher(chave, e.target.value)}
-                  >
-                    <option value="">escolher…</option>
-                    {opcoes.map((o) => (
-                      <option key={o.id} value={o.id}>
-                        {o.nome} · {o.marca} · {brl(o.preco)}
-                      </option>
-                    ))}
-                  </select>
+                  <SeletorMaterial
+                    rotulo={ROTULO_PAPEL[papel]}
+                    opcoes={opcoes}
+                    valor={atual}
+                    aoEscolher={(id) => escolher(chave, id)}
+                  />
 
                   {atual && (
                     <Link href={`/materiais/${atual.id}/`} className={estilos.previa}>
@@ -126,7 +122,10 @@ export function MontarCliente() {
                       <span className={estilos.previaTexto}>
                         <span className={estilos.previaNome}>{atual.nome}</span>
                         <span className={`mono ${estilos.previaMeta}`}>
-                          {atual.nivel} · {paraPalavra('controle', atual.specs.controle)}
+                          {atual.nivel}
+                          {atual.specs
+                            ? ` · ${paraPalavra('controle', atual.specs.controle)}`
+                            : ''}
                         </span>
                       </span>
                       <span className={`mono ${estilos.previaPreco}`}>{brl(atual.preco)}</span>
@@ -176,10 +175,13 @@ export function MontarCliente() {
                             <span className={estilos.celulaPapel}>{ROTULO_PAPEL[papel]}</span>
                             {p.nome}
                           </th>
-                          <td className="mono">{p.specs.velocidade.toFixed(1)}</td>
-                          {/* Lamina nao tem efeito: travessao em vez de numero inventado. */}
-                          <td className="mono">{p.specs.spin !== undefined ? p.specs.spin.toFixed(1) : "—"}</td>
-                          <td className="mono">{p.specs.controle.toFixed(1)}</td>
+                          {/* Travessão quando o número não existe — nunca zero.
+                              Depois que o montador passou a aceitar as 675 peças,
+                              a maioria chega aqui sem perfil de desempenho, e
+                              zero leria como "velocidade nenhuma". */}
+                          <td className="mono">{p.specs ? p.specs.velocidade.toFixed(1) : '—'}</td>
+                          <td className="mono">{p.specs?.spin !== undefined ? p.specs.spin.toFixed(1) : '—'}</td>
+                          <td className="mono">{p.specs ? p.specs.controle.toFixed(1) : '—'}</td>
                           {/* Só a borracha gasta: travessão na lâmina, não zero. */}
                           <td className="mono">
                             {p.durabilidade !== undefined ? p.durabilidade.toFixed(1) : '—'}

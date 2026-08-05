@@ -1,0 +1,129 @@
+/* Seletor de material com busca. Substitui o <select> nativo, que não tinha
+   busca nem imagem e obrigava a rolar centenas de linhas. */
+.caixa {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.rotulo {
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-mudo);
+}
+
+.campo {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.entrada {
+  width: 100%;
+  font: inherit;
+  color: var(--cor-tinta);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  padding: 0.7rem 2.2rem 0.7rem 0.9rem;
+  min-height: 44px;
+}
+.entrada:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}
+
+/* Tira a peça da montagem. Fica dentro do campo, à direita. */
+.limpar {
+  position: absolute;
+  right: 0.5rem;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--cor-mudo);
+  background: transparent;
+  border: 0;
+  border-radius: var(--raio-sm);
+  cursor: pointer;
+}
+.limpar:hover {
+  color: var(--cor-tinta);
+  background: var(--cor-superficie-2);
+}
+
+/* ── O painel de opções ──────────────────────────────────────────────────── */
+.painel {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-cartao), 0 18px 40px rgba(13, 24, 17, 0.16);
+  overflow: hidden;
+}
+.contagem {
+  margin: 0;
+  padding: 0.55rem 0.9rem;
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem;
+  /* Teto de altura: a lista rola dentro do painel, não empurra a página. */
+  max-height: 21rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: var(--raio-sm);
+  cursor: pointer;
+}
+/* Um estado visual só, usado tanto pelo mouse quanto pelas setas: dois estados
+   diferentes fariam a lista parecer ter dois cursores ao mesmo tempo. */
+.destacada {
+  background: var(--cor-acento-suave);
+}
+
+.textoOpcao {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  flex: 1;
+}
+.nomeOpcao {
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta);
+  /* Nome longo corta em vez de empurrar o preço para fora do painel. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.metaOpcao {
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+.precoOpcao {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}

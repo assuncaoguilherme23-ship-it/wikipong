@@ -20,6 +20,7 @@ import type { Material } from '@/src/logica/filtros';
 import dados from '@/dados/materiais.json';
 import { fabricantePorId } from './dados-fabricante';
 import { escalaDoTexto, grauRepresentativo, paraESN } from '@/src/logica/escalas';
+import { MOEDAS, type Moeda } from '@/src/logica/moedas';
 
 export type OrigemDureza = 'fabricante' | 'semente';
 
@@ -58,7 +59,8 @@ function durezaDaFicha(id: string): { unificada: number; grau: number; escala: s
   };
 }
 
-const MOEDAS = ['USD', 'EUR'] as const;
+/* A lista vive em src/logica/moedas.ts — uma moeda nova se declara lá, e este
+   arquivo e o formatador passam a conhecê-la juntos. */
 
 /**
  * `moeda` do JSON de volta ao tipo estreito — ou um erro que quebra o build.
@@ -68,7 +70,7 @@ const MOEDAS = ['USD', 'EUR'] as const;
  * como se fosse real, e o leitor lê US$ 800 como R$ 800. Falhar no build é a
  * hora certa de descobrir isso.
  */
-function moedaDo(m: { id: string; moeda?: string }): 'USD' | 'EUR' | undefined {
+function moedaDo(m: { id: string; moeda?: string }): Moeda | undefined {
   if (m.moeda === undefined) return undefined;
   const achada = MOEDAS.find((c) => c === m.moeda);
   if (!achada) {

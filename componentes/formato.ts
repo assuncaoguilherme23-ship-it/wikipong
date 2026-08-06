@@ -1,3 +1,5 @@
+import type { Moeda } from '@/src/logica/moedas';
+
 /** Formatação de exibição (camada de UI — os módulos puros devolvem números).
  *  `centavos: true` para valores derivados (ex.: custo/mês = R$ 112,50);
  *  o default inteiro serve preços de catálogo. Fonte única — não duplicar. */
@@ -9,7 +11,7 @@
  * e que ninguém vai pagar — importação tem frete e imposto que o câmbio não
  * cobre.
  */
-export const dinheiro = (v: number, moeda?: 'USD' | 'EUR'): string =>
+export const dinheiro = (v: number, moeda?: Moeda): string =>
   moeda
     ? v.toLocaleString('pt-BR', { style: 'currency', currency: moeda, maximumFractionDigits: 0 })
     : brl(v);

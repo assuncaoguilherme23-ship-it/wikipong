@@ -16,6 +16,7 @@
  *     (D-09) — fonte única; por isso o Material carrega `durezaUnificada`.
  */
 import type { Specs } from './metricas';
+import type { Moeda } from './moedas';
 
 // ───────────────────────── Tipos ─────────────────────────
 
@@ -35,7 +36,7 @@ export interface Material {
    * dólar é honesto; converter para real seria inventar — o câmbio muda todo
    * dia e não é o custo real de importar.
    */
-  moeda?: 'USD' | 'EUR';
+  moeda?: Moeda;
   /**
    * PERFIL DE DESEMPENHO — opcional de propósito. Nem todo material tem um:
    * uma bola não tem "controle 9.0", e inventar o número só para preencher a

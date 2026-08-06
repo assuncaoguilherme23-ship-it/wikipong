@@ -13673,6 +13673,694 @@
         "tag": "Cinco madeiras, sem fibra",
         "frase": "Limba por fora, Koto no meio, Kiri no núcleo. Sem fibra nenhuma: o toque é o da madeira pura."
       }
+    },
+    {
+      "id": "palio-energy-03",
+      "nome": "Energy 03",
+      "marca": "Palio",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 279,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Nove camadas",
+        "frase": "Construção incomum: quatro camadas de carbono macio distribuídas entre cinco de madeira."
+      }
+    },
+    {
+      "id": "palio-tct",
+      "nome": "TCT",
+      "marca": "Palio",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 289,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono e titânio",
+        "frase": "A loja a indica para quem joga perto da mesa, no bloqueio e no contra-ataque."
+      }
+    },
+    {
+      "id": "palio-cat",
+      "nome": "CAT",
+      "marca": "Palio",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 289,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Muito leve",
+        "frase": "Duas camadas leves de carbono sobre um núcleo grosso de kiri: alarga a região boa da lâmina."
+      }
+    },
+    {
+      "id": "palio-r57",
+      "nome": "R57 Soft Carbon",
+      "marca": "Palio",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 299,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono por dentro",
+        "frase": "Carbono interno: leve e controlável, sem a secura do carbono externo."
+      }
+    },
+    {
+      "id": "palio-cj8000-speed",
+      "nome": "CJ8000 Speed",
+      "marca": "Palio",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 159,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A CJ8000 de ataque",
+        "frase": "Aderente com esponja média-dura. A CJ8000 é o degrau de entrada no estilo chinês."
+      }
+    },
+    {
+      "id": "palio-cj8000-balance",
+      "nome": "CJ8000 Balance",
+      "marca": "Palio",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 159,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A CJ8000 do meio",
+        "frase": "Mesma capa aderente, esponja mais macia: sobra controle onde a Speed pede braço."
+      }
+    },
+    {
+      "id": "palio-cj8000-spin",
+      "nome": "CJ8000 Spin",
+      "marca": "Palio",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 159,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A CJ8000 mais macia",
+        "frase": "Esponja 36: a mais fácil das três, para quem está aprendendo a puxar efeito."
+      }
+    },
+    {
+      "id": "palio-hk1997-gold",
+      "nome": "HK1997 Gold",
+      "marca": "Palio",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 229,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A clássica da Palio",
+        "frase": "Aderente de estilo chinês, uma das borrachas mais antigas da marca."
+      }
+    },
+    {
+      "id": "palio-ak47-red",
+      "nome": "AK47 Red",
+      "marca": "Palio",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 249,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A AK47 mais dura",
+        "frase": "A vermelha é a mais dura da AK47. Tensionada, não aderente — rápida e leve."
+      }
+    },
+    {
+      "id": "palio-ak47-blue",
+      "nome": "AK47 Blue",
+      "marca": "Palio",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 229,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A AK47 do meio",
+        "frase": "A azul fica entre a amarela e a vermelha na dureza da esponja."
+      }
+    },
+    {
+      "id": "f729-blue-carbon-ad",
+      "nome": "Blue Carbon AD",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 639,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da 729",
+        "frase": "Carbono externo: velocidade alta com a lâmina ainda soando a madeira."
+      }
+    },
+    {
+      "id": "f729-king-verawood",
+      "nome": "KING Verawood",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 649,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Capa de verawood",
+        "frase": "O verawood é mais duro que o ébano: firmeza e estabilidade acima do normal."
+      }
+    },
+    {
+      "id": "f729-blue-arylate-carbon",
+      "nome": "Blue Arylate Carbon",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 449,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono externo",
+        "frase": "A fibra logo abaixo da capa dá toque mais direto e potência no topspin de meia-distância."
+      }
+    },
+    {
+      "id": "f729-black-carbon",
+      "nome": "Black Carbon",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 469,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono macio",
+        "frase": "Duas camadas de carbono macio: rigidez sem perder o controle no giro."
+      }
+    },
+    {
+      "id": "f729-yellow-arylate-carbon",
+      "nome": "Yellow Arylate Carbon",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 449,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono interno",
+        "frase": "A irmã da Blue: fibra por dentro, toque mais macio e controlado sem perder velocidade na batida forte."
+      }
+    },
+    {
+      "id": "f729-dragon-s3",
+      "nome": "Dragon S3",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 429,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Dragon com carbono",
+        "frase": "A única da linha Dragon com fibra. Cerca de 85 g."
+      }
+    },
+    {
+      "id": "f729-dragon-s2",
+      "nome": "Dragon S2",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 349,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras",
+        "frase": "Sem fibra: estabilidade e elasticidade equilibradas, com arco bom no topspin."
+      }
+    },
+    {
+      "id": "f729-dragon-s1",
+      "nome": "Dragon S1",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 289,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Capa de sapele",
+        "frase": "O sapele é mais duro e acelera a saída; o ayous por dentro devolve elasticidade."
+      }
+    },
+    {
+      "id": "f729-green-goblin-5",
+      "nome": "Green Goblin 5",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 369,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cinco madeiras",
+        "frase": "Lâmina de ataque em madeira pura, sem fibra."
+      }
+    },
+    {
+      "id": "f729-green-goblin-7",
+      "nome": "Green Goblin 7",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 399,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras",
+        "frase": "A versão de sete camadas da Green Goblin: mais rígida que a de cinco."
+      }
+    },
+    {
+      "id": "f729-c-5",
+      "nome": "C-5",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 159,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais barata da 729",
+        "frase": "Lâmina allround de cinco madeiras, leve e de controle alto."
+      }
+    },
+    {
+      "id": "f729-c-3",
+      "nome": "C-3",
+      "marca": "Friendship 729",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 169,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Allround um pouco mais rápida",
+        "frase": "Um degrau acima da C-5 em velocidade, ainda no território de quem está começando."
+      }
+    },
+    {
+      "id": "f729-focus-iii-snipe",
+      "nome": "Focus III Snipe",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 219,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Leve e não aderente",
+        "frase": "Foge do padrão chinês: sem cola na superfície, com controle alto."
+      }
+    },
+    {
+      "id": "f729-master-gs",
+      "nome": "Master GS",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 179,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Evolução da Geo Spin",
+        "frase": "A loja a descreve como o desenvolvimento seguinte da GeoSpin."
+      }
+    },
+    {
+      "id": "f729-master-gt",
+      "nome": "Master GT",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 179,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A irmã da Master GS",
+        "frase": "Mesma família, partindo da GeoSpin T."
+      }
+    },
+    {
+      "id": "f729-presto-max-speed",
+      "nome": "Presto MAX Speed",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 269,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Tensionada de esponja microporosa",
+        "frase": "Não aderente, com esponja de poro fino: o lado europeu da 729."
+      }
+    },
+    {
+      "id": "f729-presto-max-spin",
+      "nome": "Presto MAX Spin",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 269,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Presto de efeito",
+        "frase": "Mesma esponja microporosa, capa voltada ao giro."
+      }
+    },
+    {
+      "id": "f729-bloom-power",
+      "nome": "Bloom Power",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 229,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Feita para a bola de plástico",
+        "frase": "Aderente desenvolvida já para a bola 40+."
+      }
+    },
+    {
+      "id": "f729-bloom-spin",
+      "nome": "Bloom Spin",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 229,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Bloom de efeito",
+        "frase": "Mesma família da Bloom Power, capa voltada ao giro."
+      }
+    },
+    {
+      "id": "f729-battle-iii-purple",
+      "nome": "Battle III Purple Lightning",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 449,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Battle mais cara",
+        "frase": "A loja a descreve como a junção do estilo chinês clássico com a esponja moderna."
+      }
+    },
+    {
+      "id": "f729-battle-iii",
+      "nome": "Battle III",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 399,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A terceira geração da Battle",
+        "frase": "Capa de dupla camada, feita para a aderência durar mais."
+      }
+    },
+    {
+      "id": "f729-battle-ii-national",
+      "nome": "Battle II National",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 499,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "O lote National",
+        "frase": "Parte da Battle II PRO e sobe para o lote de seleção."
+      }
+    },
+    {
+      "id": "f729-battle-ii-pro",
+      "nome": "Battle II PRO",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 369,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Battle II de time",
+        "frase": "A loja diz que é lote customizado para equipe profissional."
+      }
+    },
+    {
+      "id": "f729-battle-ii-pro-blue",
+      "nome": "Battle II PRO Blue",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 369,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A PRO mais pegajosa",
+        "frase": "A azul é a PRO com aderência reforçada."
+      }
+    },
+    {
+      "id": "f729-battle-ii-gold",
+      "nome": "Battle II Gold",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 329,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Battle II dourada",
+        "frase": "Ajuste de espessura da esponja em relação à Battle II comum."
+      }
+    },
+    {
+      "id": "f729-battle-ii-silver",
+      "nome": "Battle II Silver",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 249,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Battle II prateada",
+        "frase": "A loja a indica para quem puxa forte de forehand."
+      }
+    },
+    {
+      "id": "f729-dragon-l",
+      "nome": "Dragon L",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 229,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Dragon sem cola",
+        "frase": "Esponja macia de poro grande, sem aderência na superfície."
+      }
+    },
+    {
+      "id": "f729-dragon-f",
+      "nome": "Dragon F",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 229,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Dragon aderente",
+        "frase": "Mesma esponja macia da L, mas com a capa pegajosa."
+      }
+    },
+    {
+      "id": "f729-battle-ii-soft",
+      "nome": "Battle II Soft",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 279,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Battle para o backhand",
+        "frase": "A loja a posiciona como a Battle do lado de trás da raquete."
+      }
+    },
+    {
+      "id": "f729-aurora-max",
+      "nome": "Aurora MAX",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 169,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja pré-tratada",
+        "frase": "Sem aderência, com esponja que já sai tratada de fábrica."
+      }
+    },
+    {
+      "id": "f729-phoenix-ii",
+      "nome": "Phoenix II",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 229,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais leve",
+        "frase": "Folha fina e pinos internos espaçados: pode ficar em 40 g depois de cortada."
+      }
+    },
+    {
+      "id": "f729-gs-special",
+      "nome": "GS Special",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 99,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Semiaderente e barata",
+        "frase": "Meio-termo entre a aderente chinesa e a lisa europeia."
+      }
+    },
+    {
+      "id": "f729-geo-spin-gs",
+      "nome": "Geo Spin GS",
+      "marca": "Friendship 729",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 69,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais barata da 729",
+        "frase": "Aderente clássica e mais lenta — a porta de entrada no estilo chinês."
+      }
     }
   ]
 }

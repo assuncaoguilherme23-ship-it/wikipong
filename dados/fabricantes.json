@@ -13183,6 +13183,586 @@
         }
       ],
       "nota": "Preço, foto e construção conferidos na loja oficial da JOOLA no Brasil."
+    },
+    "palio-energy-03": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliostommar/palio-energy-03",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "9 lâminas: 5 de madeira intercaladas com 4 de carbono macio"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "palio-tct": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliostommar/palio-tct",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5+2+2: cinco madeiras com duas de carbono macio e duas de titânio"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "palio-cat": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliostommar/palio-cat",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "3 camadas de madeira e 2 de carbono sobre núcleo grosso de kiri"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "palio-r57": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliostommar/palio-r57-soft-carbon",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira com 2 de carbono em posição interna"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "palio-cj8000-speed": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliogummi/palio-cj8000-speed",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja 42-44°"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "palio-cj8000-balance": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliogummi/palio-cj8000-balance",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja 38-40°"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "palio-cj8000-spin": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliogummi/palio-cj8000-spin",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, esponja 36°, macia"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "palio-hk1997-gold": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliogummi/palio-hk1997-gold",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "palio-ak47-red": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliogummi/palio-ak47-red",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "palio-ak47-blue": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/palio/paliogummi/palio-ak47-blue",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-blue-carbon-ad": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-blue-carbon-ad",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de carbono ALC em posição externa (Koto · ALC · Ayous · núcleo de Paulownia)"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-king-verawood": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-king-verawood",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Capa externa de Verawood (Verawood · Ayous · KLC · núcleo de Ayous)"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-blue-arylate-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-blue-arylate-carbon",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de arylate-carbono sob as capas externas (carbono externo)"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-black-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-black-arylate-carbon",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "3 madeiras + 2 de carbono macio"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-yellow-arylate-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-yellow-arylate-carbon",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de arylate-carbono junto ao núcleo (carbono interno) — Limba · Ayous · ALC · Ayous"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-dragon-s3": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-dragon-s3",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5+2: cinco madeiras e duas de carbono (Ayous · Limba · carbono)"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-dragon-s2": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-dragon-s2",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira (Ayous · Koto)"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-dragon-s1": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-dragon-s1",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira: capa de Sapele e miolo de Ayous"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-green-goblin-5": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-green-goblin-5",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-green-goblin-7": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-green-goblin-7",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-c-5": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-c-5",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-c-3": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/729stommar/729-c-3",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-focus-iii-snipe": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-focus-iii-snipe",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, não aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-master-gs": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-master-gs",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-master-gt": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-master-gt",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-presto-max-speed": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-presto-speed-max",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-presto-max-spin": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-presto-max-spin",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-bloom-power": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-bloom-power",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-bloom-spin": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-bloom-spin",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-battle-iii-purple": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-battle-iii-purple-lightning",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-battle-iii": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/12-729-battle-iii",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-battle-ii-national": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-battle-ii-national",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-battle-ii-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-battle-ii-pro",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-battle-ii-pro-blue": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-battle-ii-pro-blue",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-battle-ii-gold": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-battle-ii-gold",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-battle-ii-silver": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-battle-ii-silver",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-dragon-l": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-dragon-l",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, não aderente, macia"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-dragon-f": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-dragon-f",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, macia"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-battle-ii-soft": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-battle-ii-soft",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, macia"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-aurora-max": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-aurora-max",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, não aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-phoenix-ii": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-phoenix",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-gs-special": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/729-gs-special",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, semiaderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "f729-geo-spin-gs": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/729friendship/21-gummi/geo-spin-gs",
+      "consultadoEm": "2026-08-06",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
     }
   }
 }

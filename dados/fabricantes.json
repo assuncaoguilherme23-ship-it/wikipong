@@ -11815,6 +11815,1458 @@
         }
       ],
       "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-national": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-n",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-neo-national-azul": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-neo-n-bl",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-national-blue": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-n-blue",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-neo-prov-azul": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-neo-prov-blue",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-50": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-50-mid",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-neo-national-37": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-neo-nn-37",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-neo-national-40": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-neo-nn",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, dura"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-8-40": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h-80-mid",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-gold-arc-8": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=d-gold-arc-8",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-neo-national-39": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-neo-nn-39",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-3-comum": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-3-39",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-skyline-3-60": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-skyline-3-60",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-skyline-3": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-skyline-3-39",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-8-41": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h-8-41",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, dura"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-8-39": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h-8-39",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-50-35": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-50-35",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, macia"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-gold-arc-8-50": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=d-gold-arc-8-50",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada, dura"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-skyline-3-60-soft": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-skyline-3-60-35",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, macia"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-neo": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-neo-39",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-h3-neo-prov-40": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-h3-neo-prov-40",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, dura"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-9": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-9-violet",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-tinarc": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-tinarc-med",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-9-verde": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-9-green",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-tinarc-5": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-tinarc-5-med",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-9-rosa": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-9-pink",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-9-azul": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-9-blue",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-gold-arc-5": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=d-gold-arc-5",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-long-5": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-long-5",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas com fibra arylate-carbono e tecnologia Pith-Film"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-301": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-301",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Camada de carbono junto ao núcleo (posição interna)"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-king": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-king-wc",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira + 2 de carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-power-g7": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-power-g7",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira pura"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-301t": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-301t",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5+2 com arylate-carbono tricolor junto ao núcleo"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-power-g8": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-power-g8",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira, construção clássica"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-wind-w1030": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-wind-w1030",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira pura"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-hao-2": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-hao-2",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-power-g5x": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-power-g5x",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira pura, classe OFF"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-301x": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-301-x",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Camada de carbono junto ao núcleo (posição interna)"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-long-5x": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hur-long-5x",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas com fibra arylate-carbono e tecnologia Pith-Film"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-long-3": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-long-3",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-fang-bo-b2-x": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-fang-bo-b2-x",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com fibra de carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-hao-3": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-hao-3",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas com núcleo único de fibra de vidro e carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-long-5-light": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hur-long-5-light",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira pura + 2 de carbono aromático, núcleo grande"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-fang-bo-b2": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-fang-bo-b2",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com fibra de carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-hao-3-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-hao-3-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas com núcleo de fibra de vidro e carbono · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-301-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-301-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Carbono junto ao núcleo · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-power-g7-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-power-g7-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira pura · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-301t-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-301t-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5+2 arylate-carbono interno · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-fang-bo-b2-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-fang-bo-b2-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com carbono · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-hao-2-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-hao-2-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Empunhadura caneta chinesa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-wind-w1130-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-wind-w1130-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Empunhadura caneta chinesa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-fang-bo-b2-x-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-fang-bo-b2-x-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com carbono · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-long-5-light-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hur-long-5-light-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5+2 com carbono aromático · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "dhs-hurricane-long-5-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-long-5-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas com arylate-carbono · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-rakza-z": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-rakza-z",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-rakza-9": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-rakza-9",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-rakza-x-soft": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-rakza-x-soft",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada, macia"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-rigan": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-rigan",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-rakza-xx": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-rakza-xx",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-mark-v-hps-soft": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-mark-v-hps-soft",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-mark-v-m2": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-markv-m2",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-rising-dragon-ii": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-rising-dragon-ii",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-shining-dragon-ii": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-shining-dragon-ii",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-mark-v-30": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-markv-30",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-mark-v-hps": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-mark-v-hps",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-rising-dragon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-rising-dragon",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa aderente"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-ma-lin-extra-offensive": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-ma-lin-ex-off",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira pura com camada central mais grossa e dura"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-falck-w7": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-falck-w7",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira, tradição sueca"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-resonate-ai": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-resonate-ai",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Carbono A em posição interna"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-ma-lin-extra-special": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-ma-lin-ex-s",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira pura, combinação voltada a velocidade"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-myth-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-myth-carbon",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com fibra de carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-falck-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-falck-carbon",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com fibra de carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-sweden-ek-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-sweden-ek-c",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com fibra de carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-myth-soft-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-myth-soft-carbon",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com fibra de carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-myth-extra-special": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-myth-extra-special",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-resonate-gi": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-resonate-gi",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Carbono em posição interna"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-mark-v-se": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-mark-v-se",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira, 5 mm"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-ma-lin-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-ma-lin-c",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com fibra de carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-ma-lin-soft-carbon": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-ma-lin-sc",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com fibra de carbono, montagem macia"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-battle-balsa": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-battle-balsa",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Miolo de balsa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-sweden-defensive": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-sweden-def",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Construção defensiva, capas externas mais macias e cabeça maior"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-goiabao-5": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-goiabao-5",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas, capa externa dura e camada central grossa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-resonate-go": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-resonate-go",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Carbono em posição externa"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-extra-offensive-7-power": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-ex-off-7-power",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Capa externa muito dura, segunda camada média e camada fina de carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-max-carbon-3d": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-max-carbon-3d",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com fibra de carbono"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-double-face-ii": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-double-face-ii-jp",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira pura, caneta de dois lados"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-hasha-v": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-hasha-v-jp",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira maciça de uma camada, 10 mm, classe OFF+"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-ma-lin-carbon-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-ma-lin-c-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com carbono · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-ma-lin-extra-off-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-ma-lin-ex-off-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira pura · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-ma-lin-soft-carbon-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-ma-lin-sc-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com carbono · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-ma-lin-extra-special-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-ma-lin-ex-s-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira pura · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-extra-off-7-power-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-ex-off-7-power-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Sete camadas com carbono fino · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-myth-extra-off-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-myth-extra-off-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-myth-soft-carbon-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-myth-soft-carbon-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com carbono · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-myth-carbon-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-myth-carbon-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com carbono · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-resonate-ai-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-resonate-ai-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Carbono interno · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-resonate-gi-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-resonate-gi-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Carbono interno · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-falck-w7-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-falck-w7-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "7 camadas de madeira · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-sweden-ek-carbon-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-sweden-ek-c-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira com carbono · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-sweden-extra-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-sweden-ex-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira pura · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-goiabao-5-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-goiabao-5-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "yasaka-resonate-go-caneta": {
+      "confianca": "revendedor",
+      "fonte": "https://www.megaspin.net/store/default.asp?pid=y-resonate-go-cs",
+      "consultadoEm": "2026-08-04",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Carbono externo · empunhadura caneta"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
     }
   }
 }

@@ -12204,6 +12204,1622 @@
         "tag": "A infantil mais barata",
         "frase": "US$ 30, categoria de juniores."
       }
+    },
+    {
+      "id": "dhs-h3-national",
+      "nome": "Hurricane 3 National",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 80,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A National de verdade",
+        "frase": "O lote separado para a seleção chinesa. US$ 80 contra uma fração disso na versão de prateleira."
+      }
+    },
+    {
+      "id": "dhs-h3-neo-national-azul",
+      "nome": "Hurricane 3 Neo National · esponja azul 40°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 94,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "National de esponja azul",
+        "frase": "A esponja azul é a variante mais procurada da linha National."
+      }
+    },
+    {
+      "id": "dhs-h3-national-blue",
+      "nome": "Hurricane 3 National · esponja azul",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 126,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da DHS aqui",
+        "frase": "US$ 126: o topo da seleção de lote."
+      }
+    },
+    {
+      "id": "dhs-h3-neo-prov-azul",
+      "nome": "Hurricane 3 Neo Provincial · azul 39°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 60,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Provincial de esponja azul",
+        "frase": "Provincial é o lote intermediário entre a comum e a National."
+      }
+    },
+    {
+      "id": "dhs-h3-50",
+      "nome": "Hurricane 3-50 · 37°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 49,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hurricane mais macia",
+        "frase": "Esponja 37 na régua DHS, que é bem mais dura que 37 na europeia."
+      }
+    },
+    {
+      "id": "dhs-h3-neo-national-37",
+      "nome": "Hurricane 3 Neo National · 37°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 96,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "National na esponja 37",
+        "frase": "A mais macia das National."
+      }
+    },
+    {
+      "id": "dhs-h3-neo-national-40",
+      "nome": "Hurricane 3 Neo National · 40°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 96,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "National na esponja 40",
+        "frase": "40 na régua DHS: território de quem acelera o braço de verdade."
+      }
+    },
+    {
+      "id": "dhs-hurricane-8-40",
+      "nome": "Hurricane 8 · 40°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hurricane 8",
+        "frase": "Linha mais recente que a 3, com capa menos pegajosa."
+      }
+    },
+    {
+      "id": "dhs-gold-arc-8",
+      "nome": "Gold Arc 8 · 47,5°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A tensionada da DHS",
+        "frase": "Ao contrário da Hurricane, a Gold Arc é tensionada, não aderente. Esponja em régua ESN."
+      }
+    },
+    {
+      "id": "dhs-h3-neo-national-39",
+      "nome": "Hurricane 3 Neo National · 39°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 130,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A National mais cara",
+        "frase": "US$ 130 pela esponja 39 selecionada."
+      }
+    },
+    {
+      "id": "dhs-hurricane-3-comum",
+      "nome": "Hurricane 3 · 39°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 33,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hurricane de prateleira",
+        "frase": "US$ 33. A mesma nota da National na comunidade, por uma fração do preço."
+      }
+    },
+    {
+      "id": "dhs-skyline-3-60",
+      "nome": "Skyline 3-60 Mid · 37°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A linha Skyline",
+        "frase": "A alternativa da DHS à Hurricane, com capa própria."
+      }
+    },
+    {
+      "id": "dhs-skyline-3",
+      "nome": "Skyline 3 · 39°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 35,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Skyline de entrada",
+        "frase": "US$ 35 na linha Skyline."
+      }
+    },
+    {
+      "id": "dhs-hurricane-8-41",
+      "nome": "Hurricane 8 · 41°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hurricane 8 mais dura",
+        "frase": "Esponja 41: a mais exigente da linha 8."
+      }
+    },
+    {
+      "id": "dhs-hurricane-8-39",
+      "nome": "Hurricane 8 · 39°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hurricane 8 média",
+        "frase": "Esponja 39, o meio da linha."
+      }
+    },
+    {
+      "id": "dhs-h3-50-35",
+      "nome": "Hurricane 3-50 · 35°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 49,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hurricane mais fácil",
+        "frase": "Esponja 35, a mais macia que a DHS faz na linha 3."
+      }
+    },
+    {
+      "id": "dhs-gold-arc-8-50",
+      "nome": "Gold Arc 8 · 50°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Gold Arc na esponja 50",
+        "frase": "A tensionada mais dura da DHS."
+      }
+    },
+    {
+      "id": "dhs-skyline-3-60-soft",
+      "nome": "Skyline 3-60 Soft · 35°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Skyline macia",
+        "frase": "Esponja 35 na linha Skyline."
+      }
+    },
+    {
+      "id": "dhs-h3-neo",
+      "nome": "Hurricane 3 Neo · 39°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 33,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Neo de prateleira",
+        "frase": "Neo é o tratamento de esponja que a DHS aplica de fábrica."
+      }
+    },
+    {
+      "id": "dhs-h3-neo-prov-40",
+      "nome": "Hurricane 3 Neo Provincial · 40°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 46,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Provincial na esponja 40",
+        "frase": "O lote provincial, entre a comum e a National."
+      }
+    },
+    {
+      "id": "dhs-hurricane-9",
+      "nome": "Hurricane 9 · violeta",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 48,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hurricane 9",
+        "frase": "Linha mais nova da família Hurricane, vendida por cor de esponja."
+      }
+    },
+    {
+      "id": "dhs-tinarc",
+      "nome": "Tinarc",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 38,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A tensionada acessível",
+        "frase": "US$ 38: a alternativa tensionada e barata da DHS."
+      }
+    },
+    {
+      "id": "dhs-hurricane-9-verde",
+      "nome": "Hurricane 9 · verde",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 48,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Hurricane 9 de esponja verde",
+        "frase": "A cor identifica a esponja na linha 9."
+      }
+    },
+    {
+      "id": "dhs-tinarc-5",
+      "nome": "Tinarc 5",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 38,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A quinta geração da Tinarc",
+        "frase": "Mesma família tensionada, geração mais recente."
+      }
+    },
+    {
+      "id": "dhs-hurricane-9-rosa",
+      "nome": "Hurricane 9 · rosa",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 48,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Hurricane 9 de esponja rosa",
+        "frase": "Outra esponja da linha 9."
+      }
+    },
+    {
+      "id": "dhs-hurricane-9-azul",
+      "nome": "Hurricane 9 · azul",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 48,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Hurricane 9 de esponja azul",
+        "frase": "A azul é a mais dura da linha 9."
+      }
+    },
+    {
+      "id": "dhs-gold-arc-5",
+      "nome": "Gold Arc 5 · 42,5°",
+      "marca": "DHS",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 37,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Gold Arc mais macia",
+        "frase": "Esponja 42,5 em régua ESN — mais fácil que as Hurricane."
+      }
+    },
+    {
+      "id": "dhs-hurricane-long-5",
+      "nome": "Hurricane Long 5",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 250,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A de prateleira do Ma Long",
+        "frase": "Mesma nota da W968 National na comunidade, por uma fração do preço."
+      }
+    },
+    {
+      "id": "dhs-hurricane-301",
+      "nome": "Hurricane 301",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 100,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono interno a US$ 100",
+        "frase": "A camada fica junto ao núcleo e só acorda na batida forte."
+      }
+    },
+    {
+      "id": "dhs-hurricane-king",
+      "nome": "Hurricane King (Wang Chuqin)",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 270,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A lâmina do Wang Chuqin",
+        "frase": "Assinatura do número 1 do mundo, 5+2 com carbono."
+      }
+    },
+    {
+      "id": "dhs-power-g7",
+      "nome": "Power G7",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 43,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras a US$ 43",
+        "frase": "Sem fibra nenhuma: potência vinda só da construção."
+      }
+    },
+    {
+      "id": "dhs-hurricane-301t",
+      "nome": "Hurricane 301T",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 100,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A 301 de fibra tricolor",
+        "frase": "Arylate-carbono trançado em três cores, em posição interna."
+      }
+    },
+    {
+      "id": "dhs-power-g8",
+      "nome": "Power G8",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cinco madeiras equilibradas",
+        "frase": "Construção clássica de cinco camadas, bem balanceada."
+      }
+    },
+    {
+      "id": "dhs-wind-w1030",
+      "nome": "Wind Series W1030",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "atacar",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Entrada de ataque",
+        "frase": "US$ 40, cinco madeiras, classe OFF−."
+      }
+    },
+    {
+      "id": "dhs-hurricane-hao-2",
+      "nome": "Hurricane Hao 2",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 200,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A linha Hao",
+        "frase": "Assinatura de Ma Lin Hao, na faixa de topo da DHS."
+      }
+    },
+    {
+      "id": "dhs-power-g5x",
+      "nome": "Power G5X",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Madeira pura classe OFF",
+        "frase": "A loja publica velocidade 86 e controle 92 na régua dela."
+      }
+    },
+    {
+      "id": "dhs-hurricane-301x",
+      "nome": "Hurricane 301X",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 90,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A 301 mais barata",
+        "frase": "Mesma ideia de carbono interno da 301, US$ 10 menos."
+      }
+    },
+    {
+      "id": "dhs-hurricane-long-5x",
+      "nome": "Hurricane Long 5X",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 249,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Long 5 em outra montagem",
+        "frase": "Mesma construção da Long 5."
+      }
+    },
+    {
+      "id": "dhs-hurricane-long-3",
+      "nome": "Hurricane Long 3",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 250,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A lâmina de Ma Long",
+        "frase": "A loja a descreve como a usada pelo campeão mundial."
+      }
+    },
+    {
+      "id": "dhs-fang-bo-b2-x",
+      "nome": "Fang Bo B2 X",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 77,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Assinatura do Fang Bo",
+        "frase": "Fibra de carbono para potência com toque estável."
+      }
+    },
+    {
+      "id": "dhs-hurricane-hao-3",
+      "nome": "Hurricane Hao 3",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 160,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hao de núcleo misto",
+        "frase": "Fibra de vidro com carbono no núcleo."
+      }
+    },
+    {
+      "id": "dhs-hurricane-long-5-light",
+      "nome": "Hurricane Long 5 Light",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 190,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Long 5 mais leve",
+        "frase": "Mesma família, montagem mais leve."
+      }
+    },
+    {
+      "id": "dhs-fang-bo-b2",
+      "nome": "Fang Bo B2",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 77,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A B2 do Fang Bo",
+        "frase": "Carbono para potência e saída estável no topspin."
+      }
+    },
+    {
+      "id": "dhs-hurricane-hao-3-caneta",
+      "nome": "Hurricane Hao 3 · caneta chinesa",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 160,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hao 3 em caneta",
+        "frase": "Versão de cabo curto para caneta chinesa."
+      }
+    },
+    {
+      "id": "dhs-hurricane-301-caneta",
+      "nome": "Hurricane 301 · caneta chinesa",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 100,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A 301 em caneta",
+        "frase": "Mesma construção, cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "dhs-power-g7-caneta",
+      "nome": "Power G7 · caneta chinesa",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 43,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras em caneta",
+        "frase": "A G7 com cabo de caneta."
+      }
+    },
+    {
+      "id": "dhs-hurricane-301t-caneta",
+      "nome": "Hurricane 301T · caneta chinesa",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 100,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A 301T em caneta",
+        "frase": "Fibra tricolor, cabo de caneta."
+      }
+    },
+    {
+      "id": "dhs-fang-bo-b2-caneta",
+      "nome": "Fang Bo B2 · caneta chinesa",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 77,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A B2 em caneta",
+        "frase": "Versão caneta da assinatura do Fang Bo."
+      }
+    },
+    {
+      "id": "dhs-hurricane-hao-2-caneta",
+      "nome": "Hurricane Hao 2 · caneta chinesa",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 190,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Hao 2 em caneta",
+        "frase": "Cabo curto e cônico da caneta chinesa."
+      }
+    },
+    {
+      "id": "dhs-wind-w1130-caneta",
+      "nome": "Wind Series W1130 · caneta chinesa",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 30,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A caneta mais barata",
+        "frase": "US$ 30, entrada em caneta chinesa."
+      }
+    },
+    {
+      "id": "dhs-fang-bo-b2-x-caneta",
+      "nome": "Fang Bo B2 X · caneta chinesa",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 62,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A B2 X em caneta",
+        "frase": "US$ 62, a mais barata das Fang Bo."
+      }
+    },
+    {
+      "id": "dhs-hurricane-long-5-light-caneta",
+      "nome": "Hurricane Long 5 Light · caneta chinesa",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 190,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Long 5 Light em caneta",
+        "frase": "Montagem leve com cabo de caneta."
+      }
+    },
+    {
+      "id": "dhs-hurricane-long-5-caneta",
+      "nome": "Hurricane Long 5 · caneta chinesa",
+      "marca": "DHS",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 250,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Long 5 em caneta",
+        "frase": "A lâmina de prateleira do Ma Long, em caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-rakza-z",
+      "nome": "Rakza Z",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 55,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A híbrida da Yasaka",
+        "frase": "Capa aderente sobre esponja tensionada."
+      }
+    },
+    {
+      "id": "yasaka-rakza-9",
+      "nome": "Rakza 9",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 53,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Rakza de mais efeito",
+        "frase": "Um degrau acima da 7 em agressividade."
+      }
+    },
+    {
+      "id": "yasaka-rakza-x-soft",
+      "nome": "Rakza X Soft",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 55,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Rakza X macia",
+        "frase": "Versão de esponja macia da X."
+      }
+    },
+    {
+      "id": "yasaka-rigan",
+      "nome": "Rigan",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Rigan",
+        "frase": "Linha separada da Rakza, também tensionada."
+      }
+    },
+    {
+      "id": "yasaka-rakza-xx",
+      "nome": "Rakza XX",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 80,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da Yasaka",
+        "frase": "US$ 80, o topo da linha Rakza."
+      }
+    },
+    {
+      "id": "yasaka-mark-v-hps-soft",
+      "nome": "Mark V HPS Soft",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 48,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Mark V moderna, macia",
+        "frase": "HPS é a atualização da Mark V clássica."
+      }
+    },
+    {
+      "id": "yasaka-mark-v-m2",
+      "nome": "Mark V M2",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Mark V de entrada",
+        "frase": "Versão mais acessível da clássica."
+      }
+    },
+    {
+      "id": "yasaka-rising-dragon-ii",
+      "nome": "Rising Dragon II",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A aderente da Yasaka",
+        "frase": "Capa aderente de estilo chinês numa marca japonesa."
+      }
+    },
+    {
+      "id": "yasaka-shining-dragon-ii",
+      "nome": "Shining Dragon II",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A irmã da Rising Dragon",
+        "frase": "Mesma família aderente."
+      }
+    },
+    {
+      "id": "yasaka-mark-v-30",
+      "nome": "Mark V 30",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 38,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Mark V mais fina",
+        "frase": "Variante de espessura da clássica."
+      }
+    },
+    {
+      "id": "yasaka-mark-v-hps",
+      "nome": "Mark V HPS",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 48,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Mark V atualizada",
+        "frase": "HPS moderniza a borracha mais vendida da história."
+      }
+    },
+    {
+      "id": "yasaka-rising-dragon",
+      "nome": "Rising Dragon",
+      "marca": "Yasaka",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A primeira Rising Dragon",
+        "frase": "A geração anterior da aderente da Yasaka."
+      }
+    },
+    {
+      "id": "yasaka-ma-lin-extra-offensive",
+      "nome": "Ma Lin Extra Offensive",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 66,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Ma Lin de ataque",
+        "frase": "O núcleo mais grosso e duro dá potência extra."
+      }
+    },
+    {
+      "id": "yasaka-falck-w7",
+      "nome": "Falck W7",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 100,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras suecas",
+        "frase": "Assinatura de Mattias Falck, sem fibra."
+      }
+    },
+    {
+      "id": "yasaka-resonate-ai",
+      "nome": "Resonate AI",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 137,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono interno de toque macio",
+        "frase": "O carbono A é resiliente e macio no impacto, montado por dentro."
+      }
+    },
+    {
+      "id": "yasaka-ma-lin-extra-special",
+      "nome": "Ma Lin Extra Special",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 90,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Ma Lin de madeira pura",
+        "frase": "Combinação de madeiras escolhida para velocidade e potência."
+      }
+    },
+    {
+      "id": "yasaka-myth-carbon",
+      "nome": "Myth Carbon",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 95,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Myth com carbono",
+        "frase": "Linha Myth, que substituiu a Ma Lin no catálogo da marca."
+      }
+    },
+    {
+      "id": "yasaka-falck-carbon",
+      "nome": "Falck Carbon",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 213,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da Yasaka",
+        "frase": "US$ 213, assinatura de Mattias Falck com carbono."
+      }
+    },
+    {
+      "id": "yasaka-sweden-ek-carbon",
+      "nome": "Sweden EK Carbon",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 117,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A sueca com carbono",
+        "frase": "A construção sueca clássica com camada de carbono."
+      }
+    },
+    {
+      "id": "yasaka-myth-soft-carbon",
+      "nome": "Myth Soft Carbon",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 95,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Myth Carbon macia",
+        "frase": "Mesma família, montagem mais macia."
+      }
+    },
+    {
+      "id": "yasaka-myth-extra-special",
+      "nome": "Myth Extra Special",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 114,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras para experientes",
+        "frase": "A loja a descreve como feita para jogador experiente."
+      }
+    },
+    {
+      "id": "yasaka-resonate-gi",
+      "nome": "Resonate GI",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 115,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono interno, alta estabilidade",
+        "frase": "A GI é a de carbono interno da linha Resonate."
+      }
+    },
+    {
+      "id": "yasaka-mark-v-se",
+      "nome": "Mark V Special Edition",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A lâmina Mark V",
+        "frase": "US$ 40. A loja publica velocidade 87 e controle 67."
+      }
+    },
+    {
+      "id": "yasaka-ma-lin-carbon",
+      "nome": "Ma Lin Carbon",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 95,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Ma Lin com carbono",
+        "frase": "A assinatura do campeão olímpico chinês, com fibra."
+      }
+    },
+    {
+      "id": "yasaka-ma-lin-soft-carbon",
+      "nome": "Ma Lin Soft Carbon",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 95,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Ma Lin Carbon macia",
+        "frase": "Mesma fibra, toque mais macio."
+      }
+    },
+    {
+      "id": "yasaka-battle-balsa",
+      "nome": "Battle Balsa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 66,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Miolo de balsa",
+        "frase": "Balsa é madeira muito leve: velocidade sem peso na mão."
+      }
+    },
+    {
+      "id": "yasaka-sweden-defensive",
+      "nome": "Sweden Defensive",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 80,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A sueca de defesa",
+        "frase": "Capas mais macias e cabeça maior que a tradicional."
+      }
+    },
+    {
+      "id": "yasaka-goiabao-5",
+      "nome": "Goiabão 5",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 80,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A do goiabão",
+        "frase": "Madeira brasileira no nome: cinco camadas com capa externa dura."
+      }
+    },
+    {
+      "id": "yasaka-resonate-go",
+      "nome": "Resonate GO",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 115,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono externo",
+        "frase": "A GO é a de carbono externo da linha Resonate: saída mais seca."
+      }
+    },
+    {
+      "id": "yasaka-extra-offensive-7-power",
+      "nome": "Extra Offensive 7 Power",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 100,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete camadas com carbono fino",
+        "frase": "Capa externa dura sobre uma camada fina e leve de carbono."
+      }
+    },
+    {
+      "id": "yasaka-max-carbon-3d",
+      "nome": "Max Carbon 3D",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 95,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Max Carbon",
+        "frase": "Linha de carbono da Yasaka."
+      }
+    },
+    {
+      "id": "yasaka-double-face-ii",
+      "nome": "Double Face II · caneta japonesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 88,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Caneta dos dois lados",
+        "frase": "Permite colar borracha no verso mantendo a empunhadura japonesa."
+      }
+    },
+    {
+      "id": "yasaka-hasha-v",
+      "nome": "Hasha V · caneta japonesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 130,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Uma camada de 10 mm",
+        "frase": "Caneta japonesa maciça: a loja publica velocidade 97 e controle 58."
+      }
+    },
+    {
+      "id": "yasaka-ma-lin-carbon-caneta",
+      "nome": "Ma Lin Carbon · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 95,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Ma Lin Carbon em caneta",
+        "frase": "Versão de cabo curto."
+      }
+    },
+    {
+      "id": "yasaka-ma-lin-extra-off-caneta",
+      "nome": "Ma Lin Extra Offensive · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 66,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Ma Lin de ataque em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-ma-lin-soft-carbon-caneta",
+      "nome": "Ma Lin Soft Carbon · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 95,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Soft Carbon em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-ma-lin-extra-special-caneta",
+      "nome": "Ma Lin Extra Special · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 90,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Extra Special em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-extra-off-7-power-caneta",
+      "nome": "Extra Offensive 7 Power · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 100,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A 7 Power em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-myth-extra-off-caneta",
+      "nome": "Myth Extra Offensive · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 79,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Myth em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-myth-soft-carbon-caneta",
+      "nome": "Myth Soft Carbon · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 116,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Myth Soft Carbon em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-myth-carbon-caneta",
+      "nome": "Myth Carbon · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 116,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Myth Carbon em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-resonate-ai-caneta",
+      "nome": "Resonate AI · caneta",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 190,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Resonate AI em caneta",
+        "frase": "US$ 190 na versão caneta."
+      }
+    },
+    {
+      "id": "yasaka-resonate-gi-caneta",
+      "nome": "Resonate GI · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 160,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Resonate GI em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-falck-w7-caneta",
+      "nome": "Falck W7 · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 100,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Falck W7 em caneta",
+        "frase": "Sete madeiras com cabo de caneta."
+      }
+    },
+    {
+      "id": "yasaka-sweden-ek-carbon-caneta",
+      "nome": "Sweden EK Carbon · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 117,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A EK Carbon em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-sweden-extra-caneta",
+      "nome": "Sweden Extra · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 66,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A sueca clássica em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-goiabao-5-caneta",
+      "nome": "Goiabão 5 · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 66,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "O Goiabão em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "yasaka-resonate-go-caneta",
+      "nome": "Resonate GO · caneta chinesa",
+      "marca": "Yasaka",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 160,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Resonate GO em caneta",
+        "frase": "Cabo de caneta chinesa."
+      }
     }
   ]
 }

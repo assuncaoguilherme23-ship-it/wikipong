@@ -10,7 +10,7 @@
       "intencao": "atacar",
       "preco": 537,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "spin": 9.3,
         "controle": 7.8
       },
@@ -52,10 +52,10 @@
       "preco": 443,
       "specs": {
         "velocidade": 6.5,
-        "spin": 6.0,
+        "spin": 6,
         "controle": 8.6
       },
-      "durabilidade": 8.0,
+      "durabilidade": 8,
       "durezaUnificada": 47,
       "rating": 4.2,
       "reviews": 30,
@@ -75,7 +75,7 @@
       "specs": {
         "velocidade": 8.2,
         "spin": 9.6,
-        "controle": 8.0
+        "controle": 8
       },
       "durabilidade": 8.8,
       "durezaUnificada": 54,
@@ -140,7 +140,7 @@
       "preco": 390,
       "specs": {
         "velocidade": 7.8,
-        "spin": 8.0,
+        "spin": 8,
         "controle": 8.6
       },
       "durabilidade": 8.2,
@@ -195,11 +195,11 @@
       "intencao": "controlar",
       "preco": 295,
       "specs": {
-        "velocidade": 5.0,
+        "velocidade": 5,
         "spin": 6.5,
         "controle": 9.2
       },
-      "durabilidade": 8.0,
+      "durabilidade": 8,
       "durezaUnificada": 47,
       "rating": 4.6,
       "reviews": 210,
@@ -218,7 +218,7 @@
       "preco": 338,
       "specs": {
         "velocidade": 5.5,
-        "controle": 9.0
+        "controle": 9
       },
       "rating": 4.7,
       "reviews": 140,
@@ -238,9 +238,9 @@
       "specs": {
         "velocidade": 5.5,
         "spin": 7.5,
-        "controle": 9.0
+        "controle": 9
       },
-      "durabilidade": 8.0,
+      "durabilidade": 8,
       "durezaUnificada": 45,
       "rating": 4.5,
       "reviews": 95,
@@ -258,11 +258,11 @@
       "intencao": "equilibrado",
       "preco": 329,
       "specs": {
-        "velocidade": 6.0,
+        "velocidade": 6,
         "spin": 7.5,
-        "controle": 9.0
+        "controle": 9
       },
-      "durabilidade": 9.0,
+      "durabilidade": 9,
       "durezaUnificada": 42,
       "rating": 4.8,
       "reviews": 320,
@@ -280,8 +280,8 @@
       "intencao": "controlar",
       "preco": 155,
       "specs": {
-        "velocidade": 5.0,
-        "spin": 7.0,
+        "velocidade": 5,
+        "spin": 7,
         "controle": 9.3
       },
       "durabilidade": 7.5,
@@ -302,7 +302,7 @@
       "intencao": "equilibrado",
       "preco": 250,
       "specs": {
-        "velocidade": 6.0,
+        "velocidade": 6,
         "controle": 8.8
       },
       "rating": 4.6,
@@ -369,7 +369,7 @@
         "spin": 8.8,
         "controle": 8.5
       },
-      "durabilidade": 8.0,
+      "durabilidade": 8,
       "origemSpecs": "comunidade",
       "rating": 4.65,
       "reviews": 173,
@@ -387,7 +387,7 @@
       "intencao": "atacar",
       "preco": 537,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "spin": 8.9,
         "controle": 8.5
       },
@@ -411,7 +411,7 @@
       "specs": {
         "velocidade": 9.3,
         "spin": 9.4,
-        "controle": 9.0
+        "controle": 9
       },
       "durabilidade": 7.7,
       "origemSpecs": "comunidade",
@@ -431,7 +431,7 @@
       "intencao": "atacar",
       "preco": 537,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "spin": 9.2,
         "controle": 9.2
       },
@@ -455,7 +455,7 @@
       "specs": {
         "velocidade": 8.8,
         "spin": 9.5,
-        "controle": 9.0
+        "controle": 9
       },
       "durabilidade": 7.8,
       "origemSpecs": "comunidade",
@@ -499,9 +499,9 @@
       "specs": {
         "velocidade": 9.5,
         "spin": 9.1,
-        "controle": 9.0
+        "controle": 9
       },
-      "durabilidade": 8.0,
+      "durabilidade": 8,
       "origemSpecs": "comunidade",
       "rating": 4.65,
       "reviews": 18,
@@ -539,7 +539,7 @@
       "intencao": "atacar",
       "preco": 1489,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "controle": 8.7
       },
       "origemSpecs": "comunidade",
@@ -660,7 +660,7 @@
       "preco": 2760,
       "specs": {
         "velocidade": 9.5,
-        "controle": 9.0
+        "controle": 9
       },
       "origemSpecs": "comunidade",
       "rating": 4.75,
@@ -879,7 +879,7 @@
       "intencao": "equilibrado",
       "preco": 839,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "controle": 9.2
       },
       "origemSpecs": "comunidade",
@@ -1124,7 +1124,7 @@
       "intencao": "controlar",
       "preco": 177,
       "specs": {
-        "velocidade": 7.0,
+        "velocidade": 7,
         "spin": 7.4,
         "controle": 8.7
       },
@@ -1234,7 +1234,7 @@
       "intencao": "atacar",
       "preco": 280,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "spin": 8.9,
         "controle": 8.8
       },
@@ -1346,8 +1346,8 @@
       "preco": 385,
       "specs": {
         "velocidade": 8.9,
-        "spin": 9.0,
-        "controle": 9.0
+        "spin": 9,
+        "controle": 9
       },
       "durabilidade": 7.8,
       "origemSpecs": "comunidade",
@@ -1436,7 +1436,7 @@
       "specs": {
         "velocidade": 9.3,
         "spin": 8.8,
-        "controle": 9.0
+        "controle": 9
       },
       "durabilidade": 6.5,
       "origemSpecs": "comunidade",
@@ -1576,7 +1576,7 @@
       "intencao": "equilibrado",
       "preco": 360,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "spin": 8.9,
         "controle": 9.1
       },
@@ -1690,7 +1690,7 @@
         "spin": 9.2,
         "controle": 8.3
       },
-      "durabilidade": 8.0,
+      "durabilidade": 8,
       "origemSpecs": "comunidade",
       "rating": 4.55,
       "reviews": 6,
@@ -1784,7 +1784,7 @@
       "preco": 300,
       "specs": {
         "velocidade": 9.2,
-        "spin": 9.0,
+        "spin": 9,
         "controle": 8.8
       },
       "durabilidade": 7.9,
@@ -1805,7 +1805,7 @@
       "intencao": "equilibrado",
       "preco": 300,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "spin": 9.3,
         "controle": 8.9
       },
@@ -1849,11 +1849,11 @@
       "intencao": "equilibrado",
       "preco": 300,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "spin": 9.1,
         "controle": 9.1
       },
-      "durabilidade": 8.0,
+      "durabilidade": 8,
       "origemSpecs": "comunidade",
       "rating": 4.6,
       "reviews": 32,
@@ -2299,7 +2299,7 @@
       "specs": {
         "velocidade": 9.1,
         "spin": 9.2,
-        "controle": 9.0
+        "controle": 9
       },
       "durabilidade": 8.1,
       "origemSpecs": "comunidade",
@@ -2365,7 +2365,7 @@
       "specs": {
         "velocidade": 9.3,
         "spin": 9.4,
-        "controle": 9.0
+        "controle": 9
       },
       "durabilidade": 8.4,
       "origemSpecs": "comunidade",
@@ -2389,7 +2389,7 @@
         "spin": 9.2,
         "controle": 8.9
       },
-      "durabilidade": 5.0,
+      "durabilidade": 5,
       "origemSpecs": "comunidade",
       "rating": 4.65,
       "reviews": 36,
@@ -2431,7 +2431,7 @@
       "specs": {
         "velocidade": 9.3,
         "spin": 9.5,
-        "controle": 9.0
+        "controle": 9
       },
       "durabilidade": 7.4,
       "origemSpecs": "comunidade",
@@ -2720,7 +2720,7 @@
       "intencao": "controlar",
       "preco": 229,
       "specs": {
-        "velocidade": 7.0,
+        "velocidade": 7,
         "controle": 8.1
       },
       "origemSpecs": "comunidade",
@@ -2969,7 +2969,7 @@
         "spin": 9.2,
         "controle": 8.9
       },
-      "durabilidade": 8.0,
+      "durabilidade": 8,
       "origemSpecs": "comunidade",
       "rating": 4.7,
       "reviews": 249,
@@ -3024,8 +3024,8 @@
       "intencao": "equilibrado",
       "preco": 425,
       "specs": {
-        "velocidade": 9.0,
-        "spin": 9.0,
+        "velocidade": 9,
+        "spin": 9,
         "controle": 9.1
       },
       "durabilidade": 7.9,
@@ -3137,7 +3137,7 @@
       "specs": {
         "velocidade": 8.5,
         "spin": 9.3,
-        "controle": 9.0
+        "controle": 9
       },
       "durabilidade": 7.8,
       "origemSpecs": "comunidade",
@@ -3276,7 +3276,7 @@
       "preco": 294,
       "specs": {
         "velocidade": 9.3,
-        "spin": 9.0,
+        "spin": 9,
         "controle": 8.5
       },
       "durabilidade": 7.8,
@@ -3715,7 +3715,7 @@
       "intencao": "equilibrado",
       "preco": 1758,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "controle": 9.2
       },
       "origemSpecs": "comunidade",
@@ -3815,7 +3815,7 @@
       "intencao": "atacar",
       "preco": 565,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "controle": 8.5
       },
       "origemSpecs": "comunidade",
@@ -3835,7 +3835,7 @@
       "intencao": "atacar",
       "preco": 612,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "controle": 8.6
       },
       "origemSpecs": "comunidade",
@@ -4086,7 +4086,7 @@
       "preco": 1158,
       "specs": {
         "velocidade": 9.1,
-        "controle": 9.0
+        "controle": 9
       },
       "origemSpecs": "comunidade",
       "rating": 4.6,
@@ -4145,7 +4145,7 @@
       "intencao": "atacar",
       "preco": 763,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "controle": 8.8
       },
       "origemSpecs": "comunidade",
@@ -4510,7 +4510,7 @@
       "preco": 343,
       "specs": {
         "velocidade": 8.7,
-        "spin": 9.0,
+        "spin": 9,
         "controle": 8.5
       },
       "durabilidade": 6.3,
@@ -4620,7 +4620,7 @@
       "preco": 365,
       "specs": {
         "velocidade": 9.4,
-        "spin": 9.0,
+        "spin": 9,
         "controle": 8.2
       },
       "durabilidade": 7.9,
@@ -4642,7 +4642,7 @@
       "preco": 365,
       "specs": {
         "velocidade": 9.2,
-        "spin": 9.0,
+        "spin": 9,
         "controle": 8.8
       },
       "durabilidade": 5.5,
@@ -4687,7 +4687,7 @@
       "specs": {
         "velocidade": 8.2,
         "spin": 7.9,
-        "controle": 8.0
+        "controle": 8
       },
       "durabilidade": 5.6,
       "origemSpecs": "comunidade",
@@ -4733,7 +4733,7 @@
         "spin": 9.5,
         "controle": 9.3
       },
-      "durabilidade": 6.0,
+      "durabilidade": 6,
       "origemSpecs": "comunidade",
       "rating": 4.8,
       "reviews": 5,
@@ -4821,7 +4821,7 @@
         "spin": 9.1,
         "controle": 8.2
       },
-      "durabilidade": 7.0,
+      "durabilidade": 7,
       "origemSpecs": "comunidade",
       "rating": 4.55,
       "reviews": 58,
@@ -4843,7 +4843,7 @@
         "spin": 9.1,
         "controle": 8.3
       },
-      "durabilidade": 7.0,
+      "durabilidade": 7,
       "origemSpecs": "comunidade",
       "rating": 4.65,
       "reviews": 50,
@@ -4862,7 +4862,7 @@
       "preco": 336,
       "specs": {
         "velocidade": 8.8,
-        "spin": 9.0,
+        "spin": 9,
         "controle": 8.6
       },
       "durabilidade": 7.5,
@@ -4884,7 +4884,7 @@
       "preco": 336,
       "specs": {
         "velocidade": 8.4,
-        "spin": 9.0,
+        "spin": 9,
         "controle": 8.7
       },
       "durabilidade": 7.4,
@@ -4905,7 +4905,7 @@
       "intencao": "equilibrado",
       "preco": 306,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "spin": 8.6,
         "controle": 8.1
       },
@@ -5236,7 +5236,7 @@
       "preco": 329,
       "specs": {
         "velocidade": 8.7,
-        "spin": 9.0,
+        "spin": 9,
         "controle": 8.8
       },
       "durabilidade": 6.9,
@@ -5261,7 +5261,7 @@
         "spin": 9.2,
         "controle": 8.5
       },
-      "durabilidade": 7.0,
+      "durabilidade": 7,
       "origemSpecs": "comunidade",
       "rating": 4.55,
       "reviews": 19,
@@ -5455,7 +5455,7 @@
       "preco": 315,
       "specs": {
         "velocidade": 7.8,
-        "controle": 9.0
+        "controle": 9
       },
       "origemSpecs": "comunidade",
       "rating": 4.5,
@@ -5478,7 +5478,7 @@
         "controle": 8.5
       },
       "origemSpecs": "comunidade",
-      "rating": 4.0,
+      "rating": 4,
       "reviews": 13,
       "simples": {
         "tag": "Boa para aprender, lenta para brigar",
@@ -5864,8 +5864,8 @@
       "intencao": "atacar",
       "preco": 373,
       "specs": {
-        "velocidade": 9.0,
-        "controle": 8.0
+        "velocidade": 9,
+        "controle": 8
       },
       "origemSpecs": "comunidade",
       "rating": 4.5,
@@ -5960,7 +5960,7 @@
       "specs": {
         "velocidade": 9.3,
         "spin": 9.3,
-        "controle": 9.0
+        "controle": 9
       },
       "durabilidade": 8.8,
       "origemSpecs": "comunidade",
@@ -6004,7 +6004,7 @@
       "specs": {
         "velocidade": 8.4,
         "spin": 9.1,
-        "controle": 9.0
+        "controle": 9
       },
       "durabilidade": 6.9,
       "origemSpecs": "comunidade",
@@ -6318,7 +6318,7 @@
         "controle": 9.4
       },
       "origemSpecs": "comunidade",
-      "rating": 5.0,
+      "rating": 5,
       "reviews": 5,
       "simples": {
         "tag": "Nota 10 na comunidade",
@@ -6444,7 +6444,7 @@
       "intencao": "equilibrado",
       "preco": 822,
       "specs": {
-        "velocidade": 9.0,
+        "velocidade": 9,
         "controle": 9.4
       },
       "origemSpecs": "comunidade",
@@ -6548,7 +6548,7 @@
         "controle": 8.4
       },
       "origemSpecs": "comunidade",
-      "rating": 4.0,
+      "rating": 4,
       "reviews": 5,
       "simples": {
         "tag": "A allround com mais potência",
@@ -8178,36 +8178,6 @@
       "simples": {
         "tag": "A HY-Q dura, sem amostra",
         "frase": "Consta do Revspin sem nota e sem avaliação."
-      }
-    },
-    {
-      "id": "andro-blowfish",
-      "nome": "Blowfish",
-      "marca": "Andro",
-      "tipo": "Borracha",
-      "nivel": "Intermediário",
-      "intencao": "controlar",
-      "preco": 293,
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "Fora do Revspin",
-        "frase": "A loja vende Blowfish e Blowfish+ pelo mesmo preço. Nenhuma das duas está registrada no Revspin."
-      }
-    },
-    {
-      "id": "andro-blowfish-plus",
-      "nome": "Blowfish+",
-      "marca": "Andro",
-      "tipo": "Borracha",
-      "nivel": "Intermediário",
-      "intencao": "equilibrado",
-      "preco": 293,
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "A irmã \"+\" da Blowfish",
-        "frase": "Mesmo preço da Blowfish comum, R$ 293. Sem registro na comunidade."
       }
     },
     {
@@ -11412,8 +11382,7 @@
       "tipo": "Lâmina",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 218,
-      "moeda": "USD",
+      "preco": 1499,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11444,8 +11413,7 @@
       "tipo": "Borracha",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 60,
-      "moeda": "USD",
+      "preco": 409,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11460,8 +11428,7 @@
       "tipo": "Borracha",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 60,
-      "moeda": "USD",
+      "preco": 409,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11476,8 +11443,7 @@
       "tipo": "Borracha",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 60,
-      "moeda": "USD",
+      "preco": 409,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11492,8 +11458,7 @@
       "tipo": "Borracha",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 60,
-      "moeda": "USD",
+      "preco": 419,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11508,8 +11473,7 @@
       "tipo": "Borracha",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 60,
-      "moeda": "USD",
+      "preco": 419,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11524,8 +11488,7 @@
       "tipo": "Borracha",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 70,
-      "moeda": "USD",
+      "preco": 409,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11604,8 +11567,7 @@
       "tipo": "Borracha",
       "nivel": "Intermediário",
       "intencao": "atacar",
-      "preco": 45,
-      "moeda": "USD",
+      "preco": 299,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11620,8 +11582,7 @@
       "tipo": "Borracha",
       "nivel": "Intermediário",
       "intencao": "atacar",
-      "preco": 40,
-      "moeda": "USD",
+      "preco": 299,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11636,8 +11597,7 @@
       "tipo": "Borracha",
       "nivel": "Intermediário",
       "intencao": "equilibrado",
-      "preco": 40,
-      "moeda": "USD",
+      "preco": 299,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11652,8 +11612,7 @@
       "tipo": "Borracha",
       "nivel": "Intermediário",
       "intencao": "atacar",
-      "preco": 50,
-      "moeda": "USD",
+      "preco": 359,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11668,8 +11627,7 @@
       "tipo": "Borracha",
       "nivel": "Intermediário",
       "intencao": "atacar",
-      "preco": 50,
-      "moeda": "USD",
+      "preco": 359,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11684,8 +11642,7 @@
       "tipo": "Borracha",
       "nivel": "Intermediário",
       "intencao": "atacar",
-      "preco": 50,
-      "moeda": "USD",
+      "preco": 359,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11716,61 +11673,12 @@
       "tipo": "Borracha",
       "nivel": "Iniciante",
       "intencao": "equilibrado",
-      "preco": 30,
-      "moeda": "USD",
+      "preco": 209,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
         "tag": "Clássica de entrada",
         "frase": "Linha antiga da JOOLA, ainda vendida."
-      }
-    },
-    {
-      "id": "joola-express-ultra",
-      "nome": "Express Ultra",
-      "marca": "Joola",
-      "tipo": "Borracha",
-      "nivel": "Iniciante",
-      "intencao": "equilibrado",
-      "preco": 35,
-      "moeda": "USD",
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "Para os primeiros meses",
-        "frase": "Borracha de aprendizado, sem tensionamento declarado."
-      }
-    },
-    {
-      "id": "joola-tango-ultra",
-      "nome": "Tango Ultra",
-      "marca": "Joola",
-      "tipo": "Borracha",
-      "nivel": "Intermediário",
-      "intencao": "atacar",
-      "preco": 35,
-      "moeda": "USD",
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "A herdeira da Tango",
-        "frase": "A linha Tango é anterior à Golden Tango, que a Dynaryz ZGR sucedeu."
-      }
-    },
-    {
-      "id": "joola-cwx",
-      "nome": "CWX",
-      "marca": "Joola",
-      "tipo": "Borracha",
-      "nivel": "Intermediário",
-      "intencao": "controlar",
-      "preco": 45,
-      "moeda": "USD",
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "A borracha de defesa da JOOLA",
-        "frase": "Feita para cortar e devolver, não para finalizar."
       }
     },
     {
@@ -11812,8 +11720,7 @@
       "tipo": "Lâmina",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 275,
-      "moeda": "USD",
+      "preco": 1299,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11860,8 +11767,7 @@
       "tipo": "Lâmina",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 220,
-      "moeda": "USD",
+      "preco": 1169,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11892,8 +11798,7 @@
       "tipo": "Lâmina",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 190,
-      "moeda": "USD",
+      "preco": 999,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11924,8 +11829,7 @@
       "tipo": "Lâmina",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 90,
-      "moeda": "USD",
+      "preco": 599,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11940,8 +11844,7 @@
       "tipo": "Lâmina",
       "nivel": "Avançado",
       "intencao": "atacar",
-      "preco": 120,
-      "moeda": "USD",
+      "preco": 899,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -11956,8 +11859,7 @@
       "tipo": "Lâmina",
       "nivel": "Intermediário",
       "intencao": "atacar",
-      "preco": 100,
-      "moeda": "USD",
+      "preco": 629,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -12004,8 +11906,7 @@
       "tipo": "Lâmina",
       "nivel": "Intermediário",
       "intencao": "controlar",
-      "preco": 65,
-      "moeda": "USD",
+      "preco": 449,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -12052,8 +11953,7 @@
       "tipo": "Lâmina",
       "nivel": "Intermediário",
       "intencao": "equilibrado",
-      "preco": 100,
-      "moeda": "USD",
+      "preco": 599,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -12068,8 +11968,7 @@
       "tipo": "Lâmina",
       "nivel": "Intermediário",
       "intencao": "controlar",
-      "preco": 60,
-      "moeda": "USD",
+      "preco": 449,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -12116,8 +12015,7 @@
       "tipo": "Lâmina",
       "nivel": "Iniciante",
       "intencao": "atacar",
-      "preco": 40,
-      "moeda": "USD",
+      "preco": 399,
       "rating": 4.5,
       "reviews": 0,
       "simples": {
@@ -13819,6 +13717,51 @@
       "simples": {
         "tag": "A Resonate GO em caneta",
         "frase": "Cabo de caneta chinesa."
+      }
+    },
+    {
+      "id": "joola-calderano-ary-x",
+      "nome": "Hugo Calderano ARY-X",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 1499,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A outra do Calderano",
+        "frase": "A fibra ARY-X não é carbono: fica logo abaixo do Koto e devolve a bola com sensação mais próxima da madeira."
+      }
+    },
+    {
+      "id": "joola-proline-iac",
+      "nome": "PROline IAC",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 899,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono por dentro, Koto por fora",
+        "frase": "A única JOOLA que junta capa externa de Koto com o carbono por dentro: potência sem perder o toque."
+      }
+    },
+    {
+      "id": "joola-fs-5",
+      "nome": "FS-5",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 599,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cinco madeiras, sem fibra",
+        "frase": "Limba por fora, Koto no meio, Kiri no núcleo. Sem fibra nenhuma: o toque é o da madeira pura."
       }
     }
   ]

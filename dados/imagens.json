@@ -2767,18 +2767,6 @@
       "fonteUrl": "https://americatt.net/andro-hy-q-48/",
       "consultadoEm": "2026-08-01"
     },
-    "andro-blowfish": {
-      "arquivo": "andro-blowfish.webp",
-      "fonte": "AmericaTT",
-      "fonteUrl": "https://americatt.net/borracha-andro-blowfish/",
-      "consultadoEm": "2026-08-01"
-    },
-    "andro-blowfish-plus": {
-      "arquivo": "andro-blowfish-plus.webp",
-      "fonte": "AmericaTT",
-      "fonteUrl": "https://americatt.net/andro-blowfish/",
-      "consultadoEm": "2026-08-01"
-    },
     "andro-gauzy-sl-off": {
       "arquivo": "andro-gauzy-sl-off.webp",
       "fonte": "AmericaTT",
@@ -4177,24 +4165,6 @@
       "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-micron",
       "consultadoEm": "2026-08-04"
     },
-    "joola-express-ultra": {
-      "arquivo": "joola-express-ultra.webp",
-      "fonte": "Megaspin (EUA)",
-      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-express-ultra",
-      "consultadoEm": "2026-08-04"
-    },
-    "joola-tango-ultra": {
-      "arquivo": "joola-tango-ultra.webp",
-      "fonte": "Megaspin (EUA)",
-      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-tango-ultra",
-      "consultadoEm": "2026-08-04"
-    },
-    "joola-cwx": {
-      "arquivo": "joola-cwx.webp",
-      "fonte": "Megaspin (EUA)",
-      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-cwx",
-      "consultadoEm": "2026-08-04"
-    },
     "joola-zack": {
       "arquivo": "joola-zack.webp",
       "fonte": "Megaspin (EUA)",
@@ -4962,6 +4932,24 @@
       "fonte": "Megaspin (EUA)",
       "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=y-resonate-go-cs",
       "consultadoEm": "2026-08-04"
+    },
+    "joola-calderano-ary-x": {
+      "arquivo": "joola-calderano-ary-x.webp",
+      "fonte": "JOOLA Brasil",
+      "fonteUrl": "https://www.joola.com.br/products/raquete-joola-hugo-calderano-ary-x",
+      "consultadoEm": "2026-08-05"
+    },
+    "joola-proline-iac": {
+      "arquivo": "joola-proline-iac.webp",
+      "fonte": "JOOLA Brasil",
+      "fonteUrl": "https://www.joola.com.br/products/raquete-blade-proline-iac-fl",
+      "consultadoEm": "2026-08-05"
+    },
+    "joola-fs-5": {
+      "arquivo": "joola-fs-5.webp",
+      "fonte": "JOOLA Brasil",
+      "fonteUrl": "https://www.joola.com.br/products/raquete-joola-fs-5",
+      "consultadoEm": "2026-08-05"
     }
   }
 }

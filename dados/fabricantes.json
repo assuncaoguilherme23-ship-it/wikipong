@@ -995,7 +995,7 @@
           },
           {
             "rotulo": "Vibração",
-            "valor": 7.0
+            "valor": 7
           }
         ]
       },
@@ -1107,7 +1107,7 @@
         "valores": [
           {
             "rotulo": "Reação",
-            "valor": 10.0
+            "valor": 10
           },
           {
             "rotulo": "Vibração",
@@ -7916,30 +7916,6 @@
       ],
       "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Como a HY-Q 42, foi o Revspin que confirmou que isto é borracha e não lâmina. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
     },
-    "andro-blowfish": {
-      "confianca": "revendedor",
-      "fonte": "https://americatt.net/borracha-andro-blowfish/",
-      "consultadoEm": "2026-08-01",
-      "ficha": [
-        {
-          "rotulo": "Superfície",
-          "valor": "Lisa"
-        }
-      ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. NÃO EXISTE NO REVSPIN: nem a Blowfish nem a Blowfish+ aparecem lá, sob nenhuma grafia. Entram com ficha, preço real e foto, sem nota da comunidade. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
-    },
-    "andro-blowfish-plus": {
-      "confianca": "revendedor",
-      "fonte": "https://americatt.net/andro-blowfish/",
-      "consultadoEm": "2026-08-01",
-      "ficha": [
-        {
-          "rotulo": "Superfície",
-          "valor": "Lisa"
-        }
-      ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Como a Blowfish comum, não consta do Revspin. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações."
-    },
     "andro-gauzy-sl-off": {
       "confianca": "revendedor",
       "fonte": "https://americatt.net/andro-gauzy-sl-off/",
@@ -11118,8 +11094,8 @@
     },
     "joola-calderano-ary-c": {
       "confianca": "oficial",
-      "fonte": "https://joola.de/en/products/joola-blade-hugo-calderano-ary-c",
-      "consultadoEm": "2026-08-02",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-hugo-calderano-ary-c",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
@@ -11130,7 +11106,7 @@
           "valor": "Madeira 5+2, com fibra ARY-C em posição interna"
         }
       ],
-      "nota": "Efeito não entra: é propriedade da borracha, não da madeira. Dureza de esponja também não se aplica aqui. NÃO É VENDIDA NO BRASIL. O preço está em dólar porque é a moeda em que foi conferido; converter para real daria um número que muda todo dia e que ninguém vai pagar, já que importar tem frete e imposto que o câmbio não cobre. Por não estar em reais, ela fica fora do filtro e da ordenação por preço do catálogo. Foto e ficha do site da JOOLA; o preço de US$ 218 foi lido na tabletennisstore.eu. Nenhuma avaliação no Revspin ainda — a lâmina é recente, e por isso ela entra sem nota da comunidade."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil."
     },
     "dhs-w968": {
       "confianca": "revendedor",
@@ -11150,75 +11126,75 @@
     },
     "joola-dynaryz-agr": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-agr",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-dynaryz-agr",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-dynaryz-acc": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-acc",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-dynaryz-acc",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-dynaryz-cmd": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-cmd",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-dynaryz-cmd",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-dynaryz-zgr": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-zgr",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-dynaryz-zgr",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa aderente, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-dynaryz-zgx": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-zgx",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-dynaryz-zgx",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa aderente, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-dynaryz-inferno": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-inferno",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-dynaryz-inferno",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-rhyzer-pro-45": {
       "confianca": "revendedor",
@@ -11270,75 +11246,75 @@
     },
     "joola-rhyzen-zgx": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-rhyzen-zgx",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-rhyzen-zgx",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa aderente, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-rhyzen-fire": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-rhyzen-fire",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-rhyzen-fire",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-rhyzen-ice": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-rhyzen-ice",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-rhyzen-ice",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-tronix-cmd": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-tronix-cmd",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-tronix-cmd",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-tronix-acc": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-tronix-acc",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-tronix-acc",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-tronix-zgr": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-tronix-zgr",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-tronix-zgr",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa aderente, tensionada"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-energy": {
       "confianca": "revendedor",
@@ -11354,51 +11330,15 @@
     },
     "joola-micron": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-micron",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/borracha-joola-micron",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Superfície",
           "valor": "Lisa"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
-    },
-    "joola-express-ultra": {
-      "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-express-ultra",
-      "consultadoEm": "2026-08-04",
-      "ficha": [
-        {
-          "rotulo": "Superfície",
-          "valor": "Lisa"
-        }
-      ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
-    },
-    "joola-tango-ultra": {
-      "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-tango-ultra",
-      "consultadoEm": "2026-08-04",
-      "ficha": [
-        {
-          "rotulo": "Superfície",
-          "valor": "Lisa"
-        }
-      ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
-    },
-    "joola-cwx": {
-      "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-cwx",
-      "consultadoEm": "2026-08-04",
-      "ficha": [
-        {
-          "rotulo": "Superfície",
-          "valor": "Lisa"
-        }
-      ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-zack": {
       "confianca": "revendedor",
@@ -11426,8 +11366,8 @@
     },
     "joola-vyzaryz-trinity": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-vyzaryz-trinity",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-vyzaryz-trinity",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
@@ -11438,7 +11378,7 @@
           "valor": "Madeira com fibras PBO-C e AL-C cruzadas"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-zhou-qihao-45": {
       "confianca": "revendedor",
@@ -11474,15 +11414,15 @@
     },
     "joola-vyzaryz-freeze-hrd": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-vyzaryz-freeze-hrd",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/raquete-vyzaryz-freeze-hrd",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
           "valor": "Lâmina avulsa"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos."
     },
     "joola-vyzaryz-hybrid": {
       "confianca": "revendedor",
@@ -11502,8 +11442,8 @@
     },
     "joola-nobilis": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-nobilis",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-nobilis-pbo-c",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
@@ -11514,7 +11454,7 @@
           "valor": "Madeira com fibra PBO-c"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-zelebro": {
       "confianca": "revendedor",
@@ -11534,8 +11474,8 @@
     },
     "joola-proline-aw7": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-proline-aw7",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-proline-aw7",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
@@ -11546,12 +11486,12 @@
           "valor": "7 camadas de madeira pura"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos."
     },
     "joola-proline-one": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-proline-one",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-proline-one",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
@@ -11562,12 +11502,12 @@
           "valor": "7 camadas com carbono 3K-c interno e capa externa de hinoki"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos."
     },
     "joola-tezzo-warrior": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-tezzo-warrior",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-tezzo-warrior",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
@@ -11578,7 +11518,7 @@
           "valor": "5+2 camadas: fibra KL-c interna e capa externa de limba"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos."
     },
     "joola-tezzo-spartan": {
       "confianca": "revendedor",
@@ -11614,8 +11554,8 @@
     },
     "joola-tezzo-guardian": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-tezzo-guardian",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/tezzo-guardian-table-tennis-blade",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
@@ -11626,7 +11566,7 @@
           "valor": "Madeira pura (all-wood)"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-xylo-7": {
       "confianca": "revendedor",
@@ -11662,8 +11602,8 @@
     },
     "joola-proline-aw5": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-proline-aw5",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-proline-aw5",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
@@ -11674,12 +11614,12 @@
           "valor": "5 camadas de madeira pura"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos."
     },
     "joola-cwx-blade": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-cwx-blade",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-chen-weixing",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
@@ -11690,7 +11630,7 @@
           "valor": "Construção defensiva"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos. Estava esgotada na loja em 2026-08-05; o preço é o que a loja publica."
     },
     "joola-chen-defender": {
       "confianca": "revendedor",
@@ -11726,8 +11666,8 @@
     },
     "joola-baseline-off": {
       "confianca": "revendedor",
-      "fonte": "https://www.megaspin.net/store/default.asp?pid=j-baseline-off",
-      "consultadoEm": "2026-08-04",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-blade-baseline-off-fl",
+      "consultadoEm": "2026-08-05",
       "ficha": [
         {
           "rotulo": "Tipo de lâmina",
@@ -11738,7 +11678,7 @@
           "valor": "Madeira pura (all-wood)"
         }
       ],
-      "nota": "Preço e foto conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido, e converter daria um número que muda todo dia. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço conferido na loja oficial da JOOLA no Brasil. A foto e a construção vêm da Megaspin, nos Estados Unidos."
     },
     "joola-challenger-off": {
       "confianca": "revendedor",
@@ -13267,6 +13207,54 @@
         }
       ],
       "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "joola-calderano-ary-x": {
+      "confianca": "oficial",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-hugo-calderano-ary-x",
+      "consultadoEm": "2026-08-05",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Camadas externas de Koto com fibra ARY-X, livre de carbono, logo abaixo"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na loja oficial da JOOLA no Brasil."
+    },
+    "joola-proline-iac": {
+      "confianca": "oficial",
+      "fonte": "https://www.joola.com.br/products/raquete-blade-proline-iac-fl",
+      "consultadoEm": "2026-08-05",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Camada externa de Koto com fibra de carbono KL-c em posição interna, junto ao núcleo"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na loja oficial da JOOLA no Brasil."
+    },
+    "joola-fs-5": {
+      "confianca": "oficial",
+      "fonte": "https://www.joola.com.br/products/raquete-joola-fs-5",
+      "consultadoEm": "2026-08-05",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira: externas de Limba, intermediárias de Koto e núcleo de Kiri"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na loja oficial da JOOLA no Brasil."
     }
   }
 }

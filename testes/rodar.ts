@@ -787,13 +787,29 @@ for (const mat of MATERIAIS) {
   const f = fabricantePorId(mat.id)?.ficha;
   if (/mina/i.test(mat.tipo) && f && NOME_DIZ_FIBRA.test(mat.nome)
       && familiaDaLamina(f) === 'madeira-pura') contradicoes++;
-  // Todo material precisa de ALGO no modo Simples: bolinhas ou tradução.
-  if (!temDesempenho(mat) && traduzirFicha(mat.tipo, f) === null) semLeituraNenhuma++;
+  /* Todo material precisa de ALGO no modo Simples. A tela tem TRÊS fontes, nesta
+     ordem: bolinhas (specs), resumo traduzido da ficha, e o texto editorial como
+     último recurso. A asserção antiga só contava as duas primeiras e por isso
+     afirmava mais do que a tela promete — quebrou na colheita da JOOLA com dois
+     materiais que a loja não descreve, e que na tela aparecem normalmente pelo
+     editorial. Corrigida para medir o que o cartão realmente faz. */
+  if (!temDesempenho(mat) && traduzirFicha(mat.tipo, f) === null
+      && !mat.simples.frase.trim()) semLeituraNenhuma++;
 }
 afirma(contradicoes === 0,
   `nenhuma lâmina com fibra no nome pode ser classificada como madeira pura (achadas: ${contradicoes})`);
 afirma(semLeituraNenhuma === 0,
-  `todo material tem o que dizer no modo Simples (mudos: ${semLeituraNenhuma})`);
+  `todo material tem o que dizer no modo Simples (mudos: ${semLeituraNenhuma})`);
+
+/* E um PISO DE COBERTURA da tradução, separado. Sem ele, uma colheita futura que
+   entrasse com 300 lâminas sem ficha passaria calada: cada uma teria editorial e
+   a asserção acima continuaria verde, enquanto o modo Simples voltaria a ser
+   texto de colheita para meio catálogo. */
+const comTraducao = MATERIAIS.filter(
+  (mat) => traduzirFicha(mat.tipo, fabricantePorId(mat.id)?.ficha) !== null,
+).length;
+afirma(comTraducao / MATERIAIS.length >= 0.9,
+  `a tradução da ficha cobre ao menos 90% do catálogo (${comTraducao} de ${MATERIAIS.length})`);
 
 // As tabelas são configuração exportada (D-07): toda família precisa de texto.
 for (const k of Object.keys(LAMINA)) {

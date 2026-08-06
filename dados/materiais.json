@@ -11436,6 +11436,774 @@
         "tag": "A do Ma Long — US$ 800",
         "frase": "Nota 9,6 com 17 avaliações. É a versão NATIONAL: o lote separado para a seleção chinesa. A Hurricane Long 5 comum, essa sim de prateleira, tem 86 avaliações e a mesma nota — por uma fração do preço."
       }
+    },
+    {
+      "id": "joola-dynaryz-agr",
+      "nome": "Dynaryz AGR",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 60,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "O topo da linha JOOLA",
+        "frase": "Esponja dura da série Hyper Bounce com capa Advanced Traction. É a de ataque mais dura da linha."
+      }
+    },
+    {
+      "id": "joola-dynaryz-acc",
+      "nome": "Dynaryz ACC",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 60,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Dynaryz de esponja média",
+        "frase": "Mesma família da AGR com esponja menos dura — a versão que pede menos aceleração para abrir."
+      }
+    },
+    {
+      "id": "joola-dynaryz-cmd",
+      "nome": "Dynaryz CMD",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 60,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Dynaryz com capa CMD",
+        "frase": "Terceira superfície da linha Dynaryz, entre a AGR e a ACC em exigência."
+      }
+    },
+    {
+      "id": "joola-dynaryz-zgr",
+      "nome": "Dynaryz ZGR",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 60,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A híbrida da linha de topo",
+        "frase": "Capa aderente sobre a esponja Hyper Bounce: giro de estilo chinês com a saída rápida da tensão alemã."
+      }
+    },
+    {
+      "id": "joola-dynaryz-zgx",
+      "nome": "Dynaryz ZGX",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 60,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A ZGR com outra esponja",
+        "frase": "Mesma capa aderente da ZGR sobre esponja diferente."
+      }
+    },
+    {
+      "id": "joola-dynaryz-inferno",
+      "nome": "Dynaryz Inferno",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 70,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da linha",
+        "frase": "US$ 70, a borracha mais cara da JOOLA no catálogo."
+      }
+    },
+    {
+      "id": "joola-rhyzer-pro-45",
+      "nome": "Rhyzer Pro 45",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 55,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Rhyzer Pro na esponja 45",
+        "frase": "Linha Rhyzer Pro, vendida por grau de esponja — esta é a de 45."
+      }
+    },
+    {
+      "id": "joola-rhyzer-pro-50",
+      "nome": "Rhyzer Pro 50",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 55,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Rhyzer Pro mais dura",
+        "frase": "Esponja 50: pede aceleração de braço para abrir, e devolve na batida forte."
+      }
+    },
+    {
+      "id": "joola-rhyzer-43",
+      "nome": "Rhyzer 43",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Rhyzer de entrada",
+        "frase": "Esponja 43, a mais macia da família Rhyzer."
+      }
+    },
+    {
+      "id": "joola-rhyzen-cmd",
+      "nome": "Rhyzen CMD",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Rhyzen com capa CMD",
+        "frase": "Linha intermediária da JOOLA, um degrau abaixo da Dynaryz em preço e exigência."
+      }
+    },
+    {
+      "id": "joola-rhyzen-zgx",
+      "nome": "Rhyzen ZGX",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A híbrida acessível",
+        "frase": "Capa aderente na linha intermediária: giro de estilo chinês sem o preço da Dynaryz."
+      }
+    },
+    {
+      "id": "joola-rhyzen-fire",
+      "nome": "Rhyzen Fire",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Rhyzen de ataque",
+        "frase": "Versão mais rápida da linha Rhyzen."
+      }
+    },
+    {
+      "id": "joola-rhyzen-ice",
+      "nome": "Rhyzen Ice",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Rhyzen de controle",
+        "frase": "A irmã mais contida da Fire, na mesma linha."
+      }
+    },
+    {
+      "id": "joola-tronix-cmd",
+      "nome": "Tronix CMD",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Tronix com capa CMD",
+        "frase": "Linha Tronix, entre a Rhyzen e a Dynaryz."
+      }
+    },
+    {
+      "id": "joola-tronix-acc",
+      "nome": "Tronix ACC",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Tronix com capa ACC",
+        "frase": "Mesma linha da CMD, com a superfície ACC."
+      }
+    },
+    {
+      "id": "joola-tronix-zgr",
+      "nome": "Tronix ZGR",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A híbrida da linha Tronix",
+        "frase": "Capa aderente sobre esponja tensionada."
+      }
+    },
+    {
+      "id": "joola-energy",
+      "nome": "Energy",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 30,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha de entrada",
+        "frase": "US$ 30, uma das mais baratas da marca."
+      }
+    },
+    {
+      "id": "joola-micron",
+      "nome": "Micron",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 30,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Clássica de entrada",
+        "frase": "Linha antiga da JOOLA, ainda vendida."
+      }
+    },
+    {
+      "id": "joola-express-ultra",
+      "nome": "Express Ultra",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 35,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Para os primeiros meses",
+        "frase": "Borracha de aprendizado, sem tensionamento declarado."
+      }
+    },
+    {
+      "id": "joola-tango-ultra",
+      "nome": "Tango Ultra",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 35,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A herdeira da Tango",
+        "frase": "A linha Tango é anterior à Golden Tango, que a Dynaryz ZGR sucedeu."
+      }
+    },
+    {
+      "id": "joola-cwx",
+      "nome": "CWX",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A borracha de defesa da JOOLA",
+        "frase": "Feita para cortar e devolver, não para finalizar."
+      }
+    },
+    {
+      "id": "joola-zack",
+      "nome": "Zack",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 30,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Entrada barata",
+        "frase": "US$ 30 na loja americana."
+      }
+    },
+    {
+      "id": "joola-samba",
+      "nome": "Samba",
+      "marca": "Joola",
+      "tipo": "Borracha",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 34,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais barata da JOOLA aqui",
+        "frase": "US$ 34, a de menor preço da marca no catálogo."
+      }
+    },
+    {
+      "id": "joola-vyzaryz-trinity",
+      "nome": "Vyzaryz Trinity",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 275,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais cara da JOOLA",
+        "frase": "US$ 275, o topo da linha de lâminas da marca."
+      }
+    },
+    {
+      "id": "joola-zhou-qihao-45",
+      "nome": "Zhou Qihao Hyper ARY-C 45",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 220,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A lâmina de assinatura do Zhou Qihao",
+        "frase": "Fibra ARY-C, a mesma família da lâmina do Calderano."
+      }
+    },
+    {
+      "id": "joola-rossi-emotion-pbo-c",
+      "nome": "Rossi Emotion PBO-c",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 220,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Assinatura de Rossi, fibra PBO-c",
+        "frase": "A PBO-c é a fibra que a JOOLA usa nas lâminas de topo."
+      }
+    },
+    {
+      "id": "joola-vyzaryz-freeze-hrd",
+      "nome": "Vyzaryz Freeze HRD",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 220,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Vyzaryz mais dura",
+        "frase": "Versão HRD da linha Vyzaryz."
+      }
+    },
+    {
+      "id": "joola-vyzaryz-hybrid",
+      "nome": "Vyzaryz Hybrid",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 250,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A híbrida da linha Vyzaryz",
+        "frase": "US$ 250, a segunda mais cara da marca aqui."
+      }
+    },
+    {
+      "id": "joola-nobilis",
+      "nome": "Nobilis PBO-c",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 190,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Classificada como muito rápida",
+        "frase": "A loja a coloca na categoria \"very fast\", junto com a ZeLeBRO."
+      }
+    },
+    {
+      "id": "joola-zelebro",
+      "nome": "ZeLeBRO PBO-c",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 170,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Muito rápida, fibra PBO-c",
+        "frase": "Mesma categoria da Nobilis, US$ 20 mais barata."
+      }
+    },
+    {
+      "id": "joola-proline-aw7",
+      "nome": "PROline AW7",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 90,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras, sem fibra",
+        "frase": "AW na nomenclatura da JOOLA é all-wood: sete camadas, nenhuma fibra."
+      }
+    },
+    {
+      "id": "joola-proline-one",
+      "nome": "PROline One",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 120,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "O topo da linha PROline",
+        "frase": "US$ 120, a mais cara das PROline."
+      }
+    },
+    {
+      "id": "joola-tezzo-warrior",
+      "nome": "Tezzo Warrior",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 100,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Tezzo de ataque",
+        "frase": "Linha Tezzo, a faixa intermediária de lâminas da JOOLA."
+      }
+    },
+    {
+      "id": "joola-tezzo-spartan",
+      "nome": "Tezzo Spartan",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 90,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Tezzo de ataque, mais barata",
+        "frase": "US$ 90 na mesma linha da Warrior."
+      }
+    },
+    {
+      "id": "joola-tezzo-paladin",
+      "nome": "Tezzo Paladin",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 70,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Tezzo equilibrada",
+        "frase": "Meio da linha Tezzo em preço e proposta."
+      }
+    },
+    {
+      "id": "joola-tezzo-guardian",
+      "nome": "Tezzo Guardian",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 65,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Tezzo de controle",
+        "frase": "A mais contida da linha."
+      }
+    },
+    {
+      "id": "joola-xylo-7",
+      "nome": "Xylo 7",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 90,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Sete madeiras",
+        "frase": "O 7 do nome é o número de camadas."
+      }
+    },
+    {
+      "id": "joola-classic-c-off",
+      "nome": "Classic Carbon Off",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 55,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono a US$ 55",
+        "frase": "Uma das lâminas de carbono mais baratas da marca."
+      }
+    },
+    {
+      "id": "joola-proline-aw5",
+      "nome": "PROline AW5",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 100,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Cinco madeiras, allround",
+        "frase": "AW5: cinco camadas, nenhuma fibra. A loja a classifica como allround."
+      }
+    },
+    {
+      "id": "joola-cwx-blade",
+      "nome": "CWX",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 60,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A lâmina de defesa da JOOLA",
+        "frase": "Classificada pela loja na categoria defensiva."
+      }
+    },
+    {
+      "id": "joola-chen-defender",
+      "nome": "Chen Defender",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 55,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina de cortador",
+        "frase": "Feita para defender longe da mesa."
+      }
+    },
+    {
+      "id": "joola-baseline-carbon",
+      "nome": "BASEline Carbon",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "atacar",
+      "preco": 50,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono de entrada",
+        "frase": "US$ 50, a lâmina de carbono mais barata da JOOLA."
+      }
+    },
+    {
+      "id": "joola-baseline-off",
+      "nome": "BASEline Offensive",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "atacar",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A BASEline de ataque",
+        "frase": "Linha de entrada da marca."
+      }
+    },
+    {
+      "id": "joola-challenger-off",
+      "nome": "Challenger Off",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "atacar",
+      "preco": 35,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A mais barata de ataque",
+        "frase": "US$ 35 na linha Challenger."
+      }
+    },
+    {
+      "id": "joola-challenger-c",
+      "nome": "Challenger Carbon",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "atacar",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Carbono na linha de entrada",
+        "frase": "Challenger com camada de carbono."
+      }
+    },
+    {
+      "id": "joola-classic-all",
+      "nome": "Classic All",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 35,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Allround clássica",
+        "frase": "Linha Classic, allround, US$ 35."
+      }
+    },
+    {
+      "id": "joola-rossi-jr",
+      "nome": "Rossi Jr",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 38,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina infantil",
+        "frase": "A loja a classifica na categoria de juniores: cabo e peso menores."
+      }
+    },
+    {
+      "id": "joola-baseline-junior",
+      "nome": "BASEline Junior",
+      "marca": "Joola",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 30,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A infantil mais barata",
+        "frase": "US$ 30, categoria de juniores."
+      }
     }
   ]
 }

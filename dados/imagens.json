@@ -4068,6 +4068,294 @@
       "fonte": "Paddle Palace",
       "fonteUrl": "https://www.paddlepalace.com/DHS-Hurricane-Long-5-National-W968/productinfo/SCHL5N/",
       "consultadoEm": "2026-08-02"
+    },
+    "joola-dynaryz-agr": {
+      "arquivo": "joola-dynaryz-agr.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-agr",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-dynaryz-acc": {
+      "arquivo": "joola-dynaryz-acc.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-acc",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-dynaryz-cmd": {
+      "arquivo": "joola-dynaryz-cmd.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-cmd",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-dynaryz-zgr": {
+      "arquivo": "joola-dynaryz-zgr.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-zgr",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-dynaryz-zgx": {
+      "arquivo": "joola-dynaryz-zgx.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-zgx",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-dynaryz-inferno": {
+      "arquivo": "joola-dynaryz-inferno.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-dynaryz-inferno",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-rhyzer-pro-45": {
+      "arquivo": "joola-rhyzer-pro-45.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-rhyzer-pro-45",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-rhyzer-pro-50": {
+      "arquivo": "joola-rhyzer-pro-50.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-rhyzer-pro-50",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-rhyzer-43": {
+      "arquivo": "joola-rhyzer-43.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-rhyzer-43",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-rhyzen-cmd": {
+      "arquivo": "joola-rhyzen-cmd.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-rhyzen-cmd",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-rhyzen-zgx": {
+      "arquivo": "joola-rhyzen-zgx.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-rhyzen-zgx",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-rhyzen-fire": {
+      "arquivo": "joola-rhyzen-fire.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-rhyzen-fire",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-rhyzen-ice": {
+      "arquivo": "joola-rhyzen-ice.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-rhyzen-ice",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-tronix-cmd": {
+      "arquivo": "joola-tronix-cmd.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-tronix-cmd",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-tronix-acc": {
+      "arquivo": "joola-tronix-acc.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-tronix-acc",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-tronix-zgr": {
+      "arquivo": "joola-tronix-zgr.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-tronix-zgr",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-energy": {
+      "arquivo": "joola-energy.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-energy",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-micron": {
+      "arquivo": "joola-micron.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-micron",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-express-ultra": {
+      "arquivo": "joola-express-ultra.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-express-ultra",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-tango-ultra": {
+      "arquivo": "joola-tango-ultra.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-tango-ultra",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-cwx": {
+      "arquivo": "joola-cwx.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-cwx",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-zack": {
+      "arquivo": "joola-zack.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-zack",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-samba": {
+      "arquivo": "joola-samba.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-samba",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-vyzaryz-trinity": {
+      "arquivo": "joola-vyzaryz-trinity.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-vyzaryz-trinity",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-zhou-qihao-45": {
+      "arquivo": "joola-zhou-qihao-45.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-zhou-qihao-45",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-rossi-emotion-pbo-c": {
+      "arquivo": "joola-rossi-emotion-pbo-c.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-rossi-emotion-pbo-c",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-vyzaryz-freeze-hrd": {
+      "arquivo": "joola-vyzaryz-freeze-hrd.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-vyzaryz-freeze-hrd",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-vyzaryz-hybrid": {
+      "arquivo": "joola-vyzaryz-hybrid.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-vyzaryz-hybrid",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-nobilis": {
+      "arquivo": "joola-nobilis.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-nobilis",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-zelebro": {
+      "arquivo": "joola-zelebro.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-zelebro",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-proline-aw7": {
+      "arquivo": "joola-proline-aw7.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-proline-aw7",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-proline-one": {
+      "arquivo": "joola-proline-one.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-proline-one",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-tezzo-warrior": {
+      "arquivo": "joola-tezzo-warrior.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-tezzo-warrior",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-tezzo-spartan": {
+      "arquivo": "joola-tezzo-spartan.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-tezzo-spartan",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-tezzo-paladin": {
+      "arquivo": "joola-tezzo-paladin.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-tezzo-paladin",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-tezzo-guardian": {
+      "arquivo": "joola-tezzo-guardian.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-tezzo-guardian",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-xylo-7": {
+      "arquivo": "joola-xylo-7.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-xylo-7",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-classic-c-off": {
+      "arquivo": "joola-classic-c-off.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-classic-c-off",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-proline-aw5": {
+      "arquivo": "joola-proline-aw5.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-proline-aw5",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-cwx-blade": {
+      "arquivo": "joola-cwx-blade.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-cwx-blade",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-chen-defender": {
+      "arquivo": "joola-chen-defender.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-chen-defender",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-baseline-carbon": {
+      "arquivo": "joola-baseline-carbon.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-baseline-carbon",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-baseline-off": {
+      "arquivo": "joola-baseline-off.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-baseline-off",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-challenger-off": {
+      "arquivo": "joola-challenger-off.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-challenger-off",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-challenger-c": {
+      "arquivo": "joola-challenger-c.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-challenger-c",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-classic-all": {
+      "arquivo": "joola-classic-all.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-classic-all",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-rossi-jr": {
+      "arquivo": "joola-rossi-jr.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-rossi-jr",
+      "consultadoEm": "2026-08-04"
+    },
+    "joola-baseline-junior": {
+      "arquivo": "joola-baseline-junior.webp",
+      "fonte": "Megaspin (EUA)",
+      "fonteUrl": "https://www.megaspin.net/store/default.asp?pid=j-baseline-junior",
+      "consultadoEm": "2026-08-04"
     }
   }
 }

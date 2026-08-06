@@ -3079,24 +3079,6 @@
       "fonteUrl": "https://americatt.net/victas-triple-regular/",
       "consultadoEm": "2026-08-01"
     },
-    "victas-vo-101": {
-      "arquivo": "victas-vo-101.webp",
-      "fonte": "AmericaTT",
-      "fonteUrl": "https://americatt.net/victas-vo-101/",
-      "consultadoEm": "2026-08-01"
-    },
-    "victas-vo-102": {
-      "arquivo": "victas-vo-102.webp",
-      "fonte": "AmericaTT",
-      "fonteUrl": "https://americatt.net/victas-vo-102/",
-      "consultadoEm": "2026-08-01"
-    },
-    "victas-vo-103": {
-      "arquivo": "victas-vo-103.webp",
-      "fonte": "AmericaTT",
-      "fonteUrl": "https://americatt.net/victas-vo-103/",
-      "consultadoEm": "2026-08-01"
-    },
     "victas-koki-niwa-wood": {
       "arquivo": "victas-koki-niwa-wood.webp",
       "fonte": "AmericaTT",
@@ -3421,12 +3403,6 @@
       "fonteUrl": "https://americatt.net/borracha-nittaku-hammond-cr/",
       "consultadoEm": "2026-08-01"
     },
-    "nittaku-hammond-fa": {
-      "arquivo": "nittaku-hammond-fa.webp",
-      "fonte": "AmericaTT",
-      "fonteUrl": "https://americatt.net/borracha-nittaku-hammond-fa/",
-      "consultadoEm": "2026-08-01"
-    },
     "nittaku-hammond-power": {
       "arquivo": "nittaku-hammond-power.webp",
       "fonte": "AmericaTT",
@@ -3467,18 +3443,6 @@
       "arquivo": "nittaku-moristo-df.webp",
       "fonte": "AmericaTT",
       "fonteUrl": "https://americatt.net/borracha-nittaku-moristo-df/",
-      "consultadoEm": "2026-08-01"
-    },
-    "nittaku-sonic-ar": {
-      "arquivo": "nittaku-sonic-ar.webp",
-      "fonte": "AmericaTT",
-      "fonteUrl": "https://americatt.net/borracha-nittaku-sonic-ar/",
-      "consultadoEm": "2026-08-01"
-    },
-    "nittaku-specialist-x": {
-      "arquivo": "nittaku-specialist-x.webp",
-      "fonte": "AmericaTT",
-      "fonteUrl": "https://americatt.net/borracha-nittaku-specialist-x/",
       "consultadoEm": "2026-08-01"
     },
     "nittaku-spintial": {

@@ -8961,51 +8961,6 @@
       }
     },
     {
-      "id": "victas-vo-101",
-      "nome": "VO-101",
-      "marca": "Victas",
-      "tipo": "Borracha",
-      "nivel": "Intermediário",
-      "intencao": "controlar",
-      "preco": 292,
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "Fora do Revspin",
-        "frase": "R$ 292. A linha VO não é registrada na comunidade internacional."
-      }
-    },
-    {
-      "id": "victas-vo-102",
-      "nome": "VO-102",
-      "marca": "Victas",
-      "tipo": "Borracha",
-      "nivel": "Intermediário",
-      "intencao": "equilibrado",
-      "preco": 292,
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "A VO do meio",
-        "frase": "Mesmo preço das irmãs: R$ 292."
-      }
-    },
-    {
-      "id": "victas-vo-103",
-      "nome": "VO-103",
-      "marca": "Victas",
-      "tipo": "Borracha",
-      "nivel": "Intermediário",
-      "intencao": "atacar",
-      "preco": 292,
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "A VO mais rápida",
-        "frase": "Mesmo preço das irmãs: R$ 292."
-      }
-    },
-    {
       "id": "victas-koki-niwa-wood",
       "nome": "Koki Niwa Wood",
       "marca": "Victas",
@@ -9816,21 +9771,6 @@
       }
     },
     {
-      "id": "nittaku-hammond-fa",
-      "nome": "Hammond FA",
-      "marca": "Nittaku",
-      "tipo": "Borracha",
-      "nivel": "Iniciante",
-      "intencao": "controlar",
-      "preco": 210,
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "A mais barata da marca",
-        "frase": "R$ 210 — a borracha Nittaku mais barata do catálogo."
-      }
-    },
-    {
       "id": "nittaku-hammond-power",
       "nome": "Hammond Power",
       "marca": "Nittaku",
@@ -9933,36 +9873,6 @@
       "simples": {
         "tag": "A única Moristo lisa aqui",
         "frase": "As outras três Moristo da loja são de pinos e ficaram adiadas. Esta é lisa."
-      }
-    },
-    {
-      "id": "nittaku-sonic-ar",
-      "nome": "Sonic AR",
-      "marca": "Nittaku",
-      "tipo": "Borracha",
-      "nivel": "Intermediário",
-      "intencao": "atacar",
-      "preco": 278,
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "Fora do Revspin",
-        "frase": "R$ 278."
-      }
-    },
-    {
-      "id": "nittaku-specialist-x",
-      "nome": "Specialist X",
-      "marca": "Nittaku",
-      "tipo": "Borracha",
-      "nivel": "Intermediário",
-      "intencao": "equilibrado",
-      "preco": 329,
-      "rating": 4.5,
-      "reviews": 0,
-      "simples": {
-        "tag": "Fora do Revspin",
-        "frase": "R$ 329."
       }
     },
     {

@@ -4107,30 +4107,6 @@
       "nota": "Preço lido da ficha de dados que a loja publica na página do produto."
     },
     {
-      "materialId": "victas-vo-101",
-      "loja": "AmericaTT",
-      "preco": 292,
-      "url": "https://americatt.net/victas-vo-101/",
-      "atualizadoEm": "2026-08-01",
-      "nota": "Preço lido da ficha de dados que a loja publica na página do produto."
-    },
-    {
-      "materialId": "victas-vo-102",
-      "loja": "AmericaTT",
-      "preco": 292,
-      "url": "https://americatt.net/victas-vo-102/",
-      "atualizadoEm": "2026-08-01",
-      "nota": "Preço lido da ficha de dados que a loja publica na página do produto."
-    },
-    {
-      "materialId": "victas-vo-103",
-      "loja": "AmericaTT",
-      "preco": 292,
-      "url": "https://americatt.net/victas-vo-103/",
-      "atualizadoEm": "2026-08-01",
-      "nota": "Preço lido da ficha de dados que a loja publica na página do produto."
-    },
-    {
       "materialId": "victas-koki-niwa-wood",
       "loja": "AmericaTT",
       "preco": 938,
@@ -4563,14 +4539,6 @@
       "nota": "Preço lido da ficha de dados que a loja publica na página do produto."
     },
     {
-      "materialId": "nittaku-hammond-fa",
-      "loja": "AmericaTT",
-      "preco": 210,
-      "url": "https://americatt.net/borracha-nittaku-hammond-fa/",
-      "atualizadoEm": "2026-08-01",
-      "nota": "Preço lido da ficha de dados que a loja publica na página do produto."
-    },
-    {
       "materialId": "nittaku-hammond-power",
       "loja": "AmericaTT",
       "preco": 292,
@@ -4623,22 +4591,6 @@
       "loja": "AmericaTT",
       "preco": 289,
       "url": "https://americatt.net/borracha-nittaku-moristo-df/",
-      "atualizadoEm": "2026-08-01",
-      "nota": "Preço lido da ficha de dados que a loja publica na página do produto."
-    },
-    {
-      "materialId": "nittaku-sonic-ar",
-      "loja": "AmericaTT",
-      "preco": 278,
-      "url": "https://americatt.net/borracha-nittaku-sonic-ar/",
-      "atualizadoEm": "2026-08-01",
-      "nota": "Preço lido da ficha de dados que a loja publica na página do produto."
-    },
-    {
-      "materialId": "nittaku-specialist-x",
-      "loja": "AmericaTT",
-      "preco": 329,
-      "url": "https://americatt.net/borracha-nittaku-specialist-x/",
       "atualizadoEm": "2026-08-01",
       "nota": "Preço lido da ficha de dados que a loja publica na página do produto."
     },

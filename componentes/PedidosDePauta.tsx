@@ -21,7 +21,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import {
-  validarPedido, parecidos, ordenarPedidos, atendidos,
+  validarPedido, parecidos, ordenarPedidos, atendidos, aprovados,
   repositorioPedidos, novoIdPedido,
   TEMA_MAXIMO, DETALHE_MAXIMO,
   type PedidoDePauta, type ProblemaPedido, type OrdemPedido,
@@ -50,7 +50,11 @@ export function PedidosDePauta() {
   const [aviso, setAviso] = useState<{ tipo: 'ok' | 'erro'; texto: string } | null>(null);
 
   useEffect(() => {
-    repo.listar().then(setLista).catch(() => setLista([]));
+    /* `aprovados` aqui e não só no banco, de propósito. A RLS já filtra para o
+       visitante, mas devolve o pendente para quem está logado como moderador —
+       e o moderador abrindo /aprender veria, na lista pública, pedido que o
+       público não vê. A tela pública mostra o que é público, em qualquer papel. */
+    repo.listar().then((todos) => setLista(aprovados(todos))).catch(() => setLista([]));
   }, [repo]);
 
   const semelhantes = useMemo(
@@ -90,7 +94,7 @@ export function PedidosDePauta() {
       /* Recarrega em vez de inserir na mão: o pedido nasce pendente e NÃO deve
          aparecer na lista pública. Fingir que apareceu seria a tela mentindo
          sobre a própria moderação. */
-      repo.listar().then(setLista).catch(() => undefined);
+      repo.listar().then((todos) => setLista(aprovados(todos))).catch(() => undefined);
     } catch {
       setAviso({
         tipo: 'erro',

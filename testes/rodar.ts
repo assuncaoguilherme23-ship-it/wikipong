@@ -40,7 +40,7 @@ import { posicaoNaFaixa, fracaoNaFaixa, leituraDaPosicao } from '../src/logica/p
 import { similares, distancia, type Similar } from '../src/logica/similares.js';
 import { filtrarPorTexto } from '../src/logica/busca-material.js';
 import {
-  validarPedido, parecidos, ordenarPedidos, atendidos, type PedidoDePauta,
+  validarPedido, parecidos, ordenarPedidos, atendidos, aprovados, type PedidoDePauta,
 } from '../src/logica/pedidos-pauta.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
@@ -1168,6 +1168,19 @@ const antesDeOrdenar = comAtendido.map(p => p.id).join(',');
 ordenarPedidos(comAtendido, 'atendidos');
 afirma(comAtendido.map(p => p.id).join(',') === antesDeOrdenar,
   'ordenarPedidos nao muda a lista original');
+
+/* A lista publica mostra so' o aprovado. Nao basta a RLS: ela devolve o
+   pendente para quem esta' logado como moderador, e o moderador abrindo
+   /aprender veria na lista publica um pedido que o publico nao ve. */
+const mistura: PedidoDePauta[] = [
+  { id: '1', tema: 'aprovado', autor: 'A', criadoEm: '2026-08-01', status: 'aprovado' },
+  { id: '2', tema: 'esperando leitura', autor: 'B', criadoEm: '2026-08-02', status: 'pendente' },
+  { id: '3', tema: 'tirado do ar', autor: 'C', criadoEm: '2026-08-03', status: 'removido' },
+];
+afirma(aprovados(mistura).length === 1 && aprovados(mistura)[0].id === '1',
+  'a lista publica mostra so' + "'" + ' o aprovado, nem pendente nem removido');
+afirma(parecidos(aprovados(mistura), 'esperando leitura').length === 0,
+  'pedido pendente nao vaza nem pelos "ja pediram algo parecido"');
 
 /* Slug que nao existe em guias.tsx nao vira link: quem resolve isso e' o
    componente, que so' desenha "Virou guia" quando acha o titulo. Este modulo

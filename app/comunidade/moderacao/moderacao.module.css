@@ -194,3 +194,75 @@
   color: var(--cor-tinta-suave);
   max-width: 62ch;
 }
+
+/* ── Abas: avaliações × pedidos de guia ──
+   Ficam acima dos filtros de situação e são de nível diferente: aqui se escolhe
+   O QUE moderar; lá embaixo, qual recorte daquilo. Por isso não são chips. */
+.abas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+  margin-bottom: var(--esp-4);
+  border-bottom: 1px solid var(--cor-linha-forte);
+}
+
+.aba {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--esp-2);
+  padding: 0.55em 0.9em;
+  margin-bottom: -1px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--cor-tinta-suave);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.aba:hover {
+  color: var(--cor-tinta);
+}
+.abaAtiva {
+  color: var(--cor-tinta);
+  border-bottom-color: var(--cor-acento);
+}
+
+/* Quantos esperam decisão. Só aparece quando há algo esperando: um "0"
+   permanente é ruído que ensina a ignorar o número. */
+.esperando {
+  font-size: var(--texto-micro);
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  border-radius: 999px;
+  background: var(--cor-acento-escuro);
+  color: #fff;
+}
+
+/* ── Pedido de pauta ── */
+.temaPedido {
+  margin: var(--esp-2) 0 0;
+  font-weight: 700;
+  text-wrap: pretty;
+}
+
+.amarrar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--esp-2);
+  margin-top: var(--esp-3);
+}
+.amarrarRotulo {
+  font-size: var(--texto-mini);
+  color: var(--cor-tinta-suave);
+}
+.amarrar select {
+  font: inherit;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  padding: 0.3rem 0.55rem;
+}

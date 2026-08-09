@@ -160,7 +160,20 @@ export interface RepositorioPedidos {
   readonly somenteLocal: boolean;
   listar(): Promise<PedidoDePauta[]>;
   gravar(p: PedidoDePauta): Promise<void>;
+  /** Aprova, remove ou devolve à fila. Exige admin no banco. */
+  moderar(id: string, status: PedidoDePauta['status']): Promise<void>;
+  /**
+   * Amarra o pedido ao guia que nasceu dele — ou desamarra, com `null`.
+   *
+   * É o passo que fecha o laço: sem ele, aprovar um pedido só o tira da fila, e
+   * quem pediu nunca fica sabendo que foi atendido.
+   */
+  amarrarGuia(id: string, guiaSlug: string | null): Promise<void>;
 }
+
+/** O que o público vê: só o que passou pela leitura. */
+export const aprovados = (ps: readonly PedidoDePauta[]): PedidoDePauta[] =>
+  ps.filter((p) => p.status === 'aprovado');
 
 const CHAVE = 'wikipong:pedidos-pauta:v1';
 
@@ -177,6 +190,15 @@ export function repositorioPedidosLocal(): RepositorioPedidos {
     }
   };
 
+  const escrever = (ps: PedidoDePauta[]) => {
+    if (typeof localStorage === 'undefined') return;
+    try {
+      localStorage.setItem(CHAVE, JSON.stringify(ps));
+    } catch {
+      /* Quota estourada não pode virar tela branca. */
+    }
+  };
+
   return {
     rotulo: 'este navegador',
     somenteLocal: true,
@@ -184,12 +206,17 @@ export function repositorioPedidosLocal(): RepositorioPedidos {
       return ler();
     },
     async gravar(p) {
-      if (typeof localStorage === 'undefined') return;
-      try {
-        localStorage.setItem(CHAVE, JSON.stringify([...ler().filter((x) => x.id !== p.id), p]));
-      } catch {
-        /* Quota estourada não pode virar tela branca. */
-      }
+      /* Entra já aprovado, ao contrário do banco. Mesma razão das avaliações: a
+         moderação pressupõe um SEGUNDO par de olhos, e no seu próprio navegador
+         esse segundo par é você. Deixar 'pendente' aqui faria o pedido sumir na
+         hora de escrever, sem ninguém pra aprovar. */
+      escrever([...ler().filter((x) => x.id !== p.id), { ...p, status: 'aprovado' }]);
+    },
+    async moderar(id, status) {
+      escrever(ler().map((p) => (p.id === id ? { ...p, status } : p)));
+    },
+    async amarrarGuia(id, guiaSlug) {
+      escrever(ler().map((p) => (p.id === id ? { ...p, guiaSlug: guiaSlug ?? undefined } : p)));
     },
   };
 }
@@ -252,7 +279,26 @@ export function repositorioPedidosSupabase(url: string, chave: string): Reposito
       });
       if (!res.ok) throw new Error(`Supabase recusou o pedido (${res.status})`);
     },
+    async moderar(id, status) {
+      await remendar(id, { status }, 'a moderação');
+    },
+    async amarrarGuia(id, guiaSlug) {
+      await remendar(id, { guia_slug: guiaSlug }, 'a amarração ao guia');
+    },
   };
+
+  /* Os dois PATCH só passam para quem o banco reconhece como admin (política
+     "admin cuida dos pedidos", migração 009). Para qualquer outro papel o
+     Supabase responde 0 linhas alteradas ou recusa — e é assim que tem de ser,
+     porque a chave anônima está no bundle à vista de todos. */
+  async function remendar(id: string, corpo: object, oQue: string) {
+    const res = await fetch(`${base}?id=eq.${encodeURIComponent(id)}`, {
+      method: 'PATCH',
+      headers: { ...cabecalhos(chave, chaveEhJwt), Prefer: 'return=minimal' },
+      body: JSON.stringify(corpo),
+    });
+    if (!res.ok) throw new Error(`Supabase recusou ${oQue} (${res.status})`);
+  }
 }
 
 /** A mesma regra de cabeçalho do repositório de avaliações: `apikey` sempre;

@@ -21,7 +21,7 @@
  */
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { ordenar, type Avaliacao } from '@/src/logica/avaliacoes';
 import { repositorio } from '@/src/logica/repositorio-avaliacoes';
@@ -30,7 +30,13 @@ import { sessaoAtual, souAdmin, sair, type Sessao } from '@/src/logica/sessao';
 import { materialPorId } from '@/componentes/dados-materiais';
 import { Estrelas } from '@/componentes/Estrelas';
 import { TagEstilo, TagNivel } from '@/componentes/TagEstilo';
+import {
+  repositorioPedidos, ordenarPedidos, type PedidoDePauta,
+} from '@/src/logica/pedidos-pauta';
+import { PainelPedidos } from './PainelPedidos';
 import estilos from './moderacao.module.css';
+
+type Aba = 'avaliacoes' | 'pedidos';
 
 const ROTULO_STATUS: Record<Avaliacao['status'], string> = {
   pendente: 'esperando',
@@ -56,6 +62,40 @@ export function ModeracaoCliente() {
   const [sessao, setSessao] = useState<Sessao | null | undefined>(undefined);
   const [admin, setAdmin] = useState<boolean | undefined>(undefined);
 
+  /* Os pedidos de pauta vivem AQUI, e não dentro do painel: é esta tela que põe
+     a contagem no rótulo da aba, e uma lista carregada nos dois lugares daria
+     duas contagens que podem discordar. */
+  const repoPedidos = useMemo(() => repositorioPedidos(), []);
+  const [aba, setAba] = useState<Aba>('avaliacoes');
+  const [pedidos, setPedidos] = useState<PedidoDePauta[] | null>(null);
+  const [erroPedidos, setErroPedidos] = useState<string | null>(null);
+
+  const recarregarPedidos = useCallback(
+    () =>
+      repoPedidos
+        .listar()
+        .then((ps) => {
+          setPedidos(ordenarPedidos(ps, 'recentes'));
+          setErroPedidos(null);
+        })
+        .catch(() => {
+          setPedidos([]);
+          setErroPedidos(
+            'Não consegui ler os pedidos. Se a migração 009 ainda não rodou, a tabela não existe.',
+          );
+        }),
+    [repoPedidos],
+  );
+
+  async function agirNoPedido(acao: () => Promise<void>) {
+    try {
+      await acao();
+      await recarregarPedidos();
+    } catch {
+      setErroPedidos('O banco recusou a mudança. Confira se esta conta está na tabela admins.');
+    }
+  }
+
   useEffect(() => {
     if (repo.somenteLocal) {
       setSessao(null);
@@ -71,7 +111,8 @@ export function ModeracaoCliente() {
   useEffect(() => {
     if (admin !== true) return;
     repo.listar().then((todas) => setLista(ordenar(todas, 'recentes')));
-  }, [repo, admin]);
+    recarregarPedidos();
+  }, [repo, admin, recarregarPedidos]);
 
   async function mudar(id: string, status: Avaliacao['status']) {
     await repo.moderar(id, status);
@@ -119,11 +160,6 @@ export function ModeracaoCliente() {
     );
   }
 
-  if (lista === null) return <p className={estilos.carregando}>Carregando…</p>;
-
-  const visiveis = filtro === 'todas' ? lista : lista.filter((a) => a.status === filtro);
-  const contar = (s: Avaliacao['status']) => lista.filter((a) => a.status === s).length;
-
   /* A barra de sessão sai daqui de propósito, e não de dentro do bloco de baixo:
      ela precisa aparecer TAMBÉM com a fila vazia. Antes ficava depois do retorno
      antecipado e sumia justo no momento em que é mais necessária — logo depois
@@ -142,10 +178,64 @@ export function ModeracaoCliente() {
     </p>
   );
 
+  /* As abas ficam ACIMA de todo retorno antecipado. Se ficassem lá embaixo,
+     bastaria a fila de avaliações estar vazia — que é o estado normal — para a
+     aba de pedidos sumir da tela, e ela é justamente a que o fundador veio ver. */
+  const esperandoPedidos = pedidos?.filter((p) => p.status === 'pendente').length ?? 0;
+  const abas = (
+    <div className={estilos.abas} role="tablist" aria-label="O que moderar">
+      {([
+        ['avaliacoes', 'Avaliações', lista?.filter((a) => a.status === 'pendente').length ?? 0],
+        ['pedidos', 'Pedidos de guia', esperandoPedidos],
+      ] as const).map(([id, rotulo, esperando]) => (
+        <button
+          key={id}
+          type="button"
+          role="tab"
+          aria-selected={aba === id}
+          className={`${estilos.aba} ${aba === id ? estilos.abaAtiva : ''}`}
+          onClick={() => setAba(id)}
+        >
+          {rotulo}
+          {esperando > 0 && <span className={`mono ${estilos.esperando}`}>{esperando}</span>}
+        </button>
+      ))}
+    </div>
+  );
+
+  if (aba === 'pedidos') {
+    return (
+      <>
+        {barra}
+        {abas}
+        <PainelPedidos
+          pedidos={pedidos}
+          erro={erroPedidos}
+          aoModerar={(id, status) => agirNoPedido(() => repoPedidos.moderar(id, status))}
+          aoAmarrarGuia={(id, slug) => agirNoPedido(() => repoPedidos.amarrarGuia(id, slug))}
+        />
+      </>
+    );
+  }
+
+  if (lista === null) {
+    return (
+      <>
+        {barra}
+        {abas}
+        <p className={estilos.carregando}>Carregando…</p>
+      </>
+    );
+  }
+
+  const visiveis = filtro === 'todas' ? lista : lista.filter((a) => a.status === filtro);
+  const contar = (s: Avaliacao['status']) => lista.filter((a) => a.status === s).length;
+
   if (lista.length === 0) {
     return (
       <>
         {barra}
+        {abas}
         <p className={estilos.vazio}>
           {repo.somenteLocal ? (
             <>Nada escrito neste navegador ainda. </>
@@ -164,6 +254,7 @@ export function ModeracaoCliente() {
   return (
     <>
       {barra}
+      {abas}
 
       <div className={estilos.filtros} role="group" aria-label="Filtrar por situação">
         {(['todas', 'pendente', 'aprovado', 'removido'] as const).map((f) => (

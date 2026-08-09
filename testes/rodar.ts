@@ -1126,6 +1126,25 @@ const todoTexto = [rAtaque.titulo, ...rAtaque.paragrafos, rAtaque.serve, rAtaque
 afirma(!/\d+[,.]\d/.test(todoTexto),
   'o resumo nao publica nota nem decimal do conjunto (nota combinada segue proibida)');
 
+// ───────── Fórum: a consulta que precisa nomear a chave ─────────
+/* Esta asserção olha o CÓDIGO-FONTE, e não uma função. É de propósito.
+
+   Existem duas ligações entre `topicos` e `respostas` (as respostas de um
+   tópico, e a resposta que resolveu, da migração 010). Com as duas no ar,
+   `respostas(*)` é ambíguo e o PostgREST responde 300 em vez de dados -- o
+   fórum lista vazio, e a tela trata falha de leitura como "não há nada", que é
+   o certo pra não dar tela branca e é o que faz o defeito passar despercebido.
+
+   Aconteceu de verdade: ficou quebrado em produção da 010 até ser encontrado
+   conferindo contra o banco. Nenhum teste de unidade pega isso, porque a string
+   da consulta só é julgada do outro lado da rede. O que dá pra garantir daqui é
+   que ninguém "simplifique" o nome da chave de volta. */
+const fonteDiscussoes = readFileSync('src/logica/discussoes.ts', 'utf8');
+afirma(fonteDiscussoes.includes('respostas!respostas_topico_id_fkey'),
+  'a consulta do forum nomeia a chave estrangeira (senao o PostgREST nao sabe por qual das duas embutir)');
+afirma(!/select=\*,respostas\(\*\)/.test(fonteDiscussoes),
+  'a forma ambigua `respostas(*)` nao pode voltar');
+
 // ───────── Fórum: busca e a resposta que resolveu ─────────
 const mensagemDeTeste = (id: string, texto: string, criadoEm: string): MensagemForum =>
   ({ id, autor: 'Alguém', texto, criadoEm });

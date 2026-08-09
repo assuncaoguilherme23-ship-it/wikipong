@@ -237,9 +237,21 @@ export function repositorioDiscussoesLocal(): RepositorioDiscussoes {
  * ligá-las — até aqui, tudo que se escrevia no fórum morria no localStorage de
  * quem escreveu.
  *
- * AS RESPOSTAS VÊM EMBUTIDAS numa consulta só (`select=*,respostas(*)`), pela
- * chave estrangeira. Uma requisição por tópico para buscar respostas seria N+1 —
- * numa lista de trinta tópicos, trinta e uma viagens.
+ * AS RESPOSTAS VÊM EMBUTIDAS numa consulta só, pela chave estrangeira. Uma
+ * requisição por tópico para buscar respostas seria N+1 — numa lista de trinta
+ * tópicos, trinta e uma viagens.
+ *
+ * E O NOME DA CHAVE VAI EXPLÍCITO no `select`. Existem DUAS ligações entre
+ * `topicos` e `respostas`, e elas apontam para lados opostos:
+ *
+ *   respostas.topico_id    → topicos.id     (as respostas de um tópico)
+ *   topicos.resposta_util  → respostas.id   (a resposta que resolveu, da 010)
+ *
+ * Com as duas no ar, `respostas(*)` virou ambíguo e o PostgREST passou a
+ * responder 300 (PGRST201) em vez de dados. A lista do fórum ficou vazia em
+ * produção, e ninguém viu, porque a tela trata falha de leitura como "não há
+ * nada" — que é o certo pra não dar tela branca, e é justamente o que faz um
+ * defeito destes passar despercebido.
  */
 export function repositorioDiscussoesSupabase(url: string, chave: string): RepositorioDiscussoes {
   const raiz = `${url.replace(/\/$/, '')}/rest/v1`;
@@ -297,7 +309,7 @@ export function repositorioDiscussoesSupabase(url: string, chave: string): Repos
     somenteLocal: false,
     async listar() {
       const res = await fetch(
-        `${raiz}/topicos?select=*,respostas(*)&order=criado_em.desc&limit=200`,
+        `${raiz}/topicos?select=*,respostas!respostas_topico_id_fkey(*)&order=criado_em.desc&limit=200`,
         { headers: cabecalhos() },
       );
       if (!res.ok) throw new Error(`Supabase respondeu ${res.status}`);

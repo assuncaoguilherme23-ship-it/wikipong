@@ -57,6 +57,7 @@ No menu da esquerda, abra o **SQL Editor** (ícone de terminal).
 11. Repita com **`supabase/008-indices-de-usuario.sql`**.
 12. Repita com **`supabase/009-pedidos-de-pauta.sql`**.
 13. Repita com **`supabase/010-resposta-que-resolveu.sql`**.
+14. Repita com **`supabase/011-endurece-a-funcao.sql`**.
 
 > **O `010` é obrigatório para as Discussões.** As tabelas do fórum já existiam
 > desde o `001`, mas o site só passou a falar com elas agora. O `010` acrescenta
@@ -66,6 +67,14 @@ No menu da esquerda, abra o **SQL Editor** (ícone de terminal).
 > **O `009` é obrigatório para a página `/aprender`.** É ele que cria a tabela
 > onde caem os pedidos de guia. Sem ele, o bloco "Falta um guia sobre o quê?"
 > aparece na página, mas todo envio devolve erro — a tabela não existe.
+
+> **Depois do `010`, um sexto aviso acende, e também de propósito**: *Signed-In
+> Users Can Execute SECURITY DEFINER Function*, apontando a
+> `marcar_resposta_util`. É o painel perguntando "você quis isso mesmo?" — e
+> quis: quem precisa chamar a função é justamente quem está logado. As três
+> saídas que ele sugere (revogar o EXECUTE, virar SECURITY INVOKER, tirar do
+> schema exposto) apagam o recurso em vez de consertá-lo. O motivo inteiro está
+> no cabeçalho do `011`, que endurece o que dava para endurecer.
 
 > **Depois do `008`, o painel fica com cinco avisos acesos de propósito**:
 > quatro *Unused Index* e o *Leaked Password Protection*. Três dos quatro são
@@ -296,6 +305,7 @@ que tem que ser.
 | O site parou de mostrar avaliações do nada | Projeto pausado por inatividade — clique em *Restore* |
 | Aparece logado, mas some em aba anônima | Falta rodar o `007`. O `004` tirou do visitante o direito de ler a comunidade; o admin não percebe porque está logado |
 | Aviso **Leaked Password Protection Disabled** que não sai | É recurso do plano **Pro**; no Free o botão não liga. Fica aceso de propósito — o WikiPong não usa senha, então não há o que proteger |
+| Aviso **Signed-In Users Can Execute SECURITY DEFINER Function** | Fica. É a `marcar_resposta_util`, e usuário logado é quem deve chamá-la. O porquê está no cabeçalho do `011` |
 | Aviso **Unindexed foreign keys** nas três tabelas | Rode o `008` |
 | Aviso **Unused Index** no `topicos_por_material` | Fica aceso de propósito. Ele está sem uso porque as discussões ainda não têm nada, não porque seja inútil — apagar agora obriga a recriar com a tabela cheia |
 | Aviso **Unused Index** nos três `*_por_usuario` | Fica. São os índices que o `008` criou, e índice novo nasce sem uso. Em tabela pequena o Postgres nem usa índice — ele passa a usar quando crescer, que é quando o índice vale |

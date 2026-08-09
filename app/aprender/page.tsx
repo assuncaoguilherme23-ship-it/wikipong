@@ -6,6 +6,7 @@
 import Link from 'next/link';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
+import { PedidosDePauta } from '@/componentes/PedidosDePauta';
 import { GUIAS } from './guias';
 import estilos from './aprender.module.css';
 
@@ -53,6 +54,10 @@ export default function PaginaAprender() {
             </Link>
           </li>
         </ul>
+
+        {/* Depois dos guias, nunca entre eles: em cima é o que a WikiPong
+            afirma, aqui embaixo é o que os leitores pedem (D-14). */}
+        <PedidosDePauta />
       </main>
 
       <Rodape />

@@ -1,0 +1,271 @@
+/* Pedidos de pauta — fecha o /aprender.
+   O bloco inteiro se separa dos guias por um fio e por um fundo diferente: em
+   cima é o que a WikiPong afirma, aqui é o que os leitores pedem (D-14). */
+
+.secao {
+  margin-top: clamp(2.5rem, 7vw, 4rem);
+  padding-top: clamp(1.75rem, 4vw, 2.5rem);
+  border-top: 1px solid var(--cor-linha-forte);
+}
+
+.cabeca {
+  max-width: 56ch;
+}
+.titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-3);
+  font-weight: 800;
+  margin: 0;
+}
+.lede {
+  color: var(--cor-tinta-suave);
+  margin-top: 0.5rem;
+  text-wrap: pretty;
+}
+
+/* ── Aviso de "isto não sai daqui" (D-16) ── */
+.avisoLocal {
+  margin-top: 1rem;
+  padding: 0.85rem 1.1rem;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-sm);
+  max-width: 62ch;
+}
+.avisoLocal strong {
+  color: var(--cor-tinta);
+}
+
+/* Só o espaçamento: a cor, o tamanho de alvo e os estados vêm de
+   `.botao-primario` / `.botao-secundario` do globals.css. Repintar o botão aqui
+   era como o texto virava quase preto sobre o verde no tema escuro — o token
+   `--cor-papel` inverte, e o `#fff` do botão global não. */
+.botaoAbrir {
+  margin-top: 1.25rem;
+}
+
+/* ── Avisos de resultado ── */
+.avisoOk,
+.avisoErro {
+  margin-top: 1rem;
+  padding: 0.85rem 1.1rem;
+  font-size: var(--texto-menor);
+  border-radius: var(--raio-sm);
+  max-width: 62ch;
+}
+.avisoOk {
+  color: var(--cor-tinta);
+  background: var(--cor-acento-suave);
+  border: 1px solid var(--cor-linha-forte);
+}
+.avisoErro {
+  color: var(--cor-erro);
+  background: var(--cor-superficie-2);
+  border: 1px solid var(--cor-erro);
+}
+
+/* ── Formulário ── */
+.form {
+  margin-top: 1.25rem;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  box-shadow: var(--sombra-cartao);
+}
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.rotulo {
+  font-weight: 600;
+  font-size: var(--texto-menor);
+}
+.opcional {
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-mudo);
+  font-weight: 400;
+}
+.entrada,
+.area {
+  font: inherit;
+  color: var(--cor-tinta);
+  background: var(--cor-papel);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  padding: 0.6rem 0.75rem;
+  width: 100%;
+}
+.area {
+  resize: vertical;
+  line-height: var(--altura-corpo);
+}
+.entrada::placeholder,
+.area::placeholder {
+  color: var(--cor-mudo);
+}
+.entrada[aria-invalid='true'],
+.area[aria-invalid='true'] {
+  border-color: var(--cor-erro);
+}
+.erro {
+  font-size: var(--texto-menor);
+  color: var(--cor-erro);
+}
+
+/* ── "Já pediram algo parecido" ── */
+.parecidos {
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-sm);
+  padding: 0.85rem 1rem;
+}
+.parecidosTitulo {
+  margin: 0 0 0.4rem;
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-tinta-suave);
+}
+.parecidosLista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: var(--texto-menor);
+}
+.parecidosNota {
+  margin: 0.6rem 0 0;
+  font-size: var(--texto-mini);
+  color: var(--cor-tinta-suave);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+.notaModeracao {
+  margin: 0;
+  font-size: var(--texto-mini);
+  color: var(--cor-tinta-suave);
+}
+
+/* ── Lista dos pedidos ── */
+.barraLista {
+  margin-top: clamp(1.75rem, 4vw, 2.5rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+.subtitulo {
+  margin: 0;
+  font-size: var(--texto-maior);
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.contagemAtendidos {
+  font-size: var(--texto-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+  font-weight: 400;
+}
+.ordem select {
+  font: inherit;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  padding: 0.35rem 0.6rem;
+}
+
+.lista {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 0.85rem;
+}
+.item,
+.itemAtendido {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  padding: 1rem 1.15rem;
+}
+/* Atendido ganha o acento no fundo, não uma tarja lateral. */
+.itemAtendido {
+  background: var(--cor-acento-suave);
+  border-color: var(--cor-linha-forte);
+}
+.tema {
+  margin: 0;
+  font-weight: 600;
+  text-wrap: pretty;
+}
+.detalhe {
+  margin: 0;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  line-height: var(--altura-corpo);
+  text-wrap: pretty;
+}
+.meta {
+  margin: 0.15rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: var(--texto-mini);
+  color: var(--cor-tinta-suave);
+}
+.autorLinha {
+  font-weight: 600;
+  color: var(--cor-tinta);
+}
+.data {
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+.virouGuia {
+  margin-top: 0.3rem;
+  font-size: var(--texto-menor);
+  font-weight: 600;
+  color: var(--cor-texto-acento);
+  text-decoration: none;
+}
+.virouGuia:hover {
+  text-decoration: underline;
+}
+
+.vazio {
+  margin-top: 1.25rem;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+}
+
+/* Nada de motion próprio aqui: os dois botões usam as classes globais, e o
+   override de `prefers-reduced-motion` do globals.css já as cobre. */

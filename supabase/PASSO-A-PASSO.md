@@ -55,6 +55,11 @@ No menu da esquerda, abra o **SQL Editor** (ícone de terminal).
 9. Repita com **`supabase/006-politicas-sobrepostas.sql`**.
 10. Repita com **`supabase/007-leitura-publica-quebrada.sql`**.
 11. Repita com **`supabase/008-indices-de-usuario.sql`**.
+12. Repita com **`supabase/009-pedidos-de-pauta.sql`**.
+
+> **O `009` é obrigatório para a página `/aprender`.** É ele que cria a tabela
+> onde caem os pedidos de guia. Sem ele, o bloco "Falta um guia sobre o quê?"
+> aparece na página, mas todo envio devolve erro — a tabela não existe.
 
 > **Depois do `008`, o painel fica com cinco avisos acesos de propósito**:
 > quatro *Unused Index* e o *Leaked Password Protection*. Três dos quatro são
@@ -272,6 +277,8 @@ que tem que ser.
 | "Você entrou, mas esta conta não modera" | Falta rodar o `insert into public.admins` (Parte 5) |
 | A avaliação some depois de publicada | É o esperado: ela entra pendente e você aprova na moderação |
 | Erro de tabela inexistente no SQL | Rodou o `002` antes do `001` |
+| "Não consegui enviar seu pedido agora" no `/aprender` | Falta rodar o `009`. A tabela `pedidos_de_pauta` ainda não existe |
+| Aprovei um pedido de pauta e ele não aponta pro guia | Aprovar só o tira da fila. O link aparece quando você preenche o `guia_slug` — o `update` de exemplo está no fim do `009` |
 | Erro 401 em **tudo**, mesmo deslogado | Pegou a *Secret key* no lugar da *Publishable* |
 | Erro 401 **só** em avaliações, tópicos e respostas | Falta o `007`. Se `perfis` responde e as três não, é isto — e não a chave, que serve as duas do mesmo jeito |
 | `syntax error at or near "NEXT_PUBLIC..."` | Colou o `.env.local` no SQL Editor. Ele é arquivo do seu computador, não SQL |

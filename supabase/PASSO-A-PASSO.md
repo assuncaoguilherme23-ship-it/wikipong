@@ -56,6 +56,12 @@ No menu da esquerda, abra o **SQL Editor** (ícone de terminal).
 10. Repita com **`supabase/007-leitura-publica-quebrada.sql`**.
 11. Repita com **`supabase/008-indices-de-usuario.sql`**.
 12. Repita com **`supabase/009-pedidos-de-pauta.sql`**.
+13. Repita com **`supabase/010-resposta-que-resolveu.sql`**.
+
+> **O `010` é obrigatório para as Discussões.** As tabelas do fórum já existiam
+> desde o `001`, mas o site só passou a falar com elas agora. O `010` acrescenta
+> a marcação de "resposta que resolveu" — sem ele, o fórum funciona e só esse
+> botão falha.
 
 > **O `009` é obrigatório para a página `/aprender`.** É ele que cria a tabela
 > onde caem os pedidos de guia. Sem ele, o bloco "Falta um guia sobre o quê?"
@@ -278,6 +284,8 @@ que tem que ser.
 | A avaliação some depois de publicada | É o esperado: ela entra pendente e você aprova na moderação |
 | Erro de tabela inexistente no SQL | Rodou o `002` antes do `001` |
 | "Não consegui enviar seu pedido agora" no `/aprender` | Falta rodar o `009`. A tabela `pedidos_de_pauta` ainda não existe |
+| Escrevi um tópico e ele não aparece nas Discussões | É o esperado: entra esperando e você publica na aba **Discussões** da moderação |
+| O botão "foi esta que resolveu" dá erro | Falta rodar o `010`, ou você não está logado — só quem abriu o tópico, ou um moderador, marca |
 | Aprovei um pedido de pauta e ele não aponta pro guia | Aprovar só o tira da fila. O link aparece quando você preenche o `guia_slug` — o `update` de exemplo está no fim do `009` |
 | Erro 401 em **tudo**, mesmo deslogado | Pegou a *Secret key* no lugar da *Publishable* |
 | Erro 401 **só** em avaliações, tópicos e respostas | Falta o `007`. Se `perfis` responde e as três não, é isto — e não a chave, que serve as duas do mesmo jeito |

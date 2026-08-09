@@ -32,12 +32,10 @@ export default function PaginaDiscussoes() {
             <strong>assunto</strong> e pode se amarrar a um material do catálogo, pra que a
             conversa não vire uma linha do tempo onde nada se acha depois.
           </p>
-          <p className={estilos.avisoLocalPagina}>
-            <span className={`mono ${estilos.seloPagina}`}>prévia</span>
-            Os tópicos ficam <strong>só neste navegador</strong>, sem conta e sem servidor.
-            Ninguém mais vê o que você escrever. Quando o backend entrar, isto vira público e
-            passa por moderação.
-          </p>
+          {/* O aviso de onde os tópicos moram saiu daqui e foi para o cliente:
+              ele lê `somenteLocal` do repositório em vez de ter a frase escrita
+              na mão. Enquanto era texto fixo, ligar o backend teria deixado a
+              página jurando "só neste navegador" com o servidor no ar. */}
         </header>
 
         <DiscussoesCliente />

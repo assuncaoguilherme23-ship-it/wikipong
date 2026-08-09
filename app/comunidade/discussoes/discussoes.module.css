@@ -273,3 +273,79 @@
   color: var(--cor-tinta-suave);
   font-size: var(--texto-menor);
 }
+
+/* ── Onde os tópicos moram (lido do repositório, não escrito na mão) ── */
+.ondeMora {
+  margin: 0 0 var(--esp-4);
+  max-width: 62ch;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  line-height: var(--altura-corpo);
+}
+.selo {
+  display: inline-block;
+  margin-right: var(--esp-2);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+}
+
+.avisoEnviado {
+  margin: 0 0 var(--esp-4);
+  padding: 0.85rem 1.1rem;
+  max-width: 62ch;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta);
+  background: var(--cor-acento-suave);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+}
+
+/* ── Busca ── */
+.busca {
+  font: inherit;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta);
+  background: var(--cor-papel);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  padding: 0.35rem 0.6rem;
+  min-width: 14rem;
+}
+.busca::placeholder {
+  color: var(--cor-mudo);
+}
+
+/* ── A resposta que resolveu ──
+   Fundo de acento, não tarja lateral (o DESIGN.md proíbe a tarja). O selo diz o
+   que o fundo sozinho não diria. */
+.respostaUtil {
+  background: var(--cor-acento-suave);
+  border-radius: var(--raio-sm);
+  padding: var(--esp-3);
+  margin-inline: calc(var(--esp-3) * -1);
+}
+.seloResolveu {
+  margin: 0 0 var(--esp-2);
+  font-size: var(--texto-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+}
+.seloResolvido {
+  font-size: var(--texto-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+}
+.marcar {
+  font: inherit;
+  font-size: var(--texto-mini);
+  color: var(--cor-texto-acento);
+  background: none;
+  border: 0;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -33,10 +33,14 @@ import { TagEstilo, TagNivel } from '@/componentes/TagEstilo';
 import {
   repositorioPedidos, ordenarPedidos, type PedidoDePauta,
 } from '@/src/logica/pedidos-pauta';
+import {
+  repositorioDiscussoes, ordenarTopicos, type Topico, type StatusTopico,
+} from '@/src/logica/discussoes';
 import { PainelPedidos } from './PainelPedidos';
+import { PainelDiscussoes } from './PainelDiscussoes';
 import estilos from './moderacao.module.css';
 
-type Aba = 'avaliacoes' | 'pedidos';
+type Aba = 'avaliacoes' | 'discussoes' | 'pedidos';
 
 const ROTULO_STATUS: Record<Avaliacao['status'], string> = {
   pendente: 'esperando',
@@ -96,6 +100,34 @@ export function ModeracaoCliente() {
     }
   }
 
+  const repoDiscussoes = useMemo(() => repositorioDiscussoes(), []);
+  const [discussoes, setDiscussoes] = useState<Topico[] | null>(null);
+  const [erroDiscussoes, setErroDiscussoes] = useState<string | null>(null);
+
+  const recarregarDiscussoes = useCallback(
+    () =>
+      repoDiscussoes
+        .listar()
+        .then((ts) => {
+          setDiscussoes(ordenarTopicos(ts, 'novos'));
+          setErroDiscussoes(null);
+        })
+        .catch(() => {
+          setDiscussoes([]);
+          setErroDiscussoes('Não consegui ler as discussões.');
+        }),
+    [repoDiscussoes],
+  );
+
+  async function agirNaDiscussao(id: string, status: StatusTopico, alvo: 'topico' | 'resposta') {
+    try {
+      await repoDiscussoes.moderar(id, status, alvo);
+      await recarregarDiscussoes();
+    } catch {
+      setErroDiscussoes('O banco recusou a mudança. Confira se esta conta está na tabela admins.');
+    }
+  }
+
   useEffect(() => {
     if (repo.somenteLocal) {
       setSessao(null);
@@ -112,7 +144,8 @@ export function ModeracaoCliente() {
     if (admin !== true) return;
     repo.listar().then((todas) => setLista(ordenar(todas, 'recentes')));
     recarregarPedidos();
-  }, [repo, admin, recarregarPedidos]);
+    recarregarDiscussoes();
+  }, [repo, admin, recarregarPedidos, recarregarDiscussoes]);
 
   async function mudar(id: string, status: Avaliacao['status']) {
     await repo.moderar(id, status);
@@ -182,10 +215,17 @@ export function ModeracaoCliente() {
      bastaria a fila de avaliações estar vazia — que é o estado normal — para a
      aba de pedidos sumir da tela, e ela é justamente a que o fundador veio ver. */
   const esperandoPedidos = pedidos?.filter((p) => p.status === 'pendente').length ?? 0;
+  /* Tópico e resposta somam no MESMO número: para quem modera, o que importa é
+     "quantas decisões me esperam", não em qual tabela cada uma mora. */
+  const esperandoDiscussoes =
+    (discussoes ?? []).filter((t) => (t.status ?? 'aprovado') === 'pendente').length +
+    (discussoes ?? []).flatMap((t) => t.respostas)
+      .filter((r) => (r.status ?? 'aprovado') === 'pendente').length;
   const abas = (
     <div className={estilos.abas} role="tablist" aria-label="O que moderar">
       {([
         ['avaliacoes', 'Avaliações', lista?.filter((a) => a.status === 'pendente').length ?? 0],
+        ['discussoes', 'Discussões', esperandoDiscussoes],
         ['pedidos', 'Pedidos de guia', esperandoPedidos],
       ] as const).map(([id, rotulo, esperando]) => (
         <button
@@ -202,6 +242,20 @@ export function ModeracaoCliente() {
       ))}
     </div>
   );
+
+  if (aba === 'discussoes') {
+    return (
+      <>
+        {barra}
+        {abas}
+        <PainelDiscussoes
+          topicos={discussoes}
+          erro={erroDiscussoes}
+          aoModerar={agirNaDiscussao}
+        />
+      </>
+    );
+  }
 
   if (aba === 'pedidos') {
     return (

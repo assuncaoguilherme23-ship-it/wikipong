@@ -266,3 +266,15 @@
   border-radius: var(--raio-sm);
   padding: 0.3rem 0.55rem;
 }
+
+/* Respostas dentro do cartão do tópico. Recuadas e com um fio à esquerda, que
+   aqui é hierarquia (a resposta pende do tópico), não decoração de estado. */
+.respostasModeracao {
+  list-style: none;
+  margin: var(--esp-4) 0 0;
+  padding: 0 0 0 var(--esp-4);
+  border-left: 1px solid var(--cor-linha-forte);
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+}

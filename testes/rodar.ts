@@ -30,6 +30,7 @@ import {
 } from '../src/logica/avaliacoes.js';
 import {
   validarTopico, ordenarTopicos, porAssunto, ultimaAtividade, ROTULO_ASSUNTO, Topico,
+  buscarTopicos, respostasOrdenadas, temRespostaUtil, type Mensagem as MensagemForum,
 } from '../src/logica/discussoes.js';
 import { perfilVazio, temIdentidade, pecasEscolhidas } from '../src/logica/perfil.js';
 import {
@@ -1124,6 +1125,56 @@ afirma(rSemFicha.paragrafos.length === 1,
 const todoTexto = [rAtaque.titulo, ...rAtaque.paragrafos, rAtaque.serve, rAtaque.exige].join(' ');
 afirma(!/\d+[,.]\d/.test(todoTexto),
   'o resumo nao publica nota nem decimal do conjunto (nota combinada segue proibida)');
+
+// ───────── Fórum: busca e a resposta que resolveu ─────────
+const mensagemDeTeste = (id: string, texto: string, criadoEm: string): MensagemForum =>
+  ({ id, autor: 'Alguém', texto, criadoEm });
+const topicoDeTeste = (id: string, titulo: string, texto: string, respostas: MensagemForum[],
+             respostaUtil?: string): Topico =>
+  ({ id, titulo, texto, assunto: 'material', autor: 'A', criadoEm: '2026-08-01',
+     respostas, respostaUtil });
+
+const forum: Topico[] = [
+  topicoDeTeste('t1', 'Vale a pena trocar agora?', 'Estou com a lâmina há dois anos.', [
+    mensagemDeTeste('r1', 'Depende de quanto voce joga.', '2026-08-02'),
+    mensagemDeTeste('r2', 'Eu troquei a minha Viscaria e senti diferenca.', '2026-08-03'),
+  ], 'r2'),
+  topicoDeTeste('t2', 'Primeira raquete montada', 'Nunca montei uma.', []),
+];
+
+/* A busca varre as RESPOSTAS. Num forum de equipamento o nome do material quase
+   nunca esta' no titulo -- esta' na resposta de quem respondeu. Buscar so' o
+   titulo esconderia justo o topico que a busca existe para achar. */
+afirma(buscarTopicos(forum, 'viscaria').length === 1,
+  'a busca acha o material citado dentro de uma RESPOSTA');
+afirma(buscarTopicos(forum, 'VISCÁRIA').length === 1,
+  'busca sem acento e sem caixa, como a do catalogo');
+afirma(buscarTopicos(forum, 'trocar lamina').length === 1,
+  'todos os termos precisam casar, em qualquer ordem');
+afirma(buscarTopicos(forum, 'butterfly').length === 0, 'termo ausente nao devolve nada');
+afirma(buscarTopicos(forum, '   ').length === 2, 'busca vazia devolve tudo, nao nada');
+
+/* A resposta marcada SOBE, e as outras seguem na ordem em que foram escritas. */
+const ordenadas = respostasOrdenadas(forum[0]);
+afirma(ordenadas[0].id === 'r2', 'a resposta que resolveu vem primeiro');
+afirma(ordenadas.length === 2 && ordenadas[1].id === 'r1',
+  'as demais seguem na ordem original, sem sumir');
+afirma(respostasOrdenadas(forum[1]).length === 0, 'topico sem resposta nao quebra');
+
+/* Marcacao apontando pra resposta que nao existe mais (a 010 apaga com
+   `on delete set null`, mas um dado velho pode chegar assim): a tela nao pode
+   quebrar nem inventar uma resposta. */
+const orfa = topicoDeTeste('t3', 'Titulo qualquer', 'Texto.', [mensagemDeTeste('r9', 'oi', '2026-08-02')], 'sumiu');
+afirma(respostasOrdenadas(orfa).length === 1, 'marcacao orfa nao come a lista de respostas');
+afirma(temRespostaUtil(orfa) === false, 'marcacao orfa nao vale como resolvida');
+afirma(temRespostaUtil(forum[0]) === true, 'marcacao valida conta como resolvida');
+afirma(temRespostaUtil(forum[1]) === false, 'topico sem marcacao nao aparece como resolvido');
+
+/* Buscar nao pode mexer na lista recebida. */
+const idsAntes = forum.map(t => t.id).join(',');
+buscarTopicos(forum, 'viscaria');
+respostasOrdenadas(forum[0]);
+afirma(forum.map(t => t.id).join(',') === idsAntes, 'a busca nao muda a lista original');
 
 // ───────── Pedidos de pauta: o leitor diz o tema que falta ─────────
 const pedido = (id: string, tema: string, criadoEm: string, guiaSlug?: string): PedidoDePauta =>

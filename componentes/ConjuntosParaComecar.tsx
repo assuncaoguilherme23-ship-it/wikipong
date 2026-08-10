@@ -35,7 +35,16 @@ import estilos from './ConjuntosParaComecar.module.css';
    a página inteira. Mas uma seção que promete "raquete inteira" não pode
    anunciar um conjunto ao qual falta a borracha do backhand. Aí não é inteira, e
    o card mostraria duas fotos onde diz três. */
-const PARA_COMECAR = CONJUNTOS.filter((c) => c.nivel === 'Iniciante' && c.pecas.length === 3);
+const PARA_COMECAR = CONJUNTOS.filter((c) => c.nivel === 'Iniciante' && c.pecas.length === 3)
+  /* Do mais barato ao mais caro, e não na ordem em que foram escritos no JSON.
+     Para quem está começando, o preço é o primeiro filtro — e aqui ele também
+     desenha a progressão, porque o que custa mais nesta lista é o que pede mais
+     de quem joga. Conjunto sem total (peças em moedas diferentes) vai para o
+     fim: não dá pra ordenar por um número que não existe. */
+  .sort((a, b) => {
+    if (a.misturaMoedas !== b.misturaMoedas) return a.misturaMoedas ? 1 : -1;
+    return a.precoTotal - b.precoTotal;
+  });
 
 const CURTO: Record<string, string> = {
   'Lâmina': 'lâmina',

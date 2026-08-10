@@ -13,6 +13,17 @@
       "porque": "A Sweden Extra é madeira pura sueca: devolve a bola devagar o bastante para você sentir o que fez de errado, que é a única forma de corrigir. A Vega Intro no forehand é tensionada e macia — dá efeito sem exigir aceleração de braço. A Ultra Spin no backhand custa a metade e é aderente: o lado de trás é onde o iniciante mais erra, e uma borracha que segura a bola ensina mais rápido que uma que a cospe. É a montagem para quem quer sentir o toque antes de pensar em velocidade."
     },
     {
+      "id": "rotina-de-treino",
+      "nome": "Rotina de treino",
+      "resumo": "Pra quem já treina toda semana e quer efeito no forehand.",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "lamina": "butterfly-allround-basic",
+      "borrachaFH": "nittaku-fastarc-g1",
+      "borrachaBH": "xiom-vega-intro",
+      "porque": "A Allround Basic é a lâmina mais barata que a Butterfly vende no Brasil, e é madeira pura: não empurra a bola por conta própria, então o erro continua sendo seu e dá pra corrigir. A Fastarc G1 no forehand é o salto desta montagem — é uma borracha de linha, com bem mais efeito que as de entrada, e é ali que o ganho aparece primeiro em quem treina. No backhand fica a Vega Intro, macia e barata: o lado de trás ainda está se formando, e gastar o dobro nele agora seria comprar teto que você não usa. A troca natural daqui a um ano é só o backhand."
+    },
+    {
       "id": "primeiros-meses",
       "nome": "Primeiros meses",
       "resumo": "A montagem mais barata que ainda ensina o toque certo.",

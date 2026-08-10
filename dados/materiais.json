@@ -3871,7 +3871,7 @@
       "nome": "Allround Evolution",
       "marca": "Stiga",
       "tipo": "Lâmina",
-      "nivel": "Intermediário",
+      "nivel": "Iniciante",
       "intencao": "controlar",
       "preco": 373,
       "specs": {
@@ -4011,7 +4011,7 @@
       "nome": "Cybershape Allround Classic",
       "marca": "Stiga",
       "tipo": "Lâmina",
-      "nivel": "Intermediário",
+      "nivel": "Iniciante",
       "intencao": "controlar",
       "preco": 658,
       "rating": 4.5,
@@ -6420,7 +6420,7 @@
       "nome": "Classic Allround",
       "marca": "Donic",
       "tipo": "Lâmina",
-      "nivel": "Intermediário",
+      "nivel": "Iniciante",
       "intencao": "controlar",
       "preco": 552,
       "specs": {
@@ -14360,6 +14360,52 @@
       "simples": {
         "tag": "A mais barata da 729",
         "frase": "Aderente clássica e mais lenta — a porta de entrada no estilo chinês."
+      }
+    },
+    {
+      "id": "xiom-allround-s",
+      "nome": "Allround S",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 338,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Xiom de entrada",
+        "frase": "Cinco madeiras sem fibra: a bola sai devagar o bastante pra você sentir o que fez."
+      }
+    },
+    {
+      "id": "butterfly-allround-basic",
+      "nome": "Allround Basic",
+      "marca": "Butterfly",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 204,
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Butterfly mais barata",
+        "frase": "R$ 204: a porta de entrada na Butterfly, sem fibra e sem pressa — feita pra aprender."
+      }
+    },
+    {
+      "id": "yinhe-moon-speed",
+      "nome": "Moon Speed 53",
+      "marca": "Yinhe",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 259,
+      "moeda": "SEK",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "A Moon de velocidade",
+        "frase": "A linha Moon da Yinhe na versão rápida, com esponja de grau 53 na régua europeia."
       }
     }
   ]

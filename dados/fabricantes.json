@@ -13763,6 +13763,50 @@
         }
       ],
       "nota": "Preço, foto e construção conferidos na Chinese Table Tennis, na Suécia. Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "xiom-allround-s": {
+      "confianca": "revendedor",
+      "fonte": "https://americatt.net/xiom-allround-s/",
+      "consultadoEm": "2026-08-09",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 camadas de madeira, construção allround clássica"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na AmericaTT."
+    },
+    "butterfly-allround-basic": {
+      "confianca": "revendedor",
+      "fonte": "https://loja.jjyamada.com.br/madeira-allround-basic-fl",
+      "consultadoEm": "2026-08-09",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "Madeira, linha Basic de entrada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na JJ Yamada."
+    },
+    "yinhe-moon-speed": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/yinhe/yinhegummi/yinhe-moon-speed-53-euro",
+      "consultadoEm": "2026-08-09",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis (Suécia). Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
     }
   }
 }

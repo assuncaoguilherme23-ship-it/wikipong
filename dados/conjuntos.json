@@ -2,6 +2,17 @@
   "aviso": "Montagens curadas: 1 lâmina + 2 borrachas. Os itens são REFERÊNCIAS por id aos materiais do catálogo — nenhuma spec é duplicada aqui, então corrigir a ficha de um material corrige todos os conjuntos que o usam. O preço total é derivado (soma real dos três). NÃO existe nota de desempenho combinada: a lâmina e as duas borrachas interagem, e cada lado faz um trabalho diferente — qualquer fórmula de 'velocidade do conjunto' seria invenção, e este site não publica número que não pode defender (D-16). O campo 'porque' é recomendação editorial explicada (D-02), não medição.",
   "conjuntos": [
     {
+      "id": "controle-total",
+      "nome": "Controle total",
+      "resumo": "A montagem que perdoa mais, pra quem está pegando o gesto.",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "lamina": "yasaka-sweden-extra",
+      "borrachaFH": "xiom-vega-intro",
+      "borrachaBH": "sanwei-ultra-spin",
+      "porque": "A Sweden Extra é madeira pura sueca: devolve a bola devagar o bastante para você sentir o que fez de errado, que é a única forma de corrigir. A Vega Intro no forehand é tensionada e macia — dá efeito sem exigir aceleração de braço. A Ultra Spin no backhand custa a metade e é aderente: o lado de trás é onde o iniciante mais erra, e uma borracha que segura a bola ensina mais rápido que uma que a cospe. É a montagem para quem quer sentir o toque antes de pensar em velocidade."
+    },
+    {
       "id": "primeiros-meses",
       "nome": "Primeiros meses",
       "resumo": "A montagem mais barata que ainda ensina o toque certo.",

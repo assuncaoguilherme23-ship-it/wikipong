@@ -44,6 +44,15 @@ via pushState + useSearchParams); `/comparar?ids=` usa o Radar + `metricas.ts`;
   não vale" ensina o leitor a não confiar em nada da página. O que continua
   obrigatório é dizer a PROCEDÊNCIA — de onde o número veio e com que régua.
 - Estado navegável vive na **URL** (D-12).
+- **Dado verdadeiro, específico e com procedência** (decisão do fundador,
+  2026-08-09): nada de campo vazio, nada de resumo genérico. Quando falta um
+  número, a ordem é: (1) **buscar na fonte** — campo vazio quase sempre é
+  colheita preguiçosa, não dado inexistente; (2) se a fonte não publica, **dizer
+  o que não se sabe e por quê**, no lugar do traço mudo; (3) **nunca** preencher
+  com número inventado ou convertido sem régua declarada — `Specs` é opcional no
+  tipo justamente porque inventar é pior que faltar (D-16). O texto do modo
+  Simples segue a mesma regra: frase daquele material, nunca modelo com o nome
+  trocado.
 
 ## Comandos
 - Testes: `npx tsx testes/rodar.ts` — as asserções reproduzem os números publicados

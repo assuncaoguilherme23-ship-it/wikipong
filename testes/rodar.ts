@@ -1129,6 +1129,26 @@ const todoTexto = [rAtaque.titulo, ...rAtaque.paragrafos, rAtaque.serve, rAtaque
 afirma(!/\d+[,.]\d/.test(todoTexto),
   'o resumo nao publica nota nem decimal do conjunto (nota combinada segue proibida)');
 
+// ───────── Borracha não tem camada de madeira ─────────
+/* Aconteceu de verdade na colheita da GEWO: eu recortava um trecho da pagina do
+   produto e chamava de construcao. Numa borracha veio "5 camadas de hinoki,
+   limba, carbono" -- texto de OUTRO produto da mesma pagina, atribuido ao
+   errado. 25 borrachas sairam assim.
+
+   Camada e nome de madeira sao propriedade de LAMINA. Numa borracha isso nao e'
+   impreciso: e' de outro produto. */
+const MADEIRA = /\b(\d\s*camadas?|hinoki|limba|koto|ayous|balsa|kiri|paulownia|sapele|nogueira)\b/i;
+const borrachaComMadeira = MATERIAIS.filter(m => m.tipo === 'Borracha' && MADEIRA.test(m.simples.frase));
+afirma(borrachaComMadeira.length === 0,
+  `borracha descrevendo camada de madeira (texto de outro produto): ${borrachaComMadeira.slice(0, 4).map(m => m.id).join(', ')}`);
+
+/* E o texto do modo Simples nao pode carregar lixo de loja nem ingles solto --
+   o site e' PT-BR por convencao, e "Free US Shipping" nao descreve material. */
+const LIXO = /Cancel\b|Free US Shipping|Add to Cart|\bthe\b.*\bblade\b|reliable choice/i;
+const comLixo = MATERIAIS.filter(m => LIXO.test(m.simples.frase) || LIXO.test(m.simples.tag));
+afirma(comLixo.length === 0,
+  `texto do modo Simples com lixo de loja ou ingles: ${comLixo.slice(0, 4).map(m => m.id).join(', ')}`);
+
 // ───────── Régua: número só se compara com número da mesma medida ─────────
 /* A colheita internacional trouxe indice publicado pela Megaspin, onde uma
    borracha marca 118 e 128 -- passa de 100. Sem declarar a regua, esse 118

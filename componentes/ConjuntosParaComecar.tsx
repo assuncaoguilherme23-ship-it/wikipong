@@ -71,25 +71,29 @@ export function ConjuntosParaComecar() {
               <span className={estilos.nome}>{c.nome}</span>
               <span className={estilos.resumo}>{c.resumo}</span>
 
-              <span className={estilos.pecas} aria-hidden="true">
+              {/* Cada peça é uma coluna com foto, papel e nome. A versão
+                  anterior punha os três nomes numa linha corrida embaixo do
+                  bloco — dava uma frase longa que quebrava mal e encostava no
+                  fio do rodapé. Nome debaixo da própria foto se lê sem ligar
+                  uma coisa na outra. */}
+              <span className={estilos.pecas}>
                 {c.pecas.map((p) => (
                   <span key={p.papel} className={estilos.peca}>
-                    <FotoProduto
-                      id={p.material.id}
-                      nome={p.material.nome}
-                      tipo={p.material.tipo}
-                      tamanho={56}
-                    />
+                    {/* A foto some para o leitor de tela: o `alt` dela é o nome
+                        do material, que já está escrito logo abaixo. Sem isto,
+                        cada peça seria anunciada duas vezes. */}
+                    <span className={estilos.foto} aria-hidden="true">
+                      <FotoProduto
+                        id={p.material.id}
+                        nome={p.material.nome}
+                        tipo={p.material.tipo}
+                        tamanho={64}
+                      />
+                    </span>
                     <span className={`mono ${estilos.papel}`}>{CURTO[p.papel]}</span>
+                    <span className={estilos.nomePeca}>{p.material.nome}</span>
                   </span>
                 ))}
-              </span>
-
-              {/* A lista de peças acima é decorativa para quem usa leitor de
-                  tela — as fotos não dizem nada. Os nomes vêm em texto aqui. */}
-              <span className={estilos.nomesPecas}>
-                {c.pecas.map((p) => `${CURTO[p.papel]}: ${p.material.marca} ${p.material.nome}`)
-                  .join(' · ')}
               </span>
 
               <span className={estilos.rodape}>

@@ -2,6 +2,17 @@
   "aviso": "Montagens curadas: 1 lâmina + 2 borrachas. Os itens são REFERÊNCIAS por id aos materiais do catálogo — nenhuma spec é duplicada aqui, então corrigir a ficha de um material corrige todos os conjuntos que o usam. O preço total é derivado (soma real dos três). NÃO existe nota de desempenho combinada: a lâmina e as duas borrachas interagem, e cada lado faz um trabalho diferente — qualquer fórmula de 'velocidade do conjunto' seria invenção, e este site não publica número que não pode defender (D-16). O campo 'porque' é recomendação editorial explicada (D-02), não medição.",
   "conjuntos": [
     {
+      "id": "orcamento-curto",
+      "nome": "Orçamento curto",
+      "resumo": "A mais barata que ainda é uma raquete de verdade.",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "lamina": "sanwei-accumulator-s",
+      "borrachaFH": "yinhe-mercury-ii",
+      "borrachaBH": "yinhe-mercury-ii",
+      "porque": "Por R$ 330 você monta uma raquete montável — com borracha homologada, lâmina avulsa e a possibilidade de trocar só a peça gasta. É o mesmo dinheiro de uma raquete pronta de loja de departamento, que vem colada, não se conserta e não ensina nada. A Accumulator S é lenta e leve, do jeito que uma primeira lâmina tem de ser. A Mercury II dos dois lados é aderente de estilo chinês: segura a bola em vez de cuspi-la, e é a diferença entre errar e entender por que errou. Se o esporte não virar hábito, você perdeu pouco. Se virar, troca as borrachas e a lâmina continua servindo."
+    },
+    {
       "id": "controle-total",
       "nome": "Controle total",
       "resumo": "A montagem que perdoa mais, pra quem está pegando o gesto.",
@@ -26,7 +37,7 @@
     {
       "id": "primeiros-meses",
       "nome": "Primeiros meses",
-      "resumo": "A montagem mais barata que ainda ensina o toque certo.",
+      "resumo": "Madeira sueca clássica e duas borrachas iguais, pra aprender o gesto dos dois lados.",
       "nivel": "Iniciante",
       "intencao": "controlar",
       "lamina": "stiga-allround",

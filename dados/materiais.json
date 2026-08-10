@@ -2254,9 +2254,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "Não encontrei índice de velocidade, efeito ou controle deste material em nenhuma das fontes que consulto. O que está conferido aqui é o preço, a foto e a ficha do fabricante."
-      }
+        "tag": "8 jogadores avaliaram",
+        "frase": "8 pessoas que usaram esta lâmina deram, em média, velocidade 9.2, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.2,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "xiom-hibi-o-tour",
@@ -6981,9 +6986,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "Não encontrei índice de velocidade, efeito ou controle deste material em nenhuma das fontes que consulto. O que está conferido aqui é o preço, a foto e a ficha do fabricante."
-      }
+        "tag": "21 jogadores avaliaram",
+        "frase": "21 pessoas que usaram esta borracha deram, em média, velocidade 6.3, efeito 6.6, controle 9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 6.3,
+        "spin": 6.6,
+        "controle": 9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "donic-master-ultra-power",
@@ -7106,9 +7117,15 @@
       "rating": 3.65,
       "reviews": 6,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "6 jogadores avaliaram",
+        "frase": "6 pessoas que usaram esta borracha deram, em média, velocidade 7.3, efeito 7.8, controle 8.5 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 7.3,
+        "spin": 7.8,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-trinity-dynamic",
@@ -7538,9 +7555,14 @@
       "rating": 4.75,
       "reviews": 5,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "Não encontrei índice de velocidade, efeito ou controle deste material em nenhuma das fontes que consulto. O que está conferido aqui é o preço, a foto e a ficha do fabricante."
-      }
+        "tag": "5 jogadores avaliaram",
+        "frase": "5 pessoas que usaram esta lâmina deram, em média, velocidade 8.5, controle 8.8 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.5,
+        "controle": 8.8
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "sanwei-verdi",
@@ -8294,9 +8316,15 @@
       "rating": 4.5,
       "reviews": 47,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Andro não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "47 jogadores avaliaram",
+        "frase": "47 pessoas que usaram esta borracha deram, em média, velocidade 8.7, efeito 9.1, controle 8.5 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 9.1,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "andro-hexer-powergrip",
@@ -8414,9 +8442,15 @@
       "rating": 4.35,
       "reviews": 27,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Andro não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "27 jogadores avaliaram",
+        "frase": "27 pessoas que usaram esta borracha deram, em média, velocidade 8.3, efeito 8.8, controle 8.9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.3,
+        "spin": 8.8,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "andro-hexer-plus",
@@ -8429,9 +8463,15 @@
       "rating": 4.6,
       "reviews": 26,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Andro não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "47 jogadores avaliaram",
+        "frase": "47 pessoas que usaram esta borracha deram, em média, velocidade 8.7, efeito 9.1, controle 8.5 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 9.1,
+        "controle": 8.5
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "andro-gtt-45",
@@ -8444,9 +8484,15 @@
       "rating": 4.35,
       "reviews": 20,
       "simples": {
-        "tag": "Esponja 45",
-        "frase": "A Andro não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "20 jogadores avaliaram",
+        "frase": "20 pessoas que usaram esta borracha deram, em média, velocidade 8.4, efeito 8.8, controle 9.1 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.4,
+        "spin": 8.8,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "andro-impuls-speed",
@@ -8480,9 +8526,15 @@
       "rating": 4.6,
       "reviews": 12,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Andro não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "12 jogadores avaliaram",
+        "frase": "12 pessoas que usaram esta borracha deram, em média, velocidade 8.5, efeito 9.2, controle 9.3 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.5,
+        "spin": 9.2,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "andro-nuzn-55",
@@ -8516,9 +8568,15 @@
       "rating": 4.55,
       "reviews": 12,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Andro não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "12 jogadores avaliaram",
+        "frase": "12 pessoas que usaram esta borracha deram, em média, velocidade 8.7, efeito 9, controle 9.1 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 9,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "andro-nuzn-50",
@@ -8677,9 +8735,14 @@
       "rating": 4.75,
       "reviews": 22,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Andro não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "22 jogadores avaliaram",
+        "frase": "22 pessoas que usaram esta lâmina deram, em média, velocidade 8.7, controle 9.3 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.7,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "andro-novacell-off",
@@ -8692,9 +8755,14 @@
       "rating": 4.7,
       "reviews": 16,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Andro não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "16 jogadores avaliaram",
+        "frase": "16 pessoas que usaram esta lâmina deram, em média, velocidade 8.7, controle 9.2 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.7,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "andro-novacell-off-s",
@@ -8767,9 +8835,14 @@
       "rating": 4.7,
       "reviews": 10,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Andro não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "10 jogadores avaliaram",
+        "frase": "10 pessoas que usaram esta lâmina deram, em média, velocidade 8, controle 9.5 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8,
+        "controle": 9.5
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "andro-tp-ligna-ci-off",
@@ -9142,9 +9215,15 @@
       "rating": 4.7,
       "reviews": 51,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "51 jogadores avaliaram",
+        "frase": "51 pessoas que usaram esta borracha deram, em média, velocidade 8.7, efeito 9.4, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 9.4,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-v-15-extra",
@@ -9157,9 +9236,15 @@
       "rating": 4.55,
       "reviews": 41,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "41 jogadores avaliaram",
+        "frase": "41 pessoas que usaram esta borracha deram, em média, velocidade 9.2, efeito 9.2, controle 8.9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.2,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-v-22-double-extra",
@@ -9172,9 +9257,15 @@
       "rating": 4.75,
       "reviews": 36,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "36 jogadores avaliaram",
+        "frase": "36 pessoas que usaram esta borracha deram, em média, velocidade 9.2, efeito 9.5, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.5,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-v-01-stiff",
@@ -9187,9 +9278,15 @@
       "rating": 4.65,
       "reviews": 34,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "34 jogadores avaliaram",
+        "frase": "34 pessoas que usaram esta borracha deram, em média, velocidade 9.2, efeito 9.3, controle 9.3 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.3,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-vs-401",
@@ -9202,9 +9299,15 @@
       "rating": 4.6,
       "reviews": 32,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "32 jogadores avaliaram",
+        "frase": "32 pessoas que usaram esta borracha deram, em média, velocidade 7.8, efeito 9.4, controle 9.3 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 7.8,
+        "spin": 9.4,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-v-15-limber",
@@ -9217,9 +9320,15 @@
       "rating": 4.65,
       "reviews": 30,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "30 jogadores avaliaram",
+        "frase": "30 pessoas que usaram esta borracha deram, em média, velocidade 8.8, efeito 9.4, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.8,
+        "spin": 9.4,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-ventus-extra",
@@ -9253,9 +9362,15 @@
       "rating": 4.6,
       "reviews": 22,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "22 jogadores avaliaram",
+        "frase": "22 pessoas que usaram esta borracha deram, em média, velocidade 8.8, efeito 8.8, controle 9.2 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.8,
+        "spin": 8.8,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-v-01",
@@ -9268,9 +9383,15 @@
       "rating": 4.5,
       "reviews": 19,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "19 jogadores avaliaram",
+        "frase": "19 pessoas que usaram esta borracha deram, em média, velocidade 9.1, efeito 8.9, controle 8.9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.1,
+        "spin": 8.9,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-v-15-stiff",
@@ -9298,9 +9419,15 @@
       "rating": 4.65,
       "reviews": 17,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "17 jogadores avaliaram",
+        "frase": "17 pessoas que usaram esta borracha deram, em média, velocidade 8.8, efeito 9.4, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.8,
+        "spin": 9.4,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-vs-402-limber",
@@ -9313,9 +9440,15 @@
       "rating": 4.6,
       "reviews": 15,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "15 jogadores avaliaram",
+        "frase": "15 pessoas que usaram esta borracha deram, em média, velocidade 8.7, efeito 9.5, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 9.5,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-v-20-double-extra",
@@ -9415,9 +9548,15 @@
       "rating": 4.5,
       "reviews": 5,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "5 jogadores avaliaram",
+        "frase": "5 pessoas que usaram esta borracha deram, em média, velocidade 9, efeito 9.1, controle 9.2 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9,
+        "spin": 9.1,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-v-20-extra",
@@ -9541,9 +9680,14 @@
       "rating": 4.85,
       "reviews": 46,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Victas não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "46 jogadores avaliaram",
+        "frase": "46 pessoas que usaram esta lâmina deram, em média, velocidade 9, controle 9.7 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9,
+        "controle": 9.7
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "victas-fire-fall-fc",
@@ -10408,9 +10552,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "11 jogadores avaliaram",
+        "frase": "11 pessoas que usaram esta borracha deram, em média, velocidade 8.5, efeito 8.2, controle 8.9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.5,
+        "spin": 8.2,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-flyatt-spin",
@@ -10486,9 +10636,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "19 jogadores avaliaram",
+        "frase": "19 pessoas que usaram esta borracha deram, em média, velocidade 8.9, efeito 8.8, controle 9.1 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 8.8,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-hammond-power",
@@ -10501,9 +10657,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "9 jogadores avaliaram",
+        "frase": "9 pessoas que usaram esta borracha deram, em média, velocidade 9.2, efeito 9, controle 9.2 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-hammond-z2",
@@ -11110,9 +11272,14 @@
       "rating": 4.65,
       "reviews": 14,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "14 jogadores avaliaram",
+        "frase": "14 pessoas que usaram esta lâmina deram, em média, velocidade 8.7, controle 9.2 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.7,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-engent",
@@ -11423,9 +11590,14 @@
       "rating": 4.75,
       "reviews": 10,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "10 jogadores avaliaram",
+        "frase": "10 pessoas que usaram esta lâmina deram, em média, velocidade 9.2, controle 9.1 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.2,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-h301-nxd",
@@ -11593,9 +11765,14 @@
       "rating": 4.75,
       "reviews": 13,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "13 jogadores avaliaram",
+        "frase": "13 pessoas que usaram esta lâmina deram, em média, velocidade 9.1, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-latika-classineta",
@@ -11643,9 +11820,14 @@
       "rating": 4.75,
       "reviews": 36,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "36 jogadores avaliaram",
+        "frase": "36 pessoas que usaram esta lâmina deram, em média, velocidade 8.6, controle 9.3 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-ludeack-classineta",
@@ -11728,9 +11910,14 @@
       "rating": 4.6,
       "reviews": 13,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "8 jogadores avaliaram",
+        "frase": "8 pessoas que usaram esta lâmina deram, em média, velocidade 8.8, controle 9.2 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-s-series-s-5",
@@ -11743,9 +11930,14 @@
       "rating": 4.8,
       "reviews": 17,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "17 jogadores avaliaram",
+        "frase": "17 pessoas que usaram esta lâmina deram, em média, velocidade 8.8, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-s-series-s-5-c-classineta",
@@ -11803,9 +11995,14 @@
       "rating": 4.7,
       "reviews": 20,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "20 jogadores avaliaram",
+        "frase": "20 pessoas que usaram esta lâmina deram, em média, velocidade 9.1, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-s-series-s-cz-classineta",
@@ -11918,9 +12115,14 @@
       "rating": 4.15,
       "reviews": 15,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "15 jogadores avaliaram",
+        "frase": "15 pessoas que usaram esta lâmina deram, em média, velocidade 6.8, controle 9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 6.8,
+        "controle": 9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-so-ten-classineta",
@@ -12023,9 +12225,14 @@
       "rating": 4.75,
       "reviews": 24,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "24 jogadores avaliaram",
+        "frase": "24 pessoas que usaram esta lâmina deram, em média, velocidade 9.1, controle 9.1 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "nittaku-tribus-carbon-fl",
@@ -12173,9 +12380,15 @@
       "rating": 4.65,
       "reviews": 13,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "Nem a Butterfly nem as lojas onde este material foi conferido publicam índice de velocidade, efeito ou controle. O que está conferido aqui é o preço, a foto e a ficha do fabricante."
-      }
+        "tag": "13 jogadores avaliaram",
+        "frase": "13 pessoas que usaram esta borracha deram, em média, velocidade 9.2, efeito 9.5, controle 8.8 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.5,
+        "controle": 8.8
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-calderano-ary-c",
@@ -12204,9 +12417,14 @@
       "rating": 4.8,
       "reviews": 17,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A DHS não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "17 jogadores avaliaram",
+        "frase": "17 pessoas que usaram esta lâmina deram, em média, velocidade 9.4, controle 9.7 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.4,
+        "controle": 9.7
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-dynaryz-agr",
@@ -12219,9 +12437,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "26 jogadores avaliaram",
+        "frase": "26 pessoas que usaram esta borracha deram, em média, velocidade 9.3, efeito 9.4, controle 9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.4,
+        "controle": 9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-dynaryz-acc",
@@ -12234,9 +12458,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "30 jogadores avaliaram",
+        "frase": "30 pessoas que usaram esta borracha deram, em média, velocidade 9.2, efeito 9.1, controle 9.1 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.1,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-dynaryz-cmd",
@@ -12249,9 +12479,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "7 jogadores avaliaram",
+        "frase": "7 pessoas que usaram esta borracha deram, em média, velocidade 8.7, efeito 8.8, controle 8.6 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 8.8,
+        "controle": 8.6
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-dynaryz-zgr",
@@ -12264,9 +12500,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "18 jogadores avaliaram",
+        "frase": "18 pessoas que usaram esta borracha deram, em média, velocidade 8.9, efeito 9.5, controle 9.2 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 9.5,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-dynaryz-zgx",
@@ -12279,9 +12521,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "10 jogadores avaliaram",
+        "frase": "10 pessoas que usaram esta borracha deram, em média, velocidade 9.4, efeito 9.6, controle 8.7 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.4,
+        "spin": 9.6,
+        "controle": 8.7
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-dynaryz-inferno",
@@ -12294,9 +12542,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "5 jogadores avaliaram",
+        "frase": "5 pessoas que usaram esta borracha deram, em média, velocidade 9.3, efeito 8.9, controle 8.9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 8.9,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-rhyzer-pro-45",
@@ -12310,9 +12564,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Esponja 45",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "7 jogadores avaliaram",
+        "frase": "7 pessoas que usaram esta borracha deram, em média, velocidade 9, efeito 9.2, controle 9.1 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9,
+        "spin": 9.2,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-rhyzer-pro-50",
@@ -12326,9 +12586,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Esponja 50",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "12 jogadores avaliaram",
+        "frase": "12 pessoas que usaram esta borracha deram, em média, velocidade 9.2, efeito 9.1, controle 8.9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.2,
+        "spin": 9.1,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-rhyzer-43",
@@ -12342,9 +12608,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Esponja 43",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "6 jogadores avaliaram",
+        "frase": "6 pessoas que usaram esta borracha deram, em média, velocidade 8.9, efeito 9.1, controle 8.7 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.9,
+        "spin": 9.1,
+        "controle": 8.7
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-rhyzen-cmd",
@@ -12418,9 +12690,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "6 jogadores avaliaram",
+        "frase": "6 pessoas que usaram esta borracha deram, em média, velocidade 8.7, efeito 9.1, controle 9.3 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.7,
+        "spin": 9.1,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-tronix-acc",
@@ -12433,9 +12711,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "11 jogadores avaliaram",
+        "frase": "11 pessoas que usaram esta borracha deram, em média, velocidade 9, efeito 9.4, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9,
+        "spin": 9.4,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-tronix-zgr",
@@ -12501,9 +12785,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "6 jogadores avaliaram",
+        "frase": "6 pessoas que usaram esta borracha deram, em média, velocidade 7.9, efeito 8.2, controle 9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 7.9,
+        "spin": 8.2,
+        "controle": 9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-samba",
@@ -12538,9 +12828,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "20 jogadores avaliaram",
+        "frase": "20 pessoas que usaram esta lâmina deram, em média, velocidade 9.1, controle 9.6 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 9.6
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-zhou-qihao-45",
@@ -12554,9 +12849,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "6 jogadores avaliaram",
+        "frase": "6 pessoas que usaram esta lâmina deram, em média, velocidade 9.1, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-rossi-emotion-pbo-c",
@@ -12585,9 +12885,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "13 jogadores avaliaram",
+        "frase": "13 pessoas que usaram esta lâmina deram, em média, velocidade 8.6, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.6,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-vyzaryz-hybrid",
@@ -12601,9 +12906,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A Joola não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "20 jogadores avaliaram",
+        "frase": "20 pessoas que usaram esta lâmina deram, em média, velocidade 9.6, controle 9.1 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.6,
+        "controle": 9.1
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "joola-nobilis",
@@ -12989,9 +13299,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A DHS não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "18 jogadores avaliaram",
+        "frase": "18 pessoas que usaram esta borracha deram, em média, velocidade 8.1, efeito 9.4, controle 8.6 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.1,
+        "spin": 9.4,
+        "controle": 8.6
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "dhs-h3-neo-national-azul",
@@ -13505,9 +13821,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "A DHS não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
-      }
+        "tag": "7 jogadores avaliaram",
+        "frase": "7 pessoas que usaram esta lâmina deram, em média, velocidade 9.3, controle 9.4 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.3,
+        "controle": 9.4
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "dhs-power-g8",
@@ -14957,9 +15278,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "Não encontrei índice de velocidade, efeito ou controle deste material em nenhuma das fontes que consulto. O que está conferido aqui é o preço, a foto e a ficha do fabricante."
-      }
+        "tag": "30 jogadores avaliaram",
+        "frase": "30 pessoas que usaram esta lâmina deram, em média, velocidade 8.8, controle 9.2 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "palio-tct",
@@ -14973,9 +15299,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "Não encontrei índice de velocidade, efeito ou controle deste material em nenhuma das fontes que consulto. O que está conferido aqui é o preço, a foto e a ficha do fabricante."
-      }
+        "tag": "20 jogadores avaliaram",
+        "frase": "20 pessoas que usaram esta lâmina deram, em média, velocidade 9.1, controle 8 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.1,
+        "controle": 8
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "palio-cat",
@@ -14989,9 +15320,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "Não encontrei índice de velocidade, efeito ou controle deste material em nenhuma das fontes que consulto. O que está conferido aqui é o preço, a foto e a ficha do fabricante."
-      }
+        "tag": "15 jogadores avaliaram",
+        "frase": "15 pessoas que usaram esta lâmina deram, em média, velocidade 8.1, controle 8.7 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.1,
+        "controle": 8.7
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "palio-r57",
@@ -15005,9 +15341,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "Não encontrei índice de velocidade, efeito ou controle deste material em nenhuma das fontes que consulto. O que está conferido aqui é o preço, a foto e a ficha do fabricante."
-      }
+        "tag": "9 jogadores avaliaram",
+        "frase": "9 pessoas que usaram esta lâmina deram, em média, velocidade 7.8, controle 9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 7.8,
+        "controle": 9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "palio-cj8000-speed",
@@ -15069,9 +15410,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "Não encontrei índice de velocidade, efeito ou controle deste material em nenhuma das fontes que consulto. O que está conferido aqui é o preço, a foto e a ficha do fabricante."
-      }
+        "tag": "31 jogadores avaliaram",
+        "frase": "31 pessoas que usaram esta borracha deram, em média, velocidade 8.8, efeito 8.9, controle 8.8 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.8,
+        "spin": 8.9,
+        "controle": 8.8
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "palio-ak47-red",
@@ -15644,9 +15991,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem índice publicado",
-        "frase": "Não encontrei índice de velocidade, efeito ou controle deste material em nenhuma das fontes que consulto. O que está conferido aqui é o preço, a foto e a ficha do fabricante."
-      }
+        "tag": "13 jogadores avaliaram",
+        "frase": "13 pessoas que usaram esta lâmina deram, em média, velocidade 7.6, controle 9.3 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 7.6,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "gewo-allround-basic",
@@ -15762,9 +16114,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Esponja 50",
-        "frase": "Esponja de grau 50 na régua europeia — o número está no próprio nome do produto. Nem a GEWO nem a loja publicam índice de desempenho deste material. O que está conferido aqui é o preço, a foto e o que a ficha mostra."
-      }
+        "tag": "13 jogadores avaliaram",
+        "frase": "13 pessoas que usaram esta borracha deram, em média, velocidade 9.3, efeito 9.2, controle 9.2 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.3,
+        "spin": 9.2,
+        "controle": 9.2
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "gewo-inventus-xt-pro-50",
@@ -16218,9 +16576,15 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Esponja 50",
-        "frase": "Esponja de grau 50 na régua europeia — o número está no próprio nome do produto. Nem a GEWO nem a loja publicam índice de desempenho deste material. O que está conferido aqui é o preço, a foto e o que a ficha mostra."
-      }
+        "tag": "15 jogadores avaliaram",
+        "frase": "15 pessoas que usaram esta borracha deram, em média, velocidade 9.5, efeito 9, controle 8.9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 9.5,
+        "spin": 9,
+        "controle": 8.9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "gewo-hype-xt-pro-50",
@@ -17047,9 +17411,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "7 camadas de limba, carbono",
-        "frase": "Construção declarada: 7 camadas de limba, carbono. Nem a GEWO nem a loja publicam índice de desempenho deste material. O que está conferido aqui é o preço, a foto e o que a ficha mostra."
-      }
+        "tag": "5 jogadores avaliaram",
+        "frase": "5 pessoas que usaram esta lâmina deram, em média, velocidade 8.8, controle 9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "gewo-power-offense",
@@ -17111,9 +17480,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Balsa, carbono",
-        "frase": "Construção declarada: balsa, carbono. Nem a GEWO nem a loja publicam índice de desempenho deste material. O que está conferido aqui é o preço, a foto e o que a ficha mostra."
-      }
+        "tag": "6 jogadores avaliaram",
+        "frase": "6 pessoas que usaram esta lâmina deram, em média, velocidade 6.9, controle 9.3 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 6.9,
+        "controle": 9.3
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "gewo-hybrid-c-as-allp",
@@ -17175,9 +17549,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "5 camadas",
-        "frase": "Construção declarada: 5 camadas. Nem a GEWO nem a loja publicam índice de desempenho deste material. O que está conferido aqui é o preço, a foto e o que a ficha mostra."
-      }
+        "tag": "5 jogadores avaliaram",
+        "frase": "5 pessoas que usaram esta lâmina deram, em média, velocidade 7.9, controle 8.1 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 7.9,
+        "controle": 8.1
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "gewo-in-force-arc",
@@ -17223,9 +17602,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "5 camadas",
-        "frase": "Construção declarada: 5 camadas. Nem a GEWO nem a loja publicam índice de desempenho deste material. O que está conferido aqui é o preço, a foto e o que a ficha mostra."
-      }
+        "tag": "5 jogadores avaliaram",
+        "frase": "5 pessoas que usaram esta lâmina deram, em média, velocidade 8.8, controle 9 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8.8,
+        "controle": 9
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "gewo-xolo-allround",
@@ -17271,9 +17655,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Linha ofensiva",
-        "frase": "Nem a GEWO nem a loja publicam índice de desempenho deste material. O que está conferido aqui é o preço, a foto e o que a ficha mostra."
-      }
+        "tag": "8 jogadores avaliaram",
+        "frase": "8 pessoas que usaram esta lâmina deram, em média, velocidade 8, controle 9.5 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — e é a mesma escala dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 8,
+        "controle": 9.5
+      },
+      "origemSpecs": "comunidade"
     },
     {
       "id": "gewo-aruna-kids",

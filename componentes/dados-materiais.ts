@@ -21,6 +21,7 @@ import dados from '@/dados/materiais.json';
 import { fabricantePorId } from './dados-fabricante';
 import { escalaDoTexto, grauRepresentativo, paraESN } from '@/src/logica/escalas';
 import { MOEDAS, type Moeda } from '@/src/logica/moedas';
+import type { Specs } from '@/src/logica/metricas';
 
 export type OrigemDureza = 'fabricante' | 'semente';
 
@@ -81,11 +82,34 @@ function moedaDo(m: { id: string; moeda?: string }): Moeda | undefined {
   return achada;
 }
 
+/**
+ * `specs` do JSON de volta ao tipo estreito — ou um erro que quebra o build.
+ *
+ * Mesma razão da `moedaDo`: o JSON infere `regua` como string, e uma régua que o
+ * código não conhece não pode passar calado. Publicar 118 como se fosse a régua
+ * 0–10 é o defeito exato que este campo existe para impedir, e ele só é útil se
+ * um valor errado falhar AQUI, e não silenciosamente numa tabela.
+ */
+function specsDe(m: { id: string; specs?: { velocidade: number; spin?: number; controle: number; regua?: string } }) {
+  if (!m.specs) return undefined;
+  const { regua, ...resto } = m.specs;
+  if (regua === undefined) return resto as Specs;
+  const achada = REGUAS.find((r) => r === regua);
+  if (!achada) {
+    throw new Error(
+      `Material "${m.id}": régua "${regua}" não é uma das conhecidas (${REGUAS.join(', ')}).`,
+    );
+  }
+  return { ...resto, regua: achada } as Specs;
+}
+
+const REGUAS = ['semente', 'megaspin'] as const;
+
 function resolver(m: (typeof dados.materiais)[number]): MaterialCatalogo {
   /* O JSON infere `origemSpecs` como string; aqui ela volta ao tipo estreito.
      Ausente = 'semente' (os materiais anteriores a esta distinção). */
   const origemSpecs = ((m as { origemSpecs?: string }).origemSpecs ?? 'semente') as OrigemSpecs;
-  const base = { ...m, origemSpecs, moeda: moedaDo(m) };
+  const base = { ...m, origemSpecs, moeda: moedaDo(m), specs: specsDe(m) };
 
   const doFabricante = durezaDaFicha(m.id);
   if (!doFabricante) return { ...base, origemDureza: 'semente' };

@@ -35,6 +35,7 @@
  * Esta função não julga tipo — quem chama já garantiu o par.
  */
 import type { Specs } from './metricas';
+import { mesmaRegua } from './metricas';
 
 /**
  * O mínimo que este módulo precisa saber de um material.
@@ -82,6 +83,14 @@ export function metricasComparaveis(
   const sa = a.specs;
   const sb = b.specs;
   if (!sa || !sb) return [];
+
+  /* RÉGUAS DIFERENTES NÃO SE COMPARAM, e isto é tão importante quanto o teste
+     acima. Um 118 da régua Megaspin ao lado de um 9.0 da semente não é "o
+     primeiro é mais rápido": são medidas de bases diferentes, e a tabela daria
+     a entender que uma esmaga a outra. Devolver lista vazia manda a tela para o
+     confronto de ficha — que continua verdadeiro — em vez de publicar uma
+     comparação que não existe. */
+  if (!mesmaRegua(sa, sb)) return [];
 
   const m: Metrica[] = [
     {

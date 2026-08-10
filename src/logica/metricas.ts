@@ -13,8 +13,40 @@
 
 // ───────────────────────── Tipos ─────────────────────────
 
+/**
+ * De quem é a régua dos números de um material.
+ *
+ * O comentário de `velocidade` já dizia que a escala não é comparável entre
+ * marcas. Enquanto TODO material vinha da mesma semente, isso era uma ressalva
+ * teórica. Deixou de ser: a colheita internacional trouxe índices publicados
+ * pela Megaspin, e lá uma borracha marca 118 e 128 — passa de 100, e lâmina e
+ * borracha nem partem da mesma base.
+ *
+ * Sem este campo, um 118 da Megaspin apareceria na mesma coluna que um 9.0 da
+ * semente, e o site estaria mentindo de um jeito mais difícil de ver que a
+ * coluna vazia que ele substituiu.
+ *
+ * `semente` é o default de quem não declara: os 208 materiais anteriores a esta
+ * distinção, todos na régua 0–10 em que o catálogo nasceu.
+ */
+export type Regua = 'semente' | 'megaspin';
+
+/** O teto de cada régua — é o que permite desenhar barra e radar sem achatar. */
+export const TETO_DA_REGUA: Readonly<Record<Regua, number>> = {
+  semente: 10,
+  /* A Megaspin ancora o índice numa referência e deixa o valor passar de 100
+     quando o produto supera a referência. 150 é o teto observado na colheita;
+     desenhar contra 100 cortaria a barra das borrachas de topo. */
+  megaspin: 150,
+};
+
+export const reguaDe = (s: Specs): Regua => s.regua ?? 'semente';
+
+/** Só compara número com número da MESMA régua. */
+export const mesmaRegua = (a: Specs, b: Specs): boolean => reguaDe(a) === reguaDe(b);
+
 export interface Specs {
-  /** 0–10, escala do fabricante (não comparável entre marcas — por isso as derivadas) */
+  /** Escala do fabricante ou da loja — ver `regua`. NÃO comparável entre réguas. */
   velocidade: number;
   /**
    * OPCIONAL: efeito é propriedade da BORRACHA, não da lâmina. Nem o Revspin
@@ -24,6 +56,13 @@ export interface Specs {
    */
   spin?: number;
   controle: number;
+  /**
+   * De quem são estes números. Ausente = `semente`, a régua 0–10 original.
+   *
+   * Quem grava isto é a colheita, junto com a fonte — número sem régua declarada
+   * é número que ninguém consegue defender depois (regra de 2026-08-09).
+   */
+  regua?: Regua;
 }
 
 export type ClasseBorracha = 'tensor' | 'classica' | 'aderente';

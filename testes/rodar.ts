@@ -6,6 +6,7 @@
 import {
   maciez, custoMensal, custoMensalPorClasse,
   paraBolinhas, paraPalavra, indicesDoMaximo, Specs,
+  reguaDe, mesmaRegua, TETO_DA_REGUA,
 } from '../src/logica/metricas.js';
 import {
   iniciar, responder, voltar, progresso, resultado, presetFinal, TELAS,
@@ -1127,6 +1128,43 @@ afirma(rSemFicha.paragrafos.length === 1,
 const todoTexto = [rAtaque.titulo, ...rAtaque.paragrafos, rAtaque.serve, rAtaque.exige].join(' ');
 afirma(!/\d+[,.]\d/.test(todoTexto),
   'o resumo nao publica nota nem decimal do conjunto (nota combinada segue proibida)');
+
+// ───────── Régua: número só se compara com número da mesma medida ─────────
+/* A colheita internacional trouxe indice publicado pela Megaspin, onde uma
+   borracha marca 118 e 128 -- passa de 100. Sem declarar a regua, esse 118
+   apareceria na mesma coluna que o 9.0 da semente, e a tabela daria a entender
+   que um esmaga o outro. Sao bases diferentes. */
+const specSemente: Specs = { velocidade: 9.0, spin: 9.3, controle: 7.0 };
+const specMegaspin: Specs = { velocidade: 118, spin: 128, controle: 96, regua: 'megaspin' };
+
+afirma(reguaDe(specSemente) === 'semente',
+  'quem nao declara regua e' + "'" + ' semente -- os 208 materiais anteriores continuam validos');
+afirma(reguaDe(specMegaspin) === 'megaspin', 'regua declarada e' + "'" + ' respeitada');
+afirma(mesmaRegua(specSemente, specMegaspin) === false, 'semente e megaspin nao sao a mesma regua');
+afirma(mesmaRegua(specSemente, { velocidade: 7, controle: 9 }) === true,
+  'dois sem declaracao sao a mesma regua');
+
+const cmp = (s?: Specs) => ({ id: 'x', nome: 'X', preco: 100, specs: s });
+afirma(metricasComparaveis(cmp(specSemente), cmp(specMegaspin)).length === 0,
+  'reguas diferentes NAO geram tabela de comparacao');
+afirma(metricasComparaveis(cmp(specSemente), cmp({ velocidade: 7, spin: 7.5, controle: 9 })).length > 0,
+  'mesma regua continua comparando normalmente');
+afirma(metricasComparaveis(cmp(specMegaspin), cmp({ ...specMegaspin, velocidade: 99 })).length > 0,
+  'dois na regua megaspin se comparam entre si');
+
+/* O teto existe para desenhar barra e radar sem achatar: contra 100, a borracha
+   de 128 sairia estourada. */
+afirma(TETO_DA_REGUA.megaspin > 100 && TETO_DA_REGUA.semente === 10,
+  'cada regua tem o proprio teto, e o da megaspin passa de 100');
+
+/* INVARIANTE DO CATALOGO: todo material com specs declara de onde veio a regua,
+   ou nao declara nada e vale a semente. Numero com regua desconhecida e' numero
+   que ninguem consegue defender depois. */
+const REGUAS_VALIDAS = new Set(['semente', 'megaspin']);
+const reguaInvalida = MATERIAIS.filter(
+  m => m.specs && m.specs.regua !== undefined && !REGUAS_VALIDAS.has(m.specs.regua));
+afirma(reguaInvalida.length === 0,
+  `material com regua desconhecida: ${reguaInvalida.map(m => m.id).join(', ')}`);
 
 // ───────── Conjuntos: a raquete inteira que a home anuncia ─────────
 /* A home promete "raquete inteira, pronta para começar". A promessa se sustenta

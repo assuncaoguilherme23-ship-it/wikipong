@@ -17,6 +17,7 @@ import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { Radar } from '@/componentes/Radar';
 import { PrateleiraIniciantes } from '@/componentes/PrateleiraIniciantes';
+import { ConjuntosParaComecar } from '@/componentes/ConjuntosParaComecar';
 import { CarrosselHero } from '@/componentes/CarrosselHero';
 import { MATERIAIS } from '@/componentes/dados-materiais';
 import { brl } from '@/componentes/formato';
@@ -274,6 +275,14 @@ export default function Home() {
             </figure>
           </div>
         </section>
+
+        {/* ── Para quem vai começar, nesta ordem e de propósito ──
+               Primeiro a raquete INTEIRA (lâmina + 2 borrachas), que é o que a
+               pessoa vai comprar de verdade; só depois as peças soltas, para
+               quem já sabe que quer escolher uma a uma. A prateleira sozinha
+               pedia que o iniciante montasse o quebra-cabeça antes de saber que
+               existia um quebra-cabeça. ── */}
+        <ConjuntosParaComecar />
 
         {/* ── Materiais para começar (prateleira horizontal dos iniciantes) ── */}
         <PrateleiraIniciantes />

@@ -44,6 +44,7 @@ import {
   validarPedido, parecidos, ordenarPedidos, atendidos, aprovados, type PedidoDePauta,
 } from '../src/logica/pedidos-pauta.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
+import { CONJUNTOS } from '../componentes/dados-conjuntos.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
 import { precoMedio } from '../componentes/dados-ofertas.js';
@@ -1125,6 +1126,38 @@ afirma(rSemFicha.paragrafos.length === 1,
 const todoTexto = [rAtaque.titulo, ...rAtaque.paragrafos, rAtaque.serve, rAtaque.exige].join(' ');
 afirma(!/\d+[,.]\d/.test(todoTexto),
   'o resumo nao publica nota nem decimal do conjunto (nota combinada segue proibida)');
+
+// ───────── Conjuntos: a raquete inteira que a home anuncia ─────────
+/* A home promete "raquete inteira, pronta para começar". A promessa se sustenta
+   em duas coisas que nenhum texto garante sozinho. */
+const deIniciante = CONJUNTOS.filter(c => c.nivel === 'Iniciante');
+afirma(deIniciante.length > 0, 'existe conjunto de iniciante para a home mostrar');
+
+for (const c of deIniciante) {
+  /* TRÊS peças. `resolver()` descarta em silêncio a peça cujo id sumiu do
+     catálogo -- e' o certo, um id velho nao pode derrubar a pagina. Mas aí o
+     card mostraria duas fotos embaixo da palavra "inteira". */
+  afirma(c.pecas.length === 3,
+    `conjunto "${c.id}" tem as tres pecas (lamina + 2 borrachas)`);
+  afirma(c.pecas.filter(p => p.material.tipo === 'Borracha').length === 2
+      && c.pecas.filter(p => p.material.tipo === 'Lâmina').length === 1,
+    `conjunto "${c.id}" e' 1 lamina + 2 borrachas, e nao outra combinacao`);
+
+  /* MESMA MOEDA. Somar uma lamina em reais com uma borracha em dolar e publicar
+     o resultado como preco e' inventar um numero que ninguem consegue pagar --
+     e o catalogo tem 167 materiais fora do real, entao nao e' hipotese. */
+  afirma(c.misturaMoedas === false,
+    `conjunto "${c.id}" nao mistura moedas (senao o total nao existe)`);
+  afirma(c.precoTotal === c.pecas.reduce((s, p) => s + p.material.preco, 0),
+    `o total do conjunto "${c.id}" e' a soma real das pecas`);
+}
+
+/* A deteccao de mistura tem que morder de verdade. */
+const misturado = CONJUNTOS.some(c => c.misturaMoedas);
+afirma(misturado === false, 'hoje nenhum conjunto mistura moedas');
+const umaEmDolar = MATERIAIS.find(m => m.moeda !== undefined);
+afirma(umaEmDolar !== undefined,
+  'o catalogo TEM material em moeda estrangeira (senao a trava acima nao prova nada)');
 
 // ───────── Fórum: a consulta que precisa nomear a chave ─────────
 /* Esta asserção olha o CÓDIGO-FONTE, e não uma função. É de propósito.

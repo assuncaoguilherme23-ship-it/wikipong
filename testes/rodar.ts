@@ -45,6 +45,7 @@ import {
 } from '../src/logica/pedidos-pauta.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { CONJUNTOS } from '../componentes/dados-conjuntos.js';
+import { nomeComMarca } from '../componentes/formato.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
 import { precoMedio } from '../componentes/dados-ofertas.js';
@@ -1150,6 +1151,30 @@ for (const c of deIniciante) {
     `conjunto "${c.id}" nao mistura moedas (senao o total nao existe)`);
   afirma(c.precoTotal === c.pecas.reduce((s, p) => s + p.material.preco, 0),
     `o total do conjunto "${c.id}" e' a soma real das pecas`);
+}
+
+/* O nome sozinho, sem a linha de marca ao lado, precisa dizer de quem e'. O
+   catalogo tem DUAS convencoes: 789 guardam o nome nu ("Rozena") e 73 da semente
+   trazem a marca embutida ("Yasaka Mark V"). Sem isto, o card da home mostrava
+   "Rozena" ao lado de "Xiom Vega Intro" -- e quem esta' comecando nao tem como
+   saber que a primeira e' uma Butterfly. */
+afirma(nomeComMarca('Butterfly', 'Rozena') === 'Butterfly Rozena',
+  'nome nu recebe a marca na frente');
+afirma(nomeComMarca('Yasaka', 'Yasaka Mark V') === 'Yasaka Mark V',
+  'nome que ja' + "'" + ' comeca pela marca nao a repete');
+afirma(nomeComMarca('yasaka', 'Yasaka Mark V') === 'Yasaka Mark V',
+  'a comparacao ignora caixa');
+/* A regra e' PREFIXO, e nao "contem": um nome que cita a marca no meio ainda
+   precisa dela na frente para o leitor saber de quem e' o produto. */
+afirma(nomeComMarca('Stiga', 'Clipper com cabo Stiga') === 'Stiga Clipper com cabo Stiga',
+  'marca citada no meio nao conta como prefixo');
+
+for (const c of deIniciante) {
+  for (const p of c.pecas) {
+    const exibido = nomeComMarca(p.material.marca, p.material.nome);
+    afirma(exibido.toLowerCase().startsWith(p.material.marca.toLowerCase()),
+      `no card, "${p.material.nome}" aparece com a marca na frente`);
+  }
 }
 
 /* A deteccao de mistura tem que morder de verdade. */

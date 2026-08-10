@@ -24,7 +24,7 @@
 import Link from 'next/link';
 import { CONJUNTOS } from './dados-conjuntos';
 import { FotoProduto } from './FotoProduto';
-import { dinheiro } from './formato';
+import { dinheiro, nomeComMarca } from './formato';
 import estilos from './ConjuntosParaComecar.module.css';
 
 /* Derivado, não escrito à mão: se um conjunto de iniciante for acrescentado ou
@@ -91,7 +91,9 @@ export function ConjuntosParaComecar() {
                       />
                     </span>
                     <span className={`mono ${estilos.papel}`}>{CURTO[p.papel]}</span>
-                    <span className={estilos.nomePeca}>{p.material.nome}</span>
+                    <span className={estilos.nomePeca}>
+                      {nomeComMarca(p.material.marca, p.material.nome)}
+                    </span>
                   </span>
                 ))}
               </span>

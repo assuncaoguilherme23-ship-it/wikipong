@@ -13780,7 +13780,19 @@
       ],
       "nota": "Preço, foto e construção conferidos na AmericaTT."
     },
-    "butterfly-allround-basic": {
+    "yinhe-moon-speed": {
+      "confianca": "revendedor",
+      "fonte": "https://chtt.se/en/varumarken/yinhe/yinhegummi/yinhe-moon-speed-53-euro",
+      "consultadoEm": "2026-08-09",
+      "ficha": [
+        {
+          "rotulo": "Superfície",
+          "valor": "Lisa, tensionada"
+        }
+      ],
+      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis (Suécia). Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "gewo-allround-basic": {
       "confianca": "revendedor",
       "fonte": "https://loja.jjyamada.com.br/madeira-allround-basic-fl",
       "consultadoEm": "2026-08-09",
@@ -13794,19 +13806,7 @@
           "valor": "Madeira, linha Basic de entrada"
         }
       ],
-      "nota": "Preço, foto e construção conferidos na JJ Yamada."
-    },
-    "yinhe-moon-speed": {
-      "confianca": "revendedor",
-      "fonte": "https://chtt.se/en/varumarken/yinhe/yinhegummi/yinhe-moon-speed-53-euro",
-      "consultadoEm": "2026-08-09",
-      "ficha": [
-        {
-          "rotulo": "Superfície",
-          "valor": "Lisa, tensionada"
-        }
-      ],
-      "nota": "Preço, foto e construção conferidos na Chinese Table Tennis (Suécia). Não é vendida no Brasil: o preço está em coroa sueca porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+      "nota": "Preço e foto conferidos na JJ Yamada, distribuidora no Brasil. ATENÇÃO À MARCA: a loja lista este produto no campo de marca como Tamasu Butterfly, mas a foto do próprio anúncio mostra a lâmina com a marca GEWO impressa, e é a GEWO que fabrica a ALLround Basic. Vale a foto, que é o produto; o campo de marca da loja distribui as duas e se confundiu."
     }
   }
 }

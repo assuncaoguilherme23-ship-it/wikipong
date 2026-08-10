@@ -14378,9 +14378,9 @@
       }
     },
     {
-      "id": "butterfly-allround-basic",
+      "id": "gewo-allround-basic",
       "nome": "Allround Basic",
-      "marca": "Butterfly",
+      "marca": "Gewo",
       "tipo": "Lâmina",
       "nivel": "Iniciante",
       "intencao": "equilibrado",
@@ -14388,8 +14388,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Butterfly mais barata",
-        "frase": "R$ 204: a porta de entrada na Butterfly, sem fibra e sem pressa — feita pra aprender."
+        "tag": "A GEWO de entrada",
+        "frase": "R$ 204 numa lâmina de madeira pura: entrada sem fibra e sem pressa, feita pra aprender."
       }
     },
     {

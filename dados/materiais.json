@@ -9676,8 +9676,14 @@
       "rating": 4.7,
       "reviews": 187,
       "simples": {
-        "tag": "187 avaliações — a maior amostra do catálogo",
-        "frase": "A borracha mais avaliada de todo o WikiPong, e por larga margem: 187 pessoas contra 93 da segunda colocada. A Fastarc G-1 é uma das tensionadas japonesas mais usadas do mundo."
+        "tag": "Velocidade 95, acima do controle",
+        "frase": "A loja publica velocidade 95, efeito 96, controle 68 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 95,
+        "spin": 96,
+        "controle": 68,
+        "regua": "megaspin"
       }
     },
     {
@@ -9691,8 +9697,14 @@
       "rating": 4.65,
       "reviews": 68,
       "simples": {
-        "tag": "68 avaliações",
-        "frase": "A S-1 é a versão de mais giro da linha Fastarc; a G-1, a mais equilibrada."
+        "tag": "Velocidade 97, acima do controle",
+        "frase": "A loja publica velocidade 97, efeito 94, controle 68 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 97,
+        "spin": 94,
+        "controle": 68,
+        "regua": "megaspin"
       }
     },
     {
@@ -9706,8 +9718,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Flyatt macia",
-        "frase": "R$ 250, junto com a Spin a mais barata da linha."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -9721,8 +9733,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Flyatt de giro",
-        "frase": "R$ 250."
+        "tag": "Velocidade 90, acima do controle",
+        "frase": "A loja publica velocidade 90, efeito 95, controle 70 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 90,
+        "spin": 95,
+        "controle": 70,
+        "regua": "megaspin"
       }
     },
     {
@@ -9736,8 +9754,14 @@
       "rating": 4.7,
       "reviews": 5,
       "simples": {
-        "tag": "Cinco avaliações, no limite",
-        "frase": "Exatamente o piso de cinco. Nota 9,4."
+        "tag": "Velocidade 98, acima do controle",
+        "frase": "A loja publica velocidade 98, efeito 97, controle 67 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 98,
+        "spin": 97,
+        "controle": 67,
+        "regua": "megaspin"
       }
     },
     {
@@ -9751,8 +9775,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Hammond original",
-        "frase": "R$ 212. O Revspin registra a Z2 e a Pro Beta desta linha, não a comum."
+        "tag": "Velocidade 85, acima do controle",
+        "frase": "A loja publica velocidade 85, efeito 82, controle 77 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 85,
+        "spin": 82,
+        "controle": 77,
+        "regua": "megaspin"
       }
     },
     {
@@ -9766,8 +9796,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Hammond CR",
-        "frase": "R$ 219."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -9781,8 +9811,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Hammond de potência",
-        "frase": "R$ 292."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -9796,8 +9826,14 @@
       "rating": 4.75,
       "reviews": 79,
       "simples": {
-        "tag": "Nota 9,5 com 79 avaliações",
-        "frase": "A nota mais alta entre as borrachas Nittaku com amostra grande."
+        "tag": "Velocidade 98, acima do controle",
+        "frase": "A loja publica velocidade 98, efeito 96, controle 67 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 98,
+        "spin": 96,
+        "controle": 67,
+        "regua": "megaspin"
       }
     },
     {
@@ -9811,8 +9847,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Hurricane Neo",
-        "frase": "R$ 292. O Revspin registra as Turbo, não esta."
+        "tag": "Velocidade 91, acima do controle",
+        "frase": "A loja publica velocidade 91, efeito 94, controle 87 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 91,
+        "spin": 94,
+        "controle": 87,
+        "regua": "megaspin"
       }
     },
     {
@@ -9826,8 +9868,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Hurricane sem Turbo",
-        "frase": "R$ 264, a mais barata das quatro Hurricane aqui."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -9841,8 +9883,8 @@
       "rating": 4.7,
       "reviews": 30,
       "simples": {
-        "tag": "A Hurricane azul",
-        "frase": "A Nittaku licencia a Hurricane da DHS e vende com esponja própria. Turbo Blue e Turbo Orange diferem na esponja: a azul é mais dura."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -9856,8 +9898,8 @@
       "rating": 4.6,
       "reviews": 39,
       "simples": {
-        "tag": "A Hurricane laranja",
-        "frase": "39 avaliações — a versão laranja tem amostra maior que a azul."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -9871,8 +9913,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A única Moristo lisa aqui",
-        "frase": "As outras três Moristo da loja são de pinos e ficaram adiadas. Esta é lisa."
+        "tag": "Velocidade 78, acima do controle",
+        "frase": "A loja publica velocidade 78, efeito 88, controle 77 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 78,
+        "spin": 88,
+        "controle": 77,
+        "regua": "megaspin"
       }
     },
     {
@@ -9886,8 +9934,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Registrada sem nenhuma avaliação",
-        "frase": "R$ 201. Consta do Revspin sem nota e sem avaliação."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -9901,8 +9949,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Acoustic",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Velocidade 92, acima do controle",
+        "frase": "A loja publica velocidade 92, controle 65 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 92,
+        "controle": 65,
+        "regua": "megaspin"
       }
     },
     {
@@ -9916,8 +9969,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Acoustic",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Velocidade 90, acima do controle",
+        "frase": "A loja publica velocidade 90, controle 66 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 90,
+        "controle": 66,
+        "regua": "megaspin"
       }
     },
     {
@@ -9931,8 +9989,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Acoustic",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Velocidade 86, acima do controle",
+        "frase": "A loja publica velocidade 86, controle 67 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 86,
+        "controle": 67,
+        "regua": "megaspin"
       }
     },
     {
@@ -9946,8 +10009,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Acoustic",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -9961,8 +10024,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "R$ 1528. Sem registro no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -9976,8 +10039,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem amostra na comunidade",
-        "frase": "R$ 529. Sem registro no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -9991,8 +10054,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De as Eto Blade",
-        "frase": "Edições anuais do zodíaco chinês. Edição limitada quase nunca tem amostra própria na comunidade."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10006,8 +10069,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem amostra na comunidade",
-        "frase": "R$ 940. Sem registro no Revspin."
+        "tag": "Velocidade 94, acima do controle",
+        "frase": "A loja publica velocidade 94, controle 61 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 94,
+        "controle": 61,
+        "regua": "megaspin"
       }
     },
     {
@@ -10021,8 +10089,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem amostra na comunidade",
-        "frase": "R$ 1340. Sem registro no Revspin."
+        "tag": "Velocidade 91, acima do controle",
+        "frase": "A loja publica velocidade 91, controle 68 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 91,
+        "controle": 68,
+        "regua": "megaspin"
       }
     },
     {
@@ -10036,8 +10109,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A 5.22 tem cinco avaliações e a 7.22, catorze."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10051,8 +10124,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a linha Kasumi",
-        "frase": "A Kasumi Basic tem 17 avaliações."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10066,8 +10139,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A Miyabi comum tem 14 avaliações."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10081,8 +10154,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a linha So-Ten",
-        "frase": "Sem registro no Revspin."
+        "tag": "Velocidade 92, acima do controle",
+        "frase": "A loja publica velocidade 92, controle 64 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 92,
+        "controle": 64,
+        "regua": "megaspin"
       }
     },
     {
@@ -10096,8 +10174,13 @@
       "rating": 4.8,
       "reviews": 96,
       "simples": {
-        "tag": "Nota 9,6 com 96 avaliações",
-        "frase": "A lâmina mais avaliada de todo o catálogo. Madeira pura, sem fibra — a Acoustic é uma das lâminas japonesas mais conhecidas do mundo, e o nome vem da sensação sonora do impacto."
+        "tag": "Velocidade 86, acima do controle",
+        "frase": "A loja publica velocidade 86, controle 67 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 86,
+        "controle": 67,
+        "regua": "megaspin"
       }
     },
     {
@@ -10111,8 +10194,13 @@
       "rating": 4.65,
       "reviews": 24,
       "simples": {
-        "tag": "A Acoustic com fibra",
-        "frase": "Mesma família da Acoustic, com carbono. 24 avaliações."
+        "tag": "Velocidade 92, acima do controle",
+        "frase": "A loja publica velocidade 92, controle 65 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 92,
+        "controle": 65,
+        "regua": "megaspin"
       }
     },
     {
@@ -10126,8 +10214,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10141,8 +10229,13 @@
       "rating": 4.75,
       "reviews": 19,
       "simples": {
-        "tag": "Carbono por dentro",
-        "frase": "A fibra fica junto ao núcleo: a bola afunda mais na madeira antes de sair. 19 avaliações."
+        "tag": "Velocidade 90, acima do controle",
+        "frase": "A loja publica velocidade 90, controle 66 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 90,
+        "controle": 66,
+        "regua": "megaspin"
       }
     },
     {
@@ -10156,8 +10249,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Acoustic",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10171,8 +10264,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Acoustic",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10186,8 +10279,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Acoustic",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10201,8 +10294,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10216,8 +10309,8 @@
       "rating": 4.75,
       "reviews": 24,
       "simples": {
-        "tag": "Mesma lâmina, cabo maior",
-        "frase": "A Acoustic com punho grande, para mão maior. 24 avaliações próprias — o Revspin a registra separado da comum."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10231,8 +10324,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem amostra na comunidade",
-        "frase": "R$ 881. Sem registro no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10246,8 +10339,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem amostra na comunidade",
-        "frase": "R$ 352. Sem registro no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10261,8 +10354,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a linha Meister Basaltec",
-        "frase": "O Revspin registra a Basaltec Outer com 11 avaliações. Basalto é fibra de rocha vulcânica, mais macia que o carbono."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10276,8 +10369,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "O Revspin registra a Basaltec Outer com 11 avaliações. Basalto é fibra de rocha vulcânica, mais macia que o carbono."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10291,8 +10384,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a linha Meister Basaltec",
-        "frase": "O Revspin registra a Basaltec Outer com 11 avaliações. Basalto é fibra de rocha vulcânica, mais macia que o carbono."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10306,8 +10399,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Fora do Revspin",
-        "frase": "R$ 306. Não consta da comunidade internacional sob nenhuma grafia."
+        "tag": "Velocidade 93, acima do controle",
+        "frase": "A loja publica velocidade 93, efeito 90, controle 71 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 93,
+        "spin": 90,
+        "controle": 71,
+        "regua": "megaspin"
       }
     },
     {
@@ -10321,8 +10420,8 @@
       "rating": 4.65,
       "reviews": 14,
       "simples": {
-        "tag": "Madeira vermelha",
-        "frase": "Bloodwood é o pau-brasil — madeira densa e vermelha. 14 avaliações."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10336,8 +10435,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Fora do Revspin",
-        "frase": "R$ 470, junto com a Fistard a mais cara da marca aqui."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10351,8 +10450,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De as Eto Blade",
-        "frase": "Edições anuais do zodíaco chinês. Edição limitada quase nunca tem amostra própria na comunidade."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10366,8 +10465,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De as Eto Blade",
-        "frase": "Edições anuais do zodíaco chinês. Edição limitada quase nunca tem amostra própria na comunidade."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10381,8 +10480,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Lâmina de caneta",
-        "frase": "R$ 2199. Sem registro no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10396,8 +10495,14 @@
       "rating": 4.5,
       "reviews": 26,
       "simples": {
-        "tag": "26 avaliações por R$ 219",
-        "frase": "Das borrachas Nittaku com boa amostra, é a mais barata."
+        "tag": "Velocidade 92, acima do controle",
+        "frase": "A loja publica velocidade 92, efeito 92, controle 71 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 92,
+        "spin": 92,
+        "controle": 71,
+        "regua": "megaspin"
       }
     },
     {
@@ -10411,8 +10516,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Factive de topo",
-        "frase": "R$ 405 contra R$ 219 da Factive comum, que tem 26 avaliações."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10426,8 +10531,14 @@
       "rating": 4.6,
       "reviews": 60,
       "simples": {
-        "tag": "60 avaliações",
-        "frase": "A C-1 fecha o trio Fastarc. As três custam o mesmo: R$ 299."
+        "tag": "Velocidade 96, acima do controle",
+        "frase": "A loja publica velocidade 96, efeito 95, controle 68 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 96,
+        "spin": 95,
+        "controle": 68,
+        "regua": "megaspin"
       }
     },
     {
@@ -10441,8 +10552,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Fora do Revspin",
-        "frase": "R$ 470."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10456,8 +10567,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Flyatt com carbono na esponja",
-        "frase": "O Revspin registra uma \"Flyatt Hard\" com 23 avaliações — outra versão da mesma linha."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10471,8 +10582,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Flyatt mais cara",
-        "frase": "R$ 649 — a borracha Nittaku mais cara do catálogo."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10486,8 +10597,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Flyatt intermediária",
-        "frase": "R$ 294."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10501,8 +10612,14 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Genextion V2C",
-        "frase": "R$ 411. A Genextion comum tem cinco avaliações; esta versão não é registrada separado."
+        "tag": "Velocidade 97, acima do controle",
+        "frase": "A loja publica velocidade 97, efeito 98, controle 67 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 97,
+        "spin": 98,
+        "controle": 67,
+        "regua": "megaspin"
       }
     },
     {
@@ -10516,8 +10633,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Goriki",
-        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10531,8 +10648,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Lâmina de caneta",
-        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10546,8 +10663,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10561,8 +10678,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Goriki",
-        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+        "tag": "Velocidade 88, acima do controle",
+        "frase": "A loja publica velocidade 88, controle 76 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 88,
+        "controle": 76,
+        "regua": "megaspin"
       }
     },
     {
@@ -10576,8 +10698,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Goriki",
-        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10591,8 +10713,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Goriki",
-        "frase": "A Goriki Super Drive tem 10 avaliações; a comum, quatro."
+        "tag": "Controle 92, acima da velocidade",
+        "frase": "A loja publica velocidade 65, controle 92 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 65,
+        "controle": 92,
+        "regua": "megaspin"
       }
     },
     {
@@ -10606,8 +10733,8 @@
       "rating": 4.75,
       "reviews": 10,
       "simples": {
-        "tag": "A Goriki mais avaliada",
-        "frase": "Dez avaliações. A Goriki comum tem quatro, abaixo do nosso piso."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10621,8 +10748,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem amostra na comunidade",
-        "frase": "R$ 1128. Sem registro no Revspin."
+        "tag": "Velocidade 91, acima do controle",
+        "frase": "A loja publica velocidade 91, controle 67 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 91,
+        "controle": 67,
+        "regua": "megaspin"
       }
     },
     {
@@ -10636,8 +10768,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "A Z2 em versão especial",
-        "frase": "Mesmo preço da Z2 comum, R$ 341. A comum tem 79 avaliações; esta versão não é registrada separado, e a nota dela não foi copiada pra cá."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10651,8 +10783,13 @@
       "rating": 4.8,
       "reviews": 5,
       "simples": {
-        "tag": "Cinco avaliações, no limite",
-        "frase": "Exatamente o piso. Cinco camadas de hinoki."
+        "tag": "Velocidade 92, acima do controle",
+        "frase": "A loja publica velocidade 92, controle 65 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 92,
+        "controle": 65,
+        "regua": "megaspin"
       }
     },
     {
@@ -10666,8 +10803,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A 5.22 tem cinco avaliações e a 7.22, catorze."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10681,8 +10818,13 @@
       "rating": 4.75,
       "reviews": 14,
       "simples": {
-        "tag": "A Hino de sete camadas",
-        "frase": "Hinoki é o cipreste japonês. O número é a construção: 7 camadas, 2,2 mm."
+        "tag": "Velocidade 94, acima do controle",
+        "frase": "A loja publica velocidade 94, controle 64 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 94,
+        "controle": 64,
+        "regua": "megaspin"
       }
     },
     {
@@ -10696,8 +10838,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a linha Meister Holz Sieben",
-        "frase": "Três avaliações no Revspin, abaixo do nosso piso."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10711,8 +10853,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "Três avaliações no Revspin, abaixo do nosso piso."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10726,8 +10868,13 @@
       "rating": 4.75,
       "reviews": 17,
       "simples": {
-        "tag": "A Kasumi de entrada",
-        "frase": "17 avaliações, nota 9,5. R$ 580 — das lâminas japonesas com boa amostra, é a mais barata daqui."
+        "tag": "Velocidade 86, acima do controle",
+        "frase": "A loja publica velocidade 86, controle 78 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 86,
+        "controle": 78,
+        "regua": "megaspin"
       }
     },
     {
@@ -10741,8 +10888,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem amostra na comunidade",
-        "frase": "R$ 822. Sem registro no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10756,8 +10903,8 @@
       "rating": 4.75,
       "reviews": 13,
       "simples": {
-        "tag": "13 avaliações",
-        "frase": "Nota 9,5. R$ 1.290."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10771,8 +10918,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A Latika Carbon tem 13 avaliações e a Light, 10."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10786,8 +10933,13 @@
       "rating": 4.75,
       "reviews": 10,
       "simples": {
-        "tag": "A Latika leve",
-        "frase": "10 avaliações, nota 9,5. R$ 516 — a mais barata da família Latika."
+        "tag": "Velocidade 85, acima do controle",
+        "frase": "A loja publica velocidade 85, controle 79 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 85,
+        "controle": 79,
+        "regua": "megaspin"
       }
     },
     {
@@ -10801,8 +10953,8 @@
       "rating": 4.75,
       "reviews": 36,
       "simples": {
-        "tag": "36 avaliações",
-        "frase": "Nota 9,5. R$ 766."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10816,8 +10968,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A Ludeack comum tem 36 avaliações e nota 9,5."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10831,8 +10983,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem amostra na comunidade",
-        "frase": "R$ 1449. Sem registro no Revspin."
+        "tag": "Velocidade 92, acima do controle",
+        "frase": "A loja publica velocidade 92, controle 65 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 92,
+        "controle": 65,
+        "regua": "megaspin"
       }
     },
     {
@@ -10846,8 +11003,13 @@
       "rating": 4.4,
       "reviews": 14,
       "simples": {
-        "tag": "Nota 8,8 com 14 avaliações",
-        "frase": "R$ 822."
+        "tag": "Velocidade 95, acima do controle",
+        "frase": "A loja publica velocidade 95, controle 59 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 95,
+        "controle": 59,
+        "regua": "megaspin"
       }
     },
     {
@@ -10861,8 +11023,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Lâmina de caneta",
-        "frase": "A Miyabi comum tem 14 avaliações."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10876,8 +11038,8 @@
       "rating": 4.6,
       "reviews": 13,
       "simples": {
-        "tag": "A Rutis é LÂMINA, não borracha",
-        "frase": "O nome não diz e o preço engana, mas a Rutis é lâmina — confirmado no índice de lâminas do Revspin. A Revo tem o núcleo mais grosso que a Rutis original."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10891,8 +11053,8 @@
       "rating": 4.8,
       "reviews": 17,
       "simples": {
-        "tag": "Nota 9,6, a entrada da série S",
-        "frase": "17 avaliações. R$ 662."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10906,8 +11068,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10921,8 +11083,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a série S",
-        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10936,8 +11098,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10951,8 +11113,8 @@
       "rating": 4.7,
       "reviews": 20,
       "simples": {
-        "tag": "A S-CZ, 20 avaliações",
-        "frase": "A série S da Nittaku vai da S-5 à S-KC, subindo em velocidade e preço."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10966,8 +11128,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10981,8 +11143,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a série S",
-        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -10996,8 +11158,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A S-5 tem 17 avaliações e a S-CZ, 20. As outras não são registradas separado."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11011,8 +11173,13 @@
       "rating": 4.65,
       "reviews": 27,
       "simples": {
-        "tag": "27 avaliações",
-        "frase": "Sete camadas de madeira dão velocidade sem fibra nenhuma."
+        "tag": "Velocidade 90, acima do controle",
+        "frase": "A loja publica velocidade 90, controle 74 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 90,
+        "controle": 74,
+        "regua": "megaspin"
       }
     },
     {
@@ -11026,8 +11193,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A Septear comum tem 27 avaliações."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11041,8 +11208,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Septear",
-        "frase": "A Septear comum tem 27 avaliações."
+        "tag": "Velocidade 87, acima do controle",
+        "frase": "A loja publica velocidade 87, controle 70 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 87,
+        "controle": 70,
+        "regua": "megaspin"
       }
     },
     {
@@ -11056,8 +11228,8 @@
       "rating": 4.15,
       "reviews": 15,
       "simples": {
-        "tag": "Nota 8,3 — a mais baixa das lâminas Nittaku",
-        "frase": "15 avaliações. Lâmina de defesa: lenta de propósito, para quem corta longe da mesa."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11071,8 +11243,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "Sem registro no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11086,8 +11258,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Acoustic",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Velocidade 86, acima do controle",
+        "frase": "A loja publica velocidade 86, controle 67 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 86,
+        "controle": 67,
+        "regua": "megaspin"
       }
     },
     {
@@ -11101,8 +11278,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Acoustic",
-        "frase": "A Acoustic comum tem 96 avaliações e nota 9,6 — a mais avaliada do catálogo. Esta variação não tem registro próprio no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11116,8 +11293,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a linha Tenaly",
-        "frase": "A Tenaly Acoustic tem duas avaliações, abaixo do piso."
+        "tag": "Velocidade 91, acima do controle",
+        "frase": "A loja publica velocidade 91, controle 66 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 91,
+        "controle": 66,
+        "regua": "megaspin"
       }
     },
     {
@@ -11131,8 +11313,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a linha Tenaly",
-        "frase": "A Tenaly Acoustic tem duas avaliações, abaixo do piso."
+        "tag": "Velocidade 89, acima do controle",
+        "frase": "A loja publica velocidade 89, controle 64 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 89,
+        "controle": 64,
+        "regua": "megaspin"
       }
     },
     {
@@ -11146,8 +11333,8 @@
       "rating": 4.75,
       "reviews": 24,
       "simples": {
-        "tag": "24 avaliações",
-        "frase": "Nota 9,5. R$ 1.237."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11161,8 +11348,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a linha Tribus",
-        "frase": "Sem registro no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11176,8 +11363,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a linha Tribus",
-        "frase": "Sem registro no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11191,8 +11378,13 @@
       "rating": 4.7,
       "reviews": 50,
       "simples": {
-        "tag": "50 avaliações, nota 9,4",
-        "frase": "A Violin e a Acoustic são as duas madeiras puras clássicas da Nittaku. A Violin é um pouco mais rápida."
+        "tag": "Velocidade 88, acima do controle",
+        "frase": "A loja publica velocidade 88, controle 65 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 88,
+        "controle": 65,
+        "regua": "megaspin"
       }
     },
     {
@@ -11206,8 +11398,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Cabo classineta",
-        "frase": "A Violin comum tem 50 avaliações. Esta variação não é registrada separado no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11221,8 +11413,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Violin",
-        "frase": "A Violin comum tem 50 avaliações. Esta variação não é registrada separado no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11236,8 +11428,8 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "De a família Violin",
-        "frase": "A Violin comum tem 50 avaliações. Esta variação não é registrada separado no Revspin."
+        "tag": "Sem índice publicado",
+        "frase": "A Nittaku não publica índice de velocidade, efeito ou controle em formato legível no site dela, e a loja onde o preço foi conferido também não. O que está conferido aqui é o preço, a foto e o que a ficha do fabricante mostra."
       }
     },
     {
@@ -11251,8 +11443,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem amostra na comunidade",
-        "frase": "R$ 1184. Sem registro no Revspin."
+        "tag": "Controle 90, acima da velocidade",
+        "frase": "A loja publica velocidade 67, controle 90 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 67,
+        "controle": 90,
+        "regua": "megaspin"
       }
     },
     {
@@ -11266,8 +11463,13 @@
       "rating": 4.5,
       "reviews": 0,
       "simples": {
-        "tag": "Sem amostra na comunidade",
-        "frase": "R$ 385. Sem registro no Revspin."
+        "tag": "Velocidade 82, acima do controle",
+        "frase": "A loja publica velocidade 82, controle 75 na régua da Megaspin — nela uma borracha passa de 100, então este número não se compara com o dos materiais mais antigos do catálogo."
+      },
+      "specs": {
+        "velocidade": 82,
+        "controle": 75,
+        "regua": "megaspin"
       }
     },
     {

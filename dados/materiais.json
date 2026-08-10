@@ -14407,6 +14407,1398 @@
         "tag": "A Moon de velocidade",
         "frase": "A linha Moon da Yinhe na versão rápida, com esponja de grau 53 na régua europeia."
       }
+    },
+    {
+      "id": "gewo-nex-el-pro-50-ss",
+      "nome": "Nexxus EL Pro 50 SuperSelect",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 57,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 50",
+        "frase": "Tensionada da GEWO, com esponja de grau 50 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nexxus-el-pro-45-ss",
+      "nome": "Nexxus EL Pro 45 SuperSelect",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 58,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 45",
+        "frase": "Tensionada da GEWO, com esponja de grau 45 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nexxus-el-pro-48",
+      "nome": "Nexxus EL Pro 48",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 48",
+        "frase": "Tensionada da GEWO, com esponja de grau 48 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nexxus-el-pro-50",
+      "nome": "Nexxus EL Pro 50 Hard",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 52,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 50",
+        "frase": "Tensionada da GEWO, com esponja de grau 50 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-inventus-xt-pro-50",
+      "nome": "Inventus XT Pro 50.0",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 44,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 50",
+        "frase": "Tensionada da GEWO, com esponja de grau 50 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-codexx-ss-pro-53",
+      "nome": "Codexx SuperSelect Pro 53",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 54,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 53",
+        "frase": "Tensionada da GEWO, com esponja de grau 53 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-proton-neo-325",
+      "nome": "Proton Neo 325",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 31,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha GEWO",
+        "frase": "Tensionada da GEWO."
+      }
+    },
+    {
+      "id": "gewo-codexx-ss-pro-55",
+      "nome": "Codexx SuperSelect Pro 55",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 54,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 55",
+        "frase": "Tensionada da GEWO, com esponja de grau 55 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-codexx-el-pro-52",
+      "nome": "Codexx EL Pro 52",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 49,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 52",
+        "frase": "Tensionada da GEWO, com esponja de grau 52 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nexxus-el-pro-53",
+      "nome": "Nexxus EL Pro 53 Hard",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 52,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 53",
+        "frase": "Tensionada da GEWO, com esponja de grau 53 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nanoflexx-eft-48",
+      "nome": "Neoflexx eFT 48",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 36,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 48",
+        "frase": "Tensionada da GEWO, com esponja de grau 48 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-proton-neo-375",
+      "nome": "Proton Neo 375",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 31,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha GEWO",
+        "frase": "Tensionada da GEWO."
+      }
+    },
+    {
+      "id": "gewo-inventus-xt-pro-525",
+      "nome": "Inventus XT Pro 52.5",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 44,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 52",
+        "frase": "Tensionada da GEWO, com esponja de grau 52 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-inventus-xt-pro-475",
+      "nome": "Inventus XT Pro 47.5",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 44,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 47",
+        "frase": "Tensionada da GEWO, com esponja de grau 47 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-codexx-ef-pro-54",
+      "nome": "Codexx EF Pro 54",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 49,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 54",
+        "frase": "Tensionada da GEWO, com esponja de grau 54 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-hype-xt-pro-40",
+      "nome": "Hype XT Pro 40.0",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 40",
+        "frase": "Tensionada da GEWO, com esponja de grau 40 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-elaxxon-eft-50",
+      "nome": "Elaxxon eFT 50.0",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 50",
+        "frase": "Tensionada da GEWO, com esponja de grau 50 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-elaxxon-eft-45",
+      "nome": "Elaxxon eFT 45.0",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 39,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 45",
+        "frase": "Tensionada da GEWO, com esponja de grau 45 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-proton-neo-475",
+      "nome": "Proton Neo 475",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 33,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha GEWO",
+        "frase": "Tensionada da GEWO."
+      }
+    },
+    {
+      "id": "gewo-proton-neo-450",
+      "nome": "Proton Neo 450",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 31,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha GEWO",
+        "frase": "Tensionada da GEWO."
+      }
+    },
+    {
+      "id": "gewo-cs-powerspeed",
+      "nome": "CS Powerspeed",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 20,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha GEWO",
+        "frase": "Tensionada da GEWO."
+      }
+    },
+    {
+      "id": "gewo-nexxus-el-pro-53-ss",
+      "nome": "Nexxus EL Pro 53 SuperSelect",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 58,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 53",
+        "frase": "Tensionada da GEWO, com esponja de grau 53 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nexxus-xt-pro-48",
+      "nome": "Nexxus XT Pro 48",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 48",
+        "frase": "Tensionada da GEWO, com esponja de grau 48 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nexxus-el-pro-48-ss",
+      "nome": "Nexxus EL Pro 48 SuperSelect",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 58,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 48",
+        "frase": "Tensionada da GEWO, com esponja de grau 48 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nexxus-xt-pro-50",
+      "nome": "Nexxus XT Pro 50 Hard",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 46,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 50",
+        "frase": "Tensionada da GEWO, com esponja de grau 50 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-hype-xt-pro-50",
+      "nome": "Hype XT Pro 50.0",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 50",
+        "frase": "Tensionada da GEWO, com esponja de grau 50 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-hype-kr-pro-47",
+      "nome": "Hype KR Pro 47.5",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 49,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 47",
+        "frase": "Tensionada da GEWO, com esponja de grau 47 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nanoflexx-ft-48",
+      "nome": "nanoFLEX FT 48",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 25,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 48",
+        "frase": "Tensionada da GEWO, com esponja de grau 48 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nexxus-pro-43-el",
+      "nome": "Nexxus EL Pro 43",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 43",
+        "frase": "Tensionada da GEWO, com esponja de grau 43 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nexxus-pro-38-el",
+      "nome": "Nexxus EL Pro 38",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 38",
+        "frase": "Tensionada da GEWO, com esponja de grau 38 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nanoflexx-eft-40",
+      "nome": "Neoflexx eFT 40",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 34,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 40",
+        "frase": "Tensionada da GEWO, com esponja de grau 40 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nanoflexx-eft-45",
+      "nome": "Neoflexx eFT 45",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 34,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 45",
+        "frase": "Tensionada da GEWO, com esponja de grau 45 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-hype-el-pro-47",
+      "nome": "Hype EL Pro 47.5",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 47",
+        "frase": "Tensionada da GEWO, com esponja de grau 47 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-hype-el-pro-42",
+      "nome": "Hype EL Pro 42.5",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Esponja 42",
+        "frase": "Tensionada da GEWO, com esponja de grau 42 na régua europeia — o número está no próprio nome do produto."
+      }
+    },
+    {
+      "id": "gewo-nano-s-speed",
+      "nome": "Nano S Speed",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 41,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha GEWO",
+        "frase": "Tensionada da GEWO."
+      }
+    },
+    {
+      "id": "gewo-raver",
+      "nome": "Raver",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 11,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha GEWO",
+        "frase": "Tensionada da GEWO."
+      }
+    },
+    {
+      "id": "gewo-return-pro",
+      "nome": "Return Pro",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Avançado",
+      "intencao": "controlar",
+      "preco": 31,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha GEWO",
+        "frase": "Tensionada da GEWO."
+      }
+    },
+    {
+      "id": "gewo-mega-flex-control",
+      "nome": "Mega Flex Control",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 25,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha GEWO",
+        "frase": "Tensionada da GEWO."
+      }
+    },
+    {
+      "id": "gewo-target-airtec-fx",
+      "nome": "Target airTEC FX",
+      "marca": "Gewo",
+      "tipo": "Borracha",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 31,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Borracha GEWO",
+        "frase": "Tensionada da GEWO."
+      }
+    },
+    {
+      "id": "gewo-balsa-c-775",
+      "nome": "Balsa Carbon 775",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 61,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Balsa Carbon 775 by Gewo View larger image $61 ."
+      }
+    },
+    {
+      "id": "gewo-sensus-carbo-s",
+      "nome": "Sensus Carbo Speed",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 117,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: It is comprised of fast high-quality Aramid carbon, created in close cooperation with GEWO's top players."
+      }
+    },
+    {
+      "id": "gewo-robles-h-e-c",
+      "nome": "Robles Hinoki Ex-Carbon",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 126,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: s &rarr; GEWO Robles Hinoki Ex-Carbon Table Tennis Blades --> &rarr; Gewo Blades &rarr; GEWO Robles Hinoki Ex-Carbon Free Gift &rarr; Order 1 Gewo blade with 2 Gewo rubber sheets and get GEWO Single W"
+      }
+    },
+    {
+      "id": "gewo-balsa-c-575",
+      "nome": "Balsa Carbon 575",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 58,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Balsa Carbon 575 by Gewo &middot; Part of Blade Sale View larger image $58 ."
+      }
+    },
+    {
+      "id": "gewo-in-force-pbo-pc",
+      "nome": "In-Force PBO-PC",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 112,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: The fine Limba outer veneers also provide more prolonged ball contact and high spin values."
+      }
+    },
+    {
+      "id": "gewo-sensus-carbo-t",
+      "nome": "Sensus Carbo Touch",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 108,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: er layer between the core and middle ply, the blade provides for a softer and more controlled touch than most carbon blades."
+      }
+    },
+    {
+      "id": "gewo-aruna-hinoki-c",
+      "nome": "Aruna Hinoki Carbon",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 135,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: ve Blades &rarr; GEWO Aruna Hinoki Carbon Table Tennis Blades --> &rarr; Gewo Blades &rarr; GEWO Aruna Hinoki Carbon Free Gift &rarr; Order 1 Gewo blade with 2 Gewo rubber sheets and get GEWO Single W"
+      }
+    },
+    {
+      "id": "gewo-karas-scepter",
+      "nome": "Karas Scepter",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 121,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: and this is why \"King Kara\" relies on GEWO products GEWO Karas Scepter features an innovative, harder Premium Carbon Material which provides for stable ball bouncing, balanced hardness, and a longer d"
+      }
+    },
+    {
+      "id": "gewo-sensus-carbo-pf",
+      "nome": "Sensus Powerfeeling",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 81,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: The GEWO Powerfeeling is an all-wood offensive blade designed to provide excellent feedback and controlled offense."
+      }
+    },
+    {
+      "id": "gewo-aruna-off",
+      "nome": "Aruna Off",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 85,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - Free US Shipping The GEWO Aruna Off is made of 7 specially selected and tested wooden plies glued together to produce an all power blade bursting with energy."
+      }
+    },
+    {
+      "id": "gewo-aruna-energy-arc",
+      "nome": "Aruna Energy ARC",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 90,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: The blade is made of 5 specially selected wooden plies combined with two Aramid Carbon plies."
+      }
+    },
+    {
+      "id": "gewo-hybrid-c-ms-offm",
+      "nome": "Hybrid Carbon M/Speed Off−",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 56,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Hybrid Carbon M/Speed Off- by Gewo &middot; Part of Blade Sale View larger image $55 ."
+      }
+    },
+    {
+      "id": "gewo-bence-m-off",
+      "nome": "Bence Majoros Off",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 58,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: 7 ply, allwood, Made in Hungary."
+      }
+    },
+    {
+      "id": "gewo-aruna-carbon-basic",
+      "nome": "Aruna Carbon Basic",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "atacar",
+      "preco": 54,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Aruna Carbon Basic by Gewo &middot; Part of Blade Sale View larger image $53 ."
+      }
+    },
+    {
+      "id": "gewo-hybrid-c-xspeed",
+      "nome": "Hybrid Carbon X/Speed Off",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 58,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Hybrid Carbon X/Speed Off by Gewo &middot; Part of Blade Sale View larger image $58 ."
+      }
+    },
+    {
+      "id": "gewo-zoom-pro-offm",
+      "nome": "Zoom Pro Off−",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: A classic five ply all wood blade, the Zoom Pro has a medium-soft core and harder outer veneers."
+      }
+    },
+    {
+      "id": "gewo-power-control",
+      "nome": "Power Control",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 49,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Power Control (1) Add a Review External Review for GEWO Power Control on September 22, 2022 This is my first 5 ply wooden blade."
+      }
+    },
+    {
+      "id": "gewo-in-force-s-hac",
+      "nome": "In-Force S-HAC OFF",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 139,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "Lâmina avulsa da GEWO, marca alemã."
+      }
+    },
+    {
+      "id": "gewo-xolo-off",
+      "nome": "Xolo Offensive",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 49,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "Lâmina avulsa da GEWO, marca alemã."
+      }
+    },
+    {
+      "id": "gewo-xolo-off-carbon",
+      "nome": "Xolo Offensive Carbon",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 54,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: lades &rarr; GEWO Xolo Offensive Carbon Table Tennis Blades --> &rarr; Gewo Blades &rarr; GEWO Xolo Offensive Carbon Free Gift &rarr; Order 1 Gewo blade with 2 Gewo rubber sheets and get GEWO Single W"
+      }
+    },
+    {
+      "id": "gewo-celexxis-off-class",
+      "nome": "Celexxis Offensive Classic",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 81,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - Free US Shipping The GEWO Celexxis Offensive Classic is a 7-ply hardwood table tennis blade, designed for its optimal balance of speed and control, ensuring high performance."
+      }
+    },
+    {
+      "id": "gewo-celexxis-fort-carb",
+      "nome": "Celexxis Fortissimo Carbon OFF",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 162,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Celexxis Fortissimo Carbon OFF by Gewo &middot; Part of GEWO Celexxis Series View more images $161 ."
+      }
+    },
+    {
+      "id": "gewo-celexxis-hin-ex-c",
+      "nome": "Celexxis Hinoki Ex-Carbon OFF",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 144,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Celexxis Hinoki Ex-Carbon OFF by Gewo &middot; Part of GEWO Celexxis Series View more images $143 ."
+      }
+    },
+    {
+      "id": "gewo-ex-force-pbo-pc",
+      "nome": "Ex-Force PBO-PC",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 112,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: riant, the synthetic fiber of the Ex-Force PBO-PC Off is not placed on the core, but directly under the noble Limba outer veneer, providing enhanced speed and power."
+      }
+    },
+    {
+      "id": "gewo-zoom-pro-light",
+      "nome": "Zoom Pro Light",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Related Products Customers who purchased GEWO Zoom Pro Light also purchased: GEWO Hybrid Carbon A/Speed All+ in Blades &rarr; Gewo , Allround Blades $53 ."
+      }
+    },
+    {
+      "id": "gewo-force-arc",
+      "nome": "Force ARC",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 90,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - Free US Shipping GEWO Force ARC - 5 plies of wood reinforced with two-ply Aramid carbon for fast offensive play."
+      }
+    },
+    {
+      "id": "gewo-alvaro-off",
+      "nome": "Alvaro Robles Off",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 60,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - GEWO Alvaro Robles Off is a perfectly designed, fast all wood 7 ply blade for offensive players who require close to the table touch and finesse play."
+      }
+    },
+    {
+      "id": "gewo-power-offense",
+      "nome": "Power Offense",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 35,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - The GEWO Power Offense is a well-made all-wood classical offensive minus five-ply blade."
+      }
+    },
+    {
+      "id": "gewo-power-carbon",
+      "nome": "Power Carbon",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 29,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: &rarr; Offensive Blades &rarr; GEWO Power Carbon Table Tennis Blades --> &rarr; Gewo Blades &rarr; GEWO Power Carbon Free Gift &rarr; Order 1 Gewo blade with 2 Gewo rubber sheets and get GEWO Single W"
+      }
+    },
+    {
+      "id": "gewo-zoom-balance-allp",
+      "nome": "Zoom Balance All+",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - The GEWO Zoom Balance All+ combines three premium wood plies Kiri, Ayous to each other."
+      }
+    },
+    {
+      "id": "gewo-balsa-c-375",
+      "nome": "Balsa Carbon 375",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 58,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Balsa Carbon 375 by Gewo &middot; Part of Blade Sale View larger image $58 ."
+      }
+    },
+    {
+      "id": "gewo-hybrid-c-as-allp",
+      "nome": "Hybrid Carbon A/Speed All+",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 54,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Hybrid Carbon A/Speed All+ by Gewo &middot; Part of Blade Sale View larger image $53 ."
+      }
+    },
+    {
+      "id": "gewo-allround-classic",
+      "nome": "Allround Classic",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 36,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "Lâmina avulsa da GEWO, marca alemã."
+      }
+    },
+    {
+      "id": "gewo-celexxis-all-class",
+      "nome": "Celexxis Allround Classic",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "controlar",
+      "preco": 67,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - Free US Shipping The GEWO Celexxis Allround Classic Table Tennis Blade, with its classic veneer construction and proven playing characteristics, is a reliable choice for the offensively ori"
+      }
+    },
+    {
+      "id": "gewo-power-allround",
+      "nome": "Power Allround",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 28,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: This all-wood five-ply blade provides accurate power and high control."
+      }
+    },
+    {
+      "id": "gewo-in-force-arc",
+      "nome": "In-Force Arc OFF−",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 99,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: t is Aramid Carbon (not alc) and 1 of the best blade OSP (palatinus-handmade after long research find arramid carbon the best amd closest to woody feeling) I wanted to try."
+      }
+    },
+    {
+      "id": "gewo-aruna-all-plus",
+      "nome": "Aruna All Plus",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "equilibrado",
+      "preco": 90,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - Free US Shipping The GEWO Aruna All Plus carbon blade is designed for a versatile all-around player who seeks control and extended dwell time on the racket."
+      }
+    },
+    {
+      "id": "gewo-alvaro-off-m",
+      "nome": "Alvaro Robles Off−",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 49,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - The 5-ply Alvaro Robles Off- is rated offensive minus for speed and is ideally constructed for all playing situations."
+      }
+    },
+    {
+      "id": "gewo-xolo-allround",
+      "nome": "Xolo Allround",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 30,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: The GEWO Xolo Allround is a versatile allround blade with five veneers that ensure controlled and precise attacking play."
+      }
+    },
+    {
+      "id": "gewo-basic-off",
+      "nome": "Basic Offensive",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "atacar",
+      "preco": 34,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "Lâmina avulsa da GEWO, marca alemã."
+      }
+    },
+    {
+      "id": "gewo-velox-alpha-p-c",
+      "nome": "Velox Alpha Power Control",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Intermediário",
+      "intencao": "controlar",
+      "preco": 45,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "Lâmina avulsa da GEWO, marca alemã."
+      }
+    },
+    {
+      "id": "gewo-aruna-kids",
+      "nome": "Aruna Kids",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: EWO Aruna Kids offers aspiring youth an opportunity to play with quality, lighter weight traditional five-ply all-wood blade."
+      }
+    },
+    {
+      "id": "gewo-zoom-bal-allp-kids",
+      "nome": "Zoom Balance All+ for Kids",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "controlar",
+      "preco": 40,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: cel - - GEWO Zoom Balance Allround Kids Narrow Handle Allround table tennis blade combines three premium wood plies Kiri, Ayous to each other."
+      }
+    },
+    {
+      "id": "gewo-youngster",
+      "nome": "Youngster",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Iniciante",
+      "intencao": "equilibrado",
+      "preco": 27,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "Lâmina avulsa da GEWO, marca alemã."
+      }
+    },
+    {
+      "id": "gewo-celexxis-all-cl-cs",
+      "nome": "Celexxis Allround Classic · caneta chinesa",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "controlar",
+      "preco": 67,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - Free US Shipping The GEWO Celexxis Allround Classic Table Tennis Blade, with its classic veneer construction and proven playing characteristics, is a reliable choice for the offensively ori"
+      }
+    },
+    {
+      "id": "gewo-celexxis-h-ex-c-cs",
+      "nome": "Celexxis Hinoki Ex-Carbon · caneta chinesa",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 144,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Celexxis Hinoki Ex-Carbon OFF - Chinese Penhold by Gewo View more images $143 ."
+      }
+    },
+    {
+      "id": "gewo-celexxis-fort-c-cs",
+      "nome": "Celexxis Fortissimo Carbon · caneta chinesa",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 160,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: GEWO Celexxis Fortissimo Carbon Offensive - Chinese Penhold by Gewo View more images $159 ."
+      }
+    },
+    {
+      "id": "gewo-celexxis-off-cl-cs",
+      "nome": "Celexxis Offensive Classic · caneta chinesa",
+      "marca": "Gewo",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "atacar",
+      "preco": 81,
+      "moeda": "USD",
+      "rating": 4.5,
+      "reviews": 0,
+      "simples": {
+        "tag": "Lâmina GEWO",
+        "frase": "A GEWO declara para esta lâmina: Cancel - - Free US Shipping The GEWO Celexxis Offensive Classic is a 7-ply hardwood table tennis blade, designed for its optimal balance of speed and control, ensuring high performance."
+      }
     }
   ]
 }

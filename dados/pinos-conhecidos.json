@@ -1,6 +1,6 @@
 {
   "_procedencia": "Índice /pips/ do revspin.net, consultado em 2026-08-06. Só as marcas que existem no catálogo.",
-  "_porque": "Pinos e anti-spin estão FORA da colheita por decisão do fundador. Esta lista existe porque o nome não denuncia o pino: Nittaku Hammond é lisa e Hammond FA é pino curto; andro Hexer é lisa e Hexer Pips é pino. Conferir pelo nome erra. O teste em testes/rodar.ts usa esta lista para impedir que um pino entre como borracha lisa.",
+  "_porque": "Pinos e anti-spin estão FORA da colheita por decisão do fundador. Esta lista existe porque o nome não denuncia o pino: Nittaku Hammond é lisa e Hammond FA é pino curto; andro Hexer é lisa e Hexer Pips é pino. Conferir pelo nome erra. O teste em testes/rodar.ts usa esta lista para impedir que um pino entre como borracha lisa. A GEWO entra com lista VAZIA: o índice /pips/ do Revspin não traz nenhuma seção da marca, e as 39 borrachas dela na Megaspin são todas lisas. Lista vazia aqui não é lacuna esquecida — é a afirmação de que se procurou e não há.",
   "marcas": {
     "Andro": [
       "Blowfish",
@@ -242,6 +242,7 @@
       "VIP Leileilei Anti Master Pro",
       "VVIP Master Huang Jianjiang",
       "VVIP Moxa Spesial"
-    ]
+    ],
+    "Gewo": []
   }
 }

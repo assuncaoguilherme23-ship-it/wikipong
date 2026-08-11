@@ -81,8 +81,25 @@ const cabecalhos = {
   Prefer: 'return=minimal',
 };
 
+/* O que já está na fila, pra nem abrir a página de novo. O banco recusa repetida
+   pela coluna `url`, que é UNIQUE — mas ele recusa DEPOIS, e a essa altura o
+   resumo já foi escrito e pago. A home da CBTM tem sempre as mesmas 6 notícias;
+   sem esta checagem seriam 18 resumos por dia pras 2 ou 3 que são novas de
+   verdade. O 409 continua sendo a garantia; isto aqui é só economia. */
+async function urlsNaFila() {
+  const res = await fetch(
+    `${URL_SUPABASE.replace(/\/$/, '')}/rest/v1/noticias_recebidas?select=url&limit=2000`,
+    { headers: cabecalhos });
+  if (!res.ok) return new Set(); // sem a lista, colhe tudo: o 409 segura
+  return new Set((await res.json()).map((r) => r.url));
+}
+
+const jaEstao = await urlsNaFila();
+
 let novas = 0, repetidas = 0, ilegiveis = 0, semResumo = 0;
 for (const caminho of await achar()) {
+  if (jaEstao.has(CBTM + caminho)) { repetidas++; continue; }
+
   let n;
   try { n = await ler(caminho); } catch { n = null; }
   if (!n) { ilegiveis++; console.log(`  ilegível: ${caminho.slice(0, 60)}`); continue; }

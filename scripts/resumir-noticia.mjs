@@ -76,7 +76,10 @@ export async function resumir({ titulo, texto }) {
   try {
     const r = await anthropic.messages.create({
       model: 'claude-opus-5',
-      max_tokens: 2000,
+      /* Folga pro raciocínio. O resumo em si tem 200 caracteres, mas o modelo
+         pensa antes, e esses tokens contam aqui: apertado demais, ele para no
+         meio e a resposta chega sem o bloco de texto — nulo silencioso. */
+      max_tokens: 4000,
       system: SISTEMA,
       output_config: {
         /* `low` porque a tarefa é curta e bem definida: ler um texto e resumir.
@@ -98,15 +101,26 @@ export async function resumir({ titulo, texto }) {
     }
 
     const bruto = r.content.find((b) => b.type === 'text')?.text;
-    if (!bruto) return null;
+    /* Resposta sem bloco de texto. Acontece quando o raciocínio come o
+       max_tokens todo. Sem esta linha o retorno era nulo MUDO — a notícia
+       chegava em branco e o log não dizia nada, que é o pior dos dois mundos. */
+    if (!bruto) {
+      console.log(`  resposta sem texto (stop_reason: ${r.stop_reason}) — tokens: ${JSON.stringify(r.usage)}`);
+      return null;
+    }
 
     const { resumo, tag } = JSON.parse(bruto);
     /* O banco exige 40 caracteres para publicar. Um resumo abaixo disso não
        serve, e devolver nulo é mais honesto que empurrar um pedaço. */
-    if (!resumo || resumo.trim().length < 40) return null;
+    if (!resumo || resumo.trim().length < 40) {
+      console.log(`  resumo curto demais (${resumo?.trim().length ?? 0} caracteres): descartado`);
+      return null;
+    }
     return { resumo: resumo.trim(), tag: TAGS.includes(tag) ? tag : undefined };
   } catch (e) {
-    console.log(`  resumo falhou: ${e.message.slice(0, 60)}`);
+    /* 60 caracteres cortavam justamente a parte util: "Your credit balance is
+       too low..." vira "Your credit balance is too...". O erro tem que caber. */
+    console.log(`  resumo falhou (${e.status ?? 'sem status'}): ${String(e.message).slice(0, 300)}`);
     return null;
   }
 }

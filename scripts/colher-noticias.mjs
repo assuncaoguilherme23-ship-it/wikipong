@@ -81,24 +81,31 @@ const cabecalhos = {
   Prefer: 'return=minimal',
 };
 
-/* O que já está na fila, pra nem abrir a página de novo. O banco recusa repetida
-   pela coluna `url`, que é UNIQUE — mas ele recusa DEPOIS, e a essa altura o
-   resumo já foi escrito e pago. A home da CBTM tem sempre as mesmas 6 notícias;
-   sem esta checagem seriam 18 resumos por dia pras 2 ou 3 que são novas de
-   verdade. O 409 continua sendo a garantia; isto aqui é só economia. */
-async function urlsNaFila() {
-  const res = await fetch(
-    `${URL_SUPABASE.replace(/\/$/, '')}/rest/v1/noticias_recebidas?select=url&limit=2000`,
-    { headers: cabecalhos });
-  if (!res.ok) return new Set(); // sem a lista, colhe tudo: o 409 segura
-  return new Set((await res.json()).map((r) => r.url));
+const raiz = `${URL_SUPABASE.replace(/\/$/, '')}/rest/v1/noticias_recebidas`;
+
+/* O que já está na fila, com o resumo de cada uma. Duas coisas dependem disto:
+   ECONOMIA — a home da CBTM tem sempre as mesmas 6 notícias, e sem esta consulta
+   seriam 18 resumos por dia pras 2 ou 3 que são novas de verdade. O banco recusa
+   repetida pela coluna `url`, que é UNIQUE, mas ele recusa DEPOIS: a essa altura
+   o resumo já foi escrito e pago.
+   RESGATE — a fila pode ter notícia depositada antes de existir redator, com
+   resumo nulo. Essa não é repetida: é uma que ainda espera texto. Pular por já
+   estar na fila deixaria ela em branco pra sempre. */
+async function fila() {
+  const res = await fetch(`${raiz}?select=id,url,resumo&limit=2000`, { headers: cabecalhos });
+  if (!res.ok) return new Map(); // sem a lista, colhe tudo: o 409 segura
+  return new Map((await res.json()).map((r) => [r.url, r]));
 }
 
-const jaEstao = await urlsNaFila();
+const naFila = await fila();
 
-let novas = 0, repetidas = 0, ilegiveis = 0, semResumo = 0;
+let novas = 0, resgatadas = 0, repetidas = 0, ilegiveis = 0, semResumo = 0;
 for (const caminho of await achar()) {
-  if (jaEstao.has(CBTM + caminho)) { repetidas++; continue; }
+  const endereco = CBTM + caminho;
+  const existente = naFila.get(endereco);
+  /* Só é repetida de verdade quando já tem resumo. Sem resumo, ela volta pra
+     fila do redator. */
+  if (existente?.resumo) { repetidas++; continue; }
 
   let n;
   try { n = await ler(caminho); } catch { n = null; }
@@ -109,7 +116,21 @@ for (const caminho of await achar()) {
   if (escrito) { campos.resumo = escrito.resumo; if (escrito.tag) campos.tag = escrito.tag; }
   else semResumo++;
 
-  const res = await fetch(`${URL_SUPABASE.replace(/\/$/, '')}/rest/v1/noticias_recebidas`, {
+  if (existente) {
+    /* Já está na fila esperando texto. Sem texto novo pra dar, não mexe nela —
+       um PATCH vazio só gastaria requisição. E escreve SÓ resumo e tag: o
+       `status` é do fundador, e sobrescrever apagaria a decisão dele. */
+    if (!escrito) continue;
+    const res = await fetch(`${raiz}?id=eq.${existente.id}`, {
+      method: 'PATCH', headers: cabecalhos,
+      body: JSON.stringify({ resumo: escrito.resumo, ...(escrito.tag ? { tag: escrito.tag } : {}) }),
+    });
+    if (res.ok) { resgatadas++; console.log(`  resumo escrito: ${n.titulo.slice(0, 62)}`); }
+    else console.log(`  nao consegui escrever o resumo (${res.status}): ${n.titulo.slice(0, 45)}`);
+    continue;
+  }
+
+  const res = await fetch(raiz, {
     method: 'POST', headers: cabecalhos, body: JSON.stringify(campos),
   });
   if (res.ok) { novas++; console.log(`  nova: ${n.publicado_em} · ${n.titulo.slice(0, 70)}`); }
@@ -117,4 +138,4 @@ for (const caminho of await achar()) {
   else console.log(`  recusada (${res.status}): ${n.titulo.slice(0, 50)}`);
 }
 
-console.log(`\n${novas} novas · ${repetidas} já estavam na fila · ${ilegiveis} sem título ou data legível`);
+console.log(`\n${novas} novas · ${resgatadas} que ja' estavam sem resumo e ganharam um · ${repetidas} repetidas · ${ilegiveis} ilegíveis`);

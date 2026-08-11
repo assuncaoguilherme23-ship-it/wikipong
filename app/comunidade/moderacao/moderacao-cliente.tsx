@@ -296,7 +296,14 @@ export function ModeracaoCliente() {
           noticias={noticias}
           erro={erroNoticias}
           semServidor={!repoNoticias.disponivel}
-          aoAprovar={(id, resumo) => agirNaNoticia(() => repoNoticias.aprovar(id, resumo))}
+          /* Se ele mexeu no texto, a voz passa a ser da casa; se publicou a linha
+             fina como veio, ela continua sendo da CBTM e a tela atribui. */
+          aoAprovar={(id, resumo) => {
+            const n = (noticias ?? []).find((x) => x.id === id);
+            const mexeu = resumo.trim() !== (n?.resumo ?? '').trim();
+            const origem = mexeu ? 'wikipong' : n?.origemResumo;
+            return agirNaNoticia(() => repoNoticias.aprovar(id, resumo, undefined, origem));
+          }}
           aoDescartar={(id) => agirNaNoticia(() => repoNoticias.descartar(id))}
           aoDevolver={(id) => agirNaNoticia(() => repoNoticias.devolver(id))}
         />

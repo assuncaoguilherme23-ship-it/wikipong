@@ -47,7 +47,14 @@ export function NoticiasAprovadas() {
               {n.tag && <span className={estilos.tag}>{n.tag}</span>}
             </p>
             <h2 className={estilos.itemTitulo}>{n.titulo}</h2>
-            <p className={estilos.resumo}>{n.resumo}</p>
+            {/* Frase da CBTM aparece como frase da CBTM. Sem isto, palavra deles
+                passaria por nossa -- que e' o erro da GEWO com roupa melhor. */}
+            <p className={estilos.resumo}>
+              {n.resumo}
+              {n.origemResumo === 'fonte' && (
+                <span className={estilos.deQuem}> — linha fina da {n.fonte}</span>
+              )}
+            </p>
             <p className={`mono ${estilos.fonte}`}>
               {n.fonte} · {dominioDaFonte(n.url)} ↗
             </p>

@@ -79,8 +79,9 @@ export function PainelNoticias({
         {aguardando === 0
           ? 'Nada esperando você.'
           : `${aguardando} ${aguardando === 1 ? 'notícia espera' : 'notícias esperam'} sua leitura.`}{' '}
-        O resumo já vem escrito a partir do texto da notícia. <strong>Leia antes de publicar</strong> —
-        o clique é seu, e é ele que faz o texto virar voz do site. Corrija à vontade: o campo é editável.
+        O texto abaixo do título é a <strong>linha fina que a própria CBTM publicou</strong> — por isso
+        aparece atribuída a ela no site. Reescreva se quiser que a frase seja da WikiPong: a atribuição
+        sai sozinha quando o texto deixa de ser o deles.
       </p>
 
       <ul className={estilos.lista}>
@@ -104,7 +105,9 @@ export function PainelNoticias({
 
               <label className={estilos.amarrar}>
                 <span className={estilos.amarrarRotulo}>
-                  {n.resumo ? 'Resumo escrito automaticamente — revise' : 'Resumo em português'}
+                  {n.origemResumo === 'fonte'
+                    ? 'Linha fina da CBTM — publique assim (atribuída) ou reescreva'
+                    : n.resumo ? 'Resumo escrito automaticamente — revise' : 'Resumo em português'}
                   {` (mínimo ${RESUMO_MINIMO} caracteres)`}
                 </span>
               </label>

@@ -114,3 +114,13 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* De quem e' a frase do resumo. Discreto de proposito: e' procedencia, nao
+   destaque -- mas nunca ausente, porque frase alheia sem credito e' apropriacao.
+   `--cor-texto-acento` e nao o acento claro: aqui e' texto pequeno, e o alias
+   resolve pra versao que passa AA nos dois temas. */
+.deQuem {
+  color: var(--cor-texto-acento);
+  font-size: 0.85em;
+  white-space: nowrap;
+}

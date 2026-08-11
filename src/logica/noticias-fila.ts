@@ -4,17 +4,22 @@
  * A coleta é automática (scripts/colher-noticias.mjs, disparado pela rotina do
  * GitHub); a publicação não é, e a separação é o ponto do desenho.
  *
- * O robô traz o que é FATO — título, endereço, data, fonte. O `resumo` nasce
- * nulo, porque ele é a única parte que exige alguém ter LIDO a notícia. O resumo
- * das notícias que já estão no site diz coisas como "foco com o corpo cansado de
- * jogar duas competições no mesmo dia": isso não se extrai, se escreve.
+ * O robô traz o que é FATO — título, endereço, data, fonte — e mais a linha fina
+ * que a CBTM publica embaixo do título de cada notícia. Essa linha resolve o
+ * resumo de graça, mas ela é palavra DELES: `origemResumo` guarda isso, e a tela
+ * atribui. Publicar frase alheia sem dizer de quem é seria o erro da GEWO com
+ * roupa melhor.
  *
- * Por isso `aprovar` EXIGE o resumo. Não é validação de formulário — é a regra do
- * produto: notícia sem resumo escrito não vai ao ar, nem por engano.
+ * `aprovar` continua EXIGINDO resumo. Não é validação de formulário — é a regra
+ * do produto: manchete pelada não vai ao ar, nem por engano. O que mudou é que
+ * agora quase sempre já existe um texto ali quando a notícia chega.
  */
 import { tokenGuardado } from './sessao';
 
 export type StatusNoticia = 'pendente' | 'aprovada' | 'descartada';
+
+/** 'fonte' = a linha fina da CBTM, atribuída na tela. 'wikipong' = nossa. */
+export type OrigemResumo = 'fonte' | 'wikipong';
 
 export interface NoticiaRecebida {
   id: string;
@@ -22,8 +27,10 @@ export interface NoticiaRecebida {
   url: string;
   fonte: string;
   publicadoEm: string;
-  /** Escrito na moderação. Ausente = ainda não foi lida por ninguém. */
+  /** A linha fina da fonte, ou o que se escreveu na moderação por cima dela. */
   resumo?: string;
+  /** De quem é o `resumo`. Ausente nas notícias anteriores à coluna. */
+  origemResumo?: OrigemResumo;
   tag?: string;
   colhidoEm: string;
   status: StatusNoticia;
@@ -46,7 +53,7 @@ export interface RepositorioNoticias {
   readonly disponivel: boolean;
   listar(): Promise<NoticiaRecebida[]>;
   /** Publica. Recusa sem resumo — a regra mora aqui, não só no formulário. */
-  aprovar(id: string, resumo: string, tag?: string): Promise<void>;
+  aprovar(id: string, resumo: string, tag?: string, origem?: OrigemResumo): Promise<void>;
   descartar(id: string): Promise<void>;
   /** Devolve à fila, para reescrever o resumo depois. */
   devolver(id: string): Promise<void>;
@@ -54,12 +61,15 @@ export interface RepositorioNoticias {
 
 type Linha = {
   id: string; titulo: string; url: string; fonte: string; publicado_em: string;
-  resumo: string | null; tag: string | null; colhido_em: string; status: string;
+  resumo: string | null; origem_resumo: string | null;
+  tag: string | null; colhido_em: string; status: string;
 };
 
 const daLinha = (l: Linha): NoticiaRecebida => ({
   id: l.id, titulo: l.titulo, url: l.url, fonte: l.fonte,
-  publicadoEm: l.publicado_em, resumo: l.resumo ?? undefined, tag: l.tag ?? undefined,
+  publicadoEm: l.publicado_em, resumo: l.resumo ?? undefined,
+  origemResumo: (l.origem_resumo as OrigemResumo | null) ?? undefined,
+  tag: l.tag ?? undefined,
   colhidoEm: l.colhido_em, status: l.status as StatusNoticia,
 });
 
@@ -87,13 +97,16 @@ export function repositorioNoticiasSupabase(url: string, chave: string): Reposit
       if (!res.ok) throw new Error(`Supabase respondeu ${res.status}`);
       return ((await res.json()) as Linha[]).map(daLinha);
     },
-    async aprovar(id, resumo, tag) {
+    async aprovar(id, resumo, tag, origem) {
       /* A recusa é aqui e não só na tela: quem chamar esta função de outro lugar
          continua impedido de publicar manchete sem resumo. */
       if (resumo.trim().length < RESUMO_MINIMO) {
         throw new Error(`O resumo precisa de pelo menos ${RESUMO_MINIMO} caracteres — é ele que a pessoa lê.`);
       }
-      await remendar(id, { resumo: resumo.trim(), status: 'aprovada', ...(tag ? { tag } : {}) });
+      await remendar(id, {
+        resumo: resumo.trim(), status: 'aprovada',
+        ...(tag ? { tag } : {}), ...(origem ? { origem_resumo: origem } : {}),
+      });
     },
     descartar: (id) => remendar(id, { status: 'descartada' }),
     devolver: (id) => remendar(id, { status: 'pendente' }),

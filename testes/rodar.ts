@@ -1424,6 +1424,14 @@ afirma(!/body: JSON\.stringify\(n\)/.test(colhedor),
 afirma(!/resumo: *corpo|resumo: *texto/.test(colhedor + redator),
   'resumo recortado do texto da fonte: ele tem que ser escrito, nao copiado');
 
+/* Resumo custa token. A home da CBTM tem sempre as mesmas 6 noticias, e sem
+   conferir a fila antes seriam 18 resumos por dia pras 2 ou 3 novas de verdade
+   -- pagos, e jogados fora no 409. A checagem tem que vir ANTES do resumo. */
+afirma(/jaEstao\.has\(CBTM \+ caminho\)[^\n]*continue;/.test(colhedor),
+  'o colhedor precisa pular o que ja esta na fila antes de resumir: resumo repetido e dinheiro fora');
+afirma(colhedor.indexOf('jaEstao.has') < colhedor.indexOf('await resumir('),
+  'a checagem da fila esta DEPOIS do resumo: pula tarde, ja pagou');
+
 /* Uma recusa vem como HTTP 200 com content vazio. Ler content sem conferir o
    stop_reason quebra a colheita inteira num erro que parece de rede. */
 afirma(/stop_reason === 'refusal'/.test(redator),

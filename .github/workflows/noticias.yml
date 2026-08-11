@@ -1,8 +1,9 @@
 # WikiPong · a chegada automática das notícias
 # ----------------------------------------------------------------------------
-# Roda sozinho e deposita o que a CBTM publicou na fila de moderação. NÃO publica
-# nada no site: o resumo em português é escrito por gente, em /comunidade/moderacao,
-# e é ele que separa uma seção de notícias de um agregador de manchetes.
+# Roda sozinho, escreve o resumo em português a partir do texto de cada notícia e
+# deposita tudo na fila de moderação. NÃO publica nada no site: o resumo chega
+# escrito, e o clique em Publicar continua sendo do fundador — é ele que faz o
+# texto virar voz do site.
 #
 # Por que não commita nada no repositório: a fila vive no Supabase, junto com o
 # resto do que passa por moderação. Um robô abrindo commit no `main` a cada hora
@@ -30,8 +31,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Colher a CBTM e depositar na fila
+      - run: npm ci
+      - name: Colher a CBTM, escrever o resumo e depositar na fila
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/colher-noticias.mjs

@@ -1,11 +1,12 @@
 /**
  * WikiPong · Moderação das notícias que chegaram sozinhas
  * ------------------------------------------------------------------------------
- * O robô traz título, endereço, data e fonte. Aqui se faz a única parte que ele
- * não faz: ler a notícia e escrever o resumo em português.
+ * O robô traz título, endereço, data e fonte, e o resumo já vem escrito a partir
+ * do texto da notícia. Aqui se faz a parte que ele não faz: ler e decidir.
  *
- * O botão de publicar fica DESLIGADO enquanto o resumo não tem corpo. Não é
- * capricho de formulário — é a regra que separa esta seção de um agregador de
+ * O botão de publicar fica DESLIGADO enquanto o resumo não tem corpo — vale
+ * também quando o robô não conseguiu escrever e o campo chega vazio. Não é
+ * capricho de formulário: é a regra que separa esta seção de um agregador de
  * manchetes, e ela também está no repositório, para quem chamar a função por
  * fora continuar impedido.
  */
@@ -19,7 +20,7 @@ const quando = (iso: string) =>
   new Date(iso + 'T12:00:00').toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
 
 const ROTULO: Record<NoticiaRecebida['status'], string> = {
-  pendente: 'esperando resumo',
+  pendente: 'esperando você',
   aprovada: 'no ar',
   descartada: 'descartada',
 };
@@ -76,10 +77,10 @@ export function PainelNoticias({
       {erro && <p className={estilos.impedidaTitulo}>{erro}</p>}
       <p className={estilos.nota}>
         {aguardando === 0
-          ? 'Nada esperando resumo.'
-          : `${aguardando} ${aguardando === 1 ? 'notícia espera' : 'notícias esperam'} resumo.`}{' '}
-        O robô trouxe título, data e link. <strong>O resumo é seu</strong> — é a parte que exige ler
-        a notícia, e é o que faz esta seção não ser uma lista de manchetes.
+          ? 'Nada esperando você.'
+          : `${aguardando} ${aguardando === 1 ? 'notícia espera' : 'notícias esperam'} sua leitura.`}{' '}
+        O resumo já vem escrito a partir do texto da notícia. <strong>Leia antes de publicar</strong> —
+        o clique é seu, e é ele que faz o texto virar voz do site. Corrija à vontade: o campo é editável.
       </p>
 
       <ul className={estilos.lista}>
@@ -103,14 +104,15 @@ export function PainelNoticias({
 
               <label className={estilos.amarrar}>
                 <span className={estilos.amarrarRotulo}>
-                  Resumo em português (mínimo {RESUMO_MINIMO} caracteres)
+                  {n.resumo ? 'Resumo escrito automaticamente — revise' : 'Resumo em português'}
+                  {` (mínimo ${RESUMO_MINIMO} caracteres)`}
                 </span>
               </label>
               <textarea
                 className={estilos.resumoEntrada}
                 rows={3}
                 value={rascunho}
-                placeholder="O que essa notícia diz, na sua palavra. É isto que a pessoa vai ler no site."
+                placeholder="O que essa notícia diz. É isto que a pessoa vai ler no site."
                 onChange={(e) => setRascunhos({ ...rascunhos, [n.id]: e.target.value })}
               />
 

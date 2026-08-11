@@ -1414,8 +1414,8 @@ const redator = readFileSync('scripts/resumir-noticia.mjs', 'utf8');
 
 /* `corpo` é matéria-prima do resumo, não campo do banco. Se escapar pro POST,
    o PostgREST recusa a linha inteira e a fila para de encher. */
-afirma(/const \{ corpo, \.\.\.campos \} = n;/.test(colhedor),
-  'o colhedor precisa separar `corpo` antes de enviar: essa coluna nao existe no banco');
+afirma(/const \{ corpo, linhaFina, \.\.\.campos \} = n;/.test(colhedor),
+  'o colhedor precisa separar `corpo` e `linhaFina` antes de enviar: nao sao colunas do banco');
 afirma(!/body: JSON\.stringify\(n\)/.test(colhedor),
   'o colhedor esta enviando a noticia crua (com `corpo`) em vez dos campos');
 
@@ -1443,6 +1443,19 @@ afirma(/method: 'PATCH'/.test(colhedor),
 const corpoDoPatch = (colhedor.match(/method: 'PATCH',[\s\S]*?body: (JSON\.stringify\(\{[^\n]*)/) || ['', ''])[1];
 afirma(corpoDoPatch.length > 0 && !/status/.test(corpoDoPatch),
   'o PATCH esta mexendo em `status`: isso apaga a decisao do fundador sobre a noticia');
+
+/* A linha fina e' palavra da CBTM. Entrar sem marcar a procedencia faria frase
+   deles passar por nossa -- o erro da GEWO com roupa melhor. */
+afirma(/campos\.resumo = linhaFina;[\s\S]{0,80}campos\.origem_resumo = 'fonte';/.test(colhedor),
+  'a linha fina esta entrando sem marcar origem_resumo: frase da CBTM passando por nossa');
+afirma(/campos\.resumo = escrito\.resumo;[\s\S]{0,80}campos\.origem_resumo = 'wikipong';/.test(colhedor),
+  'o resumo do modelo esta entrando sem origem: a tela nao sabe se atribui ou nao');
+
+/* E a tela tem que ATRIBUIR. A coluna sozinha nao protege ninguem: se a pagina
+   publica nao mostrar de quem e' a frase, a procedencia so' existe no banco. */
+const publica = readFileSync('componentes/NoticiasAprovadas.tsx', 'utf8');
+afirma(/origemResumo === 'fonte'/.test(publica),
+  'a pagina de noticias nao esta atribuindo a linha fina a quem escreveu');
 
 /* Uma recusa vem como HTTP 200 com content vazio. Ler content sem conferir o
    stop_reason quebra a colheita inteira num erro que parece de rede. */

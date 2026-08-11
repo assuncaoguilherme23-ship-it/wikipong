@@ -38,9 +38,14 @@ import {
 } from '@/src/logica/discussoes';
 import { PainelPedidos } from './PainelPedidos';
 import { PainelDiscussoes } from './PainelDiscussoes';
+import { PainelNoticias } from './PainelNoticias';
+import {
+  repositorioNoticias, ordenarNoticias, esperando as noticiasEsperando,
+  type NoticiaRecebida,
+} from '@/src/logica/noticias-fila';
 import estilos from './moderacao.module.css';
 
-type Aba = 'avaliacoes' | 'discussoes' | 'pedidos';
+type Aba = 'avaliacoes' | 'discussoes' | 'pedidos' | 'noticias';
 
 const ROTULO_STATUS: Record<Avaliacao['status'], string> = {
   pendente: 'esperando',
@@ -100,6 +105,29 @@ export function ModeracaoCliente() {
     }
   }
 
+  const repoNoticias = useMemo(() => repositorioNoticias(), []);
+  const [noticias, setNoticias] = useState<NoticiaRecebida[] | null>(null);
+  const [erroNoticias, setErroNoticias] = useState<string | null>(null);
+
+  const recarregarNoticias = useCallback(
+    () => repoNoticias.listar()
+      .then((ns) => { setNoticias(ordenarNoticias(ns)); setErroNoticias(null); })
+      .catch(() => {
+        setNoticias([]);
+        setErroNoticias('Não consegui ler a fila de notícias. Se a migração 012 ainda não rodou, a tabela não existe.');
+      }),
+    [repoNoticias],
+  );
+
+  async function agirNaNoticia(acao: () => Promise<void>) {
+    try { await acao(); await recarregarNoticias(); }
+    catch (e) {
+      setErroNoticias(e instanceof Error && /resumo/.test(e.message)
+        ? e.message
+        : 'O banco recusou a mudança. Confira se esta conta está na tabela admins.');
+    }
+  }
+
   const repoDiscussoes = useMemo(() => repositorioDiscussoes(), []);
   const [discussoes, setDiscussoes] = useState<Topico[] | null>(null);
   const [erroDiscussoes, setErroDiscussoes] = useState<string | null>(null);
@@ -145,7 +173,8 @@ export function ModeracaoCliente() {
     repo.listar().then((todas) => setLista(ordenar(todas, 'recentes')));
     recarregarPedidos();
     recarregarDiscussoes();
-  }, [repo, admin, recarregarPedidos, recarregarDiscussoes]);
+    recarregarNoticias();
+  }, [repo, admin, recarregarPedidos, recarregarDiscussoes, recarregarNoticias]);
 
   async function mudar(id: string, status: Avaliacao['status']) {
     await repo.moderar(id, status);
@@ -227,6 +256,7 @@ export function ModeracaoCliente() {
         ['avaliacoes', 'Avaliações', lista?.filter((a) => a.status === 'pendente').length ?? 0],
         ['discussoes', 'Discussões', esperandoDiscussoes],
         ['pedidos', 'Pedidos de guia', esperandoPedidos],
+        ['noticias', 'Notícias', noticiasEsperando(noticias ?? []).length],
       ] as const).map(([id, rotulo, esperando]) => (
         <button
           key={id}
@@ -252,6 +282,23 @@ export function ModeracaoCliente() {
           topicos={discussoes}
           erro={erroDiscussoes}
           aoModerar={agirNaDiscussao}
+        />
+      </>
+    );
+  }
+
+  if (aba === 'noticias') {
+    return (
+      <>
+        {barra}
+        {abas}
+        <PainelNoticias
+          noticias={noticias}
+          erro={erroNoticias}
+          semServidor={!repoNoticias.disponivel}
+          aoAprovar={(id, resumo) => agirNaNoticia(() => repoNoticias.aprovar(id, resumo))}
+          aoDescartar={(id) => agirNaNoticia(() => repoNoticias.descartar(id))}
+          aoDevolver={(id) => agirNaNoticia(() => repoNoticias.devolver(id))}
         />
       </>
     );

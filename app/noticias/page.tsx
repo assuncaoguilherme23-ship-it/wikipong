@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import { NOTICIAS, dataLegivel, dominioDaFonte } from '@/componentes/dados-noticias';
+import { NoticiasAprovadas } from '@/componentes/NoticiasAprovadas';
 import estilos from './noticias.module.css';
 
 export const metadata: Metadata = {
@@ -36,6 +37,10 @@ export default function PaginaNoticias() {
           O que está acontecendo no tênis de mesa, com um olho no Brasil. Resumimos cada nota e
           linkamos pro original. A notícia inteira mora na fonte, com a data à mostra.
         </p>
+
+        {/* As que chegaram pela rotina e você aprovou vêm primeiro: são as mais
+            recentes. A lista abaixo é o acervo curado à mão, que envelhece. */}
+        <NoticiasAprovadas />
 
         <ul className={estilos.lista}>
           {NOTICIAS.map((n) => (

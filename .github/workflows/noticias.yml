@@ -1,0 +1,37 @@
+# WikiPong · a chegada automática das notícias
+# ----------------------------------------------------------------------------
+# Roda sozinho e deposita o que a CBTM publicou na fila de moderação. NÃO publica
+# nada no site: o resumo em português é escrito por gente, em /comunidade/moderacao,
+# e é ele que separa uma seção de notícias de um agregador de manchetes.
+#
+# Por que não commita nada no repositório: a fila vive no Supabase, junto com o
+# resto do que passa por moderação. Um robô abrindo commit no `main` a cada hora
+# encheria o histórico de ruído e disputaria o deploy com o trabalho de verdade.
+name: Notícias da CBTM
+
+on:
+  schedule:
+    # 3x ao dia (09h, 15h e 21h no horário de Brasília — o cron do GitHub é UTC).
+    # A CBTM publica algumas notícias por dia; de hora em hora seria bater na
+    # porta deles à toa.
+    - cron: '0 12,18,0 * * *'
+  # Permite disparar na mão pela aba Actions, sem esperar o horário.
+  workflow_dispatch:
+
+# Só leitura: este fluxo não escreve no repositório.
+permissions:
+  contents: read
+
+jobs:
+  colher:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Colher a CBTM e depositar na fila
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: node scripts/colher-noticias.mjs

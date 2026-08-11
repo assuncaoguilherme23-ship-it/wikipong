@@ -278,3 +278,20 @@
   flex-direction: column;
   gap: var(--esp-3);
 }
+
+/* Campo do resumo da notícia: é o texto que vai ao ar, então merece área de
+   escrita de verdade, não uma linha. */
+.resumoEntrada {
+  width: 100%;
+  margin-top: var(--esp-2);
+  font: inherit;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta);
+  background: var(--cor-papel);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  padding: 0.6rem 0.75rem;
+  resize: vertical;
+}
+.resumoEntrada::placeholder { color: var(--cor-mudo); }

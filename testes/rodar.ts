@@ -50,6 +50,8 @@ import { nomeComMarca } from '../componentes/formato.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
 import { precoMedio } from '../componentes/dados-ofertas.js';
+import { NOTICIAS } from '../componentes/dados-noticias.js';
+import { RESUMO_MINIMO } from '../src/logica/noticias-fila.js';
 import { existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
@@ -1400,6 +1402,57 @@ const marcasDeBorracha = [...new Set(MATERIAIS.filter(m => m.tipo === 'Borracha'
 const semLista = marcasDeBorracha.filter(m => !listaPinos[m]);
 afirma(semLista.length === 0,
   `marca de borracha sem lista de pinos conhecidos (a checagem nao a cobre): ${semLista.join(', ')}`);
+
+/* ---------------------------------------------------------------------------
+   O resumo automático das notícias
+   ---------------------------------------------------------------------------
+   Estas checagens leem o CÓDIGO do colhedor, não o resultado dele: a rotina só
+   roda no GitHub, com a chave, e uma falha ali é silenciosa por desenho — a
+   notícia entra sem resumo e ninguém percebe que o robô parou de escrever. */
+const colhedor = readFileSync('scripts/colher-noticias.mjs', 'utf8');
+const redator = readFileSync('scripts/resumir-noticia.mjs', 'utf8');
+
+/* `corpo` é matéria-prima do resumo, não campo do banco. Se escapar pro POST,
+   o PostgREST recusa a linha inteira e a fila para de encher. */
+afirma(/const \{ corpo, \.\.\.campos \} = n;/.test(colhedor),
+  'o colhedor precisa separar `corpo` antes de enviar: essa coluna nao existe no banco');
+afirma(!/body: JSON\.stringify\(n\)/.test(colhedor),
+  'o colhedor esta enviando a noticia crua (com `corpo`) em vez dos campos');
+
+/* Recortar prosa da fonte foi o erro da colheita da GEWO. Aqui o texto da
+   notícia entra como INSUMO do modelo e nunca como resumo direto. */
+afirma(!/resumo: *corpo|resumo: *texto/.test(colhedor + redator),
+  'resumo recortado do texto da fonte: ele tem que ser escrito, nao copiado');
+
+/* Uma recusa vem como HTTP 200 com content vazio. Ler content sem conferir o
+   stop_reason quebra a colheita inteira num erro que parece de rede. */
+afirma(/stop_reason === 'refusal'/.test(redator),
+  'o redator precisa conferir stop_reason antes de ler o content');
+
+/* O banco exige RESUMO_MINIMO pra publicar. Devolver um resumo menor que isso
+   enche a moderação de campo que o botão de publicar recusa. */
+afirma(new RegExp(`length < ${RESUMO_MINIMO}`).test(redator),
+  `o redator precisa descartar resumo abaixo de ${RESUMO_MINIMO} caracteres, como o banco faz`);
+
+/* Sem a chave, a colheita continua: as notícias chegam sem resumo e o fundador
+   escreve na moderação. Uma automação que morre por falta de segredo é pior. */
+afirma(/ANTHROPIC_API_KEY/.test(redator) && /if \(!TEM_CHAVE\) return null;/.test(redator),
+  'sem ANTHROPIC_API_KEY a colheita tem que seguir sem resumo, nao quebrar');
+
+/* O modelo classifica dentro do vocabulário que as notícias já publicadas usam.
+   Uma tag nova inventada por ele criaria uma categoria órfã no site. */
+const tagsPublicadas = [...new Set(NOTICIAS.map(n => n.tag).filter(Boolean))];
+const tagsDoRedator = (redator.match(/export const TAGS = \[([^\]]+)\]/) || [])[1] ?? '';
+const orfas = tagsPublicadas.filter(t => !tagsDoRedator.includes(`'${t}'`));
+afirma(orfas.length === 0,
+  `tag publicada que o redator nao conhece (ele nunca vai atribuir): ${orfas.join(', ')}`);
+
+/* A rotina precisa instalar o SDK e receber a chave, senao o import falha e a
+   colheita inteira morre no primeiro `import`. */
+const rotina = readFileSync('.github/workflows/noticias.yml', 'utf8');
+afirma(/npm ci/.test(rotina), 'a rotina precisa de `npm ci`: o colhedor agora importa o SDK');
+afirma(/ANTHROPIC_API_KEY: \$\{\{ secrets\.ANTHROPIC_API_KEY \}\}/.test(rotina),
+  'a rotina precisa passar ANTHROPIC_API_KEY pro passo da colheita');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

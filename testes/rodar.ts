@@ -1427,10 +1427,22 @@ afirma(!/resumo: *corpo|resumo: *texto/.test(colhedor + redator),
 /* Resumo custa token. A home da CBTM tem sempre as mesmas 6 noticias, e sem
    conferir a fila antes seriam 18 resumos por dia pras 2 ou 3 novas de verdade
    -- pagos, e jogados fora no 409. A checagem tem que vir ANTES do resumo. */
-afirma(/jaEstao\.has\(CBTM \+ caminho\)[^\n]*continue;/.test(colhedor),
+afirma(/if \(existente\?\.resumo\) \{ repetidas\+\+; continue; \}/.test(colhedor),
   'o colhedor precisa pular o que ja esta na fila antes de resumir: resumo repetido e dinheiro fora');
-afirma(colhedor.indexOf('jaEstao.has') < colhedor.indexOf('await resumir('),
+afirma(colhedor.indexOf('existente?.resumo') < colhedor.indexOf('await resumir('),
   'a checagem da fila esta DEPOIS do resumo: pula tarde, ja pagou');
+
+/* Mas so' pula quem JA TEM resumo. Noticia depositada antes de existir redator
+   esta' na fila com resumo nulo -- pular essa por "ja estar na fila" a deixaria
+   em branco pra sempre, que e' exatamente o que a automacao veio resolver. */
+afirma(/method: 'PATCH'/.test(colhedor),
+  'o colhedor precisa escrever o resumo da noticia que ja esta na fila sem ele, nao so inserir novas');
+
+/* O PATCH mexe em resumo e tag. `status` e' decisao do fundador: sobrescrever
+   devolveria pra fila uma noticia que ele ja tinha publicado ou descartado. */
+const corpoDoPatch = (colhedor.match(/method: 'PATCH',[\s\S]*?body: (JSON\.stringify\(\{[^\n]*)/) || ['', ''])[1];
+afirma(corpoDoPatch.length > 0 && !/status/.test(corpoDoPatch),
+  'o PATCH esta mexendo em `status`: isso apaga a decisao do fundador sobre a noticia');
 
 /* Uma recusa vem como HTTP 200 com content vazio. Ler content sem conferir o
    stop_reason quebra a colheita inteira num erro que parece de rede. */

@@ -56,8 +56,13 @@ async function ler(caminho) {
   const titulo = semEntidades(bruto).replace(SUFIXO, '').trim();
   if (titulo.length < 10) return null;
 
-  /* A data aparece como dd/mm/aaaa junto do horário, no corpo da notícia. */
-  const t = h.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+  /* A data aparece como dd/mm/aaaa junto do horário, no corpo da notícia.
+     As entidades saem AQUI, antes de qualquer comparação: o `titulo` vem da
+     <title> já decodificado, e casar "Suécia" contra "Su&#233;cia" falha calado.
+     Foi o que derrubou a linha fina de 4 das 6 notícias — todo título com acento
+     nos primeiros 25 ou nos últimos 20 caracteres. */
+  const t = semEntidades(
+    h.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<[^>]+>/g, ' '));
   const d = t.match(/(\d{2})\/(\d{2})\/(\d{4})/);
   if (!d) return null;
 
@@ -71,7 +76,40 @@ async function ler(caminho) {
   const fim = t.indexOf('Outras Notícias', inicio);
   const corpo = semEntidades(t.slice(inicio, fim > inicio ? fim : inicio + 14000));
 
-  return { titulo, url, fonte: 'CBTM', publicado_em: `${d[3]}-${d[2]}-${d[1]}`, corpo };
+  return {
+    titulo, url, fonte: 'CBTM', publicado_em: `${d[3]}-${d[2]}-${d[1]}`, corpo,
+    linhaFina: linhaFinaDe(t, titulo, inicio),
+  };
+}
+
+/**
+ * A linha fina que a CBTM publica entre o título e a data — "Atletas
+ * representarão o Brasil em Dakar, no Senegal, acompanhados pela técnica Daniela
+ * Bassi". É específica, é em português, e é ELA que faz esta seção não ser uma
+ * lista de manchetes, de graça e sem ninguém digitar.
+ *
+ * Ela é palavra da CBTM. Quem entra com ela no banco marca `origem_resumo` como
+ * 'fonte', e a tela atribui. Copiar sem dizer de quem é seria o erro da GEWO
+ * outra vez.
+ */
+function linhaFinaDe(t, titulo, ateAqui) {
+  const antes = t.lastIndexOf(titulo.slice(0, 25), ateAqui);
+  if (antes < 0) return null;
+
+  let trecho = t.slice(antes, ateAqui);
+  /* Corta o próprio título do começo. Casa pela cauda dele, porque a versão do
+     corpo nem sempre bate caractere a caractere com a da <title>. */
+  const cauda = trecho.indexOf(titulo.slice(-20));
+  if (cauda >= 0) trecho = trecho.slice(cauda + 20);
+
+  /* O crédito da foto vem grudado no fim: "...no Dakar Expo Centre Foto: WTT". */
+  const linha = semEntidades(trecho).replace(/\s*Foto:.*$/i, '').trim();
+
+  /* Peneira. Curta demais o banco recusa; ecoar o título não acrescenta nada a
+     quem já leu o título logo acima. Nos dois casos é melhor não ter. */
+  if (linha.length < 40) return null;
+  if (linha.includes(titulo.slice(0, 30))) return null;
+  return linha;
 }
 
 const cabecalhos = {
@@ -99,7 +137,7 @@ async function fila() {
 
 const naFila = await fila();
 
-let novas = 0, resgatadas = 0, repetidas = 0, ilegiveis = 0, semResumo = 0;
+let novas = 0, resgatadas = 0, repetidas = 0, ilegiveis = 0, semResumo = 0, daFonte = 0;
 for (const caminho of await achar()) {
   const endereco = CBTM + caminho;
   const existente = naFila.get(endereco);
@@ -111,19 +149,33 @@ for (const caminho of await achar()) {
   try { n = await ler(caminho); } catch { n = null; }
   if (!n) { ilegiveis++; console.log(`  ilegível: ${caminho.slice(0, 60)}`); continue; }
 
-  const { corpo, ...campos } = n;
+  const { corpo, linhaFina, ...campos } = n;
+
+  /* Duas procedências possíveis, nesta ordem. O modelo escreve na voz do site e
+     ganha; sem chave ou sem crédito ele devolve nulo, e aí entra a linha fina da
+     CBTM, atribuída. Só fica sem resumo quem não tem nem uma coisa nem outra. */
   const escrito = await resumir({ titulo: n.titulo, texto: corpo });
-  if (escrito) { campos.resumo = escrito.resumo; if (escrito.tag) campos.tag = escrito.tag; }
-  else semResumo++;
+  if (escrito) {
+    campos.resumo = escrito.resumo;
+    campos.origem_resumo = 'wikipong';
+    if (escrito.tag) campos.tag = escrito.tag;
+  } else if (linhaFina) {
+    campos.resumo = linhaFina;
+    campos.origem_resumo = 'fonte';
+    daFonte++;
+  } else semResumo++;
 
   if (existente) {
     /* Já está na fila esperando texto. Sem texto novo pra dar, não mexe nela —
        um PATCH vazio só gastaria requisição. E escreve SÓ resumo e tag: o
        `status` é do fundador, e sobrescrever apagaria a decisão dele. */
-    if (!escrito) continue;
+    if (!campos.resumo) continue;
     const res = await fetch(`${raiz}?id=eq.${existente.id}`, {
       method: 'PATCH', headers: cabecalhos,
-      body: JSON.stringify({ resumo: escrito.resumo, ...(escrito.tag ? { tag: escrito.tag } : {}) }),
+      body: JSON.stringify({
+        resumo: campos.resumo, origem_resumo: campos.origem_resumo,
+        ...(campos.tag ? { tag: campos.tag } : {}),
+      }),
     });
     if (res.ok) { resgatadas++; console.log(`  resumo escrito: ${n.titulo.slice(0, 62)}`); }
     else console.log(`  nao consegui escrever o resumo (${res.status}): ${n.titulo.slice(0, 45)}`);

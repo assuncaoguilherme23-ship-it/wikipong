@@ -33,7 +33,10 @@ import {
   validarTopico, ordenarTopicos, porAssunto, ultimaAtividade, ROTULO_ASSUNTO, Topico,
   buscarTopicos, respostasOrdenadas, temRespostaUtil, type Mensagem as MensagemForum,
 } from '../src/logica/discussoes.js';
-import { perfilVazio, temIdentidade, pecasEscolhidas } from '../src/logica/perfil.js';
+import {
+  perfilVazio, temIdentidade, pecasEscolhidas,
+  ROTULO_MAO, ROTULO_EMPUNHADURA, MAOS, EMPUNHADURAS, type Perfil,
+} from '../src/logica/perfil.js';
 import {
   traduzirFicha, familiaDaLamina, familiaDaBorracha, LAMINA, BORRACHA,
 } from '../src/logica/traduzir.js';
@@ -1504,6 +1507,21 @@ afirma(apelidoDe('Ana', ID_A, 1) === 'ana-8f3a91',
   'apelido: a segunda tentativa alonga o sufixo, para o caso de colisao');
 afirma(apelidoDe('Guilherme', ID_A).endsWith('-8f3a'),
   'apelido: o sufixo vem do id, nao do nome — trocar de nome nao pode mover o endereco');
+
+/* ───────── perfil: campos novos ───────── */
+const perfilCheio: Perfil = {
+  ...perfilVazio(),
+  nome: 'Guilherme',
+  estilo: 'atacante',
+  mao: 'canhoto',
+  empunhadura: 'caneta-chinesa',
+};
+afirma(ROTULO_MAO[perfilCheio.mao!] === 'Canhoto',
+  'perfil: mao precisa de rotulo legivel');
+afirma(ROTULO_EMPUNHADURA['caneta-chinesa'] === 'Caneta chinesa',
+  'perfil: empunhadura precisa de rotulo legivel');
+afirma(MAOS.length === 2 && EMPUNHADURAS.length === 3,
+  'perfil: as tabelas de lookup precisam cobrir todos os valores do check do banco');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

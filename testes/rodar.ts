@@ -59,6 +59,7 @@ import { apelidoDe } from '../src/logica/apelido.js';
 import {
   ordenarEstante, emUsoHoje, problemasDaEntrada, motivoVisivel,
   MOTIVO_MINIMO, MOTIVO_MAXIMO, type EntradaDeEstante,
+  repositorioEstante, repositorioEstanteLocal,
 } from '../src/logica/estante.js';
 import { existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -1567,6 +1568,12 @@ afirma(motivoVisivel(comMotivoPendente, false) === undefined,
   "estante: terceiro NAO ve' motivo pendente");
 afirma(motivoVisivel({ ...comMotivoPendente, motivoStatus: 'aprovada' }, false) !== undefined,
   'estante: aprovado, todo mundo ve');
+
+/* ───────── estante: os repositorios ───────── */
+afirma(typeof repositorioEstante === 'function',
+  'estante: precisa de fabrica de repositorio, como perfil e avaliacoes');
+afirma(repositorioEstanteLocal().somenteLocal === true,
+  'estante: o repositorio local tem que se declarar local');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

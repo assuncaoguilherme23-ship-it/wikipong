@@ -381,3 +381,17 @@ export const repositorioDiscussoes = (): RepositorioDiscussoes => {
   const chave = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   return url && chave ? repositorioDiscussoesSupabase(url, chave) : repositorioDiscussoesLocal();
 };
+
+/**
+ * Quantas vezes a resposta desta pessoa foi a que resolveu o tópico.
+ *
+ * É o único número de reputação que este site guarda, e é de propósito: ele é
+ * GANHO, não declarado — quem marca é quem perguntou. Contagem de mensagens ou
+ * de curtidas premiaria volume, e volume muda o que as pessoas escrevem.
+ */
+export function resolveuQuantas(topicos: readonly Topico[], usuarioId: string): number {
+  return topicos.filter((t) =>
+    Boolean(t.respostaUtil) &&
+    t.respostas.some((r) => r.id === t.respostaUtil && r.usuarioId === usuarioId),
+  ).length;
+}

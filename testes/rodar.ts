@@ -56,6 +56,7 @@ import { precoMedio } from '../componentes/dados-ofertas.js';
 import { NOTICIAS } from '../componentes/dados-noticias.js';
 import { RESUMO_MINIMO } from '../src/logica/noticias-fila.js';
 import { apelidoDe } from '../src/logica/apelido.js';
+import { procedenciaDe } from '../src/logica/procedencia-do-avaliador.js';
 import {
   ordenarEstante, emUsoHoje, problemasDaEntrada, motivoVisivel,
   MOTIVO_MINIMO, MOTIVO_MAXIMO, type EntradaDeEstante,
@@ -1597,6 +1598,22 @@ afirma(linhaDoTempo([av({ id: 'de-outro' })], [], [], EU).length === 0,
   'atividade: item de outra pessoa nao entra na linha do tempo dela');
 afirma(minhaLinha.every((a) => ['avaliacao', 'topico', 'resposta'].includes(a.tipo)),
   'atividade: so existem tres tipos, pedido de pauta nao entra na linha publica');
+
+/* ───────── procedencia de quem avalia ───────── */
+const doAvaliador = procedenciaDe([
+  av({ id: 'p1', materialId: 'markv', tempoDeUso: 'mais de 1 ano' }),
+  av({ id: 'p2', materialId: 'markv', tempoDeUso: '1 a 6 meses' }),
+  av({ id: 'p3', materialId: 'viscaria', tempoDeUso: 'mais de 1 ano' }),
+]);
+afirma(doAvaliador.quantas === 3, 'procedencia: conta as avaliacoes');
+afirma(doAvaliador.materiaisDistintos === 2,
+  'procedencia: duas avaliacoes do mesmo material contam como um material');
+afirma(doAvaliador.faixaTipica === 'mais de 1 ano',
+  'procedencia: a faixa tipica e a mais frequente, nao uma media inventada');
+afirma(doAvaliador.borrachas === 1 && doAvaliador.laminas === 1,
+  'procedencia: separa borracha de lamina pelo tipo do material');
+afirma(procedenciaDe([]).quantas === 0 && procedenciaDe([]).faixaTipica === undefined,
+  'procedencia: sem avaliacao, nao invento faixa nenhuma');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

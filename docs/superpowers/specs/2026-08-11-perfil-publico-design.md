@@ -126,8 +126,10 @@ Convenção da casa: lógica de negócio sem DOM e sem framework, com tabelas de
 - **Pedidos de pauta ficam de fora da linha do tempo pública.** Pedido é um recado para a casa, não uma contribuição pública, e o autor pode nem querer que apareça no perfil dele.
 
 **`procedencia-do-avaliador.ts` (novo)**
-- `procedenciaDe(avaliacoes)` → `{ quantas, tempoMedioDeUso, materiaisDistintos, ladosCobertos }`.
+- `procedenciaDe(avaliacoes)` → `{ quantas, materiaisDistintos, borrachas, laminas, faixaTipica }`. O tipo do material sai do `materialPorId` do catálogo, dentro do próprio módulo.
 - Não devolve selo nem nota. Devolve os números, e quem lê julga — é a Regra da Voz de Dados aplicada a gente em vez de a material.
+
+> **Correção feita durante o plano.** O desenho dizia "tempo médio de uso" e "se já usou os dois lados". Nenhum dos dois é derivável: `Avaliacao` guarda `tempoDeUso` como **faixa** (`'1 a 6 meses'`), não como número, e não guarda lado nenhum. Média de faixa exigiria carimbar um número no meio de cada intervalo — precisão inventada, que é justamente o que este projeto não faz. Ficam no lugar: `faixaTipica`, a faixa mais frequente (empate vai para a mais longa), e a contagem de borrachas e lâminas, que sai do `tipo` do material e responde a mesma pergunta sem inventar nada.
 
 **`discussoes.ts` (existente)**
 - `resolveuQuantas(topicos, usuarioId)` — conta `respostaUtil` que aponta para resposta dessa pessoa. O dado já está no banco desde a migração 010.

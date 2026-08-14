@@ -287,6 +287,7 @@ export function DiscussoesCliente() {
                     )}
                     <FormularioResposta
                       perfil={perfil}
+                      usuarioId={euId}
                       aoResponder={async (msg) => {
                         await repo.responder(t.id, msg);
                         await recarregar();
@@ -422,9 +423,11 @@ function FormularioTopico({
 
 function FormularioResposta({
   perfil,
+  usuarioId,
   aoResponder,
 }: {
   perfil: Perfil | null;
+  usuarioId: string | null;
   aoResponder: (m: Mensagem) => Promise<void>;
 }) {
   const [texto, setTexto] = useState('');
@@ -444,6 +447,7 @@ function FormularioResposta({
           nivel: perfil?.nivel,
           texto: texto.trim(),
           criadoEm: new Date().toISOString(),
+          usuarioId: usuarioId ?? undefined,
         });
         setTexto('');
       }}

@@ -31,7 +31,7 @@ import {
 } from '../src/logica/avaliacoes.js';
 import {
   validarTopico, ordenarTopicos, porAssunto, ultimaAtividade, ROTULO_ASSUNTO, Topico,
-  buscarTopicos, respostasOrdenadas, temRespostaUtil, type Mensagem as MensagemForum,
+  buscarTopicos, respostasOrdenadas, temRespostaUtil, resolveuQuantas, type Mensagem as MensagemForum,
 } from '../src/logica/discussoes.js';
 import {
   perfilVazio, temIdentidade, pecasEscolhidas,
@@ -1614,6 +1614,22 @@ afirma(doAvaliador.borrachas === 1 && doAvaliador.laminas === 1,
   'procedencia: separa borracha de lamina pelo tipo do material');
 afirma(procedenciaDe([]).quantas === 0 && procedenciaDe([]).faixaTipica === undefined,
   'procedencia: sem avaliacao, nao invento faixa nenhuma');
+
+/* ───────── resolveu quantas duvidas ───────── */
+const topicosPraContar: Topico[] = [
+  topicoDeTeste('x1', 'Titulo', 'Texto.',
+    [{ ...mensagemDeTeste('r-minha', 'Resposta minha.', '2026-08-02'), usuarioId: 'eu' }], 'r-minha'),
+  topicoDeTeste('x2', 'Titulo', 'Texto.',
+    [{ ...mensagemDeTeste('r-outra', 'De outro.', '2026-08-02'), usuarioId: 'outro' }], 'r-outra'),
+  topicoDeTeste('x3', 'Titulo', 'Texto.',
+    [{ ...mensagemDeTeste('r3', 'Nao marcada.', '2026-08-02'), usuarioId: 'eu' }]),
+];
+afirma(resolveuQuantas(topicosPraContar, 'eu') === 1,
+  'resolveu: conta so a resposta marcada como a que resolveu');
+afirma(resolveuQuantas(topicosPraContar, 'ninguem') === 0,
+  'resolveu: quem nao resolveu nada tem zero, nao undefined');
+afirma(resolveuQuantas([], 'eu') === 0,
+  'resolveu: sem topico nenhum, zero');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

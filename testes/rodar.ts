@@ -52,6 +52,7 @@ import { imagemDoMaterial } from '../componentes/dados-imagens.js';
 import { precoMedio } from '../componentes/dados-ofertas.js';
 import { NOTICIAS } from '../componentes/dados-noticias.js';
 import { RESUMO_MINIMO } from '../src/logica/noticias-fila.js';
+import { apelidoDe } from '../src/logica/apelido.js';
 import { existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
@@ -1486,6 +1487,23 @@ const rotina = readFileSync('.github/workflows/noticias.yml', 'utf8');
 afirma(/npm ci/.test(rotina), 'a rotina precisa de `npm ci`: o colhedor agora importa o SDK');
 afirma(/ANTHROPIC_API_KEY: \$\{\{ secrets\.ANTHROPIC_API_KEY \}\}/.test(rotina),
   'a rotina precisa passar ANTHROPIC_API_KEY pro passo da colheita');
+
+/* ───────── apelido: o endereço do perfil ───────── */
+const ID_A = '8f3a91c4-2b7e-4d13-9a55-1c0e7b2d4f60';
+const ID_B = 'c1d2e3f4-0000-4a1b-8c2d-3e4f5a6b7c80';
+
+afirma(apelidoDe('Guilherme Assunção', ID_A) === 'guilherme-assuncao-8f3a',
+  'apelido: acento tem que virar ASCII e o sufixo sai do id');
+afirma(apelidoDe('Bruna  Takahashi', ID_B) === 'bruna-takahashi-c1d2',
+  'apelido: espaco dobrado nao pode virar hifen dobrado');
+afirma(apelidoDe('!!!', ID_A) === 'jogador-8f3a',
+  'apelido: nome sem letra nenhuma cai em "jogador"');
+afirma(apelidoDe('Ana', ID_A) !== apelidoDe('Ana', ID_B),
+  'apelido: mesmo nome com ids diferentes tem que dar apelidos diferentes');
+afirma(apelidoDe('Ana', ID_A, 1) === 'ana-8f3a91',
+  'apelido: a segunda tentativa alonga o sufixo, para o caso de colisao');
+afirma(apelidoDe('Guilherme', ID_A).endsWith('-8f3a'),
+  'apelido: o sufixo vem do id, nao do nome — trocar de nome nao pode mover o endereco');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

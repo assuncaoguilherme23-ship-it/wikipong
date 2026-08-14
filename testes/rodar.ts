@@ -63,6 +63,7 @@ import {
 } from '../src/logica/estante.js';
 import { existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { linhaDoTempo, type Atividade } from '../src/logica/atividade.js';
 
 let ok = 0; const falhas: string[] = [];
 function afirma(cond: boolean, msg: string) { if (cond) ok++; else falhas.push(msg); }
@@ -1574,6 +1575,28 @@ afirma(typeof repositorioEstante === 'function',
   'estante: precisa de fabrica de repositorio, como perfil e avaliacoes');
 afirma(repositorioEstanteLocal().somenteLocal === true,
   'estante: o repositorio local tem que se declarar local');
+
+/* ───────── atividade: as tres fontes numa linha do tempo so' ───────── */
+const EU = 'usuario-1';
+const minhaLinha: Atividade[] = linhaDoTempo(
+  [{ ...av({ id: 'a1', criadoEm: '2026-03-01T10:00:00Z' }), usuarioId: EU }],
+  [{ ...topicoDeTeste('t1', 'Titulo qualquer', 'Texto do topico.', []),
+     usuarioId: EU, criadoEm: '2026-05-01T10:00:00Z' }],
+  [{ ...mensagemDeTeste('r1', 'Uma resposta minha.', '2026-04-01T10:00:00Z'),
+     usuarioId: EU, topicoId: 't9' }],
+  EU,
+);
+afirma(minhaLinha.length === 3, 'atividade: junta as tres fontes numa lista so');
+afirma(minhaLinha[0].tipo === 'topico' && minhaLinha[2].tipo === 'avaliacao',
+  'atividade: mais recente primeiro, independente da fonte');
+afirma(minhaLinha.every((a) => a.para.startsWith('/')),
+  'atividade: todo item precisa de um destino clicavel');
+afirma(linhaDoTempo([], [], [], EU).length === 0,
+  'atividade: sem nada, devolve lista vazia em vez de quebrar');
+afirma(linhaDoTempo([av({ id: 'de-outro' })], [], [], EU).length === 0,
+  'atividade: item de outra pessoa nao entra na linha do tempo dela');
+afirma(minhaLinha.every((a) => ['avaliacao', 'topico', 'resposta'].includes(a.tipo)),
+  'atividade: so existem tres tipos, pedido de pauta nao entra na linha publica');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

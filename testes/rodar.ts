@@ -56,6 +56,10 @@ import { precoMedio } from '../componentes/dados-ofertas.js';
 import { NOTICIAS } from '../componentes/dados-noticias.js';
 import { RESUMO_MINIMO } from '../src/logica/noticias-fila.js';
 import { apelidoDe } from '../src/logica/apelido.js';
+import {
+  ordenarEstante, emUsoHoje, problemasDaEntrada, motivoVisivel,
+  MOTIVO_MINIMO, MOTIVO_MAXIMO, type EntradaDeEstante,
+} from '../src/logica/estante.js';
 import { existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
@@ -1522,6 +1526,47 @@ afirma(ROTULO_EMPUNHADURA['caneta-chinesa'] === 'Caneta chinesa',
   'perfil: empunhadura precisa de rotulo legivel');
 afirma(MAOS.length === 2 && EMPUNHADURAS.length === 3,
   'perfil: as tabelas de lookup precisam cobrir todos os valores do check do banco');
+
+/* ───────── estante: o que a pessoa usou antes ───────── */
+const estanteDeTeste: EntradaDeEstante[] = [
+  { id: '1', materialId: 'tenergy05', de: '2023-01-01', ate: '2024-06-01' },
+  { id: '2', materialId: 'markv', de: '2024-06-01' },
+  { id: '3', materialId: 'dhs-hurricane-3' },
+  { id: '4', materialId: 'xiom-vega-europe', de: '2021-01-01', ate: '2023-01-01' },
+];
+const ordenada = ordenarEstante(estanteDeTeste);
+afirma(ordenada[0].id === '2', 'estante: o que esta em uso hoje vem primeiro');
+afirma(ordenada[1].id === '1' && ordenada[2].id === '4',
+  'estante: depois do atual, o mais recente primeiro');
+afirma(ordenada[3].id === '3',
+  'estante: sem data nenhuma vai pro fim, nao invento cronologia que a pessoa nao deu');
+afirma(emUsoHoje(estanteDeTeste[1]) && !emUsoHoje(estanteDeTeste[0]),
+  'estante: em uso hoje e "ate" vazio');
+
+afirma(problemasDaEntrada({ id: 'x', materialId: 'markv', de: '2024-01-01', ate: '2023-01-01' }).length === 1,
+  'estante: comecar depois de terminar tem que ser recusado');
+afirma(problemasDaEntrada({ id: 'x', materialId: 'nao-existe' }).length === 1,
+  'estante: material fora do catalogo tem que ser recusado');
+afirma(problemasDaEntrada({ id: 'x', materialId: 'markv', motivo: 'curto' }).length === 1,
+  'estante: motivo abaixo do minimo tem que ser recusado');
+afirma(problemasDaEntrada({ id: 'x', materialId: 'markv' }).length === 0,
+  'estante: material sozinho, sem data e sem motivo, e uma entrada valida');
+afirma(problemasDaEntrada({ id: 'x', materialId: 'markv', motivo: 'a'.repeat(MOTIVO_MAXIMO + 1) }).length === 1,
+  'estante: motivo acima do maximo tem que ser recusado');
+afirma(MOTIVO_MINIMO === 10 && MOTIVO_MAXIMO === 280,
+  'estante: os limites do modulo tem que bater com o check da migracao 015');
+
+/* A regra do D-14 em forma de teste: prosa espera gente, mas o dono vê sempre. */
+const comMotivoPendente = {
+  id: '9', materialId: 'markv', motivo: 'queria mais controle no backhand',
+  motivoStatus: 'pendente' as const,
+};
+afirma(motivoVisivel(comMotivoPendente, true) !== undefined,
+  "estante: o dono ve' o proprio motivo mesmo pendente");
+afirma(motivoVisivel(comMotivoPendente, false) === undefined,
+  "estante: terceiro NAO ve' motivo pendente");
+afirma(motivoVisivel({ ...comMotivoPendente, motivoStatus: 'aprovada' }, false) !== undefined,
+  'estante: aprovado, todo mundo ve');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

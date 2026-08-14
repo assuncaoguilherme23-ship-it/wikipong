@@ -82,3 +82,126 @@ export function problemasDaEntrada(e: EntradaDeEstante): string[] {
  */
 export const motivoVisivel = (e: EntradaDeEstante, souODono: boolean): string | undefined =>
   souODono || e.motivoStatus === 'aprovada' ? e.motivo : undefined;
+
+export interface RepositorioEstante {
+  readonly somenteLocal: boolean;
+  /** Sem argumento, lê a própria. Com id, lê a de outra pessoa (leitura pública). */
+  listar(usuarioId?: string): Promise<EntradaDeEstante[]>;
+  adicionar(e: Omit<EntradaDeEstante, 'id'>): Promise<void>;
+  remover(id: string): Promise<void>;
+}
+
+const CHAVE_LOCAL = 'wikipong:estante:v1';
+
+export function repositorioEstanteLocal(): RepositorioEstante {
+  const ler = (): EntradaDeEstante[] => {
+    if (typeof localStorage === 'undefined') return [];
+    try {
+      return JSON.parse(localStorage.getItem(CHAVE_LOCAL) ?? '[]') as EntradaDeEstante[];
+    } catch {
+      return [];
+    }
+  };
+  const gravar = (es: EntradaDeEstante[]) => {
+    if (typeof localStorage === 'undefined') return;
+    try {
+      localStorage.setItem(CHAVE_LOCAL, JSON.stringify(es));
+    } catch {
+      /* Quota estourada não pode virar tela branca. */
+    }
+  };
+  return {
+    somenteLocal: true,
+    async listar() { return ler(); },
+    async adicionar(e) {
+      /* Deslogado, o segundo par de olhos é o dono do navegador: o motivo já
+         nasce aprovado porque não sai deste aparelho. */
+      gravar([...ler(), { ...e, id: crypto.randomUUID(), motivoStatus: 'aprovada' }]);
+    },
+    async remover(id) { gravar(ler().filter((e) => e.id !== id)); },
+  };
+}
+
+export function repositorioEstanteSupabase(
+  url: string, chave: string, token: string | null, usuarioId: string | null,
+): RepositorioEstante {
+  const raiz = url.replace(/\/$/, '');
+  const cabecalhos = (): Record<string, string> => {
+    const h: Record<string, string> = { apikey: chave, 'Content-Type': 'application/json' };
+    if (token) h.Authorization = `Bearer ${token}`;
+    return h;
+  };
+
+  type LinhaEstante = {
+    id: string; usuario_id: string; material_id: string;
+    de: string | null; ate: string | null;
+    estante_motivos: { texto: string; status: string }[] | null;
+  };
+
+  return {
+    somenteLocal: false,
+    async listar(deQuem) {
+      const quem = deQuem ?? usuarioId;
+      if (!quem) return [];
+      /* O motivo vem por embed. Quem não pode lê-lo recebe lista vazia ali —
+         a RLS filtra, e a tela não precisa saber de nada disso. */
+      const res = await fetch(
+        `${raiz}/rest/v1/estante?usuario_id=eq.${encodeURIComponent(quem)}` +
+        `&select=*,estante_motivos(texto,status)&order=criado_em.desc`,
+        { headers: cabecalhos() },
+      );
+      if (!res.ok) throw new Error(`Supabase respondeu ${res.status}`);
+      return ((await res.json()) as LinhaEstante[]).map((l) => {
+        const m = l.estante_motivos?.[0];
+        return {
+          id: l.id,
+          materialId: l.material_id,
+          de: l.de ?? undefined,
+          ate: l.ate ?? undefined,
+          motivo: m?.texto,
+          motivoStatus: m?.status as StatusMotivo | undefined,
+        };
+      });
+    },
+    async adicionar(e) {
+      if (!usuarioId) throw new Error('Entre para guardar sua estante.');
+      const res = await fetch(`${raiz}/rest/v1/estante`, {
+        method: 'POST',
+        headers: { ...cabecalhos(), Prefer: 'return=representation' },
+        body: JSON.stringify({
+          usuario_id: usuarioId, material_id: e.materialId,
+          de: e.de ?? null, ate: e.ate ?? null,
+        }),
+      });
+      if (!res.ok) throw new Error(`Supabase recusou a entrada (${res.status})`);
+
+      const texto = e.motivo?.trim();
+      if (!texto) return;
+      const criada = ((await res.json()) as { id: string }[])[0];
+      /* `status` vai explícito e igual ao que a política exige. Mandar outra
+         coisa aqui é 403 — e é assim que tem que ser. */
+      await fetch(`${raiz}/rest/v1/estante_motivos`, {
+        method: 'POST',
+        headers: { ...cabecalhos(), Prefer: 'return=minimal' },
+        body: JSON.stringify({
+          estante_id: criada.id, usuario_id: usuarioId, texto, status: 'pendente',
+        }),
+      });
+    },
+    async remover(id) {
+      /* O motivo cai junto pelo `on delete cascade`. */
+      const res = await fetch(`${raiz}/rest/v1/estante?id=eq.${encodeURIComponent(id)}`, {
+        method: 'DELETE', headers: cabecalhos(),
+      });
+      if (!res.ok) throw new Error(`Supabase recusou a remoção (${res.status})`);
+    },
+  };
+}
+
+/** Sem servidor, a estante mora no navegador — igual ao perfil. */
+export function repositorioEstante(token?: string | null, usuarioId?: string | null): RepositorioEstante {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const chave = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !chave) return repositorioEstanteLocal();
+  return repositorioEstanteSupabase(url, chave, token ?? chave, usuarioId ?? null);
+}

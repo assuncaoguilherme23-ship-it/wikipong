@@ -166,6 +166,7 @@ export function DiscussoesCliente() {
       {abrindo && (
         <FormularioTopico
           perfil={perfil}
+          usuarioId={euId}
           aoGravar={async (t) => {
             await repo.gravar(t);
             await recarregar();
@@ -313,9 +314,12 @@ export function DiscussoesCliente() {
 
 function FormularioTopico({
   perfil,
+  usuarioId,
   aoGravar,
 }: {
   perfil: Perfil | null;
+  /** Quem abriu. Sem isto, `podeMarcar` nunca reconhece o dono do tópico. */
+  usuarioId: string | null;
   aoGravar: (t: Topico) => Promise<void>;
 }) {
   /* O nome vem do perfil quando existe: perguntar de novo o que a pessoa já
@@ -350,6 +354,7 @@ function FormularioTopico({
           nivel: perfil?.nivel,
           criadoEm: new Date().toISOString(),
           respostas: [],
+          usuarioId: usuarioId ?? undefined,
         });
       }}
     >

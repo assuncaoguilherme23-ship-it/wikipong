@@ -2,6 +2,16 @@
   fill: none;
   stroke: var(--cor-linha);
   stroke-width: 1;
+  /* A grade e' referencia, nao informacao: recuada pra que a linha da serie
+     seja a primeira coisa que o olho encontra. */
+  stroke-opacity: 0.5;
+}
+
+/* O anel de fora emoldura o quadro. Sem isto o desenho "vaza" pras bordas e o
+   radar parece um rascunho em vez de um grafico. */
+.anelBorda {
+  stroke: var(--cor-linha-forte);
+  stroke-opacity: 1;
 }
 
 .poligono {
@@ -18,6 +28,8 @@
   fill: none;
   stroke: var(--cor-tinta-suave);
   stroke-dasharray: 5 4;
+  /* Ponta arredondada: o tracejado de ponta reta fica serrilhado nos vertices. */
+  stroke-linecap: round;
 }
 
 /* Draw-in (padrão colhido do protótipo — D-15); delay por série via style inline.
@@ -34,6 +46,13 @@
 
 .ponto {
   fill: var(--cor-acento);
+  /* Halo da cor do papel: sem ele o ponto some dentro do preenchimento quando
+     dois eixos ficam perto. `paint-order` poe o traco ATRAS do preenchimento,
+     senao o halo comeria o proprio ponto. Este e' um dos poucos lugares onde
+     --cor-papel e' o token certo justamente PORQUE ele inverte junto com o tema. */
+  stroke: var(--cor-papel);
+  stroke-width: 1.5;
+  paint-order: stroke fill;
 }
 .pontoAnimado {
   animation: pontoEntrar 400ms ease-out 1050ms backwards;

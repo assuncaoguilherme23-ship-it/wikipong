@@ -60,7 +60,7 @@ import { procedenciaDe } from '../src/logica/procedencia-do-avaliador.js';
 import {
   ordenarEstante, emUsoHoje, problemasDaEntrada, motivoVisivel,
   MOTIVO_MINIMO, MOTIVO_MAXIMO, type EntradaDeEstante,
-  repositorioEstante, repositorioEstanteLocal,
+  repositorioEstante, repositorioEstanteLocal, repositorioModeracaoEstante,
 } from '../src/logica/estante.js';
 import { existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -1576,6 +1576,8 @@ afirma(typeof repositorioEstante === 'function',
   'estante: precisa de fabrica de repositorio, como perfil e avaliacoes');
 afirma(repositorioEstanteLocal().somenteLocal === true,
   'estante: o repositorio local tem que se declarar local');
+afirma(typeof repositorioModeracaoEstante === 'function',
+  'estante: a moderacao precisa da propria fabrica, como noticias e pedidos');
 
 /* ───────── atividade: as tres fontes numa linha do tempo so' ───────── */
 const EU = 'usuario-1';

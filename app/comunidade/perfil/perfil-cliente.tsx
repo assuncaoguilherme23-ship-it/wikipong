@@ -267,13 +267,21 @@ export function PerfilCliente() {
           </div>
         ) : (
           <p className={estilos.faltando}>
-            Preencha o nome e o estilo pra ver como a sua assinatura vai ficar.{' '}
-            {/* Quem chega com o perfil vazio nao deveria encarar oito campos de
-                uma vez: as boas-vindas pedem uma coisa por tela e explicam pra
-                que serve. Formulario longo e' formulario abandonado. */}
-            <Link href="/comunidade/boas-vindas/">Prefere passo a passo? →</Link>
+            Preencha o nome e o estilo pra ver como a sua assinatura vai ficar.
           </p>
         )}
+
+        {/* FORA do condicional, de proposito. Na primeira versao este link vivia
+            dentro do ramo "perfil vazio", entao ele era invisivel pra quem ja'
+            tinha perfil -- inclusive pra quem quisesse rever os passos ou
+            preencher o que faltou. Esconder a porta de quem ja' entrou uma vez
+            nao ajuda ninguem. */}
+        <p className={estilos.passoAPasso}>
+          <Link href="/comunidade/boas-vindas/">Preencher passo a passo →</Link>{' '}
+          <span className={estilos.passoAPassoNota}>
+            uma pergunta por tela, com o porquê de cada uma
+          </span>
+        </p>
       </section>
 
       {/* ── Meu equipamento ── */}

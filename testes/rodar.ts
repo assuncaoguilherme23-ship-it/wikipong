@@ -1631,6 +1631,53 @@ afirma(resolveuQuantas(topicosPraContar, 'ninguem') === 0,
 afirma(resolveuQuantas([], 'eu') === 0,
   'resolveu: sem topico nenhum, zero');
 
+
+/* ───────── perfil publico: invariantes que quebram em silencio ─────────
+   Estas leem o CODIGO, nao o resultado. Sao regras cuja falha nao aparece na
+   tela: aparece meses depois, como texto publicado sem revisao ou link morto. */
+/* Tira comentario antes de olhar: estas asercoes falam sobre o CODIGO, e um
+   comentario que CITA o padrao errado (pra explicar por que ele e' errado) nao
+   pode derrubar o teste. Aconteceu nas duas primeiras versoes disto. */
+const semComentarios = (fonte: string): string =>
+  fonte.replace(/\/\*[\s\S]*?\*\//g, ' ').replace(/\/\/.*$/gm, ' ');
+
+const telaJogador = semComentarios(
+  readFileSync('app/comunidade/jogador/jogador-cliente.tsx', 'utf8'));
+
+/* A mais importante de todas: motivo pendente nao pode vazar pra terceiro. */
+afirma(/motivoVisivel\(/.test(telaJogador),
+  'a tela publica precisa passar o motivo por motivoVisivel');
+afirma(!/\be\.motivo\b(?!Status)/.test(telaJogador),
+  'a tela publica esta lendo `.motivo` direto: motivo pendente vaza pra quem nao escreveu');
+
+const mig015 = readFileSync('supabase/015-estante.sql', 'utf8');
+afirma(/for insert to authenticated[\s\S]{0,200}status = 'pendente'/.test(mig015),
+  'o insert de motivo nao exige status pendente: o dono publica o proprio texto pelo POST');
+afirma(!/on public\.estante_motivos for update to authenticated\s*\n\s*using \(usuario_id/.test(mig015),
+  'o dono ganhou update em estante_motivos: com isso ele aprova o proprio motivo');
+
+const edicaoPerfil = readFileSync('app/comunidade/perfil/perfil-cliente.tsx', 'utf8');
+afirma(/caminhoDoPerfil\(/.test(edicaoPerfil),
+  'o cracha continua prometendo "e assim que voce aparece" sem levar a lugar nenhum');
+
+const repoPerfil = readFileSync('src/logica/perfil.ts', 'utf8');
+afirma(/p\.apelido \?\? apelidoDe\(/.test(repoPerfil),
+  'o apelido esta sendo regerado a cada gravacao: trocar de nome move o endereco e mata os links');
+
+/* O retrato nao pode ganhar numero: somar lamina com borracha nao tem regua, e
+   o catalogo tem duas reguas diferentes. */
+const retrato = semComentarios(readFileSync('componentes/RaqueteRetrato.tsx', 'utf8'));
+afirma(!/<Radar|velocidade|specs/i.test(retrato),
+  'o retrato da raquete ganhou numero ou radar: nao ha regua pra somar lamina com borracha');
+
+/* A resposta precisa nascer com dono, senao o contador de resolvidas e' zero
+   permanente e ninguem percebe. */
+const fonteDoForum = readFileSync('src/logica/discussoes.ts', 'utf8');
+afirma(/usuario_id: m\.usuarioId/.test(fonteDoForum),
+  'responder() voltou a nao enviar usuario_id: resposta sem dono nao conta em lugar nenhum');
+afirma(/usuarioId: l\.usuario_id/.test(fonteDoForum),
+  'daResposta voltou a nao mapear usuario_id: a atividade de respostas fica vazia');
+
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

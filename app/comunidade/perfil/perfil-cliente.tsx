@@ -137,6 +137,24 @@ export function PerfilCliente() {
         )
       )}
 
+      {/* Perfil vazio cai num paredao de oito campos, e o convite pro passo a
+          passo estava DEPOIS dele -- de tras pra frente. Quem chega sem nada
+          precisa da saida ANTES de encarar o formulario, nao no fim dele.
+          Some assim que a pessoa tem nome e estilo: dai' o formulario ja' e' o
+          caminho mais curto, e o convite viraria ruido. */}
+      {!temIdentidade(perfil) && (
+        <div className={estilos.convite}>
+          <p className={estilos.conviteTitulo}>É a sua primeira vez por aqui?</p>
+          <p className={estilos.conviteTexto}>
+            Dá pra montar o perfil em quatro passos, uma pergunta por tela, com o porquê de
+            cada uma. Leva menos de um minuto e você pode pular o que quiser.
+          </p>
+          <Link href="/comunidade/boas-vindas/" className="botao-primario">
+            Montar passo a passo
+          </Link>
+        </div>
+      )}
+
       {/* ── Quem você é ── */}
       <section className={estilos.secao} aria-labelledby="t-identidade">
         <h2 id="t-identidade" className={estilos.tituloSecao}>

@@ -15,6 +15,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
+import { apelidosDe, caminhoDoPerfil } from './apelidos';
 import {
   validar, resumir, ordenar, recortar, ROTULO_ESTILO, NIVEIS, TEMPOS_DE_USO,
   PISO_PARA_MEDIA, NOTA_MAXIMA, TEXTO_MAXIMO,
@@ -51,6 +52,17 @@ export function AvaliacoesMaterial({
   const { usuario } = usarSessao();
   const [perfil, setPerfil] = useState<Perfil | null>(null);
   const [aviso, setAviso] = useState<{ tipo: 'ok' | 'erro'; texto: string } | null>(null);
+  /* Quem tem perfil publico vira link. Uma consulta em lote por listagem, nao
+     uma por avaliacao. Sem apelido, o nome fica texto simples -- exatamente
+     como estava antes. */
+  const [apelidos, setApelidos] = useState<Map<string, string>>(new Map());
+
+  useEffect(() => {
+    if (!lista || lista.length === 0) return;
+    let vivo = true;
+    apelidosDe(lista.map((a) => a.usuarioId)).then((m) => { if (vivo) setApelidos(m); });
+    return () => { vivo = false; };
+  }, [lista]);
 
   useEffect(() => {
     repo.doMaterial(materialId).then(setLista);
@@ -205,7 +217,13 @@ export function AvaliacoesMaterial({
               <li key={a.id} className={estilos.item}>
                 <div className={estilos.cabecalhoItem}>
                   <div>
-                    <p className={estilos.autor}>{a.autor}</p>
+                    <p className={estilos.autor}>
+                      {a.usuarioId && apelidos.get(a.usuarioId) ? (
+                        <Link href={caminhoDoPerfil(apelidos.get(a.usuarioId)!)}>{a.autor}</Link>
+                      ) : (
+                        a.autor
+                      )}
+                    </p>
                     {/* A tag do estilo vive AQUI, embaixo do nome: é o contexto
                         que faz a nota significar alguma coisa. */}
                     <p className={estilos.tags}>

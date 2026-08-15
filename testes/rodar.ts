@@ -31,9 +31,12 @@ import {
 } from '../src/logica/avaliacoes.js';
 import {
   validarTopico, ordenarTopicos, porAssunto, ultimaAtividade, ROTULO_ASSUNTO, Topico,
-  buscarTopicos, respostasOrdenadas, temRespostaUtil, type Mensagem as MensagemForum,
+  buscarTopicos, respostasOrdenadas, temRespostaUtil, resolveuQuantas, type Mensagem as MensagemForum,
 } from '../src/logica/discussoes.js';
-import { perfilVazio, temIdentidade, pecasEscolhidas } from '../src/logica/perfil.js';
+import {
+  perfilVazio, temIdentidade, pecasEscolhidas,
+  ROTULO_MAO, ROTULO_EMPUNHADURA, MAOS, EMPUNHADURAS, type Perfil,
+} from '../src/logica/perfil.js';
 import {
   traduzirFicha, familiaDaLamina, familiaDaBorracha, LAMINA, BORRACHA,
 } from '../src/logica/traduzir.js';
@@ -52,8 +55,16 @@ import { imagemDoMaterial } from '../componentes/dados-imagens.js';
 import { precoMedio } from '../componentes/dados-ofertas.js';
 import { NOTICIAS } from '../componentes/dados-noticias.js';
 import { RESUMO_MINIMO } from '../src/logica/noticias-fila.js';
+import { apelidoDe } from '../src/logica/apelido.js';
+import { procedenciaDe } from '../src/logica/procedencia-do-avaliador.js';
+import {
+  ordenarEstante, emUsoHoje, problemasDaEntrada, motivoVisivel,
+  MOTIVO_MINIMO, MOTIVO_MAXIMO, type EntradaDeEstante,
+  repositorioEstante, repositorioEstanteLocal, repositorioModeracaoEstante,
+} from '../src/logica/estante.js';
 import { existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { linhaDoTempo, type Atividade } from '../src/logica/atividade.js';
 
 let ok = 0; const falhas: string[] = [];
 function afirma(cond: boolean, msg: string) { if (cond) ok++; else falhas.push(msg); }
@@ -1486,6 +1497,188 @@ const rotina = readFileSync('.github/workflows/noticias.yml', 'utf8');
 afirma(/npm ci/.test(rotina), 'a rotina precisa de `npm ci`: o colhedor agora importa o SDK');
 afirma(/ANTHROPIC_API_KEY: \$\{\{ secrets\.ANTHROPIC_API_KEY \}\}/.test(rotina),
   'a rotina precisa passar ANTHROPIC_API_KEY pro passo da colheita');
+
+/* ───────── apelido: o endereço do perfil ───────── */
+const ID_A = '8f3a91c4-2b7e-4d13-9a55-1c0e7b2d4f60';
+const ID_B = 'c1d2e3f4-0000-4a1b-8c2d-3e4f5a6b7c80';
+
+afirma(apelidoDe('Guilherme Assunção', ID_A) === 'guilherme-assuncao-8f3a',
+  'apelido: acento tem que virar ASCII e o sufixo sai do id');
+afirma(apelidoDe('Bruna  Takahashi', ID_B) === 'bruna-takahashi-c1d2',
+  'apelido: espaco dobrado nao pode virar hifen dobrado');
+afirma(apelidoDe('!!!', ID_A) === 'jogador-8f3a',
+  'apelido: nome sem letra nenhuma cai em "jogador"');
+afirma(apelidoDe('Ana', ID_A) !== apelidoDe('Ana', ID_B),
+  'apelido: mesmo nome com ids diferentes tem que dar apelidos diferentes');
+afirma(apelidoDe('Ana', ID_A, 1) === 'ana-8f3a91',
+  'apelido: a segunda tentativa alonga o sufixo, para o caso de colisao');
+afirma(apelidoDe('Guilherme', ID_A).endsWith('-8f3a'),
+  'apelido: o sufixo vem do id, nao do nome — trocar de nome nao pode mover o endereco');
+
+/* ───────── perfil: campos novos ───────── */
+const perfilCheio: Perfil = {
+  ...perfilVazio(),
+  nome: 'Guilherme',
+  estilo: 'atacante',
+  mao: 'canhoto',
+  empunhadura: 'caneta-chinesa',
+};
+afirma(ROTULO_MAO[perfilCheio.mao!] === 'Canhoto',
+  'perfil: mao precisa de rotulo legivel');
+afirma(ROTULO_EMPUNHADURA['caneta-chinesa'] === 'Caneta chinesa',
+  'perfil: empunhadura precisa de rotulo legivel');
+afirma(MAOS.length === 2 && EMPUNHADURAS.length === 3,
+  'perfil: as tabelas de lookup precisam cobrir todos os valores do check do banco');
+
+/* ───────── estante: o que a pessoa usou antes ───────── */
+const estanteDeTeste: EntradaDeEstante[] = [
+  { id: '1', materialId: 'tenergy05', de: '2023-01-01', ate: '2024-06-01' },
+  { id: '2', materialId: 'markv', de: '2024-06-01' },
+  { id: '3', materialId: 'dhs-hurricane-3' },
+  { id: '4', materialId: 'xiom-vega-europe', de: '2021-01-01', ate: '2023-01-01' },
+];
+const ordenada = ordenarEstante(estanteDeTeste);
+afirma(ordenada[0].id === '2', 'estante: o que esta em uso hoje vem primeiro');
+afirma(ordenada[1].id === '1' && ordenada[2].id === '4',
+  'estante: depois do atual, o mais recente primeiro');
+afirma(ordenada[3].id === '3',
+  'estante: sem data nenhuma vai pro fim, nao invento cronologia que a pessoa nao deu');
+afirma(emUsoHoje(estanteDeTeste[1]) && !emUsoHoje(estanteDeTeste[0]),
+  'estante: em uso hoje e "ate" vazio');
+
+afirma(problemasDaEntrada({ id: 'x', materialId: 'markv', de: '2024-01-01', ate: '2023-01-01' }).length === 1,
+  'estante: comecar depois de terminar tem que ser recusado');
+afirma(problemasDaEntrada({ id: 'x', materialId: 'nao-existe' }).length === 1,
+  'estante: material fora do catalogo tem que ser recusado');
+afirma(problemasDaEntrada({ id: 'x', materialId: 'markv', motivo: 'curto' }).length === 1,
+  'estante: motivo abaixo do minimo tem que ser recusado');
+afirma(problemasDaEntrada({ id: 'x', materialId: 'markv' }).length === 0,
+  'estante: material sozinho, sem data e sem motivo, e uma entrada valida');
+afirma(problemasDaEntrada({ id: 'x', materialId: 'markv', motivo: 'a'.repeat(MOTIVO_MAXIMO + 1) }).length === 1,
+  'estante: motivo acima do maximo tem que ser recusado');
+afirma(MOTIVO_MINIMO === 10 && MOTIVO_MAXIMO === 280,
+  'estante: os limites do modulo tem que bater com o check da migracao 015');
+
+/* A regra do D-14 em forma de teste: prosa espera gente, mas o dono vê sempre. */
+const comMotivoPendente = {
+  id: '9', materialId: 'markv', motivo: 'queria mais controle no backhand',
+  motivoStatus: 'pendente' as const,
+};
+afirma(motivoVisivel(comMotivoPendente, true) !== undefined,
+  "estante: o dono ve' o proprio motivo mesmo pendente");
+afirma(motivoVisivel(comMotivoPendente, false) === undefined,
+  "estante: terceiro NAO ve' motivo pendente");
+afirma(motivoVisivel({ ...comMotivoPendente, motivoStatus: 'aprovada' }, false) !== undefined,
+  'estante: aprovado, todo mundo ve');
+
+/* ───────── estante: os repositorios ───────── */
+afirma(typeof repositorioEstante === 'function',
+  'estante: precisa de fabrica de repositorio, como perfil e avaliacoes');
+afirma(repositorioEstanteLocal().somenteLocal === true,
+  'estante: o repositorio local tem que se declarar local');
+afirma(typeof repositorioModeracaoEstante === 'function',
+  'estante: a moderacao precisa da propria fabrica, como noticias e pedidos');
+
+/* ───────── atividade: as tres fontes numa linha do tempo so' ───────── */
+const EU = 'usuario-1';
+const minhaLinha: Atividade[] = linhaDoTempo(
+  [{ ...av({ id: 'a1', criadoEm: '2026-03-01T10:00:00Z' }), usuarioId: EU }],
+  [{ ...topicoDeTeste('t1', 'Titulo qualquer', 'Texto do topico.', []),
+     usuarioId: EU, criadoEm: '2026-05-01T10:00:00Z' }],
+  [{ ...mensagemDeTeste('r1', 'Uma resposta minha.', '2026-04-01T10:00:00Z'),
+     usuarioId: EU, topicoId: 't9' }],
+  EU,
+);
+afirma(minhaLinha.length === 3, 'atividade: junta as tres fontes numa lista so');
+afirma(minhaLinha[0].tipo === 'topico' && minhaLinha[2].tipo === 'avaliacao',
+  'atividade: mais recente primeiro, independente da fonte');
+afirma(minhaLinha.every((a) => a.para.startsWith('/')),
+  'atividade: todo item precisa de um destino clicavel');
+afirma(linhaDoTempo([], [], [], EU).length === 0,
+  'atividade: sem nada, devolve lista vazia em vez de quebrar');
+afirma(linhaDoTempo([av({ id: 'de-outro' })], [], [], EU).length === 0,
+  'atividade: item de outra pessoa nao entra na linha do tempo dela');
+afirma(minhaLinha.every((a) => ['avaliacao', 'topico', 'resposta'].includes(a.tipo)),
+  'atividade: so existem tres tipos, pedido de pauta nao entra na linha publica');
+
+/* ───────── procedencia de quem avalia ───────── */
+const doAvaliador = procedenciaDe([
+  av({ id: 'p1', materialId: 'markv', tempoDeUso: 'mais de 1 ano' }),
+  av({ id: 'p2', materialId: 'markv', tempoDeUso: '1 a 6 meses' }),
+  av({ id: 'p3', materialId: 'viscaria', tempoDeUso: 'mais de 1 ano' }),
+]);
+afirma(doAvaliador.quantas === 3, 'procedencia: conta as avaliacoes');
+afirma(doAvaliador.materiaisDistintos === 2,
+  'procedencia: duas avaliacoes do mesmo material contam como um material');
+afirma(doAvaliador.faixaTipica === 'mais de 1 ano',
+  'procedencia: a faixa tipica e a mais frequente, nao uma media inventada');
+afirma(doAvaliador.borrachas === 1 && doAvaliador.laminas === 1,
+  'procedencia: separa borracha de lamina pelo tipo do material');
+afirma(procedenciaDe([]).quantas === 0 && procedenciaDe([]).faixaTipica === undefined,
+  'procedencia: sem avaliacao, nao invento faixa nenhuma');
+
+/* ───────── resolveu quantas duvidas ───────── */
+const topicosPraContar: Topico[] = [
+  topicoDeTeste('x1', 'Titulo', 'Texto.',
+    [{ ...mensagemDeTeste('r-minha', 'Resposta minha.', '2026-08-02'), usuarioId: 'eu' }], 'r-minha'),
+  topicoDeTeste('x2', 'Titulo', 'Texto.',
+    [{ ...mensagemDeTeste('r-outra', 'De outro.', '2026-08-02'), usuarioId: 'outro' }], 'r-outra'),
+  topicoDeTeste('x3', 'Titulo', 'Texto.',
+    [{ ...mensagemDeTeste('r3', 'Nao marcada.', '2026-08-02'), usuarioId: 'eu' }]),
+];
+afirma(resolveuQuantas(topicosPraContar, 'eu') === 1,
+  'resolveu: conta so a resposta marcada como a que resolveu');
+afirma(resolveuQuantas(topicosPraContar, 'ninguem') === 0,
+  'resolveu: quem nao resolveu nada tem zero, nao undefined');
+afirma(resolveuQuantas([], 'eu') === 0,
+  'resolveu: sem topico nenhum, zero');
+
+
+/* ───────── perfil publico: invariantes que quebram em silencio ─────────
+   Estas leem o CODIGO, nao o resultado. Sao regras cuja falha nao aparece na
+   tela: aparece meses depois, como texto publicado sem revisao ou link morto. */
+/* Tira comentario antes de olhar: estas asercoes falam sobre o CODIGO, e um
+   comentario que CITA o padrao errado (pra explicar por que ele e' errado) nao
+   pode derrubar o teste. Aconteceu nas duas primeiras versoes disto. */
+const semComentarios = (fonte: string): string =>
+  fonte.replace(/\/\*[\s\S]*?\*\//g, ' ').replace(/\/\/.*$/gm, ' ');
+
+const telaJogador = semComentarios(
+  readFileSync('app/comunidade/jogador/jogador-cliente.tsx', 'utf8'));
+
+/* A mais importante de todas: motivo pendente nao pode vazar pra terceiro. */
+afirma(/motivoVisivel\(/.test(telaJogador),
+  'a tela publica precisa passar o motivo por motivoVisivel');
+afirma(!/\be\.motivo\b(?!Status)/.test(telaJogador),
+  'a tela publica esta lendo `.motivo` direto: motivo pendente vaza pra quem nao escreveu');
+
+const mig015 = readFileSync('supabase/015-estante.sql', 'utf8');
+afirma(/for insert to authenticated[\s\S]{0,200}status = 'pendente'/.test(mig015),
+  'o insert de motivo nao exige status pendente: o dono publica o proprio texto pelo POST');
+afirma(!/on public\.estante_motivos for update to authenticated\s*\n\s*using \(usuario_id/.test(mig015),
+  'o dono ganhou update em estante_motivos: com isso ele aprova o proprio motivo');
+
+const edicaoPerfil = readFileSync('app/comunidade/perfil/perfil-cliente.tsx', 'utf8');
+afirma(/caminhoDoPerfil\(/.test(edicaoPerfil),
+  'o cracha continua prometendo "e assim que voce aparece" sem levar a lugar nenhum');
+
+const repoPerfil = readFileSync('src/logica/perfil.ts', 'utf8');
+afirma(/p\.apelido \?\? apelidoDe\(/.test(repoPerfil),
+  'o apelido esta sendo regerado a cada gravacao: trocar de nome move o endereco e mata os links');
+
+/* O retrato nao pode ganhar numero: somar lamina com borracha nao tem regua, e
+   o catalogo tem duas reguas diferentes. */
+const retrato = semComentarios(readFileSync('componentes/RaqueteRetrato.tsx', 'utf8'));
+afirma(!/<Radar|velocidade|specs/i.test(retrato),
+  'o retrato da raquete ganhou numero ou radar: nao ha regua pra somar lamina com borracha');
+
+/* A resposta precisa nascer com dono, senao o contador de resolvidas e' zero
+   permanente e ninguem percebe. */
+const fonteDoForum = readFileSync('src/logica/discussoes.ts', 'utf8');
+afirma(/usuario_id: m\.usuarioId/.test(fonteDoForum),
+  'responder() voltou a nao enviar usuario_id: resposta sem dono nao conta em lugar nenhum');
+afirma(/usuarioId: l\.usuario_id/.test(fonteDoForum),
+  'daResposta voltou a nao mapear usuario_id: a atividade de respostas fica vazia');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

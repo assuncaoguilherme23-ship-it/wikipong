@@ -229,3 +229,11 @@
   color: var(--cor-tinta-suave);
   max-width: 68ch;
 }
+
+/* Contador do campo "o que voce procura". Mudo ate' encostar no teto: aviso que
+   grita antes da hora ensina a ignorar aviso. */
+.contador {
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+  font-weight: normal;
+}

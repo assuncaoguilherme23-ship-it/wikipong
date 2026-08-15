@@ -14,12 +14,40 @@
  * agora com dono.
  */
 import type { EstiloJogador, NivelJogador } from './avaliacoes';
+import { apelidoDe } from './apelido';
 import { sessaoAtual, usuarioAtual } from './sessao';
+
+/* Tabelas de lookup: um lugar só, para poderem ser revistas sem caçar string
+   espalhada pela UI. Os valores batem com o check da migração 014. */
+export type Mao = 'destro' | 'canhoto';
+export type Empunhadura = 'classica' | 'caneta-chinesa' | 'caneta-japonesa';
+
+export const MAOS: readonly Mao[] = ['destro', 'canhoto'];
+export const EMPUNHADURAS: readonly Empunhadura[] = ['classica', 'caneta-chinesa', 'caneta-japonesa'];
+
+export const ROTULO_MAO: Readonly<Record<Mao, string>> = {
+  destro: 'Destro',
+  canhoto: 'Canhoto',
+};
+
+export const ROTULO_EMPUNHADURA: Readonly<Record<Empunhadura, string>> = {
+  classica: 'Clássica',
+  'caneta-chinesa': 'Caneta chinesa',
+  'caneta-japonesa': 'Caneta japonesa',
+};
 
 export interface Perfil {
   nome: string;
   estilo?: EstiloJogador;
   nivel?: NivelJogador;
+  /** Gerado uma vez pelo repositório, na primeira gravação. Nunca muda. */
+  apelido?: string;
+  mao?: Mao;
+  empunhadura?: Empunhadura;
+  cidade?: string;
+  uf?: string;
+  /** Uma linha: "mais controle no backhand". */
+  procuro?: string;
   /** Ids de material. Guardar id e não o objeto: o catálogo muda, o perfil não. */
   equipamento: {
     lamina?: string;
@@ -118,6 +146,8 @@ export function repositorioPerfilSupabase(
 
   type Linha = {
     nome: string; estilo: string | null; nivel: string | null;
+    apelido: string | null; mao: string | null; empunhadura: string | null;
+    cidade: string | null; uf: string | null; procuro: string | null;
     equip_lamina: string | null; equip_fh: string | null; equip_bh: string | null;
     atualizado_em: string;
   };
@@ -138,6 +168,12 @@ export function repositorioPerfilSupabase(
           nome: l.nome,
           estilo: (l.estilo ?? undefined) as Perfil['estilo'],
           nivel: (l.nivel ?? undefined) as Perfil['nivel'],
+          apelido: l.apelido ?? undefined,
+          mao: (l.mao ?? undefined) as Perfil['mao'],
+          empunhadura: (l.empunhadura ?? undefined) as Perfil['empunhadura'],
+          cidade: l.cidade ?? undefined,
+          uf: l.uf ?? undefined,
+          procuro: l.procuro ?? undefined,
           equipamento: {
             lamina: l.equip_lamina ?? undefined,
             fh: l.equip_fh ?? undefined,
@@ -162,6 +198,12 @@ export function repositorioPerfilSupabase(
           nome: p.nome.trim(),
           estilo: p.estilo ?? null,
           nivel: p.nivel ?? null,
+          apelido: p.apelido ?? apelidoDe(p.nome, usuarioId),
+          mao: p.mao ?? null,
+          empunhadura: p.empunhadura ?? null,
+          cidade: p.cidade?.trim() || null,
+          uf: p.uf?.trim().toUpperCase() || null,
+          procuro: p.procuro?.trim() || null,
           equip_lamina: p.equipamento.lamina ?? null,
           equip_fh: p.equipamento.fh ?? null,
           equip_bh: p.equipamento.bh ?? null,

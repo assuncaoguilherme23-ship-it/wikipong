@@ -1,0 +1,190 @@
+/* Perfil público do jogador.
+   Leitura, não formulário: a página tem que parecer uma ficha, do mesmo jeito
+   que a ficha de um material. Por isso a mesma família de espaçamento e a mesma
+   voz mono para dado. */
+
+.perfil {
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  padding-bottom: var(--esp-8);
+}
+
+.carregando,
+.vazio {
+  padding: var(--esp-6) 0;
+  color: var(--cor-tinta-suave);
+}
+
+.cabecalho {
+  padding: var(--esp-5) 0 var(--esp-4);
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-1);
+  line-height: var(--altura-titulo);
+  margin: 0;
+}
+
+.tracos {
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  margin: var(--esp-2) 0 0;
+}
+
+.lugar {
+  font-size: var(--texto-menor);
+  color: var(--cor-mudo);
+  margin: var(--esp-1) 0 0;
+}
+
+.procuro {
+  margin: var(--esp-3) 0 0;
+  line-height: var(--altura-corpo);
+}
+
+.procuroRotulo {
+  font-size: var(--texto-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cor-mudo);
+  margin-right: var(--esp-1);
+}
+
+.souEu {
+  margin: var(--esp-3) 0 0;
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+}
+
+.secao {
+  margin: var(--esp-6) 0;
+}
+
+.tituloSecao {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-3);
+  line-height: var(--altura-titulo);
+  margin: 0 0 var(--esp-3);
+}
+
+/* ───────── Os números ───────── */
+
+.numeros {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--esp-3);
+}
+
+@media (min-width: 40rem) {
+  .numeros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.numeros li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--esp-2);
+}
+
+.numero {
+  font-size: var(--texto-dado);
+  line-height: var(--altura-dado);
+  color: var(--cor-texto-acento);
+}
+
+.numeroRotulo {
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+}
+
+/* ───────── A estante ───────── */
+
+.estante,
+.atividade {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--esp-3);
+}
+
+.entrada {
+  padding-bottom: var(--esp-3);
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.entradaTopo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--esp-2);
+}
+
+.periodo {
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+
+.emUso {
+  font-size: var(--texto-micro);
+  padding: 0.1em 0.5em;
+  border-radius: var(--raio-sm);
+  background: var(--cor-acento-suave);
+  color: var(--cor-texto-acento);
+}
+
+.motivo {
+  margin: var(--esp-2) 0 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+}
+
+.esperando {
+  color: var(--cor-mudo);
+  font-size: var(--texto-micro);
+}
+
+/* ───────── A atividade ───────── */
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--esp-2);
+  padding-bottom: var(--esp-2);
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.acao {
+  font-size: var(--texto-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cor-mudo);
+  flex-shrink: 0;
+}
+
+/* Uma linha só: a atividade é índice, não leitura. Quem quer o texto clica. */
+.itemTexto {
+  flex: 1 1 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
+}
+
+.itemTexto:hover {
+  color: var(--cor-texto-acento);
+  text-decoration: underline;
+}
+
+.itemTexto:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}

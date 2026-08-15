@@ -43,6 +43,8 @@ export interface Mensagem {
    * campo existe para a TELA DE MODERAÇÃO, que é a única que vê o pendente.
    */
   status?: StatusTopico;
+  /** Só o dono da mensagem e o moderador marcam — a regra mora no banco (010). */
+  usuarioId?: string;
 }
 
 export interface Topico extends Mensagem {
@@ -58,8 +60,6 @@ export interface Topico extends Mensagem {
    * acreditar.
    */
   respostaUtil?: string;
-  /** Só o dono do tópico e o moderador marcam — a regra mora no banco (010). */
-  usuarioId?: string;
 }
 
 export const TITULO_MINIMO = 8;
@@ -265,7 +265,7 @@ export function repositorioDiscussoesSupabase(url: string, chave: string): Repos
   };
 
   type LinhaResposta = {
-    id: string; topico_id: string; autor: string; estilo: string | null;
+    id: string; topico_id: string; usuario_id: string | null; autor: string; estilo: string | null;
     nivel: string | null; texto: string; criado_em: string; status: string;
   };
   type LinhaTopico = {
@@ -278,6 +278,7 @@ export function repositorioDiscussoesSupabase(url: string, chave: string): Repos
   const daResposta = (l: LinhaResposta): Mensagem => ({
     id: l.id,
     autor: l.autor,
+    usuarioId: l.usuario_id ?? undefined,
     estilo: (l.estilo ?? undefined) as EstiloJogador | undefined,
     nivel: (l.nivel ?? undefined) as NivelJogador | undefined,
     texto: l.texto,
@@ -344,6 +345,7 @@ export function repositorioDiscussoesSupabase(url: string, chave: string): Repos
           texto: m.texto,
           ...(m.estilo ? { estilo: m.estilo } : {}),
           ...(m.nivel ? { nivel: m.nivel } : {}),
+          ...(m.usuarioId ? { usuario_id: m.usuarioId } : {}),
         }),
       });
       if (!res.ok) throw new Error(`Supabase recusou a resposta (${res.status})`);
@@ -379,3 +381,17 @@ export const repositorioDiscussoes = (): RepositorioDiscussoes => {
   const chave = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   return url && chave ? repositorioDiscussoesSupabase(url, chave) : repositorioDiscussoesLocal();
 };
+
+/**
+ * Quantas vezes a resposta desta pessoa foi a que resolveu o tópico.
+ *
+ * É o único número de reputação que este site guarda, e é de propósito: ele é
+ * GANHO, não declarado — quem marca é quem perguntou. Contagem de mensagens ou
+ * de curtidas premiaria volume, e volume muda o que as pessoas escrevem.
+ */
+export function resolveuQuantas(topicos: readonly Topico[], usuarioId: string): number {
+  return topicos.filter((t) =>
+    Boolean(t.respostaUtil) &&
+    t.respostas.some((r) => r.id === t.respostaUtil && r.usuarioId === usuarioId),
+  ).length;
+}

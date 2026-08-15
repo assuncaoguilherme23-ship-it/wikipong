@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
+import { apelidosDe, caminhoDoPerfil } from '@/componentes/apelidos';
 import {
   repositorioDiscussoes, validarTopico, ordenarTopicos, porAssunto, ultimaAtividade,
   buscarTopicos, respostasOrdenadas, temRespostaUtil, ROTULO_ASSUNTO, ASSUNTOS,
@@ -21,6 +22,17 @@ export function DiscussoesCliente() {
   const repo = useMemo(() => repositorioDiscussoes(), []);
   const repoPerfil = useMemo(() => repositorioPerfil(), []);
   const [topicos, setTopicos] = useState<Topico[] | null>(null);
+  const [apelidos, setApelidos] = useState<Map<string, string>>(new Map());
+
+  /* Topico e resposta, de uma vez so'. Falha vira mapa vazio e o nome fica
+     texto simples: perder o link nao pode derrubar o forum. */
+  useEffect(() => {
+    if (!topicos || topicos.length === 0) return;
+    let vivo = true;
+    const ids = topicos.flatMap((t) => [t.usuarioId, ...t.respostas.map((r) => r.usuarioId)]);
+    apelidosDe(ids).then((m) => { if (vivo) setApelidos(m); });
+    return () => { vivo = false; };
+  }, [topicos]);
   const [perfil, setPerfil] = useState<Perfil | null>(null);
   const [ordem, setOrdem] = useState<OrdemTopico>('ativos');
   const [assunto, setAssunto] = useState<Assunto | ''>('');
@@ -78,6 +90,13 @@ export function DiscussoesCliente() {
      função da migração 010 aplica de verdade, do lado do banco. */
   const podeMarcar = (t: Topico) =>
     repo.somenteLocal || admin || Boolean(euId && t.usuarioId === euId);
+
+  /* Quem tem perfil publico vira link, em topico e em resposta. Uma consulta em
+     lote por listagem. Sem apelido, o nome fica texto simples -- como estava. */
+  const comLink = (usuarioId: string | undefined, autor: string) => {
+    const apelido = usuarioId ? apelidos.get(usuarioId) : undefined;
+    return apelido ? <Link href={caminhoDoPerfil(apelido)}>{autor}</Link> : autor;
+  };
 
   if (topicos === null) return <p className={estilos.carregando}>Carregando…</p>;
 
@@ -166,6 +185,7 @@ export function DiscussoesCliente() {
       {abrindo && (
         <FormularioTopico
           perfil={perfil}
+          usuarioId={euId}
           aoGravar={async (t) => {
             await repo.gravar(t);
             await recarregar();
@@ -224,7 +244,7 @@ export function DiscussoesCliente() {
               <h3 className={estilos.topicoTitulo}>{t.titulo}</h3>
               <p className={estilos.topicoTexto}>{t.texto}</p>
               <p className={estilos.assinatura}>
-                <span className={estilos.autor}>{t.autor}</span>
+                <span className={estilos.autor}>{comLink(t.usuarioId, t.autor)}</span>
                 {t.estilo && <TagEstilo estilo={t.estilo} />}
                 {t.nivel && <TagNivel nivel={t.nivel} />}
                 <time className={`mono ${estilos.data}`} dateTime={t.criadoEm}>
@@ -262,7 +282,7 @@ export function DiscussoesCliente() {
                               )}
                               <p className={estilos.respostaTexto}>{r.texto}</p>
                               <p className={estilos.assinatura}>
-                                <span className={estilos.autor}>{r.autor}</span>
+                                <span className={estilos.autor}>{comLink(r.usuarioId, r.autor)}</span>
                                 {r.estilo && <TagEstilo estilo={r.estilo} />}
                                 <time className={`mono ${estilos.data}`} dateTime={r.criadoEm}>
                                   {quando(r.criadoEm)}
@@ -287,6 +307,7 @@ export function DiscussoesCliente() {
                     )}
                     <FormularioResposta
                       perfil={perfil}
+                      usuarioId={euId}
                       aoResponder={async (msg) => {
                         await repo.responder(t.id, msg);
                         await recarregar();
@@ -312,9 +333,12 @@ export function DiscussoesCliente() {
 
 function FormularioTopico({
   perfil,
+  usuarioId,
   aoGravar,
 }: {
   perfil: Perfil | null;
+  /** Quem abriu. Sem isto, `podeMarcar` nunca reconhece o dono do tópico. */
+  usuarioId: string | null;
   aoGravar: (t: Topico) => Promise<void>;
 }) {
   /* O nome vem do perfil quando existe: perguntar de novo o que a pessoa já
@@ -349,6 +373,7 @@ function FormularioTopico({
           nivel: perfil?.nivel,
           criadoEm: new Date().toISOString(),
           respostas: [],
+          usuarioId: usuarioId ?? undefined,
         });
       }}
     >
@@ -422,9 +447,11 @@ function FormularioTopico({
 
 function FormularioResposta({
   perfil,
+  usuarioId,
   aoResponder,
 }: {
   perfil: Perfil | null;
+  usuarioId: string | null;
   aoResponder: (m: Mensagem) => Promise<void>;
 }) {
   const [texto, setTexto] = useState('');
@@ -444,6 +471,7 @@ function FormularioResposta({
           nivel: perfil?.nivel,
           texto: texto.trim(),
           criadoEm: new Date().toISOString(),
+          usuarioId: usuarioId ?? undefined,
         });
         setTexto('');
       }}

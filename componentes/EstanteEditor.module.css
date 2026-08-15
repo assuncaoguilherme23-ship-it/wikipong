@@ -1,0 +1,205 @@
+.bloco {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+}
+
+.carregando {
+  margin: 0;
+  color: var(--cor-mudo);
+  font-size: var(--texto-menor);
+}
+
+.faltando {
+  margin: 0;
+  font-size: var(--texto-menor);
+  color: var(--cor-mudo);
+}
+
+.erro {
+  margin: 0;
+  padding: var(--esp-3);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-erro);
+  border-radius: var(--raio-sm);
+  color: var(--cor-erro);
+  font-size: var(--texto-menor);
+}
+
+/* ── A lista já cadastrada ── */
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--esp-2);
+  padding: var(--esp-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+}
+
+.itemTopo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--esp-3);
+}
+
+.itemMaterial {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--fonte-display);
+  font-size: var(--texto-maior);
+  line-height: var(--altura-apertada);
+}
+
+@media (hover: hover) {
+  .itemMaterial:hover {
+    color: var(--cor-texto-acento);
+  }
+}
+
+.orfa {
+  color: var(--cor-erro);
+  font-size: var(--texto-menor);
+}
+
+.emUso {
+  font-size: var(--texto-micro);
+  padding: 0.1em 0.5em;
+  border-radius: var(--raio-sm);
+  background: var(--cor-acento-suave);
+  color: var(--cor-texto-acento);
+}
+
+.periodo {
+  margin: 0;
+  font-size: var(--texto-mini);
+  color: var(--cor-mudo);
+}
+
+.motivo {
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}
+
+.esperando {
+  color: var(--cor-mudo);
+  font-size: var(--texto-micro);
+}
+
+.aviso {
+  margin: 0;
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-mudo);
+  max-width: 62ch;
+}
+
+/* ── O formulário ── */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-4);
+  padding-top: var(--esp-4);
+  border-top: 1px solid var(--cor-linha);
+}
+
+.explica {
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  max-width: 62ch;
+}
+
+.avisoConta {
+  margin: 0;
+  padding: var(--esp-3);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+}
+
+.campos {
+  display: grid;
+  gap: var(--esp-4);
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+}
+
+.rotulo {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  font: inherit;
+  font-size: var(--texto-base);
+  padding: 0.55em 0.7em;
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  background: var(--cor-papel);
+  color: var(--cor-tinta);
+  width: 100%;
+}
+
+.campo textarea {
+  resize: vertical;
+  line-height: var(--altura-corpo);
+}
+
+.pecaEscolhida {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  margin-top: var(--esp-1);
+}
+
+.pecaLink {
+  font-family: var(--fonte-mono);
+  font-size: var(--texto-micro);
+  color: var(--cor-texto-acento);
+}
+
+.contador {
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+  font-weight: normal;
+}
+
+.problemas {
+  margin: 0;
+  padding-left: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  font-size: var(--texto-mini);
+  color: var(--cor-erro);
+}

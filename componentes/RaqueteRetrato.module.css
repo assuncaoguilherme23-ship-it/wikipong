@@ -1,0 +1,72 @@
+/* Retrato da raquete no perfil.
+   A foto do produto é o destaque; a moldura tem que sumir. Por isso nada de
+   sombra ou borda além do que o resto do site já usa. */
+
+.retrato {
+  margin: var(--esp-6) 0;
+}
+
+.titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-3);
+  line-height: var(--altura-titulo);
+  margin: 0 0 var(--esp-3);
+}
+
+.pecas {
+  list-style: none;
+  display: grid;
+  gap: var(--esp-3);
+  padding: 0;
+  margin: 0;
+}
+
+/* Três colunas quando cabe; empilhado no celular. */
+@media (min-width: 40rem) {
+  .pecas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.peca {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--esp-2);
+  padding: var(--esp-3);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  background: var(--cor-superficie);
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+}
+
+.peca:hover {
+  border-color: var(--cor-linha-forte);
+}
+
+/* Anel de foco com o acento: aqui ele é permitido em qualquer tema, porque é
+   contorno e não texto. */
+.peca:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 3px;
+}
+
+.papel {
+  font-size: var(--texto-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cor-mudo);
+}
+
+/* `--cor-texto-acento` e não o acento claro: isto é texto pequeno, e o alias
+   resolve para a versão que passa AA nos dois temas. */
+.nome {
+  font-size: var(--texto-menor);
+  line-height: var(--altura-apertada);
+}
+
+.peca:hover .nome {
+  color: var(--cor-texto-acento);
+}

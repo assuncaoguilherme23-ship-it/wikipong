@@ -145,8 +145,10 @@ Ganha: mão, empunhadura, cidade/UF, "o que eu procuro", a estante (adicionar, e
 De cima para baixo:
 
 1. **Cabeçalho** — nome; estilo · nível · mão · empunhadura; cidade; a linha "procuro".
-2. **A raquete como retrato** — as três peças com foto, e o radar das características somadas. Reusa `Radar.tsx` e `montagem.ts`. Num site de equipamento, a raquete diz mais que um avatar.
-3. **Comparar com a minha** — só aparece para quem está logado **e** tem raquete montada: o radar da pessoa com o seu sobreposto, igual ao `/comparar`. Fora dessas condições o bloco não existe (não é um estado vazio, é ausência).
+2. **A raquete como retrato** — as três peças com foto e os números que cada uma tem. Num site de equipamento, a raquete diz mais que um avatar.
+3. **Comparar com a minha** — só aparece para quem está logado **e** tem raquete montada: compara **peça a peça** (seu forehand contra o dela, sua lâmina contra a dela), com seletor de peça, usando `metricasComparaveis` + `Radar` como o `/comparar` já faz. Fora dessas condições o bloco não existe (não é um estado vazio, é ausência).
+
+> **Correção feita durante a implementação.** O desenho pedia "o radar das características somadas" das três peças. **Esse número não existe e não pode ser inventado.** O radar deste site é alimentado por `metricasComparaveis(a, b)`, que compara DOIS materiais; não há régua definida para somar uma lâmina com duas borrachas, e a velocidade de uma lâmina não é a mesma grandeza que a de uma borracha. Uma média ali seria "número convertido sem régua declarada", proibido pelo CLAUDE.md e pelo D-16. A comparação peça a peça responde melhor a mesma pergunta: ninguém quer a média da raquete do outro, quer saber como a borracha dele se compara com a sua.
 4. **Procedência** — a linha de números das avaliações.
 5. **Estante** — a linha do tempo do equipamento, com os motivos aprovados.
 6. **Atividade** — avaliações, tópicos e respostas misturados por data.

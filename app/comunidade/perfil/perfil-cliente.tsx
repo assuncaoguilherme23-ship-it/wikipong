@@ -29,7 +29,7 @@ import { caminhoDoPerfil } from '@/componentes/apelidos';
 const PROCURO_MAXIMO = 120;
 import { Login } from '@/componentes/Login';
 import { usarSessao } from '@/componentes/usarSessao';
-import { sair } from '@/src/logica/sessao';
+import { sair, tokenGuardado } from '@/src/logica/sessao';
 import {
   pecasDe, precoTotal, completa, observacoes, ROTULO_PAPEL,
   type Montagem, type PecaMontagem, type PapelPeca,
@@ -40,6 +40,7 @@ import { brl } from '@/componentes/formato';
 import { FotoProduto } from '@/componentes/FotoProduto';
 import { Estrelas } from '@/componentes/Estrelas';
 import { TagEstilo, TagNivel } from '@/componentes/TagEstilo';
+import { EstanteEditor } from '@/componentes/EstanteEditor';
 import estilos from './perfil.module.css';
 
 const ESTILOS: EstiloJogador[] = ['atacante', 'allround', 'defensor'];
@@ -314,6 +315,14 @@ export function PerfilCliente() {
             )}
           </div>
         )}
+      </section>
+
+      {/* ── O que você já usou ── */}
+      <section className={estilos.secao} aria-labelledby="t-estante">
+        <h2 id="t-estante" className={estilos.tituloSecao}>
+          O que você já usou
+        </h2>
+        <EstanteEditor token={tokenGuardado() ?? null} usuarioId={usuario?.id ?? null} />
       </section>
 
       {/* ── Minhas avaliações ── */}

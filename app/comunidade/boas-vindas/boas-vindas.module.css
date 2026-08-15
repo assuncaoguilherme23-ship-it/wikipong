@@ -1,0 +1,211 @@
+/* Boas-vindas.
+   Uma coisa por tela, centrada e estreita: quem acabou de chegar não deve ter
+   que escolher onde olhar. A largura de leitura é menor que a do site inteiro
+   de propósito — é conversa, não documento. */
+
+.quadro {
+  max-width: 34rem;
+  margin: var(--esp-6) auto var(--esp-8);
+}
+
+.carregando {
+  padding: var(--esp-6) 0;
+  color: var(--cor-tinta-suave);
+}
+
+.progresso {
+  font-size: var(--texto-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-mudo);
+  margin: 0 0 var(--esp-2);
+}
+
+/* Trilha de progresso: traços, não bolinhas numeradas. O número já está escrito
+   em cima, e dois indicadores do mesmo dado é ruído. */
+.trilha {
+  display: flex;
+  gap: var(--esp-1);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--esp-5);
+}
+
+.trecho,
+.trechoFeito {
+  height: 3px;
+  flex: 1;
+  border-radius: 2px;
+  background: var(--cor-linha);
+}
+
+.trechoFeito {
+  background: var(--cor-acento);
+}
+
+.titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-2);
+  line-height: var(--altura-titulo);
+  text-wrap: balance;
+  margin: 0 0 var(--esp-2);
+}
+
+/* O "por que" tem peso de texto normal, não de nota de rodapé: é ele que
+   convence alguém a responder, então não pode ser o menor elemento da tela. */
+.explica {
+  font-size: var(--texto-base);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+  margin: 0 0 var(--esp-5);
+}
+
+.campos {
+  display: grid;
+  gap: var(--esp-4);
+}
+
+.campo {
+  display: grid;
+  gap: var(--esp-1);
+}
+
+.rotulo {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: var(--esp-2);
+  font: inherit;
+  color: var(--cor-tinta);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+}
+
+.campo input:focus-visible,
+.campo select:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}
+
+.confirmado {
+  font-size: var(--texto-micro);
+  color: var(--cor-mudo);
+}
+
+/* Escolha por botão, não por <select>: são poucas opções e cada uma é uma
+   decisão de identidade. Esconder isso atrás de um menu suspenso faria parecer
+   formulário de cadastro de banco. */
+.escolhas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.escolhas legend {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+  margin-bottom: var(--esp-2);
+}
+
+.escolha,
+.escolhaAtiva {
+  font: inherit;
+  font-size: var(--texto-menor);
+  padding: var(--esp-2) var(--esp-3);
+  border-radius: var(--raio-md);
+  border: 1px solid var(--cor-linha-forte);
+  background: var(--cor-superficie);
+  color: var(--cor-tinta);
+  cursor: pointer;
+  transition: border-color 120ms ease-out, background-color 120ms ease-out;
+}
+
+.escolha:hover {
+  border-color: var(--cor-acento);
+}
+
+/* Selecionado usa fundo de acento ESCURO com texto claro: branco sobre ele
+   passa AA nos dois temas, ao contrário do acento claro. */
+.escolhaAtiva {
+  background: var(--cor-acento-escuro);
+  border-color: var(--cor-acento-escuro);
+  color: #fff;
+}
+
+.escolha:focus-visible,
+.escolhaAtiva:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--esp-3);
+  margin-top: var(--esp-5);
+}
+
+/* Pular é link, não botão: tem que estar sempre disponível e nunca competir
+   com o caminho principal. Escondê-lo seria prender, que é o que esta tela
+   promete não fazer. */
+.pular,
+.voltar {
+  font: inherit;
+  font-size: var(--texto-menor);
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--cor-tinta-suave);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.pular:hover,
+.voltar:hover {
+  color: var(--cor-texto-acento);
+}
+
+.pular:focus-visible,
+.voltar:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 3px;
+}
+
+.voltar {
+  margin-top: var(--esp-4);
+}
+
+.dica,
+.jaDa {
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  margin: var(--esp-3) 0 0;
+}
+
+.erro {
+  font-size: var(--texto-menor);
+  color: var(--cor-erro);
+  margin: var(--esp-3) 0 0;
+}
+
+.fim {
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .escolha,
+  .escolhaAtiva {
+    transition: none;
+  }
+}

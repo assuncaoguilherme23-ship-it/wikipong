@@ -248,3 +248,25 @@
 .passoAPassoNota {
   color: var(--cor-mudo);
 }
+
+/* Convite pras boas-vindas, no topo e so' pra perfil vazio. Nao e' cartao
+   decorativo: e' a saida pra quem nao quer encarar oito campos de uma vez. */
+.convite {
+  margin: var(--esp-5) 0;
+  padding: var(--esp-4);
+  border: 1px solid var(--cor-acento);
+  border-radius: var(--raio-md);
+  background: var(--cor-acento-suave);
+}
+
+.conviteTitulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-3);
+  margin: 0 0 var(--esp-2);
+}
+
+.conviteTexto {
+  margin: 0 0 var(--esp-3);
+  line-height: var(--altura-leitura);
+  max-width: 52ch;
+}

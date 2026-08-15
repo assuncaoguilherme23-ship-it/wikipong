@@ -267,7 +267,11 @@ export function PerfilCliente() {
           </div>
         ) : (
           <p className={estilos.faltando}>
-            Preencha o nome e o estilo pra ver como a sua assinatura vai ficar.
+            Preencha o nome e o estilo pra ver como a sua assinatura vai ficar.{' '}
+            {/* Quem chega com o perfil vazio nao deveria encarar oito campos de
+                uma vez: as boas-vindas pedem uma coisa por tela e explicam pra
+                que serve. Formulario longo e' formulario abandonado. */}
+            <Link href="/comunidade/boas-vindas/">Prefere passo a passo? →</Link>
           </p>
         )}
       </section>

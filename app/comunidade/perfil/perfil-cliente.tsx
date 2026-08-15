@@ -20,8 +20,13 @@ import {
 import { repositorio } from '@/src/logica/repositorio-avaliacoes';
 import {
   repositorioPerfilAtual, perfilVazio, temIdentidade, pecasEscolhidas,
-  type Perfil, type RepositorioPerfil,
+  MAOS, EMPUNHADURAS, ROTULO_MAO, ROTULO_EMPUNHADURA,
+  type Perfil, type RepositorioPerfil, type Mao, type Empunhadura,
 } from '@/src/logica/perfil';
+import { caminhoDoPerfil } from '@/componentes/apelidos';
+
+/* Bate com o check da migracao 014: uma linha, nao um paragrafo. */
+const PROCURO_MAXIMO = 120;
 import { Login } from '@/componentes/Login';
 import { usarSessao } from '@/componentes/usarSessao';
 import { sair } from '@/src/logica/sessao';
@@ -176,11 +181,81 @@ export function PerfilCliente() {
               ))}
             </select>
           </label>
+          {/* Mao e empunhadura mudam a recomendacao inteira e ate' agora nao
+              existiam em lugar nenhum do site. */}
+          <label className={estilos.campo}>
+            <span className={estilos.rotulo}>Mão</span>
+            <select
+              value={perfil.mao ?? ''}
+              onChange={(e) => salvar({ mao: (e.target.value || undefined) as Mao })}
+            >
+              <option value="">escolher…</option>
+              {MAOS.map((m) => (
+                <option key={m} value={m}>{ROTULO_MAO[m]}</option>
+              ))}
+            </select>
+          </label>
+          <label className={estilos.campo}>
+            <span className={estilos.rotulo}>Empunhadura</span>
+            <select
+              value={perfil.empunhadura ?? ''}
+              onChange={(e) =>
+                salvar({ empunhadura: (e.target.value || undefined) as Empunhadura })}
+            >
+              <option value="">escolher…</option>
+              {EMPUNHADURAS.map((e) => (
+                <option key={e} value={e}>{ROTULO_EMPUNHADURA[e]}</option>
+              ))}
+            </select>
+          </label>
+          <label className={estilos.campo}>
+            <span className={estilos.rotulo}>Cidade</span>
+            <input
+              type="text"
+              value={perfil.cidade ?? ''}
+              onChange={(e) => salvar({ cidade: e.target.value })}
+              placeholder="onde você joga"
+            />
+          </label>
+          <label className={estilos.campo}>
+            <span className={estilos.rotulo}>UF</span>
+            <input
+              type="text"
+              maxLength={2}
+              value={perfil.uf ?? ''}
+              onChange={(e) => salvar({ uf: e.target.value.toUpperCase() })}
+              placeholder="RJ"
+            />
+          </label>
         </div>
+
+        <label className={estilos.campo}>
+          <span className={estilos.rotulo}>
+            O que você procura agora{' '}
+            <span className={`mono ${estilos.contador}`}>
+              {(perfil.procuro ?? '').length}/{PROCURO_MAXIMO}
+            </span>
+          </span>
+          <input
+            type="text"
+            maxLength={PROCURO_MAXIMO}
+            value={perfil.procuro ?? ''}
+            onChange={(e) => salvar({ procuro: e.target.value })}
+            placeholder="mais controle no backhand"
+          />
+        </label>
 
         {temIdentidade(perfil) ? (
           <div className={estilos.previa}>
-            <p className={`mono ${estilos.previaRotulo}`}>é assim que você aparece</p>
+            <p className={`mono ${estilos.previaRotulo}`}>
+              é assim que você aparece
+              {perfil.apelido && (
+                <>
+                  {' · '}
+                  <Link href={caminhoDoPerfil(perfil.apelido)}>ver como os outros veem →</Link>
+                </>
+              )}
+            </p>
             <div className={estilos.cracha}>
               <p className={estilos.crachaNome}>{perfil.nome}</p>
               <p className={estilos.crachaTags}>

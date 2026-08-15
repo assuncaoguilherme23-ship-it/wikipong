@@ -14,6 +14,7 @@
  * do Postgres filtra LINHAS e não colunas. Aqui em cima elas viram um objeto só.
  */
 import { materialPorId } from '../../componentes/dados-materiais';
+import { tokenGuardado } from './sessao';
 
 export type StatusMotivo = 'pendente' | 'aprovada' | 'descartada';
 
@@ -205,3 +206,89 @@ export function repositorioEstante(token?: string | null, usuarioId?: string | n
   if (!url || !chave) return repositorioEstanteLocal();
   return repositorioEstanteSupabase(url, chave, token ?? chave, usuarioId ?? null);
 }
+
+/**
+ * ── Moderação ──────────────────────────────────────────────────────────────
+ * O que `RepositorioEstante` não faz, de propósito: ver o motivo pendente de
+ * OUTRA pessoa. `listar()` acima só devolve a própria estante — é a RLS
+ * filtrando por dono. A fila de moderação precisa do oposto, ver TUDO que
+ * está esperando, de qualquer um — e isso a política "leitura de motivo"
+ * (migração 015) já entrega de graça pra quem é admin. Falta só o fetch, no
+ * mesmo desenho de `repositorioNoticias` e `repositorioPedidos`.
+ */
+export interface MotivoParaModerar {
+  /** = `estante_id`, a chave primária de `estante_motivos`. */
+  id: string;
+  materialId: string;
+  usuarioId: string;
+  texto: string;
+  status: StatusMotivo;
+  criadoEm: string;
+}
+
+export interface RepositorioModeracaoEstante {
+  readonly disponivel: boolean;
+  listar(): Promise<MotivoParaModerar[]>;
+  /** Aprova ou descarta. Exige admin no banco (política "admin modera motivo"). */
+  moderar(id: string, status: StatusMotivo): Promise<void>;
+}
+
+export function repositorioModeracaoEstanteSupabase(
+  url: string, chave: string,
+): RepositorioModeracaoEstante {
+  const base = `${url.replace(/\/$/, '')}/rest/v1/estante_motivos`;
+  const chaveEhJwt = chave.startsWith('ey');
+  const cabecalhos = (): Record<string, string> => {
+    const h: Record<string, string> = { apikey: chave, 'Content-Type': 'application/json' };
+    const token = tokenGuardado() ?? (chaveEhJwt ? chave : undefined);
+    if (token) h.Authorization = `Bearer ${token}`;
+    return h;
+  };
+
+  type Linha = {
+    estante_id: string; usuario_id: string; texto: string; status: string; criado_em: string;
+    /* Objeto, não array: `estante_id` é a própria PK, então o embed é 1-pra-1. */
+    estante: { material_id: string } | null;
+  };
+
+  return {
+    disponivel: true,
+    async listar() {
+      const res = await fetch(
+        `${base}?select=*,estante(material_id)&order=criado_em.desc&limit=200`,
+        { headers: cabecalhos() },
+      );
+      if (!res.ok) throw new Error(`Supabase respondeu ${res.status}`);
+      return ((await res.json()) as Linha[]).map((l) => ({
+        id: l.estante_id,
+        materialId: l.estante?.material_id ?? '',
+        usuarioId: l.usuario_id,
+        texto: l.texto,
+        status: l.status as StatusMotivo,
+        criadoEm: l.criado_em,
+      }));
+    },
+    async moderar(id, status) {
+      const res = await fetch(`${base}?estante_id=eq.${encodeURIComponent(id)}`, {
+        method: 'PATCH',
+        headers: { ...cabecalhos(), Prefer: 'return=minimal' },
+        body: JSON.stringify({ status }),
+      });
+      if (!res.ok) throw new Error(`Supabase recusou a moderação (${res.status})`);
+    },
+  };
+}
+
+/** Sem backend, não há fila nenhuma pra moderar — a tela diz isso, em vez de aparecer vazia. */
+export const repositorioModeracaoEstante = (): RepositorioModeracaoEstante => {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const chave = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !chave) {
+    return {
+      disponivel: false,
+      async listar() { return []; },
+      async moderar() { throw new Error('sem servidor'); },
+    };
+  }
+  return repositorioModeracaoEstanteSupabase(url, chave);
+};

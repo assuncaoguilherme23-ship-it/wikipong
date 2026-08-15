@@ -237,3 +237,14 @@
   color: var(--cor-mudo);
   font-weight: normal;
 }
+
+/* Entrada pras boas-vindas. Sempre visivel: quem ja' tem perfil pode querer
+   rever os passos ou preencher o que ficou faltando. */
+.passoAPasso {
+  margin: var(--esp-4) 0 0;
+  font-size: var(--texto-menor);
+}
+
+.passoAPassoNota {
+  color: var(--cor-mudo);
+}

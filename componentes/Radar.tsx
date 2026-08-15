@@ -106,7 +106,7 @@ export function Radar({
           <polygon
             key={t}
             points={pontos(coords(cheio.map((v) => v * t), centro, raio))}
-            className={estilos.anel}
+            className={`${estilos.anel} ${t === 1 ? estilos.anelBorda : ''}`}
           />
         ))}
         {coords(cheio, centro, raio).map(([x, y], i) => (
@@ -136,7 +136,7 @@ export function Radar({
                 key={`${s.nome}-${i}`}
                 cx={x}
                 cy={y}
-                r={2.8}
+                r={3.2}
                 className={`${estilos.ponto} ${
                   animado ? (porRolagem ? estilos.pontoRolagem : estilos.pontoAnimado) : ''
                 }`}

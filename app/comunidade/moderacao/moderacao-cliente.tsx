@@ -43,9 +43,11 @@ import {
   repositorioNoticias, ordenarNoticias, esperando as noticiasEsperando,
   type NoticiaRecebida,
 } from '@/src/logica/noticias-fila';
+import { PainelEstante } from './PainelEstante';
+import { repositorioModeracaoEstante, type MotivoParaModerar } from '@/src/logica/estante';
 import estilos from './moderacao.module.css';
 
-type Aba = 'avaliacoes' | 'discussoes' | 'pedidos' | 'noticias';
+type Aba = 'avaliacoes' | 'discussoes' | 'pedidos' | 'noticias' | 'estante';
 
 const ROTULO_STATUS: Record<Avaliacao['status'], string> = {
   pendente: 'esperando',
@@ -128,6 +130,25 @@ export function ModeracaoCliente() {
     }
   }
 
+  const repoEstante = useMemo(() => repositorioModeracaoEstante(), []);
+  const [motivosEstante, setMotivosEstante] = useState<MotivoParaModerar[] | null>(null);
+  const [erroEstante, setErroEstante] = useState<string | null>(null);
+
+  const recarregarEstante = useCallback(
+    () => repoEstante.listar()
+      .then((ms) => { setMotivosEstante(ms); setErroEstante(null); })
+      .catch(() => {
+        setMotivosEstante([]);
+        setErroEstante('Não consegui ler os motivos da estante. Se a migração 015 ainda não rodou, a tabela não existe.');
+      }),
+    [repoEstante],
+  );
+
+  async function agirNaEstante(acao: () => Promise<void>) {
+    try { await acao(); await recarregarEstante(); }
+    catch { setErroEstante('O banco recusou a mudança. Confira se esta conta está na tabela admins.'); }
+  }
+
   const repoDiscussoes = useMemo(() => repositorioDiscussoes(), []);
   const [discussoes, setDiscussoes] = useState<Topico[] | null>(null);
   const [erroDiscussoes, setErroDiscussoes] = useState<string | null>(null);
@@ -174,7 +195,8 @@ export function ModeracaoCliente() {
     recarregarPedidos();
     recarregarDiscussoes();
     recarregarNoticias();
-  }, [repo, admin, recarregarPedidos, recarregarDiscussoes, recarregarNoticias]);
+    recarregarEstante();
+  }, [repo, admin, recarregarPedidos, recarregarDiscussoes, recarregarNoticias, recarregarEstante]);
 
   async function mudar(id: string, status: Avaliacao['status']) {
     await repo.moderar(id, status);
@@ -257,6 +279,7 @@ export function ModeracaoCliente() {
         ['discussoes', 'Discussões', esperandoDiscussoes],
         ['pedidos', 'Pedidos de guia', esperandoPedidos],
         ['noticias', 'Notícias', noticiasEsperando(noticias ?? []).length],
+        ['estante', 'Estante', (motivosEstante ?? []).filter((m) => m.status === 'pendente').length],
       ] as const).map(([id, rotulo, esperando]) => (
         <button
           key={id}
@@ -306,6 +329,22 @@ export function ModeracaoCliente() {
           }}
           aoDescartar={(id) => agirNaNoticia(() => repoNoticias.descartar(id))}
           aoDevolver={(id) => agirNaNoticia(() => repoNoticias.devolver(id))}
+        />
+      </>
+    );
+  }
+
+  if (aba === 'estante') {
+    return (
+      <>
+        {barra}
+        {abas}
+        <PainelEstante
+          motivos={motivosEstante}
+          erro={erroEstante}
+          semServidor={!repoEstante.disponivel}
+          aoAprovar={(id) => agirNaEstante(() => repoEstante.moderar(id, 'aprovada'))}
+          aoDescartar={(id) => agirNaEstante(() => repoEstante.moderar(id, 'descartada'))}
         />
       </>
     );

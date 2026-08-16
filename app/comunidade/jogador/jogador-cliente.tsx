@@ -38,8 +38,13 @@ import { tracosDoPerfil, contextoDoPerfil, type Perfil } from '@/src/logica/perf
 import { CartaoMesaJogador } from '@/componentes/CartaoMesaJogador';
 import estilos from './jogador.module.css';
 
-/** O catálogo mora na UI; `retrato-do-jogador` é puro e recebe o resolvedor. */
+/** O catálogo mora na UI; os módulos puros são quem recebe os resolvedores. */
 const marcaDe = (id: string): string | undefined => materialPorId(id)?.marca;
+
+const nomeDoMaterial = (id: string): string | undefined => {
+  const m = materialPorId(id);
+  return m ? nomeComMarca(m.marca, m.nome) : undefined;
+};
 
 /** O que a tela precisa do perfil, mais o dono — que não está no tipo `Perfil`. */
 type PerfilPublico = Perfil & { usuarioId: string };
@@ -137,7 +142,7 @@ export function JogadorCliente() {
         if (!vivo) return;
         const respostas = topicos.flatMap((t) =>
           t.respostas.map((r) => ({ ...r, topicoId: t.id })));
-        setAtividade(linhaDoTempo(minhas ?? [], topicos, respostas, dono));
+        setAtividade(linhaDoTempo(minhas ?? [], topicos, respostas, dono, nomeDoMaterial));
         setResolveu(resolveuQuantas(topicos, dono));
       })
       .catch(() => { if (vivo) { setAtividade([]); setResolveu(0); setAvaliacoes([]); } });
@@ -213,10 +218,15 @@ export function JogadorCliente() {
     });
     fatos.push({
       valor: String(materiaisDistintos),
+      /* O singular não é firula: com um material só, a tela dizia "1 materiais
+         diferentes" — e um erro de concordância na primeira linha de números
+         faz duvidar dos números. */
       rotulo:
         borrachas > 0 && laminas > 0
           ? `materiais — ${borrachas} borracha${borrachas > 1 ? 's' : ''}, ${laminas} lâmina${laminas > 1 ? 's' : ''}`
-          : 'materiais diferentes',
+          : materiaisDistintos === 1
+            ? 'material diferente'
+            : 'materiais diferentes',
     });
     if (faixaTipica) {
       fatos.push({ valor: faixaTipica, rotulo: 'de uso, tipicamente, antes de avaliar' });

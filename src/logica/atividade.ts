@@ -30,14 +30,29 @@ export function linhaDoTempo(
   topicos: readonly Topico[],
   respostas: readonly RespostaComTopico[],
   usuarioId: string,
+  /**
+   * Nome do material, pra linha de avaliação dizer O QUE foi avaliado.
+   *
+   * Sem isto a linha era só o texto da avaliação — "avaliou · Muito boa, gostei
+   * bastante desse material" — e não dizia qual material, que é justamente a
+   * informação. O catálogo mora na UI e este módulo é puro, então o nome entra
+   * por resolvedor, como em `retrato-do-jogador`.
+   */
+  nomeDoMaterial?: (materialId: string) => string | undefined,
 ): Atividade[] {
   const meu = <T extends { usuarioId?: string }>(x: T) => x.usuarioId === usuarioId;
 
   const itens: Atividade[] = [
-    ...avaliacoes.filter(meu).map((a): Atividade => ({
-      tipo: 'avaliacao', id: a.id, quando: a.criadoEm,
-      titulo: a.texto, para: `/materiais/${a.materialId}/`,
-    })),
+    ...avaliacoes.filter(meu).map((a): Atividade => {
+      const nome = nomeDoMaterial?.(a.materialId);
+      return {
+        tipo: 'avaliacao', id: a.id, quando: a.criadoEm,
+        /* Sem resolvedor, ou com material fora do catálogo, cai no texto da
+           avaliação — pior que o nome, melhor que uma linha vazia. */
+        titulo: nome ?? a.texto,
+        para: `/materiais/${a.materialId}/`,
+      };
+    }),
     ...topicos.filter(meu).map((t): Atividade => ({
       tipo: 'topico', id: t.id, quando: t.criadoEm,
       titulo: t.titulo, para: `/comunidade/discussoes/?t=${t.id}`,

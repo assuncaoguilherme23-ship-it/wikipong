@@ -1,0 +1,228 @@
+/* Entrar / criar conta.
+   Coluna estreita e centrada, igual às boas-vindas: as duas telas são a mesma
+   conversa em dois momentos, e mudar a largura entre elas faria parecer que a
+   pessoa saiu do site. */
+
+.quadro {
+  max-width: 34rem;
+  margin: var(--esp-6) auto var(--esp-8);
+}
+
+.carregando {
+  padding: var(--esp-6) 0;
+  color: var(--cor-tinta-suave);
+}
+
+.titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-2);
+  line-height: var(--altura-titulo);
+  text-wrap: balance;
+  margin: 0 0 var(--esp-2);
+}
+
+.explica {
+  font-size: var(--texto-base);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+  margin: 0 0 var(--esp-4);
+}
+
+/* ── As duas portas ──
+   Um par, não uma escolha com favorito: mesma largura, mesmo peso. A ativa se
+   distingue pelo fundo, não por tamanho. */
+.alternador {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--esp-1);
+  padding: var(--esp-1);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+  margin-bottom: var(--esp-5);
+}
+
+.aba,
+.abaAtiva {
+  font: inherit;
+  font-size: var(--texto-menor);
+  font-weight: 600;
+  padding: var(--esp-2) var(--esp-3);
+  border: 0;
+  border-radius: var(--raio-sm);
+  background: none;
+  color: var(--cor-tinta-suave);
+  cursor: pointer;
+  transition: background-color 120ms ease-out, color 120ms ease-out;
+}
+
+.aba:hover {
+  color: var(--cor-texto-acento);
+}
+
+/* Fundo de acento ESCURO com texto branco: passa AA nos dois temas, ao
+   contrário do acento claro. */
+.abaAtiva {
+  background: var(--cor-acento-escuro);
+  color: #fff;
+}
+
+.aba:focus-visible,
+.abaAtiva:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}
+
+/* ── O formulário ── */
+
+.form {
+  display: grid;
+  gap: var(--esp-4);
+  justify-items: start;
+  padding: var(--esp-5);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-cartao);
+}
+
+.form > button[type='submit'] {
+  width: 100%;
+}
+
+.campo {
+  display: grid;
+  gap: var(--esp-1);
+  width: 100%;
+}
+
+.rotulo {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+}
+
+.campo input {
+  width: 100%;
+  font: inherit;
+  font-size: var(--texto-base);
+  padding: 0.55em 0.7em;
+  color: var(--cor-tinta);
+  background: var(--cor-papel);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+}
+
+.campo input[aria-invalid='true'] {
+  border-color: var(--cor-erro);
+}
+
+.campo input:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}
+
+/* "ver / ocultar" DENTRO do campo: senha digitada às cegas é o motivo mais
+   comum de "minha senha não funciona" quando ela funciona. */
+.comBotao {
+  position: relative;
+  display: block;
+}
+
+.comBotao input {
+  padding-right: 4.5rem;
+}
+
+.verSenha {
+  position: absolute;
+  top: 50%;
+  right: 0.45rem;
+  transform: translateY(-50%);
+  font: inherit;
+  font-size: var(--texto-mini);
+  padding: 0.3em 0.55em;
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-sm);
+  background: var(--cor-superficie);
+  color: var(--cor-tinta-suave);
+  cursor: pointer;
+}
+
+.verSenha:hover {
+  color: var(--cor-texto-acento);
+  border-color: var(--cor-acento);
+}
+
+.verSenha:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}
+
+/* A regra da senha fica ao lado do campo, não escondida atrás de um erro:
+   dizer a exigência depois de recusar é fazer a pessoa adivinhar duas vezes. */
+.regra {
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-mudo);
+}
+
+.erro {
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-erro);
+}
+
+/* ── Saídas laterais ──
+   Links, nunca botões: a porta principal já é o botão, e duas coisas com peso
+   de botão na mesma tela viram duas decisões onde havia uma. */
+.saidas {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--esp-2);
+  margin-top: var(--esp-4);
+}
+
+.saida {
+  font: inherit;
+  font-size: var(--texto-menor);
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--cor-tinta-suave);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.saida:hover {
+  color: var(--cor-texto-acento);
+}
+
+.saida:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 3px;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-3);
+  margin-top: var(--esp-4);
+}
+
+.rodape {
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-mudo);
+  margin: var(--esp-5) 0 0;
+  max-width: 60ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aba,
+  .abaAtiva {
+    transition: none;
+  }
+}

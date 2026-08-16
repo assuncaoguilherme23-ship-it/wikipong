@@ -25,6 +25,7 @@ import {
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
 import { nomeComMarca } from '@/componentes/formato';
 import { FotoProduto } from '@/componentes/FotoProduto';
+import { SeletorMaterial } from '@/componentes/SeletorMaterial';
 import estilos from './EstanteEditor.module.css';
 
 const formatarData = (iso: string) =>
@@ -197,16 +198,20 @@ export function EstanteEditor({
         )}
 
         <div className={estilos.campos}>
-          <label className={estilos.campo}>
-            <span className={estilos.rotulo}>Material</span>
-            <select value={materialId} onChange={(e) => setMaterialId(e.target.value)}>
-              <option value="">escolher…</option>
-              {MATERIAIS.map((m) => (
-                <option key={m.id} value={m.id}>
-                  {m.marca} {m.nome}
-                </option>
-              ))}
-            </select>
+          <div className={estilos.campo}>
+            {/* Era um `<select>` com o catálogo inteiro dentro — 952 opções sem
+                busca, e com `${marca} ${nome}` cru, que produzia "Xiom Xiom
+                Feel ZX3" nos 73 materiais cujo nome já começa pela marca.
+                O `SeletorMaterial` é o padrão do site pra escolher material:
+                busca, foto, preço e combobox ARIA completo. Aqui a lista é o
+                catálogo TODO de propósito — a estante registra o que a pessoa
+                já usou, e isso inclui bola e raquete montada. */}
+            <SeletorMaterial
+              rotulo="Material"
+              opcoes={MATERIAIS}
+              valor={materialEscolhido}
+              aoEscolher={setMaterialId}
+            />
             {materialEscolhido && (
               <span className={estilos.pecaEscolhida}>
                 <FotoProduto
@@ -220,7 +225,7 @@ export function EstanteEditor({
                 </Link>
               </span>
             )}
-          </label>
+          </div>
 
           <label className={estilos.campo}>
             <span className={estilos.rotulo}>De (opcional)</span>

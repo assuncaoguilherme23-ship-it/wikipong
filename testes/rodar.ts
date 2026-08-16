@@ -56,6 +56,7 @@ import { precoMedio } from '../componentes/dados-ofertas.js';
 import { NOTICIAS } from '../componentes/dados-noticias.js';
 import { RESUMO_MINIMO } from '../src/logica/noticias-fila.js';
 import { apelidoDe } from '../src/logica/apelido.js';
+import { mensagemDeErro, caminhoInterno, DEPOIS_DE_ENTRAR } from '../src/logica/sessao.js';
 import { procedenciaDe } from '../src/logica/procedencia-do-avaliador.js';
 import {
   ordenarEstante, emUsoHoje, problemasDaEntrada, motivoVisivel,
@@ -1679,6 +1680,116 @@ afirma(/usuario_id: m\.usuarioId/.test(fonteDoForum),
   'responder() voltou a nao enviar usuario_id: resposta sem dono nao conta em lugar nenhum');
 afirma(/usuarioId: l\.usuario_id/.test(fonteDoForum),
   'daResposta voltou a nao mapear usuario_id: a atividade de respostas fica vazia');
+
+/* ───────── a porta com senha: traduzir a recusa do servidor ─────────
+   `mensagemDeErro` é a única parte da autenticação que dá pra testar sem rede,
+   e é justamente onde mora a decisão que erra em silêncio: a ORDEM dos testes.
+   Uma frase errada aqui não quebra nada — só manda a pessoa procurar o problema
+   no lugar errado, e ela desiste achando que o site não funciona. */
+const recusa = (status: number, codigo: string, mensagem = '') =>
+  mensagemDeErro({ status, codigo, mensagem });
+
+/* A ASSERÇÃO MAIS IMPORTANTE DO BLOCO. `invalid_credentials` CONTÉM a palavra
+   "invalid", e existe um teste genérico de "invalid" mais abaixo na função.
+   Se alguém subir o genérico, quem errar a senha lê "confira o e-mail" — e vai
+   conferir um e-mail que está certo. */
+const senhaErrada = recusa(400, 'invalid_credentials', 'Invalid login credentials');
+afirma(/senha/i.test(senhaErrada),
+  'senha errada: a frase nao fala em senha — o teste generico de "invalid" comeu o especifico');
+afirma(!/escrito certo/i.test(senhaErrada),
+  'senha errada: a tela esta mandando conferir o e-mail, que esta certo');
+/* Nunca dizer QUAL dos dois errou: separar "esse e-mail nao existe" de "senha
+   errada" transforma a tela de login num consultor de quem tem conta aqui. */
+afirma(!/nao existe|nao encontr|sem conta|nenhuma conta/i.test(
+  senhaErrada.normalize('NFD').replace(/[̀-ͯ]/g, '')),
+  'senha errada: a frase revela se o e-mail tem conta — isso entrega a lista de quem participa');
+
+/* O número da senha curta vem da MENSAGEM DO SERVIDOR, nunca daqui: quem manda
+   na regra é o painel, e chutar um número seria inventar política (o spec
+   proíbe explicitamente). */
+afirma(/\b8\b/.test(recusa(422, 'weak_password', 'Password should be at least 8 characters.')),
+  'senha curta: o numero tem que vir do servidor, que e quem manda na regra');
+const fracaSemNumero = recusa(422, 'weak_password', 'Password is too weak');
+afirma(!/undefined|NaN|null/.test(fracaSemNumero),
+  'senha curta sem numero na resposta: vazou undefined/NaN pra tela');
+afirma(fracaSemNumero.length > 20,
+  'senha curta sem numero na resposta: sobrou uma frase curta demais pra explicar algo');
+
+afirma(/confirm/i.test(recusa(400, 'email_not_confirmed', 'Email not confirmed')),
+  'e-mail nao confirmado: a frase precisa dizer que falta confirmar, senao a senha "nao funciona" sem motivo');
+afirma(/diferente/i.test(recusa(422, 'same_password', 'New password should be different')),
+  'senha repetida: a frase precisa dizer que e a mesma de antes');
+afirma(/ja tem conta|já tem conta/i.test(recusa(422, 'user_already_exists', 'User already registered')),
+  'e-mail ja cadastrado: a frase precisa dizer isso — o servidor ja diz, esconder so confunde');
+afirma(/espere|minuto/i.test(recusa(429, 'over_email_send_rate_limit', 'For security purposes…')),
+  'cota de e-mail estourada: a frase precisa dizer que a solucao e esperar');
+afirma(/ANON_KEY/.test(recusa(401, '', '')),
+  'chave recusada: e erro de configuracao e a frase tem que dizer onde olhar');
+afirma(/503/.test(recusa(503, '', '')),
+  'erro desconhecido: sem o numero do status nao sobra por onde comecar a investigar');
+
+/* Nenhuma frase pode carregar inglês do servidor pra tela: o site inteiro é em
+   português, e "Invalid login credentials" no meio de uma frase em português é
+   o momento em que a pessoa percebe que ninguém pensou nela. */
+const RECUSAS: ReadonlyArray<readonly [number, string, string]> = [
+  [400, 'invalid_credentials', 'Invalid login credentials'],
+  [400, 'email_not_confirmed', 'Email not confirmed'],
+  [422, 'weak_password', 'Password should be at least 6 characters.'],
+  [422, 'same_password', 'New password should be different from the old password.'],
+  [422, 'user_already_exists', 'User already registered'],
+  [429, 'over_email_send_rate_limit', 'For security purposes, you can only request this after 60 seconds.'],
+  [422, 'validation_failed', 'Unable to validate email address: invalid format'],
+  [400, 'signup_disabled', 'Signups not allowed for this instance'],
+  [401, '', ''],
+  [500, '', ''],
+];
+for (const [status, codigo, msg] of RECUSAS) {
+  const saida = recusa(status, codigo, msg);
+  afirma(
+    !/(password|invalid login|already registered|not confirmed|for security purposes|unable to validate|signups not allowed)/i
+      .test(saida),
+    `recusa ${codigo || status}: sobrou ingles do servidor na frase que a pessoa le`);
+  afirma(saida.length > 15, `recusa ${codigo || status}: frase curta demais pra dizer o que fazer`);
+}
+
+/* ───────── redirecionamento aberto: a linha que vale um domínio ─────────
+   O `?volta=` da tela de entrar existe pra devolver a pessoa onde ela estava.
+   Sem filtro, ele devolve a pessoa ONDE O LINK MANDAR — e um login de verdade,
+   no domínio de verdade, que cospe a pessoa noutro site, é phishing pronto. */
+afirma(caminhoInterno('/materiais/tenergy05/') === '/materiais/tenergy05/',
+  'caminho interno legitimo foi recusado: o ?volta= parou de funcionar');
+afirma(caminhoInterno('/') === '/', 'a raiz e caminho interno e foi recusada');
+afirma(caminhoInterno('//site-falso.com') === DEPOIS_DE_ENTRAR,
+  'redirecionamento aberto: `//alvo` e URL absoluta disfarcada de caminho e passou');
+afirma(caminhoInterno('/\\site-falso.com') === DEPOIS_DE_ENTRAR,
+  'redirecionamento aberto: o navegador troca `\\` por `/`, entao `/\\alvo` vira `//alvo`');
+afirma(caminhoInterno('https://site-falso.com') === DEPOIS_DE_ENTRAR,
+  'redirecionamento aberto: URL absoluta passou inteira');
+afirma(caminhoInterno('javascript:alert(1)') === DEPOIS_DE_ENTRAR,
+  'redirecionamento aberto: esquema javascript: passou');
+afirma(caminhoInterno(null) === DEPOIS_DE_ENTRAR, 'sem ?volta= tem que cair no padrao');
+afirma(caminhoInterno('') === DEPOIS_DE_ENTRAR, '?volta= vazio tem que cair no padrao');
+
+/* ───────── invariantes das telas de conta ───────── */
+const telaEntrar = semComentarios(
+  readFileSync('app/comunidade/entrar/entrar-cliente.tsx', 'utf8'));
+
+afirma(/caminhoInterno\(/.test(telaEntrar),
+  'a tela de entrar voltou a usar o ?volta= cru: redirecionamento aberto');
+afirma(!/senha=|password=|set\(['"]senha/.test(telaEntrar),
+  'a tela de entrar esta pondo senha na URL: query fica no historico e no log do servidor');
+/* A porteira do spec: quem acaba de entrar e nao tem perfil vai montar o dele,
+   nao cair no paredao de oito campos que ja' derrubou o fundador uma vez. */
+afirma(/boas-vindas/.test(telaEntrar),
+  'a porteira sumiu da tela de entrar: quem cria conta cai direto no formulario longo');
+
+const fonteSessao = semComentarios(readFileSync('src/logica/sessao.ts', 'utf8'));
+afirma(!/console\.(log|warn|error|info)/.test(fonteSessao),
+  'sessao.ts ganhou console: senha e token nao podem ir parar no console do navegador');
+/* O corpo do signup e do login vai por POST. Um `?password=` aqui seria senha
+   em query string — histórico do navegador, log de acesso, header Referer. */
+afirma(!/password=\$?\{?senha/.test(fonteSessao),
+  'sessao.ts esta mandando senha na query string em vez do corpo do POST');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

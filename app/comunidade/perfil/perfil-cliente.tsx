@@ -109,6 +109,12 @@ export function PerfilCliente() {
               Entrou como <strong>{usuario.email}</strong>. Seu perfil e suas avaliações
               acompanham você em qualquer aparelho.
             </span>
+            {/* Serve pros dois casos: trocar a senha que já existe, e DAR uma
+                senha a quem só entrava por link. Por dentro é a mesma coisa —
+                a conta é a mesma, só ganha uma segunda forma de abrir. */}
+            <Link href="/comunidade/nova-senha/" className={estilos.linkAcao}>
+              trocar minha senha
+            </Link>
             <button
               type="button"
               className={estilos.linkAcao}

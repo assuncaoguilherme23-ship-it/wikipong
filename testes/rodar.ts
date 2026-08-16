@@ -1604,6 +1604,23 @@ afirma(linhaDoTempo([av({ id: 'de-outro' })], [], [], EU).length === 0,
 afirma(minhaLinha.every((a) => ['avaliacao', 'topico', 'resposta'].includes(a.tipo)),
   'atividade: so existem tres tipos, pedido de pauta nao entra na linha publica');
 
+/* A linha de avaliacao tem que dizer O QUE foi avaliado. Sem o resolvedor ela
+   mostrava so' o texto -- "avaliou · Muito boa, gostei bastante desse material"
+   -- que e' justamente a frase que NAO diz qual material. */
+const comNome = linhaDoTempo(
+  [{ ...av({ id: 'a1', materialId: 'markv' }), usuarioId: EU }], [], [], EU,
+  (id) => (id === 'markv' ? 'Yasaka Mark V' : undefined),
+);
+afirma(comNome[0].titulo === 'Yasaka Mark V',
+  'atividade: a avaliacao tem que ser rotulada pelo material, nao pelo proprio texto');
+/* Material fora do catalogo nao pode virar linha vazia: cai no texto. */
+const semNome = linhaDoTempo(
+  [{ ...av({ id: 'a1', materialId: 'sumiu', texto: 'Texto da avaliacao.' }), usuarioId: EU }],
+  [], [], EU, () => undefined,
+);
+afirma(semNome[0].titulo === 'Texto da avaliacao.',
+  'atividade: material fora do catalogo tem que cair no texto, nunca em linha vazia');
+
 /* ───────── procedencia de quem avalia ───────── */
 const doAvaliador = procedenciaDe([
   av({ id: 'p1', materialId: 'markv', tempoDeUso: 'mais de 1 ano' }),
@@ -1966,10 +1983,13 @@ for (const tela of [
 
 /* E o seletor tem que ser o COMPARTILHADO, nao um <select> cru sobre o
    catalogo: sem busca, o select nativo so' pula pra primeira letra digitada, e
-   quase todo nome do catalogo comeca pela marca. */
+   quase todo nome do catalogo comeca pela marca.
+   A estante entrou nesta lista a pedido do fundador (2026-08-16): "coloque como
+   padrao esse seletor para todos os campos, pra nao ficar faltando material". */
 for (const tela of [
   'app/comunidade/perfil/perfil-cliente.tsx',
   'app/comunidade/boas-vindas/boas-vindas-cliente.tsx',
+  'componentes/EstanteEditor.tsx',
 ]) {
   const fonte = semComentarios(readFileSync(tela, 'utf8'));
   afirma(/<SeletorMaterial/.test(fonte),
@@ -1985,6 +2005,45 @@ afirma(comMarcaNoNome.length > 50,
   'se o catalogo parou de repetir a marca no nome, `nomeComMarca` pode ser revisto');
 afirma(nomeComMarca(comMarcaNoNome[0].marca, comMarcaNoNome[0].nome) === comMarcaNoNome[0].nome,
   'nomeComMarca deixou de absorver a marca repetida: volta o "Xiom Xiom Feel ZX3"');
+
+/* ───────── a corrida que comeu o "G" ─────────
+   As boas-vindas nasciam com `perfilVazio()` no estado e pintavam o passo 1 na
+   hora, com autoFocus no campo do nome. A leitura do perfil ia pela rede em
+   paralelo e, ao voltar, sobrescrevia o que ja' tivesse sido digitado.
+
+   O fundador digitou "Guilherme": o "G" entrou antes de a leitura voltar e foi
+   apagado por ela. Sobrou "uilherme" -- e como o apelido nasce do nome na
+   PRIMEIRA gravacao e nunca mais muda, o endereco publico dele congelou como
+   `uilherme-daa0`. Um caractere perdido virou uma URL permanente errada.
+
+   O conserto e' nao deixar o formulario existir enquanto ele pode ser
+   sobrescrito, e e' isso que estas duas asercoes guardam. */
+const telaBoasVindas = semComentarios(
+  readFileSync('app/comunidade/boas-vindas/boas-vindas-cliente.tsx', 'utf8'));
+
+afirma(/useState<Perfil \| null>\(null\)/.test(telaBoasVindas),
+  'boas-vindas: o perfil voltou a nascer preenchido — a leitura vai sobrescrever o que a pessoa digitar');
+afirma(/perfil === null/.test(telaBoasVindas),
+  'boas-vindas: sumiu o portao que segura o formulario ate o perfil chegar — o primeiro caractere se perde de novo');
+
+/* Nas duas telas, o `await` da leitura vem ANTES do teste de `vivo`: testar so'
+   na entrada deixa passar o resultado de uma leitura que ficou obsoleta durante
+   a espera. */
+for (const tela of [
+  'app/comunidade/boas-vindas/boas-vindas-cliente.tsx',
+  'app/comunidade/perfil/perfil-cliente.tsx',
+]) {
+  const fonte = semComentarios(readFileSync(tela, 'utf8'));
+  afirma(/const lido = await r\.ler\(\);[\s\S]{0,40}if \(!vivo\) return;/.test(fonte),
+    `${tela}: a leitura do perfil voltou a gravar sem conferir se a tela ainda esta viva`);
+}
+
+/* O singular de "1 material diferente". Erro de concordancia na primeira linha
+   de numeros faz duvidar dos numeros. */
+const telaPublica = semComentarios(
+  readFileSync('app/comunidade/jogador/jogador-cliente.tsx', 'utf8'));
+afirma(/material diferente'/.test(telaPublica),
+  'perfil publico: voltou o "1 materiais diferentes" — falta o ramo do singular');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

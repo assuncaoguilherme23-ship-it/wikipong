@@ -78,7 +78,26 @@ const PASSOS: readonly Passo[] = [
 export function BoasVindasCliente() {
   const { usuario, carregando, disponivel } = usarSessao();
   const [repo, setRepo] = useState<RepositorioPerfil | null>(null);
-  const [perfil, setPerfil] = useState<Perfil>(perfilVazio());
+  /**
+   * `null` = ainda lendo. NÃO é `perfilVazio()`, e a diferença custou o nome do
+   * fundador.
+   *
+   * ── O BUG QUE COMEU O "G" ────────────────────────────────────────────────
+   * Antes, o estado nascia `perfilVazio()` e a tela do passo 1 pintava na hora,
+   * com `autoFocus` no campo do nome. A leitura do perfil ia pela rede em
+   * paralelo e, quando voltava, fazia `setPerfil(lido)` — jogando fora o que já
+   * tivesse sido digitado.
+   *
+   * O campo pede foco sozinho, então a pessoa começa a digitar imediatamente.
+   * O fundador digitou "Guilherme"; o "G" entrou antes de a leitura voltar e
+   * foi apagado por ela. Sobrou "uilherme" — e como o apelido é gerado do nome
+   * na PRIMEIRA gravação e nunca mais muda, o endereço público dele congelou
+   * como `uilherme-daa0`.
+   *
+   * O conserto não é debounce nem merge: é não deixar o formulário existir
+   * enquanto ele pode ser sobrescrito.
+   */
+  const [perfil, setPerfil] = useState<Perfil | null>(null);
   const [passo, setPasso] = useState(0);
   const [gravando, setGravando] = useState(false);
   const [erro, setErro] = useState<string | null>(null);
@@ -86,16 +105,20 @@ export function BoasVindasCliente() {
   useEffect(() => {
     let vivo = true;
     repositorioPerfilAtual().then(async (r) => {
+      /* O `await` vem ANTES do teste de `vivo`, não depois: a versão anterior
+         testava só na entrada e ainda assim gravava o resultado de uma leitura
+         que podia ter ficado obsoleta durante a espera. */
+      const lido = await r.ler();
       if (!vivo) return;
       setRepo(r);
-      setPerfil(await r.ler());
+      setPerfil(lido);
     });
     return () => { vivo = false; };
   }, [usuario]);
 
   /* Grava a cada passo: ninguem perde tres telas porque a quarta falhou. */
   const salvar = async (mudanca: Partial<Perfil>) => {
-    const novo = { ...perfil, ...mudanca };
+    const novo = { ...(perfil ?? perfilVazio()), ...mudanca };
     setPerfil(novo);
     if (!repo) return;
     setGravando(true);
@@ -126,6 +149,11 @@ export function BoasVindasCliente() {
       </div>
     );
   }
+
+  /* O PORTÃO QUE FALTAVA. Enquanto o perfil não chegou, o formulário não pinta
+     — porque o que ele receber agora será apagado pela leitura que está a
+     caminho. É esta linha que impede o "G" de sumir de novo. */
+  if (perfil === null) return <p className={estilos.carregando}>Carregando…</p>;
 
   const atual = PASSOS[passo];
   const ultimo = passo === PASSOS.length - 1;

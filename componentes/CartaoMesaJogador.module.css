@@ -1,0 +1,116 @@
+/* O cartão mesa de um jogador — usado nas DUAS telas de perfil.
+   Um arquivo só, de propósito: enquanto eram dois, a prévia da edição ia
+   divergir da página pública na primeira mexida, e "é assim que você aparece"
+   viraria mentira sem ninguém notar.
+
+   Contrastes fixos porque a mesa é invariante entre temas:
+     sobre-mesa       #EEF6F0 sobre #0F3F2C  → 10.8:1 (medido)
+     sobre-mesa-suave #A7CBB5 sobre #0F3F2C  →  6.7:1 (medido) */
+
+.mesa {
+  background: var(--cor-mesa);
+  /* Pinos de borracha, o motivo do domínio. 5% de branco: textura que se sente
+     e não se olha. */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 1.3px);
+  background-size: 18px 18px;
+  border-radius: var(--raio-lg);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: grid;
+  gap: var(--esp-5);
+}
+
+.texto {
+  display: grid;
+  gap: var(--esp-1);
+}
+
+.titulo,
+.tituloVazio {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-1);
+  line-height: var(--altura-titulo);
+  text-wrap: balance;
+  margin: 0;
+  /* Nome longo sem espaço não pode estourar o cartão no celular. */
+  overflow-wrap: anywhere;
+}
+
+.titulo {
+  color: var(--cor-sobre-mesa);
+}
+
+/* Sem nome ainda: o título continua ali, na mesma posição e no mesmo tamanho,
+   só apagado. Some a caixa pontilhada de "placeholder" — o espaço já é da
+   pessoa, ele só não foi assinado. */
+.tituloVazio {
+  color: var(--cor-sobre-mesa-suave);
+  opacity: 0.75;
+}
+
+.tracos {
+  font-size: var(--texto-menor);
+  color: var(--cor-sobre-mesa-suave);
+  margin: var(--esp-1) 0 0;
+}
+
+.contexto {
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-sobre-mesa-suave);
+  margin: 0;
+}
+
+/* "procura ___" é a coisa mais humana do cartão: é a pessoa dizendo o que quer,
+   com as palavras dela. Ganha peso de corpo e a cor forte, ao contrário dos
+   metadados acima. */
+.procuro {
+  margin: var(--esp-3) 0 0;
+  font-size: var(--texto-maior);
+  line-height: var(--altura-corpo);
+  color: var(--cor-sobre-mesa);
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+
+.procuroRotulo {
+  font-size: var(--texto-menor);
+  color: var(--cor-sobre-mesa-suave);
+  margin-right: var(--esp-2);
+}
+
+.rodape {
+  padding-top: var(--esp-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-sobre-mesa-suave);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--esp-2) var(--esp-4);
+}
+
+/* Links e botões do rodapé: sobre a mesa o acento do site não passa AA, então
+   quem carrega a ação é o branco-mesa com sublinhado. */
+.rodape a,
+.rodape button {
+  font: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--cor-sobre-mesa);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.rodape a:hover,
+.rodape button:hover {
+  text-decoration-thickness: 2px;
+}
+
+.rodape a:focus-visible,
+.rodape button:focus-visible {
+  outline: 2px solid var(--cor-sobre-mesa);
+  outline-offset: 3px;
+}

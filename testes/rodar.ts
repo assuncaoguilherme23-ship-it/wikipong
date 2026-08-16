@@ -1937,6 +1937,55 @@ afirma(oQueFalta({ ...perfilCru, nome: 'Ana' }, false).every((i) => i.campo !== 
 afirma(!/%/.test(JSON.stringify(oQueFalta(perfilCru, true))),
   'o que falta: apareceu porcentagem — a lista nao pode virar medidor de completude');
 
+/* ───────── a trava que ja escondeu meio catalogo DUAS vezes ─────────
+   `temDesempenho` filtra material COM tabela de specs. Usar isso pra montar a
+   lista de um seletor esconde quem nao tem specs -- e quem nao tem specs existe
+   e e' usado por gente de verdade.
+
+   Primeira vez: o montador, consertado em 2026-08-04.
+   Segunda vez: a tela de perfil, 2026-08-15 -- o fundador foi procurar a
+   Hayabusa que ele usa, nao achou, e concluiu com razao que o catalogo nao
+   estava ali.
+
+   `specs` e' opcional em `PecaMontagem` justamente por isso. Quem monta raquete
+   escolhe pelo nome, pela marca e pelo preco, como na loja: a tabela de specs e'
+   CONSEQUENCIA do que a peca tem, nao porta de entrada. */
+const SEM_SPECS = MATERIAIS.filter((m) => m.tipo === 'Lâmina' && !temDesempenho(m)).length;
+afirma(SEM_SPECS > 100,
+  'se quase toda lamina passou a ter specs, esta guarda perdeu o sentido — reveja o bloco');
+
+for (const tela of [
+  'app/comunidade/perfil/perfil-cliente.tsx',
+  'app/comunidade/boas-vindas/boas-vindas-cliente.tsx',
+  'app/montar/montar-cliente.tsx',
+]) {
+  const fonte = semComentarios(readFileSync(tela, 'utf8'));
+  afirma(!/temDesempenho/.test(fonte),
+    `${tela}: voltou a filtrar o seletor por temDesempenho — isso esconde ${SEM_SPECS}+ laminas de quem as usa`);
+}
+
+/* E o seletor tem que ser o COMPARTILHADO, nao um <select> cru sobre o
+   catalogo: sem busca, o select nativo so' pula pra primeira letra digitada, e
+   quase todo nome do catalogo comeca pela marca. */
+for (const tela of [
+  'app/comunidade/perfil/perfil-cliente.tsx',
+  'app/comunidade/boas-vindas/boas-vindas-cliente.tsx',
+]) {
+  const fonte = semComentarios(readFileSync(tela, 'utf8'));
+  afirma(/<SeletorMaterial/.test(fonte),
+    `${tela}: parou de usar o SeletorMaterial — achar uma lamina entre centenas volta a ser rolagem`);
+}
+
+/* O rotulo do seletor NUNCA pode ser `${marca} ${nome}` cru: 73 dos 952
+   materiais ja' trazem a marca dentro do nome, e o resultado era o que o
+   fundador viu na tela — "Xiom Xiom Feel ZX3". */
+const comMarcaNoNome = MATERIAIS.filter((m) =>
+  m.nome.toLowerCase().startsWith(m.marca.toLowerCase()));
+afirma(comMarcaNoNome.length > 50,
+  'se o catalogo parou de repetir a marca no nome, `nomeComMarca` pode ser revisto');
+afirma(nomeComMarca(comMarcaNoNome[0].marca, comMarcaNoNome[0].nome) === comMarcaNoNome[0].nome,
+  'nomeComMarca deixou de absorver a marca repetida: volta o "Xiom Xiom Feel ZX3"');
+
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

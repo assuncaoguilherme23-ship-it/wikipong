@@ -34,8 +34,15 @@ const PAPEIS: readonly PapelPeca[] = ['lamina', 'fh', 'bh'];
 
 export function RaqueteRetrato({
   equipamento,
+  sobreMesa = false,
 }: {
   equipamento: { lamina?: string; fh?: string; bh?: string };
+  /**
+   * Dentro do cartão mesa do perfil. Muda só o que fica SOBRE o verde — o
+   * título e a margem. As peças continuam cartões brancos, que é justamente o
+   * que a Regra da Mesa manda: sobre a mesa, o cartão branco flutua.
+   */
+  sobreMesa?: boolean;
 }) {
   const pecas = PAPEIS.map((papel) => {
     const id = equipamento[papel];
@@ -50,8 +57,11 @@ export function RaqueteRetrato({
   if (pecas.length === 0) return null;
 
   return (
-    <section className={estilos.retrato} aria-labelledby="t-raquete">
-      <h2 id="t-raquete" className={estilos.titulo}>
+    <section
+      className={sobreMesa ? estilos.retratoNaMesa : estilos.retrato}
+      aria-labelledby="t-raquete"
+    >
+      <h2 id="t-raquete" className={sobreMesa ? estilos.tituloNaMesa : estilos.titulo}>
         A raquete
       </h2>
 

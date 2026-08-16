@@ -13,6 +13,25 @@
   margin: 0 0 var(--esp-3);
 }
 
+/* ── Dentro do cartão mesa do perfil ──
+   O título encolhe de propósito: ali em cima já está o nome da pessoa em
+   titulo-1, e "A raquete" no mesmo peso brigaria com ele. Aqui ele é rótulo de
+   um grupo de três cartões, não título de seção — por isso texto-menor com
+   peso, e não um kicker em caixa-alta (aposentado do sistema). */
+.retratoNaMesa {
+  margin: 0;
+}
+
+.tituloNaMesa {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+  line-height: var(--altura-apertada);
+  /* 6.7:1 sobre a mesa — e a mesa é invariante entre temas, então este par de
+     cores não muda no escuro. */
+  color: var(--cor-sobre-mesa-suave);
+  margin: 0 0 var(--esp-3);
+}
+
 .pecas {
   list-style: none;
   display: grid;

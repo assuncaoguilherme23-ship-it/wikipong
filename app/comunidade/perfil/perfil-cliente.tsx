@@ -105,12 +105,23 @@ export function PerfilCliente() {
   /* O repositorio depende de QUEM esta' logado, entao so' pode ser escolhido
      depois que a sessao responde. Refaz quando o usuario muda: entrar ou sair
      troca de onde o perfil vem. */
+  /* O `vivo` e a ordem `await` → teste → `set` não são zelo abstrato: sem eles,
+     uma leitura que voltasse tarde sobrescreveria o que já tivesse sido
+     digitado. Foi assim que o nome do fundador virou "uilherme" nas
+     boas-vindas — o "G" entrou antes de a leitura chegar e foi apagado por ela.
+     Aqui o formulário só existe depois de `perfil !== null`, então a janela é
+     menor, mas trocar de conta (o `usuario?.id` muda) reabre exatamente a
+     mesma. */
   useEffect(() => {
     if (carregando) return;
+    let vivo = true;
     repositorioPerfilAtual().then(async (r) => {
+      const lido = await r.ler();
+      if (!vivo) return;
       setRepoPerfil(r);
-      setPerfil(await r.ler());
+      setPerfil(lido);
     });
+    return () => { vivo = false; };
   }, [carregando, usuario?.id]);
 
   useEffect(() => {

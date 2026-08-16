@@ -1,14 +1,31 @@
 /**
- * WikiPong · Meu perfil (D-19, emenda da comunidade)
- * ------------------------------------------------------------------------------
- * Três blocos, nesta ordem porque é a ordem em que a pessoa se apresenta:
- *   quem você é       → nome, estilo, nível (é a tag que aparece nos comentários)
- *   meu equipamento   → a raquete montada, reusando a Montagem do /montar
- *   minhas avaliações → o que você já escreveu, com link pra ficha
+ * WikiPong · Meu perfil — o bastidor do espaço, não uma tela de configurações
+ * ==============================================================================
+ * A VERSÃO ANTERIOR ERA UM FORMULÁRIO. Oito campos empilhados, três seções de
+ * peso igual, e nada na tela que fosse a pessoa: só campos sobre ela. O fundador
+ * disse, com razão, que não estava trabalhada.
  *
- * O equipamento não é entidade nova: é a mesma `Montagem` do /montar, agora com
- * dono. Por isso as observações da montagem (assimetria, dureza dos dois lados)
- * aparecem aqui de graça — o módulo puro já sabia fazer isso.
+ * O que mudou, e por quê:
+ *
+ * 1. O CARTÃO MESA ABRE A PÁGINA, e é o MESMO componente do perfil público,
+ *    pintando ao vivo. Antes havia um "crachá" no meio do formulário que imitava
+ *    a página pública — imitação diverge. Agora é o mesmo objeto, e "é assim que
+ *    você aparece" deixou de ser promessa.
+ *
+ * 2. OS CAMPOS VIRARAM TRÊS GRUPOS COM NOME, e não uma grade de oito. Quem você
+ *    é · como você joga · onde você joga. Grupo com nome é uma pergunta de cada
+ *    vez, mesmo com tudo na tela.
+ *
+ * 3. O TRILHO DIZ O QUE FALTA E PRA QUE SERVE — sem porcentagem. Barra de "60%
+ *    completo" faz preencher pra calar o medidor, e dado ruim é pior que dado
+ *    faltando (D-16). A lista some conforme a pessoa conta.
+ *
+ * 4. SEM CONTA, A PÁGINA É RASA — e a razão é factual, não comercial. Nome,
+ *    estilo, nível e raquete fazem trabalho AGORA (preenchem sua próxima
+ *    avaliação, alimentam o montador), então valem no navegador. Todo o resto só
+ *    existe pra ser lido por outra pessoa, e sem conta não há página onde alguém
+ *    leia. Guardar "meu clube é a FitPong" num navegador onde ninguém vai ver
+ *    seria fingir que algo foi feito.
  */
 'use client';
 
@@ -20,18 +37,17 @@ import {
 import { repositorio } from '@/src/logica/repositorio-avaliacoes';
 import {
   repositorioPerfilAtual, perfilVazio, temIdentidade, pecasEscolhidas,
-  MAOS, EMPUNHADURAS, ROTULO_MAO, ROTULO_EMPUNHADURA,
-  type Perfil, type RepositorioPerfil, type Mao, type Empunhadura,
+  tracosDoPerfil, contextoDoPerfil, oQueFalta, ANO_MINIMO,
+  MAOS, EMPUNHADURAS, FREQUENCIAS,
+  ROTULO_MAO, ROTULO_EMPUNHADURA, ROTULO_FREQUENCIA,
+  type Perfil, type RepositorioPerfil, type Mao, type Empunhadura, type Frequencia,
 } from '@/src/logica/perfil';
 import { caminhoDoPerfil } from '@/componentes/apelidos';
-
-/* Bate com o check da migracao 014: uma linha, nao um paragrafo. */
-const PROCURO_MAXIMO = 120;
 import { Login } from '@/componentes/Login';
 import { usarSessao } from '@/componentes/usarSessao';
 import { sair, tokenGuardado } from '@/src/logica/sessao';
 import {
-  pecasDe, precoTotal, completa, observacoes, ROTULO_PAPEL,
+  precoTotal, completa, observacoes, ROTULO_PAPEL,
   type Montagem, type PecaMontagem, type PapelPeca,
 } from '@/src/logica/montagem';
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
@@ -39,9 +55,15 @@ import { temDesempenho } from '@/src/logica/filtros';
 import { brl } from '@/componentes/formato';
 import { FotoProduto } from '@/componentes/FotoProduto';
 import { Estrelas } from '@/componentes/Estrelas';
-import { TagEstilo, TagNivel } from '@/componentes/TagEstilo';
+import { CartaoMesaJogador } from '@/componentes/CartaoMesaJogador';
 import { EstanteEditor } from '@/componentes/EstanteEditor';
 import estilos from './perfil.module.css';
+
+/* Bate com o check da migracao 014: uma linha, nao um paragrafo. */
+const PROCURO_MAXIMO = 120;
+/* Bate com os checks da migracao 016. */
+const CLUBE_MAXIMO = 60;
+const BOLA_MAXIMO = 40;
 
 const ESTILOS: EstiloJogador[] = ['atacante', 'allround', 'defensor'];
 
@@ -56,6 +78,11 @@ export function PerfilCliente() {
   const [repoPerfil, setRepoPerfil] = useState<RepositorioPerfil | null>(null);
   const [perfil, setPerfil] = useState<Perfil | null>(null);
   const [minhas, setMinhas] = useState<Avaliacao[]>([]);
+  const [erroAoGravar, setErroAoGravar] = useState<string | null>(null);
+
+  /* O ano é lido UMA vez, na montagem, e passado adiante. As funções que o usam
+     são puras de propósito — quem chama diz que ano é. */
+  const anoAtual = useMemo(() => new Date().getFullYear(), []);
 
   /* O repositorio depende de QUEM esta' logado, entao so' pode ser escolhido
      depois que a sessao responde. Refaz quando o usuario muda: entrar ou sair
@@ -76,10 +103,19 @@ export function PerfilCliente() {
     );
   }, [repoAv, perfil?.nome]);
 
+  /* A gravação passou a LANÇAR quando falha (ver `perfil.ts`). Antes ela
+     engolia a recusa do servidor, e o resultado era o pior possível: um
+     formulário que aceita tudo e não guarda nada, sem nada na tela dizendo. */
   const salvar = (mudanca: Partial<Perfil>) => {
     const novo = { ...(perfil ?? perfilVazio()), ...mudanca } as Perfil;
     setPerfil(novo);
-    void repoPerfil?.gravar(novo);
+    if (!repoPerfil) return;
+    repoPerfil
+      .gravar(novo)
+      .then(() => setErroAoGravar(null))
+      .catch((e: unknown) =>
+        setErroAoGravar(e instanceof Error ? e.message : 'Não consegui guardar agora.'),
+      );
   };
 
   const montagem: Montagem = useMemo(
@@ -95,59 +131,62 @@ export function PerfilCliente() {
     return <p className={estilos.carregando}>Carregando…</p>;
   }
 
+  const temConta = Boolean(usuario);
+  /* Sem servidor nenhum não existe conta pra ter, e o site inteiro é uma
+     ferramenta local. Esconder campos ali seria trancar uma porta que não leva
+     a lugar nenhum. */
+  const perfilInteiro = temConta || !disponivel;
+
   const escolhidas = pecasEscolhidas(perfil);
   const obs = observacoes(montagem);
+  const falta = oQueFalta(perfil, perfilInteiro);
 
   return (
-    <div className={estilos.blocos}>
-      {/* ── A conta, quando há servidor. Login é OPCIONAL: quem não entra usa o
-             site inteiro do mesmo jeito, só sem levar o perfil junto. ── */}
-      {disponivel && (
-        usuario ? (
-          <p className={estilos.barraConta}>
+    <div className={estilos.pagina}>
+      {/* ── O cartão, ao vivo. Mesmo componente da página pública. ── */}
+      <CartaoMesaJogador
+        nome={perfil.nome}
+        nomeVazio="Seu espaço"
+        tracos={tracosDoPerfil(perfil)}
+        contexto={contextoDoPerfil(perfil, anoAtual)}
+        procuro={perfil.procuro}
+        equipamento={perfil.equipamento}
+        rodape={
+          disponivel && usuario ? (
+            <>
+              <span>
+                Entrou como <strong>{usuario.email}</strong>
+              </span>
+              {perfil.apelido && temIdentidade(perfil) && (
+                <Link href={caminhoDoPerfil(perfil.apelido)}>ver como os outros veem</Link>
+              )}
+              {/* Serve pros dois casos: trocar a senha que existe, e DAR uma
+                  senha a quem só entrava por link. */}
+              <Link href="/comunidade/nova-senha/">trocar minha senha</Link>
+              <button type="button" onClick={() => sair().then(() => location.reload())}>
+                sair
+              </button>
+            </>
+          ) : (
             <span>
-              Entrou como <strong>{usuario.email}</strong>. Seu perfil e suas avaliações
-              acompanham você em qualquer aparelho.
+              {disponivel
+                ? 'Sem conta. O que você preencher fica só neste navegador.'
+                : 'O servidor não está ligado — tudo aqui fica neste navegador.'}
             </span>
-            {/* Serve pros dois casos: trocar a senha que já existe, e DAR uma
-                senha a quem só entrava por link. Por dentro é a mesma coisa —
-                a conta é a mesma, só ganha uma segunda forma de abrir. */}
-            <Link href="/comunidade/nova-senha/" className={estilos.linkAcao}>
-              trocar minha senha
-            </Link>
-            <button
-              type="button"
-              className={estilos.linkAcao}
-              onClick={() => sair().then(() => location.reload())}
-            >
-              sair
-            </button>
-          </p>
-        ) : (
-          <section className={estilos.secao} aria-labelledby="t-conta">
-            <h2 id="t-conta" className={estilos.tituloSecao}>
-              Quer levar isto com você?
-            </h2>
-            <p className={estilos.explica}>
-              Sem conta, o que você preencher aqui fica <strong>só neste navegador</strong>: some
-              se você limpar os dados e não aparece no celular. Entrando, o perfil te acompanha,
-              e as avaliações que você escrever passam a ser suas — dá pra corrigir e apagar
-              depois.{' '}
-              <strong>Não é obrigatório.</strong> O site inteiro funciona sem entrar.
-            </p>
-            <Login
-              titulo="Entrar ou criar conta"
-              explicacao="É o mesmo campo pros dois: se ainda não houver conta com esse e-mail, ela é criada na hora em que você clicar no link."
-            />
-          </section>
-        )
+          )
+        }
+      />
+
+      {/* Logo abaixo do cartão, onde o olho já está: um aviso de "não guardei"
+          no rodapé de uma página longa é um aviso que ninguém lê. */}
+      {erroAoGravar && (
+        <p className={estilos.erroGravar} role="alert">
+          <strong>Não guardei a última mudança.</strong> {erroAoGravar}
+        </p>
       )}
 
-      {/* Perfil vazio cai num paredao de oito campos, e o convite pro passo a
-          passo estava DEPOIS dele -- de tras pra frente. Quem chega sem nada
-          precisa da saida ANTES de encarar o formulario, nao no fim dele.
-          Some assim que a pessoa tem nome e estilo: dai' o formulario ja' e' o
-          caminho mais curto, e o convite viraria ruido. */}
+      {/* Convite pro passo a passo, ANTES dos campos. Quem chega com perfil
+          vazio precisa da saída antes de encarar o formulário, não no fim dele. */}
       {!temIdentidade(perfil) && (
         <div className={estilos.convite}>
           <p className={estilos.conviteTitulo}>É a sua primeira vez por aqui?</p>
@@ -161,211 +200,328 @@ export function PerfilCliente() {
         </div>
       )}
 
-      {/* ── Quem você é ── */}
-      <section className={estilos.secao} aria-labelledby="t-identidade">
-        <h2 id="t-identidade" className={estilos.tituloSecao}>
-          Quem você é
-        </h2>
-        <p className={estilos.explica}>
-          O estilo e o nível daqui viram a <strong>tag embaixo do seu nome</strong> em cada
-          avaliação que você escrever. É o que faz a sua nota significar alguma coisa pra quem
-          lê.
-        </p>
-
-        <div className={estilos.campos}>
-          <label className={estilos.campo}>
-            <span className={estilos.rotulo}>Como você assina</span>
-            <input
-              type="text"
-              value={perfil.nome}
-              onChange={(e) => salvar({ nome: e.target.value })}
-              placeholder="seu nome ou apelido"
-            />
-          </label>
-          <label className={estilos.campo}>
-            <span className={estilos.rotulo}>Seu estilo de jogo</span>
-            <select
-              value={perfil.estilo ?? ''}
-              onChange={(e) => salvar({ estilo: (e.target.value || undefined) as EstiloJogador })}
-            >
-              <option value="">escolher…</option>
-              {ESTILOS.map((e) => (
-                <option key={e} value={e}>{ROTULO_ESTILO[e]}</option>
-              ))}
-            </select>
-          </label>
-          <label className={estilos.campo}>
-            <span className={estilos.rotulo}>Seu nível</span>
-            <select
-              value={perfil.nivel ?? ''}
-              onChange={(e) => salvar({ nivel: (e.target.value || undefined) as NivelJogador })}
-            >
-              <option value="">escolher…</option>
-              {NIVEIS.map((n) => (
-                <option key={n} value={n}>{n}</option>
-              ))}
-            </select>
-          </label>
-          {/* Mao e empunhadura mudam a recomendacao inteira e ate' agora nao
-              existiam em lugar nenhum do site. */}
-          <label className={estilos.campo}>
-            <span className={estilos.rotulo}>Mão</span>
-            <select
-              value={perfil.mao ?? ''}
-              onChange={(e) => salvar({ mao: (e.target.value || undefined) as Mao })}
-            >
-              <option value="">escolher…</option>
-              {MAOS.map((m) => (
-                <option key={m} value={m}>{ROTULO_MAO[m]}</option>
-              ))}
-            </select>
-          </label>
-          <label className={estilos.campo}>
-            <span className={estilos.rotulo}>Empunhadura</span>
-            <select
-              value={perfil.empunhadura ?? ''}
-              onChange={(e) =>
-                salvar({ empunhadura: (e.target.value || undefined) as Empunhadura })}
-            >
-              <option value="">escolher…</option>
-              {EMPUNHADURAS.map((e) => (
-                <option key={e} value={e}>{ROTULO_EMPUNHADURA[e]}</option>
-              ))}
-            </select>
-          </label>
-          <label className={estilos.campo}>
-            <span className={estilos.rotulo}>Cidade</span>
-            <input
-              type="text"
-              value={perfil.cidade ?? ''}
-              onChange={(e) => salvar({ cidade: e.target.value })}
-              placeholder="onde você joga"
-            />
-          </label>
-          <label className={estilos.campo}>
-            <span className={estilos.rotulo}>UF</span>
-            <input
-              type="text"
-              maxLength={2}
-              value={perfil.uf ?? ''}
-              onChange={(e) => salvar({ uf: e.target.value.toUpperCase() })}
-              placeholder="RJ"
-            />
-          </label>
-        </div>
-
-        <label className={estilos.campo}>
-          <span className={estilos.rotulo}>
-            O que você procura agora{' '}
-            <span className={`mono ${estilos.contador}`}>
-              {(perfil.procuro ?? '').length}/{PROCURO_MAXIMO}
-            </span>
-          </span>
-          <input
-            type="text"
-            maxLength={PROCURO_MAXIMO}
-            value={perfil.procuro ?? ''}
-            onChange={(e) => salvar({ procuro: e.target.value })}
-            placeholder="mais controle no backhand"
-          />
-        </label>
-
-        {temIdentidade(perfil) ? (
-          <div className={estilos.previa}>
-            <p className={`mono ${estilos.previaRotulo}`}>
-              é assim que você aparece
-              {perfil.apelido && (
-                <>
-                  {' · '}
-                  <Link href={caminhoDoPerfil(perfil.apelido)}>ver como os outros veem →</Link>
-                </>
-              )}
-            </p>
-            <div className={estilos.cracha}>
-              <p className={estilos.crachaNome}>{perfil.nome}</p>
-              <p className={estilos.crachaTags}>
-                <TagEstilo estilo={perfil.estilo!} />
-                {perfil.nivel && <TagNivel nivel={perfil.nivel} />}
+      {/* ── Sem conta: o que fica de fora, e por quê ──
+             Em largura inteira e ANTES dos campos, não num trilho lateral: é a
+             coisa mais importante desta tela pra quem não entrou.
+             A lista abaixo não é lista de vantagem inventada — é a diferença
+             real: cada item ali precisa de um `usuario_id` pra existir. Sem
+             conta não há dono, e sem dono não há página onde alguém leia. */}
+      {disponivel && !usuario && (
+        <section className={estilos.semConta} aria-labelledby="t-conta">
+          <h2 id="t-conta" className={estilos.tituloGrupo}>O que a conta abre</h2>
+          <div className={estilos.semContaCorpo}>
+            <div>
+              <p className={estilos.explica}>
+                Nome, estilo, nível e raquete funcionam <strong>sem conta</strong>: eles
+                preenchem sozinhos a sua próxima avaliação e alimentam o montador, e por isso
+                vale guardá-los neste navegador.
+              </p>
+              <p className={estilos.explica}>
+                O resto do perfil só existe pra <strong>ser lido por outra pessoa</strong> — e
+                sem conta não há página onde alguém leia:
+              </p>
+              <ul className={estilos.listaAbre}>
+                <li>seu endereço público, pra mandar pra alguém</li>
+                <li>a estante do que você já usou, e por quê</li>
+                <li>desde quando joga, quanto joga, clube e cidade</li>
+                <li>suas avaliações assinadas — dá pra corrigir e apagar depois</li>
+              </ul>
+              <p className={estilos.explica}>
+                <strong>Não é obrigatório.</strong> O site inteiro funciona sem entrar.
               </p>
             </div>
-          </div>
-        ) : (
-          <p className={estilos.faltando}>
-            Preencha o nome e o estilo pra ver como a sua assinatura vai ficar.
-          </p>
-        )}
-
-        {/* FORA do condicional, de proposito. Na primeira versao este link vivia
-            dentro do ramo "perfil vazio", entao ele era invisivel pra quem ja'
-            tinha perfil -- inclusive pra quem quisesse rever os passos ou
-            preencher o que faltou. Esconder a porta de quem ja' entrou uma vez
-            nao ajuda ninguem. */}
-        <p className={estilos.passoAPasso}>
-          <Link href="/comunidade/boas-vindas/">Preencher passo a passo →</Link>{' '}
-          <span className={estilos.passoAPassoNota}>
-            uma pergunta por tela, com o porquê de cada uma
-          </span>
-        </p>
-      </section>
-
-      {/* ── Meu equipamento ── */}
-      <section className={estilos.secao} aria-labelledby="t-equipamento">
-        <h2 id="t-equipamento" className={estilos.tituloSecao}>
-          Meu equipamento
-        </h2>
-        <p className={estilos.explica}>
-          A sua raquete: uma lâmina e as duas borrachas.{' '}
-          <Link href="/montar/">Não sabe o que combina?</Link> O montador mostra o preço somando
-          e o que a combinação tem de atenção.
-        </p>
-
-        <div className={estilos.pecas}>
-          {(['lamina', 'fh', 'bh'] as PapelPeca[]).map((papel) => (
-            <SeletorPeca
-              key={papel}
-              papel={papel}
-              valor={perfil.equipamento[papel]}
-              aoEscolher={(id) =>
-                salvar({ equipamento: { ...perfil.equipamento, [papel]: id || undefined } })
-              }
+            <Login
+              titulo="Entrar ou criar conta"
+              explicacao="Se ainda não houver conta com esse e-mail, ela é criada quando você clicar no link."
             />
-          ))}
+          </div>
+        </section>
+      )}
+
+      <div className={estilos.colunas}>
+        <div className={estilos.principal}>
+          {/* ── Quem você é ── */}
+          <section className={estilos.grupo} aria-labelledby="g-quem">
+            <h2 id="g-quem" className={estilos.tituloGrupo}>Quem você é</h2>
+            <p className={estilos.explica}>
+              O estilo e o nível viram a <strong>tag embaixo do seu nome</strong> em cada
+              avaliação que você escrever. É o que faz a sua nota significar alguma coisa pra
+              quem lê — “rápida demais” de um defensor não quer dizer o mesmo que de um
+              atacante.
+            </p>
+
+            <div className={estilos.campos}>
+              <label className={estilos.campo}>
+                <span className={estilos.rotulo}>Como você assina</span>
+                <input
+                  type="text"
+                  value={perfil.nome}
+                  onChange={(e) => salvar({ nome: e.target.value })}
+                  placeholder="seu nome ou apelido"
+                />
+              </label>
+              <label className={estilos.campo}>
+                <span className={estilos.rotulo}>Seu estilo de jogo</span>
+                <select
+                  value={perfil.estilo ?? ''}
+                  onChange={(e) =>
+                    salvar({ estilo: (e.target.value || undefined) as EstiloJogador })}
+                >
+                  <option value="">escolher…</option>
+                  {ESTILOS.map((e) => (
+                    <option key={e} value={e}>{ROTULO_ESTILO[e]}</option>
+                  ))}
+                </select>
+              </label>
+              <label className={estilos.campo}>
+                <span className={estilos.rotulo}>Seu nível</span>
+                <select
+                  value={perfil.nivel ?? ''}
+                  onChange={(e) =>
+                    salvar({ nivel: (e.target.value || undefined) as NivelJogador })}
+                >
+                  <option value="">escolher…</option>
+                  {NIVEIS.map((n) => (
+                    <option key={n} value={n}>{n}</option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            {perfilInteiro && (
+              <label className={estilos.campo}>
+                <span className={estilos.rotulo}>
+                  O que você procura agora{' '}
+                  <span className={`mono ${estilos.contador}`}>
+                    {(perfil.procuro ?? '').length}/{PROCURO_MAXIMO}
+                  </span>
+                </span>
+                <input
+                  type="text"
+                  maxLength={PROCURO_MAXIMO}
+                  value={perfil.procuro ?? ''}
+                  onChange={(e) => salvar({ procuro: e.target.value })}
+                  placeholder="mais controle no backhand"
+                />
+                <span className={estilos.dica}>
+                  Aparece em destaque no alto do seu perfil, com as suas palavras.
+                </span>
+              </label>
+            )}
+          </section>
+
+          {/* ── Como você joga (só com conta) ── */}
+          {perfilInteiro && (
+            <section className={estilos.grupo} aria-labelledby="g-jogo">
+              <h2 id="g-jogo" className={estilos.tituloGrupo}>Como você joga</h2>
+              <p className={estilos.explica}>
+                Isto é o contexto de tudo o que você escreve. Quem joga todo dia gasta uma
+                borracha em três meses; quem joga aos sábados leva dois anos — e os dois vão
+                dizer “durou pouco”.
+              </p>
+
+              <div className={estilos.campos}>
+                <label className={estilos.campo}>
+                  <span className={estilos.rotulo}>Joga desde</span>
+                  <input
+                    type="number"
+                    inputMode="numeric"
+                    min={ANO_MINIMO}
+                    max={anoAtual}
+                    value={perfil.jogaDesde ?? ''}
+                    onChange={(e) => {
+                      const n = Number(e.target.value);
+                      salvar({ jogaDesde: e.target.value === '' || !Number.isFinite(n) ? undefined : n });
+                    }}
+                    placeholder={String(anoAtual - 5)}
+                  />
+                  {/* O banco barra ano absurdo, mas não consegue barrar "ano que
+                      vem" — um CHECK do Postgres não sabe que dia é hoje. Então
+                      a régua fina é dita aqui, onde ela pode ser explicada. */}
+                  <span className={estilos.dica}>
+                    {perfil.jogaDesde && perfil.jogaDesde > anoAtual
+                      ? `Esse ano ainda não chegou. O perfil vai ignorar até virar ${anoAtual} ou menos.`
+                      : perfil.jogaDesde && perfil.jogaDesde >= ANO_MINIMO
+                        ? `Vira “${contextoDoPerfil(perfil, anoAtual)[0]}” no seu perfil.`
+                        : 'O ano em que você pegou numa raquete pela primeira vez.'}
+                  </span>
+                </label>
+
+                <label className={estilos.campo}>
+                  <span className={estilos.rotulo}>Quanto você joga</span>
+                  <select
+                    value={perfil.frequencia ?? ''}
+                    onChange={(e) =>
+                      salvar({ frequencia: (e.target.value || undefined) as Frequencia })}
+                  >
+                    <option value="">escolher…</option>
+                    {FREQUENCIAS.map((f) => (
+                      <option key={f} value={f}>{ROTULO_FREQUENCIA[f]}</option>
+                    ))}
+                  </select>
+                </label>
+
+                <label className={estilos.campo}>
+                  <span className={estilos.rotulo}>Mão</span>
+                  <select
+                    value={perfil.mao ?? ''}
+                    onChange={(e) => salvar({ mao: (e.target.value || undefined) as Mao })}
+                  >
+                    <option value="">escolher…</option>
+                    {MAOS.map((m) => (
+                      <option key={m} value={m}>{ROTULO_MAO[m]}</option>
+                    ))}
+                  </select>
+                </label>
+
+                <label className={estilos.campo}>
+                  <span className={estilos.rotulo}>Empunhadura</span>
+                  <select
+                    value={perfil.empunhadura ?? ''}
+                    onChange={(e) =>
+                      salvar({ empunhadura: (e.target.value || undefined) as Empunhadura })}
+                  >
+                    <option value="">escolher…</option>
+                    {EMPUNHADURAS.map((e) => (
+                      <option key={e} value={e}>{ROTULO_EMPUNHADURA[e]}</option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+            </section>
+          )}
+
+          {/* ── Onde você joga (só com conta) ── */}
+          {perfilInteiro && (
+            <section className={estilos.grupo} aria-labelledby="g-onde">
+              <h2 id="g-onde" className={estilos.tituloGrupo}>Onde você joga</h2>
+              <p className={estilos.explica}>
+                O clube é o único campo do perfil que liga você a outra pessoa de verdade — é
+                por ele que alguém descobre que joga no mesmo lugar que você.
+              </p>
+
+              <div className={estilos.campos}>
+                <label className={estilos.campo}>
+                  <span className={estilos.rotulo}>Clube ou academia</span>
+                  <input
+                    type="text"
+                    maxLength={CLUBE_MAXIMO}
+                    value={perfil.clube ?? ''}
+                    onChange={(e) => salvar({ clube: e.target.value })}
+                    placeholder="FitPong"
+                  />
+                </label>
+                <label className={estilos.campo}>
+                  <span className={estilos.rotulo}>Cidade</span>
+                  <input
+                    type="text"
+                    value={perfil.cidade ?? ''}
+                    onChange={(e) => salvar({ cidade: e.target.value })}
+                    placeholder="onde você joga"
+                  />
+                </label>
+                <label className={estilos.campo}>
+                  <span className={estilos.rotulo}>UF</span>
+                  <input
+                    type="text"
+                    maxLength={2}
+                    value={perfil.uf ?? ''}
+                    onChange={(e) => salvar({ uf: e.target.value.toUpperCase() })}
+                    placeholder="RJ"
+                  />
+                </label>
+                <label className={estilos.campo}>
+                  <span className={estilos.rotulo}>Bola que você usa</span>
+                  <input
+                    type="text"
+                    maxLength={BOLA_MAXIMO}
+                    value={perfil.bola ?? ''}
+                    onChange={(e) => salvar({ bola: e.target.value })}
+                    placeholder="Nittaku Premium 40+"
+                  />
+                </label>
+              </div>
+            </section>
+          )}
+
+          {/* ── Sua raquete ── */}
+          <section className={estilos.grupo} aria-labelledby="g-raquete">
+            <h2 id="g-raquete" className={estilos.tituloGrupo}>Sua raquete</h2>
+            <p className={estilos.explica}>
+              Uma lâmina e as duas borrachas. <Link href="/montar/">Não sabe o que combina?</Link>{' '}
+              O montador mostra o preço somando e o que a combinação tem de atenção.
+            </p>
+
+            <div className={estilos.campos}>
+              {(['lamina', 'fh', 'bh'] as PapelPeca[]).map((papel) => (
+                <SeletorPeca
+                  key={papel}
+                  papel={papel}
+                  valor={perfil.equipamento[papel]}
+                  aoEscolher={(id) =>
+                    salvar({ equipamento: { ...perfil.equipamento, [papel]: id || undefined } })
+                  }
+                />
+              ))}
+            </div>
+
+            {escolhidas > 0 && (
+              <div className={estilos.resumoEquip}>
+                <p className={`mono ${estilos.total}`}>
+                  {completa(montagem)
+                    ? `${brl(precoTotal(montagem))} somando as 3 peças`
+                    : `${escolhidas} de 3 peças · ${brl(precoTotal(montagem))} até aqui`}
+                </p>
+                {obs.length > 0 && (
+                  <ul className={estilos.observacoes}>
+                    {obs.map((o) => (
+                      <li key={o.titulo} className={o.tipo === 'atencao' ? estilos.obsAtencao : ''}>
+                        <strong>{o.titulo}</strong> {o.texto}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
+          </section>
         </div>
 
-        {escolhidas > 0 && (
-          <div className={estilos.resumoEquip}>
-            <p className={`mono ${estilos.total}`}>
-              {completa(montagem)
-                ? `${brl(precoTotal(montagem))} somando as 3 peças`
-                : `${escolhidas} de 3 peças · ${brl(precoTotal(montagem))} até aqui`}
-            </p>
-            {/* De graça: o módulo do /montar já sabia ler a combinação. */}
-            {obs.length > 0 && (
-              <ul className={estilos.observacoes}>
-                {obs.map((o) => (
-                  <li key={o.titulo} className={o.tipo === 'atencao' ? estilos.obsAtencao : ''}>
-                    <strong>{o.titulo}</strong> {o.texto}
+        {/* ── O trilho ── */}
+        <aside className={estilos.trilho}>
+          {falta.length > 0 && (
+            <div className={estilos.caixaTrilho}>
+              <h2 className={estilos.tituloTrilho}>O que ainda dá pra contar</h2>
+              <ul className={estilos.listaFalta}>
+                {falta.map((f) => (
+                  <li key={f.campo}>
+                    <span className={estilos.faltaRotulo}>{f.rotulo}</span>
+                    <span className={estilos.faltaServe}>{f.serve}</span>
                   </li>
                 ))}
               </ul>
-            )}
-          </div>
-        )}
-      </section>
+              {/* Sem barra e sem porcentagem, de propósito: medidor de
+                  completude faz preencher pra calar o medidor, e dado ruim é
+                  pior que dado faltando. */}
+              <p className={estilos.notaTrilho}>
+                Nada aqui é obrigatório. A lista some conforme você conta.
+              </p>
+            </div>
+          )}
+
+        </aside>
+      </div>
 
       {/* ── O que você já usou ── */}
-      <section className={estilos.secao} aria-labelledby="t-estante">
-        <h2 id="t-estante" className={estilos.tituloSecao}>
-          O que você já usou
-        </h2>
-        <EstanteEditor token={tokenGuardado() ?? null} usuarioId={usuario?.id ?? null} />
-      </section>
+      {perfilInteiro ? (
+        <section className={estilos.grupo} aria-labelledby="t-estante">
+          <h2 id="t-estante" className={estilos.tituloGrupo}>O que você já usou</h2>
+          <EstanteEditor token={tokenGuardado() ?? null} usuarioId={usuario?.id ?? null} />
+        </section>
+      ) : null}
 
       {/* ── Minhas avaliações ── */}
-      <section className={estilos.secao} aria-labelledby="t-avaliacoes">
-        <h2 id="t-avaliacoes" className={estilos.tituloSecao}>
-          Minhas avaliações
-        </h2>
+      <section className={estilos.grupo} aria-labelledby="t-avaliacoes">
+        <h2 id="t-avaliacoes" className={estilos.tituloGrupo}>Minhas avaliações</h2>
         {minhas.length === 0 ? (
           <p className={estilos.faltando}>
             Você ainda não avaliou nenhum material.{' '}
@@ -391,6 +547,13 @@ export function PerfilCliente() {
           </ul>
         )}
       </section>
+
+      <p className={estilos.passoAPasso}>
+        <Link href="/comunidade/boas-vindas/">Preencher passo a passo →</Link>{' '}
+        <span className={estilos.passoAPassoNota}>
+          uma pergunta por tela, com o porquê de cada uma
+        </span>
+      </p>
     </div>
   );
 }

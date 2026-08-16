@@ -1,6 +1,6 @@
 # Cadastro com duas portas, e o perfil como espaço da pessoa
 
-**Data:** 2026-08-15 · **Decidido por:** Guilherme (fundador) · **Estado:** decidido, não implementado
+**Data:** 2026-08-15 · **Decidido por:** Guilherme (fundador) · **Estado:** portas e recuperação construídas (2026-08-15); refino visual do perfil pendente — ver §6
 
 ---
 
@@ -65,3 +65,51 @@ O que **não** pode aparecer, por ser anti-referência declarada do projeto: gra
 4. Só então o refino visual do perfil, com `/impeccable polish`.
 
 A ordem importa: refinar o visual antes de a tela de boas-vindas existir seria polir uma superfície que vai mudar de forma.
+
+---
+
+## 6. O que foi construído (2026-08-15)
+
+| Peça | Onde | Estado |
+|---|---|---|
+| Porta com senha (criar + entrar) | `/comunidade/entrar/` | ✅ |
+| Recuperação de senha | `/comunidade/nova-senha/` | ✅ |
+| Trocar senha estando dentro | mesma tela, link no perfil | ✅ |
+| Boas-vindas em passos | `/comunidade/boas-vindas/` | ✅ (sessão anterior) |
+| Porteira na primeira entrada | dentro da tela de entrar | ✅ |
+| Configuração de painel | `supabase/SENHA-E-RECUPERACAO.md` | ⏳ depende do fundador |
+| Refino visual do perfil | `/impeccable polish` | ⏳ próximo |
+
+### Três decisões que o spec não cobria
+
+**1. A porteira mora na tela de entrar, não no site inteiro.**
+O spec diz "quem entra pela primeira vez sem perfil passa pela tela de boas-vindas
+antes de chegar ao site". Um porteiro global — que interceptasse qualquer página —
+apanharia também quem entrou pelo formulário embutido na ficha de uma borracha,
+sequestrando a pessoa no meio de outra tarefa. A porteira roda em
+`/comunidade/entrar/`, que é por onde passa quem foi *se cadastrar*, e a tela de
+entrar é para onde os links de e-mail voltam. Quem entra de dentro de uma ficha
+continua na ficha, que é o que ela queria.
+
+**2. O formulário embutido (`componentes/Login.tsx`) continua com UMA porta.**
+Quem esbarra nele não veio se cadastrar — veio avaliar uma borracha. Nesse
+momento, escolher entre senha e link é uma decisão a mais no caminho de outra
+coisa. Ele oferece o link, e leva à tela inteira com `?volta=` para quem quiser
+senha.
+
+**3. O `?volta=` é filtrado por `caminhoInterno`, com teste.**
+Um `?volta=` sem filtro transforma a tela de login num redirecionador aberto: um
+login de verdade, no domínio de verdade, que cospe a pessoa noutro site. Duas
+formas disfarçadas passam por "começa com barra" — `//alvo` e `/\alvo` (o
+navegador normaliza a contrabarra). A função está em `src/logica/sessao.ts` com
+as duas cobertas por asserção; tirar a guarda derruba exatamente dois testes.
+
+### O que continua verdade
+
+- RLS intocada: nenhuma migração foi alterada. A porta nova muda como a pessoa
+  entra, não o que ela pode ler ou escrever.
+- Nenhuma senha, token ou chave entrou no repositório. `sessao.ts` tem asserção
+  proibindo `console.*` — senha e token não podem vazar nem pro console.
+- Nenhuma política de senha inventada: o número que a tela mostra ao recusar vem
+  da mensagem do servidor.
+- Suíte verde: **582 asserções** (eram 537).

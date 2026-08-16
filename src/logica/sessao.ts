@@ -1,12 +1,23 @@
 /**
- * WikiPong · Sessão (login por link no e-mail)
+ * WikiPong · Sessão (duas portas: link no e-mail e senha)
  * ------------------------------------------------------------------------------
- * POR QUE LINK NO E-MAIL, e não senha: senha exige tela de cadastro, tela de
- * "esqueci", política de força, e um lugar seguro pra guardar hash. Nada disso
- * existe aqui e nada disso é o produto. O link no e-mail troca tudo isso por
- * "digite seu e-mail" — e a caixa de entrada já é a prova de identidade.
+ * A PRIMEIRA VERSÃO SÓ TINHA LINK NO E-MAIL, e o argumento era bom: senha exige
+ * tela de cadastro, tela de "esqueci", política de força. O fundador decidiu o
+ * contrário em 2026-08-15 (spec `cadastro-e-perfil-como-espaco`), e o custo
+ * daquele argumento continua real — ele foi PAGO, não refutado. As duas portas
+ * vivem lado a lado:
  *
- * COMO FUNCIONA, ponta a ponta:
+ *   link no e-mail  `pedirLink`      → não tem senha pra esquecer
+ *   senha           `criarConta` / `entrarComSenha` → entra sem esperar e-mail
+ *
+ * E, porque a segunda existe, existe também `pedirRecuperacao` + `trocarSenha`:
+ * sem elas, senha esquecida vira conta perdida.
+ *
+ * NADA DE POLÍTICA DE SENHA INVENTADA. Quem decide o que é senha aceitável é o
+ * servidor (Authentication → Policies). `SENHA_MINIMA` aqui só evita uma ida à
+ * rede para o caso óbvio — ver o comentário sobre ela.
+ *
+ * COMO FUNCIONA O LINK, ponta a ponta:
  *   1. a pessoa digita o e-mail e o site chama /auth/v1/otp;
  *   2. o Supabase manda um link;
  *   3. o link volta pro site com os tokens no FRAGMENTO da URL (#access_token=…);
@@ -98,37 +109,258 @@ export async function pedirLink(email: string, redirecionar: string): Promise<vo
   if (!res.ok) throw new Error(await explicar(res));
 }
 
+/** O que o servidor devolveu quando recusou, já desembrulhado do JSON. */
+export interface FalhaDoServidor {
+  status: number;
+  /** `error_code` do Supabase, ou a mensagem crua quando não há código. */
+  codigo: string;
+  /** A frase do servidor, em inglês. Só serve pra extrair número, não pra exibir. */
+  mensagem: string;
+}
+
 /**
- * Traduz a resposta de erro do Supabase para uma frase que a pessoa entenda.
+ * Traduz a recusa do servidor para uma frase que a pessoa entenda.
  *
  * A primeira versão jogava o JSON cru na tela — `{"code":429,"error_code":
  * "over_email_send_rate_limit",...}`. Quem lê isso não descobre nem o que houve
  * nem o que fazer. E o pior é que o mais comum dos erros, o limite de envio, tem
  * uma solução simples: esperar.
+ *
+ * A ORDEM DOS TESTES É A PARTE FRÁGIL, e por isso tem asserção em cima dela.
+ * O caso concreto: `invalid_credentials` (senha errada) CONTÉM a palavra
+ * "invalid", e a versão anterior tinha um `codigo.includes('invalid')` genérico
+ * lá em cima. Quem errasse a senha lia "esse e-mail não foi aceito" e ia
+ * conferir o e-mail, que estava certo. Código específico vem SEMPRE antes do
+ * genérico — mexer nesta ordem quebra o teste de propósito.
+ *
+ * Função pura de propósito: é a única parte disto que dá pra testar sem rede.
  */
-async function explicar(res: Response): Promise<string> {
-  let codigo = '';
-  try {
-    const d = (await res.json()) as { error_code?: string; msg?: string; message?: string };
-    codigo = d.error_code ?? '';
-    if (!codigo && (d.msg ?? d.message)) codigo = (d.msg ?? d.message)!;
-  } catch {
-    /* Sem corpo legível: sobra o status. */
-  }
+export function mensagemDeErro(f: FalhaDoServidor): string {
+  const { status, codigo, mensagem } = f;
 
-  if (res.status === 429 || codigo.includes('rate_limit')) {
+  /* ── Específicos primeiro ── */
+
+  /* Nunca dizer QUAL dos dois está errado: separar "e-mail não existe" de
+     "senha errada" entrega a lista de quem tem conta a quem estiver fuçando. */
+  if (codigo.includes('invalid_credentials') || codigo.includes('invalid_grant')) {
+    return 'E-mail ou senha não conferem. Se você criou a conta pelo link no e-mail, ela ainda não tem senha — use "esqueci minha senha" pra definir uma.';
+  }
+  if (codigo.includes('email_not_confirmed')) {
+    return 'Falta confirmar seu e-mail. Procure a mensagem que enviamos e clique no link dela — depois a senha funciona.';
+  }
+  if (codigo.includes('weak_password')) {
+    /* O número vem da MENSAGEM do servidor, não daqui: quem manda na regra é o
+       painel, e chutar um número seria inventar política (o spec proíbe). */
+    const minimo = mensagem.match(/\d+/)?.[0];
+    return minimo
+      ? `Essa senha é curta demais: o servidor exige pelo menos ${minimo} caracteres.`
+      : 'Essa senha foi recusada por ser fraca demais. Tente uma mais longa.';
+  }
+  if (codigo.includes('same_password')) {
+    return 'Essa é a senha que você já tinha. Escolha uma diferente.';
+  }
+  if (codigo.includes('user_already_exists') || codigo.includes('email_exists')) {
+    /* Isto entrega que o e-mail tem conta — mas o servidor JÁ entrega, no
+       status da resposta. Esconder na tela não esconderia de quem olha a rede,
+       e esconderia de quem só quer saber por que o cadastro não foi. */
+    return 'Esse e-mail já tem conta. Entre com a sua senha, ou peça um link no e-mail.';
+  }
+  if (codigo.includes('signup_disabled')) {
+    return 'O cadastro está fechado no momento.';
+  }
+  if (codigo.includes('over_request_rate_limit')) {
+    return 'Muitas tentativas seguidas. Espere um minuto e tente de novo.';
+  }
+  if (status === 429 || codigo.includes('rate_limit')) {
     return (
-      'O Supabase gratuito manda poucos e-mails por hora, e a cota acabou. ' +
+      'O servidor de e-mail manda poucas mensagens por hora, e a cota acabou. ' +
       'Espere uns minutos e peça de novo — não é problema no seu e-mail.'
     );
   }
-  if (res.status === 422 || codigo.includes('invalid')) {
+
+  /* ── Genéricos depois ── */
+  if (status === 422 || codigo.includes('invalid')) {
     return 'Esse e-mail não foi aceito. Confira se está escrito certo.';
   }
-  if (res.status === 401 || res.status === 403) {
+  if (status === 401 || status === 403) {
     return 'A chave do projeto não foi aceita. Confira o NEXT_PUBLIC_SUPABASE_ANON_KEY.';
   }
-  return `Não deu pra enviar o link (erro ${res.status}${codigo ? `: ${codigo}` : ''}).`;
+  return `O servidor recusou (erro ${status}${codigo ? `: ${codigo}` : ''}).`;
+}
+
+async function explicar(res: Response): Promise<string> {
+  let codigo = '';
+  let mensagem = '';
+  try {
+    const d = (await res.json()) as { error_code?: string; msg?: string; message?: string };
+    mensagem = d.msg ?? d.message ?? '';
+    codigo = d.error_code ?? '';
+    if (!codigo && mensagem) codigo = mensagem;
+  } catch {
+    /* Sem corpo legível: sobra o status. */
+  }
+  return mensagemDeErro({ status: res.status, codigo, mensagem });
+}
+
+// ───────────────────────── Para onde voltar ─────────────────────────
+
+/** Onde alguém cai quando não pediu lugar nenhum. */
+export const DEPOIS_DE_ENTRAR = '/comunidade/perfil/';
+
+/**
+ * Filtra o `?volta=` da tela de entrar: só CAMINHO INTERNO passa.
+ *
+ * Sem isto, a tela de entrar vira um redirecionador aberto — alguém manda
+ * `/comunidade/entrar/?volta=//site-falso`, a pessoa entra de verdade no
+ * WikiPong, vê o cadeado e o domínio certos, e é cuspida noutro site ainda
+ * confiando no que está vendo. É o formato clássico de phishing por link de
+ * login, e ele custa uma linha pra fechar.
+ *
+ * DUAS FORMAS DISFARÇADAS, e as duas começam com barra:
+ *   `//site-falso.com`   URL absoluta sem protocolo — vai pra fora.
+ *   `/\site-falso.com`   o navegador normaliza `\` pra `/`, e vira a de cima.
+ *
+ * Por isso o teste não é "começa com barra": é "começa com barra E o segundo
+ * caractere não é outra barra, nem invertida".
+ */
+export function caminhoInterno(
+  v: string | null | undefined,
+  padrao: string = DEPOIS_DE_ENTRAR,
+): string {
+  if (!v || v[0] !== '/') return padrao;
+  if (v[1] === '/' || v[1] === '\\') return padrao;
+  return v;
+}
+
+// ───────────────────────── A porta com senha ─────────────────────────
+
+/**
+ * Só evita uma ida à rede pro caso óbvio (campo com três letras). Quem decide
+ * de verdade é o servidor: se o painel exigir mais, a recusa dele chega
+ * traduzida por `mensagemDeErro`, com o número que ELE disse.
+ *
+ * 6 é o padrão do Supabase. Não é regra do WikiPong e não deve virar uma.
+ */
+export const SENHA_MINIMA = 6;
+
+type RespostaDeToken = {
+  access_token?: string;
+  refresh_token?: string;
+  expires_in?: number;
+  user?: { email?: string };
+};
+
+/** Transforma a resposta de token numa Sessão e guarda. Devolve o que guardou. */
+function daResposta(d: RespostaDeToken, email?: string): Sessao {
+  const s: Sessao = {
+    accessToken: d.access_token!,
+    refreshToken: d.refresh_token ?? '',
+    expiraEm: Math.floor(Date.now() / 1000) + (d.expires_in ?? 3600),
+    email: d.user?.email ?? email,
+  };
+  guardar(s);
+  return s;
+}
+
+function endereco(): { base: string; anon: string } {
+  const base = url();
+  const anon = chave();
+  if (!base || !anon) throw new Error('Supabase não configurado.');
+  return { base, anon };
+}
+
+/** O que aconteceu ao criar a conta — as duas saídas são sucesso. */
+export type ResultadoDoCadastro = 'entrou' | 'confirme-o-email';
+
+/**
+ * Cria conta com e-mail e senha.
+ *
+ * DUAS SAÍDAS, e a tela precisa das duas: com "Confirm email" ligado no painel,
+ * o Supabase devolve só o usuário e manda um e-mail — não há sessão ainda.
+ * Desligado, ele já devolve os tokens e a pessoa entra na hora. Tratar as duas
+ * como iguais deixaria metade das pessoas olhando uma tela que diz "pronto"
+ * sem ter entrado.
+ *
+ * Quando o e-mail JÁ TEM CONTA e a confirmação está ligada, o Supabase responde
+ * 200 com um usuário falso, de propósito, e manda um aviso pra caixa da pessoa.
+ * Não desmascaramos isso aqui: a resposta honesta continua sendo "olhe seu
+ * e-mail", que é verdade nos dois casos.
+ */
+export async function criarConta(
+  email: string,
+  senha: string,
+  redirecionar: string,
+): Promise<ResultadoDoCadastro> {
+  const { base, anon } = endereco();
+  const destino = `${base}/auth/v1/signup?redirect_to=${encodeURIComponent(redirecionar)}`;
+  const res = await fetch(destino, {
+    method: 'POST',
+    headers: { apikey: anon, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password: senha }),
+  });
+  if (!res.ok) throw new Error(await explicar(res));
+
+  const d = (await res.json()) as RespostaDeToken;
+  if (!d.access_token) return 'confirme-o-email';
+  daResposta(d, email);
+  return 'entrou';
+}
+
+/** Entra com e-mail e senha. Guarda a sessão e devolve ela. */
+export async function entrarComSenha(email: string, senha: string): Promise<Sessao> {
+  const { base, anon } = endereco();
+  const res = await fetch(`${base}/auth/v1/token?grant_type=password`, {
+    method: 'POST',
+    headers: { apikey: anon, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password: senha }),
+  });
+  if (!res.ok) throw new Error(await explicar(res));
+  return daResposta((await res.json()) as RespostaDeToken, email);
+}
+
+/**
+ * Manda o link de recuperação. `redirecionar` tem que ser a tela de trocar a
+ * senha — o link volta com os tokens no fragmento, e é `capturarDaURL` lá que
+ * transforma isso em sessão.
+ *
+ * A resposta é sempre 200, exista conta ou não. Isso é do Supabase e está
+ * certo: responder diferente diria quem tem conta aqui.
+ */
+export async function pedirRecuperacao(email: string, redirecionar: string): Promise<void> {
+  const { base, anon } = endereco();
+  const destino = `${base}/auth/v1/recover?redirect_to=${encodeURIComponent(redirecionar)}`;
+  const res = await fetch(destino, {
+    method: 'POST',
+    headers: { apikey: anon, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email }),
+  });
+  if (!res.ok) throw new Error(await explicar(res));
+}
+
+/**
+ * Define a senha de quem está logado. Serve pros dois casos, que são o mesmo
+ * por dentro: quem chegou pelo link de recuperação e quem já estava dentro e
+ * quer trocar.
+ *
+ * Serve TAMBÉM pra dar senha a quem só tinha link no e-mail — a conta existe,
+ * só não tinha senha. Por isso "esqueci minha senha" é a resposta certa pra
+ * quem entrou por link e agora quer usar senha.
+ */
+export async function trocarSenha(nova: string): Promise<void> {
+  const { base, anon } = endereco();
+  const s = await sessaoAtual();
+  if (!s) throw new Error('Sua sessão expirou. Peça um link novo pra trocar a senha.');
+
+  const res = await fetch(`${base}/auth/v1/user`, {
+    method: 'PUT',
+    headers: {
+      apikey: anon,
+      Authorization: `Bearer ${s.accessToken}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ password: nova }),
+  });
+  if (!res.ok) throw new Error(await explicar(res));
 }
 
 /**

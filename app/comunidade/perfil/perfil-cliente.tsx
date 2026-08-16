@@ -51,9 +51,9 @@ import {
   type Montagem, type PecaMontagem, type PapelPeca,
 } from '@/src/logica/montagem';
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
-import { temDesempenho } from '@/src/logica/filtros';
 import { brl } from '@/componentes/formato';
 import { FotoProduto } from '@/componentes/FotoProduto';
+import { SeletorMaterial } from '@/componentes/SeletorMaterial';
 import { Estrelas } from '@/componentes/Estrelas';
 import { CartaoMesaJogador } from '@/componentes/CartaoMesaJogador';
 import { EstanteEditor } from '@/componentes/EstanteEditor';
@@ -67,10 +67,28 @@ const BOLA_MAXIMO = 40;
 
 const ESTILOS: EstiloJogador[] = ['atacante', 'allround', 'defensor'];
 
+/* ── A TRAVA DE PERFIL DE DESEMPENHO SAIU DAQUI TAMBÉM (2026-08-15) ──────────
+   O montador tirou esta mesma trava em 2026-08-04, e esta tela ficou pra trás
+   por um ano de commits. O efeito era grave e silencioso: o seletor só oferecia
+   peça COM specs, e com isso escondia 246 das 549 lâminas e 132 das 400
+   borrachas. O fundador foi procurar a Hayabusa que ele usa, não achou, e
+   concluiu — com razão — que o catálogo não estava ali.
+
+   `specs` é opcional em `PecaMontagem` justamente por isso: quem monta raquete
+   escolhe pelo nome, pela marca e pelo preço, como na loja. A tabela de specs é
+   CONSEQUÊNCIA do que a peça tem, não porta de entrada.
+
+   O que continua barrado é o que nunca foi peça de raquete: bola e raquete já
+   montada. Isso é tipo, não dado — a mesma régua do `ehPeca` do montador. */
+const ehPeca = (m: { tipo: string }): boolean => m.tipo === 'Lâmina' || m.tipo === 'Borracha';
+
 const comoPeca = (id?: string): PecaMontagem | undefined => {
   const m = id ? materialPorId(id) : undefined;
-  return m && temDesempenho(m) ? (m as PecaMontagem) : undefined;
+  return m && ehPeca(m) ? (m as PecaMontagem) : undefined;
 };
+
+const LAMINAS = MATERIAIS.filter((m) => m.tipo === 'Lâmina');
+const BORRACHAS = MATERIAIS.filter((m) => m.tipo === 'Borracha');
 
 export function PerfilCliente() {
   const { usuario, carregando, disponivel } = usarSessao();
@@ -558,6 +576,17 @@ export function PerfilCliente() {
   );
 }
 
+/**
+ * Antes isto era um `<select>` nativo com o catálogo inteiro dentro, e ele
+ * falhava exatamente como o do montador falhava antes de 2026-08-04: sem busca
+ * (o select só pula pra primeira letra), sem foto, e com o nome da marca
+ * repetido — "Xiom Xiom Feel ZX3", porque 73 dos 952 materiais já trazem a
+ * marca dentro do nome e o rótulo era `${marca} ${nome}` cru.
+ *
+ * O `SeletorMaterial` já resolvia os três, com o padrão ARIA de combobox
+ * inteiro. Ele existia e esta tela não o usava — que é a pior espécie de
+ * divergência, porque a correção já estava escrita e paga.
+ */
 function SeletorPeca({
   papel,
   valor,
@@ -569,22 +598,17 @@ function SeletorPeca({
 }) {
   /* Lâmina pro papel de lâmina, borracha pros dois lados: oferecer uma borracha
      onde vai a madeira só produziria montagem impossível. */
-  const opcoes = MATERIAIS.filter(
-    (m) => temDesempenho(m) && m.tipo === (papel === 'lamina' ? 'Lâmina' : 'Borracha'),
-  );
+  const opcoes = papel === 'lamina' ? LAMINAS : BORRACHAS;
   const escolhido = valor ? materialPorId(valor) : undefined;
 
   return (
-    <label className={estilos.campo}>
-      <span className={estilos.rotulo}>{ROTULO_PAPEL[papel]}</span>
-      <select value={valor ?? ''} onChange={(e) => aoEscolher(e.target.value)}>
-        <option value="">escolher…</option>
-        {opcoes.map((m) => (
-          <option key={m.id} value={m.id}>
-            {m.marca} {m.nome}
-          </option>
-        ))}
-      </select>
+    <div className={estilos.campo}>
+      <SeletorMaterial
+        rotulo={ROTULO_PAPEL[papel]}
+        opcoes={opcoes}
+        valor={escolhido}
+        aoEscolher={aoEscolher}
+      />
       {escolhido && (
         <span className={estilos.pecaEscolhida}>
           <FotoProduto id={escolhido.id} nome={escolhido.nome} tipo={escolhido.tipo} tamanho={36} />
@@ -593,6 +617,6 @@ function SeletorPeca({
           </Link>
         </span>
       )}
-    </label>
+    </div>
   );
 }

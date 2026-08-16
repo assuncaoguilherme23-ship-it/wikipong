@@ -40,88 +40,12 @@
   }
 }
 
-/* ───────── O cartão mesa ───────── */
-
-.mesa {
-  background: var(--cor-mesa);
-  /* Pinos de borracha, o motivo do domínio. 5% de branco: textura que se sente
-     e não se olha. */
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 1.3px);
-  background-size: 18px 18px;
-  border-radius: var(--raio-lg);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+/* O cartão mesa em si mora em `componentes/CartaoMesaJogador` — um arquivo só,
+   compartilhado com a tela de editar. Enquanto eram dois, a prévia da edição ia
+   divergir daqui na primeira mexida, e "é assim que você aparece" viraria
+   mentira sem ninguém notar. Aqui sobra só o espaço em volta dele. */
+.perfil > :first-child {
   margin: var(--esp-5) 0 var(--esp-7);
-  display: grid;
-  gap: var(--esp-5);
-}
-
-.mesaTexto {
-  display: grid;
-  gap: var(--esp-1);
-}
-
-.titulo {
-  font-family: var(--fonte-display);
-  font-size: var(--titulo-1);
-  line-height: var(--altura-titulo);
-  text-wrap: balance;
-  color: var(--cor-sobre-mesa); /* 10.8:1, medido */
-  margin: 0;
-  /* Nome muito longo sem espaço não pode estourar o cartão no celular. */
-  overflow-wrap: anywhere;
-}
-
-.tracos {
-  font-size: var(--texto-menor);
-  color: var(--cor-sobre-mesa-suave); /* 6.7:1, medido */
-  margin: var(--esp-1) 0 0;
-}
-
-.lugar {
-  font-size: var(--texto-menor);
-  color: var(--cor-sobre-mesa-suave);
-  margin: 0;
-}
-
-/* "procura ___" é a coisa mais humana da página: é a pessoa dizendo o que quer,
-   com as palavras dela. Ganha peso de corpo e a cor forte, ao contrário dos
-   metadados acima. */
-.procuro {
-  margin: var(--esp-3) 0 0;
-  font-size: var(--texto-maior);
-  line-height: var(--altura-corpo);
-  color: var(--cor-sobre-mesa);
-  max-width: 60ch;
-  text-wrap: pretty;
-}
-
-.procuroRotulo {
-  font-size: var(--texto-menor);
-  color: var(--cor-sobre-mesa-suave);
-  margin-right: var(--esp-2);
-}
-
-.souEu {
-  margin: 0;
-  padding-top: var(--esp-4);
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  font-size: var(--texto-menor);
-  color: var(--cor-sobre-mesa-suave);
-}
-
-.souEuLink {
-  color: var(--cor-sobre-mesa);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.souEuLink:hover {
-  text-decoration-thickness: 2px;
-}
-
-.souEuLink:focus-visible {
-  outline: 2px solid var(--cor-sobre-mesa);
-  outline-offset: 3px;
 }
 
 /* ───────── Seções sobre papel ───────── */
@@ -219,6 +143,62 @@
     padding: 0;
     border-inline-start: 0;
   }
+}
+
+/* ───────── O que já passou pela mão ─────────
+   Derivado, não perguntado: sai da estante, da raquete e das avaliações. */
+
+.companheiro {
+  margin: 0 0 var(--esp-4);
+  font-size: var(--texto-base);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  max-width: 66ch;
+  text-wrap: pretty;
+}
+
+.companheiro strong,
+.companheiro .mono {
+  color: var(--cor-tinta);
+}
+
+.marcas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+}
+
+/* Pílula, o mesmo vocabulário dos chips do catálogo — marca é filtro em
+   qualquer outro lugar do site, e aqui não pode virar um controle novo. */
+.marca {
+  display: inline-block;
+  font-size: var(--texto-menor);
+  padding: 0.3em 0.85em;
+  border-radius: 999px;
+  border: 1px solid var(--cor-linha-forte);
+  background: var(--cor-superficie);
+  color: var(--cor-tinta);
+  text-decoration: none;
+  transition: border-color 140ms ease-out, color 140ms ease-out;
+}
+
+a.marca:hover {
+  border-color: var(--cor-acento);
+  color: var(--cor-texto-acento);
+}
+
+a.marca:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}
+
+.notaSecao {
+  margin: var(--esp-3) 0 0;
+  font-size: var(--texto-mini);
+  color: var(--cor-mudo);
 }
 
 /* ───────── A estante ───────── */

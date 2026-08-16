@@ -19,8 +19,9 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { RaqueteRetrato } from '@/componentes/RaqueteRetrato';
 import { materialPorId } from '@/componentes/dados-materiais';
+import { MARCAS } from '@/componentes/dados-marcas';
+import { slug } from '@/src/logica/filtros';
 import { nomeComMarca } from '@/componentes/formato';
 import { usarSessao } from '@/componentes/usarSessao';
 import { repositorio } from '@/src/logica/repositorio-avaliacoes';
@@ -31,9 +32,14 @@ import {
 } from '@/src/logica/estante';
 import { linhaDoTempo, ROTULO_ATIVIDADE, type Atividade } from '@/src/logica/atividade';
 import { procedenciaDe, type ProcedenciaDoAvaliador } from '@/src/logica/procedencia-do-avaliador';
-import { ROTULO_ESTILO } from '@/src/logica/avaliacoes';
-import { ROTULO_MAO, ROTULO_EMPUNHADURA, type Perfil } from '@/src/logica/perfil';
+import { retratoDoJogador } from '@/src/logica/retrato-do-jogador';
+import type { Avaliacao } from '@/src/logica/avaliacoes';
+import { tracosDoPerfil, contextoDoPerfil, type Perfil } from '@/src/logica/perfil';
+import { CartaoMesaJogador } from '@/componentes/CartaoMesaJogador';
 import estilos from './jogador.module.css';
+
+/** O catálogo mora na UI; `retrato-do-jogador` é puro e recebe o resolvedor. */
+const marcaDe = (id: string): string | undefined => materialPorId(id)?.marca;
 
 /** O que a tela precisa do perfil, mais o dono — que não está no tipo `Perfil`. */
 type PerfilPublico = Perfil & { usuarioId: string };
@@ -93,8 +99,11 @@ export function JogadorCliente() {
   const [atividade, setAtividade] = useState<Atividade[]>([]);
   const [procedencia, setProcedencia] = useState<ProcedenciaDoAvaliador | null>(null);
   const [resolveu, setResolveu] = useState(0);
+  const [avaliacoes, setAvaliacoes] = useState<Avaliacao[]>([]);
 
   const repoEstante = useMemo(() => repositorioEstante(), []);
+  /* Lido uma vez, na montagem: `retratoDoJogador` é puro e recebe o ano. */
+  const anoAtual = useMemo(() => new Date().getFullYear(), []);
 
   useEffect(() => {
     if (!apelido) { setPerfil(null); return; }
@@ -120,6 +129,7 @@ export function JogadorCliente() {
         if (!vivo) return;
         const minhas = avs.filter((a) => a.usuarioId === dono);
         setProcedencia(minhas.length > 0 ? procedenciaDe(minhas) : null);
+        setAvaliacoes(minhas);
         return minhas;
       })
       .then(async (minhas) => {
@@ -130,7 +140,7 @@ export function JogadorCliente() {
         setAtividade(linhaDoTempo(minhas ?? [], topicos, respostas, dono));
         setResolveu(resolveuQuantas(topicos, dono));
       })
-      .catch(() => { if (vivo) { setAtividade([]); setResolveu(0); } });
+      .catch(() => { if (vivo) { setAtividade([]); setResolveu(0); setAvaliacoes([]); } });
 
     return () => { vivo = false; };
   }, [perfil, repoEstante]);
@@ -175,13 +185,21 @@ export function JogadorCliente() {
 
   const souODono = usuario?.id === perfil.usuarioId;
   const naEstante = ordenarEstante(estante);
-  const lugar = [perfil.cidade, perfil.uf].filter(Boolean).join(' · ');
-  const tracos = [
-    perfil.estilo ? ROTULO_ESTILO[perfil.estilo] : null,
-    perfil.nivel,
-    perfil.mao ? ROTULO_MAO[perfil.mao] : null,
-    perfil.empunhadura ? ROTULO_EMPUNHADURA[perfil.empunhadura] : null,
-  ].filter(Boolean);
+
+  /* As duas linhas do cartão vêm do módulo puro, e não daqui: a tela de editar
+     mostra exatamente as mesmas, e enquanto cada página montava a sua, "é assim
+     que você aparece" dependia de ninguém mexer numa das duas. */
+  const retrato = retratoDoJogador({
+    jogaDesde: perfil.jogaDesde,
+    anoAtual,
+    avaliacoes,
+    estante,
+    equipamento: perfil.equipamento,
+    marcaDe,
+  });
+  const companheiro = retrato.companheiroMaisAntigo
+    ? materialPorId(retrato.companheiroMaisAntigo.materialId)
+    : undefined;
 
   /* Um array só, em vez de JSX aninhado com fragmentos condicionais. A tira de
      fatos precisa saber QUANTOS fatos tem pra se distribuir, e antes ela não
@@ -210,6 +228,15 @@ export function JogadorCliente() {
       rotulo: resolveu === 1 ? 'dúvida que resolveu' : 'dúvidas que resolveu',
     });
   }
+  /* Derivado, não perguntado: diz se a pessoa é generosa ou dura com nota — que
+     é exatamente o que falta pra saber quanto pesa um "4" dela. Só sai com
+     amostra suficiente; o módulo puro cuida do piso. */
+  if (retrato.notaQueCostumaDar !== undefined) {
+    fatos.push({
+      valor: retrato.notaQueCostumaDar.toFixed(1).replace('.', ','),
+      rotulo: 'é a nota que costuma dar',
+    });
+  }
 
   /* O perfil recém-nascido — nome e estilo, nada mais. É o PRIMEIRO estado que
      alguém vê do próprio espaço, saindo das boas-vindas, e era o menos
@@ -229,31 +256,21 @@ export function JogadorCliente() {
           A raquete entra AQUI dentro, e não como seção separada logo abaixo:
           num site de equipamento, a raquete é parte de quem a pessoa é. Separar
           as duas era o que fazia isto parecer um registro de banco de dados. */}
-      <header className={estilos.mesa}>
-        <div className={estilos.mesaTexto}>
-          <h1 className={estilos.titulo}>{perfil.nome}</h1>
-          {tracos.length > 0 && (
-            <p className={`mono ${estilos.tracos}`}>{tracos.join(' · ')}</p>
-          )}
-          {lugar && <p className={estilos.lugar}>{lugar}</p>}
-          {perfil.procuro && (
-            <p className={estilos.procuro}>
-              <span className={estilos.procuroRotulo}>procura</span> {perfil.procuro}
-            </p>
-          )}
-        </div>
-
-        <RaqueteRetrato equipamento={perfil.equipamento} sobreMesa />
-
-        {souODono && (
-          <p className={estilos.souEu}>
-            Este é o seu perfil, como os outros veem.{' '}
-            <Link href="/comunidade/perfil/" className={estilos.souEuLink}>
-              Editar
-            </Link>
-          </p>
-        )}
-      </header>
+      <CartaoMesaJogador
+        nome={perfil.nome}
+        tracos={tracosDoPerfil(perfil)}
+        contexto={contextoDoPerfil(perfil, anoAtual)}
+        procuro={perfil.procuro}
+        equipamento={perfil.equipamento}
+        rodape={
+          souODono ? (
+            <>
+              <span>Este é o seu perfil, como os outros veem.</span>
+              <Link href="/comunidade/perfil/">Editar</Link>
+            </>
+          ) : undefined
+        }
+      />
 
       {souODono && aindaVazio && (
         <section className={estilos.comecando} aria-labelledby="t-comecando">
@@ -292,6 +309,52 @@ export function JogadorCliente() {
               </li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {/* ── Derivado, não perguntado ──
+             Ninguém digitou nada disto: sai da estante, da raquete e das
+             avaliações que a pessoa já tinha. É o que faz o perfil ficar
+             detalhado sem o formulário ficar maior. */}
+      {(retrato.marcas.length > 0 || companheiro) && (
+        <section className={estilos.secao} aria-labelledby="t-passou">
+          <h2 id="t-passou" className={estilos.tituloSecao}>O que já passou pela mão</h2>
+
+          {companheiro && retrato.companheiroMaisAntigo && (
+            <p className={estilos.companheiro}>
+              Está com a{' '}
+              <Link href={`/materiais/${companheiro.id}/`}>
+                {nomeComMarca(companheiro.marca, companheiro.nome)}
+              </Link>{' '}
+              desde{' '}
+              <span className="mono">{retrato.companheiroMaisAntigo.desde}</span> — é a peça
+              que ficou mais tempo na raquete.
+            </p>
+          )}
+
+          {retrato.marcas.length > 0 && (
+            <>
+              <ul className={estilos.marcas}>
+                {retrato.marcas.map((m) => {
+                  const s = slug(m);
+                  /* Só vira link se a página existir de verdade: marca sem
+                     página viraria link morto, que o D-16 proíbe. */
+                  return MARCAS.some((x) => x.slug === s) ? (
+                    <li key={m}>
+                      <Link href={`/marcas/${s}/`} className={estilos.marca}>{m}</Link>
+                    </li>
+                  ) : (
+                    <li key={m}><span className={estilos.marca}>{m}</span></li>
+                  );
+                })}
+              </ul>
+              <p className={estilos.notaSecao}>
+                {retrato.marcas.length === 1
+                  ? 'A única marca que aparece na estante, na raquete ou nas avaliações.'
+                  : `${retrato.marcas.length} marcas entre a estante, a raquete e as avaliações.`}
+              </p>
+            </>
+          )}
         </section>
       )}
 

@@ -2154,6 +2154,27 @@
       }
     },
     {
+      "id": "xiom-hayabusa-zl-pro",
+      "nome": "Xiom Hayabusa ZL Pro",
+      "marca": "Xiom",
+      "tipo": "Lâmina",
+      "nivel": "Avançado",
+      "intencao": "equilibrado",
+      "preco": 79.26,
+      "moeda": "EUR",
+      "specs": {
+        "velocidade": 8.3,
+        "controle": 9.7
+      },
+      "origemSpecs": "comunidade",
+      "rating": 4.8,
+      "reviews": 7,
+      "simples": {
+        "tag": "7 jogadores avaliaram",
+        "frase": "7 pessoas que usaram esta lâmina deram, em média, velocidade 8.3 e controle 9.7 na escala 0–10 do Revspin. É opinião de quem jogou, não número de fabricante — a Xiom não publica índice nenhum, nem para esta lâmina nem para as outras Hayabusa."
+      }
+    },
+    {
       "id": "xiom-lss-alx-lite",
       "nome": "Xiom LSS ALX Lite",
       "marca": "Xiom",

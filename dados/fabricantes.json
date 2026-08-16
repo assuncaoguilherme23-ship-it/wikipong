@@ -15015,6 +15015,42 @@
         }
       ],
       "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço."
+    },
+    "xiom-hayabusa-zl-pro": {
+      "confianca": "revendedor",
+      "fonte": "https://www.operatt.com.br/madeira-cl-ssica-xiom---hayabusa-zl-pro",
+      "consultadoEm": "2026-08-15",
+      "ficha": [
+        {
+          "rotulo": "Tipo de lâmina",
+          "valor": "Lâmina avulsa. O cabo se escolhe na loja (FL côncavo ou ST reto)"
+        },
+        {
+          "rotulo": "Construção",
+          "valor": "5 madeiras + 2 de fibra, com a fibra POR DENTRO (inner composite)"
+        },
+        {
+          "rotulo": "Madeira externa",
+          "valor": "Koto"
+        },
+        {
+          "rotulo": "Espessura",
+          "valor": "5,7 mm"
+        },
+        {
+          "rotulo": "Cabeça",
+          "valor": "158 × 150 mm"
+        },
+        {
+          "rotulo": "Peso aproximado",
+          "valor": "85 g"
+        },
+        {
+          "rotulo": "Classe",
+          "valor": "OFF (ofensiva)"
+        }
+      ],
+      "nota": "Dureza de esponja não se aplica: a lâmina é de madeira. A Xiom NÃO publica índice de velocidade, efeito ou controle — os números da ficha de desempenho vêm da comunidade (Revspin, 7 avaliações, escala 0–10), e por isso estão marcados como origem 'comunidade'. É o que separa esta lâmina das outras quatro Hayabusa do catálogo, que ficaram abaixo do piso de 5 avaliações e entraram sem desempenho. AS FONTES DIVERGEM EM DUAS COISAS, e a divergência fica dita em vez de escondida: (1) a OperaTT e o Revspin dizem 5,7 mm, enquanto fichas em inglês dizem 5,6 mm; (2) a OperaTT e o Revspin nomeiam a fibra como Zephylium (ZL), e a VSport a chama de TMX/Trimetrix. Registramos o que as duas fontes concordantes dizem. PREÇO: no Brasil a OperaTT lista a lâmina (clássica e classineta) mas estava SEM ESTOQUE e sem preço na tela em 2026-08-15 — um preço de R$ 650 aparece em cache de busca e NÃO foi confirmado na página, então não entrou. O preço publicado aqui é o da VSport (Espanha), em euro, dito como euro: https://vsport-tt.com/pt/madeiras-tenis-de-mesa/madeira-xiom-hayabusa-zl-pro. Converter para real seria inventar. O 'rating' 4.8 é o Overall 9.5 do Revspin na régua 0–10 reescalado para 0–5 (dividido por 2)."
     }
   }
 }

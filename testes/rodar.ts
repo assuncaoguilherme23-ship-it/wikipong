@@ -34,7 +34,8 @@ import {
   buscarTopicos, respostasOrdenadas, temRespostaUtil, resolveuQuantas, type Mensagem as MensagemForum,
 } from '../src/logica/discussoes.js';
 import {
-  perfilVazio, temIdentidade, pecasEscolhidas,
+  perfilVazio, temIdentidade, pecasEscolhidas, oQueFalta,
+  tracosDoPerfil, contextoDoPerfil, porQueNaoGravouPerfil,
   ROTULO_MAO, ROTULO_EMPUNHADURA, MAOS, EMPUNHADURAS, type Perfil,
 } from '../src/logica/perfil.js';
 import {
@@ -57,6 +58,7 @@ import { NOTICIAS } from '../componentes/dados-noticias.js';
 import { RESUMO_MINIMO } from '../src/logica/noticias-fila.js';
 import { apelidoDe } from '../src/logica/apelido.js';
 import { mensagemDeErro, caminhoInterno, DEPOIS_DE_ENTRAR } from '../src/logica/sessao.js';
+import { retratoDoJogador } from '../src/logica/retrato-do-jogador.js';
 import { procedenciaDe } from '../src/logica/procedencia-do-avaliador.js';
 import {
   ordenarEstante, emUsoHoje, problemasDaEntrada, motivoVisivel,
@@ -1790,6 +1792,150 @@ afirma(!/console\.(log|warn|error|info)/.test(fonteSessao),
    em query string — histórico do navegador, log de acesso, header Referer. */
 afirma(!/password=\$?\{?senha/.test(fonteSessao),
   'sessao.ts esta mandando senha na query string em vez do corpo do POST');
+
+/* ───────── o retrato derivado: o que o site ja sabia e nunca disse ─────────
+   Estas nao vem de campo preenchido: vem do que a pessoa ja' fez no site. Por
+   isso valem asercao — sao a parte do perfil que ninguem digitou e que ninguem
+   vai conferir olhando. */
+const marcaFake = (id: string): string | undefined =>
+  ({ tenergy05: 'Butterfly', markv: 'Yasaka', viscaria: 'Butterfly' })[id];
+
+const retratoBase = {
+  anoAtual: 2026,
+  avaliacoes: [] as Avaliacao[],
+  estante: [] as EntradaDeEstante[],
+  equipamento: {},
+  marcaDe: marcaFake,
+};
+
+afirma(retratoDoJogador({ ...retratoBase, jogaDesde: 2014 }).anosDeRaquete === 12,
+  'retrato: 2026 menos 2014 sao 12 anos de raquete');
+/* Ano no futuro nao pode virar numero negativo na tela. Dado impossivel e' dado
+   que falta, nao dado que se conserta com Math.abs. */
+afirma(retratoDoJogador({ ...retratoBase, jogaDesde: 2030 }).anosDeRaquete === undefined,
+  'retrato: ano no futuro tem que sumir, nao virar "-4 anos de raquete"');
+afirma(retratoDoJogador({ ...retratoBase, jogaDesde: 2026 }).anosDeRaquete === 0,
+  'retrato: quem comecou este ano tem 0 anos, e isso e um numero valido');
+afirma(retratoDoJogador(retratoBase).anosDeRaquete === undefined,
+  'retrato: sem ano informado nao ha anos de raquete');
+
+/* O MESMO piso do site pra publicar media de material. Media de duas notas
+   engana mais que informa, e isso nao muda por ser de gente em vez de borracha. */
+const duasNotas = [av({ id: 'a', nota: 5 }), av({ id: 'b', nota: 1 })];
+afirma(retratoDoJogador({ ...retratoBase, avaliacoes: duasNotas }).notaQueCostumaDar === undefined,
+  'retrato: media com amostra abaixo do piso nao pode ser publicada');
+const tresNotas = [...duasNotas, av({ id: 'c', nota: 3 })];
+afirma(retratoDoJogador({ ...retratoBase, avaliacoes: tresNotas }).notaQueCostumaDar === 3,
+  'retrato: com o piso atingido, a media sai');
+afirma(retratoDoJogador({
+  ...retratoBase,
+  avaliacoes: [av({ id: 'a', nota: 4 }), av({ id: 'b', nota: 4 }), av({ id: 'c', nota: 5 })],
+}).notaQueCostumaDar === 4.3,
+  'retrato: a media arredonda pra uma casa, nao despeja 4.333333333');
+afirma(retratoDoJogador({ ...retratoBase, avaliacoes: tresNotas }).quantasAvaliacoes === 3,
+  'retrato: a contagem conta todas, independente do piso da media');
+
+/* Marca aparece UMA vez, venha de onde vier — o mesmo material esta' na estante,
+   na raquete e nas avaliacoes o tempo todo. */
+const comMarcas = retratoDoJogador({
+  ...retratoBase,
+  avaliacoes: [av({ id: 'a', materialId: 'tenergy05' })],
+  estante: [{ id: '1', materialId: 'markv', de: '2020-01-01' }],
+  equipamento: { lamina: 'viscaria', fh: 'tenergy05' },
+});
+afirma(comMarcas.marcas.length === 2 && comMarcas.marcas[0] === 'Butterfly',
+  'retrato: marca repetida entre estante, raquete e avaliacao conta uma vez so, em ordem');
+afirma(retratoDoJogador({
+  ...retratoBase, equipamento: { lamina: 'material-que-nao-existe' },
+}).marcas.length === 0,
+  'retrato: id fora do catalogo nao pode virar marca vazia na lista');
+
+/* "Em uso ha mais tempo" precisa das DUAS coisas. So' "mais antigo" daria o
+   posto a uma peca abandonada em 2015. */
+const companheiro = retratoDoJogador({
+  ...retratoBase,
+  estante: [
+    { id: '1', materialId: 'tenergy05', de: '2015-01-01', ate: '2016-01-01' },
+    { id: '2', materialId: 'markv', de: '2019-01-01' },
+    { id: '3', materialId: 'viscaria', de: '2023-01-01' },
+    { id: '4', materialId: 'dhs-hurricane-3' },
+  ],
+}).companheiroMaisAntigo;
+afirma(companheiro?.materialId === 'markv' && companheiro.desde === 2019,
+  'retrato: o companheiro mais antigo tem que estar EM USO — peca abandonada em 2015 nao vale');
+afirma(retratoDoJogador({
+  ...retratoBase, estante: [{ id: '1', materialId: 'markv' }],
+}).companheiroMaisAntigo === undefined,
+  'retrato: sem data de entrada nao ha companheiro mais antigo — nao invento cronologia');
+
+/* ───────── por que o perfil nao gravou ─────────
+   O pior sintoma possivel de um formulario e' aceitar tudo e nao guardar nada.
+   Era o que acontecia: `gravar` nao olhava o status e terminava em catch vazio.
+   O caso 1 e' o que MAIS vai acontecer -- coluna nova no codigo, migracao nao
+   rodada no banco. */
+afirma(/migra/i.test(porQueNaoGravouPerfil(400, 'PGRST204', "Could not find the 'bola' column")),
+  'gravacao: coluna faltando tem que mandar rodar a migracao, nao mostrar PGRST204');
+afirma(/sess/i.test(porQueNaoGravouPerfil(401, '', '')),
+  'gravacao: 401 tem que falar em sessao, que e o que a pessoa pode resolver');
+afirma(/ano|campos/i.test(porQueNaoGravouPerfil(400, '23514', 'violates check constraint')),
+  'gravacao: constraint violada tem que apontar onde olhar');
+afirma(/500/.test(porQueNaoGravouPerfil(500, '', '')),
+  'gravacao: erro desconhecido precisa do status pra dar por onde comecar');
+for (const caso of [
+  [400, 'PGRST204', "Could not find the 'bola' column"],
+  [401, '', ''],
+  [400, '23514', 'violates check constraint'],
+  [500, '', ''],
+] as const) {
+  const frase = porQueNaoGravouPerfil(caso[0], caso[1], caso[2]);
+  afirma(!/(could not find|violates|PGRST|permission denied)/i.test(frase),
+    `gravacao ${caso[1] || caso[0]}: sobrou jargao do Postgres na frase que a pessoa le`);
+}
+
+/* ───────── as duas linhas do cartao ─────────
+   Moram num modulo puro justamente porque DUAS telas as pintam: a de editar e a
+   publica. Enquanto cada uma montava a sua, "e assim que voce aparece" dependia
+   de ninguem mexer numa das duas. */
+const jogadorCheio: Perfil = {
+  ...perfilVazio(), nome: 'Ana', estilo: 'atacante', nivel: 'Avançado',
+  mao: 'canhoto', empunhadura: 'caneta-chinesa',
+  jogaDesde: 2014, frequencia: 'toda-semana', clube: 'FitPong',
+  cidade: 'Rio de Janeiro', uf: 'RJ', bola: 'Nittaku Premium',
+};
+afirma(tracosDoPerfil(jogadorCheio).join(' · ') === 'Atacante · Avançado · Canhoto · Caneta chinesa',
+  'tracos: a linha de dado sai na ordem e com os rotulos do sistema');
+afirma(tracosDoPerfil(perfilVazio()).length === 0,
+  'tracos: perfil vazio nao pode produzir separador solto');
+
+const contexto2026 = contextoDoPerfil(jogadorCheio, 2026);
+afirma(contexto2026[0] === '12 anos de raquete', 'contexto: os anos de raquete abrem a linha');
+afirma(contexto2026.includes('joga toda semana'), 'contexto: a frequencia entra em minuscula, como frase');
+afirma(contexto2026.includes('Rio de Janeiro · RJ'), 'contexto: cidade e UF sao um item so');
+/* Mesma armadilha do retrato, e ela precisa estar fechada nos DOIS lugares: o
+   banco nao consegue barrar "ano que vem" porque um CHECK nao sabe que dia e hoje. */
+afirma(!contextoDoPerfil({ ...jogadorCheio, jogaDesde: 2030 }, 2026).some((s) => /raquete/.test(s)),
+  'contexto: ano no futuro nao pode virar "-4 anos de raquete"');
+afirma(contextoDoPerfil({ ...perfilVazio(), jogaDesde: 2025 }, 2026)[0] === '1 ano de raquete',
+  'contexto: um ano no singular');
+afirma(contextoDoPerfil({ ...perfilVazio(), jogaDesde: 2026 }, 2026)[0] === 'começou este ano',
+  'contexto: quem comecou este ano nao tem "0 anos de raquete"');
+afirma(contextoDoPerfil(perfilVazio(), 2026).length === 0,
+  'contexto: perfil sem nada nao produz linha nenhuma');
+
+/* ───────── o que ainda da' pra contar ─────────
+   Sem porcentagem de proposito: barra de "60% completo" faz a pessoa preencher
+   pra calar o medidor, e dado ruim e' pior que dado faltando (D-16). */
+const perfilCru = perfilVazio();
+afirma(oQueFalta(perfilCru, false).every((i) => !i.soComConta),
+  'o que falta: deslogado nao pode pedir campo que so existe pra ser lido por outro');
+afirma(oQueFalta(perfilCru, true).length > oQueFalta(perfilCru, false).length,
+  'o que falta: com conta a lista tem que ser maior, que e o que a conta destrava');
+afirma(oQueFalta(perfilCru, true).every((i) => i.serve.trim().length > 10),
+  'o que falta: todo item precisa dizer PRA QUE serve, senao vira cobranca vazia');
+afirma(oQueFalta({ ...perfilCru, nome: 'Ana' }, false).every((i) => i.campo !== 'nome'),
+  'o que falta: campo ja preenchido nao pode continuar sendo pedido');
+afirma(!/%/.test(JSON.stringify(oQueFalta(perfilCru, true))),
+  'o que falta: apareceu porcentagem — a lista nao pode virar medidor de completude');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

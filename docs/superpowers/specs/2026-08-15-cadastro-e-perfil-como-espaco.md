@@ -104,6 +104,54 @@ formas disfarçadas passam por "começa com barra" — `//alvo` e `/\alvo` (o
 navegador normaliza a contrabarra). A função está em `src/logica/sessao.ts` com
 as duas cobertas por asserção; tirar a guarda derruba exatamente dois testes.
 
+---
+
+## 7. Segunda rodada — "não gostei do layout" (2026-08-15, mesmo dia)
+
+O fundador olhou e recusou: **"Precisa ser mais trabalhada, deixar o espaço como único do usuário, e é preciso de cadastro pra ele ter esse perfil completo e detalhado."** Perguntado, ele escolheu **as duas telas** e **campos novos + apresentação rica, com quem não entra vendo pouco**.
+
+### As duas telas viraram uma só coisa vista de dois lados
+
+`componentes/CartaoMesaJogador` passou a ser o topo das duas. Não é "dois blocos parecidos": é o mesmo componente, com os mesmos dados, pintando **ao vivo** enquanto se digita na tela de editar. Antes havia um "crachá" no meio do formulário que *imitava* a página pública — e imitação diverge na primeira mexida, o que faria "é assim que você aparece" virar mentira sem ninguém notar.
+
+Duas funções puras (`tracosDoPerfil`, `contextoDoPerfil`) garantem que as duas linhas do cartão sejam idênticas nas duas telas, com asserção em cima.
+
+### O formulário deixou de ser um paredão
+
+Oito campos numa grade só viraram **três grupos com nome** — quem você é · como você joga · onde você joga — cada um com uma frase dizendo pra que serve. Grupo com nome é uma pergunta de cada vez, mesmo com tudo na tela. Ao lado, um **trilho** lista o que ainda dá pra contar e **o que cada coisa faz aparecer**.
+
+**Sem porcentagem, e isso é decisão, não esquecimento.** Barra de "perfil 60% completo" faz a pessoa preencher pra calar o medidor, e dado ruim é pior que dado faltando (D-16). A lista some conforme ela conta.
+
+### Quatro campos novos, e o critério de escolha
+
+Migração **016**. O critério foi: pergunta curta, resposta que a pessoa sabe de cabeça, e que **muda como se lê o resto do perfil**.
+
+| Campo | Por que ele muda a leitura |
+|---|---|
+| `joga_desde` | "rápida demais" de quem joga há 1 ano e de quem joga há 20 são duas frases diferentes |
+| `frequencia` | quem joga todo dia gasta uma borracha em 3 meses; quem joga aos sábados leva 2 anos — e os dois dizem "durou pouco" |
+| `clube` | o único campo do perfil que liga uma pessoa a outra |
+| `bola` | detalhe que só mesatenista pergunta, e que muda o toque |
+
+Nenhuma política nova: as policies de `perfis` valem por **linha**, e coluna nova entra coberta.
+
+### E o que ficou detalhado sem perguntar nada
+
+`src/logica/retrato-do-jogador.ts` — derivado do que já existia: anos de raquete, **a nota que a pessoa costuma dar** (só a partir do mesmo `PISO_PARA_MEDIA` que o site usa pra material — média de duas notas engana mais que informa), as marcas que passaram pela mão dela, e a peça que está na raquete há mais tempo.
+
+### A linha entre local e com conta é factual, não comercial
+
+- **Nome · estilo · nível · raquete** funcionam sem conta: preenchem sozinhos a próxima avaliação e alimentam o montador. Guardar no navegador **serve pra alguma coisa**.
+- **Todo o resto** só existe pra ser lido por outra pessoa. Sem conta não há página onde alguém leia — o endereço público nasce do apelido, que nasce da conta. Guardar "meu clube é a FitPong" num navegador onde ninguém vai ver seria fingir que algo foi feito.
+
+Essa frase está na tela, com essas palavras. Não é lista de vantagem inventada.
+
+### Um silêncio que eu ia criar e fechei
+
+`gravar()` do perfil não olhava `res.ok` e terminava em `.catch(() => {})`. Com colunas novas no código e migração não rodada no banco, o sintoma seria **o pior possível para um formulário: aceitar tudo e não guardar nada**. Agora ela lança, a tela mostra o motivo em português logo abaixo do cartão, e o caso mais provável (`PGRST204`) tem frase própria mandando rodar a migração. As boas-vindas já chamavam `gravar` dentro de `try/catch` esperando esse comportamento.
+
+**Suíte: 616 asserções** (eram 537 no começo do dia).
+
 ### O que continua verdade
 
 - RLS intocada: nenhuma migração foi alterada. A porta nova muda como a pessoa

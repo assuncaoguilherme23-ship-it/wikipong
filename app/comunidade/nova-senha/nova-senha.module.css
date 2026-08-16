@@ -1,0 +1,129 @@
+/* Definir senha nova.
+   Mesma coluna estreita da tela de entrar: é a continuação da mesma conversa,
+   e mudar a largura no meio faria parecer outro site. */
+
+.quadro {
+  max-width: 34rem;
+  margin: var(--esp-6) auto var(--esp-8);
+}
+
+.carregando {
+  padding: var(--esp-6) 0;
+  color: var(--cor-tinta-suave);
+}
+
+.titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-2);
+  line-height: var(--altura-titulo);
+  text-wrap: balance;
+  margin: 0 0 var(--esp-2);
+}
+
+.explica {
+  font-size: var(--texto-base);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+  margin: 0 0 var(--esp-5);
+}
+
+.form {
+  display: grid;
+  gap: var(--esp-4);
+  justify-items: start;
+  padding: var(--esp-5);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-cartao);
+}
+
+.form > button[type='submit'] {
+  width: 100%;
+}
+
+.campo {
+  display: grid;
+  gap: var(--esp-1);
+  width: 100%;
+}
+
+.rotulo {
+  font-size: var(--texto-menor);
+  font-weight: 600;
+}
+
+.campo input {
+  width: 100%;
+  font: inherit;
+  font-size: var(--texto-base);
+  padding: 0.55em 0.7em;
+  color: var(--cor-tinta);
+  background: var(--cor-papel);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+}
+
+.campo input[aria-invalid='true'] {
+  border-color: var(--cor-erro);
+}
+
+.campo input:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}
+
+.comBotao {
+  position: relative;
+  display: block;
+}
+
+.comBotao input {
+  padding-right: 4.5rem;
+}
+
+.verSenha {
+  position: absolute;
+  top: 50%;
+  right: 0.45rem;
+  transform: translateY(-50%);
+  font: inherit;
+  font-size: var(--texto-mini);
+  padding: 0.3em 0.55em;
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-sm);
+  background: var(--cor-superficie);
+  color: var(--cor-tinta-suave);
+  cursor: pointer;
+}
+
+.verSenha:hover {
+  color: var(--cor-texto-acento);
+  border-color: var(--cor-acento);
+}
+
+.verSenha:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}
+
+.regra {
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-mudo);
+}
+
+.erro {
+  margin: 0;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-erro);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-3);
+  margin-top: var(--esp-4);
+}

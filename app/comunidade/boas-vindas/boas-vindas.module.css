@@ -35,7 +35,10 @@
 .trechoFeito {
   height: 3px;
   flex: 1;
-  border-radius: 2px;
+  /* Pílula, e não um raio de 2px fora da escala: num traço de 3px de altura as
+     duas coisas desenham exatamente a mesma ponta arredondada, e esta está no
+     sistema. */
+  border-radius: 999px;
   background: var(--cor-linha);
 }
 

@@ -26,7 +26,7 @@ import {
 } from '@/src/logica/perfil';
 import { ROTULO_ESTILO, NIVEIS, type EstiloJogador, type NivelJogador } from '@/src/logica/avaliacoes';
 import { MATERIAIS, materialPorId } from '@/componentes/dados-materiais';
-import { nomeComMarca } from '@/componentes/formato';
+import { SeletorMaterial } from '@/componentes/SeletorMaterial';
 import { usarSessao } from '@/componentes/usarSessao';
 import { Login } from '@/componentes/Login';
 import { caminhoDoPerfil } from '@/componentes/apelidos';
@@ -251,19 +251,19 @@ export function BoasVindasCliente() {
 
         {atual.id === 'raquete' && (
           <>
-            <SeletorMaterial
+            <EscolhaDeMaterial
               rotulo="Lâmina"
               lista={laminas}
               valor={perfil.equipamento.lamina}
               aoEscolher={(id) => salvar({ equipamento: { ...perfil.equipamento, lamina: id } })}
             />
-            <SeletorMaterial
+            <EscolhaDeMaterial
               rotulo="Borracha do forehand"
               lista={borrachas}
               valor={perfil.equipamento.fh}
               aoEscolher={(id) => salvar({ equipamento: { ...perfil.equipamento, fh: id } })}
             />
-            <SeletorMaterial
+            <EscolhaDeMaterial
               rotulo="Borracha do backhand"
               lista={borrachas}
               valor={perfil.equipamento.bh}
@@ -319,7 +319,18 @@ export function BoasVindasCliente() {
   );
 }
 
-function SeletorMaterial({
+/**
+ * Antes era um `<select>` nativo com as 549 lâminas dentro. Sem busca, o select
+ * só pula pra primeira letra digitada — e como quase todo nome do catálogo
+ * começa pela marca, "Hayabusa" nunca é a primeira letra de nada. Achar a sua
+ * lâmina virava rolar centenas de linhas, no passo em que a pessoa está há
+ * menos de um minuto no site.
+ *
+ * O `SeletorMaterial` de verdade já existia (busca, foto, preço, combobox ARIA
+ * completo). Aqui ele só ganha um jeito de DESFAZER: nas boas-vindas, escolher
+ * errado sem poder voltar atrás é pior que não escolher.
+ */
+function EscolhaDeMaterial({
   rotulo,
   lista,
   valor,
@@ -332,19 +343,19 @@ function SeletorMaterial({
 }) {
   const escolhido = valor ? materialPorId(valor) : undefined;
   return (
-    <label className={estilos.campo}>
-      <span className={estilos.rotulo}>{rotulo}</span>
-      <select value={valor ?? ''} onChange={(e) => aoEscolher(e.target.value || undefined)}>
-        <option value="">não sei / deixar em branco</option>
-        {lista.map((m) => (
-          <option key={m.id} value={m.id}>
-            {nomeComMarca(m.marca, m.nome)}
-          </option>
-        ))}
-      </select>
+    <div className={estilos.campo}>
+      <SeletorMaterial
+        rotulo={rotulo}
+        opcoes={lista}
+        valor={escolhido}
+        aoEscolher={(id) => aoEscolher(id)}
+        placeholder="buscar por nome ou marca — ou deixar em branco"
+      />
       {escolhido && (
-        <span className={`mono ${estilos.confirmado}`}>{escolhido.marca}</span>
+        <button type="button" className={estilos.pular} onClick={() => aoEscolher(undefined)}>
+          não sei, deixar em branco
+        </button>
       )}
-    </label>
+    </div>
   );
 }

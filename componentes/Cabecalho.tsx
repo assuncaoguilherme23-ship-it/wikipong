@@ -190,6 +190,12 @@ export function Cabecalho() {
                   <p className={`mono ${estilos.megaTitulo}`}>Acompanhar</p>
                   <Link href="/noticias/">Notícias</Link>
                   <Link href="/profissionais/">O que os profissionais usam</Link>
+                  {/* Item FIXO, não condicional a estar logado. Descobrir se
+                      há sessão custa duas idas à rede, e o cabeçalho pinta em
+                      toda página do site — trocaria uma palavra por uma
+                      requisição por navegação. A tela de entrar já sabe se
+                      apresentar pra quem chega logado. */}
+                  <Link href="/comunidade/entrar/">Entrar ou criar conta</Link>
                 </div>
               </div>
             )}
@@ -258,6 +264,7 @@ export function Cabecalho() {
             <Link href="/comunidade/discussoes/">Discussões</Link>
             <Link href="/comunidade/perfil/">Meu perfil</Link>
             <LinkModeracao />
+            <Link href="/comunidade/entrar/">Entrar ou criar conta</Link>
             <Link href="/noticias/">Notícias</Link>
             <Link href="/profissionais/">O que os profissionais usam</Link>
             <Link href="/quiz/" className={`botao-primario ${estilos.drawerCta}`}>

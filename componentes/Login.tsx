@@ -1,7 +1,15 @@
 /**
- * WikiPong · Entrar por link no e-mail
+ * WikiPong · Entrar por link no e-mail — a versão de bolso
  * ------------------------------------------------------------------------------
- * Um campo e um botão. Sem senha, sem cadastro, sem "confirme sua senha".
+ * Um campo e um botão. É o que aparece EMBUTIDO no meio de outra coisa: na
+ * ficha de um material, embaixo de uma discussão, no começo das boas-vindas.
+ *
+ * POR QUE AQUI SÓ TEM UMA PORTA, se o site tem duas: quem encontra este
+ * formulário não veio se cadastrar — veio avaliar uma borracha e esbarrou na
+ * conta. Nesse momento, escolher entre senha e link é uma decisão a mais no
+ * caminho de outra coisa. O link resolve sem escolha nenhuma, e quem quiser
+ * senha tem o atalho logo abaixo, que leva à tela inteira (`/comunidade/entrar/`)
+ * e volta pra cá depois.
  *
  * A tela nunca diz se o e-mail existe ou não: a resposta é sempre "olhe a sua
  * caixa". Dizer "não achei esse e-mail" entregaria a quem estivesse fuçando a
@@ -10,10 +18,13 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { pedirLink, loginDisponivel } from '@/src/logica/sessao';
 import estilos from './Login.module.css';
 
 export function Login({ titulo, explicacao }: { titulo: string; explicacao: string }) {
+  const rota = usePathname();
   const [email, setEmail] = useState('');
   const [estado, setEstado] = useState<'parado' | 'enviando' | 'enviado' | 'erro'>('parado');
   const [erro, setErro] = useState('');
@@ -93,6 +104,16 @@ export function Login({ titulo, explicacao }: { titulo: string; explicacao: stri
 
       <p className={estilos.nota}>
         Sem senha: o link que chega no e-mail é a prova de que a conta é sua.
+      </p>
+
+      {/* O `volta` traz a pessoa de volta EXATAMENTE pra onde ela estava. Sem
+          isso, quem clica aqui pra criar senha perde a borracha que ia avaliar
+          e tem que achar a página de novo — e aí não avalia. */}
+      <p className={estilos.nota}>
+        Prefere senha?{' '}
+        <Link href={`/comunidade/entrar/?modo=criar&volta=${encodeURIComponent(rota)}`}>
+          Criar conta com e-mail e senha
+        </Link>
       </p>
     </form>
   );

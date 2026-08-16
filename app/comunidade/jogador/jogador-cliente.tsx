@@ -135,16 +135,40 @@ export function JogadorCliente() {
     return () => { vivo = false; };
   }, [perfil, repoEstante]);
 
-  if (perfil === undefined) return <p className={estilos.carregando}>Carregando…</p>;
+  /* Esqueleto, não "Carregando…": a página busca quatro coisas de fontes
+     diferentes, e uma linha de texto some sem avisar que algo grande vem aí.
+     O esqueleto tem a forma do que vai chegar, então nada salta de lugar
+     quando chega (o CLS de graça). */
+  if (perfil === undefined) {
+    return (
+      <div className={estilos.esqueleto} aria-busy="true" aria-label="Carregando o perfil">
+        <div className={estilos.esqueletoMesa}>
+          <span className={estilos.barra} style={{ width: '11rem', height: '2.2rem' }} />
+          <span className={estilos.barra} style={{ width: '17rem' }} />
+          <div className={estilos.esqueletoPecas}>
+            <span className={estilos.esqueletoPeca} />
+            <span className={estilos.esqueletoPeca} />
+            <span className={estilos.esqueletoPeca} />
+          </div>
+        </div>
+        <span className={estilos.barra} style={{ width: '8rem' }} />
+        <span className={estilos.barra} style={{ width: '22rem' }} />
+      </div>
+    );
+  }
 
   if (perfil === null) {
     return (
       <div className={estilos.vazio}>
-        <h1 className={estilos.titulo}>Esse jogador não existe</h1>
-        <p>
-          O endereço pode estar errado, ou o perfil pode ter sido apagado.{' '}
-          <Link href="/comunidade/">Voltar para a comunidade →</Link>
+        <h1 className={estilos.tituloVazio}>Esse jogador não existe</h1>
+        <p className={estilos.vazioTexto}>
+          O endereço pode estar errado, ou o perfil pode ter sido apagado. Perfis só existem
+          depois que a pessoa escolhe um nome — quem entrou e ainda não preencheu nada não
+          tem página.
         </p>
+        <Link href="/comunidade/" className="botao-secundario">
+          Voltar para a comunidade
+        </Link>
       </div>
     );
   }
@@ -159,67 +183,114 @@ export function JogadorCliente() {
     perfil.empunhadura ? ROTULO_EMPUNHADURA[perfil.empunhadura] : null,
   ].filter(Boolean);
 
+  /* Um array só, em vez de JSX aninhado com fragmentos condicionais. A tira de
+     fatos precisa saber QUANTOS fatos tem pra se distribuir, e antes ela não
+     sabia — a contagem estava espalhada em três condicionais. */
+  const fatos: { valor: string; rotulo: string }[] = [];
+  if (procedencia) {
+    const { quantas, materiaisDistintos, borrachas, laminas, faixaTipica } = procedencia;
+    fatos.push({
+      valor: String(quantas),
+      rotulo: quantas === 1 ? 'avaliação escrita' : 'avaliações escritas',
+    });
+    fatos.push({
+      valor: String(materiaisDistintos),
+      rotulo:
+        borrachas > 0 && laminas > 0
+          ? `materiais — ${borrachas} borracha${borrachas > 1 ? 's' : ''}, ${laminas} lâmina${laminas > 1 ? 's' : ''}`
+          : 'materiais diferentes',
+    });
+    if (faixaTipica) {
+      fatos.push({ valor: faixaTipica, rotulo: 'de uso, tipicamente, antes de avaliar' });
+    }
+  }
+  if (resolveu > 0) {
+    fatos.push({
+      valor: String(resolveu),
+      rotulo: resolveu === 1 ? 'dúvida que resolveu' : 'dúvidas que resolveu',
+    });
+  }
+
+  /* O perfil recém-nascido — nome e estilo, nada mais. É o PRIMEIRO estado que
+     alguém vê do próprio espaço, saindo das boas-vindas, e era o menos
+     desenhado: sobrava um nome solto no meio da página.
+     Só pro dono. Anunciar o vazio do perfil alheio não serve a ninguém. */
+  const aindaVazio =
+    fatos.length === 0 && naEstante.length === 0 && atividade.length === 0;
+
   return (
     <article className={estilos.perfil}>
-      <header className={estilos.cabecalho}>
-        <h1 className={estilos.titulo}>{perfil.nome}</h1>
-        {tracos.length > 0 && (
-          <p className={`mono ${estilos.tracos}`}>{tracos.join(' · ')}</p>
-        )}
-        {lugar && <p className={estilos.lugar}>{lugar}</p>}
-        {perfil.procuro && (
-          <p className={estilos.procuro}>
-            <span className={`mono ${estilos.procuroRotulo}`}>procura</span> {perfil.procuro}
-          </p>
-        )}
+      {/* ── O cartão mesa ──
+          A Regra da Mesa: a cor da identidade carrega superfícies inteiras. Aqui
+          ela carrega a IDENTIDADE DE ALGUÉM — que é o pedido do fundador (um
+          espaço, não uma ficha). Antes, a página começava com um h1 sobre papel,
+          igualzinho a todas as outras do site: nada dizia "você chegou na casa
+          de alguém".
+          A raquete entra AQUI dentro, e não como seção separada logo abaixo:
+          num site de equipamento, a raquete é parte de quem a pessoa é. Separar
+          as duas era o que fazia isto parecer um registro de banco de dados. */}
+      <header className={estilos.mesa}>
+        <div className={estilos.mesaTexto}>
+          <h1 className={estilos.titulo}>{perfil.nome}</h1>
+          {tracos.length > 0 && (
+            <p className={`mono ${estilos.tracos}`}>{tracos.join(' · ')}</p>
+          )}
+          {lugar && <p className={estilos.lugar}>{lugar}</p>}
+          {perfil.procuro && (
+            <p className={estilos.procuro}>
+              <span className={estilos.procuroRotulo}>procura</span> {perfil.procuro}
+            </p>
+          )}
+        </div>
+
+        <RaqueteRetrato equipamento={perfil.equipamento} sobreMesa />
+
         {souODono && (
           <p className={estilos.souEu}>
             Este é o seu perfil, como os outros veem.{' '}
-            <Link href="/comunidade/perfil/">Editar →</Link>
+            <Link href="/comunidade/perfil/" className={estilos.souEuLink}>
+              Editar
+            </Link>
           </p>
         )}
       </header>
 
-      <RaqueteRetrato equipamento={perfil.equipamento} />
+      {souODono && aindaVazio && (
+        <section className={estilos.comecando} aria-labelledby="t-comecando">
+          <h2 id="t-comecando" className={estilos.tituloSecao}>
+            Seu espaço está começando
+          </h2>
+          <p className={estilos.explica}>
+            Daqui pra frente ele cresce sozinho: cada material que você marcar como já usado,
+            cada avaliação que escrever e cada dúvida que resolver aparece nesta página. Não há
+            nada a preencher aqui — só a usar o site.
+          </p>
+          <div className={estilos.comecandoAcoes}>
+            <Link href="/comunidade/perfil/" className="botao-primario">
+              Montar a estante
+            </Link>
+            <Link href="/catalogo/" className="botao-secundario">
+              Achar um material que você usa
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Os números, sem selo. Quem lê julga — é a Regra da Voz de Dados
-          aplicada a gente em vez de a material. */}
-      {(procedencia || resolveu > 0) && (
+          aplicada a gente em vez de a material.
+          Tira horizontal, e não grade de cartões: quatro caixas iguais com um
+          número grande dentro é o hero-metric que o PRODUCT.md aposentou. Aqui
+          os fatos correm numa linha, separados por fio, como legenda de tabela. */}
+      {fatos.length > 0 && (
         <section className={estilos.secao} aria-labelledby="t-numeros">
           <h2 id="t-numeros" className={estilos.tituloSecao}>Na comunidade</h2>
-          <ul className={estilos.numeros}>
-            {procedencia && (
-              <>
-                <li>
-                  <span className={`mono ${estilos.numero}`}>{procedencia.quantas}</span>
-                  <span className={estilos.numeroRotulo}>
-                    {procedencia.quantas === 1 ? 'avaliação escrita' : 'avaliações escritas'}
-                  </span>
-                </li>
-                <li>
-                  <span className={`mono ${estilos.numero}`}>{procedencia.materiaisDistintos}</span>
-                  <span className={estilos.numeroRotulo}>
-                    {procedencia.borrachas > 0 && procedencia.laminas > 0
-                      ? `materiais (${procedencia.borrachas} borracha${procedencia.borrachas > 1 ? 's' : ''}, ${procedencia.laminas} lâmina${procedencia.laminas > 1 ? 's' : ''})`
-                      : 'materiais diferentes'}
-                  </span>
-                </li>
-                {procedencia.faixaTipica && (
-                  <li>
-                    <span className={`mono ${estilos.numero}`}>{procedencia.faixaTipica}</span>
-                    <span className={estilos.numeroRotulo}>de uso, tipicamente, antes de avaliar</span>
-                  </li>
-                )}
-              </>
-            )}
-            {resolveu > 0 && (
-              <li>
-                <span className={`mono ${estilos.numero}`}>{resolveu}</span>
-                <span className={estilos.numeroRotulo}>
-                  {resolveu === 1 ? 'dúvida que resolveu' : 'dúvidas que resolveu'}
-                </span>
+          <ul className={estilos.fatos}>
+            {fatos.map((f) => (
+              <li key={f.rotulo} className={estilos.fato}>
+                <span className={`mono ${estilos.numero}`}>{f.valor}</span>
+                <span className={estilos.numeroRotulo}>{f.rotulo}</span>
               </li>
-            )}
+            ))}
           </ul>
         </section>
       )}

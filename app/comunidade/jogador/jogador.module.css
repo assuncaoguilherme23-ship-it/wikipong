@@ -1,105 +1,224 @@
 /* Perfil público do jogador.
-   Leitura, não formulário: a página tem que parecer uma ficha, do mesmo jeito
-   que a ficha de um material. Por isso a mesma família de espaçamento e a mesma
-   voz mono para dado. */
+   ==============================================================================
+   ANTES ISTO ERA UMA FICHA, e o fundador pediu um ESPAÇO. A diferença não é
+   decoração: uma ficha é uma página SOBRE um registro; um espaço é uma página
+   que PERTENCE a alguém.
+
+   A mudança que carrega o resto é o topo. A página começava com um h1 sobre
+   papel, exatamente como toda outra página do site, e seguia com cinco seções
+   de peso idêntico empilhadas. Nada dizia "você chegou na casa de alguém".
+
+   Agora o topo é um CARTÃO MESA — a Regra da Mesa aplicada a uma pessoa em vez
+   de a uma seção. Três motivos de sistema, não de gosto:
+
+   1. A mesa é a superfície-assinatura da identidade e o DESIGN.md manda que ela
+      carregue superfícies inteiras, não migalhas. Já existe precedente de
+      cartão mesa (o CTA final da home).
+   2. Sobre a mesa, o cartão branco flutua — é o que o §5 do DESIGN.md descreve,
+      e é exatamente a forma que as três peças da raquete já tinham.
+   3. A mesa é INVARIANTE ENTRE TEMAS. O bloco mais carregado da página tem
+      contraste fixo (medidos: 10.8:1 e 6.7:1) e não precisa ser reconferido no escuro.
+
+   A raquete entra DENTRO do cartão, e não como seção logo abaixo: num site de
+   equipamento a raquete é parte de quem a pessoa é, e separar as duas era o que
+   fazia a página parecer um registro impresso. */
 
 .perfil {
   max-width: var(--largura-conteudo);
   margin: 0 auto;
   padding-bottom: var(--esp-8);
+  animation: chegar 200ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.carregando,
-.vazio {
-  padding: var(--esp-6) 0;
-  color: var(--cor-tinta-suave);
+/* De opacity 0 pra 1 SEM fill-mode: fora da animação vale o estilo base, que já
+   é visível. Se a animação nunca rodar (aba em segundo plano, renderizador sem
+   motor de animação), a página aparece inteira em vez de ficar em branco. */
+@keyframes chegar {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
 }
 
-.cabecalho {
-  padding: var(--esp-5) 0 var(--esp-4);
-  border-bottom: 1px solid var(--cor-linha);
+/* ───────── O cartão mesa ───────── */
+
+.mesa {
+  background: var(--cor-mesa);
+  /* Pinos de borracha, o motivo do domínio. 5% de branco: textura que se sente
+     e não se olha. */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 1.3px);
+  background-size: 18px 18px;
+  border-radius: var(--raio-lg);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  margin: var(--esp-5) 0 var(--esp-7);
+  display: grid;
+  gap: var(--esp-5);
+}
+
+.mesaTexto {
+  display: grid;
+  gap: var(--esp-1);
 }
 
 .titulo {
   font-family: var(--fonte-display);
   font-size: var(--titulo-1);
   line-height: var(--altura-titulo);
+  text-wrap: balance;
+  color: var(--cor-sobre-mesa); /* 10.8:1, medido */
   margin: 0;
+  /* Nome muito longo sem espaço não pode estourar o cartão no celular. */
+  overflow-wrap: anywhere;
 }
 
 .tracos {
   font-size: var(--texto-menor);
-  color: var(--cor-tinta-suave);
-  margin: var(--esp-2) 0 0;
+  color: var(--cor-sobre-mesa-suave); /* 6.7:1, medido */
+  margin: var(--esp-1) 0 0;
 }
 
 .lugar {
   font-size: var(--texto-menor);
-  color: var(--cor-mudo);
-  margin: var(--esp-1) 0 0;
+  color: var(--cor-sobre-mesa-suave);
+  margin: 0;
 }
 
+/* "procura ___" é a coisa mais humana da página: é a pessoa dizendo o que quer,
+   com as palavras dela. Ganha peso de corpo e a cor forte, ao contrário dos
+   metadados acima. */
 .procuro {
   margin: var(--esp-3) 0 0;
+  font-size: var(--texto-maior);
   line-height: var(--altura-corpo);
+  color: var(--cor-sobre-mesa);
+  max-width: 60ch;
+  text-wrap: pretty;
 }
 
 .procuroRotulo {
-  font-size: var(--texto-micro);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--cor-mudo);
-  margin-right: var(--esp-1);
+  font-size: var(--texto-menor);
+  color: var(--cor-sobre-mesa-suave);
+  margin-right: var(--esp-2);
 }
 
 .souEu {
-  margin: var(--esp-3) 0 0;
+  margin: 0;
+  padding-top: var(--esp-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
   font-size: var(--texto-menor);
-  color: var(--cor-tinta-suave);
+  color: var(--cor-sobre-mesa-suave);
 }
 
+.souEuLink {
+  color: var(--cor-sobre-mesa);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.souEuLink:hover {
+  text-decoration-thickness: 2px;
+}
+
+.souEuLink:focus-visible {
+  outline: 2px solid var(--cor-sobre-mesa);
+  outline-offset: 3px;
+}
+
+/* ───────── Seções sobre papel ───────── */
+
 .secao {
-  margin: var(--esp-6) 0;
+  margin: var(--esp-7) 0;
 }
 
 .tituloSecao {
   font-family: var(--fonte-display);
   font-size: var(--titulo-3);
   line-height: var(--altura-titulo);
-  margin: 0 0 var(--esp-3);
+  margin: 0 0 var(--esp-4);
 }
 
-/* ───────── Os números ───────── */
+.explica {
+  font-size: var(--texto-base);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  max-width: 66ch;
+  text-wrap: pretty;
+  margin: 0 0 var(--esp-4);
+}
 
-.numeros {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
+/* ───────── O primeiro estado: espaço recém-aberto ─────────
+   Só o dono vê. Anunciar o vazio do perfil alheio não serve a ninguém, e a
+   regra de "bloco sem dado desaparece" continua valendo pra visitante. */
+
+.comecando {
+  margin: var(--esp-7) 0;
+  padding: var(--esp-5);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha);
+  border-radius: var(--raio-md);
+}
+
+.comecandoAcoes {
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--esp-3);
 }
 
-@media (min-width: 40rem) {
-  .numeros {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ───────── A tira de fatos ─────────
+   Corrida horizontal, separada por fio, como legenda de tabela. Antes era uma
+   grade de dois por dois com o número grande em cima do rótulo — que é a forma
+   exata do hero-metric aposentado pelo PRODUCT.md. O dado é o mesmo; o que muda
+   é ele parar de se anunciar como painel de controle. */
+
+.fatos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-3) 0;
 }
 
-.numeros li {
+.fato {
   display: flex;
   align-items: baseline;
   gap: var(--esp-2);
+  padding: 0 var(--esp-5);
+  /* Fio de 1px entre itens — régua de tabela, não faixa colorida na lateral. */
+  border-inline-start: 1px solid var(--cor-linha);
+}
+
+.fato:first-child {
+  padding-inline-start: 0;
+  border-inline-start: 0;
 }
 
 .numero {
-  font-size: var(--texto-dado);
+  font-size: var(--texto-numero);
   line-height: var(--altura-dado);
   color: var(--cor-texto-acento);
+  font-variant-numeric: tabular-nums;
 }
 
 .numeroRotulo {
   font-size: var(--texto-menor);
+  line-height: var(--altura-apertada);
   color: var(--cor-tinta-suave);
+  max-width: 22ch;
+}
+
+/* No celular a tira vira pilha: fio na lateral de itens empilhados seria
+   exatamente a borda lateral colorida que o sistema proíbe. */
+@media (max-width: 40rem) {
+  .fatos {
+    display: grid;
+    gap: var(--esp-3);
+  }
+
+  .fato {
+    padding: 0;
+    border-inline-start: 0;
+  }
 }
 
 /* ───────── A estante ───────── */
@@ -110,39 +229,72 @@
   padding: 0;
   margin: 0;
   display: grid;
-  gap: var(--esp-3);
+  gap: var(--esp-4);
 }
 
 .entrada {
-  padding-bottom: var(--esp-3);
+  padding-bottom: var(--esp-4);
   border-bottom: 1px solid var(--cor-linha);
+}
+
+.entrada:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .entradaTopo {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: var(--esp-2);
+  gap: var(--esp-2) var(--esp-3);
+}
+
+.entradaTopo a {
+  font-size: var(--texto-maior);
+  color: inherit;
+  text-decoration: none;
+}
+
+.entradaTopo a:hover {
+  color: var(--cor-texto-acento);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.entradaTopo a:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 3px;
 }
 
 .periodo {
-  font-size: var(--texto-micro);
+  font-size: var(--texto-mini);
   color: var(--cor-mudo);
+  font-variant-numeric: tabular-nums;
 }
 
 .emUso {
   font-size: var(--texto-micro);
-  padding: 0.1em 0.5em;
-  border-radius: var(--raio-sm);
+  padding: 0.15em 0.6em;
+  border-radius: 999px;
   background: var(--cor-acento-suave);
   color: var(--cor-texto-acento);
 }
 
+/* D-14, fato separado de opinião, na estrutura visual e não só no rótulo: o
+   motivo é a ÚNICA prosa desta página — tudo mais é medida ou registro. Ele
+   ganha camada de tom própria pra dizer isso sem precisar de um selo escrito.
+   (Camada de tom, não borda lateral colorida nem tracejado sob o texto: as duas
+   são proibidas pelo sistema, a segunda por decisão do fundador.) */
 .motivo {
-  margin: var(--esp-2) 0 0;
+  margin: var(--esp-3) 0 0;
+  padding: var(--esp-3) var(--esp-4);
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-sm);
   font-size: var(--texto-menor);
   line-height: var(--altura-leitura);
   color: var(--cor-tinta-suave);
+  max-width: 68ch;
+  text-wrap: pretty;
 }
 
 .esperando {
@@ -156,9 +308,17 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: var(--esp-2);
+  gap: var(--esp-2) var(--esp-3);
   padding-bottom: var(--esp-2);
   border-bottom: 1px solid var(--cor-linha);
+}
+
+.atividade {
+  gap: var(--esp-3);
+}
+
+.item:last-child {
+  border-bottom: 0;
 }
 
 .acao {
@@ -167,6 +327,9 @@
   letter-spacing: 0.06em;
   color: var(--cor-mudo);
   flex-shrink: 0;
+  /* Largura fixa alinha os títulos numa coluna só, e a lista passa a ler como
+     linha do tempo em vez de lista de pares soltos. */
+  min-width: 6.5rem;
 }
 
 /* Uma linha só: a atividade é índice, não leitura. Quem quer o texto clica. */
@@ -182,9 +345,104 @@
 .itemTexto:hover {
   color: var(--cor-texto-acento);
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .itemTexto:focus-visible {
   outline: 2px solid var(--cor-acento);
   outline-offset: 2px;
+}
+
+/* ───────── Perfil que não existe ───────── */
+
+.vazio {
+  padding: var(--esp-7) 0;
+  max-width: 52ch;
+}
+
+.tituloVazio {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-2);
+  line-height: var(--altura-titulo);
+  text-wrap: balance;
+  margin: 0 0 var(--esp-3);
+}
+
+.vazioTexto {
+  font-size: var(--texto-base);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+  margin: 0 0 var(--esp-5);
+}
+
+/* ───────── Esqueleto ─────────
+   Tem a FORMA do que vai chegar: cartão mesa com três peças, depois duas linhas
+   de seção. Assim nada salta de lugar quando o conteúdo chega. */
+
+.esqueleto {
+  max-width: var(--largura-conteudo);
+  margin: var(--esp-5) auto;
+  display: grid;
+  gap: var(--esp-4);
+}
+
+.esqueletoMesa {
+  background: var(--cor-mesa);
+  border-radius: var(--raio-lg);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: grid;
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-3);
+}
+
+.esqueletoPecas {
+  display: grid;
+  gap: var(--esp-3);
+  margin-top: var(--esp-3);
+}
+
+@media (min-width: 40rem) {
+  .esqueletoPecas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.barra,
+.esqueletoPeca {
+  display: block;
+  border-radius: var(--raio-sm);
+  background: var(--cor-linha);
+  animation: pulsar 1.4s ease-in-out infinite;
+}
+
+.barra {
+  height: 1rem;
+  max-width: 100%;
+}
+
+.esqueletoMesa .barra {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.esqueletoPeca {
+  height: 8.5rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@keyframes pulsar {
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .perfil {
+    animation: none;
+  }
+
+  .barra,
+  .esqueletoPeca {
+    animation: none;
+  }
 }

@@ -1,0 +1,125 @@
+{
+  "aviso": "USO ATUAL — ranking publicado pelo tabletennis-reference em AGOSTO DE 2026, transcrito em 2026-08-16. Mesma casa que assina os setups de dados/profissionais.json. RESSALVA QUE NAO PODE SUMIR: a pagina publica os pontos mas NAO declara como eles sao calculados. Entao isto responde 'o que aparece mais no levantamento deles', e nao 'o que mais se vende' — a tela tem que dizer isso com essas palavras (D-16). Os pontos sao comparaveis ENTRE SI dentro deste arquivo e com mais nada: nao sao nota, nao sao porcentagem, e nao se misturam com a escala 0-10 da comunidade. Duas do top 20 (VICTAS Swatspin e Swat Power Spin) nao entraram porque nao existem no catalogo — colher material novo e' outra tarefa, e inventar id seria pior que a falta.",
+  "fonteFh": "https://tabletennis-reference.com/ranking/rubber/forehand",
+  "fonteBh": "https://tabletennis-reference.com/ranking/rubber/backhand",
+  "periodo": "2026-08",
+  "consultadoEm": "2026-08-16",
+  "uso": {
+    "dignics09c": {
+      "fh": 2273,
+      "bh": 1853,
+      "posFh": 1,
+      "posBh": 1
+    },
+    "butterfly-zyre-03": {
+      "fh": 867,
+      "bh": 1197,
+      "posFh": 4,
+      "posBh": 2
+    },
+    "dignics05": {
+      "fh": 615,
+      "bh": 1175,
+      "posFh": 6,
+      "posBh": 3
+    },
+    "tibhar-hybrid-k3-pro": {
+      "fh": 610,
+      "bh": 740,
+      "posFh": 7,
+      "posBh": 4
+    },
+    "andro-nuzn-55": {
+      "fh": 710,
+      "bh": 610,
+      "posFh": 5,
+      "posBh": 5
+    },
+    "andro-nuzn-48": {
+      "fh": 463,
+      "bh": 463,
+      "posFh": 10,
+      "posBh": 7
+    },
+    "tenergy05": {
+      "fh": 452,
+      "bh": 442,
+      "posFh": 11,
+      "posBh": 9
+    },
+    "nittaku-fastarc-g1": {
+      "fh": 485,
+      "bh": 435,
+      "posFh": 9,
+      "posBh": 10
+    },
+    "tibhar-hybrid-mk": {
+      "fh": 425,
+      "bh": 425,
+      "posFh": 12,
+      "posBh": 11
+    },
+    "glayzer-09c": {
+      "fh": 390,
+      "bh": 390,
+      "posFh": 14,
+      "posBh": 13
+    },
+    "rozena": {
+      "fh": 367,
+      "bh": 367,
+      "posFh": 15,
+      "posBh": 14
+    },
+    "nittaku-blastac": {
+      "fh": 350,
+      "bh": 350,
+      "posFh": 18,
+      "posBh": 15
+    },
+    "andro-nuzn-50": {
+      "fh": 340,
+      "bh": 340,
+      "posFh": 19,
+      "posBh": 16
+    },
+    "tibhar-hybrid-k3": {
+      "fh": 420,
+      "bh": 340,
+      "posFh": 13,
+      "posBh": 17
+    },
+    "hurricane": {
+      "fh": 1080,
+      "bh": 340,
+      "posFh": 2,
+      "posBh": 18
+    },
+    "xiom-vega-japan": {
+      "fh": 320,
+      "bh": 320,
+      "posFh": 22,
+      "posBh": 20
+    },
+    "donic-bluegrip-j1": {
+      "fh": 360,
+      "posFh": 16
+    },
+    "tenergy05-hard": {
+      "fh": 360,
+      "posFh": 17
+    },
+    "xiom-vega-europe": {
+      "fh": 297,
+      "posFh": 25
+    },
+    "yasaka-rakza-7": {
+      "fh": 250,
+      "posFh": 29
+    },
+    "nittaku-hurricane-pro-3-turbo-blue": {
+      "fh": 245,
+      "posFh": 30
+    }
+  }
+}

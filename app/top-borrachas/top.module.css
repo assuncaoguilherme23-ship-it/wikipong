@@ -1,0 +1,246 @@
+/* Top 5 por família.
+   Lista numerada, não grade de cartões idênticos: o que importa aqui é a ORDEM,
+   e grade de cartões é exatamente a forma que apaga ordem. O número fica grande
+   e à esquerda, onde o olho passa primeiro. */
+
+.capa {
+  max-width: 62ch;
+  margin: var(--esp-6) 0 var(--esp-7);
+}
+
+.titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-1);
+  line-height: var(--altura-titulo);
+  text-wrap: balance;
+  margin: 0 0 var(--esp-3);
+}
+
+.chamada {
+  font-size: var(--texto-maior);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+  margin: 0 0 var(--esp-5);
+}
+
+/* A ressalva vem antes das listas e por isso tem peso de bloco, não de nota de
+   rodapé: é ela que define o que a ordem significa.
+   Moldura inteira, e não uma barra de acento à esquerda: a barra lateral
+   colorida é o tique mais reconhecível de interface gerada por máquina, e aqui
+   quem carrega a atenção é o título, como nas outras caixas do site. */
+.ressalva {
+  padding: var(--esp-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+}
+
+.ressalvaTitulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-4);
+  line-height: var(--altura-apertada);
+  margin: 0 0 var(--esp-2);
+}
+
+.ressalva p {
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  margin: 0 0 var(--esp-2);
+}
+
+.ressalva p:last-child {
+  margin-bottom: 0;
+}
+
+.data {
+  font-size: var(--texto-mini) !important;
+  color: var(--cor-mudo) !important;
+}
+
+/* ── Cada família ── */
+
+.familia {
+  margin-bottom: var(--esp-8);
+}
+
+.familiaCabeca {
+  max-width: 62ch;
+  margin-bottom: var(--esp-5);
+  padding-bottom: var(--esp-3);
+  border-bottom: 2px solid var(--cor-linha-forte);
+}
+
+.familiaTitulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-2);
+  line-height: var(--altura-titulo);
+  margin: 0;
+}
+
+.familiaSub {
+  font-size: var(--texto-menor);
+  color: var(--cor-mudo);
+  margin: var(--esp-1) 0 var(--esp-3);
+}
+
+.familiaExplica {
+  font-size: var(--texto-base);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+  margin: 0;
+}
+
+/* ── A lista ── */
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  align-items: start;
+  gap: var(--esp-3) var(--esp-4);
+  padding: var(--esp-4) 0;
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+/* O número é a informação principal da página — a lista existe pela ordem. */
+.posicao {
+  font-size: var(--titulo-2);
+  line-height: 1;
+  color: var(--cor-texto-acento);
+  font-variant-numeric: tabular-nums;
+  min-width: 1.4ch;
+}
+
+.foto {
+  display: block;
+  line-height: 0;
+  border-radius: var(--raio-sm);
+}
+
+.foto:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 3px;
+}
+
+.corpo {
+  min-width: 0;
+}
+
+.nome {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-4);
+  line-height: var(--altura-apertada);
+  margin: 0 0 var(--esp-2);
+  text-wrap: balance;
+}
+
+.nome a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nome a:hover {
+  color: var(--cor-texto-acento);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Os sinais, lado a lado e separados ──
+   Nunca somados num "score": não existe taxa de câmbio entre ponto de uso e
+   nota, e um número único esconderia essa impossibilidade. */
+.sinais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2) var(--esp-5);
+  margin-bottom: var(--esp-3);
+}
+
+.sinal {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sinalValor {
+  font-size: var(--texto-dado);
+  line-height: 1.2;
+  color: var(--cor-tinta);
+  font-variant-numeric: tabular-nums;
+}
+
+.sinalRotulo {
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-mudo);
+}
+
+/* Por que ela está aqui, e por que nesta família. É o texto que transforma a
+   lista de "confie em nós" em "confira você mesmo". */
+.porque {
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  margin: 0;
+  max-width: 72ch;
+  text-wrap: pretty;
+}
+
+.porque strong {
+  color: var(--cor-tinta);
+}
+
+/* ── Rodapé ── */
+
+.rodape {
+  max-width: 62ch;
+  margin: var(--esp-8) 0 var(--esp-8);
+  padding-top: var(--esp-5);
+  border-top: 1px solid var(--cor-linha);
+}
+
+.rodapeTitulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-3);
+  line-height: var(--altura-titulo);
+  margin: 0 0 var(--esp-3);
+}
+
+.rodape p {
+  font-size: var(--texto-base);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+  margin: 0;
+}
+
+@media (max-width: 34rem) {
+  .item {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  /* No celular a foto passa pra baixo do número, e o texto ocupa a linha
+     inteira — três colunas em 320px espremeriam o nome em duas letras. */
+  .foto {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .corpo {
+    grid-column: 1 / -1;
+  }
+}

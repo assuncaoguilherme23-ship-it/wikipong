@@ -1,0 +1,96 @@
+{
+  "aviso": "TOP 5 POR FAMÍLIA — recorte curado, com procedência por item (mesmo modelo de dados/profissionais.json). A ORDEM NÃO É OPINIÃO NOSSA: sai da régua declarada em src/logica/popularidade.ts — primeiro quem aparece no levantamento de uso de agosto/2026 (por pontos), depois quem não aparece, pela nota bayesiana da comunidade. `porQueEntrou` diz qual dos dois sinais colocou cada uma ali, e a tela mostra isso. A FAMÍLIA É CLASSIFICAÇÃO, e classificação sem critério vira chute: por isso cada item carrega `familiaPorque`, dizendo em que evidência ela se apoia. O corte é o TOPSHEET, não o país — é ele que muda como se joga. O UNIVERSO É O CATÁLOGO: uma borracha que não está aqui não pode entrar num top daqui. Se faltar alguma que devia estar, o conserto é colher a ficha dela, não empurrar um nome.",
+  "consultadoEm": "2026-08-16",
+  "itens": [
+    {
+      "materialId": "hurricane",
+      "familia": "aderente",
+      "porQueEntrou": "uso",
+      "familiaPorque": "DHS, capa pegajosa sobre esponja dura — a ficha do catálogo já a descreve como “estilo chinês”."
+    },
+    {
+      "materialId": "nittaku-hurricane-pro-3-turbo-blue",
+      "familia": "aderente",
+      "porQueEntrou": "uso",
+      "familiaPorque": "Hurricane 3 feita pela DHS para a Nittaku, com esponja azul: mesma capa aderente, outra caixa."
+    },
+    {
+      "materialId": "f729-battle-ii-provincial",
+      "familia": "aderente",
+      "porQueEntrou": "nota",
+      "familiaPorque": "Friendship 729, capa aderente de linha provincial — a escola chinesa fora da DHS."
+    },
+    {
+      "materialId": "dhs-hurricane-8",
+      "familia": "aderente",
+      "porQueEntrou": "nota",
+      "familiaPorque": "DHS, aderente. Capa menos pegajosa que a da Hurricane 3 e esponja mais elástica, mas ainda da mesma família."
+    },
+    {
+      "materialId": "yinhe-big-dipper",
+      "familia": "aderente",
+      "porQueEntrou": "nota",
+      "familiaPorque": "Yinhe, aderente de esponja dura — a alternativa barata à Hurricane 3, e por isso a mais avaliada da faixa de entrada."
+    },
+    {
+      "materialId": "dignics09c",
+      "familia": "hibrida",
+      "porQueEntrou": "uso",
+      "familiaPorque": "Capa aderente sobre a esponja Spring Sponge X: a própria ficha do catálogo diz “superfície aderente com esponja moderna”."
+    },
+    {
+      "materialId": "tibhar-hybrid-k3-pro",
+      "familia": "hibrida",
+      "porQueEntrou": "uso",
+      "familiaPorque": "Linha Hybrid da Tibhar: capa aderente chinesa montada sobre esponja alemã."
+    },
+    {
+      "materialId": "tibhar-hybrid-mk",
+      "familia": "hibrida",
+      "porQueEntrou": "uso",
+      "familiaPorque": "Linha Hybrid, desenvolvida com Kenta Matsudaira — capa aderente, esponja tensionada."
+    },
+    {
+      "materialId": "tibhar-hybrid-k3",
+      "familia": "hibrida",
+      "porQueEntrou": "uso",
+      "familiaPorque": "A ficha do catálogo a descreve literalmente como “aderente chinesa com esponja alemã”."
+    },
+    {
+      "materialId": "glayzer-09c",
+      "familia": "hibrida",
+      "porQueEntrou": "uso",
+      "familiaPorque": "Capa de alto atrito sobre esponja a 42°: a Butterfly montou a receita 09C numa base mais leve que a da Dignics."
+    },
+    {
+      "materialId": "butterfly-zyre-03",
+      "familia": "tensora",
+      "porQueEntrou": "uso",
+      "familiaPorque": "NÃO é aderente, e isso foi conferido em duas fontes: o Revspin registra “Tackiness 2.1” e a análise da Racket Insight diz “completely non-tacky”. A capa Ricosheet agarra por atrito, não por cola."
+    },
+    {
+      "materialId": "dignics05",
+      "familia": "tensora",
+      "porQueEntrou": "uso",
+      "familiaPorque": "Capa lisa sobre Spring Sponge X. Japonesa — está aqui pela construção, não pelo passaporte."
+    },
+    {
+      "materialId": "andro-nuzn-55",
+      "familia": "tensora",
+      "porQueEntrou": "uso",
+      "familiaPorque": "Alemã, capa lisa sobre esponja tensionada. É a “europeia” no sentido literal da palavra."
+    },
+    {
+      "materialId": "nittaku-fastarc-g1",
+      "familia": "tensora",
+      "porQueEntrou": "uso",
+      "familiaPorque": "Japonesa de capa lisa, esponja tensionada — a tensora de referência da Nittaku."
+    },
+    {
+      "materialId": "tenergy05",
+      "familia": "tensora",
+      "porQueEntrou": "uso",
+      "familiaPorque": "A tensora que definiu a categoria: capa lisa sobre Spring Sponge, japonesa."
+    }
+  ]
+}

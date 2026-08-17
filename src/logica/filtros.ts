@@ -49,6 +49,22 @@ export interface Material {
   durezaUnificada?: number; // grau ESN-equivalente; insumo do Perdão (D-09)
   rating: number;
   reviews: number;
+  /**
+   * Pontos no levantamento de uso de agosto/2026 (tabletennis-reference).
+   * Ausente = não aparece no levantamento, que é o caso de quase todo o
+   * catálogo. NÃO é venda nem participação de mercado — ver `dados-uso-atual`.
+   */
+  usoAtual?: number;
+  /**
+   * A nota puxada em direção à média do catálogo pela falta de amostra (média
+   * bayesiana — ver `popularidade.ts`). Quem calcula é a ponte, que é quem
+   * conhece o catálogo inteiro; aqui só se lê.
+   *
+   * Existe porque ordenar por `rating` cru é ordenar por preenchimento: 230
+   * borrachas têm `reviews: 0` e `rating: 4.5`, e esse 4.5 não é opinião de
+   * ninguém.
+   */
+  notaPonderada?: number;
 }
 
 export interface Faixa {
@@ -250,6 +266,33 @@ const contemSlug = (slugs: readonly string[], valor: string): boolean =>
 /** Perdão exige perfil completo; sem ele não há o que derivar. */
 
 function comparador(ordenar: Ordenacao): (a: Material, b: Material) => number {
+  /* ── RELEVÂNCIA = O QUE ESTÁ EM USO, DEPOIS O QUE FOI BEM AVALIADO ──────────
+     (pedido do fundador, 2026-08-16: "no catálogo, coloque como os primeiros
+     produtos os mais populares hoje e os mais bem avaliados")
+
+     Ordenação LEXICOGRÁFICA, e isso é o ponto: quem aparece no levantamento de
+     uso vence quem não aparece, sempre; a nota só desempata dentro de cada
+     grupo. Um número único exigiria decidir quanto "vale" um ponto de uso em
+     nota — taxa de câmbio que não existe, e que produziria um score que ninguém
+     defende depois (a lição da régua da Megaspin).
+
+     Antes isto era `m.rating` cru, o que ordenava por preenchimento: as 230
+     borrachas com `reviews: 0` carregam `rating: 4.5`, e esse 4.5 vencia uma
+     4.4 com 96 avaliações de gente de verdade. */
+  if (ordenar === 'relevancia') {
+    return (a, b) => {
+      const usoA = a.usoAtual ?? -1;
+      const usoB = b.usoAtual ?? -1;
+      if (usoA >= 0 || usoB >= 0) {
+        if (usoB !== usoA) return usoB - usoA;
+        if (usoA >= 0) return a.id.localeCompare(b.id);
+      }
+      const notaA = a.notaPonderada ?? a.rating;
+      const notaB = b.notaPonderada ?? b.rating;
+      return notaB - notaA || a.id.localeCompare(b.id);
+    };
+  }
+
   /** Valor que ordena. null = material sem esse dado (ex.: bola não tem spec). */
   const chave = (m: Material): number | null => {
     switch (ordenar) {

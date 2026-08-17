@@ -22,6 +22,8 @@ import { fabricantePorId } from './dados-fabricante';
 import { escalaDoTexto, grauRepresentativo, paraESN } from '@/src/logica/escalas';
 import { MOEDAS, type Moeda } from '@/src/logica/moedas';
 import type { Specs } from '@/src/logica/metricas';
+import { notaBayesiana, mediaDoCatalogo } from '@/src/logica/popularidade';
+import { pontosDeUso } from './dados-uso-atual';
 
 export type OrigemDureza = 'fabricante' | 'semente';
 
@@ -121,7 +123,26 @@ function resolver(m: (typeof dados.materiais)[number]): MaterialCatalogo {
   };
 }
 
-export const MATERIAIS: MaterialCatalogo[] = dados.materiais.map(resolver);
+const CRUS: MaterialCatalogo[] = dados.materiais.map(resolver);
+
+/**
+ * A média das notas QUE TÊM AMOSTRA — nota de material sem avaliação nenhuma
+ * não vota nela. É o âncora da média bayesiana: sem amostra, a nota de um
+ * material vira esta média em vez do 4.5 de preenchimento que ele carrega.
+ */
+export const MEDIA_DO_CATALOGO = mediaDoCatalogo(CRUS);
+
+/**
+ * Uso atual e nota ponderada entram AQUI, na ponte, e não no JSON: os dois são
+ * derivados (um de outra fonte, outro do catálogo inteiro), e dado derivado que
+ * se digita à mão é dado que diverge da derivação no primeiro descuido — foi a
+ * lição da `durezaUnificada`, logo acima.
+ */
+export const MATERIAIS: MaterialCatalogo[] = CRUS.map((m) => ({
+  ...m,
+  usoAtual: pontosDeUso(m.id),
+  notaPonderada: notaBayesiana(m, MEDIA_DO_CATALOGO),
+}));
 
 /** Aviso A VALIDAR do arquivo de dados (exibido junto das derivadas — D-09/D-16). */
 export const AVISO_DADOS: string = dados.aviso;

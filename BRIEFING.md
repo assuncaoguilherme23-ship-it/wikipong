@@ -191,8 +191,10 @@ preenchimento, borda, anel de foco, wordmark — e em texto grande (≥24px).
 (borda lateral colorida >1px em card), nada de sublinhado tracejado sob texto,
 nada de gradiente decorativo.
 
-O **Figma é piso, não teto**: a identidade é ponto de partida, e melhorias podem
-ser aplicadas direto — divergências significativas ficam registradas em nota.
+**A fonte da verdade visual é o site publicado** (D-21, 2026-08-16). O Figma v2 foi
+o andaime que deu a identidade e virou registro histórico: coisa nova se desenha a
+partir do que já está no ar. Melhorias podem ser aplicadas direto; divergências
+significativas ficam registradas em nota de decisão.
 
 ---
 

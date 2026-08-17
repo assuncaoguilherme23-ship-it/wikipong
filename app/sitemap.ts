@@ -21,6 +21,7 @@ import { fabricantePorId } from '@/componentes/dados-fabricante';
 import { ofertasDoMaterial } from '@/componentes/dados-ofertas';
 import { imagemDoMaterial } from '@/componentes/dados-imagens';
 import { NOTICIAS } from '@/componentes/dados-noticias';
+import { CONSULTADO_EM_USO } from '@/componentes/dados-uso-atual';
 import { PROFISSIONAIS } from '@/componentes/dados-profissionais';
 
 /** Export estático (D-17) exige que rotas de metadata sejam geradas no build. */
@@ -66,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const fixas: MetadataRoute.Sitemap = [
     { url: url('/') },
     { url: url('/catalogo') },
+    { url: url('/top-borrachas'), lastModified: new Date(CONSULTADO_EM_USO) },
     { url: url('/montar') },
     { url: url('/conjuntos') },
     { url: url('/comparar') },

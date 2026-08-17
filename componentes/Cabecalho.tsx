@@ -126,6 +126,7 @@ export function Cabecalho() {
                 <div className={estilos.megaColuna}>
                   <p className={`mono ${estilos.megaTitulo}`}>Catálogo</p>
                   <Link href="/catalogo/">Todos os materiais</Link>
+                  <Link href="/top-borrachas/">Borrachas do momento</Link>
                   {TIPOS.map((t) => (
                     <Link key={t.href} href={t.href}>
                       {t.rotulo} <span className={`mono ${estilos.megaContagem}`}>{t.contagem}</span>
@@ -247,6 +248,7 @@ export function Cabecalho() {
           >
             <p className={`mono ${estilos.drawerTitulo}`}>Materiais</p>
             <Link href="/catalogo/">Todos os materiais</Link>
+            <Link href="/top-borrachas/">Borrachas do momento</Link>
             {TIPOS.map((t) => (
               <Link key={t.href} href={t.href}>
                 {t.rotulo} <span className={`mono ${estilos.megaContagem}`}>{t.contagem}</span>

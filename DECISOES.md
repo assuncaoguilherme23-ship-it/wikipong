@@ -8,7 +8,7 @@
 > ⚠️ **Aviso de divergência:** os protótipos HTML (`wikipong-landing.html`, `wikipong-quiz.html`,
 > `wikipong-home-v2.html`) são **anteriores** à maioria destas decisões. Eles valem como referência
 > de **lógica** (ver D-15), mas **não** de copy, navegação, tipografia ou features.
-> A fonte da verdade visual é o Figma: página **"WikiPong v2 · Verde-mesa"**.
+> A fonte da verdade visual é o **site publicado** (D-21). O Figma v2 é registro histórico.
 
 ---
 
@@ -22,7 +22,9 @@ estrutura. Os protótipos HTML estão aposentados como referência visual.
 
 **Substitui:** o papel dos HTML como fonte da verdade (eram a referência da reconstrução do Figma).
 
-**Status:** ativa.
+**Status:** **emendada pela D-21 (2026-08-16)** — a cláusula VISUAL caiu: hoje a fonte da verdade
+visual é o site publicado, e o Figma é registro histórico. O resto da D-01 (protótipos HTML
+aposentados como referência) continua valendo.
 
 ---
 
@@ -654,5 +656,49 @@ em vez de pedir dado novo, e **recusar o número que não dá pra defender** (D-
 
 **Porquê:** consulta se resolve com uma busca; ferramenta cria hábito. E cada uma destas
 nasce do diferencial que o projeto já pagou para ter — dado com procedência.
+
+**Status:** ativa.
+
+---
+
+## D-21 · O site é a fonte da verdade visual (ATIVA)
+
+**Decisão do fundador, 2026-08-16:** *"Não precisa ser mais fiel ao Figma, aquele foi só um
+protótipo pra se ter uma base pra começar a construir, use o que temos hoje no site como base
+para coisas novas restantes."*
+
+O **código publicado** passa a ser a fonte única da verdade visual. O Figma v2
+("WikiPong v2 · Verde-mesa") vira **registro histórico**: documenta de onde a identidade
+saiu, e deixa de ser referência a consultar antes de desenhar.
+
+**Porquê:** o Figma v2 foi construído por scripts, com foco em estrutura e sistema — e o site
+passou dele há muito tempo. Desde a D-18 a implementação já vinha sendo "piso, não teto", e a
+distância entre o desenhado e o publicado só cresceu: cartão mesa, tela de perfil, boas-vindas,
+as duas portas de entrada e o top 5 por família nasceram todos direto em código, sem par no
+Figma. Manter no papel que o Figma manda produzia duas coisas ruins: uma consulta que não
+respondia nada, e uma dúvida legítima sobre qual dos dois valia.
+
+**O que isso significa na prática:**
+
+1. **Coisa nova se desenha a partir do que já está no ar** — os tokens de cor e tipografia, o
+   cartão mesa, o combobox de material, as caixas de ressalva, a voz mono para dado. O que
+   define a identidade é o site, não um arquivo.
+2. **A regra do acento, os tokens e as fontes continuam** (D-04, D-05, nota sob a D-18). Nada
+   aqui afrouxa contraste, acessibilidade ou identidade — muda **onde se olha** para saber o
+   que é a identidade, não o que ela é.
+3. **A trilha de "sync de volta ao Figma" da D-18 fica sem destino** e deixa de ser exigida.
+   Divergência significativa continua valendo a pena registrar, mas em nota de decisão — que é
+   onde alguém vai procurar depois.
+
+**O que NÃO muda, e é importante não confundir:**
+
+As asserções numéricas de `testes/rodar.ts` (métricas derivadas e quiz) foram escritas a partir
+dos números publicados no board *"Métricas · Derivadas"* do Figma. Elas **continuam valendo** —
+não como fidelidade ao desenho, mas como **rede de regressão da lógica**: são os números que o
+site publica hoje, e mudá-los sem querer é um bug. O que caiu foi a autoridade do Figma sobre o
+VISUAL; a conta de custo por mês e o grafo do quiz nunca foram visual.
+
+**Emenda:** substitui a cláusula visual da **D-01** (que fica com status *emendada por D-21*) e
+encerra a metade "piso, não teto" da **D-18** — não há mais piso externo, há o site.
 
 **Status:** ativa.

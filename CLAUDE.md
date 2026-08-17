@@ -6,7 +6,9 @@ também gere a academia FitPong).
 ## Leia primeiro
 1. **DECISOES.md** — o registro de decisões (ADR). É a lei do projeto; em conflito
    com qualquer outra fonte (inclusive protótipos), o DECISOES.md vence.
-2. A fonte da verdade **visual** é o Figma, página "WikiPong v2 · Verde-mesa" (D-01).
+2. A fonte da verdade **visual** é o **site publicado** (D-21, decisão do fundador em
+   2026-08-16). Coisa nova se desenha a partir do que já está no ar — não do Figma, que
+   virou registro histórico de onde a identidade saiu.
 
 ## Contexto de design (impeccable)
 - **PRODUCT.md** — estratégia: registro `product` (home = exceção brand por tarefa),
@@ -55,8 +57,10 @@ via pushState + useSearchParams); `/comparar?ids=` usa o Radar + `metricas.ts`;
   trocado.
 
 ## Comandos
-- Testes: `npx tsx testes/rodar.ts` — as asserções reproduzem os números publicados
-  no Figma; se divergir do desenhado, o teste quebra de propósito.
+- Testes: `npx tsx testes/rodar.ts` — rede de regressão da lógica. As asserções numéricas
+  (métricas derivadas, quiz) nasceram dos números do board "Métricas · Derivadas" do Figma e
+  **continuam valendo**: são os números que o site publica hoje, e mudá-los sem querer é bug.
+  Isso não é fidelidade ao desenho (ver D-21) — é a conta não poder mudar sozinha.
 
 ## Stack (D-17 — ATIVA)
 Next.js (App Router) + React + TypeScript com **export estático** (`output: 'export'`),
@@ -70,15 +74,20 @@ Você TEM ABERTURA para usar plenamente suas skills de front-end e UI/UX para
 estilizar e **melhorar o design do site em qualquer aspecto**: polimento visual,
 micro-interações e motion, responsividade, acessibilidade, hierarquia tipográfica,
 espaçamento, estados de hover/focus/empty/loading e o que mais elevar a qualidade.
-O Figma é **piso, não teto** — referência de identidade e mínimo aprovado, não
-limite superior.
+**Não há piso externo: há o site.** O que define a identidade é o que está no ar —
+tokens, cartão mesa, o seletor de material com busca, as caixas de ressalva, a voz
+mono para dado. O Figma não é mais consulta obrigatória (D-21).
 
 Regras do jogo:
 1. **Identidade Verde-mesa é o ponto de partida**: tokens de cor, Archivo/Inter/
    JetBrains Mono e a marca. Evoluir a partir dela, não substituí-la em silêncio.
+   Antes de inventar um padrão novo, procure o equivalente que já existe no site —
+   componente repetido é o defeito que mais custou caro aqui (o `<select>` cego de
+   material sobreviveu em três telas depois de já existir o `SeletorMaterial`).
 2. Melhorias pontuais: aplique direto. **Divergências significativas** (mudar um
    componente do design system, alterar layout de uma tela, nova direção visual):
-   aplique E registre em uma nota curta (para eventual sync de volta ao Figma).
+   aplique E registre numa nota de decisão — não há mais sync de volta ao Figma
+   (D-21), e nota de decisão é onde alguém vai procurar depois.
 3. As decisões de conteúdo/ética continuam valendo: copy (D-02), separação
    fato×opinião (D-14), honestidade de UI (D-16), acessibilidade sempre
    (`prefers-reduced-motion`, contraste, foco visível, navegação por teclado).

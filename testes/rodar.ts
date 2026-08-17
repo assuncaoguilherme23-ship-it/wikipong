@@ -1,7 +1,15 @@
 /**
- * WikiPong · Testes da colheita (rodar: npx tsx testes/rodar.ts)
- * Asserções derivadas dos números PUBLICADOS no Figma (board Métricas · Derivadas
- * e telas de Comparação) — se o código divergir do que está desenhado, isto quebra.
+ * WikiPong · Testes (rodar: npx tsx testes/rodar.ts)
+ * ==============================================================================
+ * Rede de regressão da lógica e das regras que falham em SILÊNCIO — as que não
+ * aparecem na tela quando quebram, e sim meses depois, como texto publicado sem
+ * revisão, link morto, ranking que virou opinião ou meio catálogo escondido.
+ *
+ * As asserções numéricas de métricas e quiz nasceram dos números do board
+ * "Métricas · Derivadas" do Figma. Elas continuam valendo, mas o que elas
+ * guardam mudou de nome: não é mais fidelidade ao desenho (o Figma virou
+ * registro histórico — D-21, 2026-08-16), é o fato de que estes são os números
+ * que o site publica hoje, e que a conta não pode mudar sozinha.
  */
 import {
   maciez, custoMensal, custoMensalPorClasse,
@@ -2153,4 +2161,4 @@ if (falhas.length) {
   for (const f of falhas) console.error('  - ' + f);
   process.exit(1);
 }
-console.log('Colheita verificada: métricas e quiz batem com o que está publicado no Figma.\n');
+console.log('Lógica verificada: as contas, as réguas e as regras que falham calado.\n');

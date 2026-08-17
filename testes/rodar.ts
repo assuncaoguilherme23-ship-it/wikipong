@@ -59,6 +59,12 @@ import { RESUMO_MINIMO } from '../src/logica/noticias-fila.js';
 import { apelidoDe } from '../src/logica/apelido.js';
 import { mensagemDeErro, caminhoInterno, DEPOIS_DE_ENTRAR } from '../src/logica/sessao.js';
 import { retratoDoJogador } from '../src/logica/retrato-do-jogador.js';
+import {
+  notaBayesiana, mediaDoCatalogo, chaveDeRelevancia, compararRelevancia,
+  ordenarPorRelevancia, FAMILIAS,
+} from '../src/logica/popularidade.js';
+import { topDaFamilia } from '../componentes/dados-top-borrachas.js';
+import { MEDIA_DO_CATALOGO } from '../componentes/dados-materiais.js';
 import { procedenciaDe } from '../src/logica/procedencia-do-avaliador.js';
 import {
   ordenarEstante, emUsoHoje, problemasDaEntrada, motivoVisivel,
@@ -2044,6 +2050,102 @@ const telaPublica = semComentarios(
   readFileSync('app/comunidade/jogador/jogador-cliente.tsx', 'utf8'));
 afirma(/material diferente'/.test(telaPublica),
   'perfil publico: voltou o "1 materiais diferentes" — falta o ramo do singular');
+
+/* ───────── popularidade: a regua do top 5 e do topo do catalogo ─────────
+   O pedido do fundador (2026-08-16) foi "os mais populares hoje e os mais bem
+   avaliados". Os dois sao sinais DIFERENTES, e o perigo desta feature inteira e'
+   somar os dois num "score" que ninguem consegue defender depois -- o erro que a
+   regua da Megaspin ja' ensinou aqui (um 118 e um 9.0 na mesma coluna). */
+
+/* A NOTA CRUA NAO SERVE PRA ORDENAR, e este e' o caso que prova: o catalogo tem
+   centenas de materiais com `reviews: 0` carregando `rating: 4.5` de
+   preenchimento. Sem o puxao bayesiano, esse 4.5 fantasma vence uma 4.4 votada
+   por 96 pessoas. */
+const MEDIA_TESTE = 4.5;
+const fantasma = { rating: 4.5, reviews: 0 };
+const real = { rating: 4.4, reviews: 96 };
+afirma(notaBayesiana(real, MEDIA_TESTE) < notaBayesiana(fantasma, MEDIA_TESTE) === false ||
+       notaBayesiana(fantasma, MEDIA_TESTE) === MEDIA_TESTE,
+  'bayes: nota sem amostra tem que virar a media, nao competir com nota votada');
+afirma(notaBayesiana(fantasma, MEDIA_TESTE) === MEDIA_TESTE,
+  'bayes: sem amostra nenhuma, a nota E a media do catalogo');
+afirma(notaBayesiana({ rating: 5, reviews: 1 }, 4) < notaBayesiana({ rating: 4.8, reviews: 200 }, 4),
+  'bayes: um 5 de uma pessoa nao pode vencer um 4.8 de duzentas');
+afirma(Math.abs(notaBayesiana({ rating: 4.8, reviews: 2000 }, 4) - 4.8) < 0.02,
+  'bayes: com amostra grande o puxao some e a nota real prevalece');
+afirma(mediaDoCatalogo([{ rating: 4, reviews: 10 }, { rating: 5, reviews: 0 }]) === 4,
+  'media do catalogo: nota sem amostra nao vota na media');
+afirma(mediaDoCatalogo([]) === 0, 'media do catalogo: lista vazia nao pode virar NaN');
+
+/* A ordem e' LEXICOGRAFICA: quem esta no levantamento de uso vence quem nao
+   esta, SEMPRE. A nota so' desempata dentro de cada grupo. Se algum dia isto
+   virar um numero so', alguem terá inventado uma taxa de cambio entre ponto de
+   uso e estrela -- e ela nao existe. */
+const comUso = { rating: 1, reviews: 500, usoAtual: 100 };
+const semUsoNotaAlta = { rating: 5, reviews: 500 };
+afirma(compararRelevancia(
+    chaveDeRelevancia(comUso, MEDIA_TESTE), chaveDeRelevancia(semUsoNotaAlta, MEDIA_TESTE)) < 0,
+  'relevancia: quem esta no levantamento de uso vence quem nao esta, mesmo com nota pior');
+afirma(compararRelevancia(
+    chaveDeRelevancia({ rating: 4, reviews: 9, usoAtual: 200 }, MEDIA_TESTE),
+    chaveDeRelevancia({ rating: 4, reviews: 9, usoAtual: 100 }, MEDIA_TESTE)) < 0,
+  'relevancia: entre dois do levantamento, mais pontos vem primeiro');
+const ordenados = ordenarPorRelevancia(
+  [semUsoNotaAlta, { rating: 2, reviews: 500 }, comUso], MEDIA_TESTE);
+afirma(ordenados[0] === comUso && ordenados[1] === semUsoNotaAlta,
+  'relevancia: uso primeiro, e o resto pela nota ponderada');
+
+/* O catalogo de verdade, ponta a ponta: o topo tem que ser o levantamento. */
+const topoReal = aplicar(MATERIAIS, parseQuery('')).slice(0, 12);
+afirma(topoReal.every((m) => m.usoAtual !== undefined),
+  'catalogo: o topo da relevancia parou de ser o levantamento de uso');
+afirma(topoReal[0].id === 'dignics09c',
+  'catalogo: a primeira da relevancia deixou de ser a mais usada do levantamento');
+/* Filtrado por lamina nao ha uso nenhum -- e aí a nota ponderada tem que valer,
+   sem deixar um 4.5 de preenchimento liderar. */
+const laminasOrd = aplicar(MATERIAIS, parseQuery('tipo=lamina')).slice(0, 5);
+afirma(laminasOrd.every((m) => m.usoAtual === undefined),
+  'catalogo: lamina nao pode ganhar pontos de uso — o levantamento e so de borracha');
+afirma(laminasOrd.every((m) => m.reviews > 0),
+  'catalogo: material sem avaliacao nenhuma liderou a ordenacao — voltou o 4.5 de preenchimento');
+
+/* ───────── o top 5 por familia ───────── */
+for (const f of FAMILIAS) {
+  const lista = topDaFamilia(f);
+  afirma(lista.length === 5, `top ${f}: precisa ter exatamente 5`);
+  afirma(new Set(lista.map((e) => e.material.id)).size === 5,
+    `top ${f}: tem material repetido na mesma familia`);
+  afirma(lista.every((e) => e.material.tipo === 'Borracha'),
+    `top ${f}: entrou algo que nao e borracha`);
+  /* Classificacao sem criterio e' chute: todo item tem que dizer em que
+     evidencia a familia dele se apoia. */
+  afirma(lista.every((e) => e.familiaPorque.trim().length > 30),
+    `top ${f}: item sem evidencia de por que esta nesta familia`);
+  /* A ordem sai da regua, nao da ordem do arquivo. */
+  const chaves = lista.map((e) => chaveDeRelevancia(e.material, MEDIA_DO_CATALOGO));
+  for (let i = 1; i < chaves.length; i++) {
+    afirma(compararRelevancia(chaves[i - 1], chaves[i]) <= 0,
+      `top ${f}: a ordem nao obedece a regua de relevancia na posicao ${i + 1}`);
+  }
+  /* `porQueEntrou` tem que bater com o dado, senao a tela mente sobre o motivo. */
+  afirma(lista.every((e) =>
+    (e.porQueEntrou === 'uso') === (e.material.usoAtual !== undefined)),
+    `top ${f}: algum item diz "entrou pelo uso" sem estar no levantamento (ou o contrario)`);
+}
+/* Nenhum material pode aparecer em duas familias: aderente, hibrida e tensora
+   sao exclusivas por construcao. */
+const todosDoTop = FAMILIAS.flatMap((f) => topDaFamilia(f).map((e) => e.material.id));
+afirma(new Set(todosDoTop).size === todosDoTop.length,
+  'top: o mesmo material aparece em duas familias — as tres sao exclusivas');
+
+/* A pagina tem que dizer a ressalva da fonte. O levantamento publica pontos e
+   NAO explica como os calcula; chamar isso de "mais vendida" seria afirmar o
+   que ninguem aqui pode sustentar. */
+const paginaTop = semComentarios(readFileSync('app/top-borrachas/page.tsx', 'utf8'));
+afirma(/não explicam como os calculam|nao explicam como os calculam/.test(paginaTop),
+  'top: sumiu a ressalva de que a fonte do uso nao declara a metodologia dela');
+afirma(!/mais vendidas?/i.test(paginaTop.replace(/nunca “mais vendida”|e nunca “mais vendida”/g, '')),
+  'top: a pagina esta afirmando "mais vendida", que e um numero que ninguem aqui tem');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

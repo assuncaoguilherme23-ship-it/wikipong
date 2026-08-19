@@ -88,7 +88,7 @@ import {
   MOTIVO_MINIMO, MOTIVO_MAXIMO, type EntradaDeEstante,
   repositorioEstante, repositorioEstanteLocal, repositorioModeracaoEstante,
 } from '../src/logica/estante.js';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { linhaDoTempo, type Atividade } from '../src/logica/atividade.js';
 
@@ -2317,6 +2317,53 @@ afirma(/não tem, porque a fonte não publica/.test(capaComp),
   'calendario: sumiu a lista do que a fonte nao publica (horario, ginasio, taxa)');
 afirma(/confira na CBTM/.test(capaComp),
   'calendario: sumiu o aviso de conferir na fonte — data e sede mudam');
+
+/* ───────── a casca da pagina ─────────
+   SEIS rotas foram ao ar sem cabecalho, sem rodape, sem largura maxima e sem o
+   alvo do link de acessibilidade -- porque a casca era copiada a mao em toda
+   pagina, e copia a mao falha calada.
+
+   Elas escreviam `<main className="conteudo">`. Parece certo e nao e': `conteudo`
+   nao e' classe nenhuma, e' o ID que o link de pular procura. A classe chama
+   `container`. O resultado foi texto colado na borda da tela, e o fundador
+   perguntando "que layout feio e esse?".
+
+   Agora existe `componentes/Pagina.tsx` e esta asercao exige que toda rota use
+   ela ou monte a casca inteira a mao. */
+const EXCECOES_DE_CASCA = [
+  'app/ir',   // interstitial de saida, deliberadamente sem casca
+  'app/quiz', // barra propria minimalista (fluxo de conversao) — ver Cabecalho.tsx
+];
+
+const rotasComPagina = (dir: string): string[] => {
+  const saida: string[] = [];
+  for (const nome of readdirSync(dir)) {
+    const caminho = `${dir}/${nome}`;
+    if (!statSync(caminho).isDirectory()) continue;
+    if (nome.startsWith('[') || nome.startsWith('_')) continue;
+    if (existsSync(`${caminho}/page.tsx`)) saida.push(caminho);
+    saida.push(...rotasComPagina(caminho));
+  }
+  return saida;
+};
+
+for (const rota of rotasComPagina('app')) {
+  if (EXCECOES_DE_CASCA.some((e) => rota === e || rota.startsWith(`${e}/`))) continue;
+  const arquivos = readdirSync(rota)
+    .filter((f) => f.endsWith('.tsx'))
+    .map((f) => readFileSync(`${rota}/${f}`, 'utf8'))
+    .join('\n');
+
+  const usaCasca = /<Pagina[\s>]/.test(arquivos);
+  const montaAMao =
+    /id="conteudo"/.test(arquivos) && /container/.test(arquivos) && /Cabecalho/.test(arquivos);
+  afirma(usaCasca || montaAMao,
+    `${rota}: pagina sem casca — falta <Pagina> (ou cabecalho + container + id="conteudo" a mao)`);
+
+  /* O erro exato que causou tudo: `conteudo` usado como CLASSE. */
+  afirma(!/className="conteudo"/.test(arquivos) && !/className={`conteudo/.test(arquivos),
+    `${rota}: "conteudo" e ID, nao classe — a classe de largura e respiro chama "container"`);
+}
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

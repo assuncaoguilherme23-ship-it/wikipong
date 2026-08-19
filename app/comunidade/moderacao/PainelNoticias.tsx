@@ -13,7 +13,7 @@
 'use client';
 
 import { useState } from 'react';
-import { RESUMO_MINIMO, type NoticiaRecebida } from '@/src/logica/noticias-fila';
+import { RESUMO_MINIMO, comPontoFinal, type NoticiaRecebida } from '@/src/logica/noticias-fila';
 import estilos from './moderacao.module.css';
 
 const quando = (iso: string) =>
@@ -86,7 +86,10 @@ export function PainelNoticias({
 
       <ul className={estilos.lista}>
         {noticias.map((n) => {
-          const rascunho = rascunhos[n.id] ?? n.resumo ?? '';
+          /* O campo JA' NASCE pontuado: a linha fina da CBTM vem sem ponto, e
+             pôr um em cada notícia à mão era trabalho que a tela podia poupar.
+             Não muda a atribuição — ver `foiReescrito` em noticias-fila.ts. */
+          const rascunho = rascunhos[n.id] ?? comPontoFinal(n.resumo ?? '');
           const curto = rascunho.trim().length < RESUMO_MINIMO;
           return (
             <li key={n.id} className={`${estilos.item} ${n.status === 'descartada' ? estilos.removido : ''}`}>

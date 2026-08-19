@@ -40,7 +40,7 @@ import { PainelPedidos } from './PainelPedidos';
 import { PainelDiscussoes } from './PainelDiscussoes';
 import { PainelNoticias } from './PainelNoticias';
 import {
-  repositorioNoticias, ordenarNoticias, esperando as noticiasEsperando,
+  repositorioNoticias, ordenarNoticias, foiReescrito, esperando as noticiasEsperando,
   type NoticiaRecebida,
 } from '@/src/logica/noticias-fila';
 import { PainelEstante } from './PainelEstante';
@@ -323,7 +323,10 @@ export function ModeracaoCliente() {
              fina como veio, ela continua sendo da CBTM e a tela atribui. */
           aoAprovar={(id, resumo) => {
             const n = (noticias ?? []).find((x) => x.id === id);
-            const mexeu = resumo.trim() !== (n?.resumo ?? '').trim();
+            /* `foiReescrito` ignora pontuação final DE PROPÓSITO: a tela põe o
+               ponto sozinha, e sem isso toda linha fina pareceria reescrita —
+               o site passaria a assinar como sua uma frase que é da CBTM. */
+            const mexeu = foiReescrito(resumo, n?.resumo ?? '');
             const origem = mexeu ? 'wikipong' : n?.origemResumo;
             return agirNaNoticia(() => repoNoticias.aprovar(id, resumo, undefined, origem));
           }}

@@ -63,7 +63,9 @@ import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
 import { precoMedio } from '../componentes/dados-ofertas.js';
 import { NOTICIAS } from '../componentes/dados-noticias.js';
-import { RESUMO_MINIMO } from '../src/logica/noticias-fila.js';
+import {
+  RESUMO_MINIMO, ordenarNoticias, comPontoFinal, foiReescrito, type NoticiaRecebida,
+} from '../src/logica/noticias-fila.js';
 import { apelidoDe } from '../src/logica/apelido.js';
 import { mensagemDeErro, caminhoInterno, DEPOIS_DE_ENTRAR } from '../src/logica/sessao.js';
 import { retratoDoJogador } from '../src/logica/retrato-do-jogador.js';
@@ -1474,9 +1476,14 @@ afirma(corpoDoPatch.length > 0 && !/status/.test(corpoDoPatch),
 
 /* A linha fina e' palavra da CBTM. Entrar sem marcar a procedencia faria frase
    deles passar por nossa -- o erro da GEWO com roupa melhor. */
-afirma(/campos\.resumo = linhaFina;[\s\S]{0,80}campos\.origem_resumo = 'fonte';/.test(colhedor),
+/* Os padroes aceitam o resumo EMBRULHADO (`comPontoFinal(...)`) de proposito: a
+   versao anterior casava o literal `campos.resumo = linhaFina;` e quebrou no dia
+   em que a pontuacao entrou -- sem que nada de errado tivesse acontecido. O que
+   estas asercoes guardam e' o PAREAMENTO (resumo sempre junto da procedencia),
+   nao a forma exata da linha. */
+afirma(/campos\.resumo = [^;]*\blinhaFina\b[^;]*;[\s\S]{0,80}campos\.origem_resumo = 'fonte';/.test(colhedor),
   'a linha fina esta entrando sem marcar origem_resumo: frase da CBTM passando por nossa');
-afirma(/campos\.resumo = escrito\.resumo;[\s\S]{0,80}campos\.origem_resumo = 'wikipong';/.test(colhedor),
+afirma(/campos\.resumo = [^;]*\bescrito\.resumo\b[^;]*;[\s\S]{0,80}campos\.origem_resumo = 'wikipong';/.test(colhedor),
   'o resumo do modelo esta entrando sem origem: a tela nao sabe se atribui ou nao');
 
 /* E a tela tem que ATRIBUIR. A coluna sozinha nao protege ninguem: se a pagina
@@ -2154,6 +2161,67 @@ afirma(/não explicam como os calculam|nao explicam como os calculam/.test(pagin
   'top: sumiu a ressalva de que a fonte do uso nao declara a metodologia dela');
 afirma(!/mais vendidas?/i.test(paginaTop.replace(/nunca “mais vendida”|e nunca “mais vendida”/g, '')),
   'top: a pagina esta afirmando "mais vendida", que e um numero que ninguem aqui tem');
+
+/* ───────── a fila de noticias: ordem de trabalho e ponto final ─────────
+   Dois pedidos do fundador em 2026-08-16, e o segundo escondia uma armadilha. */
+
+/* A fila mistura o que espera decisao com o que ja' foi resolvido se ordenar so'
+   por data: uma publicada em 18/08 subia acima de uma pendente do dia 15. */
+const filaDeTeste: NoticiaRecebida[] = [
+  { id: 'a', titulo: 'A', url: 'u', fonte: 'CBTM', publicadoEm: '2026-08-18',
+    colhidoEm: '2026-08-18', status: 'aprovada' },
+  { id: 'b', titulo: 'B', url: 'u', fonte: 'CBTM', publicadoEm: '2026-08-15',
+    colhidoEm: '2026-08-15', status: 'pendente' },
+  { id: 'c', titulo: 'C', url: 'u', fonte: 'CBTM', publicadoEm: '2026-08-17',
+    colhidoEm: '2026-08-17', status: 'pendente' },
+  { id: 'd', titulo: 'D', url: 'u', fonte: 'CBTM', publicadoEm: '2026-08-19',
+    colhidoEm: '2026-08-19', status: 'descartada' },
+];
+const naOrdem = ordenarNoticias(filaDeTeste).map((n) => n.id);
+afirma(naOrdem.join('') === 'cbad',
+  `fila: a ordem tem que ser pendentes (recentes primeiro), depois aprovadas, depois descartadas — veio ${naOrdem.join('')}`);
+afirma(naOrdem.indexOf('b') < naOrdem.indexOf('a'),
+  'fila: uma pendente antiga ainda vem antes de uma aprovada nova — o trabalho vem antes do arquivo');
+
+/* Ponto final: a linha fina da CBTM vem como legenda, sem ponto. */
+afirma(comPontoFinal('Atividades no SESI Taubaté') === 'Atividades no SESI Taubaté.',
+  'ponto final: frase sem pontuacao tem que receber o ponto');
+afirma(comPontoFinal('Já termina assim.') === 'Já termina assim.',
+  'ponto final: nao pode dobrar o ponto de quem ja tem');
+afirma(comPontoFinal('E agora?') === 'E agora?' && comPontoFinal('Vejam!') === 'Vejam!',
+  'ponto final: interrogacao e exclamacao ja fecham a frase');
+afirma(comPontoFinal('Reticencias…') === 'Reticencias…',
+  'ponto final: reticencias ja fecham a frase');
+/* Dois-pontos fecha frase incompleta: pôr ponto depois seria pior que deixar. */
+afirma(comPontoFinal('A lista e a seguinte:') === 'A lista e a seguinte:',
+  'ponto final: dois-pontos nao pode virar "seguinte:."');
+afirma(comPontoFinal('   com espaco em volta   ') === 'com espaco em volta.',
+  'ponto final: tem que aparar espaco antes de decidir');
+afirma(comPontoFinal('') === '' && comPontoFinal('   ') === '',
+  'ponto final: texto vazio nao pode virar um ponto solto');
+
+/* A ARMADILHA. A moderacao decide de quem e' a frase comparando o texto
+   publicado com o que a fonte mandou. Como a tela agora poe o ponto sozinha,
+   uma comparacao ingenua marcaria TODA linha fina como reescrita -- e o site
+   passaria a assinar como sua uma frase que e' da CBTM. */
+afirma(!foiReescrito('Atividades no SESI Taubaté.', 'Atividades no SESI Taubaté'),
+  'atribuicao: so o ponto final NAO pode contar como reescrita — a frase continua sendo da CBTM');
+afirma(foiReescrito('Outra frase inteira.', 'Atividades no SESI Taubaté'),
+  'atribuicao: texto de verdade diferente tem que contar como reescrita');
+afirma(!foiReescrito('  Atividades no SESI Taubaté  ', 'Atividades no SESI Taubaté.'),
+  'atribuicao: espaco em volta tambem nao e reescrita');
+
+/* O colhedor e' .mjs e nao compila TypeScript, entao ele tem uma COPIA de
+   `comPontoFinal`. Copia que diverge em silencio e' pior que copia nenhuma:
+   esta asercao compara as duas regras de verdade. */
+const fonteColhedor = readFileSync('scripts/colher-noticias.mjs', 'utf8');
+const regexNoColhedor = fonteColhedor.match(/const JA_PONTUADO = (\/.+\/);/)?.[1];
+const regexNoModulo = readFileSync('src/logica/noticias-fila.ts', 'utf8')
+  .match(/const JA_PONTUADO = (\/.+\/);/)?.[1];
+afirma(Boolean(regexNoColhedor) && regexNoColhedor === regexNoModulo,
+  'ponto final: a copia do colhedor divergiu da regra do modulo — noticia colhida e noticia moderada passariam a ser pontuadas diferente');
+afirma(/campos\.resumo = comPontoFinal\(/.test(fonteColhedor),
+  'ponto final: o colhedor voltou a gravar resumo sem pontuar');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

@@ -1,0 +1,199 @@
+{
+  "aviso": "CALENDÁRIO NACIONAL DA CBTM, temporada 2026 — transcrito do calendário oficial em 2026-08-16. Cada linha é o que a CBTM publica; nada aqui é estimado. O que a fonte não diz, esta base não diz: não há horário de jogo, ginásio, taxa de inscrição nem prazo de inscrição, porque a página de calendário não publica nada disso — e inventar seria pior que faltar. UMA CONTA NÃO FECHA, e fica dita: a própria CBTM anunciou dez etapas de cada série, mas o calendário lista 10 da Série Ouro e apenas 9 da Prata. Falta uma etapa Prata — se ela ainda não foi definida ou se caiu da lista, a fonte não diz. DATA MANDA MAIS QUE A LISTA: competição muda de data e de sede, e o site tem que mandar a pessoa conferir na CBTM antes de viajar.",
+  "fonte": "https://www.cbtm.org.br/evento/categoria/2",
+  "temporada": 2026,
+  "consultadoEm": "2026-08-16",
+  "etapasAnunciadas": {
+    "ouro": 10,
+    "prata": 10,
+    "nota": "Número anunciado pela CBTM em https://www.cbtm.org.br/noticia/detalhe/102871/copa-brasil-estreia-novo-formato-com-series-ouro-e-prata-em-2026 (05/03/2026)."
+  },
+  "eventos": [
+    {
+      "nome": "Seletiva Nacional Olímpica e Paralímpica",
+      "inicio": "2026-02-04",
+      "fim": "2026-02-07",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "tipo": "seletiva"
+    },
+    {
+      "nome": "Copa Brasil Ouro · Paranaguá",
+      "inicio": "2026-03-19",
+      "fim": "2026-03-22",
+      "cidade": "Paranaguá",
+      "uf": "PR",
+      "tipo": "ouro"
+    },
+    {
+      "nome": "Copa Brasil Prata · Porto Velho",
+      "inicio": "2026-04-16",
+      "fim": "2026-04-19",
+      "cidade": "Porto Velho",
+      "uf": "RO",
+      "tipo": "prata"
+    },
+    {
+      "nome": "Copa Brasil Ouro · Caruaru",
+      "inicio": "2026-04-30",
+      "fim": "2026-05-03",
+      "cidade": "Caruaru",
+      "uf": "PE",
+      "tipo": "ouro"
+    },
+    {
+      "nome": "Brasileirão de Inverno Interclubes Olímpico e Paralímpico",
+      "inicio": "2026-05-14",
+      "fim": "2026-05-23",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "tipo": "brasileirao"
+    },
+    {
+      "nome": "Copa Brasil Ouro · Cuiabá",
+      "inicio": "2026-06-04",
+      "fim": "2026-06-07",
+      "cidade": "Cuiabá",
+      "uf": "MT",
+      "tipo": "ouro"
+    },
+    {
+      "nome": "Copa Brasil Prata · Feira de Santana",
+      "inicio": "2026-06-04",
+      "fim": "2026-06-07",
+      "cidade": "Feira de Santana",
+      "uf": "BA",
+      "tipo": "prata"
+    },
+    {
+      "nome": "Copa Brasil Ouro · São José dos Campos",
+      "inicio": "2026-06-18",
+      "fim": "2026-06-21",
+      "cidade": "São José dos Campos",
+      "uf": "SP",
+      "tipo": "ouro"
+    },
+    {
+      "nome": "Copa Brasil Ouro · Palmas",
+      "inicio": "2026-06-25",
+      "fim": "2026-06-28",
+      "cidade": "Palmas",
+      "uf": "TO",
+      "tipo": "ouro"
+    },
+    {
+      "nome": "Copa Brasil Prata · João Pessoa",
+      "inicio": "2026-07-09",
+      "fim": "2026-07-12",
+      "cidade": "João Pessoa",
+      "uf": "PB",
+      "tipo": "prata"
+    },
+    {
+      "nome": "Copa Brasil Prata · Betim",
+      "inicio": "2026-07-16",
+      "fim": "2026-07-19",
+      "cidade": "Betim",
+      "uf": "MG",
+      "tipo": "prata",
+      "nota": "A FONTE SE CONTRADIZ: o nome do evento diz Betim e a coluna de local diz Belo Horizonte. As duas cidades são da região metropolitana e ficam a ~30 km uma da outra. Mantivemos Betim, que é o que está no NOME do evento, e deixamos a divergência dita em vez de escondida — quem for viajar precisa conferir na CBTM antes de comprar passagem."
+    },
+    {
+      "nome": "Copa Brasil Ouro · Teresina",
+      "inicio": "2026-07-30",
+      "fim": "2026-08-02",
+      "cidade": "Teresina",
+      "uf": "PI",
+      "tipo": "ouro"
+    },
+    {
+      "nome": "Copa Brasil Ouro · Vassouras",
+      "inicio": "2026-07-30",
+      "fim": "2026-08-02",
+      "cidade": "Vassouras",
+      "uf": "RJ",
+      "tipo": "ouro"
+    },
+    {
+      "nome": "XXXIII Torneio Interestadual e Internacional de Tênis de Mesa da AECNB",
+      "inicio": "2026-08-01",
+      "fim": "2026-08-02",
+      "cidade": "Campo Grande",
+      "uf": "MS",
+      "tipo": "outro",
+      "nota": "Organizado pela AECNB, não pela CBTM — entra por estar no calendário nacional dela."
+    },
+    {
+      "nome": "Copa Brasil Ouro · Jaraguá do Sul",
+      "inicio": "2026-08-13",
+      "fim": "2026-08-16",
+      "cidade": "Jaraguá do Sul",
+      "uf": "SC",
+      "tipo": "ouro"
+    },
+    {
+      "nome": "Copa Brasil Prata · Belém",
+      "inicio": "2026-08-13",
+      "fim": "2026-08-16",
+      "cidade": "Belém",
+      "uf": "PA",
+      "tipo": "prata"
+    },
+    {
+      "nome": "Copa Brasil Ouro · Maceió",
+      "inicio": "2026-08-20",
+      "fim": "2026-08-23",
+      "cidade": "Maceió",
+      "uf": "AL",
+      "tipo": "ouro"
+    },
+    {
+      "nome": "Copa Brasil Ouro · Fortaleza",
+      "inicio": "2026-09-03",
+      "fim": "2026-09-06",
+      "cidade": "Fortaleza",
+      "uf": "CE",
+      "tipo": "ouro"
+    },
+    {
+      "nome": "Copa Brasil Prata · Porto Alegre",
+      "inicio": "2026-09-17",
+      "fim": "2026-09-20",
+      "cidade": "Porto Alegre",
+      "uf": "RS",
+      "tipo": "prata"
+    },
+    {
+      "nome": "Copa Brasil Prata · Goiânia",
+      "inicio": "2026-09-17",
+      "fim": "2026-09-20",
+      "cidade": "Goiânia",
+      "uf": "GO",
+      "tipo": "prata"
+    },
+    {
+      "nome": "Copa Brasil Prata · Manaus",
+      "inicio": "2026-09-24",
+      "fim": "2026-09-27",
+      "cidade": "Manaus",
+      "uf": "AM",
+      "tipo": "prata"
+    },
+    {
+      "nome": "Copa Brasil Prata · Natal",
+      "inicio": "2026-10-15",
+      "fim": "2026-10-18",
+      "cidade": "Natal",
+      "uf": "RN",
+      "tipo": "prata"
+    },
+    {
+      "nome": "Brasileirão de Verão Interclubes Olímpico e Paralímpico",
+      "inicio": "2026-12-03",
+      "fim": "2026-12-12",
+      "cidade": "Blumenau",
+      "uf": "SC",
+      "tipo": "brasileirao"
+    }
+  ]
+}

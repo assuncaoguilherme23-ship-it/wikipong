@@ -88,6 +88,11 @@ export function diasAte(c: Competicao, hoje: string): number {
   return Math.round(ms / 86_400_000);
 }
 
+const NOME_DO_MES = [
+  'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
+  'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro',
+] as const;
+
 /**
  * O período em uma linha, em português — e sem repetir o que não muda.
  *
@@ -97,12 +102,47 @@ export function diasAte(c: Competicao, hoje: string): number {
 export function periodo(c: Competicao): string {
   const [, mi, di] = c.inicio.split('-').map(Number);
   const [, mf, df] = c.fim.split('-').map(Number);
-  const nome = (m: number) =>
-    ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho',
-      'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'][m - 1];
+  const nome = (m: number) => NOME_DO_MES[m - 1];
   return mi === mf
     ? `${di} a ${df} de ${nome(mf)}`
     : `${di} de ${nome(mi)} a ${df} de ${nome(mf)}`;
+}
+
+export interface MesDoCalendario {
+  /** '2026-08' — a chave, estável para `key` de lista. */
+  chave: string;
+  /** 'agosto' — sem o ano, que já está no título da página. */
+  rotulo: string;
+  competicoes: Competicao[];
+}
+
+/**
+ * Agrupa por mês, preservando a ordem recebida.
+ *
+ * Calendário se lê por mês — é assim que a pessoa pensa ("o que tem em
+ * setembro?"). Uma lista corrida de 23 linhas obriga a ler data por data pra
+ * descobrir onde um mês acaba e outro começa.
+ *
+ * NÃO reordena: recebe já ordenado e respeita. É o que permite usar a mesma
+ * função no "o que vem" (crescente) e no arquivo (decrescente) sem que uma das
+ * duas saia com os meses ao contrário.
+ */
+export function porMes(cs: readonly Competicao[]): MesDoCalendario[] {
+  const meses: MesDoCalendario[] = [];
+  for (const c of cs) {
+    const chave = c.inicio.slice(0, 7);
+    const ultimo = meses[meses.length - 1];
+    if (ultimo?.chave === chave) {
+      ultimo.competicoes.push(c);
+      continue;
+    }
+    meses.push({
+      chave,
+      rotulo: NOME_DO_MES[Number(chave.slice(5, 7)) - 1],
+      competicoes: [c],
+    });
+  }
+  return meses;
 }
 
 /** Quantas etapas de cada tipo o calendário traz. */

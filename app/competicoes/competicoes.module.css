@@ -1,10 +1,14 @@
 /* Calendário nacional.
-   Lista com a data à esquerda, em mono — é por ela que se procura. O tipo vira
-   um selo à direita para dar a varredura ("cadê as Prata?") sem exigir leitura
-   linha a linha. */
+   ==============================================================================
+   Agrupado por MÊS, porque é assim que se pergunta ("o que tem em setembro?").
+   A data vive à esquerda em mono — é por ela que se procura — e o tipo vira selo
+   à direita, pra dar a varredura sem exigir leitura linha a linha.
+
+   Duas âncoras verticais seguram a leitura: o mês (grudento no topo enquanto a
+   lista rola) e o selo. Sem elas, 23 linhas viram uma parede. */
 
 .capa {
-  max-width: 64ch;
+  max-width: 62ch;
   margin: var(--esp-6) 0 var(--esp-6);
 }
 
@@ -12,12 +16,13 @@
   font-family: var(--fonte-display);
   font-size: var(--titulo-1);
   line-height: var(--altura-titulo);
+  letter-spacing: -0.015em;
   text-wrap: balance;
   margin: 0 0 var(--esp-3);
 }
 
 .chamada {
-  font-size: var(--texto-maior);
+  font-size: var(--lede);
   line-height: var(--altura-leitura);
   color: var(--cor-tinta-suave);
   text-wrap: pretty;
@@ -42,57 +47,62 @@
   margin-bottom: 0;
 }
 
-/* ── Resumo por tipo ── */
+/* ── Legenda dos tipos ──
+   NÃO é tira de métricas (o hero-metric é anti-referência declarada). O número
+   é pequeno e serve de âncora; quem ocupa a linha é o que cada série SIGNIFICA,
+   que é a dúvida de quem nunca disputou uma Copa Brasil. */
 
-.resumo {
-  list-style: none;
-  margin: 0 0 var(--esp-5);
-  padding: 0;
-  display: grid;
-  gap: var(--esp-4);
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+.legenda {
+  margin-bottom: var(--esp-6);
+  padding: var(--esp-5);
+  background: var(--cor-superficie-2);
+  border-radius: var(--raio-lg);
 }
 
-.resumoItem {
+.legendaLista {
+  margin: 0;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 0 var(--esp-3);
-  align-items: baseline;
-  padding-top: var(--esp-3);
-  border-top: 2px solid var(--cor-linha-forte);
+  gap: var(--esp-4) var(--esp-6);
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 }
 
-.resumoNumero {
-  font-size: var(--titulo-3);
-  line-height: 1;
-  color: var(--cor-texto-acento);
+.legendaItem {
+  display: grid;
+  gap: var(--esp-1);
+  min-width: 0;
+}
+
+.legendaTermo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--esp-2);
+}
+
+.legendaConta {
+  font-size: var(--texto-mini);
+  color: var(--cor-mudo);
   font-variant-numeric: tabular-nums;
 }
 
-.resumoRotulo {
-  font-weight: 600;
+.legendaTexto {
+  margin: 0;
   font-size: var(--texto-menor);
-}
-
-.resumoExplica {
-  grid-column: 2;
-  font-size: var(--texto-mini);
   line-height: var(--altura-corpo);
-  color: var(--cor-mudo);
-  margin-top: 2px;
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
 }
 
 /* A conta que não fecha. Moldura de atenção, sem fundo colorido: o texto tem
-   que continuar legível nos dois temas. */
+   que continuar legível nos dois temas, e só a moldura muda. */
 .contaNaoFecha {
-  margin: 0 0 var(--esp-6);
-  padding: var(--esp-3) var(--esp-4);
+  margin: 0 0 var(--esp-7);
+  padding: var(--esp-4);
   border: 1px solid var(--cor-linha-forte);
   border-radius: var(--raio-md);
   font-size: var(--texto-menor);
   line-height: var(--altura-leitura);
   color: var(--cor-tinta-suave);
-  max-width: 78ch;
 }
 
 .contaNaoFecha strong {
@@ -102,7 +112,7 @@
 /* ── Grupos ── */
 
 .grupo {
-  margin-bottom: var(--esp-7);
+  margin-bottom: var(--esp-8);
 }
 
 .grupoTitulo {
@@ -121,9 +131,31 @@
   max-width: 68ch;
 }
 
-/* O arquivo é secundário: fica mais leve sem sumir. */
-.arquivo .lista {
-  opacity: 0.75;
+/* O arquivo é secundário: recua sem sumir. */
+.arquivo .mesRotulo,
+.arquivo .nome {
+  color: var(--cor-tinta-suave);
+}
+
+/* ── O mês ──
+   Grudento no topo: rolando 23 linhas, saber em que mês se está vale mais que o
+   pixel que ele ocupa. */
+.mes {
+  margin-top: var(--esp-5);
+}
+
+.mesRotulo {
+  position: sticky;
+  top: var(--altura-cabecalho);
+  z-index: 1;
+  margin: 0;
+  padding: var(--esp-2) 0;
+  background: var(--cor-papel);
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-4);
+  line-height: var(--altura-apertada);
+  text-transform: capitalize;
+  border-bottom: 2px solid var(--cor-linha-forte);
 }
 
 /* ── A lista ── */
@@ -136,15 +168,37 @@
 
 .item {
   display: grid;
-  grid-template-columns: 12rem minmax(0, 1fr) auto;
-  gap: var(--esp-2) var(--esp-4);
+  grid-template-columns: 10.5rem minmax(0, 1fr) auto;
+  gap: var(--esp-2) var(--esp-5);
   align-items: start;
-  padding: var(--esp-4) 0;
+  padding: var(--esp-4) var(--esp-3);
+  margin-inline: calc(var(--esp-3) * -1);
+  border-radius: var(--raio-md);
   border-bottom: 1px solid var(--cor-linha);
+  transition: background-color 140ms ease-out;
 }
 
 .item:last-child {
   border-bottom: 0;
+}
+
+@media (hover: hover) {
+  .item:hover {
+    background: var(--cor-superficie);
+  }
+}
+
+/* A próxima é a pergunta da página, então ela é a única linha com peso.
+   Preenchimento suave + borda, nunca barra lateral colorida. */
+.itemProxima {
+  background: var(--cor-acento-suave);
+  border: 1px solid var(--cor-acento);
+}
+
+@media (hover: hover) {
+  .itemProxima:hover {
+    background: var(--cor-acento-suave);
+  }
 }
 
 .quando {
@@ -168,18 +222,40 @@
   min-width: 0;
 }
 
+.seloProxima {
+  display: inline-block;
+  font-size: var(--texto-micro);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cor-texto-acento);
+  margin-bottom: 2px;
+}
+
 .nome {
   font-family: var(--fonte-display);
   font-size: var(--titulo-4);
   line-height: var(--altura-apertada);
-  margin: 0 0 2px;
+  margin: 0 0 var(--esp-1);
   text-wrap: balance;
 }
 
 .lugar {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
   font-size: var(--texto-menor);
   color: var(--cor-tinta-suave);
   margin: 0;
+}
+
+.uf {
+  font-size: var(--texto-micro);
+  letter-spacing: 0.08em;
+  color: var(--cor-mudo);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-sm);
+  padding: 0.05em 0.4em;
 }
 
 .nota {
@@ -191,9 +267,9 @@
 }
 
 /* ── Selo de tipo ──
-   Pílula, o mesmo vocabulário dos chips do catálogo. Ouro e Prata são as duas
-   divisões da mesma competição, então elas se distinguem pelo PREENCHIMENTO —
-   cheia e vazada — e não por duas cores novas que o sistema não tem. */
+   Ouro e Prata são as duas divisões da MESMA competição, então se distinguem
+   pelo PREENCHIMENTO — cheia e vazada — e não por duas cores novas que o
+   sistema não tem. */
 .selo {
   font-size: var(--texto-micro);
   letter-spacing: 0.04em;
@@ -203,7 +279,7 @@
   border: 1px solid var(--cor-linha-forte);
   color: var(--cor-tinta-suave);
   white-space: nowrap;
-  align-self: center;
+  align-self: start;
 }
 
 .ouro {
@@ -224,7 +300,7 @@
 }
 
 .rodape {
-  max-width: 64ch;
+  max-width: 62ch;
   margin: var(--esp-7) 0 var(--esp-8);
   padding-top: var(--esp-5);
   border-top: 1px solid var(--cor-linha);
@@ -237,9 +313,12 @@
   margin: 0;
 }
 
-@media (max-width: 48rem) {
+/* No celular a data vira a primeira linha e o selo acompanha o nome: três
+   colunas em 360px espremeriam o nome em duas palavras por linha. */
+@media (max-width: 46rem) {
   .item {
     grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--esp-2) var(--esp-3);
   }
 
   .quando {
@@ -249,7 +328,13 @@
     gap: var(--esp-2);
   }
 
-  .selo {
-    align-self: start;
+  .legenda {
+    padding: var(--esp-4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    transition: none;
   }
 }

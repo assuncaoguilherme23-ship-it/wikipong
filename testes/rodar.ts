@@ -2364,6 +2364,72 @@ for (const rota of rotasComPagina('app')) {
     `${rota}: "conteudo" e ID, nao classe — a classe de largura e respiro chama "container"`);
 }
 
+/* ───────── as cores das series ─────────
+   Ouro e Prata sao os NOMES das divisoes, entao a cor do selo e' informacao. Mas
+   dourado e cinza-prata sobre branco sao as duas combinacoes que mais reprovam
+   contraste por aí, e o site serve DOIS temas.
+
+   O defeito classico de cor nova neste projeto e' declarar o par so' no tema
+   claro: no escuro ele e' herdado e fica um dourado escuro sobre um creme
+   claro, boiando numa pagina preta. Estas asercoes fecham as duas portas —
+   paridade entre temas e contraste real. */
+const globais = readFileSync('app/globals.css', 'utf8');
+const [blocoClaro, blocoEscuro] = globais.split('@media (prefers-color-scheme: dark)');
+
+const seriesDeclaradas = (bloco: string): Map<string, string> =>
+  new Map([...bloco.matchAll(/(--serie-[a-z-]+):\s*(#[0-9a-fA-F]{6})/g)]
+    .map((m) => [m[1], m[2].toLowerCase()]));
+
+const seriesClaro = seriesDeclaradas(blocoClaro);
+const seriesEscuro = seriesDeclaradas(blocoEscuro ?? '');
+
+afirma(seriesClaro.size > 0, 'cores de serie: nenhum token --serie-* no tema claro');
+afirma(seriesClaro.size === seriesEscuro.size,
+  `cores de serie: ${seriesClaro.size} tokens no claro e ${seriesEscuro.size} no escuro — algum ficou sem par`);
+for (const nome of seriesClaro.keys()) {
+  afirma(seriesEscuro.has(nome),
+    `cores de serie: ${nome} nao foi redeclarado no tema escuro — vai herdar o valor claro`);
+}
+
+/* Contraste de verdade, par a par. O texto do selo e' micro (~0.72rem), entao
+   vale o piso de corpo: 4.5:1, nao os 3:1 de texto grande. */
+const canal = (c: number): number => {
+  const v = c / 255;
+  return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+};
+const luminancia = (hex: string): number => {
+  const n = parseInt(hex.slice(1), 16);
+  return 0.2126 * canal((n >> 16) & 255) + 0.7152 * canal((n >> 8) & 255) + 0.0722 * canal(n & 255);
+};
+const contraste = (a: string, b: string): number => {
+  const [x, y] = [luminancia(a), luminancia(b)].sort((p, q) => q - p);
+  return (x + 0.05) / (y + 0.05);
+};
+
+for (const [tema, mapa] of [['claro', seriesClaro], ['escuro', seriesEscuro]] as const) {
+  for (const serie of ['ouro', 'prata', 'brasileirao', 'seletiva', 'outro']) {
+    const tinta = mapa.get(`--serie-${serie}-tinta`);
+    const fundo = mapa.get(`--serie-${serie}-fundo`);
+    afirma(Boolean(tinta && fundo), `cores de serie: falta tinta ou fundo de ${serie} no tema ${tema}`);
+    if (!tinta || !fundo) continue;
+    const razao = contraste(tinta, fundo);
+    afirma(razao >= 4.5,
+      `cores de serie: ${serie} no tema ${tema} da ${razao.toFixed(2)}:1 — abaixo do piso AA de 4.5:1`);
+  }
+}
+
+/* A cor e' o SEGUNDO canal, nunca o unico: o selo continua escrito por extenso,
+   porque quem nao distingue ouro de prata na tela precisa da palavra. */
+const telaComp = semComentarios(readFileSync('app/competicoes/competicoes-cliente.tsx', 'utf8'));
+afirma(/ROTULO_TIPO\[c\.tipo\]/.test(telaComp),
+  'cores de serie: o selo parou de escrever o nome da serie — cor sozinha nao e informacao acessivel');
+
+/* O grude do mes saiu a pedido do fundador: preso no topo, ele deixava "Outubro"
+   parado logo acima de "Dezembro", sem nada entre os dois. */
+const cssComp = semComentarios(readFileSync('app/competicoes/competicoes.module.css', 'utf8'));
+afirma(!/position:\s*sticky/.test(cssComp),
+  'calendario: o rotulo do mes voltou a grudar no topo');
+
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

@@ -93,22 +93,6 @@
   text-wrap: pretty;
 }
 
-/* A conta que não fecha. Moldura de atenção, sem fundo colorido: o texto tem
-   que continuar legível nos dois temas, e só a moldura muda. */
-.contaNaoFecha {
-  margin: 0 0 var(--esp-7);
-  padding: var(--esp-4);
-  border: 1px solid var(--cor-linha-forte);
-  border-radius: var(--raio-md);
-  font-size: var(--texto-menor);
-  line-height: var(--altura-leitura);
-  color: var(--cor-tinta-suave);
-}
-
-.contaNaoFecha strong {
-  color: var(--cor-tinta);
-}
-
 /* ── Grupos ── */
 
 .grupo {

@@ -31,7 +31,7 @@ import {
   ROTULO_TIPO, EXPLICA_TIPO, TIPOS,
   type Competicao,
 } from '@/src/logica/competicoes';
-import { COMPETICOES, ETAPAS_ANUNCIADAS } from '@/componentes/dados-competicoes';
+import { COMPETICOES } from '@/componentes/dados-competicoes';
 import estilos from './competicoes.module.css';
 
 const hojeISO = (): string => {
@@ -116,9 +116,6 @@ export function CompeticoesCliente() {
   useEffect(() => setHoje(hojeISO()), []);
 
   const conta = contarPorTipo(COMPETICOES);
-  const anunciadas = ETAPAS_ANUNCIADAS as { ouro: number; prata: number; nota: string };
-  const faltando = (['ouro', 'prata'] as const).filter((t) => conta[t] < anunciadas[t]);
-
   const partes = hoje ? partirCalendario(COMPETICOES, hoje) : null;
 
   return (
@@ -147,15 +144,14 @@ export function CompeticoesCliente() {
         </dl>
       </section>
 
-      {faltando.length > 0 && (
-        <p className={estilos.contaNaoFecha} role="note">
-          <strong>Uma conta não fecha, e preferimos dizer:</strong> a CBTM anunciou{' '}
-          {faltando.map((t) => `${anunciadas[t]} etapas da ${ROTULO_TIPO[t]}`).join(' e ')}, mas o
-          calendário oficial lista {faltando.map((t) => `${conta[t]}`).join(' e ')}. Se a etapa que
-          falta ainda não foi definida ou se saiu do calendário, a fonte não diz — e nós não vamos
-          adivinhar.
-        </p>
-      )}
+      {/* AQUI HAVIA UMA RESSALVA, e ela saiu porque deixou de ser verdade.
+          A tela dizia "a CBTM anunciou 10 etapas da Prata e o calendário lista
+          9 — a fonte não diz por quê, e não vamos adivinhar". A dúvida era
+          real enquanto durou; o fundador respondeu em 2026-08-16: a etapa de
+          Brasília foi cancelada. Com a resposta na mão, a ressalva virava um
+          aviso sobre uma incerteza que não existe mais — e aviso desses ensina
+          o leitor a ignorar aviso. O motivo ficou registrado no `aviso` de
+          dados/competicoes.json, que é onde quem mantém a base vai procurar. */}
 
       {partes === null ? (
         /* O que o build congela: o ano inteiro, por mês, sem rótulo de tempo. */

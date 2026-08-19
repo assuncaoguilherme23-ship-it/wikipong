@@ -2299,16 +2299,15 @@ afirma(COMPETICOES.every((c) => c.uf.length === 2 && c.cidade.trim().length > 1)
 afirma(COMPETICOES.every((c) => TIPOS.includes(c.tipo)),
   'calendario: ha competicao com tipo desconhecido — o selo sairia sem rotulo');
 
-/* A CONTA QUE NAO FECHA e' dado, nao suspeita: a CBTM anunciou 10 etapas de
-   cada serie e o calendario lista 9 da Prata. Guardar o numero anunciado e' o
-   que permite a tela DIZER isso em vez de esconder. */
+/* O teto do anunciado continua valendo como rede: listar MAIS etapas do que a
+   CBTM anunciou seria erro de colheita (linha duplicada, evento de outro ano).
+   Listar MENOS nao e' erro -- a Prata tem 9 porque a etapa de Brasilia foi
+   cancelada (fundador, 2026-08-16; a pagina do evento na CBTM hoje responde
+   404). Por isso a comparacao e' de teto, e nao de igualdade. */
 const contagem = contarPorTipo(COMPETICOES);
 const anunciado = ETAPAS_ANUNCIADAS as { ouro: number; prata: number };
 afirma(contagem.ouro <= anunciado.ouro && contagem.prata <= anunciado.prata,
   'calendario: listamos MAIS etapas do que a CBTM anunciou — conferir a colheita');
-const paginaComp = semComentarios(readFileSync('app/competicoes/competicoes-cliente.tsx', 'utf8'));
-afirma(/conta não fecha|contaNaoFecha/.test(paginaComp),
-  'calendario: sumiu o aviso da conta que nao fecha entre o anunciado e o listado');
 
 /* A pagina tem que dizer o que a fonte NAO publica -- quem procura horario
    descobre ali que nao vai achar, em vez de varrer a tela atras do que ninguem tem. */

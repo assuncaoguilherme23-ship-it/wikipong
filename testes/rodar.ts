@@ -58,6 +58,7 @@ import {
 } from '../src/logica/pedidos-pauta.js';
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { CONJUNTOS } from '../componentes/dados-conjuntos.js';
+import { MARCAS } from '../componentes/dados-marcas.js';
 import { nomeComMarca } from '../componentes/formato.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
@@ -2429,6 +2430,43 @@ afirma(/ROTULO_TIPO\[c\.tipo\]/.test(telaComp),
 const cssComp = semComentarios(readFileSync('app/competicoes/competicoes.module.css', 'utf8'));
 afirma(!/position:\s*sticky/.test(cssComp),
   'calendario: o rotulo do mes voltou a grudar no topo');
+
+/* ───────── marcas: nenhuma pagina em branco, nenhum numero envelhecido ─────────
+   O fundador achou a Gewo em branco em 2026-08-16. Ela estava sem editorial
+   porque o texto anterior tinha sido RECORTADO da pagina da marca -- o erro de
+   colheita que este arquivo cita em outros tres lugares. Tirar foi certo;
+   deixar o buraco aberto, nao. */
+for (const marca of MARCAS) {
+  const quantos = MATERIAIS.filter((m) => m.marca === marca.nome).length;
+  afirma(Boolean(marca.editorial?.descricao?.trim()),
+    `marca ${marca.nome}: pagina sem editorial, com ${quantos} materiais no catalogo`);
+  afirma(Boolean(marca.editorial?.pais?.trim()),
+    `marca ${marca.nome}: editorial sem pais de origem`);
+}
+
+/* NUMERO CITADO NO TEXTO TEM QUE BATER COM O CATALOGO. Editorial e' escrito a
+   mao e o catalogo cresce sozinho: "88 materiais da marca" vira mentira na
+   proxima colheita, e ninguem reconfere prosa. Onde o texto der um numero, a
+   asercao confere. */
+for (const marca of MARCAS) {
+  const texto = marca.editorial?.descricao ?? '';
+  const reais = MATERIAIS.filter((m) => m.marca === marca.nome);
+
+  const totalCitado = texto.match(/(\d+)\s+materiais\s+da\s+marca/i);
+  if (totalCitado) {
+    afirma(Number(totalCitado[1]) === reais.length,
+      `marca ${marca.nome}: o texto diz ${totalCitado[1]} materiais e o catalogo tem ${reais.length}`);
+  }
+  const laminasCitadas = texto.match(/(\d+|seis|cinco|quatro|tres|três)\s+L[ÂA]MINAS/i);
+  if (laminasCitadas) {
+    const palavras: Record<string, number> = { tres: 3, três: 3, quatro: 4, cinco: 5, seis: 6 };
+    const n = palavras[laminasCitadas[1].toLowerCase()] ?? Number(laminasCitadas[1]);
+    /* O texto da Gewo fala das laminas de assinatura do Aruna, nao de todas. */
+    const assinatura = reais.filter((m) => m.tipo === 'Lâmina' && /aruna/i.test(m.nome)).length;
+    afirma(n === assinatura || n === reais.filter((m) => m.tipo === 'Lâmina').length,
+      `marca ${marca.nome}: o texto cita ${n} laminas e o catalogo nao confirma esse numero`);
+  }
+}
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

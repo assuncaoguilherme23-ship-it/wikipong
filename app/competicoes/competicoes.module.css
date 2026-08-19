@@ -52,11 +52,15 @@
    é pequeno e serve de âncora; quem ocupa a linha é o que cada série SIGNIFICA,
    que é a dúvida de quem nunca disputou uma Copa Brasil. */
 
+/* Painel sem preenchimento, só regrado em cima e embaixo: agora que os selos
+   têm cor própria, um fundo verde atrás deles fazia cinco cores disputarem a
+   mesma área. Quem tem que ser visto aqui é o selo. */
 .legenda {
-  margin-bottom: var(--esp-6);
-  padding: var(--esp-5);
-  background: var(--cor-superficie-2);
-  border-radius: var(--raio-lg);
+  margin-bottom: var(--esp-7);
+  padding: var(--esp-5) 0;
+  border-top: 1px solid var(--cor-linha);
+  border-bottom: 1px solid var(--cor-linha);
+  max-width: 64rem;
 }
 
 .legendaLista {
@@ -122,19 +126,21 @@
 }
 
 /* ── O mês ──
-   Grudento no topo: rolando 23 linhas, saber em que mês se está vale mais que o
-   pixel que ele ocupa. */
+   NÃO é grudento (o fundador tirou em 2026-08-16). Preso no topo, ele produzia
+   a cena do print dele: "Outubro" parado logo acima de "Dezembro", sem nada
+   entre os dois, porque a única etapa de outubro já tinha rolado pra fora. Era
+   correto e parecia bug — e rótulo que parece bug não vale o que economiza.
+
+   A largura é limitada aqui, e não na página: com o container de 72rem, o selo
+   ficava a 400px do nome que ele classifica, e o olho perdia a ligação. */
 .mes {
-  margin-top: var(--esp-5);
+  margin-top: var(--esp-6);
+  max-width: 64rem;
 }
 
 .mesRotulo {
-  position: sticky;
-  top: var(--altura-cabecalho);
-  z-index: 1;
   margin: 0;
-  padding: var(--esp-2) 0;
-  background: var(--cor-papel);
+  padding-bottom: var(--esp-2);
   font-family: var(--fonte-display);
   font-size: var(--titulo-4);
   line-height: var(--altura-apertada);
@@ -172,16 +178,20 @@
   }
 }
 
-/* A próxima é a pergunta da página, então ela é a única linha com peso.
-   Preenchimento suave + borda, nunca barra lateral colorida. */
+/* A próxima é a pergunta da página, então é a única linha com peso.
+   ELA SOBE, NÃO SE PINTA: cartão de superfície com moldura de acento e sombra.
+   O preenchimento verde da primeira versão virou disputa quando os selos
+   ganharam cor — verde de fundo contra pílula dourada, dois destaques na mesma
+   linha. Assim o relevo carrega a hierarquia e a cor fica só onde ela informa. */
 .itemProxima {
-  background: var(--cor-acento-suave);
+  background: var(--cor-superficie);
   border: 1px solid var(--cor-acento);
+  box-shadow: var(--sombra-cartao);
 }
 
 @media (hover: hover) {
   .itemProxima:hover {
-    background: var(--cor-acento-suave);
+    background: var(--cor-superficie);
   }
 }
 
@@ -251,36 +261,56 @@
 }
 
 /* ── Selo de tipo ──
-   Ouro e Prata são as duas divisões da MESMA competição, então se distinguem
-   pelo PREENCHIMENTO — cheia e vazada — e não por duas cores novas que o
-   sistema não tem. */
+   A primeira versão distinguia Ouro de Prata só pelo preenchimento (cheio e
+   vazado), no verde do site. O fundador pediu ouro e prata de verdade, e ele
+   tem razão: Ouro e Prata são os NOMES das divisões, então a cor aqui é
+   informação — o selo diz qual série é antes de a pessoa ler a palavra.
+
+   Cada par vem de token medido nos dois temas (ver globals.css). Todos passam
+   AA com folga, o que não é trivial: dourado e cinza-prata sobre branco são as
+   duas combinações que mais reprovam contraste por aí.
+
+   A cor é o segundo canal, nunca o único: o texto do selo continua escrito por
+   extenso, porque quem não distingue ouro de prata na tela precisa da palavra. */
 .selo {
   font-size: var(--texto-micro);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 0.35em 0.8em;
   border-radius: 999px;
-  border: 1px solid var(--cor-linha-forte);
-  color: var(--cor-tinta-suave);
+  border: 1px solid transparent;
+  background: var(--serie-outro-fundo);
+  color: var(--serie-outro-tinta);
   white-space: nowrap;
   align-self: start;
 }
 
 .ouro {
-  background: var(--cor-acento-escuro);
-  border-color: var(--cor-acento-escuro);
-  color: #fff;
+  background: var(--serie-ouro-fundo);
+  color: var(--serie-ouro-tinta);
+  border-color: color-mix(in srgb, var(--serie-ouro-tinta) 22%, transparent);
 }
 
 .prata {
-  border-color: var(--cor-acento);
-  color: var(--cor-texto-acento);
+  background: var(--serie-prata-fundo);
+  color: var(--serie-prata-tinta);
+  border-color: color-mix(in srgb, var(--serie-prata-tinta) 22%, transparent);
 }
 
 .brasileirao {
-  background: var(--cor-tinta);
-  border-color: var(--cor-tinta);
-  color: var(--cor-papel);
+  background: var(--serie-brasileirao-fundo);
+  color: var(--serie-brasileirao-tinta);
+  border-color: color-mix(in srgb, var(--serie-brasileirao-tinta) 22%, transparent);
+}
+
+.seletiva {
+  background: var(--serie-seletiva-fundo);
+  color: var(--serie-seletiva-tinta);
+  border-color: color-mix(in srgb, var(--serie-seletiva-tinta) 22%, transparent);
+}
+
+.outro {
+  border-color: color-mix(in srgb, var(--serie-outro-tinta) 22%, transparent);
 }
 
 .rodape {

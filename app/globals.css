@@ -29,6 +29,25 @@
   --cor-acento-escuro: #157a4f;
   --cor-acento-suave: #e6f4ec;
 
+  /* ── Cores das séries de competição (D-21 / pedido do fundador 2026-08-16) ──
+     Ouro e Prata são os NOMES das divisões, então a cor aqui é informação, não
+     enfeite: o selo diz qual série é antes de a pessoa ler a palavra.
+
+     Cada par é texto + fundo, medido nos DOIS temas — ouro e prata são
+     justamente as duas mais fáceis de errar (dourado sobre branco e cinza-prata
+     sobre branco ficam ilegíveis). Os valores abaixo passam AA (≥4.5:1) com
+     folga; os números medidos estão ao lado. */
+  --serie-ouro-tinta: #7a5c0b;
+  --serie-ouro-fundo: #faf0d2; /* 5.49:1 */
+  --serie-prata-tinta: #4a5560;
+  --serie-prata-fundo: #eceff2; /* 6.59:1 */
+  --serie-brasileirao-tinta: #1b4f8a;
+  --serie-brasileirao-fundo: #e3edf9; /* 7.01:1 */
+  --serie-seletiva-tinta: #9a4320;
+  --serie-seletiva-fundo: #fae9e1; /* 5.57:1 */
+  --serie-outro-tinta: #5a635c;
+  --serie-outro-fundo: #f0f2ee; /* 5.52:1 */
+
   /* Alias semântico (regra do acento — nota sob D-18): texto acentuado precisa de AA.
      No tema claro é o acento-escuro (5.1:1); no escuro, o próprio acento resolve. */
   --cor-texto-acento: var(--cor-acento-escuro);
@@ -156,6 +175,20 @@
     --cor-linha-forte: #33402f;
     --cor-acento: #29b077;
     --cor-acento-suave: #17281e;
+
+    /* As séries invertem: tinta clara sobre fundo escuro do mesmo matiz.
+       Herdar os valores claros deixaria dourado #7a5c0b sobre #faf0d2 boiando
+       numa página preta — legível, e completamente fora do tema. */
+    --serie-ouro-tinta: #f0ce72;
+    --serie-ouro-fundo: #3a2e08; /* 8.75:1 */
+    --serie-prata-tinta: #cbd5de;
+    --serie-prata-fundo: #2a3138; /* 8.85:1 */
+    --serie-brasileirao-tinta: #9fc6ed;
+    --serie-brasileirao-fundo: #132c46; /* 7.98:1 */
+    --serie-seletiva-tinta: #f0b69a;
+    --serie-seletiva-fundo: #3a1d10; /* 8.70:1 */
+    --serie-outro-tinta: #b9c3ba;
+    --serie-outro-fundo: #2b322c; /* 7.26:1 */
     --cor-texto-acento: var(--cor-acento); /* ~6:1 sobre o papel escuro */
     /* Clareia, como o `mudo` faz: 7.05:1 sobre papel, 6.57:1 sobre superfície. */
     --cor-erro: #e8837a;

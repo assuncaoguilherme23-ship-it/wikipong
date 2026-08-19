@@ -1,10 +1,70 @@
 {
-  "aviso": "LOGOS DE MARCA — cada arquivo e a logo OFICIAL do fabricante, baixada do site dele, com credito e URL de origem (D-16). Uso NOMINATIVO: a logo identifica a marca cujos produtos o catalogo cataloga, e nunca sugere parceria ou aval — o site nao e ligado a fabricante nenhum. Marca sem entrada aqui NAO fica com buraco: cai no selo tipografico do LogoMarca, que e visivelmente nosso. Nao desenhamos logo parecido com o verdadeiro, que seria falsificar marca alheia.",
+  "aviso": "LOGOS DE MARCA — cada arquivo e a logo OFICIAL do fabricante, baixada do site dele, com credito e URL de origem (D-16). Uso NOMINATIVO: a logo identifica a marca cujos produtos o catalogo cataloga, e nunca sugere parceria ou aval — o site nao e ligado a fabricante nenhum. Marca sem entrada aqui NAO fica com buraco: cai no selo tipografico do LogoMarca, que e visivelmente nosso. Nao desenhamos logo parecido com o verdadeiro, que seria falsificar marca alheia. COLHEITA DE 2026-08-16: 11 das 16 marcas. Ficaram de fora DHS, Friendship 729, Sanwei, Yinhe e Tibhar — os quatro sites chineses nao respondem daqui e o da Tibhar devolve 403. Elas seguem no monograma, que e uma alternativa e nao um buraco. NAO pegamos de loja: foi assim que 193 materiais chegaram a exibir o selo \"COMPRA 100% SEGURA\" no lugar da foto, e foi assim que a pagina da Gewo ficou em branco. DUAS marcas so publicam a versao BRANCA do logo no cabecalho (Tibhar e a Yasaka no cabecalho) — branca some na placa branca; da Yasaka usamos o favicon, que e escuro.",
   "logos": {
+    "Andro": {
+      "arquivo": "andro.png",
+      "fonte": "andro (site oficial)",
+      "fonteUrl": "https://www.andro.de/themes/particle/andro-favicos/favicon-96x96.png",
+      "consultadoEm": "2026-08-16"
+    },
     "Butterfly": {
       "arquivo": "butterfly.svg",
       "fonte": "Butterfly (site oficial)",
       "fonteUrl": "https://www.butterfly-global.com/assets/images/common/header-logo.svg",
+      "consultadoEm": "2026-08-16"
+    },
+    "Donic": {
+      "arquivo": "donic.png",
+      "fonte": "Donic (site oficial)",
+      "fonteUrl": "https://www.donic.com/media/62/8a/c0/1732014410/donic-share-icon.png",
+      "consultadoEm": "2026-08-16"
+    },
+    "Gewo": {
+      "arquivo": "gewo.png",
+      "fonte": "GEWO (site oficial)",
+      "fonteUrl": "https://www.gewo-tt.com/media/6b/7e/9d/1740664727/144px-gewo-logo.jpg",
+      "consultadoEm": "2026-08-16"
+    },
+    "Joola": {
+      "arquivo": "joola.png",
+      "fonte": "Joola (site oficial)",
+      "fonteUrl": "https://joola.de/cdn/shop/files/6038010E-F1B1-491C-B0B7-7D58CDECC103.png",
+      "consultadoEm": "2026-08-16"
+    },
+    "Nittaku": {
+      "arquivo": "nittaku.png",
+      "fonte": "Nittaku (site oficial)",
+      "fonteUrl": "https://www.nittaku.com/wp-content/uploads/2021/04/cropped-favicon-192x192.png",
+      "consultadoEm": "2026-08-16"
+    },
+    "Palio": {
+      "arquivo": "palio.png",
+      "fonte": "Palio (site oficial)",
+      "fonteUrl": "https://palioett.com/wp-content/uploads/fbrfg/apple-touch-icon.png",
+      "consultadoEm": "2026-08-16"
+    },
+    "Stiga": {
+      "arquivo": "stiga.png",
+      "fonte": "Stiga Sports (site oficial)",
+      "fonteUrl": "https://a.storyblok.com/f/330050/204x192/44a4563d91/stigalogo.png",
+      "consultadoEm": "2026-08-16"
+    },
+    "Victas": {
+      "arquivo": "victas.svg",
+      "fonte": "Victas (site oficial)",
+      "fonteUrl": "https://victas.com/assets/images/logo.svg",
+      "consultadoEm": "2026-08-16"
+    },
+    "Xiom": {
+      "arquivo": "xiom.png",
+      "fonte": "Xiom (loja oficial da marca)",
+      "fonteUrl": "https://xiom.store/",
+      "consultadoEm": "2026-08-16"
+    },
+    "Yasaka": {
+      "arquivo": "yasaka.png",
+      "fonte": "Yasaka (site oficial)",
+      "fonteUrl": "https://yasakatabletennis.com/images/yasaka-favicon.png",
       "consultadoEm": "2026-08-16"
     }
   }

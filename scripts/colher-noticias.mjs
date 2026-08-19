@@ -92,6 +92,16 @@ async function ler(caminho) {
  * 'fonte', e a tela atribui. Copiar sem dizer de quem é seria o erro da GEWO
  * outra vez.
  */
+/* Espelho de `comPontoFinal` de src/logica/noticias-fila.ts. Duplicado porque
+   este script é .mjs e não compila TypeScript — a asserção em testes/rodar.ts
+   compara as duas implementações e quebra se elas divergirem. */
+const JA_PONTUADO = /[.!?…:;]$/;
+function comPontoFinal(texto) {
+  const limpo = (texto ?? '').trim();
+  if (!limpo) return limpo;
+  return JA_PONTUADO.test(limpo) ? limpo : `${limpo}.`;
+}
+
 function linhaFinaDe(t, titulo, ateAqui) {
   const antes = t.lastIndexOf(titulo.slice(0, 25), ateAqui);
   if (antes < 0) return null;
@@ -156,11 +166,14 @@ for (const caminho of await achar()) {
      CBTM, atribuída. Só fica sem resumo quem não tem nem uma coisa nem outra. */
   const escrito = await resumir({ titulo: n.titulo, texto: corpo });
   if (escrito) {
-    campos.resumo = escrito.resumo;
+    campos.resumo = comPontoFinal(escrito.resumo);
     campos.origem_resumo = 'wikipong';
     if (escrito.tag) campos.tag = escrito.tag;
   } else if (linhaFina) {
-    campos.resumo = linhaFina;
+    /* A linha fina da CBTM vem sem ponto — ela é escrita como legenda, não como
+       frase. No site vira frase. Pontuar não muda uma palavra do que eles
+       disseram, então a atribuição continua sendo deles. */
+    campos.resumo = comPontoFinal(linhaFina);
     campos.origem_resumo = 'fonte';
     daFonte++;
   } else semResumo++;

@@ -42,9 +42,60 @@ export const RESUMO_MINIMO = 40;
 export const publicavel = (n: NoticiaRecebida): boolean =>
   n.status === 'aprovada' && Boolean(n.resumo && n.resumo.trim().length >= RESUMO_MINIMO);
 
-/** Mais recente primeiro — notícia velha no topo da fila é fila mal ordenada. */
+/* ── PONTO FINAL ──────────────────────────────────────────────────────────────
+   A linha fina da CBTM quase nunca termina em ponto — ela é escrita como
+   legenda, não como frase. No site ela vira frase, e o fundador estava pondo o
+   ponto à mão em toda notícia (2026-08-16: "eu não quero perder esse tempo").
+
+   Isto é NORMALIZAÇÃO DE PONTUAÇÃO, não reescrita: um ponto no fim não muda uma
+   palavra do que a CBTM disse, e por isso NÃO tira a atribuição dela — ver
+   `foiReescrito` logo abaixo, que é o par indispensável desta função. */
+
+/** Já termina de um jeito que dispensa ponto? `:` e `;` entram porque frase que
+ *  termina neles está incompleta, e fechar com ponto seria pior que deixar. */
+const JA_PONTUADO = /[.!?…:;]$/;
+
+export function comPontoFinal(texto: string): string {
+  const limpo = texto.trim();
+  if (!limpo) return limpo;
+  return JA_PONTUADO.test(limpo) ? limpo : `${limpo}.`;
+}
+
+/**
+ * O texto mudou DE VERDADE — pontuação final não conta como reescrita.
+ *
+ * ISTO NÃO É DETALHE. A moderação decide de quem é a frase comparando o que foi
+ * publicado com o que a fonte mandou: mexeu, a voz vira da casa; não mexeu,
+ * continua atribuída à CBTM. Sem esta função, o ponto que a tela acrescenta
+ * sozinha faria toda linha fina parecer reescrita — e o site passaria a assinar
+ * como sua uma frase que é da CBTM. É o erro que o cabeçalho deste arquivo diz
+ * combater, só que na direção contrária.
+ */
+export const foiReescrito = (novo: string, original: string): boolean =>
+  comPontoFinal(novo) !== comPontoFinal(original);
+
+/**
+ * A fila, na ordem de trabalho: quem espera decisão primeiro, e dentro de cada
+ * grupo a mais recente no topo.
+ *
+ * Antes ordenava só por data, então uma notícia já publicada em 18 de agosto
+ * ficava acima de uma pendente do dia 15 — e a fila de trabalho vinha
+ * embaralhada com o arquivo do que já foi feito (o fundador, 2026-08-16: "deixe
+ * as notícias para aprovar recentes em cima, e deixa as já aprovadas descer,
+ * não misture essa ordem").
+ */
+const PESO_DO_STATUS: Readonly<Record<StatusNoticia, number>> = {
+  pendente: 0,
+  aprovada: 1,
+  descartada: 2,
+};
+
 export const ordenarNoticias = (ns: readonly NoticiaRecebida[]): NoticiaRecebida[] =>
-  [...ns].sort((a, b) => b.publicadoEm.localeCompare(a.publicadoEm));
+  [...ns].sort(
+    (a, b) =>
+      PESO_DO_STATUS[a.status] - PESO_DO_STATUS[b.status] ||
+      b.publicadoEm.localeCompare(a.publicadoEm),
+  );
 
 export const esperando = (ns: readonly NoticiaRecebida[]): NoticiaRecebida[] =>
   ns.filter((n) => n.status === 'pendente');
@@ -103,8 +154,11 @@ export function repositorioNoticiasSupabase(url: string, chave: string): Reposit
       if (resumo.trim().length < RESUMO_MINIMO) {
         throw new Error(`O resumo precisa de pelo menos ${RESUMO_MINIMO} caracteres — é ele que a pessoa lê.`);
       }
+      /* O ponto final é garantido AQUI, e não só no formulário — mesma razão da
+         recusa acima: quem chamar esta função de outro lugar publica com a
+         mesma pontuação. */
       await remendar(id, {
-        resumo: resumo.trim(), status: 'aprovada',
+        resumo: comPontoFinal(resumo), status: 'aprovada',
         ...(tag ? { tag } : {}), ...(origem ? { origem_resumo: origem } : {}),
       });
     },

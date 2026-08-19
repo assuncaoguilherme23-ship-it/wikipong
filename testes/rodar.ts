@@ -74,6 +74,13 @@ import {
   ordenarPorRelevancia, FAMILIAS,
 } from '../src/logica/popularidade.js';
 import { topDaFamilia } from '../componentes/dados-top-borrachas.js';
+import {
+  partirCalendario, jaTerminou, aconteceAgora, diasAte, periodo, contarPorTipo,
+  TIPOS, type Competicao,
+} from '../src/logica/competicoes.js';
+import {
+  COMPETICOES, TEMPORADA, ETAPAS_ANUNCIADAS,
+} from '../componentes/dados-competicoes.js';
 import { MEDIA_DO_CATALOGO } from '../componentes/dados-materiais.js';
 import { procedenciaDe } from '../src/logica/procedencia-do-avaliador.js';
 import {
@@ -2222,6 +2229,94 @@ afirma(Boolean(regexNoColhedor) && regexNoColhedor === regexNoModulo,
   'ponto final: a copia do colhedor divergiu da regra do modulo — noticia colhida e noticia moderada passariam a ser pontuadas diferente');
 afirma(/campos\.resumo = comPontoFinal\(/.test(fonteColhedor),
   'ponto final: o colhedor voltou a gravar resumo sem pontuar');
+
+/* ───────── calendário nacional ─────────
+   Data e' o tipo de dado que erra em silencio: ninguem confere se "em 12 dias"
+   esta certo, e uma competicao no grupo errado manda a pessoa embora de um
+   ginasio cheio -- ou faz ela perder a viagem. */
+const comp = (p: Partial<Competicao>): Competicao => ({
+  nome: p.nome ?? 'Etapa', inicio: p.inicio ?? '2026-06-04', fim: p.fim ?? '2026-06-07',
+  cidade: p.cidade ?? 'Cuiabá', uf: p.uf ?? 'MT', tipo: p.tipo ?? 'ouro', nota: p.nota,
+});
+
+/* A ARMADILHA PRINCIPAL: comparar pelo INICIO em vez do FIM. Um Brasileirao
+   dura dez dias -- chama-lo de "ja aconteceu" no segundo dia seria mandar a
+   pessoa embora de um ginasio que esta cheio. */
+const brasileirao = comp({ nome: 'Brasileirão', inicio: '2026-05-14', fim: '2026-05-23' });
+afirma(!jaTerminou(brasileirao, '2026-05-15'),
+  'calendario: competicao de dez dias virou passado no segundo dia — comparou pelo inicio');
+afirma(aconteceAgora(brasileirao, '2026-05-15'),
+  'calendario: competicao em andamento tem que contar como acontecendo agora');
+afirma(aconteceAgora(brasileirao, '2026-05-14') && aconteceAgora(brasileirao, '2026-05-23'),
+  'calendario: o primeiro e o ultimo dia contam como acontecendo');
+afirma(jaTerminou(brasileirao, '2026-05-24'),
+  'calendario: no dia seguinte ao fim, ja terminou');
+afirma(!jaTerminou(brasileirao, '2026-05-13') && !aconteceAgora(brasileirao, '2026-05-13'),
+  'calendario: na vespera nao terminou nem esta acontecendo');
+
+/* As tres listas sao EXCLUSIVAS e cobrem tudo: um evento em duas listas apareceria
+   duas vezes na tela; fora das tres, sumiria. */
+const partido = partirCalendario(COMPETICOES, '2026-08-16');
+const soma = partido.agora.length + partido.vem.length + partido.passou.length;
+afirma(soma === COMPETICOES.length,
+  `calendario: ${COMPETICOES.length} eventos viraram ${soma} nas tres listas — alguma sumiu ou duplicou`);
+afirma(partido.vem.every((c) => c.inicio > '2026-08-16'),
+  'calendario: entrou no "o que vem" algo que ja comecou');
+afirma(partido.passou.every((c) => c.fim < '2026-08-16'),
+  'calendario: entrou no "ja aconteceu" algo que ainda nao acabou');
+/* Arquivo se le de tras pra frente: mais recente primeiro. */
+for (let i = 1; i < partido.passou.length; i++) {
+  afirma(partido.passou[i - 1].inicio >= partido.passou[i].inicio,
+    'calendario: o arquivo tem que vir do mais recente pro mais antigo');
+}
+/* E o que vem, do mais proximo pro mais distante. */
+for (let i = 1; i < partido.vem.length; i++) {
+  afirma(partido.vem[i - 1].inicio <= partido.vem[i].inicio,
+    'calendario: o que vem tem que vir do mais proximo pro mais distante');
+}
+
+afirma(diasAte(comp({ inicio: '2026-08-20' }), '2026-08-16') === 4,
+  'calendario: a contagem de dias esta errada');
+afirma(diasAte(comp({ inicio: '2026-08-16' }), '2026-08-16') === 0,
+  'calendario: comeca hoje sao zero dias, nao um');
+
+/* O periodo em portugues, sem repetir o mes quando ele nao muda. */
+afirma(periodo(comp({ inicio: '2026-03-19', fim: '2026-03-22' })) === '19 a 22 de março',
+  'calendario: dentro do mesmo mes o mes nao se repete');
+afirma(periodo(comp({ inicio: '2026-04-30', fim: '2026-05-03' })) === '30 de abril a 3 de maio',
+  'calendario: virando o mes, os dois meses aparecem');
+
+/* Os dados colhidos: integridade do que veio da CBTM. */
+afirma(COMPETICOES.length > 0, 'calendario: a base de competicoes esta vazia');
+afirma(COMPETICOES.every((c) => c.fim >= c.inicio),
+  'calendario: ha competicao que termina antes de comecar');
+afirma(COMPETICOES.every((c) => /^\d{4}-\d{2}-\d{2}$/.test(c.inicio) && /^\d{4}-\d{2}-\d{2}$/.test(c.fim)),
+  'calendario: ha data fora do formato ISO');
+afirma(COMPETICOES.every((c) => c.inicio.startsWith(String(TEMPORADA))),
+  'calendario: ha competicao fora da temporada declarada');
+afirma(COMPETICOES.every((c) => c.uf.length === 2 && c.cidade.trim().length > 1),
+  'calendario: ha competicao sem cidade ou com UF invalida');
+afirma(COMPETICOES.every((c) => TIPOS.includes(c.tipo)),
+  'calendario: ha competicao com tipo desconhecido — o selo sairia sem rotulo');
+
+/* A CONTA QUE NAO FECHA e' dado, nao suspeita: a CBTM anunciou 10 etapas de
+   cada serie e o calendario lista 9 da Prata. Guardar o numero anunciado e' o
+   que permite a tela DIZER isso em vez de esconder. */
+const contagem = contarPorTipo(COMPETICOES);
+const anunciado = ETAPAS_ANUNCIADAS as { ouro: number; prata: number };
+afirma(contagem.ouro <= anunciado.ouro && contagem.prata <= anunciado.prata,
+  'calendario: listamos MAIS etapas do que a CBTM anunciou — conferir a colheita');
+const paginaComp = semComentarios(readFileSync('app/competicoes/competicoes-cliente.tsx', 'utf8'));
+afirma(/conta não fecha|contaNaoFecha/.test(paginaComp),
+  'calendario: sumiu o aviso da conta que nao fecha entre o anunciado e o listado');
+
+/* A pagina tem que dizer o que a fonte NAO publica -- quem procura horario
+   descobre ali que nao vai achar, em vez de varrer a tela atras do que ninguem tem. */
+const capaComp = semComentarios(readFileSync('app/competicoes/page.tsx', 'utf8'));
+afirma(/não tem, porque a fonte não publica/.test(capaComp),
+  'calendario: sumiu a lista do que a fonte nao publica (horario, ginasio, taxa)');
+afirma(/confira na CBTM/.test(capaComp),
+  'calendario: sumiu o aviso de conferir na fonte — data e sede mudam');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

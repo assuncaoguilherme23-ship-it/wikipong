@@ -190,6 +190,7 @@ export function Cabecalho() {
                 <div className={estilos.megaColuna}>
                   <p className={`mono ${estilos.megaTitulo}`}>Acompanhar</p>
                   <Link href="/noticias/">Notícias</Link>
+                  <Link href="/competicoes/">Competições nacionais</Link>
                   <Link href="/profissionais/">O que os profissionais usam</Link>
                   {/* Item FIXO, não condicional a estar logado. Descobrir se
                       há sessão custa duas idas à rede, e o cabeçalho pinta em
@@ -268,6 +269,7 @@ export function Cabecalho() {
             <LinkModeracao />
             <Link href="/comunidade/entrar/">Entrar ou criar conta</Link>
             <Link href="/noticias/">Notícias</Link>
+            <Link href="/competicoes/">Competições nacionais</Link>
             <Link href="/profissionais/">O que os profissionais usam</Link>
             <Link href="/quiz/" className={`botao-primario ${estilos.drawerCta}`}>
               Fazer o teste →

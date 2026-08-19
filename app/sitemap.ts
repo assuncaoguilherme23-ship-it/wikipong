@@ -22,6 +22,7 @@ import { ofertasDoMaterial } from '@/componentes/dados-ofertas';
 import { imagemDoMaterial } from '@/componentes/dados-imagens';
 import { NOTICIAS } from '@/componentes/dados-noticias';
 import { CONSULTADO_EM_USO } from '@/componentes/dados-uso-atual';
+import { CONSULTADO_EM_CALENDARIO } from '@/componentes/dados-competicoes';
 import { PROFISSIONAIS } from '@/componentes/dados-profissionais';
 
 /** Export estático (D-17) exige que rotas de metadata sejam geradas no build. */
@@ -78,6 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url('/glossario') },
     { url: url('/profissionais'), lastModified: profissionais },
     { url: url('/noticias'), lastModified: noticias },
+    { url: url('/competicoes'), lastModified: new Date(CONSULTADO_EM_CALENDARIO) },
   ];
 
   return [...fixas, ...materiais, ...marcas, ...guias];

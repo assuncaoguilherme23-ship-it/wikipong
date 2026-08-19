@@ -12,6 +12,7 @@
  */
 import type { Metadata } from 'next';
 import { NovaSenhaCliente } from './nova-senha-cliente';
+import { Pagina } from '@/componentes/Pagina';
 
 export const metadata: Metadata = {
   title: 'Definir uma senha nova · WikiPong',
@@ -19,10 +20,10 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function Pagina() {
+export default function PaginaNovaSenha() {
   return (
-    <main className="conteudo">
+    <Pagina semRodape>
       <NovaSenhaCliente />
-    </main>
+    </Pagina>
   );
 }

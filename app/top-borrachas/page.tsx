@@ -34,6 +34,7 @@ import {
   FAMILIAS, ROTULO_FAMILIA, SUBTITULO_FAMILIA, EXPLICA_FAMILIA,
 } from '@/src/logica/popularidade';
 import estilos from './top.module.css';
+import { Pagina } from '@/componentes/Pagina';
 
 export const metadata: Metadata = {
   title: 'Top 5 de borrachas por família · WikiPong',
@@ -45,9 +46,9 @@ const MES = new Date(`${PERIODO_DO_USO}-01T12:00:00Z`).toLocaleDateString('pt-BR
   month: 'long', year: 'numeric', timeZone: 'UTC',
 });
 
-export default function Pagina() {
+export default function PaginaTopBorrachas() {
   return (
-    <main className="conteudo">
+    <Pagina>
       <header className={estilos.capa}>
         <h1 className={estilos.titulo}>As borrachas do momento, por família</h1>
         <p className={estilos.chamada}>
@@ -190,6 +191,6 @@ export default function Pagina() {
           não 15.
         </p>
       </footer>
-    </main>
+    </Pagina>
   );
 }

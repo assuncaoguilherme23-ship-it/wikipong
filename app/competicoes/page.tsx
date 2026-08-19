@@ -5,6 +5,7 @@ import {
   TEMPORADA, FONTE_CALENDARIO, CONSULTADO_EM_CALENDARIO,
 } from '@/componentes/dados-competicoes';
 import estilos from './competicoes.module.css';
+import { Pagina } from '@/componentes/Pagina';
 
 export const metadata: Metadata = {
   title: `Competições nacionais de tênis de mesa ${TEMPORADA} · WikiPong`,
@@ -14,9 +15,9 @@ export const metadata: Metadata = {
 
 const dataBR = (iso: string) => iso.split('-').reverse().join('/');
 
-export default function Pagina() {
+export default function PaginaCompeticoes() {
   return (
-    <main className="conteudo">
+    <Pagina>
       <header className={estilos.capa}>
         <h1 className={estilos.titulo}>Competições nacionais de {TEMPORADA}</h1>
         <p className={estilos.chamada}>
@@ -53,6 +54,6 @@ export default function Pagina() {
           está no alto do ranking, com fonte e data de cada checagem.
         </p>
       </footer>
-    </main>
+    </Pagina>
   );
 }

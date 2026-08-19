@@ -11,6 +11,7 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { EntrarCliente } from './entrar-cliente';
+import { Pagina } from '@/componentes/Pagina';
 
 export const metadata: Metadata = {
   title: 'Entrar ou criar conta · WikiPong',
@@ -18,9 +19,9 @@ export const metadata: Metadata = {
     'Crie sua conta na WikiPong com e-mail e senha, ou entre por link no e-mail. A conta guarda seu perfil de jogador, sua estante e suas avaliações.',
 };
 
-export default function Pagina() {
+export default function PaginaEntrar() {
   return (
-    <main className="conteudo">
+    <Pagina semRodape>
       <Suspense
         fallback={
           <div style={{ maxWidth: '34rem', margin: '2rem auto' }}>
@@ -34,6 +35,6 @@ export default function Pagina() {
       >
         <EntrarCliente />
       </Suspense>
-    </main>
+    </Pagina>
   );
 }

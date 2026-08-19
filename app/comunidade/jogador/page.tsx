@@ -14,6 +14,7 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { JogadorCliente } from './jogador-cliente';
+import { Pagina } from '@/componentes/Pagina';
 
 export const metadata: Metadata = {
   title: 'Perfil de jogador · WikiPong',
@@ -21,13 +22,13 @@ export const metadata: Metadata = {
     'Estilo, equipamento e contribuições de quem participa da comunidade da WikiPong.',
 };
 
-export default function Pagina() {
+export default function PaginaJogador() {
   return (
-    <main className="conteudo">
+    <Pagina>
       {/* `useSearchParams` exige Suspense no App Router — sem ele o build quebra. */}
       <Suspense fallback={<p>Carregando…</p>}>
         <JogadorCliente />
       </Suspense>
-    </main>
+    </Pagina>
   );
 }

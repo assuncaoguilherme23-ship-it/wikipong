@@ -2468,6 +2468,41 @@ for (const marca of MARCAS) {
   }
 }
 
+/* ───────── logos de marca ─────────
+   Tres modos de falhar aqui, e os tres ja aconteceram ou quase: apontar pra
+   arquivo que nao existe, registrar sem dizer de onde veio, e usar a versao
+   BRANCA do logo — que some na placa branca e vira um quadrado vazio. */
+const logos = JSON.parse(readFileSync('dados/logos-marcas.json', 'utf8')) as {
+  logos: Record<string, { arquivo: string; fonte: string; fonteUrl: string; consultadoEm: string }>;
+};
+
+for (const [marca, l] of Object.entries(logos.logos)) {
+  afirma(existsSync(`public/marcas/${l.arquivo}`),
+    `logo de ${marca}: o arquivo public/marcas/${l.arquivo} nao existe — a placa sai vazia`);
+  afirma(l.fonteUrl.startsWith('http') && l.fonte.trim().length > 3,
+    `logo de ${marca}: registrado sem fonte utilizavel — imagem sem origem clara nao entra (D-16)`);
+  afirma(/^\d{4}-\d{2}-\d{2}$/.test(l.consultadoEm),
+    `logo de ${marca}: sem data real de colheita`);
+  /* Toda marca com logo tem que existir no catalogo: logo de marca que nao
+     vendemos e' arquivo orfao que ninguem vai ver. */
+  afirma(MARCAS.some((m) => m.nome === marca),
+    `logo de ${marca}: nao ha marca com esse nome no catalogo`);
+}
+
+/* Nenhum arquivo solto em public/marcas sem registro — o inverso do de cima. */
+for (const arq of readdirSync('public/marcas')) {
+  afirma(Object.values(logos.logos).some((l) => l.arquivo === arq),
+    `public/marcas/${arq}: arquivo sem registro em logos-marcas.json — imagem sem procedencia`);
+}
+
+/* Marca sem logo NAO pode ficar com buraco: o monograma continua sendo o
+   fallback, e ele tem que estar no componente. */
+const monograma = semComentarios(readFileSync('componentes/MonogramaMarca.tsx', 'utf8'));
+afirma(/iniciaisDaMarca\(nome\)/.test(monograma),
+  'monograma: sumiu o fallback de iniciais — marca sem logo ficaria com placa vazia');
+afirma(/logoDaMarca\(/.test(monograma),
+  'monograma: parou de procurar o logo oficial');
+
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

@@ -33,3 +33,19 @@
   background: var(--cor-superficie);
   border-radius: var(--raio-sm);
 }
+
+/* ── Com logo oficial ──
+   Fundo branco NOS DOIS TEMAS, de propósito: logo de fabricante é quase sempre
+   escuro sobre transparente, e no papel escuro ele sumiria. `contain` é o que
+   faz um wordmark largo e um símbolo quadrado ocuparem a mesma caixa sem
+   desalinhar a grade — a objeção de forma que segurou os logos até aqui. */
+.tilePlaca {
+  background: #fff;
+  border: 1px solid var(--cor-linha-forte);
+}
+
+.logo {
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+}

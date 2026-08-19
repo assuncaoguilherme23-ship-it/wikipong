@@ -1,0 +1,11 @@
+{
+  "aviso": "LOGOS DE MARCA — cada arquivo e a logo OFICIAL do fabricante, baixada do site dele, com credito e URL de origem (D-16). Uso NOMINATIVO: a logo identifica a marca cujos produtos o catalogo cataloga, e nunca sugere parceria ou aval — o site nao e ligado a fabricante nenhum. Marca sem entrada aqui NAO fica com buraco: cai no selo tipografico do LogoMarca, que e visivelmente nosso. Nao desenhamos logo parecido com o verdadeiro, que seria falsificar marca alheia.",
+  "logos": {
+    "Butterfly": {
+      "arquivo": "butterfly.svg",
+      "fonte": "Butterfly (site oficial)",
+      "fonteUrl": "https://www.butterfly-global.com/assets/images/common/header-logo.svg",
+      "consultadoEm": "2026-08-16"
+    }
+  }
+}

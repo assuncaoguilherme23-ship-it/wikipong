@@ -1,0 +1,255 @@
+/* Calendário nacional.
+   Lista com a data à esquerda, em mono — é por ela que se procura. O tipo vira
+   um selo à direita para dar a varredura ("cadê as Prata?") sem exigir leitura
+   linha a linha. */
+
+.capa {
+  max-width: 64ch;
+  margin: var(--esp-6) 0 var(--esp-6);
+}
+
+.titulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-1);
+  line-height: var(--altura-titulo);
+  text-wrap: balance;
+  margin: 0 0 var(--esp-3);
+}
+
+.chamada {
+  font-size: var(--texto-maior);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
+  margin: 0 0 var(--esp-5);
+}
+
+.procedencia {
+  padding: var(--esp-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+}
+
+.procedencia p {
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  margin: 0 0 var(--esp-2);
+}
+
+.procedencia p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Resumo por tipo ── */
+
+.resumo {
+  list-style: none;
+  margin: 0 0 var(--esp-5);
+  padding: 0;
+  display: grid;
+  gap: var(--esp-4);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.resumoItem {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0 var(--esp-3);
+  align-items: baseline;
+  padding-top: var(--esp-3);
+  border-top: 2px solid var(--cor-linha-forte);
+}
+
+.resumoNumero {
+  font-size: var(--titulo-3);
+  line-height: 1;
+  color: var(--cor-texto-acento);
+  font-variant-numeric: tabular-nums;
+}
+
+.resumoRotulo {
+  font-weight: 600;
+  font-size: var(--texto-menor);
+}
+
+.resumoExplica {
+  grid-column: 2;
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-mudo);
+  margin-top: 2px;
+}
+
+/* A conta que não fecha. Moldura de atenção, sem fundo colorido: o texto tem
+   que continuar legível nos dois temas. */
+.contaNaoFecha {
+  margin: 0 0 var(--esp-6);
+  padding: var(--esp-3) var(--esp-4);
+  border: 1px solid var(--cor-linha-forte);
+  border-radius: var(--raio-md);
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+  max-width: 78ch;
+}
+
+.contaNaoFecha strong {
+  color: var(--cor-tinta);
+}
+
+/* ── Grupos ── */
+
+.grupo {
+  margin-bottom: var(--esp-7);
+}
+
+.grupoTitulo {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-2);
+  line-height: var(--altura-titulo);
+  margin: 0 0 var(--esp-2);
+}
+
+.grupoNota,
+.vazio {
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
+  color: var(--cor-mudo);
+  margin: 0 0 var(--esp-4);
+  max-width: 68ch;
+}
+
+/* O arquivo é secundário: fica mais leve sem sumir. */
+.arquivo .lista {
+  opacity: 0.75;
+}
+
+/* ── A lista ── */
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr) auto;
+  gap: var(--esp-2) var(--esp-4);
+  align-items: start;
+  padding: var(--esp-4) 0;
+  border-bottom: 1px solid var(--cor-linha);
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.quando {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.periodo {
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta);
+  font-variant-numeric: tabular-nums;
+}
+
+.contagem {
+  font-size: var(--texto-mini);
+  color: var(--cor-texto-acento);
+}
+
+.corpo {
+  min-width: 0;
+}
+
+.nome {
+  font-family: var(--fonte-display);
+  font-size: var(--titulo-4);
+  line-height: var(--altura-apertada);
+  margin: 0 0 2px;
+  text-wrap: balance;
+}
+
+.lugar {
+  font-size: var(--texto-menor);
+  color: var(--cor-tinta-suave);
+  margin: 0;
+}
+
+.nota {
+  font-size: var(--texto-mini);
+  line-height: var(--altura-corpo);
+  color: var(--cor-mudo);
+  margin: var(--esp-2) 0 0;
+  max-width: 72ch;
+}
+
+/* ── Selo de tipo ──
+   Pílula, o mesmo vocabulário dos chips do catálogo. Ouro e Prata são as duas
+   divisões da mesma competição, então elas se distinguem pelo PREENCHIMENTO —
+   cheia e vazada — e não por duas cores novas que o sistema não tem. */
+.selo {
+  font-size: var(--texto-micro);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35em 0.8em;
+  border-radius: 999px;
+  border: 1px solid var(--cor-linha-forte);
+  color: var(--cor-tinta-suave);
+  white-space: nowrap;
+  align-self: center;
+}
+
+.ouro {
+  background: var(--cor-acento-escuro);
+  border-color: var(--cor-acento-escuro);
+  color: #fff;
+}
+
+.prata {
+  border-color: var(--cor-acento);
+  color: var(--cor-texto-acento);
+}
+
+.brasileirao {
+  background: var(--cor-tinta);
+  border-color: var(--cor-tinta);
+  color: var(--cor-papel);
+}
+
+.rodape {
+  max-width: 64ch;
+  margin: var(--esp-7) 0 var(--esp-8);
+  padding-top: var(--esp-5);
+  border-top: 1px solid var(--cor-linha);
+  font-size: var(--texto-menor);
+  line-height: var(--altura-leitura);
+  color: var(--cor-tinta-suave);
+}
+
+.rodape p {
+  margin: 0;
+}
+
+@media (max-width: 48rem) {
+  .item {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .quando {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--esp-2);
+  }
+
+  .selo {
+    align-self: start;
+  }
+}

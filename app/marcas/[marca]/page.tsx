@@ -151,12 +151,21 @@ export default async function PaginaMarca({ params }: { params: Promise<{ marca:
           </section>
         )}
 
+        {/* O link só aparece quando HÁ site vivo. Duas marcas chinesas tinham
+            aqui um domínio que morreu (729tabletennis.com e yinhe-tt.com, os
+            dois sem DNS em 2026-08-16), e o site publicava link morto — o que o
+            D-16 proíbe. Sem `site`, o bloco vira só a ressalva de independência,
+            que continua valendo e é o que importa dizer. */}
         {m.editorial && (
           <p className={estilos.oficial}>
-            Site oficial:{' '}
-            <a href={m.editorial.site} target="_blank" rel="nofollow noopener">
-              {new URL(m.editorial.site).hostname.replace(/^www\./, '')} ↗
-            </a>
+            {m.editorial.site && (
+              <>
+                Site oficial:{' '}
+                <a href={m.editorial.site} target="_blank" rel="nofollow noopener">
+                  {new URL(m.editorial.site).hostname.replace(/^www\./, '')} ↗
+                </a>
+              </>
+            )}
             <span className={estilos.oficialNota}>
               O WikiPong não é ligado à {m.nome} nem a nenhuma marca. As fichas são independentes.
             </span>

@@ -1,5 +1,5 @@
 {
-  "aviso": "MARCAS — a página de cada marca é majoritariamente DERIVADA dos dados que o site já tem (materiais do catálogo, faixa de preço real, escala de dureza declarada nas fichas, quais profissionais usam). O texto abaixo é EDITORIAL curto e restrito a fatos amplamente documentados (país de origem, linha pela qual a marca é conhecida). Não inventamos história de marca, faturamento nem superlativo de marketing (D-02/D-16). `site` é o endereço oficial que consultamos ao colher specs e imagens.",
+  "aviso": "MARCAS — a página de cada marca é majoritariamente DERIVADA dos dados que o site já tem (materiais do catálogo, faixa de preço real, escala de dureza declarada nas fichas, quais profissionais usam). O texto abaixo é EDITORIAL curto e restrito a fatos amplamente documentados (país de origem, linha pela qual a marca é conhecida). Não inventamos história de marca, faturamento nem superlativo de marketing (D-02/D-16). `site` é o endereço oficial que consultamos ao colher specs e imagens. LINKS CONFERIDOS EM 2026-08-16: o site oficial da Friendship 729 (729tabletennis.com) e o da Yinhe (yinhe-tt.com) sairam do ar — os dois dominios nao resolvem mais em DNS. O campo `site` delas foi REMOVIDO em vez de manter link morto (D-16); se encontrarmos o endereco novo, ele volta. A Sanwei mudou para sanweisport.com. A Tibhar apontava para tibhar.com.br, que e a LOJA brasileira e nao o fabricante: passou para tibhar.info, o site institucional da TIBHAR Tibor Harangozo GmbH.",
   "marcas": {
     "Andro": {
       "pais": "Alemanha",
@@ -23,8 +23,7 @@
     },
     "Friendship 729": {
       "pais": "China",
-      "descricao": "Uma das marcas chinesas mais antigas, especializada em borrachas aderentes — as dez peças dela no catálogo são todas borracha, nenhuma lâmina. A linha Battle é a mais avaliada.",
-      "site": "http://www.729tabletennis.com/"
+      "descricao": "Uma das marcas chinesas mais antigas, especializada em borrachas aderentes — as dez peças dela no catálogo são todas borracha, nenhuma lâmina. A linha Battle é a mais avaliada."
     },
     "Gewo": {
       "pais": "Alemanha",
@@ -49,7 +48,7 @@
     "Sanwei": {
       "pais": "China",
       "descricao": "Chinesa de preço baixo, forte em lâminas de carbono acessíveis — 14 das 23 peças dela aqui são madeiras. A partir de R$ 90, é uma das portas de entrada mais baratas do catálogo.",
-      "site": "https://www.sanwei-tt.com/"
+      "site": "https://sanweisport.com/en/"
     },
     "Stiga": {
       "pais": "Suécia",
@@ -59,7 +58,7 @@
     "Tibhar": {
       "pais": "Alemanha",
       "descricao": "Marca alemã cuja linha Evolution popularizou as borrachas de esponja ESN entre jogadores de nível intermediário em diante.",
-      "site": "https://www.tibhar.com.br/"
+      "site": "https://tibhar.info/en/"
     },
     "Victas": {
       "pais": "Japão",
@@ -78,8 +77,7 @@
     },
     "Yinhe": {
       "pais": "China",
-      "descricao": "Chinesa também vendida como Galaxy ou Milky Way, conhecida por entregar construção parecida com a das marcas caras por uma fração do preço. Começa em R$ 90 no catálogo, e a Mercury II é a borracha mais avaliada dela.",
-      "site": "https://www.yinhe-tt.com/"
+      "descricao": "Chinesa também vendida como Galaxy ou Milky Way, conhecida por entregar construção parecida com a das marcas caras por uma fração do preço. Começa em R$ 90 no catálogo, e a Mercury II é a borracha mais avaliada dela."
     }
   }
 }

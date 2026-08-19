@@ -16,7 +16,13 @@ import { slug } from '@/src/logica/filtros';
 export interface MarcaEditorial {
   pais: string;
   descricao: string;
-  site: string;
+  /**
+   * OPCIONAL desde 2026-08-16: marca cujo site oficial saiu do ar entra SEM
+   * link, em vez de com um link morto (D-16). A Friendship 729 e a Yinhe são
+   * os dois casos — os domínios delas não resolvem mais em DNS, e não achamos
+   * endereço novo. Quando achar, o campo volta.
+   */
+  site?: string;
 }
 
 const EDITORIAL = dados.marcas as Record<string, MarcaEditorial>;

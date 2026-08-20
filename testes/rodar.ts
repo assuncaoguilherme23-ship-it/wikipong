@@ -2645,6 +2645,74 @@ afirma(new Set(ancoras).size === ancoras.length,
 afirma(ancoras.every((a) => a.length > 1),
   'glossario: ha verbete cuja ancora ficou vazia ou curta demais');
 
+/* ───────── navegacao: o vocabulario vem primeiro ─────────
+   O Glossario e o Tradutor de durezas ensinam a LER o resto do site, e estavam
+   enterrados: o Glossario so' no rodape e no drawer, e o Tradutor em quinto
+   lugar dentro de Materiais ▾ → Ferramentas. O fundador promoveu os dois em
+   2026-08-20. */
+const cabecalhoFonte = semComentarios(readFileSync('componentes/Cabecalho.tsx', 'utf8'));
+
+/* Aprender virou grupo, com seta — como a propria D-03 previa. */
+afirma(/aria-controls="painel-aprender"/.test(cabecalhoFonte),
+  'nav: "Aprender" voltou a ser link direto — o painel com glossario e tradutor sumiu');
+afirma(/aprenderAberto/.test(cabecalhoFonte) && /setAprenderAberto/.test(cabecalhoFonte),
+  'nav: o grupo Aprender perdeu o estado de aberto/fechado');
+
+/* Abrir um TEM que fechar os outros: dois paineis abertos se sobrepoem, e o de
+   baixo fica inalcancavel. Cada botao precisa fechar os outros dois. */
+for (const [dono, outros] of [
+  ['setMegaAberto((v) => !v)', ['setAprenderAberto(false)', 'setComunidadeAberto(false)']],
+  ['setAprenderAberto((v) => !v)', ['setMegaAberto(false)', 'setComunidadeAberto(false)']],
+  ['setComunidadeAberto((v) => !v)', ['setMegaAberto(false)', 'setAprenderAberto(false)']],
+] as const) {
+  const i = cabecalhoFonte.indexOf(dono);
+  afirma(i > 0, `nav: nao achei o botao que faz ${dono}`);
+  const trecho = cabecalhoFonte.slice(Math.max(0, i - 260), i);
+  for (const fecha of outros) {
+    afirma(trecho.includes(fecha),
+      `nav: abrir ${dono} nao fecha ${fecha} — dois paineis abertos se sobrepoem`);
+  }
+}
+
+/* Escape e clique fora fecham os TRES. Um painel que so' fecha clicando nele de
+   novo prende quem navega por teclado. */
+afirma((cabecalhoFonte.match(/setAprenderAberto\(false\)/g) ?? []).length >= 4,
+  'nav: o grupo Aprender nao esta sendo fechado em algum dos caminhos (navegou, Escape, clique fora, outro painel)');
+
+/* Os dois PRIMEIROS no painel, antes dos guias.
+   A janela ancora no `id=` do painel, e nao no `aria-controls` do botao: o
+   `aria-controls` vem primeiro no arquivo e a janela morria antes dos links —
+   as tres buscas davam -1 e a asercao "passava" comparando -1 com -1. Ancora
+   errada e' o jeito mais silencioso de um teste deixar de testar. */
+const inicioPainel = cabecalhoFonte.indexOf('id="painel-aprender"');
+afirma(inicioPainel > 0, 'nav: nao achei o painel Aprender pelo id');
+const painelAprender = cabecalhoFonte.slice(inicioPainel, inicioPainel + 900);
+for (const alvo of ['/glossario/', '/escalas/', '/aprender/']) {
+  afirma(painelAprender.includes(alvo),
+    `nav: ${alvo} sumiu do painel Aprender`);
+}
+afirma(painelAprender.indexOf('/glossario/') < painelAprender.indexOf('/aprender/'),
+  'nav: o glossario voltou a ficar depois dos guias no painel Aprender');
+afirma(painelAprender.indexOf('/escalas/') < painelAprender.indexOf('/aprender/'),
+  'nav: o tradutor de durezas voltou a ficar depois dos guias no painel Aprender');
+
+/* E o tradutor NAO pode voltar a aparecer tambem em Ferramentas: link repetido
+   em dois menus e' o comeco de duas arquiteturas. */
+const painelMateriais = cabecalhoFonte.slice(
+  cabecalhoFonte.indexOf('painel-materiais'),
+  cabecalhoFonte.indexOf('painel-aprender'),
+);
+afirma(!painelMateriais.includes('/escalas/'),
+  'nav: o tradutor de durezas voltou a Materiais ▾ — ele agora mora em Aprender ▾, e nos dois seria duplicata');
+
+/* No rodape os dois tambem vem primeiro, e o tradutor passou a existir la. */
+const rodapeFonte = semComentarios(readFileSync('componentes/Rodape.tsx', 'utf8'));
+const blocoAprender = rodapeFonte.slice(rodapeFonte.indexOf("titulo: 'Aprender'"));
+afirma(blocoAprender.indexOf("'/glossario/'") < blocoAprender.indexOf("'/aprender/'"),
+  'rodape: o glossario voltou a ficar depois dos guias');
+afirma(blocoAprender.includes("'/escalas/'"),
+  'rodape: o tradutor de durezas sumiu do rodape');
+
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

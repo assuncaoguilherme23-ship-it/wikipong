@@ -1,0 +1,118 @@
+/* Termo do glossário dentro do texto corrido.
+   ==============================================================================
+   O gatilho tem que se ANUNCIAR sem gritar: quem já sabe o que é "tensor" lê a
+   frase inteira sem tropeçar; quem não sabe percebe que ali há ajuda. Por isso
+   sublinhado pontilhado e não cor — cor faria o parágrafo parecer cheio de
+   links, e link promete outra página. */
+
+.caixa {
+  position: relative;
+  display: inline;
+}
+
+.gatilho {
+  /* Herda TUDO do parágrafo: fonte, tamanho, peso, cor. O botão existe pelo
+     foco e pelo teclado, não para parecer um botão. */
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: help;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--cor-mudo);
+  transition: text-decoration-color 140ms ease-out;
+}
+
+.gatilho:hover,
+.gatilho[aria-expanded='true'] {
+  text-decoration-color: var(--cor-acento);
+}
+
+/* Sem raio próprio: o anel de foco segue a forma do texto, e 2px seria um
+   valor fora da escala do sistema para resolver nada. */
+.gatilho:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+}
+
+/* ── O balão ──
+   Largura de leitura curta e posição acima do termo. `translateX(-50%)` com
+   `left: 50%` centraliza sem depender de medir nada em JavaScript. */
+.balao {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  width: max-content;
+  max-width: min(22rem, calc(100vw - 2rem));
+  padding: var(--esp-3) var(--esp-4);
+
+  background: var(--cor-mesa);
+  border-radius: var(--raio-md);
+  /* O token do sistema, e não uma sombra à mão: o balão flutua sobre o texto
+     pelo mesmo motivo que um cartão flutua sobre o papel, e duas receitas de
+     sombra no mesmo site é como a escala começa a se desfazer. */
+  box-shadow: var(--sombra-cartao);
+
+  /* Texto do balão é do balão, não do parágrafo: o parágrafo pode estar em
+     qualquer tamanho, e a explicação tem que ser sempre legível. */
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  text-align: left;
+  white-space: normal;
+  cursor: auto;
+}
+
+/* A seta. Herda o fundo mesa, então nunca descola da cor do balão. */
+.balao::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--cor-mesa);
+}
+
+/* Sobre a mesa o acento do site não passa AA — quem carrega o texto é o
+   branco-mesa, medido em 10.8:1, e o suave em 6.7:1. */
+.balaoTermo {
+  font-size: var(--texto-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-sobre-mesa-suave);
+}
+
+.balaoTexto {
+  color: var(--cor-sobre-mesa);
+}
+
+.balaoLink {
+  font-size: var(--texto-mini);
+  color: var(--cor-sobre-mesa);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.balaoLink:hover {
+  text-decoration-thickness: 2px;
+}
+
+.balaoLink:focus-visible {
+  outline: 2px solid var(--cor-sobre-mesa);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gatilho {
+    transition: none;
+  }
+}

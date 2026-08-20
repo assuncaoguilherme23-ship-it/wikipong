@@ -735,18 +735,33 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                   </li>
                 ))}
               </ol>
+              {/* A REGRA DE PARCERIA SÓ APARECE QUANDO HÁ PARCEIRO NA LISTA.
+                  Antes ela aparecia sempre — e como não existe nenhum parceiro
+                  (0 em 669 ofertas), a tela gastava quatro linhas explicando as
+                  regras de um programa que não existe. O fundador cortou em
+                  2026-08-16, e o corte é certo: aviso sobre coisa que não está
+                  acontecendo ensina o leitor a pular aviso.
+
+                  Condicional, e não apagada, porque o D-13 exige a divulgação no
+                  dia em que houver parceiro. Assim ela volta sozinha, junto com
+                  a primeira tag, em vez de depender de alguém lembrar. */}
               <p className={estilos.ofertasNota}>
-                Ordenado <strong>pelo preço</strong>, sempre. Nunca por quem é parceiro. As lojas
-                marcadas como <em>Parceiro</em> nos pagam comissão se você comprar, e isso{' '}
-                <strong>não muda a ordem desta lista</strong> nem o que escrevemos na ficha
-                técnica, que é independente. As datas são reais: se um preço está velho, ele
-                aparece velho.
+                Ordenado <strong>pelo preço</strong>, sempre.{' '}
+                {ofertas.some((o) => o.parceiro) && (
+                  <>
+                    Nunca por quem é parceiro: as lojas marcadas como <em>Parceiro</em> nos pagam
+                    comissão se você comprar, e isso{' '}
+                    <strong>não muda a ordem desta lista</strong> nem o que escrevemos na ficha
+                    técnica.{' '}
+                  </>
+                )}
+                As datas são reais: se um preço está velho, ele aparece velho.
               </p>
             </>
           ) : (
             <p className={estilos.semOferta}>
               Ainda não conferimos preço deste material em nenhuma loja. Quando conferirmos, cada
-              preço aparecerá aqui com a loja e a <strong>data real</strong> da checagem, ordenado pelo preço, não por quem paga. Até lá, o valor no topo desta página é uma{' '}
+              preço aparecerá aqui com a loja e a <strong>data real</strong> da checagem, ordenado pelo preço. Até lá, o valor no topo desta página é uma{' '}
               <strong>estimativa</strong>, não um preço conferido.
             </p>
           )}
@@ -769,11 +784,15 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
                 </li>
               ))}
             </ul>
+            {/* O que ficou é o que o leitor precisa: isto é um diretório, não
+                uma lista de preços conferidos. As duas frases sobre parceria
+                saíram porque não há parceria nenhuma — e prometer como ela
+                SERIA divulgada, num site que ainda não tem, é ocupar a tela com
+                futuro hipotético. */}
             <p className={estilos.lojasAviso}>
               Este é um <strong>diretório de onde procurar</strong>, não uma lista de ofertas
               conferidas: não verificamos se estas lojas têm este material em estoque nem por
-              quanto. Nenhuma delas nos paga. Quando alguma for parceira, isso estará escrito
-              aqui, com a tag <em>Parceiro</em>.
+              quanto.
             </p>
           </div>
         </section>

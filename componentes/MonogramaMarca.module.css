@@ -49,3 +49,11 @@
   height: 78%;
   object-fit: contain;
 }
+
+/* Marca que só publica a versão branca do logo (Yinhe) ganha o fundo escuro que
+   ela mesma usa. É a mesa do site — invariante entre temas, como o resto das
+   superfícies mesa. Recolorir o logo seria alterar a marca de outra pessoa. */
+.tilePlacaEscura {
+  background: var(--cor-mesa);
+  border: 1px solid var(--cor-mesa-borda);
+}

@@ -13,10 +13,22 @@
       "fonteUrl": "https://www.butterfly-global.com/assets/images/common/header-logo.svg",
       "consultadoEm": "2026-08-16"
     },
+    "DHS": {
+      "arquivo": "dhs.png",
+      "fonte": "DHS / 红双喜集团 (site oficial do grupo)",
+      "fonteUrl": "https://www.dhs-group.com/public/static/index/images/logo2.png",
+      "consultadoEm": "2026-08-16"
+    },
     "Donic": {
       "arquivo": "donic.png",
       "fonte": "Donic (site oficial)",
       "fonteUrl": "https://www.donic.com/media/62/8a/c0/1732014410/donic-share-icon.png",
+      "consultadoEm": "2026-08-16"
+    },
+    "Friendship 729": {
+      "arquivo": "f729.png",
+      "fonte": "天津七二九体育 / Friendship 729 (site oficial)",
+      "fonteUrl": "http://www.729sports.com/",
       "consultadoEm": "2026-08-16"
     },
     "Gewo": {
@@ -72,6 +84,13 @@
       "fonte": "Yasaka (site oficial)",
       "fonteUrl": "https://yasakatabletennis.com/images/yasaka-favicon.png",
       "consultadoEm": "2026-08-16"
+    },
+    "Yinhe": {
+      "arquivo": "yinhe.png",
+      "fonte": "河北银河体育 / Yinhe (site oficial)",
+      "fonteUrl": "http://www.yinhe1986.cn/",
+      "consultadoEm": "2026-08-16",
+      "fundo": "escuro"
     }
   }
 }

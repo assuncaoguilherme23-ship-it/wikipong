@@ -74,7 +74,11 @@ export function MonogramaMarca({
 
   return (
     <span
-      className={logo ? `${estilos.tile} ${estilos.tilePlaca}` : estilos.tile}
+      className={
+        logo
+          ? `${estilos.tile} ${logo.fundo === 'escuro' ? estilos.tilePlacaEscura : estilos.tilePlaca}`
+          : estilos.tile
+      }
       style={{ width: tamanho, height: tamanho }}
       aria-hidden="true"
     >

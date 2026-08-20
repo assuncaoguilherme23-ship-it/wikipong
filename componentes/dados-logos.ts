@@ -13,6 +13,15 @@ export interface LogoDeMarca {
   fonte: string;
   fonteUrl: string;
   consultadoEm: string;
+  /**
+   * Sobre que fundo a marca desenhou o logo. Ausente = claro (placa branca).
+   *
+   * Existe porque algumas marcas publicam SÓ a versão reversa: a Yinhe entrega
+   * um wordmark branco, que na placa branca vira um quadrado vazio. Recolorir
+   * seria alterar a marca de outra pessoa; dar a ela o fundo escuro que ela
+   * mesma usa é usar o asset como o dono pretendia.
+   */
+  fundo?: 'claro' | 'escuro';
 }
 
 const LOGOS = dados.logos as Record<string, LogoDeMarca>;

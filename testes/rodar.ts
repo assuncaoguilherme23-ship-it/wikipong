@@ -62,7 +62,7 @@ import { MARCAS } from '../componentes/dados-marcas.js';
 import { nomeComMarca } from '../componentes/formato.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
-import { precoMedio } from '../componentes/dados-ofertas.js';
+import { precoMedio, TODAS_AS_OFERTAS } from '../componentes/dados-ofertas.js';
 import { NOTICIAS } from '../componentes/dados-noticias.js';
 import {
   RESUMO_MINIMO, ordenarNoticias, comPontoFinal, foiReescrito, type NoticiaRecebida,
@@ -2502,6 +2502,39 @@ afirma(/iniciaisDaMarca\(nome\)/.test(monograma),
   'monograma: sumiu o fallback de iniciais — marca sem logo ficaria com placa vazia');
 afirma(/logoDaMarca\(/.test(monograma),
   'monograma: parou de procurar o logo oficial');
+
+/* ───────── a divulgação de parceria ─────────
+   Ela sumiu da tela em 2026-08-16, a pedido do fundador, e o pedido estava
+   certo: nao existe UM parceiro em 669 ofertas, e a pagina gastava quatro
+   linhas explicando as regras de um programa que nao existe. Aviso sobre coisa
+   que nao esta acontecendo ensina o leitor a pular aviso.
+
+   MAS O D-13 EXIGE a divulgacao no dia em que houver parceiro, e "some da tela"
+   nao pode virar "sumiu do codigo". Estas asercoes guardam as duas pontas. */
+const fichaMaterial = readFileSync('app/materiais/[id]/page.tsx', 'utf8');
+const fichaSemComentario = semComentarios(fichaMaterial);
+
+/* 1. A tag continua saindo em toda oferta de parceiro. */
+afirma(/o\.parceiro && <span[^>]*>[\s\S]{0,60}Parceiro/.test(fichaSemComentario),
+  'ficha: sumiu a tag Parceiro da oferta — acordo comercial sem etiqueta visivel viola o D-13');
+
+/* 2. O texto que explica a regra continua existindo, guardado por condicao —
+      nao apagado. Se alguem "limpar" isso, o primeiro parceiro entra sem
+      divulgacao nenhuma e ninguem percebe. */
+afirma(/ofertas\.some\(\(o\) => o\.parceiro\)/.test(fichaSemComentario),
+  'ficha: a explicacao de parceria deixou de ser condicional — ou some pra sempre, ou volta a aparecer sem parceiro');
+afirma(/não muda a ordem desta lista/.test(fichaSemComentario),
+  'ficha: o texto que explica que comissao NAO muda a ordem foi apagado — no dia do primeiro parceiro nao ha o que mostrar');
+
+/* 3. E a promessa vazia nao pode voltar: enquanto nao ha parceiro, a tela nao
+      fala de parceria. */
+const parceiroNasOfertas = TODAS_AS_OFERTAS.filter((o) => o.parceiro).length;
+if (parceiroNasOfertas === 0) {
+  afirma(!/Nenhuma delas nos paga/.test(fichaSemComentario),
+    'ficha: voltou "nenhuma delas nos paga" — afirmacao sobre um programa que nao existe, e perto demais do "nao vendemos" que o D-06 proibe');
+  afirma(!/Quando alguma for parceira/.test(fichaSemComentario),
+    'ficha: voltou a promessa de como a parceria SERIA divulgada — futuro hipotetico ocupando a tela');
+}
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

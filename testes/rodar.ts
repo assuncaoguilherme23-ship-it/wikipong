@@ -59,6 +59,10 @@ import {
 import { MATERIAIS, materialPorId } from '../componentes/dados-materiais.js';
 import { CONJUNTOS } from '../componentes/dados-conjuntos.js';
 import { MARCAS } from '../componentes/dados-marcas.js';
+import {
+  marcarTermos, formasDoTermo, type TermoDoGlossario, type Pedaco,
+} from '../src/logica/glossario.js';
+import { TERMOS_GLOSSARIO, ancoraDoTermo } from '../componentes/dados-glossario.js';
 import { nomeComMarca } from '../componentes/formato.js';
 import { fabricantePorId } from '../componentes/dados-fabricante.js';
 import { imagemDoMaterial } from '../componentes/dados-imagens.js';
@@ -2535,6 +2539,111 @@ if (parceiroNasOfertas === 0) {
   afirma(!/Quando alguma for parceira/.test(fichaSemComentario),
     'ficha: voltou a promessa de como a parceria SERIA divulgada — futuro hipotetico ocupando a tela');
 }
+
+/* ───────── glossario no texto corrido ─────────
+   O site combate o "jargao que exclui", e o glossario so' ajudava quem SAIA da
+   pagina pra consultar. Marcar o termo onde ele aparece resolve — desde que a
+   marcacao nao vire textura nem case dentro de outra palavra. */
+const termosDeTeste: TermoDoGlossario[] = [
+  { termo: 'Esponja (sponge)', definicao: 'Camada sob a borracha.', categoria: 'A esponja' },
+  { termo: 'Topspin', definicao: 'Efeito para frente.', categoria: 'Golpes e efeitos' },
+  { termo: 'ALC (Arylate-Carbon)', definicao: 'Fibra mista.', categoria: 'A superfície' },
+  { termo: 'Tensão (high tension)', definicao: 'Pre-tensionamento.', categoria: 'A esponja' },
+  { termo: 'Flick', definicao: 'Golpe curto por cima da mesa.', categoria: 'Golpes e efeitos' },
+];
+const soTermos = (ps: Pedaco[]) =>
+  ps.filter((p) => p.tipo === 'termo').map((p) => p.texto);
+const juntar = (ps: Pedaco[]) => ps.map((p) => p.texto).join('');
+
+/* REGRA 0, a que ninguem lembra de testar: o texto nao pode mudar. Marcar e'
+   cortar, nunca reescrever — se sobrar ou faltar um caractere, a frase que o
+   leitor ve deixou de ser a que o autor escreveu. */
+for (const t of [
+  'A esponja define o controle.',
+  'Sem termo nenhum aqui.',
+  'Topspin, esponja e ALC na mesma frase.',
+  '',
+]) {
+  afirma(juntar(marcarTermos(t, termosDeTeste)) === t,
+    `glossario: a marcacao alterou o texto — "${t}"`);
+}
+
+/* REGRA 1: so' a primeira ocorrencia. Doze sublinhados num guia viram textura. */
+const repetido = marcarTermos('A esponja é dura. A esponja gasta. A esponja importa.', termosDeTeste);
+afirma(soTermos(repetido).length === 1,
+  'glossario: marcou a mesma palavra mais de uma vez — sublinhado em toda linha deixa de ser sinal');
+
+/* REGRA 2: palavra inteira. Sem isso "Flick" casa dentro de "flicker" e "ALC"
+   dentro de "CALCULAR". */
+afirma(soTermos(marcarTermos('O flicker da luz.', termosDeTeste)).length === 0,
+  'glossario: "flick" casou dentro de "flicker"');
+afirma(soTermos(marcarTermos('Vamos calcular o preço.', termosDeTeste)).length === 0,
+  'glossario: "ALC" casou dentro de "calcular"');
+afirma(soTermos(marcarTermos('Um flick curto.', termosDeTeste)).length === 1,
+  'glossario: palavra inteira e minuscula deixou de casar');
+/* A fronteira tem que valer com ACENTO ao redor — o \\b do JavaScript nao sabe
+   disso, e por isso a fronteira e' testada a mao. */
+afirma(soTermos(marcarTermos('A tensão, quando alta, ajuda.', termosDeTeste)).length === 1,
+  'glossario: termo acentuado seguido de virgula deixou de casar');
+
+/* REGRA 3: o maior vence. */
+const doisTamanhos = marcarTermos('A tensão da esponja.', termosDeTeste);
+afirma(soTermos(doisTamanhos).length === 2,
+  'glossario: dois termos na mesma frase, so um foi marcado');
+
+/* REGRA 4: as duas formas. Metade do glossario nomeia o termo com o equivalente
+   em ingles entre parenteses, e as duas aparecem em texto corrido. */
+afirma(formasDoTermo('Esponja (sponge)').join('|') === 'Esponja|sponge',
+  'glossario: a forma entre parenteses nao foi extraida');
+afirma(formasDoTermo('Topspin').join('|') === 'Topspin',
+  'glossario: termo sem parenteses ganhou forma inventada');
+afirma(soTermos(marcarTermos('The sponge is hard.', termosDeTeste)).length === 1,
+  'glossario: a forma em ingles do termo nao casa — quem menos sabe fica sem a explicacao');
+
+/* Caixa e acento do ORIGINAL sao preservados: a normalizacao serve pra achar,
+   nunca pra substituir. */
+const preserva = marcarTermos('ESPONJA dura.', termosDeTeste);
+afirma(soTermos(preserva)[0] === 'ESPONJA',
+  'glossario: a marcacao trocou a caixa do texto original');
+
+/* O corpus de verdade nao pode ter termo que quebre a marcacao. */
+for (const t of TERMOS_GLOSSARIO) {
+  afirma(t.termo.trim().length >= 2 && t.definicao.trim().length > 10,
+    `glossario: termo "${t.termo}" sem nome ou sem definicao utilizavel`);
+  afirma(formasDoTermo(t.termo).every((f) => f.length >= 2),
+    `glossario: termo "${t.termo}" produz forma curta demais, que casaria em qualquer lugar`);
+}
+
+/* ───────── a fiacao do tooltip ───────── */
+const compGloss = semComentarios(readFileSync('componentes/TextoComGlossario.tsx', 'utf8'));
+
+/* O gatilho tem que ser <button> DE VERDADE. Um <span onClick> parece igual na
+   tela e nao tem foco, papel nem teclado — e o glossario existe justamente pra
+   quem tem mais dificuldade, nao menos. */
+afirma(/<button\s+type="button"/.test(compGloss),
+  'glossario: o gatilho deixou de ser <button> — sem foco e sem teclado, ajuda so quem ja nao precisava');
+afirma(/onKeyDown|Escape/.test(compGloss),
+  'glossario: sumiu a saida por Escape do balao');
+afirma(/pointerType === 'mouse'/.test(compGloss),
+  'glossario: o balao voltou a abrir no toque pelo pointerenter — abre e fecha no mesmo gesto');
+/* `title=""` e' a solucao que so' funciona pra quem tem mouse e paciencia. */
+afirma(!/title=\{/.test(compGloss) && !/title="/.test(compGloss),
+  'glossario: voltou o title="" — nao aparece no toque, some sozinho e varios leitores de tela ignoram');
+
+/* A definicao nao pode explicar o proprio verbete: circulo, e o balao abriria
+   em cima da resposta que a pessoa ja esta lendo. */
+const paginaGloss = semComentarios(readFileSync('app/glossario/page.tsx', 'utf8'));
+afirma(/t\.termo !== v\.termo/.test(paginaGloss),
+  'glossario: a definicao voltou a poder linkar pra si mesma');
+afirma(/ancoraDoTermo\(v\.termo\)/.test(paginaGloss),
+  'glossario: sumiu a ancora do verbete — "ver no glossario" largaria a pessoa no topo da pagina');
+
+/* Ancora repetida faria dois verbetes disputarem o mesmo destino. */
+const ancoras = TERMOS_GLOSSARIO.map((t) => ancoraDoTermo(t.termo));
+afirma(new Set(ancoras).size === ancoras.length,
+  'glossario: dois verbetes geram a mesma ancora — o link levaria ao errado');
+afirma(ancoras.every((a) => a.length > 1),
+  'glossario: ha verbete cuja ancora ficou vazia ou curta demais');
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

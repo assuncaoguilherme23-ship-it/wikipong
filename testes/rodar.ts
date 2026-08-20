@@ -51,7 +51,10 @@ import {
 } from '../src/logica/traduzir.js';
 import { metricasComparaveis, metricasDoRadar, temRadar } from '../src/logica/comparacao.js';
 import { posicaoNaFaixa, fracaoNaFaixa, leituraDaPosicao } from '../src/logica/posicao.js';
-import { similares, distancia, type Similar } from '../src/logica/similares.js';
+import {
+  similares, distancia, porQueParecido, type Similar,
+} from '../src/logica/similares.js';
+import { familiaDaLamina, familiaDaBorracha } from '../src/logica/traduzir.js';
 import { filtrarPorTexto } from '../src/logica/busca-material.js';
 import {
   validarPedido, parecidos, ordenarPedidos, atendidos, aprovados, type PedidoDePauta,
@@ -2712,6 +2715,101 @@ afirma(blocoAprender.indexOf("'/glossario/'") < blocoAprender.indexOf("'/aprende
   'rodape: o glossario voltou a ficar depois dos guias');
 afirma(blocoAprender.includes("'/escalas/'"),
   'rodape: o tradutor de durezas sumiu do rodape');
+
+
+/* O MESMO mapeamento que a ficha faz — se o teste usasse um mais simples, ele
+   estaria medindo outra coisa que nao a tela. */
+const paraSimilarTeste = (x: (typeof MATERIAIS)[number]): Similar => {
+  const f = fabricantePorId(x.id)?.ficha;
+  const familia = !f
+    ? null
+    : /mina/i.test(x.tipo)
+      ? familiaDaLamina(f)
+      : x.tipo === 'Borracha'
+        ? familiaDaBorracha(f)
+        : null;
+  return {
+    id: x.id, nome: x.nome, tipo: x.tipo, nivel: x.nivel, preco: x.preco,
+    moeda: x.moeda, specs: x.specs, durabilidade: x.durabilidade, familia,
+  };
+};
+const universoSimilarTeste = MATERIAIS.map(paraSimilarTeste);
+
+/* ───────── por que este apareceu como parecido ─────────
+   A lista dizia QUEM, nunca POR QUE. Tres nomes com numeros ao lado obrigavam o
+   leitor a fazer a subtracao de cabeca — e ele nao sabia se 8,2 era muito, foi
+   por isso que abriu a ficha. */
+const simTeste = (p: Partial<Similar>): Similar => ({
+  id: p.id ?? 'x', nome: p.nome ?? 'Material', tipo: p.tipo ?? 'Borracha',
+  nivel: p.nivel ?? 'Avançado', preco: p.preco ?? 500, moeda: p.moeda,
+  specs: p.specs, durabilidade: p.durabilidade, familia: p.familia,
+});
+const S3 = (v: number, e: number, c: number) => ({ velocidade: v, spin: e, controle: c });
+
+/* Direcao e' FATO subtraido. Veredito e' opiniao, e opiniao joga rotulada e em
+   outra secao (D-14) — a frase nunca pode dizer "melhor" nem "pior". */
+const maisRapida = porQueParecido(simTeste({ specs: S3(8, 9, 8) }), simTeste({ specs: S3(9.5, 9, 8) }));
+afirma(/mais velocidade/.test(maisRapida.frase),
+  'parecidos: a frase nao disse que o vizinho e mais rapido');
+afirma(!/melhor|pior|vale mais|recomend/i.test(maisRapida.frase),
+  'parecidos: a frase virou veredito — direcao e fato, "melhor" e opiniao (D-14)');
+
+/* Diferenca minuscula e ruido de arredondamento, nao noticia. */
+const quaseIgual = porQueParecido(simTeste({ specs: S3(8, 9, 8) }), simTeste({ specs: S3(8.1, 9, 8) }));
+afirma(/a mesma velocidade|mesmo perfil/.test(quaseIgual.frase),
+  'parecidos: 0,1 de diferenca virou noticia — isso e ruido de arredondamento');
+
+/* Eixo que so' UM dos dois tem nao vira frase: seria comparar com o vazio.
+   Lamina nao tem efeito publicado por fonte nenhuma. */
+const soUmTemEfeito = porQueParecido(
+  simTeste({ specs: { velocidade: 8, controle: 8 } }), simTeste({ specs: S3(8, 9, 8) }));
+afirma(!/efeito/.test(soUmTemEfeito.frase),
+  'parecidos: comparou um eixo que so um dos dois tem — o mesmo erro do radar');
+
+/* Preco so' entre a MESMA moeda: converter exige cambio, e cambio e chute. */
+const moedasDiferentes = porQueParecido(
+  simTeste({ specs: S3(8, 9, 8), preco: 500 }),
+  simTeste({ specs: S3(8, 9, 8), preco: 50, moeda: 'USD' }));
+afirma(moedasDiferentes.preco === undefined && !moedasDiferentes.frase.includes('R$'),
+  'parecidos: comparou preco entre moedas diferentes');
+
+/* Concordancia: "mesmo velocidade" denuncia texto gerado. */
+const concord = porQueParecido(simTeste({ specs: S3(8, 9, 8) }), simTeste({ specs: S3(8, 7, 8) }));
+afirma(/a mesma velocidade/.test(concord.frase) && !/mesmo velocidade/.test(concord.frase),
+  'parecidos: erro de concordancia na frase derivada');
+
+/* Sem base comum nenhuma, a frase e VAZIA. Foi ela que denunciou o defeito
+   abaixo: saia vazia em 891 de 893 pares, e vazia estava certa. */
+afirma(porQueParecido(simTeste({}), simTeste({})).frase === '',
+  'parecidos: inventou frase para um par que nao tem nada comparavel');
+
+/* ───────── O DEFEITO QUE A FRASE DENUNCIOU ─────────
+   `similares` comparava um material COM indices contra outro SEM nenhum, e a
+   distancia saia de "os dois sao Avancado". Eram 82% dos pares do site: a
+   Viscaria sugeria uma caneta chinesa, e a Tenergy 05 uma borracha sem spec
+   nenhuma em dolar. Tinha cara de recomendacao e era quase sorteio. */
+const comIndice = [
+  simTeste({ id: 'a', specs: S3(9, 9, 8), preco: 500 }),
+  simTeste({ id: 'b', specs: S3(8.8, 9, 8), preco: 520 }),
+  simTeste({ id: 'c', specs: S3(8.6, 9, 8), preco: 540 }),
+  simTeste({ id: 'd', specs: S3(8.4, 9, 8), preco: 560 }),
+];
+const semIndice = [
+  simTeste({ id: 'z1', preco: 500 }), simTeste({ id: 'z2', preco: 500 }), simTeste({ id: 'z3', preco: 500 }),
+];
+afirma(similares(comIndice[0], [...comIndice.slice(1), ...semIndice], 3).every((v) => Boolean(v.specs)),
+  'parecidos: material COM indices voltou a ser comparado com material SEM nenhum — 82% do site era assim');
+
+/* E o site inteiro, ponta a ponta. */
+let misturados = 0;
+for (const mat of MATERIAIS) {
+  const alvoT = paraSimilarTeste(mat);
+  for (const v of similares(alvoT, universoSimilarTeste, 3)) {
+    if (Boolean(alvoT.specs) !== Boolean(v.specs)) misturados++;
+  }
+}
+afirma(misturados === 0,
+  `parecidos: ${misturados} pares ainda misturam material com indice e sem indice`);
 
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {

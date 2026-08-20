@@ -25,7 +25,7 @@
  */
 import Link from 'next/link';
 import { brl } from './formato';
-import type { Similar } from '@/src/logica/similares';
+import { porQueParecido, type Similar } from '@/src/logica/similares';
 import estilos from './ComparativoSimilares.module.css';
 
 export interface IndiceComparado {
@@ -139,13 +139,35 @@ export function ComparativoSimilares({
         </table>
       </div>
 
-      <p className={estilos.acoes}>
-        {similares.map((s) => (
-          <Link key={s.id} href={`/comparar/?ids=${alvo.id},${s.id}`} className={estilos.acao}>
-            Comparar com {s.nome} →
-          </Link>
-        ))}
-      </p>
+      {/* ── POR QUE CADA UM APARECEU ─────────────────────────────────────────
+             Aqui embaixo eram tres links "Comparar com X →" pelados. A tabela
+             acima ja' dava os numeros, e obrigava o leitor a fazer a subtracao
+             de cabeca: "8,2 contra 8,6 e' muito?". Ele nao sabia se 8,2 era
+             muito — foi por isso que abriu a ficha.
+
+             A frase e' DERIVADA dos mesmos numeros da tabela, e nunca diz
+             "melhor": direcao e' fato subtraido, veredito e' opiniao, e opiniao
+             joga rotulada e em outra secao (D-14).
+
+             Some sozinha quando nao ha base comum — sem indice dos dois lados,
+             nao ha o que dizer, e um lugar vazio e' mais honesto que uma frase
+             generica. */}
+      <ul className={estilos.porques}>
+        {similares.map((s) => {
+          const { frase } = porQueParecido(alvo, s);
+          return (
+            <li key={s.id} className={estilos.porque}>
+              <Link href={`/materiais/${s.id}/`} className={estilos.porqueNome}>
+                {s.nome}
+              </Link>
+              {frase && <span className={estilos.porqueFrase}>{frase}</span>}
+              <Link href={`/comparar/?ids=${alvo.id},${s.id}`} className={estilos.acao}>
+                comparar lado a lado →
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </section>
   );
 }

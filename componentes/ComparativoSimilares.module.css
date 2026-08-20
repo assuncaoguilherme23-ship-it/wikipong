@@ -100,12 +100,6 @@
   background: var(--cor-acento-escuro);
 }
 
-.acoes {
-  margin: 1.1rem 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-}
 .acao {
   font-size: var(--texto-menor);
 }
@@ -123,4 +117,47 @@
       transform: scaleX(0);
     }
   }
+}
+
+/* ── Por que cada um apareceu ──
+   Uma linha por vizinho: nome, o porquê derivado, e o caminho pra comparação
+   completa. Antes eram três links soltos; a frase é o que transforma "estes são
+   parecidos" em "este é mais rápido e custa menos". */
+.porques {
+  list-style: none;
+  margin: var(--esp-5) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.porque {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--esp-1) var(--esp-4);
+  align-items: baseline;
+  padding: var(--esp-3) 0;
+  border-top: 1px solid var(--cor-linha);
+}
+
+.porqueNome {
+  font-weight: 600;
+  color: var(--cor-tinta);
+  text-decoration: none;
+}
+
+.porqueNome:hover {
+  color: var(--cor-texto-acento);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* A frase ocupa a linha inteira embaixo do nome: ela é o conteúdo, e espremê-la
+   numa coluna estreita ao lado do nome a picotaria em três palavras por linha. */
+.porqueFrase {
+  grid-column: 1 / -1;
+  font-size: var(--texto-menor);
+  line-height: var(--altura-corpo);
+  color: var(--cor-tinta-suave);
+  text-wrap: pretty;
 }

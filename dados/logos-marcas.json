@@ -1,5 +1,5 @@
 {
-  "aviso": "LOGOS DE MARCA — cada arquivo e a logo OFICIAL do fabricante, baixada do site dele, com credito e URL de origem (D-16). Uso NOMINATIVO: a logo identifica a marca cujos produtos o catalogo cataloga, e nunca sugere parceria ou aval — o site nao e ligado a fabricante nenhum. Marca sem entrada aqui NAO fica com buraco: cai no selo tipografico do LogoMarca, que e visivelmente nosso. Nao desenhamos logo parecido com o verdadeiro, que seria falsificar marca alheia. COLHEITA DE 2026-08-16: 11 das 16 marcas. Ficaram de fora DHS, Friendship 729, Sanwei, Yinhe e Tibhar — os quatro sites chineses nao respondem daqui e o da Tibhar devolve 403. Elas seguem no monograma, que e uma alternativa e nao um buraco. NAO pegamos de loja: foi assim que 193 materiais chegaram a exibir o selo \"COMPRA 100% SEGURA\" no lugar da foto, e foi assim que a pagina da Gewo ficou em branco. DUAS marcas so publicam a versao BRANCA do logo no cabecalho (Tibhar e a Yasaka no cabecalho) — branca some na placa branca; da Yasaka usamos o favicon, que e escuro.",
+  "aviso": "LOGOS DE MARCA — cada arquivo e a logo OFICIAL do fabricante, baixada do site dele, com credito e URL de origem (D-16). Uso NOMINATIVO: a logo identifica a marca cujos produtos o catalogo cataloga, e nunca sugere parceria ou aval — o site nao e ligado a fabricante nenhum. Marca sem entrada aqui NAO fica com buraco: cai no selo tipografico do LogoMarca, que e visivelmente nosso. Nao desenhamos logo parecido com o verdadeiro, que seria falsificar marca alheia. COLHEITA DE 2026-08-16: 11 das 16 marcas. Ficaram de fora DHS, Friendship 729, Sanwei, Yinhe e Tibhar — os quatro sites chineses nao respondem daqui e o da Tibhar devolve 403. Elas seguem no monograma, que e uma alternativa e nao um buraco. NAO pegamos de loja: foi assim que 193 materiais chegaram a exibir o selo \"COMPRA 100% SEGURA\" no lugar da foto, e foi assim que a pagina da Gewo ficou em branco. DUAS marcas so publicam a versao BRANCA do logo no cabecalho (Tibhar e a Yasaka no cabecalho) — branca some na placa branca; da Yasaka usamos o favicon, que e escuro. A Tibhar fechou a lista em 2026-08-16: o servidor dela devolve HTML no lugar do arquivo pra cliente que nao seja navegador, entao o fundador baixou do proprio site institucional e passou o arquivo. A fonteUrl e a de origem, nao a do caminho por onde ele veio.",
   "logos": {
     "Andro": {
       "arquivo": "andro.png",
@@ -65,6 +65,12 @@
       "arquivo": "stiga.png",
       "fonte": "Stiga Sports (site oficial)",
       "fonteUrl": "https://a.storyblok.com/f/330050/204x192/44a4563d91/stigalogo.png",
+      "consultadoEm": "2026-08-16"
+    },
+    "Tibhar": {
+      "arquivo": "tibhar.png",
+      "fonte": "TIBHAR Tibor Harangozo GmbH (site institucional)",
+      "fonteUrl": "https://tibhar.info/wp-content/uploads/2022/07/TIBHAR_Logo_2020.png",
       "consultadoEm": "2026-08-16"
     },
     "Victas": {

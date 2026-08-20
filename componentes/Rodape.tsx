@@ -19,9 +19,14 @@ const COLUNAS = [
   },
   {
     titulo: 'Aprender',
+    /* Glossário e Tradutor primeiro, e o Tradutor entra aqui pela primeira vez:
+       ele só existia dentro de Materiais ▾ → Ferramentas, em quinto lugar.
+       Os dois ensinam a LER o resto do site — quem não entende o vocabulário
+       não chega nos guias (pedido do fundador, 2026-08-20). */
     itens: [
-      { href: '/aprender/', rotulo: 'Guias' },
       { href: '/glossario/', rotulo: 'Glossário' },
+      { href: '/escalas/', rotulo: 'Tradutor de durezas' },
+      { href: '/aprender/', rotulo: 'Guias' },
       { href: '/quiz/', rotulo: 'Fazer o teste' },
     ],
   },

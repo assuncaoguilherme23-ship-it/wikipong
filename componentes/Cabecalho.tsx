@@ -4,10 +4,11 @@
  * Cabeçalho com a arquitetura da D-03 — na medida do que EXISTE (D-16):
  *   · Materiais ▾ (mega-menu): Todos · por tipo (presets de filtro D-12) · Comparar
  *     (Comparar mora DENTRO de Materiais — D-03).
- *   · Glossário: link direto (vira grupo "Aprender ▾" quando houver ≥2 filhos).
- *   · Comunidade (D-03): Profissionais e Notícias como links diretos (2 filhos) —
- *     candidatos a virar "Comunidade ▾" se a barra crescer. Busca segue oculta
- *     até existir (D-16 — sem link morto).
+ *   · Aprender ▾: virou grupo em 2026-08-20, como a própria D-03 previa
+ *     ("vira grupo quando houver ≥2 filhos"). Glossário e Tradutor de durezas
+ *     PRIMEIRO — eles ensinam a ler o resto do site, e estavam enterrados.
+ *   · Comunidade ▾: visão geral, discussões, perfil, moderação · e a coluna
+ *     Acompanhar (notícias, competições, profissionais, conta).
  *   · Mobile: hambúrguer → drawer verde-mesa com a MESMA arquitetura.
  * O quiz mantém a barra própria minimalista (fluxo de conversão).
  *
@@ -44,15 +45,18 @@ function IconeMenu({ aberto }: { aberto: boolean }) {
 export function Cabecalho() {
   const rota = usePathname();
   const [megaAberto, setMegaAberto] = useState(false);
+  const [aprenderAberto, setAprenderAberto] = useState(false);
   const [comunidadeAberto, setComunidadeAberto] = useState(false);
   const [drawerAberto, setDrawerAberto] = useState(false);
   const megaRef = useRef<HTMLDivElement | null>(null);
+  const aprenderRef = useRef<HTMLDivElement | null>(null);
   const comunidadeRef = useRef<HTMLDivElement | null>(null);
   const drawerRef = useRef<HTMLDivElement | null>(null);
 
   // Navegou → fecha tudo
   useEffect(() => {
     setMegaAberto(false);
+    setAprenderAberto(false);
     setComunidadeAberto(false);
     setDrawerAberto(false);
   }, [rota]);
@@ -62,6 +66,7 @@ export function Cabecalho() {
     const aoTeclar = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setMegaAberto(false);
+        setAprenderAberto(false);
         setComunidadeAberto(false);
         setDrawerAberto(false);
       }
@@ -69,6 +74,7 @@ export function Cabecalho() {
     const aoClicar = (e: MouseEvent) => {
       const alvo = e.target as Node;
       if (megaRef.current && !megaRef.current.contains(alvo)) setMegaAberto(false);
+      if (aprenderRef.current && !aprenderRef.current.contains(alvo)) setAprenderAberto(false);
       if (comunidadeRef.current && !comunidadeRef.current.contains(alvo)) setComunidadeAberto(false);
     };
     document.addEventListener('keydown', aoTeclar);
@@ -112,6 +118,7 @@ export function Cabecalho() {
               aria-controls="painel-materiais"
               /* Abrir um fecha o outro: dois painéis abertos se sobrepõem. */
               onClick={() => {
+                setAprenderAberto(false);
                 setComunidadeAberto(false);
                 setMegaAberto((v) => !v);
               }}
@@ -139,19 +146,63 @@ export function Cabecalho() {
                   <Link href="/conjuntos/">Conjuntos montados</Link>
                   <Link href="/comparar/">Comparar lado a lado</Link>
                   <Link href="/quiz/">Teste de perfil</Link>
-                  <Link href="/escalas/">Tradutor de durezas</Link>
                   <Link href="/marcas/">Marcas</Link>
                 </div>
               </div>
             )}
           </div>
-          <Link
-            href="/aprender/"
-            className={estilos.navLink}
-            aria-current={rota.startsWith('/aprender') ? 'page' : undefined}
-          >
-            Aprender
-          </Link>
+          {/* ── Aprender ▾ ───────────────────────────────────────────────────
+              Era link direto, e o proprio cabecalho ja' previa a virada: "vira
+              grupo quando houver ≥2 filhos" (D-03). Sao tres agora — e os dois
+              que ensinam a LER o site estavam enterrados: o Glossario so' no
+              rodape e no drawer, e o Tradutor de durezas em quinto lugar dentro
+              de Materiais ▾ → Ferramentas.
+
+              Eles vem PRIMEIRO no painel, antes dos guias, a pedido do fundador
+              (2026-08-20): sao a porta de quem nao entende o vocabulario, e
+              porta nao fica no fim do corredor.
+
+              O Tradutor SAIU de Ferramentas em vez de aparecer nos dois lugares:
+              link repetido em dois menus e' o comeco de duas arquiteturas. */}
+          <div className={estilos.megaEscopo} ref={aprenderRef}>
+            <button
+              type="button"
+              className={`${estilos.navLink} ${estilos.megaBotao}`}
+              aria-expanded={aprenderAberto}
+              aria-controls="painel-aprender"
+              aria-current={
+                rota.startsWith('/aprender') ||
+                rota.startsWith('/glossario') ||
+                rota.startsWith('/escalas')
+                  ? 'page'
+                  : undefined
+              }
+              onClick={() => {
+                setMegaAberto(false);
+                setComunidadeAberto(false);
+                setAprenderAberto((v) => !v);
+              }}
+            >
+              Aprender
+              <svg width="10" height="7" viewBox="0 0 10 7" aria-hidden="true" className={estilos.seta}>
+                <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              </svg>
+            </button>
+            {aprenderAberto && (
+              <div id="painel-aprender" className={`${estilos.mega} ${estilos.megaEstreito}`}>
+                <div className={estilos.megaColuna}>
+                  <p className={`mono ${estilos.megaTitulo}`}>Entender o vocabulário</p>
+                  <Link href="/glossario/">Glossário</Link>
+                  <Link href="/escalas/">Tradutor de durezas</Link>
+                </div>
+                <div className={estilos.megaColuna}>
+                  <p className={`mono ${estilos.megaTitulo}`}>Aprender</p>
+                  <Link href="/aprender/">Todos os guias</Link>
+                  <Link href="/quiz/">Descobrir meu perfil</Link>
+                </div>
+              </div>
+            )}
+          </div>
           {/* ── Comunidade ▾ ──────────────────────────────────────────────────
               Era link direto, e Notícias ocupava um lugar próprio na barra. Mas
               notícia É conteúdo de comunidade, e a página de comunidade já
@@ -170,6 +221,7 @@ export function Cabecalho() {
               aria-current={rota.startsWith('/comunidade') || rota.startsWith('/noticias') ? 'page' : undefined}
               onClick={() => {
                 setMegaAberto(false);
+                setAprenderAberto(false);
                 setComunidadeAberto((v) => !v);
               }}
             >
@@ -258,8 +310,9 @@ export function Cabecalho() {
             <Link href="/conjuntos/">Conjuntos montados</Link>
             <Link href="/comparar/">Comparar lado a lado</Link>
             <p className={`mono ${estilos.drawerTitulo}`}>Aprender</p>
-            <Link href="/aprender/">Guias</Link>
             <Link href="/glossario/">Glossário</Link>
+            <Link href="/escalas/">Tradutor de durezas</Link>
+            <Link href="/aprender/">Todos os guias</Link>
             {/* Mesma arquitetura do desktop (D-03): o drawer listava só três
                 itens e escondia discussões e perfil, que são o miolo da área. */}
             <p className={`mono ${estilos.drawerTitulo}`}>Comunidade</p>

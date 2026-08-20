@@ -63,6 +63,7 @@ import {
 import { slug, temDesempenho } from '@/src/logica/filtros';
 import { variacao, dataCurta } from '@/componentes/dados-historico';
 import estilos from './detalhe.module.css';
+import { TextoComGlossario } from '@/componentes/TextoComGlossario';
 
 export const dynamicParams = false;
 
@@ -524,7 +525,14 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
               </div>
             )}
 
-            {fab.nota && <p className={estilos.fabricanteNota}>{fab.nota}</p>}
+            {/* A nota do fabricante é a prosa mais técnica da ficha — foi
+                medida em 0,51 termo de glossário por nota, contra 0,15 do modo
+                Simples. É aqui que o jargão realmente trava o leitor. */}
+            {fab.nota && (
+              <p className={estilos.fabricanteNota}>
+                <TextoComGlossario>{fab.nota}</TextoComGlossario>
+              </p>
+            )}
 
             <p className={estilos.fonte}>
               Fonte:{' '}
@@ -581,8 +589,14 @@ export default async function PaginaDetalhe({ params }: { params: Promise<{ id: 
           {/* A procedência fica, mas embaixo e como nota: ela é contexto da
               nossa apuração, não a resposta que o leitor veio buscar. Só
               aparece quando o resumo traduzido assumiu o lugar dela acima. */}
+          {/* A frase do modo Simples é escrita PRA QUEM NÃO SABE o jargão
+              (D-08) — e ainda assim ela precisa dizer "tensor", "aderente",
+              "esponja". É o texto do site onde explicar o termo no lugar rende
+              mais, e por isso foi o primeiro a receber o glossário embutido. */}
           {leitura?.resumo && (
-            <p className={estilos.procedenciaNota}>{m.simples.frase}</p>
+            <p className={estilos.procedenciaNota}>
+              <TextoComGlossario>{m.simples.frase}</TextoComGlossario>
+            </p>
           )}
         </section>
 

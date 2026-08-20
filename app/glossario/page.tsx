@@ -10,6 +10,8 @@ import { Cabecalho } from '@/componentes/Cabecalho';
 import { Rodape } from '@/componentes/Rodape';
 import glossario from '@/dados/glossario.json';
 import estilos from './glossario.module.css';
+import { ancoraDoTermo, TERMOS_GLOSSARIO } from '@/componentes/dados-glossario';
+import { TextoComGlossario } from '@/componentes/TextoComGlossario';
 
 export const metadata: Metadata = {
   title: 'Glossário',
@@ -59,10 +61,28 @@ export default function PaginaGlossario() {
             <section key={categoria} className={estilos.grupo}>
               <h2 className={estilos.grupoTitulo}>{categoria}</h2>
               <dl className={estilos.lista}>
+                {/* A âncora existe pro balão do TextoComGlossario ter onde
+                    chegar. Sem ela, "ver no glossário" abriria a página e
+                    largaria a pessoa no topo, procurando a palavra com o olho —
+                    que é exatamente o trabalho que o tooltip veio poupar. */}
                 {verbetes.map((v) => (
-                  <div key={v.termo} className={`${estilos.verbete} revela`}>
+                  <div
+                    key={v.termo}
+                    id={ancoraDoTermo(v.termo)}
+                    className={`${estilos.verbete} revela`}
+                  >
                     <dt>{v.termo}</dt>
-                    <dd>{v.definicao}</dd>
+                    <dd>
+                      {/* A definição cruza com os OUTROS verbetes: é a maior
+                          densidade do site (0,97 termo por definição), e é o que
+                          uma enciclopédia faz. O `filter` tira o próprio termo —
+                          um verbete que se explica com ele mesmo é um círculo,
+                          e o balão abriria em cima da resposta que a pessoa já
+                          está lendo. */}
+                      <TextoComGlossario termos={TERMOS_GLOSSARIO.filter((t) => t.termo !== v.termo)}>
+                        {v.definicao}
+                      </TextoComGlossario>
+                    </dd>
                   </div>
                 ))}
               </dl>

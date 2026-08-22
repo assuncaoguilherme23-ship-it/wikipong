@@ -2912,6 +2912,39 @@ for (const x of comDurezaDerivada) {
   afirma(x.origemDureza === 'fabricante' ? Boolean(x.durezaFabricante) : true,
     `dureza: ${x.id} derivou dureza do fabricante sem guardar grau e regua de origem`);
 }
+
+/* ───────── colheita de dureza: a nota nao pode desmentir a ficha ─────────
+   As 19 fichas que receberam dureza em 2026-08-22 TINHAM uma nota dizendo o
+   contrario — "A AmericaTT nao declara a dureza desta borracha", "A DHS nao
+   publica o grau". Era verdade quando foi escrita, e virou mentira no minuto em
+   que o numero entrou.
+
+   Ninguem olha 400 notas pra conferir. Esta asercao olha. */
+for (const mat of MATERIAIS.filter((x) => x.tipo === 'Borracha')) {
+  const entrada = fabricantePorId(mat.id);
+  const temLinha = (entrada?.ficha ?? []).some((l) => /dureza/i.test(l.rotulo));
+  if (!temLinha) continue;
+  const nota = entrada?.nota ?? '';
+  afirma(!/não declara a dureza|não publica o grau|entra sem a régua|entra SEM a régua/i.test(nota),
+    `${mat.id}: a ficha mostra dureza e a nota diz que ela nao existe — uma das duas esta mentindo na tela`);
+}
+
+/* Linha de dureza sem regua nomeada e' PERMITIDA — e' o que a fonte publicou, e
+   copiar fielmente e' o certo. O que nao pode e' o leitor ficar sem explicacao:
+   ele ve "42° a 44°", nao ve dureza unificada nenhuma, e nada diz por que.
+
+   Entao a regra e': ou a linha nomeia a regua, ou a NOTA diz que a fonte nao a
+   nomeia. Esta asercao achou duas assim no dia em que foi escrita (Mark V e
+   Palio AK47) — as duas mostravam grau e nao explicavam o silencio. */
+for (const mat of MATERIAIS.filter((x) => x.tipo === 'Borracha')) {
+  const entrada = fabricantePorId(mat.id);
+  const linha = (entrada?.ficha ?? []).find((l) => /dureza/i.test(l.rotulo));
+  if (!linha) continue;
+  const temRegua = escalaDoTexto(linha.valor) !== null;
+  const explica = /não nomeia a régua|nao nomeia a regua/i.test(entrada?.nota ?? '');
+  afirma(temRegua || explica,
+    `${mat.id}: a linha de dureza ("${linha.valor}") nao nomeia a regua e a nota nao explica por que — o leitor ve um grau e nenhuma conversao, sem saber o motivo`);
+}
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

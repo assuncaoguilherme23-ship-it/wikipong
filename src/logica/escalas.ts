@@ -159,5 +159,12 @@ export function escalaDoTexto(texto: string): Escala | null {
   if (t.includes('dhs')) return 'dhs';
   if (t.includes('esn')) return 'esn';
   if (t.includes('butterfly')) return 'butterfly';
+  /* "régua europeia" é como boa parte das fichas escreve a ESN — e é o nome que
+     ESTE módulo já dá a ela na lista acima ("ESN (europeia)"). Reconhecer aqui
+     aplica a definição que o arquivo já declara; não reconhecer deixava 20
+     fichas da Gewo com o grau escrito e sem régua, o que descarta o grau
+     inteiro (sem régua, um número de dureza não quer dizer nada — é a tese
+     deste módulo). O mesmo vale para "alemã": a ESN é a fábrica alemã. */
+  if (/europ|alem/.test(t)) return 'esn';
   return null;
 }

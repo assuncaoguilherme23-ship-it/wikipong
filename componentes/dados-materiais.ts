@@ -48,7 +48,22 @@ export interface MaterialCatalogo extends Material {
 
 /** Converte a ficha do fabricante em grau ESN-equivalente. null quando não dá. */
 function durezaDaFicha(id: string): { unificada: number; grau: number; escala: string } | null {
-  const linha = fabricantePorId(id)?.ficha?.find((l) => /dureza/i.test(l.rotulo));
+  const ficha = fabricantePorId(id)?.ficha;
+  /* ── O LEITOR OLHAVA SÓ O RÓTULO (conserto de 2026-08-22) ──────────────────
+     Ele procurava uma linha chamada "Dureza da esponja". Só que 33 fichas
+     trazem o grau DENTRO de outra linha — "Superfície: Lisa, tensionada,
+     esponja 50° na régua europeia". O dado estava colhido, com fonte e data, e
+     o site não o lia: não entrava na dureza unificada, não aparecia no modo
+     Técnico e não alimentava o /escalas.
+
+     Era dado invisível, não dado faltando — e reescrever 33 fichas seria
+     consertar o sintoma. A busca agora tem duas etapas: o rótulo primeiro
+     (mais específico), e só então o valor de uma linha que fale de ESPONJA com
+     grau. A exigência da palavra "esponja" é o que impede pegar um grau que
+     seja de outra coisa. */
+  const linha =
+    ficha?.find((l) => /dureza/i.test(l.rotulo)) ??
+    ficha?.find((l) => /esponja/i.test(l.valor) && /\d\s*°/.test(l.valor));
   if (!linha) return null;
   const grau = grauRepresentativo(linha.valor);
   const escala = escalaDoTexto(linha.valor);

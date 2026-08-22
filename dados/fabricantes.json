@@ -265,7 +265,7 @@
           "valor": "1969"
         }
       ],
-      "nota": "As fontes divergem no valor exato da dureza (40° a 45°), então registramos a faixa. Os índices de velocidade/efeito aparecem em pelo menos três escalas distintas conforme a fonte e não foram embutidos."
+      "nota": "As fontes divergem no valor exato da dureza (40° a 45°), então registramos a faixa. Os índices de velocidade/efeito aparecem em pelo menos três escalas distintas conforme a fonte e não foram embutidos. A FONTE NÃO NOMEIA A RÉGUA, então o grau fica como está publicado e NÃO entra na conversão para ESN-equivalente: sem saber a régua, o número não diz o quanto a esponja é dura de verdade."
     },
     "stiga-allround": {
       "confianca": "oficial",
@@ -402,7 +402,7 @@
           "valor": "2,2 mm"
         }
       ],
-      "nota": "Atenção: na linha AK47, a Yellow é a dureza INTERMEDIÁRIA, a mais macia é a Blue (38° a 40°) e a Red é a mais dura. O texto do WikiPong descrevia a Yellow como 'a mais macia da lista', o que está incorreto."
+      "nota": "Atenção: na linha AK47, a Yellow é a dureza INTERMEDIÁRIA, a mais macia é a Blue (38° a 40°) e a Red é a mais dura. O texto do WikiPong descrevia a Yellow como 'a mais macia da lista', o que está incorreto. A FONTE NÃO NOMEIA A RÉGUA, então o grau fica como está publicado e NÃO entra na conversão para ESN-equivalente: sem saber a régua, o número não diz o quanto a esponja é dura de verdade."
     },
     "d40": {
       "confianca": "revendedor",
@@ -3702,11 +3702,15 @@
       "consultadoEm": "2026-07-29",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "39° (escala DHS)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa aderente (pegajosa), esponja dura"
         }
       ],
-      "nota": "A DHS não publica o grau desta borracha em página acessível, e a loja não o declara. Ela entra SEM a régua unificada, e por isso sem a leitura de dureza em português claro. A comunidade estima a dureza, mas estimativa de jogador não é medida de fábrica, e a régua do site é a segunda coisa."
+      "nota": "A DUREZA (39° na régua DHS) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-3) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a DHS Hurricane e variantes como exemplos da régua DHS. A comunidade estima a dureza, mas estimativa de jogador não é medida de fábrica, e a régua do site é a segunda coisa."
     },
     "dhs-hurricane-8": {
       "confianca": "revendedor",
@@ -3714,11 +3718,15 @@
       "consultadoEm": "2026-07-29",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "40° (escala DHS)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa aderente, esponja de alta elasticidade"
         }
       ],
-      "nota": "A DHS não publica o grau desta borracha em página acessível, e a loja não o declara. Ela entra SEM a régua unificada, e por isso sem a leitura de dureza em português claro. A comunidade estima a dureza, mas estimativa de jogador não é medida de fábrica, e a régua do site é a segunda coisa."
+      "nota": "A DUREZA (40° na régua DHS) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-3) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a DHS Hurricane e variantes como exemplos da régua DHS. A comunidade estima a dureza, mas estimativa de jogador não é medida de fábrica, e a régua do site é a segunda coisa."
     },
     "dhs-hurricane-8-80": {
       "confianca": "revendedor",
@@ -3726,11 +3734,15 @@
       "consultadoEm": "2026-07-29",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "38° (escala DHS)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa muito aderente + esponja elástica"
         }
       ],
-      "nota": "A DHS não publica o grau desta borracha em página acessível, e a loja não o declara. Ela entra SEM a régua unificada, e por isso sem a leitura de dureza em português claro. A comunidade estima a dureza, mas estimativa de jogador não é medida de fábrica, e a régua do site é a segunda coisa."
+      "nota": "A DUREZA (38° na régua DHS) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-3) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a DHS Hurricane e variantes como exemplos da régua DHS. A comunidade estima a dureza, mas estimativa de jogador não é medida de fábrica, e a régua do site é a segunda coisa."
     },
     "dhs-g555": {
       "confianca": "revendedor",
@@ -7562,11 +7574,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "47° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r47), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (47° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r47), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-rasanter-r42": {
       "confianca": "revendedor",
@@ -7574,11 +7590,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "42° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r42), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (42° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r42), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-rasanter-r48": {
       "confianca": "revendedor",
@@ -7586,11 +7606,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "48° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r48), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (48° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r48), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-rasanter-r37": {
       "confianca": "revendedor",
@@ -7598,11 +7622,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "37° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r37), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (37° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r37), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-rasanter-r50": {
       "confianca": "revendedor",
@@ -7610,11 +7638,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r50), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (50° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r50), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-rasanter-r53": {
       "confianca": "revendedor",
@@ -7622,11 +7654,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "53° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r53), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (53° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-r53), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-rasanter-v42": {
       "confianca": "revendedor",
@@ -7634,11 +7670,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "42° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-v42), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (42° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-v42), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-rasanter-v47": {
       "confianca": "revendedor",
@@ -7646,11 +7686,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "47° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-v47), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (47° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-v47), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-rasanter-c48": {
       "confianca": "revendedor",
@@ -7658,11 +7702,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "48° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa aderente, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-c48), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (48° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-c48), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-rasanter-c53": {
       "confianca": "revendedor",
@@ -7670,11 +7718,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "53° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa aderente, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-c53), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (53° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-c53), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-rasanter-c45": {
       "confianca": "revendedor",
@@ -7682,11 +7734,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "45° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa aderente, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-c45), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (45° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-rasanter-c45), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-hexer": {
       "confianca": "revendedor",
@@ -7850,11 +7906,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "50° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-nuzn-50), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (50° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-nuzn-50), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-nuzn-48": {
       "confianca": "revendedor",
@@ -7862,11 +7922,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "48° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-nuzn-48), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (48° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-nuzn-48), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-bype": {
       "confianca": "revendedor",
@@ -7898,11 +7962,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "42° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A LOJA NÃO DIZ QUE É BORRACHA, e o nome não ajuda: \"HY Q 42\" podia ser lâmina. O Revspin a registra na lista de BORRACHAS, e foi assim que ela entrou aqui. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-hy-q-42), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (42° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. A LOJA NÃO DIZ QUE É BORRACHA, e o nome não ajuda: \"HY Q 42\" podia ser lâmina. O Revspin a registra na lista de BORRACHAS, e foi assim que ela entrou aqui. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-hy-q-42), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-hy-q-48": {
       "confianca": "revendedor",
@@ -7910,11 +7978,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "48° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. Como a HY-Q 42, foi o Revspin que confirmou que isto é borracha e não lâmina. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-hy-q-48), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
+      "nota": "A DUREZA (48° na régua ESN) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?cid=rubbers&brand=andro) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a andro Rasanter entre os exemplos da ESN. Como a HY-Q 42, foi o Revspin que confirmou que isto é borracha e não lâmina. Esta borracha não tem amostra suficiente na comunidade (Revspin) — o piso é 5 avaliações. Os índices de desempenho vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=andro-hy-q-48), na régua dela — que não é a dos materiais mais antigos do catálogo. A Andro não publica esses números em formato legível no site próprio."
     },
     "andro-gauzy-sl-off": {
       "confianca": "revendedor",
@@ -11690,11 +11762,15 @@
       "consultadoEm": "2026-08-04",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "40° (escala DHS)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa aderente"
         }
       ],
-      "nota": "Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço. Velocidade, efeito e controle são a MÉDIA DE 18 JOGADORES no Revspin (https://revspin.net/rubber/dhs-hurricane-3-national.html), na escala 0–10 — não é número do fabricante, é opinião de quem usou, e por isso aparece marcada como dado da comunidade."
+      "nota": "A DUREZA (40° na régua DHS) veio da listagem da Megaspin em 2026-08-22 (https://www.megaspin.net/store/default.asp?pid=dhs-hurricane-3) — a fonte principal desta ficha não a declarava, e a nota anterior dizia isso. Régua atribuída pela própria tabela de escalas do site, que nomeia a DHS Hurricane e variantes como exemplos da régua DHS. Preço, foto e construção conferidos na Megaspin, nos Estados Unidos. Não é vendida no Brasil: o preço está em dólar porque é a moeda em que foi conferido. Por não estar em reais, ela fica fora do filtro e da ordenação por preço. Velocidade, efeito e controle são a MÉDIA DE 18 JOGADORES no Revspin (https://revspin.net/rubber/dhs-hurricane-3-national.html), na escala 0–10 — não é número do fabricante, é opinião de quem usou, e por isso aparece marcada como dado da comunidade."
     },
     "dhs-h3-neo-national-azul": {
       "confianca": "revendedor",

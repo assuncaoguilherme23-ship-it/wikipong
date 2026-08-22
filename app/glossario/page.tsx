@@ -31,6 +31,13 @@ const CATEGORIAS = [
   'A física do impacto',
   'Golpes e efeitos',
   'Uso e manutenção',
+  /* Criada em 2026-08-20 com o verbete TRA. ITTF e Bola 40+ vieram de
+     "Golpes e efeitos" junto: aquela categoria descreve gesto e rotação, e
+     nenhum dos dois é golpe.
+
+     ATENÇÃO: esta lista FILTRA a página. Verbete cuja categoria não esteja
+     aqui some da tela sem erro nenhum — há asserção no teste guardando isso. */
+  'Regras e competição',
 ] as const;
 
 export default function PaginaGlossario() {

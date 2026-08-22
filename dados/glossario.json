@@ -1,5 +1,5 @@
 {
-  "aviso": "Conteúdo migrado da Page 1 antiga do Figma (frame 'Glossário', node 423:3204) em 2026-07-09, a convite do fundador. É também o PRIMEIRO corpus do assistente IA (D-10: glossário → fichas → comunidade).",
+  "aviso": "Conteúdo migrado da Page 1 antiga do Figma (frame 'Glossário', node 423:3204) em 2026-07-09, a convite do fundador. É também o PRIMEIRO corpus do assistente IA (D-10: glossário → fichas → comunidade). CATEGORIA \"Regras e competição\" criada em 2026-08-20 junto com o verbete TRA. ITTF e Bola 40+ foram movidos para ela: estavam em \"Golpes e efeitos\", que descreve gesto e rotação — nenhum dos dois é golpe.",
   "verbetes": [
     {
       "termo": "Topspin",
@@ -44,12 +44,12 @@
     {
       "termo": "ITTF",
       "definicao": "Federação Internacional de Tênis de Mesa, responsável pelas regras e homologações.",
-      "categoria": "Golpes e efeitos"
+      "categoria": "Regras e competição"
     },
     {
       "termo": "Bola 40+",
       "definicao": "Bola de plástico (poli) de 40mm+ adotada pela ITTF em substituição ao celuloide.",
-      "categoria": "Golpes e efeitos"
+      "categoria": "Regras e competição"
     },
     {
       "termo": "Capa (top sheet)",
@@ -165,6 +165,11 @@
       "termo": "Encolhimento",
       "categoria": "Uso e manutenção",
       "definicao": "A tendência da borracha de diminuir de tamanho com o tempo, sobretudo depois de colada e descolada. Acontece mais nas muito tensionadas — a tensão de fábrica vai cedendo."
+    },
+    {
+      "termo": "TRA (Taxa de Registro Anual)",
+      "definicao": "Registro anual na CBTM que habilita a competir oficialmente. Tem três categorias — Bronze (só Liga Regional), Prata (regional e estadual) e Ouro (qualquer competição oficial, inclusive internacional). Vale também para técnicos e árbitros, não só atletas.",
+      "categoria": "Regras e competição"
     }
   ]
 }

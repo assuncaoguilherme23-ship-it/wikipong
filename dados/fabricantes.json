@@ -9478,11 +9478,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "47,5° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com hífen (\"Fastarc G-1\"); o catálogo usa a grafia da loja brasileira, sem hífen. Os índices de velocidade, efeito e controle vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=nittaku-fastarc-g-1), na régua dela — que não é a dos materiais mais antigos do catálogo. A Nittaku não publica esses números em formato legível no site próprio, e a loja onde o preço foi conferido também não."
+      "nota": "A DUREZA (47,5°) veio da NITTAKU Deutschland, distribuidora oficial desde 2012, em 2026-08-22 (https://nittaku.tt/en/products/nittaku-fastarc-g-1-rubber) — a fonte principal desta ficha não a declarava. A página não nomeia a régua, mas declara \"Made in Germany\", e a tabela de escalas do próprio site define a ESN como a régua da fábrica alemã: é dessa cadeia que sai a atribuição, e não de suposição sobre a marca. A marca escreve o nome com hífen (\"Fastarc G-1\"); o catálogo usa a grafia da loja brasileira, sem hífen. Os índices de velocidade, efeito e controle vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=nittaku-fastarc-g-1), na régua dela — que não é a dos materiais mais antigos do catálogo. A Nittaku não publica esses números em formato legível no site próprio, e a loja onde o preço foi conferido também não."
     },
     "nittaku-fastarc-s1": {
       "confianca": "revendedor",
@@ -9490,11 +9494,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "45° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com hífen (\"Fastarc G-1\"); o catálogo usa a grafia da loja brasileira, sem hífen. Os índices de velocidade, efeito e controle vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=nittaku-fastarc-s1), na régua dela — que não é a dos materiais mais antigos do catálogo. A Nittaku não publica esses números em formato legível no site próprio, e a loja onde o preço foi conferido também não."
+      "nota": "A DUREZA (45°) veio da NITTAKU Deutschland, distribuidora oficial desde 2012, em 2026-08-22 (https://nittaku.tt/en/products/nittaku-fastarc-s-1-rubber) — a fonte principal desta ficha não a declarava. A página não nomeia a régua, mas declara \"Made in Germany\", e a tabela de escalas do próprio site define a ESN como a régua da fábrica alemã: é dessa cadeia que sai a atribuição, e não de suposição sobre a marca. A marca escreve o nome com hífen (\"Fastarc G-1\"); o catálogo usa a grafia da loja brasileira, sem hífen. Os índices de velocidade, efeito e controle vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=nittaku-fastarc-s1), na régua dela — que não é a dos materiais mais antigos do catálogo. A Nittaku não publica esses números em formato legível no site próprio, e a loja onde o preço foi conferido também não."
     },
     "nittaku-flyatt-soft": {
       "confianca": "revendedor",
@@ -10202,11 +10210,15 @@
       "consultadoEm": "2026-08-01",
       "ficha": [
         {
+          "rotulo": "Dureza da esponja",
+          "valor": "45° (escala ESN)"
+        },
+        {
           "rotulo": "Superfície",
           "valor": "Lisa, tensionada"
         }
       ],
-      "nota": "A AmericaTT não declara a dureza desta borracha; ela entra sem a régua unificada. A marca escreve o nome com hífen (\"Fastarc G-1\"); o catálogo usa a grafia da loja brasileira, sem hífen. Os índices de velocidade, efeito e controle vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=nittaku-fastarc-c-1), na régua dela — que não é a dos materiais mais antigos do catálogo. A Nittaku não publica esses números em formato legível no site próprio, e a loja onde o preço foi conferido também não."
+      "nota": "A DUREZA (45°) veio da NITTAKU Deutschland, distribuidora oficial desde 2012, em 2026-08-22 (https://nittaku.tt/en/products/nittaku-fastarc-c-1-rubber) — a fonte principal desta ficha não a declarava. A página não nomeia a régua, mas declara \"Made in Germany\", e a tabela de escalas do próprio site define a ESN como a régua da fábrica alemã: é dessa cadeia que sai a atribuição, e não de suposição sobre a marca. A marca escreve o nome com hífen (\"Fastarc G-1\"); o catálogo usa a grafia da loja brasileira, sem hífen. Os índices de velocidade, efeito e controle vêm da Megaspin (https://www.megaspin.net/store/default.asp?pid=nittaku-fastarc-c-1), na régua dela — que não é a dos materiais mais antigos do catálogo. A Nittaku não publica esses números em formato legível no site próprio, e a loja onde o preço foi conferido também não."
     },
     "nittaku-fistard": {
       "confianca": "revendedor",

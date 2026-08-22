@@ -2861,6 +2861,57 @@ afirma(!/R\$\s*\d/.test(guiaTra),
   'guias: o guia do TRA passou a publicar valor — taxa muda todo ano, e numero velho vira orcamento errado');
 afirma(/cbtm\.org\.br/.test(guiaTra),
   'guias: o guia do TRA perdeu o link da fonte — regra de federacao sem fonte nao se confere');
+
+/* ───────── dureza: dado invisivel, nao dado faltando ─────────
+   O leitor da ponte procurava uma linha CHAMADA "Dureza da esponja". 29 fichas
+   traziam o grau dentro de outra linha — "Superficie: Lisa, tensionada, esponja
+   50° na regua europeia". O dado estava colhido, com fonte e data, e o site nao
+   o lia: nao entrava na dureza unificada, nao aparecia no modo Tecnico e nao
+   alimentava o /escalas. */
+
+/* "regua europeia" e' o nome que o PROPRIO modulo da a ESN na lista de escalas
+   ("ESN (europeia)"). Nao reconhecer deixava 20 fichas da Gewo com o grau
+   escrito e sem regua — e sem regua o grau inteiro e' descartado. */
+afirma(escalaDoTexto('esponja 50° na régua europeia') === 'esn',
+  'escalas: "regua europeia" deixou de ser reconhecida como ESN');
+afirma(escalaDoTexto('esponja 47,5° escala alemã') === 'esn',
+  'escalas: "alema" deixou de ser reconhecida como ESN — a ESN e a fabrica alema');
+/* E o que ja funcionava nao pode ter quebrado junto. */
+afirma(escalaDoTexto('39° (escala DHS)') === 'dhs' &&
+       escalaDoTexto('36° (escala Butterfly)') === 'butterfly' &&
+       escalaDoTexto('47,5° (escala ESN)') === 'esn',
+  'escalas: uma das reguas que ja era reconhecida parou de ser');
+
+/* A INVARIANTE MAIS IMPORTANTE DESTE BLOCO: grau SEM regua declarada nao pode
+   virar dureza. Quatro borrachas (uma Donic e tres Palio) dizem "esponja 36°" e
+   nao dizem em que regua — e sem regua o numero nao quer dizer nada, que e a
+   tese inteira do modulo de escalas. Chutar "provavelmente ESN" numa Palio
+   aderente seria exatamente a invencao que o site combate. */
+afirma(escalaDoTexto('Lisa aderente, esponja 36°, macia') === null,
+  'escalas: grau sem regua declarada passou a ser adivinhado — sem regua o numero nao diz nada');
+
+/* A recuperacao, ponta a ponta. O piso e' conservador de proposito: colher mais
+   dureza faz o numero subir, e o teste nao pode brigar com dado novo bom. */
+const borrachasCat = MATERIAIS.filter((x) => x.tipo === 'Borracha');
+const comDurezaDerivada = borrachasCat.filter((x) => x.durezaUnificada !== undefined);
+afirma(comDurezaDerivada.length >= 125,
+  `dureza: so ${comDurezaDerivada.length} borrachas derivam dureza — eram 129 depois do conserto de 2026-08-22`);
+
+/* Pelo menos uma delas tem que vir do caminho novo (valor de outra linha),
+   senao o conserto foi desfeito sem ninguem notar. */
+const peloValor = comDurezaDerivada.filter((x) => {
+  const f = fabricantePorId(x.id)?.ficha ?? [];
+  return !f.some((l) => /dureza/i.test(l.rotulo));
+});
+afirma(peloValor.length >= 25,
+  `dureza: o leitor voltou a olhar so o rotulo — ${peloValor.length} recuperadas pelo valor, eram 29`);
+
+/* Toda dureza derivada tem que carregar a regua de origem: numero sem
+   procedencia e' o que o campo `durezaFabricante` existe pra impedir. */
+for (const x of comDurezaDerivada) {
+  afirma(x.origemDureza === 'fabricante' ? Boolean(x.durezaFabricante) : true,
+    `dureza: ${x.id} derivou dureza do fabricante sem guardar grau e regua de origem`);
+}
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

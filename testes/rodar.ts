@@ -2811,6 +2811,56 @@ for (const mat of MATERIAIS) {
 afirma(misturados === 0,
   `parecidos: ${misturados} pares ainda misturam material com indice e sem indice`);
 
+
+/* ───────── o guia do TRA e a categoria nova ─────────
+   A pagina do glossario FILTRA por uma lista fixa de categorias. Verbete cuja
+   categoria nao esteja nessa lista some da tela — sem erro, sem log, sem nada.
+   Foi por pouco: a categoria "Regras e competicao" nasceu com o verbete TRA, e
+   esquecer de acrescenta-la na pagina teria escondido os tres verbetes dela. */
+const paginaGlossarioFonte = readFileSync('app/glossario/page.tsx', 'utf8');
+const categoriasDaPagina = new Set(
+  [...paginaGlossarioFonte
+    .slice(paginaGlossarioFonte.indexOf('const CATEGORIAS = ['),
+           paginaGlossarioFonte.indexOf('] as const;'))
+    .matchAll(/'([^']+)'/g)].map((m) => m[1]),
+);
+for (const t of TERMOS_GLOSSARIO) {
+  afirma(categoriasDaPagina.has(t.categoria),
+    `glossario: a categoria "${t.categoria}" (de "${t.termo}") nao esta na lista da pagina — o verbete some da tela sem erro nenhum`);
+}
+
+/* O TRA existe, e existe nos DOIS lugares: verbete e guia. Pedir um sem o outro
+   deixaria a sigla explicada em um canto e crua no outro. */
+const tra = TERMOS_GLOSSARIO.find((t) => t.termo.startsWith('TRA'));
+afirma(Boolean(tra), 'glossario: o verbete do TRA sumiu');
+afirma(/Taxa de Registro Anual/i.test(tra?.termo + ' ' + tra?.definicao),
+  'glossario: o verbete do TRA nao diz o que a sigla significa — sigla sem expansao nao e verbete');
+for (const cat of ['Bronze', 'Prata', 'Ouro']) {
+  afirma(tra!.definicao.includes(cat),
+    `glossario: a definicao do TRA nao cita a categoria ${cat} — sao elas que mudam onde a pessoa pode jogar`);
+}
+
+/* O guia e' lido da FONTE, e nao importado: `guias.tsx` carrega JSX e
+   componentes de tela, e puxar isso pro runtime do teste trocaria uma asercao
+   de conteudo por um problema de build. */
+const fonteGuias = readFileSync('app/aprender/guias.tsx', 'utf8');
+const iTra = fonteGuias.indexOf("slug: 'o-que-e-tra'");
+afirma(iTra > 0, 'guias: o guia do TRA sumiu');
+const guiaTra = fonteGuias.slice(iTra, fonteGuias.indexOf("slug: 'cuidados-manutencao'"));
+
+afirma(/titulo: '[^']*TRA/.test(guiaTra),
+  'guias: o titulo do guia do TRA nao traz a sigla — e por ela que se procura');
+for (const cat of ['Bronze', 'Prata', 'Ouro']) {
+  afirma(guiaTra.includes(`Membro ${cat}`),
+    `guias: o guia do TRA nao explica a categoria Membro ${cat}`);
+}
+
+/* Regra de federacao muda de ano em ano. O guia NAO pode publicar valor: numero
+   velho aqui e' pior que numero nenhum, porque alguem faz orcamento por ele. */
+afirma(!/R\$\s*\d/.test(guiaTra),
+  'guias: o guia do TRA passou a publicar valor — taxa muda todo ano, e numero velho vira orcamento errado');
+afirma(/cbtm\.org\.br/.test(guiaTra),
+  'guias: o guia do TRA perdeu o link da fonte — regra de federacao sem fonte nao se confere');
 console.log(`\n✔ ${ok} asserções passaram`);
 if (falhas.length) {
   console.error(`✘ ${falhas.length} falharam:`);

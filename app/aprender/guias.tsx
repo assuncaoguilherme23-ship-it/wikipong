@@ -814,6 +814,123 @@ export const GUIAS: Guia[] = [
     ),
   },
   {
+    slug: 'o-que-e-tra',
+    titulo: 'TRA: a taxa que libera você para competir',
+    resumo:
+      'O que é a Taxa de Registro Anual da CBTM, as três categorias (Bronze, Prata e Ouro) e o que cada uma libera.',
+    minutos: 4,
+    corpo: (
+      <>
+        <p>
+          Se você já pensou em disputar um torneio, provavelmente esbarrou na sigla{' '}
+          <strong>TRA</strong> e ninguém explicou. Ela aparece na inscrição, no sistema da
+          federação e na conversa do clube como se todo mundo já soubesse — e é a primeira
+          porteira entre treinar e competir.
+        </p>
+        <p>
+          <strong>TRA é a Taxa de Registro Anual da CBTM.</strong> É o que registra você no
+          sistema da Confederação por um ano. Sem ela, você joga na academia e no clube à
+          vontade — mas não entra numa competição oficial, porque não existe no sistema onde a
+          inscrição acontece.
+        </p>
+
+        <h2>Não é só para atleta</h2>
+        <p>
+          É o mal-entendido mais comum. A CBTM registra pela TRA{' '}
+          <strong>atletas, técnicos, árbitros, psicólogos, médicos, fisioterapeutas e alunos
+          de cursos</strong> — quem trabalha no esporte também precisa estar no sistema para
+          assinar uma súmula ou constar como técnico de uma equipe.
+        </p>
+
+        <h2>As três categorias, e o que muda entre elas</h2>
+        <p>
+          Aqui está o que a sigla esconde: TRA não é uma coisa só. São três níveis de
+          filiação, e o que muda entre eles é <strong>até onde você pode competir</strong>.
+          As descrições abaixo são as da própria CBTM.
+        </p>
+
+        <h3>Membro Bronze</h3>
+        <p>
+          Habilita a jogar <em>&ldquo;as etapas de competições de Liga Regional a que estão
+          filiados&rdquo;</em>. É a porta de entrada: serve para quem joga o circuito da
+          própria região e não pretende viajar. Não dá acesso a estadual nem a nacional.
+        </p>
+
+        <h3>Membro Prata</h3>
+        <p>
+          Habilita a jogar <em>&ldquo;as etapas de competições de Liga Regional e da Federação
+          Estadual&rdquo;</em>. É o degrau de quem passou a disputar o estadual — a maioria dos
+          jogadores de clube para aqui.
+        </p>
+
+        <h3>Membro Ouro</h3>
+        <p>
+          Habilita a jogar <em>&ldquo;quaisquer competições oficiais, incluindo liberação para a
+          participação em competições internacionais&rdquo;</em>. É a categoria de quem vai
+          disputar <Link href="/competicoes/">Copa Brasil, Brasileirão e as seletivas</Link> —
+          e a única que abre o caminho para fora do país.
+        </p>
+        <p>
+          A escolha não é sobre nível técnico: é sobre <strong>onde você pretende jogar neste
+          ano</strong>. Um jogador forte que só disputa a liga da cidade não precisa de Ouro; um
+          iniciante que quer ir a uma etapa nacional precisa.
+        </p>
+
+        <h2>Para que serve, além de entrar na competição</h2>
+        <p>
+          A TRA é o que coloca você no <strong>CBTM WEB</strong>, o sistema onde a
+          Confederação registra quem é quem. Estar lá é o que faz seus resultados virarem
+          ranking e pontuação, e é o que permite se inscrever em clínicas, festivais e cursos
+          de formação de árbitro e de técnico.
+        </p>
+        <p>
+          É também de onde sai o dinheiro de boa parte da operação: a CBTM descreve a TRA como
+          arrecadação própria, que complementa o recurso público. Vale saber, porque explica
+          por que ela existe.
+        </p>
+
+        <h2>Quanto custa</h2>
+        <p>
+          <strong>Não publicamos os valores aqui, de propósito.</strong> Eles mudam de ano para
+          ano e por categoria, e um número velho nesta página seria pior que número nenhum —
+          alguém programaria o orçamento por ele. O valor vigente está no{' '}
+          <a href="https://www.cbtm.org.br" target="_blank" rel="noopener noreferrer">
+            site da CBTM
+          </a>
+          , e a inscrição é feita pela federação do seu estado.
+        </p>
+        <p>
+          Duas coisas que valem confirmar com a sua federação antes de pagar: se existe{' '}
+          <strong>isenção para atleta estudantil</strong> cadastrado por associação escolar (a
+          CBTM já publicou essa regra) e se a sua categoria cobre o calendário que você
+          pretende jogar no ano — subir de Bronze para Prata no meio da temporada costuma ser
+          mais caro que começar certo.
+        </p>
+
+        <p className="nota-fonte">
+          Fontes: CBTM,{' '}
+          <a
+            href="https://www.cbtm.org.br/conteudo/detalhe/18"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Modelo de Competições
+          </a>{' '}
+          (categorias de filiação) e{' '}
+          <a
+            href="https://www.cbtm.org.br/noticia/detalhe/85658/pagamento-da-taxa-de-registro-anual-tra-possibilita-varios-beneficios"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pagamento da Taxa de Registro Anual (TRA)
+          </a>{' '}
+          (quem paga e o que ela financia). Consultado em 20/08/2026. Regra de federação muda:
+          confirme na CBTM antes de se inscrever.
+        </p>
+      </>
+    ),
+  },
+  {
     slug: 'cuidados-manutencao',
     titulo: 'Cuidados e manutenção',
     resumo: 'Como limpar, guardar e saber a hora de trocar, para esticar a vida da borracha.',
